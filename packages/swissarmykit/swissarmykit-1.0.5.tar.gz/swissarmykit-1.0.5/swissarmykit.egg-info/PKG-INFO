@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: swissarmykit
+Version: 1.0.5
+Summary: Swiss Army Kit package
+Home-page: https://github.com/pypa/swissarmykit
+Author: Will Nguyen
+Author-email: will.ng.nguyen@gmail.com
+License: UNKNOWN
+Description: # README #
+        
+        Multiple tools to speed up dev.
+        Wrapper for all.
+        
+        
+        On Mac, need to enable 
+            xcode-select --install          to import setuptools success.
+        
+        
+            willnguyen7
+            By Will Nguyen (will.ng.nguyen@gmail.com)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
