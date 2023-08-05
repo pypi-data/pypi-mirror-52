@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: po-publish
+Version: 0.1.0
+Summary: wraps `poetry publish --build` with some logic for my personal needs
+Home-page: https://github.com/olsonpm/py_publish
+Author: Philip Olson
+Author-email: philip.olson@pm.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/olsonpm/py_publish
+Description-Content-Type: text/markdown
+
+wraps `poetry publish --build` with some logic for my personal needs
+
