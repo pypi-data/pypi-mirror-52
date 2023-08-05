@@ -1,0 +1,169 @@
+{
+  "wide_format": true,
+  "da1_fields": {
+    "index": 0,
+    "condition": 1,
+    "number": 2,
+    "time": -1,
+    "fixation_start": 8
+  },
+  "region_fields": {
+    "number": 0,
+    "condition": 1,
+    "boundaries_start": 3,
+    "includes_y": false
+  },
+  "asc_parsing": {
+    "fixation_min_cutoff": false,
+    "max_saccade_dur": false,
+    "blink_max_count": false,
+    "blink_max_dur": false
+  },
+  "cutoffs": {
+    "min": -1,
+    "max": -1,
+    "include_fixation": false,
+    "include_saccades": false
+  },
+  "region_measures": {
+    "skip": {
+      "exclude": false
+    },
+    "first_pass_regressions_out": {
+      "exclude": false
+    },
+    "first_pass_regressions_in": {
+      "exclude": false
+    },
+    "first_fixation_duration": {
+      "exclude": false
+    },
+    "single_fixation_duration": {
+      "exclude": false
+    },
+    "first_pass": {
+      "exclude": false
+    },
+    "go_past": {
+      "exclude": false
+    },
+    "total_time": {
+      "exclude": false
+    },
+    "right_bounded_time": {
+      "exclude": false
+    },
+    "reread_time": {
+      "exclude": false
+    },
+    "second_pass": {
+      "exclude": false
+    },
+    "spillover_time": {
+      "exclude": false
+    },
+    "refixation_time": {
+      "exclude": false
+    },
+    "landing_position": {
+      "exclude": false
+    },
+    "launch_site": {
+      "exclude": false
+    },
+    "first_pass_fixation_count": {
+      "exclude": false
+    },
+    "go_back_time_region": {
+      "exclude": false
+    },
+    "go_back_time_char": {
+      "exclude": false
+    }
+  },
+  "trial_measures": {
+    "location_first_regression": {
+      "exclude": false
+    },
+    "latency_first_regression": {
+      "exclude": false
+    },
+    "fixation_count": {
+      "exclude": false
+    },
+    "percent_regressions": {
+      "exclude": false
+    },
+    "trial_total_time": {
+      "exclude": false
+    },
+    "average_forward_saccade": {
+      "exclude": false
+    },
+    "average_backward_saccade": {
+      "exclude": false
+    }
+  },
+  "region_output": {
+    "experiment_name": {
+      "exclude": false
+    },
+    "filename": {
+      "exclude": true
+    },
+    "date": {
+      "exclude": true
+    },
+    "trial_id": {
+      "exclude": false
+    },
+    "trial_total_time": {
+      "exclude": false
+    },
+    "item_id": {
+      "exclude": false
+    },
+    "item_condition": {
+      "exclude": false
+    },
+    "region_label": {
+      "exclude": true
+    },
+    "region_number": {
+      "exclude": false
+    },
+    "region_text": {
+      "exclude": true
+    },
+    "region_start": {
+      "exclude": true
+    },
+    "region_end": {
+      "exclude": true
+    }
+  },
+  "trial_output": {
+    "experiment_name": {
+      "exclude": false
+    },
+    "filename": {
+      "exclude": true
+    },
+    "date": {
+      "exclude": true
+    },
+    "trial_id": {
+      "exclude": false
+    },
+    "trial_total_time": {
+      "exclude": false
+    },
+    "item_id": {
+      "exclude": false
+    },
+    "item_condition": {
+      "exclude": false
+    }
+  },
+  "terminal_output": 0
+}

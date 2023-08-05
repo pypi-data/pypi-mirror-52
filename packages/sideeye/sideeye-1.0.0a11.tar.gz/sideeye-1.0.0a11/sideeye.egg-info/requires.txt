@@ -1,0 +1,11 @@
+typing
+mypy
+mypy_extensions
+
+[dev]
+nose2
+pylint
+
+[test]
+nose2
+pylint
