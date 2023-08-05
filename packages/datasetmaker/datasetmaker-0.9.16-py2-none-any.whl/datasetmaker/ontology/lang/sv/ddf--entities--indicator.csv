@@ -1,0 +1,6 @@
+indicator,source,name
+gdp_usd_current,wb,BNP (nuvarande USD)
+pop_total,wb,Total befolkningsmängd
+school_enroll,wb,Inskrivna i grundskola
+co2_capita,wb,Ton CO2-utsläpp per capita
+lex_birth,wb,Förväntad livslängd vid födsel
