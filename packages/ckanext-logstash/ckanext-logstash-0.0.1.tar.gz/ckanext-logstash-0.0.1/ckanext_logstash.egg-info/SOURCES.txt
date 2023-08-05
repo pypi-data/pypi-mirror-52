@@ -1,0 +1,13 @@
+README.rst
+setup.py
+ckanext/__init__.py
+ckanext/sentry/__init__.py
+ckanext/sentry/plugins.py
+ckanext_logstash.egg-info/PKG-INFO
+ckanext_logstash.egg-info/SOURCES.txt
+ckanext_logstash.egg-info/dependency_links.txt
+ckanext_logstash.egg-info/entry_points.txt
+ckanext_logstash.egg-info/namespace_packages.txt
+ckanext_logstash.egg-info/not-zip-safe
+ckanext_logstash.egg-info/requires.txt
+ckanext_logstash.egg-info/top_level.txt
