@@ -1,0 +1,14 @@
+README.md
+setup.py
+ResifDataTransfer/ResifDataTransfer.conf
+ResifDataTransfer/ResifDataTransfer.py
+ResifDataTransfer/__init__.py
+ResifDataTransfer/miscTools.py
+ResifDataTransfer/rsync.py
+ResifDataTransfer/usage.py
+ResifDataTransfer.egg-info/PKG-INFO
+ResifDataTransfer.egg-info/SOURCES.txt
+ResifDataTransfer.egg-info/dependency_links.txt
+ResifDataTransfer.egg-info/entry_points.txt
+ResifDataTransfer.egg-info/requires.txt
+ResifDataTransfer.egg-info/top_level.txt
