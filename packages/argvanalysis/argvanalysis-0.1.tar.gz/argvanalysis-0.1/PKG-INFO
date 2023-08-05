@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: argvanalysis
+Version: 0.1
+Summary: Used to read argv in a spesific order "-key num"
+Home-page: https://github.com/HaraldWilhelmsen/argvanalysis
+Author: Harald Wilhelmsen
+Author-email: Wil.harald@gmail.com
+License: MIT
+Download-URL: https://github.com/HaraldWilhelmsen/argvanalysis/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: argvalues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
