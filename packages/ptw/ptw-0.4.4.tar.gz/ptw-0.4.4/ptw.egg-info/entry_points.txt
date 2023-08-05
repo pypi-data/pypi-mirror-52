@@ -1,0 +1,3 @@
+[console_scripts]
+ptw = ptw.__main__:main
+

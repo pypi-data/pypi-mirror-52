@@ -1,0 +1,4 @@
+sdnotify>=0.3.2
+
+[uvloop]
+uvloop>=0.11.0
