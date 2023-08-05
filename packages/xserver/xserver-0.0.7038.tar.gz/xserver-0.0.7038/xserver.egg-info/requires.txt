@@ -1,0 +1,5 @@
+psutil
+netifaces
+python-crontab==2.3.4
+setuptools>=40.0.0
+pycrypto==2.6.1

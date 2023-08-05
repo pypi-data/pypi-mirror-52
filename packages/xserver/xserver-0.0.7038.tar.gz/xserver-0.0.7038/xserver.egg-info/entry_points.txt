@@ -1,0 +1,7 @@
+[console_scripts]
+xserver = xserver.server.console:main
+xserver_build = xserver.docker_image.console:main
+xserver_iptables = xserver.helper.console.iptables:main
+xserver_package = xserver.helper.console.package:main
+xserver_status = xserver.server_status.console:main
+
