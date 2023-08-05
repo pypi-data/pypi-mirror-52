@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pynzbgetapi
+Version: 0.1.0
+Summary: Basic Python NZBGet API client.
+Home-page: https://github.com/holiestofhandgrenades/pynzbgetapi
+Author: Holiest of Hand Grenades
+Author-email: holiestofhandgrenades@gmail.com
+License: Apache Software License 2.0
+Description: UNKNOWN
+Keywords: pynzbgetapi
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
