@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: trivoreid
+Version: 1.0.1
+Summary: Python wrapper around TrivoreID SDK
+Home-page: UNKNOWN
+Author: Anastasia Gromova
+Author-email: anastasia.gromova@trivore.com
+Maintainer: Anastasia Gromova
+Maintainer-email: anastasia.gromova@trivore.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: mock
+
+UNKNOWN
+
+
