@@ -1,0 +1,17 @@
+classcard_dataclient/__init__.py,sha256=t7HlBl6EEdE2oTaRSkgPWGYv2GJP9ADm6uib0K0G0uo,190
+classcard_dataclient/settings.py,sha256=6fRGMtNuQIZvlrWnv2c4ph74Mr1PkxhQ5vphHyiOwTI,426
+classcard_dataclient/test.py,sha256=WGbnaUfe14m8FH05dPN_P8SnWFfo9Q-EfXtM4lD8Ka4,1737
+classcard_dataclient/client/__init__.py,sha256=QrK9juf0yOHimIWJyZtcBwe87izrinqE6O6744jDbb8,80
+classcard_dataclient/client/action.py,sha256=jq71C7IVs70KGcPBztWVhUhIGnt_1yt01D5PccRPb6M,14117
+classcard_dataclient/utils/__init__.py,sha256=e27V7TezXFQQ8Wl2WL7sTo6uaK8eCVWILTboNfwnRE8,80
+classcard_dataclient/utils/constants.py,sha256=zWaTqX8xLT5ZRmf7i_u9Q4KUtQDhPOORIcR32BvdTJI,554
+classcard_dataclient/utils/core.py,sha256=yagVZbGMLWJyiv-Met-6D033DIppFYSOpI2gaReLUfo,1460
+classcard_dataclient/utils/data_req.py,sha256=0qU4lY4OeVOipltZQxCeZDp_Yxki1JmLnCDnP1y--9A,4064
+classcard_dataclient/utils/loggerutils.py,sha256=vOCwRVKoTmAyYBJlunI5QsRP6mEnAUwJbfRyuCf3GG4,975
+classcard_dataclient/utils/requestutils.py,sha256=QsP3MOXiLJjS6LaMzyS8QHUymd2BzEn4snKzIoXX0Jo,3096
+classcard_dataclient/utils/verification.py,sha256=546xVJlJaOY0AM_ohcJwqmFs_gff_qjaHDHV6A9taAs,1279
+classcard_dataclient-1.0.4.dist-info/LICENSE,sha256=ps-72IRYlbOTNlJ2PR3ChigfeYYJVX6xUkM9gmCoqyw,1086
+classcard_dataclient-1.0.4.dist-info/METADATA,sha256=5GJbhB-SD0Qlvcc8xUIFhDn_SZDqZP1g8n_UIRoLU_I,1524
+classcard_dataclient-1.0.4.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+classcard_dataclient-1.0.4.dist-info/top_level.txt,sha256=AXnVfvavINAOyVluM2_VwwRid7TAZUf_d2P_EPFfJFg,21
+classcard_dataclient-1.0.4.dist-info/RECORD,,
