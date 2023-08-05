@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: xpylog
+Version: 1.2
+Summary: An xconsole-like syslog monitor on X11
+Home-page: https://github.com/h-ohsaki/xpylog.git
+Author: Hiroyuki Ohsaki
+Author-email: ohsaki@lsnl.jp
+License: UNKNOWN
+Description: # NAME
+        
+        xpylog - an xconsole-like syslog monitor on X11
+        
+        ![screenshot](https://raw.githubusercontent.com/h-ohsaki/xpylog/master/screenshot/xpylog.gif)
+        
+        # SYNOPSIS
+        
+        xpylog
+        
+        # DESCRIPTION
+        
+        This manual page documents **xpylog**, a realtime syslog monitor on X Window
+        System.  **xpylog** is a xconsole-like simple monotoring application with
+        several additional features.
+        
+        # OPTIONS
+        
+        None
+        
+        # REQUIREMENTS
+        
+        **xpylog** obtains the syslog messages via `journalctl` command in systemd.
+        
+        # INSTALLATION
+        
+        ```sh
+        $ pip3 install xpylog
+        ```
+        
+        # AVAILABILITY
+        
+        The latest version of **xpylog** is available at PyPI
+        (https://pypi.org/project/xpylog/) .
+        
+        # SEE ALSO
+        
+        xpywm(1), xconsole(1), journalctl(1), systemd(1)
+        
+        # AUTHOR
+        
+        Hiroyuki Ohsaki <ohsaki[atmark]lsnl.jp>
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
