@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: VNE-SIM
+Version: 2.73
+Summary: virtual network embedding
+Home-page: UNKNOWN
+Author: tskui
+Author-email: 158@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: IPython
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Education :: Testing
+Classifier: Operating System :: OS Independent
+Classifier: License :: Public Domain
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+Requires-Dist: networkx
+Requires-Dist: scipy
+Requires-Dist: xlwt
+Requires-Dist: matplotlib
+
+title
+
+    virtual network embdding
+
+install method
+
+    pip install vne-sim
+
+=============================
+run method
+=============================
+init code
+
+    from VNE_SIM import *
+
+    import VNE_SIM.algorithm as alg
+
+    SNpath='topology\\sn\\sub100-570.txt'
+
+    vnrpath='topology\\newr-2000-0-20-0-25'
+
+    vnrnumber=2000
+
+    timeframe=2000
+
+    mysimulation=simulation(5,1000,SNpath,vnrpath,vnrnumber)
+
+define VNE method
+
+    def my_vne_alg(vnr,sn):
+
+         v2sindex=[[v1,s1],[v2,s2],...] //nodes maping scheme
+
+         ve2seindex=[[s1,s2,...],[s1,s2,...],.....]  //edges maping scheme
+
+         return True|False,v2sindex,ve2seindex
+
+call your algorithm
+
+    mysimulation.init(timeframe)
+
+    mysimulation.simulation_run(EA_VNR.EA_VNR_alg,EA_VNR.EA_VNR_ALG_NAME)
+
+draw result figure
+
+    mysimulation.draw()
+
+#####################################
+
+zzu@1402  tskui
+
+
+
