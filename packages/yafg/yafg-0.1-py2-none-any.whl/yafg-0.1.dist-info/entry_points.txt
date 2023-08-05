@@ -1,0 +1,3 @@
+[markdown.extensions]
+yafg = yafg:YafgExtension
+
