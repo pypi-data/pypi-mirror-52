@@ -1,0 +1,17 @@
+iteration-utilities
+more-itertools
+
+[all]
+Sphinx
+memory-profiler
+matplotlib
+Sphinx
+memory-profiler
+matplotlib
+
+[docs]
+Sphinx
+
+[tests]
+memory-profiler
+matplotlib
