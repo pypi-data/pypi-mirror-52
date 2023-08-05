@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: fifty
+Version: 1.0.0
+Summary: FiFTy: Large-scale File Fragment Type Identification using Neural Networks
+Home-page: https://github.com/mittalgovind/fifty
+Author: Govind Mittal, Pawel Korus and Nasir Memon
+Author-email: mittal@nyu.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: tensorflow
+Requires-Dist: keras
+Requires-Dist: pathlib
+Requires-Dist: hyperopt
+Requires-Dist: docopt
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+UNKNOWN
+
+
