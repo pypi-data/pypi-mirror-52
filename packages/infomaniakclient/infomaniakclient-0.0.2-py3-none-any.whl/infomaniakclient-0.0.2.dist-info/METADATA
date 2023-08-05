@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: infomaniakclient
+Version: 0.0.2
+Summary: Infomaniak Newsletter python API client
+Home-page: https://github.com/Potrac/InfomaniakNewsletterClient
+Author: Potrac Grognuz
+Author-email: potrac@grognuz.site
+License: UNKNOWN
+Keywords: infomaniak newsletter api client
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# InfomaniakNewsletterClient
+Integration of Infomaniak Newsletter API in Python
+https://newsletter.infomaniak.com/docs/index.html
+
+### Usage
+```
+pip install infomaniakclient
+```
+
+You'll find some examples in the examples.py file in this github's repo:
+https://github.com/Potrac/InfomaniakNewsletterClient
+
