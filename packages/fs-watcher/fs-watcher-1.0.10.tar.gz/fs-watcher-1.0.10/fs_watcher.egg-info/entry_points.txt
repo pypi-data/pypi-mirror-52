@@ -1,0 +1,3 @@
+[console_scripts]
+watcher = fs_watcher.cli:main
+
