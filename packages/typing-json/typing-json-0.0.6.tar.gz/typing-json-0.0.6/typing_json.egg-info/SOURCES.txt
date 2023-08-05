@@ -1,0 +1,15 @@
+README.md
+setup.py
+test/__init__.py
+test/test_0_typechecking.py
+test/test_1_encoding.py
+test/test_2_decoding.py
+typing_json/__init__.py
+typing_json/decoding.py
+typing_json/encoding.py
+typing_json/py.typed
+typing_json/typechecking.py
+typing_json.egg-info/PKG-INFO
+typing_json.egg-info/SOURCES.txt
+typing_json.egg-info/dependency_links.txt
+typing_json.egg-info/top_level.txt
