@@ -1,0 +1,25 @@
+{
+  "name": "blender-web-assets",
+  "repository": {
+    "type": "git",
+    "url": "git://git.blender.org/blender-web-assets.git"
+  },
+  "author": "Blender",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-rename": "^1.4.0",
+    "minimist": "^1.2.0"
+  }
+}
