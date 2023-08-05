@@ -1,0 +1,12 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+zint/__init__.py
+zint/zint.py
+zint.egg-info/PKG-INFO
+zint.egg-info/SOURCES.txt
+zint.egg-info/dependency_links.txt
+zint.egg-info/not-zip-safe
+zint.egg-info/top_level.txt
