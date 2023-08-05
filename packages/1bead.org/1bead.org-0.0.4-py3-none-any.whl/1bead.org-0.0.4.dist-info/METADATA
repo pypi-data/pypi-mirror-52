@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: 1bead.org
+Version: 0.0.4
+Summary: Web application for 1bead.org
+Home-page: https://github.com/maxzheng/1bead.org
+Author: Max Zheng
+Author-email: maxzheng.os@gmail.com
+License: MIT
+Keywords: web appplication for 1bead.org to nurture the greatness of life
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: aiohttp (==3.5.4)
+Requires-Dist: aiohttp-jinja2 (==1.1.2)
+Requires-Dist: aiodns (==2.0.0)
+Requires-Dist: cchardet (==2.1.4)
+Requires-Dist: click (==7.0)
+
+# 1bead.org
+
+Web application for http://1bead.org
+
+
