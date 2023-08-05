@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: bew-wp
+Version: 0.0.1
+Summary: A very easy tool to publish Markdown post to your WordPress website
+Home-page: https://github.com/JinhangZhu/bew
+Author: Jinhang
+Author-email: jinhang.d.zhu@gmail.com
+License: UNKNOWN
+Description: # bew-wp
+        
+        
+        
+        ## Introduction
+        
+        A very easy tool to publish Markdown post to your WordPress website
+        
+        
+        ## Requirements
+        
+        To be finished.
+        
+        
+        ## Recommended modules
+        
+        To be finished.
+        
+        ## Installation
+        
+        To be finished.
+        
+        
+        ## Configuration
+        
+        To be finished.
+        
+        ## Usage
+        
+        To be finished.
+        
+        
+        ## Troubleshooting & FAQ
+        
+        To be finished.
+        
+        ## Maintainers
+        
+        Current maintainers:
+         * Jinhang Zhu - https://github.com/JinhangZhu
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
