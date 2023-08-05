@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="never">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/ico" href="/icon.png" />
+    <title>Watchdog (interval={{loop_interval}}s)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{cdn_urls['VUE_JS_CDN']}}"></script>
+    <script src="{{cdn_urls['ELEMENT_JS_CDN']}}"></script>
+    <script src="{{cdn_urls['VUE_RESOURCE_CDN']}}"></script>
+    <style>
+        @import url("{{cdn_urls['ELEMENT_CSS_CDN']}}");
+
+        html {
+            width: 98%;
+            height: 98%;
+            margin: 0 auto;
+            background-color: #eceff1;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <el-input type="textarea" :autosize="{ minRows: 15, maxRows: 15}" placeholder="choose task from the table"
+            v-model="current_task_json">
+        </el-input>
+        <br>
+        <el-button @click.native.prevent="addTask" type="primary"><i class="el-icon-circle-plus"></i> New
+            Task
+        </el-button>
+        <el-button @click.native.prevent="updateTask" type="warning"><i class="el-icon-upload"></i>
+            Update Task
+        </el-button>
+        <el-button @click.native.prevent="testTask" type="primary" plain><i
+                class="el-icon-refresh-right"></i> Test Task
+        </el-button>
+        |
+        <a href="/rss" target="_blank" rel="noopener noreferrer">
+            <el-button round size="small" type="primary"><i class="el-icon-star-off"></i> RSS
+            </el-button>
+        </a>
+        <a href="https://github.com/ClericPy/OnWebChange/issues" target="_blank" rel="noopener noreferrer">
+            <el-button round size="small" type="success"><i class="el-icon-s-comment"></i> Feedback
+            </el-button>
+        </a>
+        <el-button @click.native.prevent="shutdown" round size="small" type="danger"><i
+                class="el-icon-error"></i> Shutdown
+        </el-button>
+        <template style="width: 100%; height: 70%;">
+
+            <el-table :data="tasks" highlight-current-row @current-change="handleCurrentChange" stripe
+                style="width: 100%; height: 100%;">
+                <el-table-column prop="name" label="name" width="180">
+                </el-table-column>
+                <el-table-column prop="check_interval" label="check_interval" width="180">
+                </el-table-column>
+                <el-table-column prop="last_check_time" label="last_check_time">
+                </el-table-column>
+                <el-table-column prop="last_change_time" label="last_change_time">
+                </el-table-column>
+                <el-table-column prop="latest_data" label="latest_data">
+                </el-table-column>
+                <el-table-column label="origin_url">
+                    <template slot-scope="scope">
+                        <a :href="scope.row.origin_url" target="_blank"
+                            class="buttonText">${scope.row.origin_url}</a></template>
+                </el-table-column>
+                <el-table-column prop="change_time_ago" label="change_time_ago">
+                </el-table-column>
+                <el-table-column fixed="right" label="Delete" width="120">
+                    <template slot-scope="scope">
+                        <el-button @click.native.prevent="removeTask(scope.row.name, tasks)" type="danger"
+                            icon="el-icon-delete" circle>
+                        </el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+        </template>
+
+
+    </div>
+
+    <script>
+        var Main = {
+            data() {
+                return {
+                    tasks: [],
+                    current_task_json: "",
+                    currentRow: null,
+                    global_last_change_time: null,
+                    ok: true,
+                };
+            },
+            methods: {
+                openAlert(body, title) {
+                    this.$alert(body, title, {
+                        confirmButtonText: 'Ok',
+                        distinguishCancelAndClose: true,
+                        closeOnPressEscape: true,
+                        closeOnClickModal: true,
+                    });
+                },
+                check_change() {
+                    if (this.tasks[0] == undefined) {
+                        return
+                    }
+                    var current_change_time = this.tasks[0].last_change_time
+                    if (this.global_last_change_time == null) {
+                        this.global_last_change_time = current_change_time
+                    }
+                    if (current_change_time > this.global_last_change_time) {
+                        this.global_last_change_time = current_change_time
+                        alert("New change.")
+                    }
+                },
+                refreshData() {
+                    if (this.ok != true) {
+                        return
+                    }
+                    this.$http.get('/get_task_list').then(
+                        r => {
+                            this.tasks = r.body.tasks
+                            this.check_change()
+                        }, r => {
+                            this.openAlert('Bad request (' + r.status + ') :' + r.statusText)
+                        }
+                    )
+                },
+                onload_function() {
+                    this.refreshData()
+                },
+                removeTask(name) {
+                    this.$http.get('/remove_task', {
+                        params: {
+                            name: name
+                        }
+                    }).then(
+                        r => {
+                            this.openAlert(JSON.stringify(r.body))
+                            this.refreshData()
+                        }, r => {
+                            this.openAlert('Bad request (' + r.status + ') :' + r.statusText)
+                        }
+                    )
+
+                },
+                shutdown() {
+                    this.$http.get('/shutdown').then(
+                        r => {
+                            this.openAlert('server shutdown.')
+                            this.ok = false
+                        }, r => {
+                            this.openAlert('server shutdown.')
+                            this.ok = false
+                        }
+                    )
+                },
+                handleCurrentChange(val) {
+                    this.currentRow = val;
+                    if (this.currentRow != null) {
+                        this.current_task_json = JSON.stringify(this.currentRow, null, 2)
+                    }
+                },
+                addTask() {
+                    var data = {
+                        "name": "",
+                        "request_args": "",
+                        "parser_name": "",
+                        "operation": "",
+                        "value": "",
+                        "check_interval": 60,
+                        "max_change": 2,
+                        "sorting_list": true,
+                        "origin_url": "",
+                        "encoding": null
+                    }
+                    this.current_task_json = JSON.stringify(data, null, 2)
+                },
+                testTask() {
+                    var data = this.current_task_json
+                    this.$http.post('/test_task', data).then(
+                        r => {
+                            this.openAlert(JSON.stringify(r.body))
+                            this.refreshData()
+                        }, r => {
+                            this.openAlert('Bad request (' + r.status + ') :' + r.statusText)
+                        }
+                    )
+                },
+                updateTask() {
+                    var data = this.current_task_json
+                    this.$http.post('/update_task', data).then(
+                        r => {
+                            this.openAlert(JSON.stringify(r.body))
+                            this.refreshData()
+                        }, r => {
+                            this.openAlert('Bad request (' + r.status + ') :' + r.statusText)
+                        }
+                    )
+                }
+
+            },
+            watch: {
+
+            },
+            computed: {}
+        }
+        var vue_app = Vue.extend(Main)
+        var app = new vue_app({
+            delimiters: ['${', '}']
+        }).$mount('#app')
+        window.onload = app.onload_function
+        setInterval(() => {
+            app.refreshData()
+        }, 30000);
+    </script>
+</body>
+
+</html>
