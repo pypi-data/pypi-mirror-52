@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: magic-wormhole-transit-relay
+Version: 0.2.0
+Summary: Transit Relay server for Magic-Wormhole
+Home-page: https://github.com/warner/magic-wormhole-transit-relay
+Author: Brian Warner
+Author-email: warner-magic-wormhole@lothar.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
