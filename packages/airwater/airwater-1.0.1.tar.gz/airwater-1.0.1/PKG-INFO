@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: airwater
+Version: 1.0.1
+Summary: Better Tools Library For Write Spider With Python
+Home-page: https://airwater.readthedocs.io
+Author: Airwater
+Author-email: airwater@gmail.com
+License: Apache 2.0
+Project-URL: Repository, https://github.com/airwa/airwater
+Project-URL: Bug Reports, https://github.com/airwa/airwater/issues
+Project-URL: Documentation, https://airwater.readthedocs.io
+Description: Ariwater: Better Library Write Spider
+        ======================================
+        
+        .. start-inclusion-marker-do-not-remove
+        
+        .
+        **Airwater** is a Python library that offers a sensible and human-friendly approach to Simply write spider, it helps you work with write spider with fewer imports and a lot less code.
+        
+        
+        
+        Why use Arrow over built-in modules?
+        ------------------------------------
+        
+        Python's standard library and some other low-level modules have near-complete date, time and timezone functionality, but don't work very well from a usability perspective:
+        
+        - Too many modules: datetime, time, calendar, dateutil, pytz and more
+        - Too many types: date, time, datetime, tzinfo, timedelta, relativedelta, etc.
+        - Timezones and timestamp conversions are verbose and unpleasant
+        - Timezone naivety is the norm
+        - Gaps in functionality: ISO-8601 parsing, timespans, humanization
+        
+        Features
+        --------
+        
+        
+        Quick Start
+        -----------
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        
+        .. code-block:: console
+        
+            $ pip install -U airwater
+        
+        Example Usage
+        ~~~~~~~~~~~~~
+        
+        .
+        Documentation
+        -------------
+        
+        For full documentation, please visit
+        
+        Contributing
+        ------------
+        
+        Contributions are welcome for both code and localizations (adding and updating locales). Begin by gaining familiarity with the Arrow library and its features. Then, jump into contributing:
+        
+        
+Keywords: airwater spider library tools
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/x-rst
