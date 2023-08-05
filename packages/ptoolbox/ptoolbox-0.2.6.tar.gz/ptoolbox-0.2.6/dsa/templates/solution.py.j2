@@ -1,0 +1,19 @@
+def solve(a, b, mod):
+    if b == 0:
+        return 1
+    res = pmod(a, int(b / 2), mod)
+    res = (res * res) % mod
+    if b % 2 == 1:
+        return (res * a) % mod
+    return res
+
+
+def {{problem_code}}(b, p, m):
+    return solve(b, p, m)
+
+
+if __name__ == "__main__":
+    [b, p, m] = map(int, input().split())
+    result = {{problem_code}}(b, p, m)
+    print(result)
+

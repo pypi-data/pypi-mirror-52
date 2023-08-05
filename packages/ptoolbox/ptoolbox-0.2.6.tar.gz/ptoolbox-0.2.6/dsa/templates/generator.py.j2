@@ -1,0 +1,53 @@
+from contextlib import redirect_stdout
+from helpers.clog import CLog
+from helpers.crandom import CRandom
+
+manual_tests_input = [
+    (3, 18132, 17),
+    (17, 1765, 3),
+    (2374859, 3029382, 36123)
+]
+
+test_number = 0
+
+CLog.echo("Generating manual testcases...")
+
+with open('testcases_manual.txt', "w") as f:
+    with redirect_stdout(f):
+        for test in manual_tests_input:
+            print(f"### {test_number} - manual")
+            print(*test)
+            print("---")
+            result = {{problem_code}}(*test)
+            print(result)
+            test_number += 1
+
+CLog.echo("DONE")
+CLog.echo("Generating random testcases...")
+
+NUMBER_OF_TESTCASES = 20
+test_number = 0
+with open('testcases.txt', "w") as f:
+    with redirect_stdout(f):
+        for test in range(NUMBER_OF_TESTCASES):
+            if test < 5:
+                vmax = 100
+            elif test < 10:
+                vmax = 100000
+            elif test < 15:
+                vmax = 1000000
+            else:
+                vmax = 2 ** 31 - 1
+
+            a = CRandom.int(0, vmax)
+            b = CRandom.int(0, vmax)
+            m = CRandom.int(1, 46340)
+
+            print(f"### {test_number}")
+            print(a, b, m)
+            print("---")
+            result = {{problem_code}}(a, b, m)
+            print(result)
+            test_number += 1
+CLog.echo("DONE")
+
