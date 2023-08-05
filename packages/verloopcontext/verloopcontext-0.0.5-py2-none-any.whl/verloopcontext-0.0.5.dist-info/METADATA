@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: verloopcontext
+Version: 0.0.5
+Summary: Verloop context to pass headers and metadata around twirp
+Home-page: UNKNOWN
+Author: Piyush
+Author-email: piyush@verloop.io
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: structlog
+Requires-Dist: protobuf
+
+UNKNOWN
+
+
