@@ -1,0 +1,23 @@
+# Python and Cython generated files
+*.pyc
+__pycache__
+.cache
+.pytest_cache
+*.so
+*.dylib
+*.c
+
+# Python install files, build and release artifacts
+*.egg-info/
+build
+dist
+
+# Coverage data
+.coverage
+/htmlcov
+
+# Developer tools
+.vscode
+
+# pytest
+.pytest_cache
