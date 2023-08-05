@@ -1,0 +1,2 @@
+resource_registry:
+  OS::TripleO::Services::Tacker: ../deployment/tacker/tacker-container-puppet.yaml

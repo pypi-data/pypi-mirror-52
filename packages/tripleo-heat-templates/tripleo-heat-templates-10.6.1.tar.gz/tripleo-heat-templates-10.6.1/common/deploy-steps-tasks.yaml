@@ -1,0 +1,624 @@
+    # Note the indentation here is required as it's joined
+    # to create a playbook in deploy-steps.j2
+    ##################################################
+    # Step 1 block, write data for subsequent steps
+    ##################################################
+    - name: gather facts needed by role
+      setup:
+        gather_subset: "!min,python"
+      when: ansible_python is not defined
+      tags:
+        - container_config_tasks
+
+    - name: set python_cmd
+      set_fact:
+        python_cmd: "python{{ ansible_python.version.major }}"
+        cacheable: true
+      when: python_cmd is not defined
+      tags:
+        - container_config_tasks
+
+
+    - name: print python facts
+      debug:
+        msg: "python_cmd: {{ python_cmd }}"
+      tags:
+        - container_config_tasks
+
+    - name: Write config data at the start of step 1
+      when: step == "1"
+      block:
+        - name: Create and ensure setype for /var/log/containers directory
+          file:
+            path: /var/log/containers
+            state: directory
+            setype: var_log_t
+            selevel: s0
+          tags:
+            - host_config
+        - name: Create ContainerLogStdoutPath directory
+          file:
+            path: "{{ container_log_stdout_path }}"
+            state: directory
+            selevel: s0
+          tags:
+            - host_config
+        - name: Create /var/lib/tripleo-config directory
+          file:
+            path: /var/lib/tripleo-config
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+            recurse: true
+          tags:
+            - host_config
+            - container_config
+            - container_config_tasks
+            - container_config_scripts
+            - container_startup_configs
+
+        - name: Delete existing /var/lib/tripleo-config/check-mode directory for check mode
+          file:
+            path: /var/lib/tripleo-config/check-mode
+            state: absent
+          tags:
+            - host_config
+            - container_config
+            - container_config_tasks
+            - container_config_scripts
+            - container_startup_configs
+          when:
+            - ansible_check_mode|bool
+          ignore_errors: true
+          check_mode: no
+
+        - name: Create /var/lib/tripleo-config/check-mode directory for check mode
+          file:
+            path: /var/lib/tripleo-config/check-mode
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+            recurse: true
+          tags:
+            - host_config
+            - container_config
+            - container_config_tasks
+            - container_config_scripts
+            - container_startup_configs
+          when:
+            - ansible_check_mode|bool
+          check_mode: no
+
+        # Puppet manifest for baremetal host configuration
+        - name: Write the puppet step_config manifest
+          no_log: True
+          copy:
+            content: "{{ lookup('file', tripleo_role_name + '/step_config.pp', errors='ignore') | default('', True) }}"
+            dest: /var/lib/tripleo-config/{{ ansible_check_mode | bool | ternary('check-mode/', '') }}puppet_step_config.pp
+            force: yes
+            mode: '0600'
+          tags:
+            - host_config
+          check_mode: no
+          diff: no
+
+        - name: Diff puppet step_config manifest changes for check mode
+          command:
+            diff -uN /var/lib/tripleo-config/puppet_step_config.pp /var/lib/tripleo-config/check-mode/puppet_step_config.pp
+          register: diff_results
+          tags:
+            - host_config
+          check_mode: no
+          when:
+            - ansible_check_mode|bool
+            - ansible_diff_mode
+          failed_when: false
+          changed_when: diff_results.rc == 1
+
+        - name: Diff puppet step_config manifest changes for check mode
+          debug:
+            var: diff_results.stdout_lines
+          changed_when: diff_results.rc == 1
+          when:
+            - ansible_check_mode|bool
+            - ansible_diff_mode
+          tags:
+            - host_config
+
+        # Config file for our container-puppet.py script, used to generate container configs
+        - name: Create /var/lib/container-puppet
+          file:
+            path: /var/lib/container-puppet
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+          tags:
+            - container_config
+            - container_config_tasks
+
+        # For backward compatibility in Stein, so our operators have time
+        # to learn about the new directory.
+        - name: Create /var/lib/docker-puppet for backward compatibility
+          file:
+            path: /var/lib/docker-puppet
+            state: directory
+          tags:
+            - container_config
+            - container_config_tasks
+
+        - name: Deprecation file about /var/lib/docker-puppet
+          copy:
+            dest: /var/lib/docker-puppet/readme.txt
+            content: |
+              /var/lib/docker-puppet was moved under
+              /var/lib/container-puppet because we don't run Docker anymore.
+          ignore_errors: true
+
+        - name: Delete existing /var/lib/container-puppet/container-puppet.sh
+          file:
+            path: /var/lib/container-puppet/container-puppet.sh
+            state: absent
+          tags:
+            - container_config
+          ignore_errors: true
+          check_mode: no
+
+        - name: Delete existing /var/lib/container-puppet/check-mode for check mode
+          file:
+            path: /var/lib/container-puppet/check-mode
+            state: absent
+          tags:
+            - container_config
+          ignore_errors: true
+          check_mode: no
+          when:
+            - ansible_check_mode|bool
+
+        - name: Create /var/lib/container-puppet/check-mode for check mode
+          file:
+            path: /var/lib/container-puppet/check-mode
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+          tags:
+            - container_config
+          check_mode: no
+          when:
+            - ansible_check_mode|bool
+
+        - name: Write container-puppet.json file
+          no_log: True
+          copy:
+            content: "{{ lookup('file', tripleo_role_name + '/puppet_config.yaml', errors='ignore') | default([], True) | from_yaml | to_nice_json }}"
+            dest: /var/lib/container-puppet/{{ ansible_check_mode | bool | ternary('check-mode/', '') }}container-puppet.json
+            force: yes
+            mode: '0600'
+          tags:
+            - container_config
+          check_mode: no
+          diff: no
+
+        - name: Diff container-puppet.json changes for check mode
+          command:
+            diff -uN /var/lib/container-puppet/container-puppet.json /var/lib/container-puppet/check-mode/container-puppet.json
+          register: diff_results
+          tags:
+            - container_config
+          check_mode: no
+          when:
+            - ansible_check_mode|bool
+            - ansible_diff_mode
+          failed_when: false
+          changed_when: diff_results.rc == 1
+
+        - name: Diff container-puppet.json changes for check mode
+          debug:
+            var: diff_results.stdout_lines
+          changed_when: diff_results.rc == 1
+          when:
+            - ansible_check_mode|bool
+            - ansible_diff_mode
+          tags:
+            - container_config
+
+        - name: Create /var/lib/container-config-scripts
+          file:
+            path: /var/lib/container-config-scripts
+            state: directory
+            setype: svirt_sandbox_file_t
+          tags:
+            - container_config_scripts
+
+        # The container config files
+        # /var/lib/container-startup-configs.json is removed as we now write
+        # per-step files instead
+        - name: Clean old /var/lib/container-startup-configs.json file
+          file:
+            path: /var/lib/container-startup-configs.json
+            state: absent
+          tags:
+            - container_startup_configs
+
+        # For legacy, can be removed in Train cycle
+        - name: Clean old /var/lib/docker-container-startup-configs.json file
+          file:
+            path: /var/lib/docker-container-startup-configs.json
+            state: absent
+          tags:
+            - container_startup_configs
+
+
+        - name: Write container config scripts
+          no_log: True
+          copy:
+            content: "{{ item[1].content }}"
+            dest: "/var/lib/container-config-scripts/{{ item[0] }}"
+            force: yes
+            mode: "{{ item[1].mode | default('0600', true) }}"
+            setype: svirt_sandbox_file_t
+          loop: "{{ role_data_container_config_scripts | dictsort }}"
+          loop_control:
+            label: "{{ item[0] }}"
+          vars:
+            role_data_container_config_scripts: "{{ lookup('file', tripleo_role_name + '/container_config_scripts.yaml', errors='ignore') | default({}, True) | from_yaml }}"
+          tags:
+            - container_config_scripts
+
+        # Here we are dumping all the container startup configuration data
+        # so that we can have access to how they are started outside of heat
+        # and container cmd. This lets us create command line tools to test containers.
+        - name: Set container_config_default fact
+          no_log: True
+          set_fact:
+            container_config_default: "{{ container_config_default | default({}) | combine( {'step_' + item: {}} ) }}"
+          with_sequence: count={{ deploy_steps_max }}
+          tags:
+            - container_startup_configs
+
+        - name: Set container_startup_configs_with_default fact
+          no_log: True
+          set_fact:
+            container_config_with_default: "{{ container_config_default | combine(role_data_container_config) }}"
+          vars:
+            role_data_container_config: "{{ lookup('file', tripleo_role_name + '/docker_config.yaml', errors='ignore') | default({}, True) | from_yaml }}"
+          tags:
+            - container_startup_configs
+
+        - name: Write per-step container startup configs
+          no_log: True
+          copy:
+            content: "{{ item[1] | to_nice_json }}"
+            dest: /var/lib/tripleo-config/container-startup-config-{{ item[0] }}.json
+            force: yes
+            mode: '0600'
+          loop: "{{ container_config_with_default | dictsort }}"
+          loop_control:
+            label: "{{ item[0] }}"
+          tags:
+            - container_startup_configs
+
+        - name: Create /var/lib/kolla/config_files directory
+          file:
+            path: /var/lib/kolla/config_files
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+            recurse: true
+          tags:
+            - container_startup_configs
+
+        - name: Create /var/lib/config-data directory
+          file:
+            path: /var/lib/config-data
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+
+        - name: Write kolla config json files
+          no_log: True
+          copy:
+            content: "{{ item[1] | to_nice_json }}"
+            dest: "{{ item[0] }}"
+            force: yes
+            mode: '0600'
+            setype: svirt_sandbox_file_t
+          loop: "{{ lookup('file', tripleo_role_name + '/kolla_config.yaml', errors='ignore') | default([], True) | from_yaml | dictsort }}"
+          loop_control:
+            label: "{{ item[0] }}"
+          tags:
+            - container_startup_configs
+
+    #####################################################
+    # Per step puppet configuration of the baremetal host
+    #####################################################
+
+    - name: Set host puppet debugging fact string
+      set_fact:
+        host_puppet_config_debug: "--debug --verbose"
+      when:
+        - enable_puppet | bool
+        - enable_debug | bool
+      tags:
+        - host_config
+
+    - name: Check for /etc/puppet/check-mode directory for check mode
+      stat:
+        path: /etc/puppet/check-mode
+      register: check_mode_dir
+      when: ansible_check_mode|bool
+      tags:
+        - host_config
+        - container_config
+
+    - name: Create /etc/puppet/check-mode/hieradata directory for check mode
+      file:
+        path: /etc/puppet/check-mode/hieradata
+        state: directory
+        setype: svirt_sandbox_file_t
+        selevel: s0
+        recurse: true
+      check_mode: no
+      when:
+        - ansible_check_mode|bool
+        - not check_mode_dir.stat.exists
+      tags:
+        - host_config
+        - container_config
+
+    - name: Write the config_step hieradata
+      no_log: True
+      copy:
+        content: "{{ dict(step=step|int) | to_json }}"
+        dest: /etc/puppet/{{ ansible_check_mode | bool | ternary('check-mode/', '') }}hieradata/config_step.json
+        force: true
+        mode: '0600'
+      check_mode: no
+      tags:
+        - host_config
+
+    - name: Create puppet check-mode files if they don't exist for check mode
+      shell: |
+        cp -a /etc/puppet/hiera.yaml /etc/puppet/check-mode/hiera.yaml
+        cp -a /etc/puppet/hieradata/* /etc/puppet/check-mode/hieradata/
+        sed -i 's/\/etc\/puppet\/hieradata/\/etc\/puppet\/check-mode\/hieradata/' /etc/puppet/check-mode/hiera.yaml
+      when:
+        - ansible_check_mode|bool
+        - not check_mode_dir.stat.exists
+      check_mode: no
+      tags:
+        - host_config
+        - container_config
+
+    - name: Run puppet host configuration for step {{ step }}
+      when: enable_puppet|bool
+      shell: >-
+        puppet apply {{ host_puppet_config_debug | default('') }}
+        --modulepath=/etc/puppet/modules:/opt/stack/puppet-modules:/usr/share/openstack-puppet/modules
+        --detailed-exitcodes
+        --summarize
+        --color=false
+        {{ ansible_check_mode | bool | ternary('--noop', '') }}
+        {{ ansible_check_mode | bool | ternary('--hiera_config /etc/puppet/check-mode/hiera.yaml', '') }}
+        /var/lib/tripleo-config/{{ ansible_check_mode | bool | ternary('check-mode/', '') }}puppet_step_config.pp
+        2>&1 | logger -s -t puppet-user ;
+        exit ${PIPESTATUS[0]}
+      changed_when: outputs.rc == 2
+      register: outputs
+      failed_when: false
+      no_log: true
+      tags:
+        - host_config
+      check_mode: no
+
+    - name: "Debug output for task: Run puppet host configuration for step {{ step }}"
+      debug:
+        var: outputs.stdout_lines | default([]) | union(outputs.stderr_lines | default([]))
+      when:
+        - enable_puppet | bool
+        - outputs.rc is defined
+      failed_when: outputs.rc not in [0, 2]
+      tags:
+        - host_config
+      ignore_errors: "{{ ansible_check_mode|bool }}"
+
+    #########################################
+    # Pre-cache facts for container-puppet.py
+    #########################################
+    # We don't want the pre-cache tasks to be skipped in dry-run so we force
+    # check_mode to "no".
+    # https://bugzilla.redhat.com/show_bug.cgi?id=1738529
+    - name: Pre-cache facts for container-puppet.py
+      check_mode: no
+      tags:
+        - container_config
+        - container_config_tasks
+      block:
+        - name: Create puppet caching structures
+          file:
+            path: /var/lib/container-puppet/puppetlabs
+            state: directory
+            setype: svirt_sandbox_file_t
+            selevel: s0
+            recurse: True
+        - name: Write facter cache config
+          copy:
+            dest: /var/lib/container-puppet/puppetlabs/facter.conf
+            content: |
+              facts : {
+                ttls: [
+                  { "kernel" : 8 hour },
+                  { "memory" : 8 hour },
+                  { "networking" : 8 hour },
+                  { "operating system" : 8 hour },
+                  { "processor" : 8 hour },
+                ]
+              }
+            setype: svirt_sandbox_file_t
+            selevel: s0
+        - name: Cleanup facter cache if exists
+          file:
+            path: /opt/puppetlabs/facter
+            state: absent
+          ignore_errors: True
+        - name: Pre-cache facts
+          command: facter --config /var/lib/container-puppet/puppetlabs/facter.conf
+          no_log: True
+          ignore_errors: True
+        - name: Sync cached facts
+          synchronize:
+            src: /opt/puppetlabs/
+            dest: /var/lib/container-puppet/puppetlabs/
+          delegate_to: "{{ inventory_hostname }}"
+
+    ######################################
+    # Generate config via container-puppet.py
+    ######################################
+
+    - name: Run container-puppet tasks (generate config) during step {{ step }}
+      shell: "{{ python_cmd }} /var/lib/container-puppet/container-puppet.py"
+      environment:
+        NET_HOST: 'true'
+        DEBUG: '{{ docker_puppet_debug | bool }}'
+        PROCESS_COUNT: '{{ docker_puppet_process_count }}'
+        CONTAINER_CLI: "{{ container_cli }}"
+        CONFIG: '/var/lib/container-puppet/{{ ansible_check_mode | bool | ternary("check-mode/", "") }}container-puppet.json'
+        CONFIG_VOLUME_PREFIX: '/var/lib/config-data{{ ansible_check_mode | bool | ternary("/check-mode", "") }}'
+        CHECK_MODE: '{{ ansible_check_mode | bool | ternary(1, 0) }}'
+        STARTUP_CONFIG_PATTERN: '/var/lib/tripleo-config/{{ ansible_check_mode | bool | ternary("check-mode/", "") }}container-startup-config-step_*.json'
+        MOUNT_HOST_PUPPET: '{{docker_puppet_mount_host_puppet | default(true)}}'
+        CONTAINER_LOG_STDOUT_PATH: "{{ container_log_stdout_path }}"
+        CONTAINER_HEALTHCHECK_DISABLED: "{{ container_healthcheck_disabled }}"
+      when: step == "1"
+      changed_when: false
+      check_mode: no
+      register: outputs
+      failed_when: false
+      no_log: true
+      tags:
+        - container_config
+
+    - name: "Debug output for task: Run container-puppet tasks (generate config) during step {{ step }}"
+      debug:
+        var: outputs.stdout_lines | default([]) | union(outputs.stderr_lines | default([]))
+      when: outputs.rc is defined
+      failed_when: outputs.rc != 0
+      tags:
+        - container_config
+      ignore_errors: "{{ ansible_check_mode|bool }}"
+
+    - name: Diff container-puppet.py puppet-generated changes for check mode
+      shell: |
+        diff -ruN --no-dereference -q /var/lib/config-data/puppet-generated /var/lib/config-data/check-mode/puppet-generated
+        diff -ruN --no-dereference /var/lib/config-data/puppet-generated /var/lib/config-data/check-mode/puppet-generated
+      register: diff_results
+      tags:
+        - container_config
+      check_mode: no
+      when:
+        - step == "1"
+        - ansible_check_mode|bool
+        - ansible_diff_mode
+      failed_when: false
+      changed_when: diff_results.rc == 1
+
+    - name: Diff container-puppet.py puppet-generated changes for check mode
+      debug:
+        var: diff_results.stdout_lines
+      changed_when: diff_results.rc == 1
+      when:
+        - step == "1"
+        - ansible_check_mode|bool
+        - ansible_diff_mode
+      tags:
+        - container_config
+
+    ##################################################
+    # Per step starting of the containers using paunch
+    ##################################################
+
+    # Note container-puppet.py generates the hashed-*.json file, which is a copy of
+    # the *step_n.json with a hash of the generated external config added
+    # This acts as a salt to enable restarting the container if config changes
+    - name: Start containers for step {{ step }}
+      environment:
+        TRIPLEO_MINOR_UPDATE: '{{ tripleo_minor_update | default(false) }}'
+      command: >-
+        paunch {% if enable_debug|bool %}--debug{% else %}-v{% endif %} apply
+        --default-runtime "{{ container_cli }}"
+        --container-log-path "{{ container_log_stdout_path }}"
+        {% if container_healthcheck_disabled|bool and container_cli == 'podman' %}--healthcheck-disabled{% endif %}
+        --file /var/lib/tripleo-config/hashed-container-startup-config-step_{{ step }}.json
+        --config-id tripleo_step{{ step }} --managed-by tripleo-{{ tripleo_role_name }}
+      changed_when: false
+      register: outputs
+      failed_when: false
+      no_log: true
+      tags:
+        - container_startup_configs
+
+    - name: "Debug output for task: Start containers for step {{ step }}"
+      debug:
+        var: outputs.stdout_lines | default([]) | union(outputs.stderr_lines | default([]))
+      when: outputs.rc is defined
+      failed_when: outputs.rc != 0
+      tags:
+        - container_startup_configs
+
+    ########################################################
+    # Bootstrap tasks - run any tasks that have been defined
+    ########################################################
+
+    - name: "Clean container_puppet_tasks for {{ansible_hostname}} step {{step}}"
+      file:
+        path: /var/lib/container-puppet/container-puppet-tasks{{step}}.json
+        state: absent
+      tags:
+        - container_config_tasks
+
+    - name: Calculate container_puppet_tasks for {{ansible_hostname}} step {{step}}
+      set_fact:
+        host_container_puppet_tasks: "{{host_container_puppet_tasks|default([]) + [item]}}"
+      loop: "{{container_puppet_tasks.get('step_' + step, [])}}"
+      when: vars[item.service_name + '_short_bootstrap_node_name'] == ansible_hostname
+      vars:
+        container_puppet_tasks: "{{ lookup('file', tripleo_role_name + '/container_puppet_tasks.yaml', errors='ignore') | default({}, True) | from_yaml }}"
+      tags:
+        - container_config_tasks
+
+    - name: Write container-puppet-tasks json file for {{ansible_hostname}} step {{step}}
+      no_log: True
+      copy:
+        content: "{{host_container_puppet_tasks|to_nice_json}}"
+        dest: "/var/lib/container-puppet/container-puppet-tasks{{step}}.json"
+        force: yes
+        mode: '0600'
+      tags:
+        - container_config_tasks
+      when: host_container_puppet_tasks is defined
+
+    - name: Run container-puppet tasks (bootstrap tasks) for step {{ step }}
+      shell: "{{ python_cmd }} /var/lib/container-puppet/container-puppet.py"
+      environment:
+        CONFIG: /var/lib/container-puppet/{{ ansible_check_mode | bool | ternary('check-mode/', '') }}container-puppet-tasks{{ step }}.json
+        CONFIG_VOLUME_PREFIX: '/var/lib/config-data{{ ansible_check_mode | bool | ternary("/check-mode", "") }}'
+        NET_HOST: "true"
+        NO_ARCHIVE: "true"
+        STEP: "{{ step }}"
+        CONTAINER_CLI: "{{ container_cli }}"
+        DEBUG: "{{ docker_puppet_debug }}"
+        MOUNT_HOST_PUPPET: '{{docker_puppet_mount_host_puppet}}'
+      when: host_container_puppet_tasks is defined
+      changed_when: false
+      register: outputs
+      failed_when: false
+      no_log: true
+      tags:
+        - container_config_tasks
+
+    - name: "Debug output for task: Run container-puppet tasks (bootstrap tasks) for step {{ step }}"
+      debug:
+        var: outputs.stdout_lines | default([]) | union(outputs.stderr_lines | default([]))
+      when: outputs.rc is defined
+      failed_when: outputs.rc != 0
+      tags:
+        - container_config_tasks

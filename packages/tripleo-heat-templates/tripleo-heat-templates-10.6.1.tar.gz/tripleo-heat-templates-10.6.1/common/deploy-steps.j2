@@ -1,0 +1,978 @@
+# certain initialization steps (run in a container) will occur
+# on the role marked as primary controller or the first role listed
+{%- if enabled_roles is not defined or enabled_roles == [] -%}
+  # On upgrade certain roles can be disabled for operator driven upgrades
+  # See major_upgrade_steps.j2.yaml and post-upgrade.j2.yaml
+  {%- set enabled_roles = roles -%}
+{%- endif -%}
+{%- set primary_role = [enabled_roles[0]] -%}
+{%- for role in enabled_roles -%}
+  {%- if 'primary' in role.tags and 'controller' in role.tags -%}
+    {%- set _ = primary_role.pop() -%}
+    {%- set _ = primary_role.append(role) -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- set primary_role_name = primary_role[0].name -%}
+# primary role is: {{primary_role_name}}
+{% set deploy_steps_max = 6 -%}
+{% set update_steps_max = 6 -%}
+{% set external_update_steps_max = 2 -%}
+{% set pre_upgrade_rolling_steps_max = 1 -%}
+{% set upgrade_steps_max = 6 -%}
+{% set external_upgrade_steps_max = 3 -%}
+{% set post_upgrade_steps_max = 4 -%}
+{% set fast_forward_upgrade_steps_max = 9 -%}
+{% set fast_forward_upgrade_prep_steps_max = 3 -%}
+{% set post_update_steps_max = 4 -%}
+
+heat_template_version: rocky
+
+description: >
+  Post-deploy configuration steps via puppet for all roles,
+  as defined in ../roles_data.yaml
+
+parameters:
+  servers:
+    type: json
+    description: Mapping of Role name e.g Controller to a list of servers
+  role_data:
+    type: json
+    description: Mapping of Role name e.g Controller to the per-role data
+  DeployIdentifier:
+    default: ''
+    type: string
+    description: >
+      Setting this to a unique value will re-run any deployment tasks which
+      perform configuration on a Heat stack-update.
+  deployment_source_hosts:
+    default: 'Undercloud'
+    type: string
+    description: Host or hostgroup that runs the deployment
+  deployment_target_hosts:
+    default: 'overcloud'
+    type: string
+    description: Host or hostgroup that consists of the target systems for the deployment
+  EndpointMap:
+    default: {}
+    description: Mapping of service endpoint -> protocol. Typically set
+                 via parameter_defaults in the resource registry.
+    type: json
+  ConfigDebug:
+    default: false
+    description: Whether to run config management (e.g. Puppet) in debug mode.
+    type: boolean
+  EnablePuppet:
+    default: true
+    description: Whether to run the puppet (baremetal) deployment tasks.
+    type: boolean
+  DockerPuppetDebug:
+    type: boolean
+    default: false
+    description: Set to True to enable debug logging with container-puppet.py
+  DockerPuppetProcessCount:
+    type: number
+    default: 6
+    description: Number of concurrent processes to use when running container-puppet to generate config files.
+  ContainerCli:
+    type: string
+    default: 'podman'
+    description: CLI tool used to manage containers.
+    constraints:
+      - allowed_values: ['docker', 'podman']
+  DockerPuppetMountHostPuppet:
+    type: boolean
+    default: true
+    description: Whether containerized puppet executions use modules from the baremetal host. Defaults to true. Can be set to false to consume puppet modules from containers directly.
+  FastForwardUpgradeReleases:
+    type: comma_delimited_list
+    default: ['ocata', 'pike', 'queens']
+    description: List of releases to fast forward through during upgrade. Last release in list is used for post steps.
+  ssh_known_hosts_hostnames:
+    description: Mapping of hostname to ssh known hosts entry
+    type: json
+  ContainerLogStdoutPath:
+    type: string
+    description: Absolute path for container stdout output (Podman only)
+    default: /var/log/containers/stdouts
+  ContainerHealthcheckDisabled:
+    type: boolean
+    description: Whether or not we disable the container healthcheck.
+    default: false
+  SELinuxMode:
+    default: 'enforcing'
+    description: Configures SELinux mode
+    type: string
+    constraints:
+      - allowed_values: [ 'enforcing', 'permissive', 'disabled' ]
+{% for role in enabled_roles %}
+  {{role.name}}Count:
+    description: Number of {{role.name}} nodes to deploy
+    type: number
+    default: {{role.CountDefault|default(0)}}
+{% endfor %}
+
+conditions:
+{% for role in enabled_roles %}
+  {{role.name}}NonZero:
+     not:
+       equals:
+         - {get_param: {{role.name}}Count}
+         - 0
+{% endfor %}
+
+resources:
+
+  ExternalDeployTasks:
+    type: OS::Heat::Value
+    properties:
+      type: comma_delimited_list
+      value:
+        yaql:
+          # processing from per-role unique tasks into globally unique tasks
+          expression: coalesce($.data, []).flatten().distinct()
+          data:
+          {%- for role in enabled_roles %}
+            - get_param: [role_data, {{role.name}}, external_deploy_tasks]
+          {%- endfor %}
+
+  ExternalPostDeployTasks:
+    type: OS::Heat::Value
+    properties:
+      type: comma_delimited_list
+      value:
+        yaql:
+          # processing from per-role unique tasks into globally unique tasks
+          expression: coalesce($.data, []).flatten().distinct()
+          data:
+          {%- for role in enabled_roles %}
+            - get_param: [role_data, {{role.name}}, external_post_deploy_tasks]
+          {%- endfor %}
+
+  ExternalUpdateTasks:
+    type: OS::Heat::Value
+    properties:
+      type: comma_delimited_list
+      value:
+        yaql:
+          # processing from per-role unique tasks into globally unique tasks
+          expression: coalesce($.data, []).flatten().distinct()
+          data:
+          {%- for role in enabled_roles %}
+            - get_param: [role_data, {{role.name}}, external_update_tasks]
+          {%- endfor %}
+
+  ExternalUpgradeTasks:
+    type: OS::Heat::Value
+    properties:
+      type: comma_delimited_list
+      value:
+        yaql:
+          # processing from per-role unique tasks into globally unique tasks
+          expression: coalesce($.data, []).flatten().distinct()
+          data:
+          {%- for role in enabled_roles %}
+            - get_param: [role_data, {{role.name}}, external_upgrade_tasks]
+          {%- endfor %}
+
+  BootstrapServerId:
+    type: OS::Heat::Value
+    properties:
+      value:
+        yaql:
+          # Use a constant string of "bootstrap_server_id" when there are no
+          # servers in the primary role, such as in the case when all
+          # Controllers are blacklisted. No server id's will match the string
+          # which is what we want when all are blacklisted.
+          expression: switch($.data = {} => "no_bootstrap_server", $.data != {} => $.data.items().orderBy($[0]).first()[1])
+          data: {get_param: [servers, {{primary_role_name}}]}
+
+# Artifacts config is done on all roles, not only
+# enabled_roles, because on upgrade we need to write the json files
+# for the operator driven upgrade scripts (the ansible steps consume them)
+{% for role in roles %}
+  # Prepare host tasks for {{role.name}}
+  {{role.name}}ArtifactsConfig:
+    type: ../puppet/deploy-artifacts.yaml
+
+  {{role.name}}ArtifactsDeploy:
+    type: OS::Heat::StructuredDeploymentGroup
+    condition: {{role.name}}NonZero
+    properties:
+      name: {{role.name}}ArtifactsDeploy
+      servers:  {get_param: [servers, {{role.name}}]}
+      config: {get_resource: {{role.name}}ArtifactsConfig}
+{% endfor %}
+
+  # BEGIN CONFIG STEPS, only on enabled_roles
+{%- for role in enabled_roles %}
+  # Note, this should be the last step to execute configuration changes.
+  # Ensure that all {{role.name}}ExtraConfigPost steps are executed
+  # after all the previous deployment steps.
+  {{role.name}}ExtraConfigPost:
+    condition: {{role.name}}NonZero
+    type: OS::TripleO::NodeExtraConfigPost
+    properties:
+        servers: {get_param: [servers, {{role.name}}]}
+        EndpointMap: {get_param: EndpointMap}
+
+  # The {{role.name}}PostConfig steps are in charge of
+  # quiescing all services, i.e. in the Controller case,
+  # we should run a full service reload.
+  {{role.name}}PostConfig:
+    condition: {{role.name}}NonZero
+    type: OS::TripleO::Tasks::{{role.name}}PostConfig
+    depends_on:
+  {%- for dep in enabled_roles %}
+      - {{dep.name}}ExtraConfigPost
+  {%- endfor %}
+    properties:
+      servers:  {get_param: servers}
+      input_values:
+        deploy_identifier: {get_param: DeployIdentifier}
+{% endfor %}
+
+outputs:
+  RoleConfig:
+    description: Mapping of config data for all roles
+    value:
+      global_vars:
+        deploy_steps_max: {{deploy_steps_max}}
+        ssh_known_hosts: {get_param: ssh_known_hosts_hostnames}
+      common_deploy_steps_tasks: {get_file: deploy-steps-tasks.yaml}
+      docker_puppet_script: {get_file: ./container-puppet.py}
+      deploy_steps_playbook:
+        str_replace:
+          params:
+            BOOTSTRAP_SERVER_ID: {get_attr: [BootstrapServerId, value]}
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+            DEPLOY_IDENTIFIER: {get_param: DeployIdentifier}
+            ENABLE_DEBUG: {get_param: ConfigDebug}
+            ENABLE_PUPPET: {get_param: EnablePuppet}
+            CONTAINER_CLI: {get_param: ContainerCli}
+            CONTAINER_LOG_STDOUT_PATH: {get_param: ContainerLogStdoutPath}
+            CONTAINER_HEALTHCHECK_DISABLED: {get_param: ContainerHealthcheckDisabled}
+            DOCKER_PUPPET_DEBUG: {get_param: DockerPuppetDebug}
+            DOCKER_PUPPET_PROCESS_COUNT: {get_param: DockerPuppetProcessCount}
+            DOCKER_PUPPET_MOUNT_HOST_PUPPET: {get_param: DockerPuppetMountHostPuppet}
+            SELINUX_MODE: {get_param: SELinuxMode}
+          template: |
+            - hosts: DEPLOY_SOURCE_HOST
+              name: Gather facts from undercloud
+              gather_facts: yes
+              become: false
+              tags:
+                - facts
+
+            - hosts: DEPLOY_TARGET_HOST
+              name: Gather facts from overcloud
+              gather_facts: yes
+              tags:
+                - facts
+
+            - hosts: all
+              name: Load global variables
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              tasks:
+                - include_vars: global_vars.yaml
+              tags:
+                - always
+
+            - hosts: all
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              name: Manage SELinux
+              tasks:
+                - name: Set selinux state
+                  selinux:
+                    policy: targeted
+                    state: SELINUX_MODE
+
+            - hosts: DEPLOY_TARGET_HOST
+              name: Common roles for TripleO servers
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              roles:
+                - tripleo-bootstrap
+                - tripleo-ssh-known-hosts
+              tags:
+                - common_roles
+
+            - hosts: {{primary_role_name}}:DEPLOY_TARGET_HOST
+              name: Overcloud deploy step tasks for step 0
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: 0
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - name: Create /var/lib/container-puppet
+                  no_log: True
+                  file: path=/var/lib/container-puppet state=directory setype=svirt_sandbox_file_t selevel=s0 recurse=true
+                - name: Write container-puppet.py
+                  no_log: True
+                  copy: src=docker_puppet_script.yaml dest=/var/lib/container-puppet/container-puppet.py force=yes mode=0600
+{%- for role in roles %}
+                - import_tasks: {{role.name}}/deploy_steps_tasks.yaml
+                  when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+              tags:
+                - overcloud
+                - deploy_steps
+                - step0
+
+            - hosts: {{primary_role_name}}:DEPLOY_TARGET_HOST
+              name: Server deployments
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              tasks:
+                - include_tasks: deployments.yaml
+                  vars:
+                    force: false
+                  with_items: "{{ '{{' }} lookup('vars', tripleo_role_name + '_pre_deployments')|default([]) {{ '}}' }}"
+
+                - name: Hiera symlink
+                  file:
+                    src: /etc/puppet/hiera.yaml
+                    dest: /etc/hiera.yaml
+                    state: link
+                    force: true
+              tags:
+                - overcloud
+                - pre_deploy_steps
+{%- for role in roles %}
+
+            - hosts: {{role.name}}
+              name: {{role.name}} Host prep steps
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: {{role.name}}/host_prep_tasks.yaml
+              tags:
+                - overcloud
+                - host_prep_steps
+{%- endfor %}
+
+{%- for step in range(1,deploy_steps_max) %}
+
+            - hosts: DEPLOY_SOURCE_HOST
+              name: External deployment step {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              become: false
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: '{{step}}'
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: external_deploy_steps_tasks.yaml
+              tags:
+                - external
+                - external_deploy_steps
+                - step{{step}}
+
+            - hosts: {{primary_role_name}}:DEPLOY_TARGET_HOST
+              name: Overcloud deploy step tasks for {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              # FIXME(shardy) - it would be nice to use strategy: free to
+              # allow the tasks per-step to run in parallel on each role,
+              # but that doesn't work with any_errors_fatal: yes
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: '{{step}}'
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - name: Write the config_step hieradata for the deploy step {{step}} tasks
+                  copy:
+                    content: "{{ '{{' }} dict(step=step|int) | to_json {{ '}}' }}"
+                    dest: /etc/puppet/hieradata/config_step.json
+                    force: true
+                    mode: '0600'
+{%- for role in roles %}
+                - import_tasks: {{role.name}}/deploy_steps_tasks.yaml
+                  when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+              tags:
+                - overcloud
+                - deploy_steps
+                - step{{step}}
+
+            - hosts: {{primary_role_name}}:DEPLOY_TARGET_HOST
+              name: Overcloud common deploy step tasks {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: '{{step}}'
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - name: Check if /var/lib/tripleo-config/container-startup-config-1.json already exists
+                  stat:
+                    path: /var/lib/tripleo-config/container-startup-config-1.json
+                  register: container_startup_configs_json_stat
+                - import_tasks: common_deploy_steps_tasks.yaml
+                  when:
+                    - ((deploy_identifier is defined and deploy_identifier != "" and deploy_identifier is not none) or not container_startup_configs_json_stat.stat.exists)
+              tags:
+                - overcloud
+                - deploy_steps
+                - step{{step}}
+
+{%- endfor %}
+            - hosts: {{primary_role_name}}:DEPLOY_TARGET_HOST
+              name: Server Post Deployments
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              tasks:
+                - include_tasks: deployments.yaml
+                  vars:
+                    force: false
+                  with_items: "{{ '{{' }} lookup('vars', tripleo_role_name + '_post_deployments')|default([]) {{ '}}' }}"
+              tags:
+                - overcloud
+                - post_deploy_steps
+
+            - hosts: DEPLOY_SOURCE_HOST
+              name: External deployment Post Deploy tasks
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              become: false
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: external_post_deploy_steps_tasks.yaml
+              tags:
+                - external
+                - external_deploy_steps
+                - external_post_deploy_steps
+
+      external_deploy_steps_tasks: {get_attr: [ExternalDeployTasks, value]}
+      external_post_deploy_steps_tasks: {get_attr: [ExternalPostDeployTasks, value]}
+      update_steps_tasks: |
+{%- for role in roles %}
+            - import_tasks: {{role.name}}/update_tasks.yaml
+              when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+      update_steps_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+            CONTAINER_CLI: {get_param: ContainerCli}
+            CONTAINER_LOG_STDOUT_PATH: {get_param: ContainerLogStdoutPath}
+            CONTAINER_HEALTHCHECK_DISABLED: {get_param: ContainerHealthcheckDisabled}
+            DEPLOY_IDENTIFIER: {get_param: DeployIdentifier}
+            BOOTSTRAP_SERVER_ID: {get_attr: [BootstrapServerId, value]}
+            ENABLE_DEBUG: {get_param: ConfigDebug}
+            ENABLE_PUPPET: {get_param: EnablePuppet}
+            DOCKER_PUPPET_DEBUG: {get_param: DockerPuppetDebug}
+            DOCKER_PUPPET_PROCESS_COUNT: {get_param: DockerPuppetProcessCount}
+            DOCKER_PUPPET_MOUNT_HOST_PUPPET: {get_param: DockerPuppetMountHostPuppet}
+          template: |
+            - hosts: DEPLOY_SOURCE_HOST
+              name: Gather facts from undercloud
+              gather_facts: yes
+              become: false
+            - hosts: DEPLOY_TARGET_HOST
+              name: Gather facts from overcloud
+              gather_facts: yes
+            - hosts: all
+              name: Load global variables
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              tasks:
+                - include_vars: global_vars.yaml
+{%- for role in roles %}
+            - hosts: {{role.name}}
+              name: Run update
+              serial: {{ role.update_serial | default(1) }}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+                tripleo_minor_update: true
+              tasks:
+                - include_tasks: update_steps_tasks.yaml
+                  with_sequence: start=0 end={{update_steps_max-1}}
+                  loop_control:
+                    loop_var: step
+                - import_tasks: {{role.name}}/host_prep_tasks.yaml
+                  when: tripleo_role_name == '{{role.name}}'
+                - include_tasks: common_deploy_steps_tasks.yaml
+                  with_sequence: start=1 end={{deploy_steps_max-1}}
+                  loop_control:
+                    loop_var: step
+                - include_tasks: post_update_steps_tasks.yaml
+                  with_sequence: start=0 end={{post_update_steps_max-1}}
+                  loop_control:
+                    loop_var: step
+{%- endfor %}
+      external_update_steps_tasks: {get_attr: [ExternalUpdateTasks, value]}
+      external_update_steps_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+            DEPLOY_IDENTIFIER: {get_param: DeployIdentifier}
+            BOOTSTRAP_SERVER_ID: {get_attr: [BootstrapServerId, value]}
+            ENABLE_DEBUG: {get_param: ConfigDebug}
+            ENABLE_PUPPET: {get_param: EnablePuppet}
+            DOCKER_PUPPET_DEBUG: {get_param: DockerPuppetDebug}
+            DOCKER_PUPPET_PROCESS_COUNT: {get_param: DockerPuppetProcessCount}
+            DOCKER_PUPPET_MOUNT_HOST_PUPPET: {get_param: DockerPuppetMountHostPuppet}
+            CONTAINER_CLI: {get_param: ContainerCli}
+            CONTAINER_LOG_STDOUT_PATH: {get_param: ContainerLogStdoutPath}
+            CONTAINER_HEALTHCHECK_DISABLED: {get_param: ContainerHealthcheckDisabled}
+          template: |
+            - hosts: DEPLOY_SOURCE_HOST
+              name: Gather facts from undercloud
+              gather_facts: yes
+              become: false
+              tags:
+                - always
+                - facts
+            # facts from overcloud may be needed for external installer inventory
+            - hosts: DEPLOY_TARGET_HOST
+              name: Gather facts from overcloud
+              gather_facts: yes
+              tags:
+                - always
+                - facts
+            - hosts: all
+              name: Load global variables
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              tasks:
+                - include_vars: global_vars.yaml
+              tags:
+                - always
+{%- for step in range(external_update_steps_max) %}
+            - hosts: DEPLOY_SOURCE_HOST
+              name: External update step {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              become: false
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: '{{step}}'
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: external_update_steps_tasks.yaml
+              tags:
+                - step{{step}}
+                - external
+                - external_update_steps
+{%- endfor %}
+{%- for step in range(1,deploy_steps_max) %}
+            # putting both update and deploy tasks in the same
+            # playbook allows influencing the deploy tasks by
+            # variables "exported" from update tasks
+            - hosts: DEPLOY_SOURCE_HOST
+              name: External deploy step {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              become: false
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: '{{step}}'
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: external_deploy_steps_tasks.yaml
+              tags:
+                - step{{step}}
+                - external
+                - external_deploy_steps
+{%- endfor %}
+      pre_upgrade_rolling_steps_tasks: |
+{%- for role in roles %}
+            - import_tasks: {{role.name}}/pre_upgrade_rolling_tasks.yaml
+              when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+      pre_upgrade_rolling_steps_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+          template: |
+{%- for role in roles %}
+            - hosts: {{role.name}}
+              name: Gather facts from undercloud
+              gather_facts: yes
+              become: false
+            - hosts: {{role.name}}
+              name: Gather facts from overcloud
+              gather_facts: yes
+            - hosts: all
+              name: Load global variables
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              tasks:
+                - include_vars: global_vars.yaml
+            - hosts: {{role.name}}
+              name: Run pre-upgrade rolling tasks
+              serial:  {{ role.deploy_serial | default(1) }}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              tasks:
+                - include_tasks: pre_upgrade_rolling_steps_tasks.yaml
+                  with_sequence: start=0 end={{pre_upgrade_rolling_steps_max-1}}
+                  loop_control:
+                    loop_var: step
+{%- endfor %}
+      upgrade_steps_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+            CONTAINER_CLI: {get_param: ContainerCli}
+            CONTAINER_LOG_STDOUT_PATH: {get_param: ContainerLogStdoutPath}
+            CONTAINER_HEALTHCHECK_DISABLED: {get_param: ContainerHealthcheckDisabled}
+            DEPLOY_IDENTIFIER: {get_param: DeployIdentifier}
+            BOOTSTRAP_SERVER_ID: {get_attr: [BootstrapServerId, value]}
+            ENABLE_DEBUG: {get_param: ConfigDebug}
+          template: |
+            - hosts: DEPLOY_SOURCE_HOST
+              name: Gather facts from undercloud
+              gather_facts: yes
+              become: false
+              tags:
+                - facts
+
+            - hosts: DEPLOY_TARGET_HOST
+              name: Gather facts from overcloud
+              gather_facts: yes
+              tags:
+                - facts
+
+            - hosts: all
+              name: Load global variables
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              tasks:
+                - include_vars: global_vars.yaml
+                - name: ensure we get the right selinux context
+                  command: chcon -R -t svirt_sandbox_file_t /var/lib/config-data
+                  args:
+                    warn: no
+              tags:
+                - always
+
+{%- for step in range(0,upgrade_steps_max) %}
+
+            - hosts: DEPLOY_TARGET_HOST
+              name: Upgrade tasks for step {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              vars:
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                step: '{{step}}'
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+              tasks:
+{%- for role in roles %}
+                - import_tasks: {{role.name}}/upgrade_tasks_step{{step}}.yaml
+                  when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+              tags:
+                - upgrade_steps
+                - upgrade_step{{step}}
+
+{%- endfor %}
+      post_upgrade_steps_tasks: |
+{%- for role in roles %}
+            - import_tasks: {{role.name}}/post_upgrade_tasks.yaml
+              when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+      post_upgrade_steps_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+            CONTAINER_CLI: {get_param: ContainerCli}
+            CONTAINER_LOG_STDOUT_PATH: {get_param: ContainerLogStdoutPath}
+            CONTAINER_HEALTHCHECK_DISABLED: {get_param: ContainerHealthcheckDisabled}
+            DEPLOY_IDENTIFIER: {get_param: DeployIdentifier}
+            BOOTSTRAP_SERVER_ID: {get_attr: [BootstrapServerId, value]}
+            ENABLE_DEBUG: {get_param: ConfigDebug}
+            ENABLE_PUPPET: {get_param: EnablePuppet}
+            DOCKER_PUPPET_DEBUG: {get_param: DockerPuppetDebug}
+            DOCKER_PUPPET_PROCESS_COUNT: {get_param: DockerPuppetProcessCount}
+            DOCKER_PUPPET_MOUNT_HOST_PUPPET: {get_param: DockerPuppetMountHostPuppet}
+          template: |
+            - hosts: DEPLOY_TARGET_HOST
+              any_errors_fatal: yes
+              tasks:
+                - include_tasks: post_upgrade_steps_tasks.yaml
+                  with_sequence: start=0 end={{post_upgrade_steps_max-1}}
+                  vars:
+                    bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                    deploy_identifier: DEPLOY_IDENTIFIER
+                    enable_debug: ENABLE_DEBUG
+                    enable_puppet: ENABLE_PUPPET
+                    container_cli: CONTAINER_CLI
+                    container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                    container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                    docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                    docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                    docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+                  loop_control:
+                    loop_var: step
+      external_upgrade_steps_tasks: {get_attr: [ExternalUpgradeTasks, value]}
+      external_upgrade_steps_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+            DEPLOY_IDENTIFIER: {get_param: DeployIdentifier}
+            BOOTSTRAP_SERVER_ID: {get_attr: [BootstrapServerId, value]}
+            ENABLE_DEBUG: {get_param: ConfigDebug}
+            ENABLE_PUPPET: {get_param: EnablePuppet}
+            DOCKER_PUPPET_DEBUG: {get_param: DockerPuppetDebug}
+            DOCKER_PUPPET_PROCESS_COUNT: {get_param: DockerPuppetProcessCount}
+            DOCKER_PUPPET_MOUNT_HOST_PUPPET: {get_param: DockerPuppetMountHostPuppet}
+            CONTAINER_CLI: {get_param: ContainerCli}
+            CONTAINER_LOG_STDOUT_PATH: {get_param: ContainerLogStdoutPath}
+            CONTAINER_HEALTHCHECK_DISABLED: {get_param: ContainerHealthcheckDisabled}
+          template: |
+            - hosts: DEPLOY_SOURCE_HOST
+              name: Gather facts from undercloud
+              gather_facts: yes
+              become: false
+              tags:
+                - always
+                - facts
+            # facts from overcloud may be needed for external installer inventory
+            - hosts: DEPLOY_TARGET_HOST
+              name: Gather facts from overcloud
+              gather_facts: yes
+              tags:
+                - always
+                - facts
+            - hosts: all
+              name: Load global variables
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              tasks:
+                - include_vars: global_vars.yaml
+              tags:
+                - always
+{%- for step in range(external_upgrade_steps_max) %}
+            - hosts: DEPLOY_SOURCE_HOST
+              name: External upgrade step {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              become: false
+              vars:
+                # Explicit ansible_python_interpreter to allow connecting
+                # to different OS releases (EL7/8) while using delegate_to.
+                ansible_python_interpreter: /usr/libexec/platform-python
+                step: '{{step}}'
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: external_upgrade_steps_tasks.yaml
+              tags:
+                - step{{step}}
+                - external
+                - external_upgrade_steps
+{%- endfor %}
+{%- for step in range(1,deploy_steps_max) %}
+            # putting both upgrade and deploy tasks in the same
+            # playbook allows influencing the deploy tasks by
+            # variables "exported" from upgrade tasks
+            - hosts: DEPLOY_SOURCE_HOST
+              name: External deploy step {{step}}
+              gather_facts: {{ '"{{' }} gather_facts | default(false) {{ '}}"' }}
+              any_errors_fatal: yes
+              become: false
+              vars:
+                # Explicit ansible_python_interpreter to allow connecting
+                # to different OS releases (EL7/8) while using delegate_to.
+                ansible_python_interpreter: /usr/libexec/platform-python
+                step: '{{step}}'
+                bootstrap_server_id: BOOTSTRAP_SERVER_ID
+                deploy_identifier: DEPLOY_IDENTIFIER
+                enable_debug: ENABLE_DEBUG
+                enable_puppet: ENABLE_PUPPET
+                container_cli: CONTAINER_CLI
+                container_log_stdout_path: CONTAINER_LOG_STDOUT_PATH
+                container_healthcheck_disabled: CONTAINER_HEALTHCHECK_DISABLED
+                docker_puppet_debug: DOCKER_PUPPET_DEBUG
+                docker_puppet_process_count: DOCKER_PUPPET_PROCESS_COUNT
+                docker_puppet_mount_host_puppet: DOCKER_PUPPET_MOUNT_HOST_PUPPET
+              tasks:
+                - import_tasks: external_deploy_steps_tasks.yaml
+              tags:
+                - step{{step}}
+                - external
+                - external_deploy_steps
+{%- endfor %}
+      fast_forward_upgrade_playbook:
+        str_replace:
+          params:
+            DEPLOY_SOURCE_HOST: {get_param: deployment_source_hosts}
+            DEPLOY_TARGET_HOST: {get_param: deployment_target_hosts}
+          template: |
+            - hosts: DEPLOY_TARGET_HOST
+              any_errors_fatal: yes
+              tasks:
+                - set_fact:
+                    releases: {get_param: [FastForwardUpgradeReleases]}
+{% raw %}
+                - set_fact:
+                    ffu_releases: "{{ releases | difference( releases | last )}}"
+                - include_tasks: fast_forward_upgrade_release_tasks.yaml
+                  loop_control:
+                    loop_var: release
+                  with_items: '{{ ffu_releases }}'
+                - set_fact:
+                    release: "{{ releases | last }}"
+                    ffu_packages_apply: True
+{% endraw %}
+                - include_tasks: fast_forward_upgrade_post_role_tasks.yaml
+      fast_forward_upgrade_release_tasks: |
+                - include_tasks: fast_forward_upgrade_prep_tasks.yaml
+                - include_tasks: fast_forward_upgrade_bootstrap_tasks.yaml
+      fast_forward_upgrade_prep_tasks: |
+{%- for role in roles %}
+                - shell: |
+                    #!/bin/bash
+                    if [ ! -f /root/.ffu_workaround ]; then
+                      touch /root/.ffu_workaround
+                      os-apply-config -m /var/lib/os-collect-config/{{role.deprecated_server_resource_name|default(role.name)}}Deployment.json
+                      systemctl stop os-collect-config
+                      rm -r /var/lib/os-collect-config/*
+                      rm -f /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+                      rm -f /usr/libexec/os-apply-config/templates/etc/puppet/hiera.yaml
+                      rm -f /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+                    fi
+                  when: tripleo_role_name == '{{role.name}}'
+                  name: Run Fast Forward Upgrade Prep Workarounds for {{role.name}}
+{%- endfor %}
+                - name: Create /var/lib/container-puppet
+                  file: path=/var/lib/container-puppet state=directory setype=svirt_sandbox_file_t selevel=s0 recurse=true
+                - name: Write container-puppet.py
+                  no_log: True
+                  copy: src=docker_puppet_script.yaml dest=/var/lib/container-puppet/container-puppet.py force=yes mode=0600
+                - include_tasks: fast_forward_upgrade_prep_role_tasks.yaml
+                  with_sequence: start=0 end={{fast_forward_upgrade_prep_steps_max}}
+                  loop_control:
+                    loop_var: step
+      fast_forward_upgrade_post_role_tasks: |
+{%- for role in roles %}
+                - include_tasks: {{role.name}}/fast_forward_post_upgrade_tasks.yaml
+                  when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+                - name: Openstack Heat Agents package update
+                  package: name=openstack-heat-agents state=latest
+                - name: Update os-collect-config
+                  package: name=os-collect-config state=latest
+                - name: Start os-collect-config back up
+                  service: name=os-collect-config state=started enabled=yes
+      fast_forward_upgrade_prep_role_tasks: |
+{%- for role in roles %}
+                - include_tasks: {{role.name}}/fast_forward_upgrade_tasks.yaml
+                  when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+      fast_forward_upgrade_bootstrap_tasks: |
+                - include_tasks: fast_forward_upgrade_bootstrap_role_tasks.yaml
+                  with_sequence: start={{fast_forward_upgrade_prep_steps_max+1}} end={{fast_forward_upgrade_steps_max}}
+                  loop_control:
+                    loop_var: step
+      fast_forward_upgrade_bootstrap_role_tasks: |
+{%- for role in roles %}
+                - include_tasks: {{role.name}}/fast_forward_upgrade_tasks.yaml
+                  when:
+                    - tripleo_role_name == '{{role.name}}'
+                    - is_bootstrap_node|bool
+{%- endfor %}
+      post_update_steps_tasks: |
+{%- for role in roles %}
+            - import_tasks: {{role.name}}/post_update_tasks.yaml
+              when: tripleo_role_name == '{{role.name}}'
+{%- endfor %}
+      boot_param_tasks: {get_file: ../extraconfig/pre_network/boot_param_tasks.yaml}

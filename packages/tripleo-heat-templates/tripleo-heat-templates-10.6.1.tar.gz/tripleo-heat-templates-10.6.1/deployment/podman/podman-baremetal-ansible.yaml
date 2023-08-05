@@ -1,0 +1,234 @@
+heat_template_version: rocky
+
+description: >
+  Configures podman on the host
+
+parameters:
+  DockerInsecureRegistryAddress:
+    description: Optional. The IP Address and Port of an insecure docker
+                 namespace that will be configured in /etc/sysconfig/docker.
+                 The value can be multiple addresses separated by commas.
+    type: comma_delimited_list
+    default: []
+  EndpointMap:
+    default: {}
+    description: Mapping of service endpoint -> protocol. Typically set
+                 via parameter_defaults in the resource registry.
+    type: json
+  ServiceData:
+    default: {}
+    description: Dictionary packing service data
+    type: json
+  ServiceNetMap:
+    default: {}
+    description: Mapping of service_name -> network name. Typically set
+                 via parameter_defaults in the resource registry.  This
+                 mapping overrides those in ServiceNetMapDefaults.
+    type: json
+  DefaultPasswords:
+    default: {}
+    type: json
+  RoleName:
+    default: ''
+    description: Role name on which the service is applied
+    type: string
+  RoleParameters:
+    default: {}
+    description: Parameters specific to the role
+    type: json
+  ContainerImageRegistryLogin:
+    type: boolean
+    default: false
+    description: Flag to enable container registry login actions during the deployment.
+                 Setting this to true will cause login calls to be performed during the
+                 deployment.
+  ContainerImageRegistryCredentials:
+    type: json
+    hidden: true
+    default: {}
+    description: |
+      Mapping of image registry hosts to login credentials. Must be in the following example format
+
+        docker.io:
+          username: pa55word
+        '192.0.2.1:8787':
+          registry_username: password
+  SystemdDropInDependencies:
+    default: true
+    description: tell the container manager (e.g. paunch) to inject
+                 additional ordering dependencies for the systemd
+                 scopes associated to podman containers.
+    type: boolean
+
+conditions:
+  insecure_registry_is_empty: {equals : [{get_param: DockerInsecureRegistryAddress}, []]}
+  systemd_drop_in_dependencies_enabled: {get_param: SystemdDropInDependencies}
+
+outputs:
+  role_data:
+    description: Role data for the podman service
+    value:
+      service_name: podman
+      config_settings: {}
+      step_config: ''
+      host_prep_tasks:
+        - name: Install and configure Podman
+          block: &install_and_configure_podman
+          - name: Set login facts
+            set_fact:
+              container_registry_insecure_registries:
+                if:
+                  - insecure_registry_is_empty
+                  - []
+                  - {get_param: DockerInsecureRegistryAddress}
+              container_registry_login: {get_param: ContainerImageRegistryLogin}
+              # default that is overwritten by the heat -> dict conversion
+              container_registry_logins: {}
+              container_registry_logins_json: {get_param: ContainerImageRegistryCredentials}
+          - name: Convert logins json to dict
+            set_fact:
+              container_registry_logins: "{{ container_registry_logins_json | from_json }}"
+            when:
+              - container_registry_login | bool
+              - container_registry_logins_json | length) > 0
+
+          - name: ensure podman and deps are installed
+            package:
+              name: podman
+              state: latest
+          - name: Remove default cni config for cni0 if exists
+            copy:
+              dest: /etc/cni/net.d/87-podman-bridge.conflist
+              content: ''
+              force: yes
+            ignore_errors: True
+          - name: Delete cni0 interface if exists
+            command: ip link delete cni0
+            ignore_errors: True
+          - name: configure insecure registries /etc/containers/registries.conf
+            ini_file:
+              path: /etc/containers/registries.conf
+              section: 'registries.insecure'
+              option: registries
+              value: "{{ container_registry_insecure_registries }}"
+            when: container_registry_insecure_registries | length > 0
+          - name: Perform container registry login(s)
+            shell: podman login --username=$REGISTRY_USERNAME --password=$REGISTRY_PASSWORD $REGISTRY
+            environment:
+              REGISTRY_USERNAME: "{{ lookup('dict', item.value).key }}"
+              REGISTRY_PASSWORD: "{{ lookup('dict', item.value).value }}"
+              REGISTRY: "{{ item.key }}"
+            loop: "{{ query('dict', container_registry_logins | default({})) }}"
+            when:
+              - container_registry_login | bool
+              - container_registry_logins
+        - if:
+          - systemd_drop_in_dependencies_enabled
+          - - name: Configure paunch to generate systemd drop-in dependencies
+              copy:
+                dest: /etc/sysconfig/podman_drop_in
+                content: |
+                  This file makes paunch generate additional systemd
+                  dependencies for containers that have special
+                  start/stop ordering constraints. It ensures that
+                  those constraints are enforced on reboot/shutdown.
+          - - name: Configure paunch to not generate drop-in dependencies
+              file:
+                path: /etc/sysconfig/podman_drop_in
+                state: absent
+
+      service_config_settings: {}
+      upgrade_tasks:
+        - name: system_upgrade_prepare step 2
+          tags:
+            - never
+            - system_upgrade
+            - system_upgrade_prepare
+          when:
+            - (step | int) == 2
+          block:
+            - name: Check if pcs is present
+              stat:
+                path: /usr/sbin/pcs
+              register: pcs_stat
+            - name: Stop pacemaker cluster before stopping all docker containers
+              pacemaker_cluster: state=offline
+              when: pcs_stat.stat.exists
+            - name: Destroy pacemaker cluster
+              command: /usr/sbin/pcs cluster destroy
+              when: pcs_stat.stat.exists
+            - name: Stop all services by stopping all Docker containers
+              shell: docker ps -q | xargs --no-run-if-empty -n1 docker stop
+
+        # Upgrade tasks for Pacemaker-managed services tasks pull
+        # container images in step 2, we need insecure registries
+        # configured in step 1.
+        - name: Install and configure Podman
+          when: step|int == 1
+          block: *install_and_configure_podman
+      post_upgrade_tasks:
+        - name: Purge everything about Docker on the host
+          when: step|int == 3
+          block:
+            - name: Check if docker has some data
+              stat:
+                path: /var/lib/docker
+              register: docker_path_stat
+
+            - name: Purge Docker
+              when: docker_path_stat.stat.exists
+              block:
+                - name: Ensure docker service is running
+                  systemd:
+                    name: docker
+                  register: docker_service_state
+                - name: Run docker system prune
+                  shell: docker system prune -a -f
+                  when: docker_service_state.status['SubState'] == 'running'
+                - name: Stop and disable Docker service
+                  when: docker_service_state.status['SubState'] == 'running'
+                  systemd:
+                    name: docker
+                    state: stopped
+                    enabled: no
+                - name: Uninstall Docker rpm
+                  package:
+                    name: docker
+                    state: absent
+                - name: Get the list of directory mounted under /var/lib/docker/ orderer.
+                  shell: |
+                    mount | awk '/\/var\/lib\/docker\/[^/]+\// {print $3}';
+                    mount | awk '/\/var\/lib\/docker\/[^/]+$/ {print $3}';
+                  register: unmounted_dirs
+                - name: Unmount those directories
+                  mount:
+                    path: "{{ item }}"
+                    state: unmounted
+                  loop: "{{ unmounted_dirs.stdout_lines }}"
+                - name: Purge /var/lib/docker
+                  file:
+                    path: /var/lib/docker
+                    state: absent
+        - name: Clean podman
+          when:
+            - step|int == 3
+            - container_cli == 'podman'
+          block:
+            - name: Purge Podman
+              block:
+                - name: Clean podman images
+                  shell: podman image prune -a
+                - name: Clean podman volumes
+                  shell: podman volume prune -f
+      post_update_tasks:
+        - name: Clean podman
+          when:
+            - step|int == 3
+            - container_cli == 'podman'
+          block:
+            - name: Purge Podman
+              block:
+                - name: Clean podman images
+                  shell: podman image prune -a
+                - name: Clean podman volumes
+                  shell: podman volume prune -f
