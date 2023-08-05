@@ -1,0 +1,3 @@
+[console_scripts]
+elfhex = elfhex.__main__:main
+
