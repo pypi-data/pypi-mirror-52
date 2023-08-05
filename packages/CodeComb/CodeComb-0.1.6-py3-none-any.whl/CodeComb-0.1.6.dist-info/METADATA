@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: CodeComb
+Version: 0.1.6
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.*
+Requires-Dist: Flask (>=1.1.1)
+Requires-Dist: gensim (==3.4.0)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: fire (==0.2.1)
+Requires-Dist: cutie (==0.2.2)
+Requires-Dist: numpy (>=1.16.*)
+Requires-Dist: pip (==19.2.3)
+Requires-Dist: tqdm (==4.35.0)
+Requires-Dist: nltk (>=3.4.5)
+Requires-Dist: prompt-toolkit (==2.0.9)
+Requires-Dist: click (==6.7)
+Requires-Dist: Flask-Cors (==3.0.3)
+Requires-Dist: pandas (>=0.25.1)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: setuptools (==41.2.0)
+Requires-Dist: colorama (==0.3.9)
+Requires-Dist: scikit-learn (>=0.21.3)
+
+UNKNOWN
+
+
