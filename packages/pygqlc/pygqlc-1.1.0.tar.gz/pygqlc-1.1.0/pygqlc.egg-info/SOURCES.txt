@@ -1,0 +1,17 @@
+README.md
+setup.py
+pygqlc/GraphQLClient.py
+pygqlc/MutationBatch.py
+pygqlc/MutationParser.py
+pygqlc/QueryBatch.py
+pygqlc/QueryParser.py
+pygqlc/SubscriptionParser.py
+pygqlc/__init__.py
+pygqlc/__main__.py
+pygqlc.egg-info/PKG-INFO
+pygqlc.egg-info/SOURCES.txt
+pygqlc.egg-info/dependency_links.txt
+pygqlc.egg-info/entry_points.txt
+pygqlc.egg-info/not-zip-safe
+pygqlc.egg-info/requires.txt
+pygqlc.egg-info/top_level.txt
