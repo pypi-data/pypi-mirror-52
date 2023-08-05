@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: MongoIngestorS3
+Version: 0.4.0
+Summary: Library that allows you to ingest data from mongo database into an s3 bucket
+Home-page: https://github.com/MihailButnaru/MongoIngestorS3
+Author: Mihail Butnaru
+Author-email: butnarum@hotmail.com
+License: MIT
+Download-URL: https://github.com/MihailButnaru/MongoIngestorS3/archive/v1.1.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
