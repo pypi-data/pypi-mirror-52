@@ -1,0 +1,3 @@
+[console_scripts]
+pyc_viewer = pyc_viewer:main
+
