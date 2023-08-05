@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: sixtools
+Version: 0.0.3
+Summary: Software for performing resonant inelastic xray scattering analysis at NSLS-II
+Home-page: https://github.com/awalter-bnl/sixtools
+Author: Brookhaven National Lab
+Author-email: awalter@bnl.gov
+License: BSD (3-clause)
+Description: ===============================
+        sixtools
+        ===============================
+        
+        .. image:: https://img.shields.io/travis/awalter-bnl/sixtools.svg
+                :target: https://travis-ci.org/awalter-bnl/sixtools
+        
+        .. image:: https://img.shields.io/pypi/v/sixtools.svg
+                :target: https://pypi.python.org/pypi/sixtools
+        
+        
+        Software for performing resonant inelastic xray scattering analysis at NSLS-II
+        
+        * Free software: 3-clause BSD license
+        * Documentation: https://nsls-ii-six.github.io/sixtools/.
+        
+        Features
+        --------
+        
+        * TODO
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
