@@ -1,0 +1,17 @@
+pycql/__init__.py,sha256=ma_196F-4tqHG6i69vF9ILm0xj-Y8P72iYFZW_01vPc,1542
+pycql/ast.py,sha256=GvaT2U8LM3vir-OIHt183oxuhaALXEjORf6emFbZbbI,8953
+pycql/lexer.py,sha256=O_fVIDISUw_BehZUxvaQ5xv4JY9Iag2UWzd5MIRVY1Y,6872
+pycql/lextab.py,sha256=4qB3olOnmg876xzJXPXeBcrU1iYq9r1pByRo1-TsQhA,6360
+pycql/parser.py,sha256=NUw84ZFPrI1GTTj88KhJBAQv0R8JvT04d15k15Sw4Wk,10632
+pycql/parsetab.py,sha256=cBXr0UUC20yneQHIKFXkI044AAMA9MfjacfZEDnHtZ0,21864
+pycql/util.py,sha256=GCWfSJhwGLOSr6c-NfORlN23i2gxDfKGs6HLWV2YdMY,2508
+pycql/values.py,sha256=V12YlFLnLsn4jsGouTLxFX5Nti9JC54WXZKUVws5hs0,1806
+pycql/integrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycql/integrations/django/__init__.py,sha256=kFSAF4Cf7MD0CNE48IrK70Z25JRxthNIllwezMGq7Ac,31
+pycql/integrations/django/evaluate.py,sha256=5TgxSLF_OawHvYHouov7GnD2iSMpHdVozrZPSUCfpT4,5077
+pycql/integrations/django/filters.py,sha256=QNSyyRFOFO4bEbZWl9uuoLlpNtBB1HodTfU7HmXQG4o,16923
+pycql-0.0.1.dist-info/LICENSE,sha256=stYJP2qqWgNSulffymLBsEmdf7_fiYKZeVKn0vxwv40,1073
+pycql-0.0.1.dist-info/METADATA,sha256=ninfRmI0diWsmDYe-JqpViM0w1m9pueCajU0wX4rm5Q,4701
+pycql-0.0.1.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+pycql-0.0.1.dist-info/top_level.txt,sha256=A6gQw6JhBnRaTuZHsOUzcqK7c6ROtA-L9kZVFwYlxQg,6
+pycql-0.0.1.dist-info/RECORD,,
