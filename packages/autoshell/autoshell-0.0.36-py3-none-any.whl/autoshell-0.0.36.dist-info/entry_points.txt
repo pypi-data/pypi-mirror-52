@@ -1,0 +1,3 @@
+[console_scripts]
+autoshell = autoshell.__main__:start
+
