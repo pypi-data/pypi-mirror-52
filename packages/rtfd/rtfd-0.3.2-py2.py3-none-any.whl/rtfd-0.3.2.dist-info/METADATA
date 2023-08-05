@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: rtfd
+Version: 0.3.2
+Summary: Build, read your exclusive and fuck docs.
+Home-page: https://github.com/staugur/rtfd
+Author: staugur
+Author-email: staugur@saintic.com
+License: BSD 3-Clause
+Download-URL: https://github.com/staugur/rtfd/releases/tag/0.3.2
+Project-URL: Code, https://github.com/staugur/rtfd
+Project-URL: Issue tracker, https://github.com/staugur/rtfd/issues
+Project-URL: Documentation, https://docs.saintic.com/rtfd/
+Keywords: docs,sphinx,reStructuredText
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7,<3
+Requires-Dist: Flask-PluginKit (>=3.3.0)
+Requires-Dist: Click (>=7.0)
+Requires-Dist: configparser
+
+rtfd
+====
+
+Build, read your exclusive and fuck docs.
+
+|Build Status| |Documentation Status| |codecov| |PyPI|
+
+Installation
+------------
+
+- Production Version
+
+    .. code-block:: bash
+
+        $ pip install -U rtfd
+
+- Development Version
+
+    .. code-block:: bash
+
+        $ pip install -U git+https://github.com/staugur/rtfd.git@master
+
+Quickstart
+----------
+
+1. rtfd init -b your_data_dir --other-options
+
+2. rtfd project -a create --url git-url --other-options your-docs-project
+
+3. rtfd build your-docs-project
+
+More options with ``--help / -h`` option.
+
+
+.. |Documentation Status| image:: https://open.saintic.com/rtfd/badge/saintic-docs
+    :target: https://docs.saintic.com/rtfd/
+
+.. |Build Status| image:: https://travis-ci.org/staugur/rtfd.svg?branch=master
+    :target: https://travis-ci.org/staugur/rtfd
+
+.. |codecov| image:: https://codecov.io/gh/staugur/rtfd/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/staugur/rtfd
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/rtfd.svg?style=popout
+    :target: https://pypi.org/project/rtfd/
+
+
