@@ -1,0 +1,11 @@
+コンパイル方法
+
+git clone https://github.com/sugarchain-dev/sugar_yespower_python3
+
+cd sugar_yespower_python3
+
+sudo python3 setup.py install
+
+使用方法
+
+import sugar_yespower
