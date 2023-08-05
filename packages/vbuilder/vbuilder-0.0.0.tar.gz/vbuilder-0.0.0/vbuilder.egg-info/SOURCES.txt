@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+vbuilder/__init__.py
+vbuilder/builder.py
+vbuilder/changelog.py
+vbuilder.egg-info/PKG-INFO
+vbuilder.egg-info/SOURCES.txt
+vbuilder.egg-info/dependency_links.txt
+vbuilder.egg-info/top_level.txt
