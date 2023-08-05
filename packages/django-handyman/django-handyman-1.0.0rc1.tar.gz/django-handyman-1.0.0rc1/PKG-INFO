@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: django-handyman
+Version: 1.0.0rc1
+Summary: 
+Home-page: None
+Author: Giannis Katsini
+Author-email: giannis.katsini@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: codecov (>=2.0,<3.0)
