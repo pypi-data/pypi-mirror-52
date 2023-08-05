@@ -1,0 +1,52 @@
+language: python
+
+os:
+  - linux
+#  - osx
+
+compiler:
+  - clang
+  - gcc
+
+python:
+  - 2.7
+  - 3.6
+
+#virtualenv:
+#  system_site_packages: true
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python swig cmake hdf5 openmpi; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install cmake libhdf5-serial-dev python-dev swig3.0 openmpi-bin libopenmpi-dev; fi
+
+install:
+  - pip install scikit-build
+  - pip install mpi4py
+  - pip install -e .
+  - echo $PYTHONPATH
+  - echo $LD_LIBRARY_PATH
+  # - python setup.py install
+
+branches:
+  only:
+    - develop
+# services:
+# - docker
+# install:
+# - docker build -t larcv2_image -f .Dockerfile .
+# script:
+# - docker run --name test_build larcv2_image python -c "import larcv"
+# notifications:
+# Emails are sent to the committer's git-configured email address by default,
+# but only if they have access to the repository.  To enable Travis on your
+# public fork of Caffe, just go to travis-ci.org and flip the switch on for
+# your Caffe fork.  To configure your git email address, use:
+#     git config --global user.email me@example.com
+  # email:
+    # on_success: always
+
+script: 
+  - pytest -m "not distributed_test" tests/
+  - mpiexec -n 2 pytest -m distributed_test tests/
