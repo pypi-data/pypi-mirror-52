@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyrdmia
+Version: 0.1.0
+Summary: Interval Arithmetic package
+Home-page: https://github.com/DirceuMaraschin/PyRDMIA
+Author: Dirceu Maraschin Jr.,Lucas Mendes Tortelli
+Author-email: lmtortelli@inf.ufpel.edu.br,dmaraschin@inf.ufpel.edu.br
+License: GPL
+Platform: Windows
+Platform: Linux
+Requires-Dist: numpy (>=1.13.0)
+Requires-Dist: enum34
+
+Arithmetic.
+
+
