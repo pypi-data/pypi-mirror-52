@@ -1,0 +1,3 @@
+[console_scripts]
+rtfd = rtfd._cli:cli
+
