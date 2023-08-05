@@ -1,0 +1,9 @@
+arrow
+requests
+
+[dev]
+black
+doc8
+flake8
+pytest
+zest.releaser[recommended]
