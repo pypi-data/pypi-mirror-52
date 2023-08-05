@@ -1,0 +1,5 @@
+include README.md
+include HISTORY.rst
+include LICENSE
+include compile.sh
+recursive-include tb_paddle/proto *
