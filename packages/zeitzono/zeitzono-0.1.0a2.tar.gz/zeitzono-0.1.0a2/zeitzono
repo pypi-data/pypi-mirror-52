@@ -1,0 +1,87 @@
+#!/usr/bin/env python
+
+import urwid
+import argparse
+import pathlib
+
+from Zeitzono import ZeitzonoUrwidMain
+from Zeitzono import ZeitzonoWidgetSwitcher
+from Zeitzono import ZeitzonoUrwidSplashScreen
+from Zeitzono import ZeitzonoUrwidHelpMain
+from Zeitzono import ZeitzonoUrwidHelpSearch
+from Zeitzono import ZeitzonoUrwidPalette
+
+VERSION = "v0.1.0a2"
+VERSION_DB = "GeoNames DB: 2019-09-09"
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--version', '-v', action='version',
+                        version=f"zeitzono {VERSION} ({VERSION_DB})")
+
+
+    help = "start without splash screen"
+    parser.add_argument("--no-splash", "-S", action="store_true", help=help)
+
+    help = "don't use colors"
+    parser.add_argument("--no-color", "-C", action="store_true", help=help)
+
+    help = "don't cache cities on startup/exit"
+    parser.add_argument("--no-cache", action="store_true", help=help)
+
+    default = pathlib.Path.home() / ".zeitzono.cache"
+    help = f"cache location (default = {default})"
+    parser.add_argument("--cache", action="store", default=default, help=help)
+
+    help = "use colors that look good on a light background"
+    parser.add_argument("--bg-light", action="store_true", help=help)
+
+    args = parser.parse_args()
+
+    return args
+
+
+def main():
+
+    args = parse_args()
+
+    zeitzonowidgetswitcher = ZeitzonoWidgetSwitcher()
+
+    version = VERSION
+    dbversion = VERSION_DB
+
+    zeitzonourwidsplashscreen = ZeitzonoUrwidSplashScreen(
+        zeitzonowidgetswitcher, version, dbversion
+    )
+
+    cache = None
+    if args.no_cache is False:
+        cache = args.cache
+
+    zeitzonourwidmain = ZeitzonoUrwidMain(zeitzonowidgetswitcher, cache, version)
+
+    mainframe = urwid.Frame(zeitzonourwidsplashscreen, focus_part="body")
+
+    # help screens
+    zeitzonourwidhelpmain = ZeitzonoUrwidHelpMain(zeitzonowidgetswitcher)
+    zeitzonourwidhelpsearch = ZeitzonoUrwidHelpSearch(zeitzonowidgetswitcher)
+    zeitzonowidgetswitcher.set_mainframe(mainframe)
+    zeitzonowidgetswitcher.set_widget_help_main(zeitzonourwidhelpmain)
+    zeitzonowidgetswitcher.set_widget_help_search(zeitzonourwidhelpsearch)
+
+    zeitzonowidgetswitcher.set_widget("splash", zeitzonourwidsplashscreen)
+    zeitzonowidgetswitcher.set_widget("main", zeitzonourwidmain)
+
+    if args.no_splash:
+        zeitzonowidgetswitcher.switch_widget_main()
+
+    palette = ZeitzonoUrwidPalette(
+        no_color=args.no_color, lightbg=args.bg_light
+    ).get_palette()
+
+    loop = urwid.MainLoop(mainframe, palette, handle_mouse=False)
+
+    loop.run()
+
+
+main()
