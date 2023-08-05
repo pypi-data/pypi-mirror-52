@@ -1,0 +1,12 @@
+README.md
+setup.py
+hlwy_lsh.egg-info/PKG-INFO
+hlwy_lsh.egg-info/SOURCES.txt
+hlwy_lsh.egg-info/dependency_links.txt
+hlwy_lsh.egg-info/requires.txt
+hlwy_lsh.egg-info/top_level.txt
+lsh/MurmurHash3.cpp
+lsh/__init__.py
+lsh/cMinhash.cpp
+lsh/cache.py
+lsh/minhash.py
