@@ -1,0 +1,16 @@
+History.md
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ox3apiclient/__init__.py
+ox3apiclient.egg-info/PKG-INFO
+ox3apiclient.egg-info/SOURCES.txt
+ox3apiclient.egg-info/dependency_links.txt
+ox3apiclient.egg-info/requires.txt
+ox3apiclient.egg-info/top_level.txt
+ox3apiclient.egg-info/zip-safe
+test/ox3rctest
+test/test_client.py
+test/test_clientfromfile.py
