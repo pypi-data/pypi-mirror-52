@@ -1,0 +1,10 @@
+README.md
+setup.py
+seperator/__init__.py
+seperator/lines.py
+seperator.egg-info/PKG-INFO
+seperator.egg-info/SOURCES.txt
+seperator.egg-info/dependency_links.txt
+seperator.egg-info/top_level.txt
+tests/__init__.py
+tests/lines.py
