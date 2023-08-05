@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bin/build.bat
+motorframework/__init__.py
+motorframework.egg-info/PKG-INFO
+motorframework.egg-info/SOURCES.txt
+motorframework.egg-info/dependency_links.txt
+motorframework.egg-info/requires.txt
+motorframework.egg-info/top_level.txt
+motorframework/co/Party.py
+motorframework/co/__init__.py
