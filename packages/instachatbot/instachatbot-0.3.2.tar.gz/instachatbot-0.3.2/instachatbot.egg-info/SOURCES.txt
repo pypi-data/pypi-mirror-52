@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+instachatbot/__init__.py
+instachatbot/bot.py
+instachatbot/nodes.py
+instachatbot/state.py
+instachatbot/storage.py
+instachatbot.egg-info/PKG-INFO
+instachatbot.egg-info/SOURCES.txt
+instachatbot.egg-info/dependency_links.txt
+instachatbot.egg-info/requires.txt
+instachatbot.egg-info/top_level.txt

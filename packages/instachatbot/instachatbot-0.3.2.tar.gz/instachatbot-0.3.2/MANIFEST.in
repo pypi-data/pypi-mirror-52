@@ -1,0 +1,4 @@
+global-include *.py
+include requirements.txt
+include LICENSE
+prune tests
