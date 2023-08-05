@@ -1,0 +1,17 @@
+dexterity.localrolesfield
+plone.api
+plone.app.lockingbehavior
+plone.directives.form
+plone.formwidget.masterselect
+plone.principalsource
+imio.helpers
+imio.migrator
+setuptools
+z3c.table
+
+[test]
+collective.eeafaceted.batchactions
+imio.prettylink
+plone.app.testing
+plone.app.contenttypes
+plone.app.robotframework[debug]
