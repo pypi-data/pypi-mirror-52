@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: renal
+Version: 0.0.1
+Summary: renal is a command for easily renalaming directories and files.
+Home-page: https://github.com/guoxiaoyong/rena
+Author: Xiaoyong Guo
+Author-email: guo.xiaoyong@gmail.com
+License: UNKNOWN
+Description: renal is a command for easily renalaming directories and files.
+Keywords: filesystem bash renalme mv move
+Platform: UNKNOWN
