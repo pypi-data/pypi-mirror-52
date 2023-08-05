@@ -1,0 +1,4 @@
+[flask.commands]
+periodiq=flask_dramatiq:periodiq
+worker=flask_dramatiq:worker
+
