@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: classcard_dataclient
+Version: 1.0.4
+Summary: data client of class card server
+Home-page: https://github.com/murray88/classcard_dataclient/
+Maintainer: Murray
+Maintainer-email: ma.yawei@h3c.com
+License: MIT
+Download-URL: https://github.com/murray88/classcard_dataclient/
+Description: ## DataClient
+        
+        ### Introduction
+        this is a tool which save data to class card server
+        
+        ### Usage
+        1. init client
+        ```python
+        client = DataClient()
+        ```
+        
+        2. call method
+        ```python
+        data = {
+            "xxx": "xxx"
+        }
+        code, msg = client.create_section(data=data)
+        ```
+        > notice:
+        * when data is dict , code is integer, msg is string, 
+        * when data is list, the code is list, msg is also list.
+        
+        
+        
+        
+        
+Keywords: classcard client
+Platform: Platform Independent
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
