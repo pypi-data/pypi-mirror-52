@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: subm-ql
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Quinten Lootens
+Author-email: quinten.lootens@ugent.be
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: gym
+Requires-Dist: matplotlib
+Requires-Dist: pybullet
+
+UNKNOWN
+
+
