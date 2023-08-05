@@ -1,0 +1,3 @@
+[console_scripts]
+tfc = tfc.__main__:main
+
