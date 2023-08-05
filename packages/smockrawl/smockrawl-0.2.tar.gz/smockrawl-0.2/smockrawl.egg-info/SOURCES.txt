@@ -1,0 +1,11 @@
+README.md
+setup.py
+smockrawl/__init__.py
+smockrawl/__main__.py
+smockrawl/smockrawl.py
+smockrawl.egg-info/PKG-INFO
+smockrawl.egg-info/SOURCES.txt
+smockrawl.egg-info/dependency_links.txt
+smockrawl.egg-info/entry_points.txt
+smockrawl.egg-info/requires.txt
+smockrawl.egg-info/top_level.txt
