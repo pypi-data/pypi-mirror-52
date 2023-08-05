@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+topinyin/__init__.py
+topinyin/pinyincode.txt
+topinyin.egg-info/PKG-INFO
+topinyin.egg-info/SOURCES.txt
+topinyin.egg-info/dependency_links.txt
+topinyin.egg-info/top_level.txt
