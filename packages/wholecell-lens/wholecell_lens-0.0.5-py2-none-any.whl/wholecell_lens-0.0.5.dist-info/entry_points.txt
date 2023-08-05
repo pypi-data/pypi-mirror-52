@@ -1,0 +1,5 @@
+[console_scripts]
+lens.agent.boot = lens.agent.boot
+lens.composites = lens.composites
+lens.environment.boot = lens.environment.boot
+
