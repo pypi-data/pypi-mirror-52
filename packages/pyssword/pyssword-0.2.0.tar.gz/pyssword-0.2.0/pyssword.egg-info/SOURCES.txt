@@ -1,0 +1,13 @@
+setup.py
+pyssword/__init__.py
+pyssword/pyssword.py
+pyssword/util.py
+pyssword.egg-info/PKG-INFO
+pyssword.egg-info/SOURCES.txt
+pyssword.egg-info/dependency_links.txt
+pyssword.egg-info/entry_points.txt
+pyssword.egg-info/requires.txt
+pyssword.egg-info/top_level.txt
+pyssword/tests/__init__.py
+pyssword/tests/conftest.py
+pyssword/tests/test_pyssword.py
