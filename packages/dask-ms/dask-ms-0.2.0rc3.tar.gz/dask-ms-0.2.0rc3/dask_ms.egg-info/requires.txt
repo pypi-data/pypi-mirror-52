@@ -1,0 +1,14 @@
+numpy>=1.14.0
+python-casacore==3.0.0
+
+[:python_version >= "3.5"]
+dask[array]>=2.2.0
+
+[testing]
+pytest
+pytest-flake8
+
+[xarray]
+
+[xarray:python_version >= "3.5"]
+xarray>0.12.0
