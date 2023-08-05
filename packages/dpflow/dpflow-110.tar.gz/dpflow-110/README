@@ -1,0 +1,25 @@
+# Maic
+
+Testing framework for running end-to-end tests/integration tests
+
+## Development
+
+It is recommended to use docker/docker-compose to improve the development experience.
+
+```
+docker-compose build
+```
+
+```
+docker-compose up
+```
+
+## Usage
+
+To use this framework follow these steps:
+
+### Database
+
+### Creating Test Runs
+
+#### Example

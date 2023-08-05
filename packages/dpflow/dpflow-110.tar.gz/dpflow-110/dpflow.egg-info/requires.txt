@@ -1,0 +1,7 @@
+psycopg2
+simplejson
+SQLAlchemy
+requests-futures
+requests
+futures
+pytz
