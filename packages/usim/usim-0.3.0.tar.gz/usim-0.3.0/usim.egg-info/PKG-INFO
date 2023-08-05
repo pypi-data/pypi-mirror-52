@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: usim
+Version: 0.3.0
+Summary: Lightweight Simulation Framework
+Home-page: https://github.com/MaineKuehn/usim
+Author: Eileen Kuehn, Max Fischer
+Author-email: mainekuehn@gmail.com
+License: MIT
+Description: ===========================
+        ``usim`` -- Simply Simulate
+        ===========================
+        
+        μSim offers a lightweight and expressive user interface,
+        built on top of a powerful and robust simulation framework.
+        Using the ``async``/``await`` capabilities of Python3,
+        μSim allows you to both quickly and reliably build even complex simulations.
+        
+        .. code:: python3
+        
+           >>> from usim import each, run
+           >>>
+           >>> async def metronome(period: float, sound: str):
+           ...     async for now in each(delay=period):
+           ...         print(sound, '@', now)
+           ...
+           >>> run(metronome(period=1, sound='tick'), metronome(period=2, sound='TOCK'), till=5)
+           tick @ 1
+           TOCK @ 2
+           tick @ 2
+           tick @ 3
+           TOCK @ 4
+           tick @ 4
+           tick @ 5
+        
+        Check out `the μSim documentation <https://usim.readthedocs.io/en/latest/>`_
+        for more information.
+Keywords: simulation simpy event loop async coroutine
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: System :: Monitoring
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: contrib
+Provides-Extra: test
+Provides-Extra: docs
