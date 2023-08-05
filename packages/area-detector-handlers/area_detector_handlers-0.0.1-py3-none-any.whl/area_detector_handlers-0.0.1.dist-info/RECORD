@@ -1,0 +1,12 @@
+area_detector_handlers/__init__.py,sha256=PiUSiFLCm0YX5rbHS4xOLGdqdPDC8j3etV3nmEaelzI,92
+area_detector_handlers/_version.py,sha256=owSevnxOcGO2qKSUJW5L1km8TE942zzuCw7AFV-dGI8,497
+area_detector_handlers/handlers.py,sha256=BN1F_hmpX0VFbgYSuaVzNzfAHdr_APW3VwcXGzJAKIg,11738
+area_detector_handlers/spe_reader.py,sha256=tiMu3LJOtJah4dGWBFhiubxHMrJ-SRaBaVYWMavem3w,9148
+area_detector_handlers/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+area_detector_handlers/tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+area_detector_handlers/tests/test_examples.py,sha256=Hm1x01HZ9BiYYw4dS44uo0o_ku16oFRwSMjIh8_Uu-s,99
+area_detector_handlers-0.0.1.dist-info/METADATA,sha256=4eMFaJpx8xmLmqOv3V1DqvmMnuj_cy0B1NRyk7YzD6E,1203
+area_detector_handlers-0.0.1.dist-info/RECORD,,
+area_detector_handlers-0.0.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+area_detector_handlers-0.0.1.dist-info/entry_points.txt,sha256=pyCnLEa2O3ukDEJKSgWmiSpcecoMSwDXSFsKKUIsnoA,577
+area_detector_handlers-0.0.1.dist-info/top_level.txt,sha256=kDIAPErugZKdzVaNN3P7Y51QmHf-tb_9yF-Ks1JtYF0,23
