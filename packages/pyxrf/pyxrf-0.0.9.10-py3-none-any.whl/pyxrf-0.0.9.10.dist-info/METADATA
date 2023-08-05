@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyxrf
+Version: 0.0.9.10
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Brookhaven National Laboratory
+Author-email: UNKNOWN
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Science/Research
+Requires-Dist: setuptools
+
+UNKNOWN
+
+
