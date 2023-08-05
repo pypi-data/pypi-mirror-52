@@ -1,0 +1,13 @@
+PyYAML>=3.11
+imapclient<2.0.0,>=1.0.1
+keyring>=10.0.0
+
+[docs]
+Sphinx
+
+[test]
+coverage>=4.5.3
+pytest>=4.4.1
+pytest-cov>=2.6.1
+fixtures
+flake8
