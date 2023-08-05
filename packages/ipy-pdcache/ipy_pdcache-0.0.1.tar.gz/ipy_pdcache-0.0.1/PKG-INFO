@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ipy-pdcache
+Version: 0.0.1
+Summary: Automatically cache results of intensive computations in IPython.
+License: MIT
+Author: kpj
+Author-email: kpjkpjkpjkpjkpjkpj@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ipython (>=7.8,<8.0)
+Requires-Dist: pandas (>=0.25.1,<0.26.0)
