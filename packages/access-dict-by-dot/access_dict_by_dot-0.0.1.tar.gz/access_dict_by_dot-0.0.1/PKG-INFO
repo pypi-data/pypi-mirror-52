@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: access_dict_by_dot
+Version: 0.0.1
+Summary: Using this packages we can access dictionary values using dot operator
+Home-page: https://github.com/ismaan1998/access_dict_by_dot/
+Author: Indrajeet Singh
+Author-email: indrajeetsinghmaan@gmail.com
+License: MIT
+Download-URL: https://github.com/ismaan1998/access_dict_by_dot/releases/tag/0.0.1
+Description: UNKNOWN
+Keywords: dictionary,dot,access
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
