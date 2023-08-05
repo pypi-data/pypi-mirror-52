@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gnotify/___init__.py
+gnotify/__main__.py
+gnotify/gnotify.py
+gnotify.egg-info/PKG-INFO
+gnotify.egg-info/SOURCES.txt
+gnotify.egg-info/dependency_links.txt
+gnotify.egg-info/entry_points.txt
+gnotify.egg-info/requires.txt
+gnotify.egg-info/top_level.txt
