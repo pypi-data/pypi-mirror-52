@@ -1,0 +1,53 @@
+Metadata-Version: 1.2
+Name: mixture
+Version: 0.2.0
+Summary: Mixin classes for great objects !
+Home-page: https://github.com/smarie/python-mixture
+Maintainer: Sylvain MARIE
+Maintainer-email: sylvain.marie@se.com
+License: BSD 3-Clause
+Download-URL: https://github.com/smarie/python-mixture/tarball/0.2.0
+Description: python-mixture
+        ==============
+        
+        *Mixin classes for great objects !*
+        
+        |Python versions| |Build Status| |Tests Status| |codecov|
+        
+        |Documentation| |PyPI| |Downloads| |Downloads per week| |GitHub stars|
+        
+        The documentation for users is available here:
+        https://smarie.github.io/python-mixture/
+        
+        A readme for developers is available here:
+        https://github.com/smarie/python-mixture
+        
+        .. |Python versions| image:: https://img.shields.io/pypi/pyversions/mixture.svg
+           :target: https://pypi.python.org/pypi/mixture/
+        .. |Build Status| image:: https://travis-ci.org/smarie/python-mixture.svg?branch=master
+           :target: https://travis-ci.org/smarie/python-mixture
+        .. |Tests Status| image:: https://smarie.github.io/python-mixture/junit/junit-badge.svg?dummy=8484744
+           :target: https://smarie.github.io/python-mixture/junit/report.html
+        .. |codecov| image:: https://codecov.io/gh/smarie/python-mixture/branch/master/graph/badge.svg
+           :target: https://codecov.io/gh/smarie/python-mixture
+        .. |Documentation| image:: https://img.shields.io/badge/doc-latest-blue.svg
+           :target: https://smarie.github.io/python-mixture/
+        .. |PyPI| image:: https://img.shields.io/pypi/v/mixture.svg
+           :target: https://pypi.python.org/pypi/mixture/
+        .. |Downloads| image:: https://pepy.tech/badge/mixture
+           :target: https://pepy.tech/project/mixture
+        .. |Downloads per week| image:: https://pepy.tech/badge/mixture/week
+           :target: https://pepy.tech/project/mixture
+        .. |GitHub stars| image:: https://img.shields.io/github/stars/smarie/python-mixture.svg
+           :target: https://github.com/smarie/python-mixture/stargazers
+        
+Keywords: object class mixin mix-in dict yaml json dataframe pandas hash comparison munch boilerplate oop field attribute
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
