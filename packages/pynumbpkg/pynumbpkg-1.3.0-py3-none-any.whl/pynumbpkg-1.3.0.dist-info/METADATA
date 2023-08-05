@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pynumbpkg
+Version: 1.3.0
+Summary: get it all over here
+Home-page: https://gist.githubusercontent.com/Rahul-Datta/8dde0ca1aeb9052c4d03c834c2e3bb52/raw/828535e4fcb834f80d7bb87ba6d5182161e2f71d/pypackages
+Author: Blobby
+Author-email: noemailsosorry@sorrymails.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: feedparser
+Requires-Dist: html2text
+
+# README.md
+
+do it
+
