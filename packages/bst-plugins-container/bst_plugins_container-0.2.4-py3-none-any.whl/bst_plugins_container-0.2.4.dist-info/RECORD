@@ -1,0 +1,12 @@
+bst_plugins_container/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bst_plugins_container/elements/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bst_plugins_container/elements/docker_image.py,sha256=OvI0RSqPig-75mLkfshEg3cxI-VogjvvMh_OxMwiMXQ,18022
+bst_plugins_container/elements/docker_image.yaml,sha256=LvboArAuxcWOuBeuI_0gy-fQ56opmsWdAGXz1fXntM8,2215
+bst_plugins_container/sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bst_plugins_container/sources/docker.py,sha256=o0uuzn2c0ulab1W2jk8q6HTQcZYQi1xhemGuyj280yI,21424
+bst_plugins_container-0.2.4.dist-info/LICENSE,sha256=cANt5Po8LspCREHXESeab0cjLufPVmwdMj4dCtaZfQg,26459
+bst_plugins_container-0.2.4.dist-info/METADATA,sha256=pm-8ytItg7Eau2GxdhY2XsiBEAGPvltVjWnqY-j82Ig,3465
+bst_plugins_container-0.2.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+bst_plugins_container-0.2.4.dist-info/entry_points.txt,sha256=x2FrUjtZLPN89ybnpdIDb6CLL_aHgtveyEheRPcKiLI,128
+bst_plugins_container-0.2.4.dist-info/top_level.txt,sha256=1nu4t3EVdTKYrks-509xErDKx4Z0J6i3WV8F2JbYBKg,22
+bst_plugins_container-0.2.4.dist-info/RECORD,,
