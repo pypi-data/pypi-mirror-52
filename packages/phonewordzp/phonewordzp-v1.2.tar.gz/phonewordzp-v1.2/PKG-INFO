@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: phonewordzp
+Version: v1.2
+Summary: A Python Class to convert numbers to English Words, English Words to phone numbers. Currently support 10-11 phone numbers
+Home-page: https://github.com/zipeiwei123/Telephone_Book
+Author: Zipei Wei
+Author-email: zipeiwei123@gmail.com
+License: MIT
+Download-URL: https://github.com/zipeiwei123/Telephone_Book/archive/v1.2.tar.gz
+Description: UNKNOWN
+Keywords: Phoneword,Python,number_to_words
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
