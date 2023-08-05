@@ -1,0 +1,7 @@
+[distutils.commands]
+inno = setuptools_freeze.integration:InnoSetupCmd
+pyinstaller = setuptools_freeze.integration:PyInstallerCmd
+
+[distutils.setup_keywords]
+guid = setuptools_freeze.integration:guid
+
