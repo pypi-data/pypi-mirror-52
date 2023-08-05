@@ -1,0 +1,3 @@
+[console_scripts]
+rskit = rskit.rskit:main
+

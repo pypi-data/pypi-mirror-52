@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+rskit/__init__.py
+rskit/__main__.py
+rskit/rskit.py
+rskit.egg-info/PKG-INFO
+rskit.egg-info/SOURCES.txt
+rskit.egg-info/dependency_links.txt
+rskit.egg-info/entry_points.txt
+rskit.egg-info/requires.txt
+rskit.egg-info/top_level.txt
