@@ -1,0 +1,33 @@
+Metadata-Version: 1.2
+Name: oggm
+Version: 1.1.2
+Summary: Open Global Glacier Model
+Home-page: http://oggm.org
+Author: oggm Developers
+Author-email: fabien.maussion@uibk.ac.at
+License: GPLv3+
+Description: 
+        **OGGM is a modular open source model for glacier dynamics**
+        
+        The model accounts for glacier geometry (including contributory branches) and
+        includes an explicit ice dynamics module. It can simulate past and
+        future mass-balance, volume and geometry of (almost) any glacier in the world
+        in a fully automated and extensible workflow. We rely exclusively on publicly
+        available data for calibration and validation.
+        
+        Links
+        -----
+        - Project website: http://oggm.org
+        - HTML documentation: http://docs.oggm.org
+        - Source code: http://github.com/oggm/oggm
+        
+Keywords: geosciences,glaciers,climate,gis
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
