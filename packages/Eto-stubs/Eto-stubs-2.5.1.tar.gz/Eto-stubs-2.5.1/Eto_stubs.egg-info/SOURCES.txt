@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+Eto-stubs/__init__.pyi
+Eto-stubs/Drawing/__init__.pyi
+Eto-stubs/Forms/__init__.pyi
+Eto-stubs/Forms/ThemedControls/__init__.pyi
+Eto-stubs/IO/__init__.pyi
+Eto-stubs/Threading/__init__.pyi
+Eto_stubs.egg-info/PKG-INFO
+Eto_stubs.egg-info/SOURCES.txt
+Eto_stubs.egg-info/dependency_links.txt
+Eto_stubs.egg-info/top_level.txt
