@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: ML-Navigator
+Version: 0.0.2
+Summary: ML-Navigator is a tutorial-based Machine Learning framework. The main component of ML-Navigator is the flow. A flow is a collection of compact methods/functions that can be stuck together with guidance texts.
+Home-page: https://www.ki-labs.com/
+Author: Maher Deeb
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/KI-labs/ML-Navigator/issues
+Project-URL: Documentation, https://ki-labs.github.io/ML-Navigator/index.html
+Keywords: Machine Learning Data Science ML-Navigator tutorial-based data pipelines flows flow
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Requires-Dist: appnope (==0.1.0)
+Requires-Dist: atomicwrites (==1.3.0)
+Requires-Dist: attrs (==19.1.0)
+Requires-Dist: backcall (==0.1.0)
+Requires-Dist: bleach (==3.1.0)
+Requires-Dist: blessings (==1.7)
+Requires-Dist: Click (==7.0)
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: decorator (==4.4.0)
+Requires-Dist: defusedxml (==0.6.0)
+Requires-Dist: entrypoints (==0.3)
+Requires-Dist: Flask (==1.1.1)
+Requires-Dist: importlib-metadata (==0.19)
+Requires-Dist: ipykernel (==5.1.1)
+Requires-Dist: ipython (==7.5.0)
+Requires-Dist: ipython-genutils (==0.2.0)
+Requires-Dist: ipywidgets (==7.4.2)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: jedi (==0.14.0)
+Requires-Dist: Jinja2 (==2.10.1)
+Requires-Dist: joblib (==0.13.2)
+Requires-Dist: jsonschema (==3.0.1)
+Requires-Dist: jupyter-client (==5.2.4)
+Requires-Dist: jupyter-core (==4.5.0)
+Requires-Dist: kiwisolver (==1.1.0)
+Requires-Dist: lightgbm (==2.2.3)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: matplotlib (==3.1.0)
+Requires-Dist: mistune (==0.8.4)
+Requires-Dist: more-itertools (==7.2.0)
+Requires-Dist: nbconvert (==5.5.0)
+Requires-Dist: nbformat (==4.4.0)
+Requires-Dist: notebook (==5.7.8)
+Requires-Dist: numpy (==1.16.4)
+Requires-Dist: packaging (==19.1)
+Requires-Dist: pandas (==0.24.2)
+Requires-Dist: pandocfilters (==1.4.2)
+Requires-Dist: parso (==0.5.0)
+Requires-Dist: pexpect (==4.7.0)
+Requires-Dist: pickleshare (==0.7.5)
+Requires-Dist: pluggy (==0.12.0)
+Requires-Dist: prometheus-client (==0.7.1)
+Requires-Dist: prompt-toolkit (==2.0.9)
+Requires-Dist: ptyprocess (==0.6.0)
+Requires-Dist: py (==1.8.0)
+Requires-Dist: Pygments (==2.4.2)
+Requires-Dist: pyparsing (==2.4.0)
+Requires-Dist: pyrsistent (==0.15.2)
+Requires-Dist: pytest (==5.0.1)
+Requires-Dist: python-dateutil (==2.8.0)
+Requires-Dist: pytz (==2019.1)
+Requires-Dist: PyYAML (==5.1.1)
+Requires-Dist: pyzmq (==18.0.1)
+Requires-Dist: scikit-learn (==0.21.2)
+Requires-Dist: scipy (==1.3.0)
+Requires-Dist: seaborn (==0.9.0)
+Requires-Dist: Send2Trash (==1.5.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: sphinx-theme (==1.0)
+Requires-Dist: terminado (==0.8.2)
+Requires-Dist: testpath (==0.4.2)
+Requires-Dist: tornado (==6.0.2)
+Requires-Dist: traitlets (==4.3.2)
+Requires-Dist: wcwidth (==0.1.7)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: Werkzeug (==0.15.5)
+Requires-Dist: widgetsnbextension (==3.4.2)
+Requires-Dist: zipp (==0.5.2)
+
+UNKNOWN
+
+
