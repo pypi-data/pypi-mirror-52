@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gn-gsimporter
+Version: 1.0.11
+Summary: GeoNode GeoServer Importer Client
+Home-page: https://github.com/GeoNode/gsimporter
+Author: Ian Schneider
+Author-email: ischneider@opengeo.org
+License: MIT
+Keywords: GeoNode GeoServer Importer
+Platform: UNKNOWN
+Requires-Dist: httplib2
+Requires-Dist: urllib3
+
+UNKNOWN
+
+
