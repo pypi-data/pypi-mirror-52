@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: SteamRoller
+Version: 1.2.0
+Summary: An experimental framework for text classification experiments
+Home-page: http://hltcoe.jhu.edu
+Author: Tom Lippincott
+Author-email: tom@cs.jhu.edu
+Maintainer: Tom Lippincott
+Maintainer-email: tom@cs.jhu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: scikit-learn (>=0.18.1)
+Requires-Dist: scons (>=3.0.0)
+Requires-Dist: plotnine
+Requires-Dist: flask
+Requires-Dist: drmaa
+
+UNKNOWN
+
+
