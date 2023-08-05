@@ -1,0 +1,7 @@
+jsii~=0.16.0
+publication>=0.0.3
+aws-cdk.assets>=1.8.0,~=1.8
+aws-cdk.aws-elasticloadbalancingv2>=1.8.0,~=1.8
+aws-cdk.aws-iam>=1.8.0,~=1.8
+aws-cdk.aws-lambda>=1.8.0,~=1.8
+aws-cdk.core>=1.8.0,~=1.8
