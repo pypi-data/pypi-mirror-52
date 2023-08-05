@@ -1,0 +1,10 @@
+README.md
+setup.py
+websock/DataFrameFormat.py
+websock/ServerException.py
+websock/WebSocketServer.py
+websock/__init__.py
+websock.egg-info/PKG-INFO
+websock.egg-info/SOURCES.txt
+websock.egg-info/dependency_links.txt
+websock.egg-info/top_level.txt
