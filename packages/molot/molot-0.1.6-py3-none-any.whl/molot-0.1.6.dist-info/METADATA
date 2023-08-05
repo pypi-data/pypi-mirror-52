@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: molot
+Version: 0.1.6
+Summary: Molot - lightweight build tool for software projects.
+Home-page: https://github.com/traversals/molot
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+
+molot
+=====
+
+Lightweight build tool for software projects.
+
+
