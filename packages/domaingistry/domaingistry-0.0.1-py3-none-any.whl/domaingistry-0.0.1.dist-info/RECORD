@@ -1,0 +1,15 @@
+domaingistry/.gitignore,sha256=5wMdKU8mHS_0ehVei_tVq6uF3582ZIxw-f3R7d9mNg0,155
+domaingistry/__init__.py,sha256=2dxkRXYlecSdEN2jgWLWVqdZG9DkHz0xvxa9Rojha9g,32
+domaingistry/cli.py,sha256=NjuWsXxRKnszmuMJx6JQ6sgowodvlfpMOLTe86oY2z0,12076
+domaingistry/domaingistry.py,sha256=HrdSDmdeH8xec54ws_h25qEAIsMtyjFewfvWE5fykO0,5662
+domaingistry/__pycache__/__init__.cpython-36.pyc,sha256=w5orFWGtZ-7ur4Y4TVlNarKqPerTmyaVgXtl8moSPBM,201
+domaingistry/__pycache__/domaingistry.cpython-36.pyc,sha256=kQfHZkDxgXEwKd99cNE1XVXKWXJ9gZZSo_z6GmpE5Nk,8230
+domaingistry/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+domaingistry/test/test_cli.py,sha256=uustWQ93fWCVR3tL2gZ2nLi11yoPaJfk0RJlbToGlSI,246
+domaingistry/test/test_domaingistry.py,sha256=TbN3Nhe_ytOU5radKjiJix9tesjFVtx1bqAZzJKbAws,542
+domaingistry-0.0.1.dist-info/LICENSE,sha256=JnCHNT3IVoIFt4U5tjOAZk3zDVVXksrJ1I83LhTNtu4,1060
+domaingistry-0.0.1.dist-info/METADATA,sha256=0K_CRTOUfU6mzPpBXHRRXPZIWHev1ja_UVMMXKOswGE,4173
+domaingistry-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+domaingistry-0.0.1.dist-info/entry_points.txt,sha256=iFRQmvBxcS1uyN1pdv-bizQ6oPpr-LRJaLmboR45bWk,57
+domaingistry-0.0.1.dist-info/top_level.txt,sha256=uiX8qWDHt9rDfnWVMSarkz1AdWEhw6HufHp218bpVaI,13
+domaingistry-0.0.1.dist-info/RECORD,,
