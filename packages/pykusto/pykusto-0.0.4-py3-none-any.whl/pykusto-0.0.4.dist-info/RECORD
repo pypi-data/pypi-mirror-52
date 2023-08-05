@@ -1,0 +1,12 @@
+pykusto/__init__.py,sha256=kCBJ3DAKd9uz_skGlHxueC748jc7yZwUXMgARvl6YPQ,17
+pykusto/client.py,sha256=dy21QObvhEy0PAorCmoNh6hLuh_nksn7lM8FHRQ1N3c,4522
+pykusto/expressions.py,sha256=MJUoOfHdiVPJaRdot1pBKILkivy1-GNsaUbR2ncYYXc,23503
+pykusto/functions.py,sha256=al5_ERy7_52LDsZYx8bLU7QMXhgVmuktgeX8r3oMwDE,19331
+pykusto/query.py,sha256=x1LBHt82w0KCEGYZ2MPsmLXcwHbqqpNJJiCZA8MfgCw,18172
+pykusto/udf.py,sha256=6aa2hdyxJZRbezj-NT5enMSsai1V_Z2qrOC5FO2kE-o,785
+pykusto/utils.py,sha256=Me7mPymsYPScYzdDoKcRC3nl485R0ZsnyRIm_zW2Gjk,2090
+pykusto-0.0.4.dist-info/LICENSE,sha256=J-vanVHwpWt-KBzNgjCicjbctRwF9ksHhp7PbpZdaLA,1162
+pykusto-0.0.4.dist-info/METADATA,sha256=v7kBAwGMsGMiYjHtrxBaYAHzL4sHqlmGoH58fvjY8PQ,3008
+pykusto-0.0.4.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+pykusto-0.0.4.dist-info/top_level.txt,sha256=WDjIsIyIGjzRpICPG3wuuIB44f7BlIb7BazIeCKQJeQ,8
+pykusto-0.0.4.dist-info/RECORD,,
