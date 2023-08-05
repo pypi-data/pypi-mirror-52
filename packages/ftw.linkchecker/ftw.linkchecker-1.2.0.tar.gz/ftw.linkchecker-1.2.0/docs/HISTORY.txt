@@ -1,0 +1,38 @@
+Changelog
+=========
+
+
+1.2.0 (2019-09-10)
+------------------
+
+- Add the links source objs workflow or its parents to report. [busykoala]
+- Remove duplicate "Introduction" header in readme [Nachtalb]
+
+
+1.1.1 (2019-08-13)
+------------------
+
+- Improve logging. [busykoala]
+- Check if report upload location exists, otherwise log
+  and continue to next page. [busykoala]
+- Check if pages exist, otherwise exit linkchecker. [busykoala]
+- Check if there is a config path before checking if it's valid. [busykoala]
+
+
+1.1.0 (2019-08-08)
+------------------
+
+- Allow multiple notified email addresses per site.
+  The string in the config file is a list of strings now. [busykoala]
+
+
+1.0.1 (2019-08-05)
+------------------
+
+- Fix version conflict in test packages. [busykoala]
+
+
+1.0.0 (2019-08-02)
+------------------
+
+- Initial implementation.
