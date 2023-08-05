@@ -1,0 +1,16 @@
+.gitignore
+CHANGES.rst
+MANIFEST.in
+Makefile
+README.rst
+ppa_copy_packages.py
+release.mk
+setup.cfg
+setup.py
+ppa_copy_packages.egg-info/PKG-INFO
+ppa_copy_packages.egg-info/SOURCES.txt
+ppa_copy_packages.egg-info/dependency_links.txt
+ppa_copy_packages.egg-info/entry_points.txt
+ppa_copy_packages.egg-info/not-zip-safe
+ppa_copy_packages.egg-info/requires.txt
+ppa_copy_packages.egg-info/top_level.txt
