@@ -1,0 +1,127 @@
+#!/usr/bin/env python
+"""Kubectl for minimalists."""
+import os
+import sys
+import json
+import yaml
+from pick import pick
+from clint.textui import puts, colored, indent
+
+
+__version__ = "0.1.1"  # has to be in sync with setup.py
+__kubectl_version__ = {"major": 1, "minor": 12}
+__url__ = "https://gitlab.com/kubic-ci/k"
+
+
+def __access_kubectl():
+    """Validate kubectl version."""
+    try:
+        from sh import kubectl
+        kver = kubectl.version("--client", "-o", "json")
+        kver = json.loads(str(kver))["clientVersion"]
+        assert int(kver["major"]) >= __kubectl_version__["major"] \
+            and int(kver["minor"]) >= __kubectl_version__["minor"],\
+            "Wrong kubectl client version, required: {}".format(__kubectl_version__)
+    except ImportError:
+        print("kubectl is not found on your PATH:\n\n{}".
+              format(os.environ["PATH"]))
+        exit()
+
+
+__access_kubectl()
+
+
+KUBE_CONFIG = os.path.expanduser("~/.kube/config")
+
+EXTENDED = {
+    # resource
+    "ev": "event",
+    "ep": "endpoints",
+    "p": "pod",
+    "s": "service",
+    "v": "volume",
+    "n": "node",
+    "dp": "deployment",
+    "st": "statefulset",
+    "in": "ingress",
+    # actions
+    "a": "apply",
+    "d": "delete",
+}
+
+if __name__ != "__main__":
+    raise Exception("run me, don't import")
+
+
+class KubeCtl(object):
+    """Work with kubectl."""
+
+    def __init__(self, use_defaults=True):
+        """Define defaults."""
+        if not use_defaults:
+            return
+        self.config = self.load_config()
+
+    def load_config(self, config_path=KUBE_CONFIG):
+        """Parse and return kube config."""
+        with open(config_path) as fp:
+            return yaml.load(fp)
+
+    def prompt_context(self):
+        """Switch kubectl context."""
+        for context in self.config["contexts"]:
+            name = context["name"]
+            value = context["context"]
+
+    def switch_context(context_name):
+        """Switch kubectl context."""
+        config = load_config()
+        for context in config["contexts"]:
+            name = context["name"]
+            value = context["context"]
+
+    def can_handle(self, args):
+        """Return False if k will not handle passed args."""
+        # Will recognize arguments mentioned in EXTENDED.
+        for key in EXTENDED:
+            if args[1] == key:
+                return self.handle(args)
+        return False
+
+    def handle(self, args):
+        """Handle extended args and return True."""
+        if args[1] == "ev":
+            if len(args) == 2:
+                # by default, sort by time
+                args = ["get", "event", "--sort-by", ".lastTimestamp"]
+            else:
+                # keep and pass tail args
+                args = ["get", "event"] + args[2:]
+        elif args[1] == "a" or args[1] == "d":
+            # handle short-hands for actions
+            key = args[1]
+            action = EXTENDED[key]
+            args = [action] + args[2:]
+        else:
+            # expand short-hands and pass tail args
+            key = args[1]
+            resource = EXTENDED[key]
+            args = ["get", resource] + args[2:]
+        self.exec(args)
+
+    def exec(self, args):
+        """
+        Directly copy executable into current process and pass the control.
+
+        Equivalent to POSIX exec call.
+        """
+        os.execvp("kubectl", ["kubectl"] + args)
+
+
+k = KubeCtl()
+if len(sys.argv) == 1:
+    # prompt for context switch
+    k.prompt_context()
+elif k.can_handle(sys.argv) is False:
+    # pass all the params to the original kubectl
+    k.exec(sys.argv[1:])
