@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/elastic
+tiny-elastic-cli/__init__.py
+tiny_elastic_cli.egg-info/PKG-INFO
+tiny_elastic_cli.egg-info/SOURCES.txt
+tiny_elastic_cli.egg-info/dependency_links.txt
+tiny_elastic_cli.egg-info/requires.txt
+tiny_elastic_cli.egg-info/top_level.txt
