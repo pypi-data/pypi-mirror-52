@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/oidcop/__init__.py
+src/oidcop/configure.py
+src/oidcop/logging.py
+src/oidcop/utils.py
+src/oidcop.egg-info/PKG-INFO
+src/oidcop.egg-info/SOURCES.txt
+src/oidcop.egg-info/dependency_links.txt
+src/oidcop.egg-info/not-zip-safe
+src/oidcop.egg-info/requires.txt
+src/oidcop.egg-info/top_level.txt
