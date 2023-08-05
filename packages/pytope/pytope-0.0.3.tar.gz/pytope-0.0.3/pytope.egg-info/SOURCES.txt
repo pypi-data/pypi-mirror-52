@@ -1,0 +1,11 @@
+README.md
+setup.py
+pytope/__init__.py
+pytope/demo.py
+pytope/polytope.py
+pytope.egg-info/PKG-INFO
+pytope.egg-info/SOURCES.txt
+pytope.egg-info/dependency_links.txt
+pytope.egg-info/not-zip-safe
+pytope.egg-info/requires.txt
+pytope.egg-info/top_level.txt
