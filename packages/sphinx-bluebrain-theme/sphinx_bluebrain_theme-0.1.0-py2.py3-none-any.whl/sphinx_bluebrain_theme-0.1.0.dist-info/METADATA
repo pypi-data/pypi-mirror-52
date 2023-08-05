@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sphinx-bluebrain-theme
+Version: 0.1.0
+Summary: BlueBrain Project theme for Sphinx
+Home-page: https://github.com/BlueBrain/sphinx-bluebrain-theme
+Author: BlueBrain NSE
+Author-email: bbp-ou-nse@groupes.epfl.ch
+License: MIT License
+Project-URL: Tracker, https://github.com/BlueBrain/sphinx-bluebrain-theme/issues
+Project-URL: Source, https://github.com/BlueBrain/sphinx-bluebrain-theme
+Platform: UNKNOWN
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*
+Requires-Dist: sphinx (>=1.8.0)
+
+UNKNOWN
+
+
