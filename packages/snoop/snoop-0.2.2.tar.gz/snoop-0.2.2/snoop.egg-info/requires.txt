@@ -1,0 +1,13 @@
+six
+cheap_repr>=0.4.0
+executing
+asttokens
+pygments
+
+[tests]
+pytest
+littleutils
+numpy>=1.16.3
+pandas>=0.24.2
+birdseye
+django
