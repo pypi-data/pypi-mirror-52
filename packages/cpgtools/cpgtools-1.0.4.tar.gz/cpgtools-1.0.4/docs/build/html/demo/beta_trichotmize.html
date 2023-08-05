@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>18. beta_trichotmize.py &mdash; CpGtools documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="19. dmc_Bayes.py" href="dmc_Bayes.html" />
+    <link rel="prev" title="17. beta_topN.py" href="beta_topN.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CpGtools
+          
+
+          
+            
+            <img src="../_static/CpGtools_logo2.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CpGtools Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../change_log.html">3. CpGtools Release history</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Format</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../input_format.html">1. Input file and data format</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Test and Demo Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataset.html">1. Pre-compiled datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Usage Information</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CpG_aggregation.html">1. CpG_aggregation.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_anno_position.html">2. CpG_anno_position.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_anno_probe.html">3. CpG_anno_probe.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_distrb_chrom.html">4. CpG_distrb_chrom.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_distrb_gene_centered.html">5. CpG_distrb_gene_centered.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_distrb_region.html">6. CpG_distrb_region.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_logo.html">7. CpG_logo.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CpG_to_gene.html">8. CpG_to_gene.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_PCA.html">9. beta_PCA.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_jitter_plot.html">10. beta_jitter_plot.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_m_conversion.html">11. beta_m_conversion.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_profile_gene_centered.html">12. beta_profile_gene_centered.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_profile_region.html">13. beta_profile_region.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_stacked_barplot.html">14. beta_stacked_barplot.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_stats.html">15. beta_stats.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_tSNE.html">16. beta_PCA.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="beta_topN.html">17. beta_topN.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">18. beta_trichotmize.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">18.1. Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algorithm">18.2. Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">18.3. Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-files-examples">18.4. Input files (examples)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command">18.5. Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output-files">18.6. Output files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_Bayes.html">19. dmc_Bayes.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_bb.html">20. dmc_bb.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_fisher.html">21. dmc_fisher.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_glm.html">22. dmc_glm.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_logit.html">23. dmc_logit.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_nonparametric.html">24. dmc_nonparametric.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmc_ttest.html">25. dmc_ttest.py</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Compare Differential Analysis Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../compare_diff_tools.html">1. Compare Differential CpG Analysis Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compare_diff_tools.html#p-value-distributions">2. P-value distributions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../liscense.html">LICENSE</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CpGtools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>18. beta_trichotmize.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/demo/beta_trichotmize.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="beta-trichotmize-py">
+<h1>18. beta_trichotmize.py<a class="headerlink" href="#beta-trichotmize-py" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>18.1. Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Rather than using a hard threshold to call “methylated” or “unmethylated” CpGs or regions, this program uses a probability approach (Bayesian Gaussian Mixture model) to trichotmize beta values into three status:</p>
+<dl class="simple">
+<dt><strong>Un-methylated</strong><span class="classifier">labeled as “0” in the result file</span></dt><dd><p>Both the homologous chromosomes (i.e. The maternal and paternal chromosomes) are unmethylated.</p>
+</dd>
+<dt><strong>Semi-methylated</strong><span class="classifier">labeled as “1” in the result file</span></dt><dd><p>Only one of the homologous chromosomes is methylated. This is also called allele-specific
+methylation or imprinting. Note: <strong>semi-methylation</strong> here is different from <strong>hemimethylation</strong>, which refers
+to “one of two (complementary) strands is methylated”.</p>
+</dd>
+<dt><strong>Full-methylated</strong><span class="classifier">labeled as “2” in the result file</span></dt><dd><p>Both the homologous chromosomes (i.e., The maternal and paternal chromosomes) are methylated.</p>
+</dd>
+<dt><strong>unassigned</strong><span class="classifier">labeled as “-1” in the result file</span></dt><dd><p>CpGs failed to assigned to the three categories above.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="algorithm">
+<h2>18.2. Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
+<p>As described above, in somatic cells, most CpGs can be grouped into 3 categories including
+“Un-methylated”, “Semi-methylated (imprinted)” and “Full-methylated”. Therefore, the
+Beta distribution of CpGs can be considered as the mixture of 3 Gaussian distributions
+(i.e. components). <strong>beta_trichotmize.py</strong> first estimates the parameters (mu1, mu2, mu3)
+and (s1, s2, s3) of the 3 components using expectation–maximization (EM) algorithm, then it
+calculates the posterior probabilities ( <em>p0</em>, <em>p1</em>, and <em>p2</em>) of each component given
+the beta value of a CpG.</p>
+<dl class="simple">
+<dt><em>p0</em></dt><dd><p>the probability that the CpG belongs to <strong>un-methylated</strong> component.</p>
+</dd>
+<dt><em>p1</em></dt><dd><p>the probability that the CpG belongs to <strong>semi-methylated</strong>  component.</p>
+</dd>
+<dt><em>p2</em></dt><dd><p>the probability that the CpG belongs to <strong>full-methylated</strong> component.</p>
+</dd>
+</dl>
+<p>The classification will be made using rules:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">p0</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+       <span class="n">un</span><span class="o">-</span><span class="n">methylated</span>
+<span class="k">elif</span> <span class="n">p2</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+       <span class="n">full</span><span class="o">-</span><span class="n">methylated</span>
+<span class="k">elif</span> <span class="n">p1</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+       <span class="k">if</span> <span class="n">p1</span> <span class="o">&gt;=</span> <span class="n">prob_cutoff</span><span class="p">:</span>
+               <span class="n">semi</span><span class="o">-</span><span class="n">methylated</span>
+       <span class="k">else</span><span class="p">:</span>
+               <span class="n">unknown</span><span class="o">/</span><span class="n">unassigned</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>18.3. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><dl class="option-list">
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>show program’s version number and exit</p>
+</dd>
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>show this help message and exit</p>
+</dd>
+<dt><kbd><span class="option">-i <var>INPUT_FILE</var></span>, <span class="option">--input_file=<var>INPUT_FILE</var></span></kbd></dt>
+<dd><p>Input plain text file containing beta values with the
+1st row containing sample IDs (must be unique) and the
+1st column containing probe IDs (must be unique).</p>
+</dd>
+<dt><kbd><span class="option">-c <var>PROB_CUTOFF</var></span>, <span class="option">--prob-cut=<var>PROB_CUTOFF</var></span></kbd></dt>
+<dd><p>Probability cutoff to assign a probe into “semi-
+methylated” class. default=0.99</p>
+</dd>
+<dt><kbd><span class="option">-r</span>, <span class="option">--report</span></kbd></dt>
+<dd><p>If True, generates “summary_report.txt” file.
+default=False</p>
+</dd>
+<dt><kbd><span class="option">-s <var>RANDOM_STATE</var></span>, <span class="option">--seed=<var>RANDOM_STATE</var></span></kbd></dt>
+<dd><p>The seed used by the random number generator.
+default=99</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="input-files-examples">
+<h2>18.4. Input files (examples)<a class="headerlink" href="#input-files-examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sourceforge.net/projects/cpgtools/files/test/test_05_TwoGroup.tsv.gz">test_05_TwoGroup.tsv.gz</a></p></li>
+</ul>
+</div>
+<div class="section" id="command">
+<h2>18.5. Command<a class="headerlink" href="#command" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$beta_trichotmize.py -i test_05_TwoGroup.tsv -r
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-files">
+<h2>18.6. Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>.results.txt for each sample</p></li>
+<li><p>summary_report.txt</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ head CirrHCV_01.results.txt
+
+#Prob_of_0: Probability of CpG belonging to un-methylation group
+#Prob_of_1: Probability of CpG belonging to semi-methylation group
+#Prob_of_2: Probability of CpG belonging to full-methylation group
+#Assigned_lable: -1 = &#39;unassigned&#39;, 0 = &#39;un-methylation&#39;, 1 = &#39;semi-methylation&#39;, 2 = &#39;full-methylation&#39;
+Probe_ID       Beta_value      Prob_of_1       Prob_of_0       Prob_of_2       Assigned_lable
+cg00000109     0.8776539440000001      0.05562534330044164     3.673659573888142e-93   0.9443746566995583      2
+cg00000165     0.239308082     0.999222373166152       0.0007776268338481155   1.3380168478281785e-21  1
+cg00000236     0.8951333909999999      0.052142920095512614    3.5462722261710256e-97  0.9478570799044873      2
+cg00000292     0.783661275     0.22215555206863843     1.46921724055509e-72    0.7778444479313614      2
+cg00000321     0.319783971     0.9999999909047641      9.09523558157906e-09    1.4703488768311725e-16  1
+
+$ cat summary_report.txt
+
+#means of components
+Subject_ID     Unmethyl        SemiMethyl      Methyl
+CirrHCV_01     0.0705891104729628      0.4949428535816466      0.8694861885234295
+CirrHCV_02     0.06775600800214297     0.5018649959502874      0.8731195740516192
+CirrHCV_03     0.07063205540113326     0.49795240946021674     0.8730234341971185
+...
+
+#Weights of components
+
+Subject_ID     Unmethyl        SemiMethyl      Methyl
+CirrHCV_01     0.27231055290074735     0.35186129618859385     0.3758281509106588
+CirrHCV_02     0.2623073658620772      0.36736674559925425     0.37032588853866855
+CirrHCV_03     0.2659211619015646      0.3563058727320757      0.37777296536635974
+...
+
+#Converge status and n_iter
+
+Subject_ID     Converged       n_iter
+CirrHCV_01     True    35
+CirrHCV_02     True    37
+CirrHCV_03     True    34
+</pre></div>
+</div>
+<p>Below histogram and piechart showed the proportion of CpGs assigned to “Un-methylated”, “Semi-methylated” and “Full-methylated”.</p>
+<a class="reference internal image-reference" href="../_images/trichotmize.png"><img alt="../_images/trichotmize.png" src="../_images/trichotmize.png" style="width: 650.0px; height: 650.0px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dmc_Bayes.html" class="btn btn-neutral float-right" title="19. dmc_Bayes.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="beta_topN.html" class="btn btn-neutral float-left" title="17. beta_topN.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Liguo Wang
+      <span class="lastupdated">
+        Last updated on July 7, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
