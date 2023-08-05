@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+    - name: Create dir for kolla logs
+      file:
+        path: "{{ kolla_logs_dir }}"
+        state: directory
+
+    - name: Dump host info to logs
+      command: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/tools/dump_info.sh"
+      args:
+        chdir: "{{ kolla_logs_dir }}"
+
+    - name: Create dir for kolla build logs
+      file:
+        path: "{{ kolla_build_logs_dir }}"
+        state: directory
