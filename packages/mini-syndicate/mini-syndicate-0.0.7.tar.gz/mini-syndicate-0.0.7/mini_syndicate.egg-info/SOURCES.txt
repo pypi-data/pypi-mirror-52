@@ -1,0 +1,11 @@
+setup.py
+mini_syndicate.egg-info/PKG-INFO
+mini_syndicate.egg-info/SOURCES.txt
+mini_syndicate.egg-info/dependency_links.txt
+mini_syndicate.egg-info/requires.txt
+mini_syndicate.egg-info/top_level.txt
+syndicate/__init__.py
+syndicate/mini/__init__.py
+syndicate/mini/core.py
+syndicate/mini/protocol.py
+syndicate/mini/url.py
