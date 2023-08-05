@@ -1,0 +1,3 @@
+[console_scripts]
+GraphDash = graphdash.__main__:main
+

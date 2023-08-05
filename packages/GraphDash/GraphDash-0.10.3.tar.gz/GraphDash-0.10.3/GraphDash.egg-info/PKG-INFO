@@ -1,0 +1,508 @@
+Metadata-Version: 1.0
+Name: GraphDash
+Version: 0.10.3
+Summary: A web-based dashboard built on graphs and their metadata.
+Home-page: https://github.com/AmadeusITGroup/graphdash
+Author: Alex Prengere
+Author-email: alexprengere@amadeus.com
+License: Copyright (c) 2016 Amadeus s.a.s.
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright {yyyy} {name of copyright owner}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+Description: GraphDash
+        =========
+        
+        ``GraphDash`` is a web-based dashboard built on graphs and their
+        metadata. For example, if you have two graphs in a directory:
+        
+        .. code:: bash
+        
+            $ cd default_graph_dir
+            $ ls
+            graph.svg graph2.svg
+        
+        Then you can create two metadata files using YAML format, where you can
+        configure how the graphs will be displayed:
+        
+        .. code:: bash
+        
+            $ cat graph.yaml
+            name: graph.svg
+            family: 'Category 1'
+            title: '*Real serious* graph'
+            text: |
+                The description
+        
+            $ cat graph2.yaml
+            name: graph2.svg
+            family: 'Category 2'
+            title: 'Another important graph'
+        
+        You may then start the graph dashboard. You will get a nice web
+        interface displaying your graphs, and a search box with autocompletion.
+        You can easily navigate and share your graphs.
+        
+        .. code:: bash
+        
+            $ GraphDash --root .
+            * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+        
+        .. figure:: https://raw.githubusercontent.com/AmadeusITGroup/GraphDash/master/docs/example.gif
+           :alt: 
+        
+        Installation
+        ------------
+        
+        Clone and install (in user space):
+        
+        .. code:: bash
+        
+            git clone https://github.com/AmadeusITGroup/graphdash.git
+            cd graphdash
+            pip install --user .
+        
+        Or use the Python package:
+        
+        .. code:: bash
+        
+            pip install --user graphdash
+        
+        Launch the webapp
+        -----------------
+        
+        For user-space installation, make sure your ``$PATH`` includes
+        ``~/.local/bin``.
+        
+        .. code:: bash
+        
+            $ GraphDash -r default_graph_dir
+            * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+        
+        The dashboard can be configured with a YAML config file and the
+        ``-c/--conf`` option:
+        
+        .. code:: bash
+        
+            $ cat docs/graphdash.yaml
+            root: ../default_graph_dir
+            title: "Example of title ;)"
+            subtitle: "Example of subtitle"
+        
+            $ GraphDash -c docs/graphdash.yaml
+            * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+        
+        You can generate a template of configuration file:
+        
+        .. code:: bash
+        
+            $ GraphDash -C template.yaml
+        
+        Serve with Gunicorn
+        -------------------
+        
+        If not already installed on your machine, install ``Gunicorn``:
+        
+        .. code:: bash
+        
+            pip install --user gunicorn setproctitle  # on Fedora you may need to install libffi-devel before
+        
+        Since you can import the webapp through ``graphdash:app``, you can serve
+        it with ``Gunicorn``:
+        
+        .. code:: bash
+        
+            gunicorn -b 0.0.0.0:8888 --pid server.pid graphdash:app
+        
+        The configuration file of the webapp can be set with the ``CONF``
+        environment variable. With ``Gunicorn``, you can pass environment
+        variables to the workers with ``--env``:
+        
+        .. code:: bash
+        
+            gunicorn -b 0.0.0.0:8888 --pid server.pid --env CONF=docs/graphdash.yaml graphdash:app
+        
+        But you should *not* use these commands yourself, that is what
+        ``GraphDashManage`` is for!
+        
+        GraphDashManage
+        ---------------
+        
+        ``GraphDashManage`` is used to ``start``, ``stop``, ``restart`` the
+        instances of ``Gunicorn`` serving ``graphdash:app``. It needs a
+        configuration file in the current directory:
+        
+        .. code:: bash
+        
+            $ cat settings.sh
+            ALL_MODES=(
+               ['prod']="docs/graphdash.yaml"
+               ['test']="docs/graphdash.yaml"
+            )
+            ALL_PORTS=(
+               ['prod']=1234
+               ['test']=5678
+            )
+            WORKERS=3
+        
+        Then you can manage multiple instances of ``GraphDash`` using
+        ``Gunicorn`` with:
+        
+        .. code:: bash
+        
+            $ GraphDashManage start prod
+            [INFO] Listening at: http://0.0.0.0:1234
+            [INFO] Booting worker with pid: 30403
+            [INFO] Booting worker with pid: 30404
+            [INFO] Booting worker with pid: 30405
+        
+            $ GraphDashManage start test
+            [INFO] Listening at: http://0.0.0.0:5678
+            ...
+        
+        You can generate a template of settings:
+        
+        .. code:: bash
+        
+            $ GraphDashManage template > template.sh # to be moved to settings.sh
+        
+        Webapp configuration file
+        -------------------------
+        
+        Possible entries (everything is optional):
+        
+        -  ``root``: the root directory of the graphs
+        -  ``families``: path to the families metadata file (optional)
+        -  ``title``: the title of the webapp
+        -  ``subtitle``: the subtitle of the webapp
+        -  ``placeholder``: the default text in the search field
+        -  ``header``: an optional message at the top (markdown syntax)
+        -  ``footer``: an optional message at the bottom (markdown syntax)
+        -  ``showfamilynumbers``: a boolean to toggle family numbering (default
+           is true)
+        -  ``showgraphnumbers``: a boolean to toggle graph numbering (default is
+           true)
+        -  ``theme``: change css theme (default is dark)
+        -  ``keep``: the proportion of common words kept for autocompletion
+        -  ``logfile``: change default log file of the webapp
+        -  ``raw``: when loading, look for all graphs and ignore metadata
+        -  ``verbose``: a boolean indicating verbosity when loading application
+        -  ``debug``: debug mode (enable Grunt livereload, enable Flask debug
+           mode)
+        -  ``headless``: headless mode (only search is available, no page is
+           rendered)
+        -  ``port``: when launched with Flask development server only, port
+        
+        Graph metadata
+        --------------
+        
+        Several attributes are supported:
+        
+        -  ``name``: the path to the graph
+        -  ``title``: title of the graph, recommended for display purposes
+           (markdown syntax)
+        -  ``family``: the subsection in which the graph is
+        -  ``index``: an optional list of keywords describing the graph (useful
+           for search feature)
+        -  ``text``: an optional description of the graph (markdown syntax)
+        -  ``pretext``: an optional message appearing before the graph (markdown
+           syntax)
+        -  ``file``: optional path to the raw data
+        -  ``export``: optional path to the exportable graph (for example, a PNG
+           file)
+        -  ``rank``: integer, optional value used to change graphs order
+           (default uses titles)
+        -  ``showtitle``: a boolean to toggle title display for the graph
+           (default is false)
+        -  ``labels``: a list of labels (like ``'new'``) which will be rendered
+           in the UI as colored circles
+        -  ``other``: other metadata not used by ``GraphDash``, but may be
+           needed by other things reading the metadata
+        
+        Note that if the ``name`` attribute is missing, the graph will not be
+        shown and the text will be displayed anyway, like a blog entry.
+        
+        Family metadata
+        ---------------
+        
+        You may put a ``.FAMILIES.yaml`` file at the root of the graph
+        directory. This file may contain metadata for families. It should be a
+        YAML list:
+        
+        .. code:: yaml
+        
+            - family: chairs
+              rank : 0
+            - family: tables
+              rank : 1
+              text: This is a description
+              alias: This text will appear instead of "tables"
+              labels: new
+        
+        Each element of the list should be a dict containing:
+        
+        -  ``family``: the family considered
+        -  ``rank``: integer, optional value used to change families order
+           (default uses family name)
+        -  ``text``: an optional description of the family (markdown syntax)
+        -  ``alias``: an optional name who may be longer than the one in the url
+           (useful to build nice urls)
+        -  ``labels``: a list of labels (like ``new``) which will be rendered in
+           the UI as colored circles
+        
+        Available labels are ``new``, ``update``, ``bugfix``, ``warning``,
+        ``error``, ``ongoing``, ``obsolete``. You may give other labels which
+        will be rendered with defaults colors. For customization, you may
+        specify your own labels with a dict syntax:
+        
+        .. code:: yaml
+        
+            labels:
+            - name: newlabel
+              color: white
+              text_color: black
+              text: "NEW LABEL"
+              tooltip: null
+        
+        Development
+        -----------
+        
+        If you wish to contribute, you need ``Grunt`` to generate new css/js
+        files from sass/coffee source files.
+        
+        .. code:: bash
+        
+            npm install --no-bin-links # may need to repeat
+            grunt
+        
+        Debugging can be made with source map files for browser supporting them
+        in their debugging tools. If not, the ``Gruntfile.js`` enables an option
+        to generate non-minified assets.
+        
+        .. code:: bash
+        
+            grunt --dev
+        
+        With the ``debug`` mode enabled, Grunt will use the livereload mechanism
+        to reload the browser if any file has changed (and Flask debug mode will
+        reload the server as well).
+        
+        .. code:: bash
+        
+            GraphDash --debug & # or python -m graphdash
+            grunt watch
+        
+        If you used ``Gunicorn`` with a PID file, Grunt will automatically
+        reload it if any Python files change.
+        
+        .. code:: bash
+        
+            gunicorn -b 0.0.0.0:8888 --pid server.pid graphdash:app &
+            grunt watch
+        
+        You can use ``tox`` build packages and run tests.
+        
+        .. code:: bash
+        
+            tox
+        
+Platform: UNKNOWN
