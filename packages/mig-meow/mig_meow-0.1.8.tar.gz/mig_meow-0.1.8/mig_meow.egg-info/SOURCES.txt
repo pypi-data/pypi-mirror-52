@@ -1,0 +1,17 @@
+README.md
+setup.py
+mig_meow/__init__.py
+mig_meow/constants.py
+mig_meow/info.py
+mig_meow/input.py
+mig_meow/mig.py
+mig_meow/notebook.py
+mig_meow/pattern.py
+mig_meow/recipe.py
+mig_meow/workflow_widget.py
+mig_meow/workflows.py
+mig_meow.egg-info/PKG-INFO
+mig_meow.egg-info/SOURCES.txt
+mig_meow.egg-info/dependency_links.txt
+mig_meow.egg-info/requires.txt
+mig_meow.egg-info/top_level.txt
