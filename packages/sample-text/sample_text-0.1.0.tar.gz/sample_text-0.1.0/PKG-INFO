@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: sample_text
+Version: 0.1.0
+Summary: This project is a sample text generator
+Home-page: UNKNOWN
+Author: Martin Thoma
+Author-email: info@martin-thoma.de
+Maintainer: Martin Thoma
+Maintainer-email: info@martin-thoma.de
+License: MIT license
+Description: # sample_text
+        
+        ## Installation
+        
+        ```
+        $ pip install .
+        ```
+        
+        ## Usage
+        
+Keywords: utility
+Platform: Linux
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown

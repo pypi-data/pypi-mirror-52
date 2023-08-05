@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+sample_text/__init__.py
+sample_text/_version.py
+sample_text.egg-info/PKG-INFO
+sample_text.egg-info/SOURCES.txt
+sample_text.egg-info/dependency_links.txt
+sample_text.egg-info/not-zip-safe
+sample_text.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sample_text.py
