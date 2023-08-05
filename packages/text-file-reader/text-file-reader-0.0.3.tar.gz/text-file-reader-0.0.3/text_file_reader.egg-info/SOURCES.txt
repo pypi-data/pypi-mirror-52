@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+text-file-reader/__init__.py
+text-file-reader/encrypt.py
+text-file-reader/file-reader.py
+text-file-reader/helpscreen
+text-file-reader/separate_mainloops.py
+text-file-reader/ascii-art/sign-up.txt
+text-file-reader/ascii-art/popups/donate1.txt
+text-file-reader/ascii-art/popups/donate2.txt
+text-file-reader/ascii-art/popups/twitter.txt
+text_file_reader.egg-info/PKG-INFO
+text_file_reader.egg-info/SOURCES.txt
+text_file_reader.egg-info/dependency_links.txt
+text_file_reader.egg-info/top_level.txt
