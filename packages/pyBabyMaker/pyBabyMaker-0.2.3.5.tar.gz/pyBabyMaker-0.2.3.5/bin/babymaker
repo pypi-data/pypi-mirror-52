@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+#
+# Author: Yipeng Sun <syp at umd dot edu>
+# License: BSD 2-clause
+# Last Change: Mon Sep 09, 2019 at 12:08 AM -0400
+
+from argparse import ArgumentParser
+from pyBabyMaker.babymaker import BabyMaker
+
+
+#################################
+# Command line arguments parser #
+#################################
+
+def parse_input():
+    parser = ArgumentParser(description='''
+generate compilable C++ source file for ntuple processing.''')
+
+    parser.add_argument('-i', '--input',
+                        nargs='?',
+                        required=True,
+                        help='''
+path to input YAML file.''')
+
+    parser.add_argument('-o', '--output',
+                        nargs='?',
+                        required=True,
+                        help='''
+path to output C++ file.''')
+
+    parser.add_argument('-d', '--data',
+                        nargs='?',
+                        required=True,
+                        help='''
+path to data ntuple file.''')
+
+    parser.add_argument('--no-format',
+                        action='store_false',
+                        help='''
+disable C++ code reformatter.''')
+
+    return parser.parse_args()
+
+
+########
+# Main #
+########
+
+if __name__ == '__main__':
+    args = parse_input()
+    maker = BabyMaker(args.input, args.data, args.no_format)
+    maker.gen(args.output)
