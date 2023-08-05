@@ -1,0 +1,4 @@
+[console_scripts]
+motioneyebot = motioneyebot.app:main
+motioneyeconfig = motioneyebot.reconfig_util:main
+
