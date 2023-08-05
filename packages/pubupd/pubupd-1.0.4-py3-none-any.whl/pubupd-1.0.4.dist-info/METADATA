@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pubupd
+Version: 1.0.4
+Summary: Update pubspec.yaml
+Home-page: https://github.com/v1nvn/pubupd
+Author: Vineet Kumar
+Author-email: v1n@outlook.com
+License: MIT
+Keywords: flutter pub dart v1nvn
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (==41.0.1)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: packaging (==19.0)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: colorama (==0.4.1)
+Requires-Dist: mistune (==0.8.4)
+Requires-Dist: beautifulsoup4 (==4.8.0)
+Requires-Dist: ruamel.yaml (==0.16.5)
+Requires-Dist: lxml (==4.4.1)
+
+Utility to update dependencies in flutter project's pubspec.yaml
+
+
