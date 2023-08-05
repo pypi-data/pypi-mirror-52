@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: argos
+Version: 0.3.0rc2
+Summary: Argos Panoptes HDF/NCDF/scientific data viewer.
+Home-page: https://github.com/titusjan/argos
+Author: Pepijn Kenter
+Author-email: titusjan@gmail.com
+License: GPLv3
+Keywords: NCDF HDF plotting graphs
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Dist: cmlib
+Requires-Dist: numpy (>=1.11)
+
+===============================
+Argos
+===============================
+
+
+Argos Panoptes data inspector.
+
+Requires: PyQtGraph (http://www.pyqtgraph.org/).
+
+For more info, see: https://github.com/titusjan/argos
+
+
+
+
+History
+-------
+
+0.3.0 (????-??-??)
+------------------
+*   Added rectangle zoom mode in 1D line plot and 2D image plot inspectors (issue #8)
+*   Zooming can be also done by dragging while holding the right mouse button (issue #8)
+*   If possible, only informative dimensions (i.e. length > 1) are selected in the collector
+    comboboxes. (issue #9)
+
+
+
+0.2.1 (2017-01-12)
+------------------
+*   Fix: in PyQt 5.7 the slot decorator wouldn't connect anymore if the class didn't derive
+    from QObject.
+
+
+0.2.0 (2017-01-01)
+------------------
+*   First usable release.
+
+
+0.1.0 (2014-11-01)
+------------------
+*   First release on PyPI.
+
+
