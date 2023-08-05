@@ -1,0 +1,10 @@
+{%extends 'polls/base.html'%}
+{%block content1%}
+    {%if list%}
+        {%for item in list%}
+            <a href="{%url 'polls:detail' item.id%}"><p>{{item.question_text}}</p></a>
+        {%endfor%}
+    {%else%}
+        <h3 style="color: red">Empty question!</h3>
+    {%endif%}
+{%endblock%}

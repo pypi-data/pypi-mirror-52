@@ -1,0 +1,13 @@
+{% extends 'polls/base.html'%}
+{% block content1%}
+
+    <h1>Hi there! Welcome to my page! You're not find any page better!</h1>
+    <h3>My name is {{name}}</h3>
+    <h3>My favorite:</h3>
+    <ul>
+        {%for item in favorite%}
+            <li>{{item}}</li>
+        {%endfor%}
+    </ul>
+
+{% endblock%}
