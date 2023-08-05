@@ -1,0 +1,5 @@
+MDAnalysis==0.20.1
+pytest>=3.3.0
+hypothesis
+psutil>=4.0.2
+mock>=2.0.0
