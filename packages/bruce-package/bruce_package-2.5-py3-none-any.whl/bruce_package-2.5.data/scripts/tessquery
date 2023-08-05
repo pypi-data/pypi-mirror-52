@@ -1,0 +1,27 @@
+#!python
+import os, sys, numpy as np 
+from astropy.table import Table 
+import glob 
+from astroquery.mast import Catalogs
+import astropy.units as u
+from astropy.coordinates import SkyCoord
+from astroquery.gaia import Gaia
+from astroquery.vo_conesearch import conesearch
+import subprocess
+from astropy.time import Time
+from astropy import units as u
+from astropy.coordinates import SkyCoord, EarthLocation
+from astroquery.mast import Tesscut
+
+if __name__=='__main__':
+    print('Querying TIC-{:}'.format(sys.argv[1]))
+    tic_catalog_data = Catalogs.query_object('TIC'+sys.argv[1], radius=.02, catalog="TIC")
+    coord = SkyCoord(ra=tic_catalog_data['ra'][0], dec=tic_catalog_data['dec'][0], unit=(u.degree, u.degree), frame='icrs')
+    numsecs=0
+    try:
+        hdulist = Tesscut.get_cutouts(coord, 1 )
+        numsecs = len(hdulist)
+    except: pass
+    print('\tRA : {:}'.format(tic_catalog_data['ra'][0]))
+    print('\tDec : {:}'.format(tic_catalog_data['dec'][0]))
+    print('\tNum sectors : {:}'.format(numsecs))
