@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: vizstack-py
+Version: 0.1.2
+Summary: Generate Vizstack visualizations of Python programs.
+Home-page: https://github.com/vizstack/vizstack
+Author: Ryan Holmdahl & Nikhil Bhattasali
+Author-email: vizstack@gmail.com
+License: MIT
+Description: # vizstack-py
+        Generate [Vizstack](https://github.com/vizstack/vizstack/) visualizations of Python programs.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
