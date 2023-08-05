@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tools-lib
+Version: 0.0.2
+Summary: An integrative library that contains miscellaneous tools for performing various type of options.
+Home-page: https://github.com/yogesh-aggarwal/tools-lib
+Author: Yogesh Aggarwal
+Author-email: developeryogeshgit@gmail.com
+License: AGPL 3.0
+Download-URL: https://raw.githubusercontent.com/yogesh-aggarwal/tools-lib/master/dist/tools_lib-0.0.2.tar.gz
+Description: # TOOLS-LIB
+        
+        **Python package to help out in working with various operations.**
+        
+        ---
+        
+        ## Resources
+        
+        You can contribute to it through <a href="https://github.com/yogesh-aggarwal/tools-lib">GitHub</a>.
+        
+Keywords: Miscellaneous tools,Useful
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
