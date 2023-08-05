@@ -1,0 +1,12 @@
+lazypr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lazypr/config.py,sha256=Trixhgi-7s2ny5p4MCN4IMvg71F3kdHWxqJFG-R4wew,3671
+lazypr/github_api.py,sha256=Xh_MlHXPJRg5W97wuJfFe4rvgWFWt7kmDxz0nPlizUU,2697
+lazypr/jira_api.py,sha256=8Yq8MKNAU93aQ8JjqBJRGv0X70FXxcScnPSzWNNvZoQ,2528
+lazypr/main.py,sha256=oEiAuPe_ZUrFgnvePNeKO1rSRLb4U8UFvCh4hauy4VM,2024
+lazypr/pull_request.py,sha256=P0lDTSSl3qleJcLQIOAG2zE4gf3TJ_UczxkInF62hCI,2563
+lazypr/utils.py,sha256=otHywg3fLhb2VaFqHxVZiPp5GEIRvDE2vRRwcdcbI4U,568
+lazypr-0.1.2.dist-info/METADATA,sha256=UbmMfC4MJOeTyZEhip9ya3Lm5O_06IXwRCzQtUf70V8,3087
+lazypr-0.1.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+lazypr-0.1.2.dist-info/entry_points.txt,sha256=1qtnJ6DoxdTzgwHE7zKgIsYCpZipHYeWNjAG9tqyCXo,45
+lazypr-0.1.2.dist-info/top_level.txt,sha256=jFL8OJ0rsI2vD0Z4-xiBEdMNaHygLY6YKf28vYXUCM8,7
+lazypr-0.1.2.dist-info/RECORD,,
