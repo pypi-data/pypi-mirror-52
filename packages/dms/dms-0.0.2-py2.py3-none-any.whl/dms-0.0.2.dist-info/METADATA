@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: dms
+Version: 0.0.2
+Summary: database management service dashboard
+Home-page: https://github.com/ambrozic/dms
+Author: ambrozic
+Author-email: ambrozic@gmail.com
+Maintainer: ambrozic
+Maintainer-email: ambrozic@gmail.com
+License: BSD
+Project-URL: Code, https://github.com/ambrozic/dms
+Project-URL: Documentation, https://ambrozic.github.io/dms
+Keywords: database management service dashboard admin
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Environment :: Web Environment
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: databases (==0.2.5)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: jinja2 (==2.10.1)
+Requires-Dist: passlib (==1.7.1)
+Requires-Dist: python-multipart (==0.0.5)
+Requires-Dist: sqlalchemy (==1.3.8)
+Requires-Dist: starlette (==0.12.9)
+Requires-Dist: uvicorn (==0.8.6)
+Provides-Extra: docs
+Requires-Dist: mkdocs-material (==4.4.2) ; extra == 'docs'
+Requires-Dist: mkdocs (==1.0.4) ; extra == 'docs'
+Requires-Dist: pygments (==2.4.2) ; extra == 'docs'
+Requires-Dist: pymdown-extensions (==6.0) ; extra == 'docs'
+Provides-Extra: postgresql
+Requires-Dist: asyncpg (==0.18.3) ; extra == 'postgresql'
+Requires-Dist: psycopg2-binary (==2.8.3) ; extra == 'postgresql'
+Provides-Extra: sqlite
+Requires-Dist: aiosqlite (==0.10.0) ; extra == 'sqlite'
+Provides-Extra: tests
+Requires-Dist: black (==19.3b0) ; extra == 'tests'
+Requires-Dist: codecov (<3.0,>=2.0) ; extra == 'tests'
+Requires-Dist: isort (<5.0,>4.0) ; extra == 'tests'
+Requires-Dist: pipdeptree (<1.0,>=0.13) ; extra == 'tests'
+Requires-Dist: pytest-asyncio (==0.10.0) ; extra == 'tests'
+Requires-Dist: pytest-cov (<3.0,>=2.7) ; extra == 'tests'
+Requires-Dist: pytest (<6.0,>=5.0) ; extra == 'tests'
+Requires-Dist: sqlalchemy-utils (==0.34.2) ; extra == 'tests'
+
+# dms
+Database Management Service dashboard
+
+## Features
+- standalone and independent as a service
+- only a simple json configuration for dashboard
+- no database model definitions written in python
+- very generic from database perspective
+- limited to `uuid` and `integer` for primary keys values
+- limited to `datetime` or `date` for auto created or updated field values
+- support for sqlite and postgres
+- use as a docker container
+
+
+## Configuration
+### Dashboard
+For an example dashboard configuration look at [docs/dms.json](https://github.com/ambrozic/dms/blob/master/docs/dms.json).
+
+### Service
+Service configuration can be done using environmental variables or by `.env` file mounted into container. 
+
+
+## Usage
+Simple docker compose configuration
+
+```
+services:
+  dms:
+    image: ambrozic/dms:0.0.1
+    ports:
+      - "8000:8000"
+    volumes:
+      - /path/to/your/dms.json:/srv/app/dms.json
+    environment:
+      - DMS_HOST=0.0.0.0
+      - DMS_SECRET_KEY=<secret-key>
+      - DMS_DATABASE=postgresql://postgres@db:5432/db
+```
+
+and open `http://0.0.0.0:8000`
+
+## Screenshots
+[here](docs/ss.png)
+
+
