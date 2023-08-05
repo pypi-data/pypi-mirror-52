@@ -1,0 +1,15 @@
+thumbor_extras/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thumbor_extras/detectors/__init__.py,sha256=qj_POu0My-KZHi7XWpvC_Rz3eWKDX_Wg3uD25P7JUCs,1358
+thumbor_extras/detectors/dnn_face_detector.py,sha256=WqDIFKiTJwdMQrJ6HRx6kxvafBNp7BgeO0gyQcaLSY4,1950
+thumbor_extras/detectors/dnn_object_detector.py,sha256=KnEW_fyJQ-6ihBlfGiGYZa7r14ulzfF1sYp11KR3pOk,3034
+thumbor_extras/detectors/model_files/frozen_inference_graph.pb,sha256=Ko2KidaVhC5g2MbRRBgRAFVVY-Iazy-h6PVh_sXDxq0,69688296
+thumbor_extras/detectors/model_files/opencv_face_detector.pbtxt,sha256=U5eAg2L8b7fEBESEhI4peyJEnZE6Jn-n-L2dhtzikUQ,34912
+thumbor_extras/detectors/model_files/opencv_face_detector_uint8.pb,sha256=XHHXUu8svy9Fesgv3VgPyyUi_QTF79rtGOttnihD--0,2727750
+thumbor_extras/detectors/model_files/ssd_mobilenet_v2_coco_2018_03_29.pbtxt,sha256=NBvm6hu5UwDbDpnYC52suL9z8ppj7lzw1C6SizsKsho,109741
+thumbor_extras/filters/__init__.py,sha256=4oo9mS0Wfk423zpSR3fYhTze7yg6WGECv7siaAqzZOg,521
+thumbor_extras/filters/draw_center_of_mass.py,sha256=KwACNzs6RJzXlkdaJM5lYdX3KSpAxkwJaV8JiiJ9v1E,645
+thumbor_extras/filters/draw_focal_points.py,sha256=JicepV9opfWtKrGV4l1S9QMqhWcLaGnmms82Ff5vuTQ,2419
+thumbor_extras-1.0.0.dist-info/METADATA,sha256=HQ5dwjeLt_YCig2kpe7ZDH5CM-dTwwmjqNJJdHoVXH4,3843
+thumbor_extras-1.0.0.dist-info/WHEEL,sha256=Ph_z28wTcU7HnQwSQ6yCQ-zkcGK4h4ehDfP8b6UoHVE,92
+thumbor_extras-1.0.0.dist-info/top_level.txt,sha256=aMuxfplUyBFa7eVrtgcdwRRbQRS42I1x8Grl4NorGvo,15
+thumbor_extras-1.0.0.dist-info/RECORD,,
