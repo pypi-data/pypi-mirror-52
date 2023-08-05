@@ -1,0 +1,3 @@
+prune tests
+graft scrapydd/static
+graft scrapydd/templates
