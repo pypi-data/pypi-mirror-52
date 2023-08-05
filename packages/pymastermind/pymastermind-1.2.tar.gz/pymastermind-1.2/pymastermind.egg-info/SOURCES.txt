@@ -1,0 +1,13 @@
+MANIFEST.in
+setup.cfg
+setup.py
+docs/.DS_Store
+docs/README.md
+docs/documentation.md
+pymastermind/__init__.py
+pymastermind/welcome.txt
+pymastermind.egg-info/PKG-INFO
+pymastermind.egg-info/SOURCES.txt
+pymastermind.egg-info/dependency_links.txt
+pymastermind.egg-info/requires.txt
+pymastermind.egg-info/top_level.txt
