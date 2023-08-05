@@ -1,0 +1,3 @@
+[console_scripts]
+jup2py = jup2py:run_main
+
