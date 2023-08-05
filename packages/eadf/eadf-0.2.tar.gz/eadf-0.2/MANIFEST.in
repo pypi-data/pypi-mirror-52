@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include .version
+recursive-include eadf *.py
+recursive-include doc *
