@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: imperva-sdk
+Version: 0.2.0
+Summary: SDK for Imperva SecureSphere Open API
+Home-page: https://imperva.github.io/imperva-sdk-python/
+Author: Imperva Inc.
+Author-email: opensource-dev@imperva.com
+License: Proprietary
+Keywords: security api imperva securesphere mx waf
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+
+imperva-sdk
+===========
+
+imperva-sdk is an Imperva SecureSphere Open API SDK for Python, which allows Python developers to write software that communicates with the SecureSphere MX. imperva-sdk provides an easy to use, object-oriented API in addition to JSON export/import capabilities.
+
+`Download latest package <https://imperva.github.io/imperva-sdk-python/quickstart.html#downloads>`_
+
+`Documentation <https://imperva.github.io/imperva-sdk-python/>`_
+
+
