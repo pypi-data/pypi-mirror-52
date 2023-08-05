@@ -1,0 +1,13 @@
+requests<3.0.0,>=2.13.0
+peewee==3.10.0
+psycopg2-binary<2.9,>=2.8
+elasticsearch==6.3.1
+Click==7.0
+sentry-sdk==0.7.6
+Pillow>=5.0.0
+numpy>=1.9.1
+protobuf>=3.5.1
+Pint==0.9
+
+[:python_version < "3.7"]
+dataclasses>=0.6
