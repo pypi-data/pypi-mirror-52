@@ -1,0 +1,401 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.NearestCentroid &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.NearestNeighbors" href="skhubness.neighbors.NearestNeighbors.html"/>
+        <link rel="prev" title="skhubness.neighbors.FalconnLSH" href="skhubness.neighbors.FalconnLSH.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-nearestcentroid">
+<h1>skhubness.neighbors.NearestCentroid<a class="headerlink" href="#skhubness-neighbors-nearestcentroid" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.neighbors.NearestCentroid">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">NearestCentroid</code><span class="sig-paren">(</span><em class="sig-param">metric='euclidean'</em>, <em class="sig-param">shrink_threshold=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nearest_centroid.py#L22"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nearest centroid classifier.</p>
+<p>Each class is represented by its centroid, with test samples classified to
+the class with the nearest centroid.</p>
+<p>Read more in the <span class="xref std std-ref">User Guide</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>metric</strong><span class="classifier">string, or callable</span></dt><dd><p>The metric to use when calculating distance between instances in a
+feature array. If metric is a string or callable, it must be one of
+the options allowed by metrics.pairwise.pairwise_distances for its
+metric parameter.
+The centroids for the samples corresponding to each class is the point
+from which the sum of the distances (according to the metric) of all
+samples that belong to that particular class are minimized.
+If the “manhattan” metric is provided, this centroid is the median and
+for all other metrics, the centroid is now set to be the mean.</p>
+</dd>
+<dt><strong>shrink_threshold</strong><span class="classifier">float, optional (default = None)</span></dt><dd><p>Threshold for shrinking centroids to remove features.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.neighbors.KNeighborsClassifier</span></code></dt><dd><p>nearest neighbors classifier</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>When used for text classification with tf-idf vectors, this classifier is
+also known as the Rocchio classifier.</p>
+<p class="rubric">References</p>
+<p>Tibshirani, R., Hastie, T., Narasimhan, B., &amp; Chu, G. (2002). Diagnosis of
+multiple cancer types by shrunken centroids of gene expression. Proceedings
+of the National Academy of Sciences of the United States of America,
+99(10), 6567-6572. The National Academy of Sciences.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.neighbors.nearest_centroid</span> <span class="k">import</span> <span class="n">NearestCentroid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">NearestCentroid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="go">NearestCentroid(metric=&#39;euclidean&#39;, shrink_threshold=None)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>centroids_</strong><span class="classifier">array-like, shape = [n_classes, n_features]</span></dt><dd><p>Centroid of each class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.neighbors.NearestCentroid.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">metric='euclidean'</em>, <em class="sig-param">shrink_threshold=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nearest_centroid.py#L81"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.NearestCentroid.__init__" title="skhubness.neighbors.NearestCentroid.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, metric, shrink_threshold])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.NearestCentroid.fit" title="skhubness.neighbors.NearestCentroid.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, X, y)</p></td>
+<td><p>Fit the NearestCentroid model according to the given training data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.NearestCentroid.get_params" title="skhubness.neighbors.NearestCentroid.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>(self[, deep])</p></td>
+<td><p>Get parameters for this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.NearestCentroid.predict" title="skhubness.neighbors.NearestCentroid.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(self, X)</p></td>
+<td><p>Perform classification on an array of test vectors X.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.NearestCentroid.score" title="skhubness.neighbors.NearestCentroid.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(self, X, y[, sample_weight])</p></td>
+<td><p>Returns the mean accuracy on the given test data and labels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.NearestCentroid.set_params" title="skhubness.neighbors.NearestCentroid.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(self, \*\*params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.neighbors.NearestCentroid.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nearest_centroid.py#L85"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the NearestCentroid model according to the given training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = [n_samples, n_features]</span></dt><dd><p>Training vector, where n_samples is the number of samples and
+n_features is the number of features.
+Note that centroid shrinking cannot be used with sparse matrices.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array, shape = [n_samples]</span></dt><dd><p>Target values (integers)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NearestCentroid.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>deep</strong><span class="classifier">boolean, optional</span></dt><dd><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt><dd><p>Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NearestCentroid.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nearest_centroid.py#L171"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform classification on an array of test vectors X.</p>
+<p>The predicted class C for each sample in X is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features]</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>C</strong><span class="classifier">array, shape = [n_samples]</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If the metric constructor parameter is “precomputed”, X is assumed to
+be the distance matrix between the data to be predicted and
+<code class="docutils literal notranslate"><span class="pre">self.centroids_</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NearestCentroid.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em>, <em class="sig-param">sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L332"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mean accuracy on the given test data and labels.</p>
+<p>In multi-label classification, this is the subset accuracy
+which is a harsh metric since you require for each sample that
+each label set be correctly predicted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = (n_samples, n_features)</span></dt><dd><p>Test samples.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples) or (n_samples, n_outputs)</span></dt><dd><p>True labels for X.</p>
+</dd>
+<dt><strong>sample_weight</strong><span class="classifier">array-like, shape = [n_samples], optional</span></dt><dd><p>Sample weights.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NearestCentroid.set_params">
+<code class="sig-name descname">set_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NearestCentroid.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.NearestNeighbors.html" class="btn btn-neutral float-right" title="skhubness.neighbors.NearestNeighbors">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.FalconnLSH.html" class="btn btn-neutral" title="skhubness.neighbors.FalconnLSH"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

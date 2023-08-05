@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>kneighbors_graph &#8212; hubness 0.21a1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="kneighbors-graph">
+<h1>kneighbors_graph<a class="headerlink" href="#kneighbors-graph" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="hubness.neighbors.kneighbors_graph">
+<code class="sig-prename descclassname">hubness.neighbors.</code><code class="sig-name descname">kneighbors_graph</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">n_neighbors</em>, <em class="sig-param">mode='connectivity'</em>, <em class="sig-param">algorithm: str = 'auto'</em>, <em class="sig-param">algorithm_params: dict = None</em>, <em class="sig-param">hubness: str = None</em>, <em class="sig-param">hubness_params: dict = None</em>, <em class="sig-param">metric='minkowski'</em>, <em class="sig-param">p=2</em>, <em class="sig-param">metric_params=None</em>, <em class="sig-param">include_self=False</em>, <em class="sig-param">n_jobs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hubness.neighbors.kneighbors_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the (weighted) graph of k-Neighbors for points in X</p>
+<p>Read more in the <span class="xref std std-ref">User Guide</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em><em> or </em><em>BallTree</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>, </em><em>n_features</em><em>]</em>) – Sample data, in the form of a numpy array or a precomputed
+<code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code>.</p></li>
+<li><p><strong>n_neighbors</strong> (<em>int</em>) – Number of neighbors for each sample.</p></li>
+<li><p><strong>mode</strong> (<em>{'connectivity'</em><em>, </em><em>'distance'}</em><em>, </em><em>optional</em>) – Type of returned matrix: ‘connectivity’ will return the connectivity
+matrix with ones and zeros, and ‘distance’ will return the distances
+between neighbors according to the given metric.</p></li>
+<li><p><strong>algorithm</strong> (<em>{'auto'</em><em>, </em><em>'hnsw'</em><em>, </em><em>'lsh'</em><em>, </em><em>'ball_tree'</em><em>, </em><em>'kd_tree'</em><em>, </em><em>'brute'}</em><em>, </em><em>optional</em>) – <p>Algorithm used to compute the nearest neighbors:</p>
+<ul>
+<li><p>’hnsw’ will use <a class="reference internal" href="hubness.neighbors.HNSW.html#hubness.neighbors.HNSW" title="hubness.neighbors.HNSW"><code class="xref py py-class docutils literal notranslate"><span class="pre">HNSW</span></code></a></p></li>
+<li><p>’lsh’ will use <a class="reference internal" href="hubness.neighbors.LSH.html#hubness.neighbors.LSH" title="hubness.neighbors.LSH"><code class="xref py py-class docutils literal notranslate"><span class="pre">LSH</span></code></a></p></li>
+<li><p>’ball_tree’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></p></li>
+<li><p>’kd_tree’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></p></li>
+<li><p>’brute’ will use a brute-force search.</p></li>
+<li><p>’auto’ will attempt to decide the most appropriate algorithm
+based on the values passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code> method.</p></li>
+</ul>
+<p>Note: fitting on sparse input will override the setting of
+this parameter, using brute force.</p>
+</p></li>
+<li><p><strong>algorithm_params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Override default parameters of the NN algorithm.
+For example, with algorithm=’lsh’ and algorithm_params={n_candidates: 100}
+one hundred approximate neighbors are retrieved with LSH.
+If parameter hubness is set, the candidate neighbors are further reordered
+with hubness reduction.
+Finally, n_neighbors objects are used from the (optionally reordered) candidates.</p></li>
+<li><p><strong>TODO add all supported hubness reduction methods</strong> (<em>#</em>) – </p></li>
+<li><p><strong>hubness</strong> (<em>{'mutual_proximity'</em><em>, </em><em>'local_scaling'</em><em>, </em><em>'dis_sim_local'</em><em>, </em><em>None}</em><em>, </em><em>optional</em>) – Hubness reduction algorithm
+- ‘mutual_proximity’ or ‘mp’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">MutualProximity'</span>
+<span class="pre">-</span> <span class="pre">'local_scaling'</span> <span class="pre">or</span> <span class="pre">'ls'</span> <span class="pre">will</span> <span class="pre">use</span> <span class="pre">:class:`LocalScaling</span></code>
+- ‘dis_sim_local’ or ‘dsl’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">DisSimLocal</span></code>
+If None, no hubness reduction will be performed (=vanilla kNN).</p></li>
+<li><p><strong>hubness_params</strong> (<em>dict</em><em>, </em><em>optional</em>) – Override default parameters of the selected hubness reduction algorithm.
+For example, with hubness=’mp’ and hubness_params={‘method’: ‘normal’}
+a mutual proximity variant is used, which models distance distributions
+with independent Gaussians.</p></li>
+<li><p><strong>metric</strong> (<em>string</em><em>, </em><em>default 'minkowski'</em>) – The distance metric used to calculate the k-Neighbors for each sample
+point. The DistanceMetric class gives a list of available metrics.
+The default distance is ‘euclidean’ (‘minkowski’ metric with the p
+param equal to 2.)</p></li>
+<li><p><strong>p</strong> (<em>int</em><em>, </em><em>default 2</em>) – Power parameter for the Minkowski metric. When p = 1, this is
+equivalent to using manhattan_distance (l1), and euclidean_distance
+(l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.</p></li>
+<li><p><strong>metric_params</strong> (<em>dict</em><em>, </em><em>optional</em>) – additional keyword arguments for the metric function.</p></li>
+<li><p><strong>include_self</strong> (<em>bool</em><em>, </em><em>default=False.</em>) – Whether or not to mark each sample as the first nearest neighbor to
+itself. If <cite>None</cite>, then True is used for mode=’connectivity’ and False
+for mode=’distance’ as this will preserve backwards compatibility.</p></li>
+<li><p><strong>n_jobs</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The number of parallel jobs to run for neighbors search.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors. See <span class="xref std std-term">Glossary</span>
+for more details.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>A</strong> – A[i, j] is assigned the weight of edge that connects i to j.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>sparse matrix in CSR format, shape = [n_samples, n_samples]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">hubness.neighbors</span> <span class="k">import</span> <span class="n">kneighbors_graph</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">kneighbors_graph</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;connectivity&#39;</span><span class="p">,</span> <span class="n">include_self</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="go">array([[1., 0., 1.],</span>
+<span class="go">       [0., 1., 1.],</span>
+<span class="go">       [1., 0., 1.]])</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="hubness.neighbors.radius_neighbors_graph.html#hubness.neighbors.radius_neighbors_graph" title="hubness.neighbors.radius_neighbors_graph"><code class="xref py py-func docutils literal notranslate"><span class="pre">radius_neighbors_graph()</span></code></a></p>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">hubness</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_hubness.html"><cite>hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation.html">API Documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Roman Feldbauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/hubness.neighbors.kneighbors_graph.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,408 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.KernelDensity &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.LocalOutlierFactor" href="skhubness.neighbors.LocalOutlierFactor.html"/>
+        <link rel="prev" title="skhubness.neighbors.radius_neighbors_graph" href="skhubness.neighbors.radius_neighbors_graph.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-kerneldensity">
+<h1>skhubness.neighbors.KernelDensity<a class="headerlink" href="#skhubness-neighbors-kerneldensity" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.neighbors.KernelDensity">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">KernelDensity</code><span class="sig-paren">(</span><em class="sig-param">bandwidth=1.0</em>, <em class="sig-param">algorithm='auto'</em>, <em class="sig-param">kernel='gaussian'</em>, <em class="sig-param">metric='euclidean'</em>, <em class="sig-param">atol=0</em>, <em class="sig-param">rtol=0</em>, <em class="sig-param">breadth_first=True</em>, <em class="sig-param">leaf_size=40</em>, <em class="sig-param">metric_params=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/kde.py#L25"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kernel Density Estimation</p>
+<p>Read more in the <span class="xref std std-ref">User Guide</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>bandwidth</strong><span class="classifier">float</span></dt><dd><p>The bandwidth of the kernel.</p>
+</dd>
+<dt><strong>algorithm</strong><span class="classifier">string</span></dt><dd><p>The tree algorithm to use.  Valid options are
+[‘kd_tree’|’ball_tree’|’auto’].  Default is ‘auto’.</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">string</span></dt><dd><p>The kernel to use.  Valid kernels are
+[‘gaussian’|’tophat’|’epanechnikov’|’exponential’|’linear’|’cosine’]
+Default is ‘gaussian’.</p>
+</dd>
+<dt><strong>metric</strong><span class="classifier">string</span></dt><dd><p>The distance metric to use.  Note that not all metrics are
+valid with all algorithms.  Refer to the documentation of
+<a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a> and <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a> for a description of
+available algorithms.  Note that the normalization of the density
+output is correct only for the Euclidean distance metric. Default
+is ‘euclidean’.</p>
+</dd>
+<dt><strong>atol</strong><span class="classifier">float</span></dt><dd><p>The desired absolute tolerance of the result.  A larger tolerance will
+generally lead to faster execution. Default is 0.</p>
+</dd>
+<dt><strong>rtol</strong><span class="classifier">float</span></dt><dd><p>The desired relative tolerance of the result.  A larger tolerance will
+generally lead to faster execution.  Default is 1E-8.</p>
+</dd>
+<dt><strong>breadth_first</strong><span class="classifier">boolean</span></dt><dd><p>If true (default), use a breadth-first approach to the problem.
+Otherwise use a depth-first approach.</p>
+</dd>
+<dt><strong>leaf_size</strong><span class="classifier">int</span></dt><dd><p>Specify the leaf size of the underlying tree.  See <a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a>
+or <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a> for details.  Default is 40.</p>
+</dd>
+<dt><strong>metric_params</strong><span class="classifier">dict</span></dt><dd><p>Additional parameters to be passed to the tree for use with the
+metric.  For more information, see the documentation of
+<a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a> or <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">bandwidth=1.0</em>, <em class="sig-param">algorithm='auto'</em>, <em class="sig-param">kernel='gaussian'</em>, <em class="sig-param">metric='euclidean'</em>, <em class="sig-param">atol=0</em>, <em class="sig-param">rtol=0</em>, <em class="sig-param">breadth_first=True</em>, <em class="sig-param">leaf_size=40</em>, <em class="sig-param">metric_params=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/kde.py#L73"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.__init__" title="skhubness.neighbors.KernelDensity.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, bandwidth, algorithm, …])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.fit" title="skhubness.neighbors.KernelDensity.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, X[, y, sample_weight])</p></td>
+<td><p>Fit the Kernel Density model on the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.get_params" title="skhubness.neighbors.KernelDensity.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>(self[, deep])</p></td>
+<td><p>Get parameters for this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.sample" title="skhubness.neighbors.KernelDensity.sample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code></a>(self[, n_samples, random_state])</p></td>
+<td><p>Generate random samples from the model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.score" title="skhubness.neighbors.KernelDensity.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(self, X[, y])</p></td>
+<td><p>Compute the total log probability density under the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.score_samples" title="skhubness.neighbors.KernelDensity.score_samples"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score_samples</span></code></a>(self, X)</p></td>
+<td><p>Evaluate the density model on the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KernelDensity.set_params" title="skhubness.neighbors.KernelDensity.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(self, \*\*params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y=None</em>, <em class="sig-param">sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/kde.py#L116"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the Kernel Density model on the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array_like, shape (n_samples, n_features)</span></dt><dd><p>List of n_features-dimensional data points.  Each row
+corresponds to a single data point.</p>
+</dd>
+<dt><strong>sample_weight</strong><span class="classifier">array_like, shape (n_samples,), optional</span></dt><dd><p>List of sample weights attached to the data X.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>deep</strong><span class="classifier">boolean, optional</span></dt><dd><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt><dd><p>Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">n_samples=1</em>, <em class="sig-param">random_state=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/kde.py#L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate random samples from the model.</p>
+<p>Currently, this is implemented only for gaussian and tophat kernels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n_samples</strong><span class="classifier">int, optional</span></dt><dd><p>Number of samples to generate. Defaults to 1.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None. default to None</span></dt><dd><p>If int, random_state is the seed used by the random number
+generator; If RandomState instance, random_state is the random
+number generator; If None, the random number generator is the
+RandomState instance used by <cite>np.random</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array_like, shape (n_samples, n_features)</span></dt><dd><p>List of samples.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/kde.py#L181"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the total log probability density under the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array_like, shape (n_samples, n_features)</span></dt><dd><p>List of n_features-dimensional data points.  Each row
+corresponds to a single data point.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>logprob</strong><span class="classifier">float</span></dt><dd><p>Total log-likelihood of the data in X. This is normalized to be a
+probability density, so the value will be low for high-dimensional
+data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.score_samples">
+<code class="sig-name descname">score_samples</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/kde.py#L150"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.score_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the density model on the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array_like, shape (n_samples, n_features)</span></dt><dd><p>An array of points to query.  Last dimension should match dimension
+of training data (n_features).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>density</strong><span class="classifier">ndarray, shape (n_samples,)</span></dt><dd><p>The array of log(density) evaluations. These are normalized to be
+probability densities, so values will be low for high-dimensional
+data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KernelDensity.set_params">
+<code class="sig-name descname">set_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.KernelDensity.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.LocalOutlierFactor.html" class="btn btn-neutral float-right" title="skhubness.neighbors.LocalOutlierFactor">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.radius_neighbors_graph.html" class="btn btn-neutral" title="skhubness.neighbors.radius_neighbors_graph"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

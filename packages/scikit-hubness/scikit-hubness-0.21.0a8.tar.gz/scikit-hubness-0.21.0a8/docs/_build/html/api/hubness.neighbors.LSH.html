@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>LSH &#8212; hubness 0.21a1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="lsh">
+<h1>LSH<a class="headerlink" href="#lsh" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="hubness.neighbors.LSH">
+<em class="property">class </em><code class="sig-prename descclassname">hubness.neighbors.</code><code class="sig-name descname">LSH</code><span class="sig-paren">(</span><em class="sig-param">n_candidates: int = 5</em>, <em class="sig-param">radius: float = 1.0</em>, <em class="sig-param">metric: str = 'euclidean'</em>, <em class="sig-param">num_probes: int = 50</em>, <em class="sig-param">n_jobs: int = 1</em>, <em class="sig-param">verbose: int = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#hubness.neighbors.LSH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">hubness.neighbors.approximate_neighbors.ApproximateNearestNeighbor</span></code></p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hubness.neighbors.LSH.valid_metrics" title="hubness.neighbors.LSH.valid_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_metrics</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hubness.neighbors.LSH.fit" title="hubness.neighbors.LSH.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(X[, y])</p></td>
+<td><p>Setup the LSH index from training data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hubness.neighbors.LSH.kneighbors" title="hubness.neighbors.LSH.kneighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kneighbors</span></code></a>([X, n_candidates, return_distance])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hubness.neighbors.LSH.radius_neighbors" title="hubness.neighbors.LSH.radius_neighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radius_neighbors</span></code></a>([X, radius, return_distance])</p></td>
+<td><p>TODO add docstring</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="hubness.neighbors.LSH.valid_metrics">
+<code class="sig-name descname">valid_metrics</code><em class="property"> = ['euclidean', 'l2', 'minkowski', 'cosine', 'neg_inner', 'NegativeInnerProduct']</em><a class="headerlink" href="#hubness.neighbors.LSH.valid_metrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="hubness.neighbors.LSH.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">X: numpy.ndarray</em>, <em class="sig-param">y: Optional[numpy.ndarray] = None</em><span class="sig-paren">)</span> &#x2192; hubness.neighbors.lsh.LSH<a class="headerlink" href="#hubness.neighbors.LSH.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the LSH index from training data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hubness.neighbors.LSH.kneighbors">
+<code class="sig-name descname">kneighbors</code><span class="sig-paren">(</span><em class="sig-param">X: Optional[numpy.ndarray] = None</em>, <em class="sig-param">n_candidates: Optional[int] = None</em>, <em class="sig-param">return_distance: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#hubness.neighbors.LSH.kneighbors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hubness.neighbors.LSH.radius_neighbors">
+<code class="sig-name descname">radius_neighbors</code><span class="sig-paren">(</span><em class="sig-param">X: Optional[numpy.ndarray] = None</em>, <em class="sig-param">radius: Optional[float] = None</em>, <em class="sig-param">return_distance: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#hubness.neighbors.LSH.radius_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO add docstring</p>
+<p class="rubric">Notes</p>
+<p>From the falconn docs: radius can be negative, and for the distance function
+‘negative_inner_product’ it actually makes sense.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">hubness</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_hubness.html"><cite>hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation.html">API Documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Roman Feldbauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/hubness.neighbors.LSH.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

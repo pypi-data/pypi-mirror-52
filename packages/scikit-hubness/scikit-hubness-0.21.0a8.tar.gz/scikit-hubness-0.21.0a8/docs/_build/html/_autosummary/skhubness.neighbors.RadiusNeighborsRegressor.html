@@ -1,0 +1,641 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.RadiusNeighborsRegressor &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.RandomProjectionTree" href="skhubness.neighbors.RandomProjectionTree.html"/>
+        <link rel="prev" title="skhubness.neighbors.RadiusNeighborsClassifier" href="skhubness.neighbors.RadiusNeighborsClassifier.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-radiusneighborsregressor">
+<h1>skhubness.neighbors.RadiusNeighborsRegressor<a class="headerlink" href="#skhubness-neighbors-radiusneighborsregressor" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">RadiusNeighborsRegressor</code><span class="sig-paren">(</span><em class="sig-param">radius=1.0</em>, <em class="sig-param">weights='uniform'</em>, <em class="sig-param">algorithm: str = 'auto'</em>, <em class="sig-param">algorithm_params: dict = None</em>, <em class="sig-param">hubness: str = None</em>, <em class="sig-param">hubness_params: dict = None</em>, <em class="sig-param">leaf_size=30</em>, <em class="sig-param">p=2</em>, <em class="sig-param">metric='minkowski'</em>, <em class="sig-param">metric_params=None</em>, <em class="sig-param">n_jobs=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/regression.py#L218"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regression based on neighbors within a fixed radius.</p>
+<p>The target is predicted by local interpolation of the targets
+associated of the nearest neighbors in the training set.</p>
+<p>Read more in the <a class="reference external" href="https://scikit-learn.org/stable/modules/neighbors.html#regression">scikit-learn User Guide</a>.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>radius: float, optional (default = 1.0)</strong></dt><dd><p>Range of parameter space to use by default for <a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors" title="skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors"><code class="xref py py-meth docutils literal notranslate"><span class="pre">radius_neighbors()</span></code></a>
+queries.</p>
+</dd>
+<dt><strong>weights: str or callable</strong></dt><dd><p>weight function used in prediction.  Possible values:</p>
+<ul class="simple">
+<li><p>‘uniform’: uniform weights.  All points in each neighborhood
+are weighted equally.</p></li>
+<li><p>‘distance’: weight points by the inverse of their distance.
+in this case, closer neighbors of a query point will have a
+greater influence than neighbors which are further away.</p></li>
+<li><p>[callable]: a user-defined function which accepts an
+array of distances, and returns an array of the same shape
+containing the weights.</p></li>
+</ul>
+<p>Uniform weights are used by default.</p>
+</dd>
+<dt><strong>algorithm: {‘auto’, ‘hnsw’, ‘falconn_lsh’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional</strong></dt><dd><p>Algorithm used to compute the nearest neighbors:</p>
+<ul class="simple">
+<li><p>‘hnsw’ will use <a class="reference internal" href="skhubness.neighbors.HNSW.html#skhubness.neighbors.HNSW" title="skhubness.neighbors.HNSW"><code class="xref py py-class docutils literal notranslate"><span class="pre">HNSW</span></code></a></p></li>
+<li><p>‘falconn_lsh’ will use <a class="reference internal" href="skhubness.neighbors.FalconnLSH.html#skhubness.neighbors.FalconnLSH" title="skhubness.neighbors.FalconnLSH"><code class="xref py py-class docutils literal notranslate"><span class="pre">FalconnLSH</span></code></a></p></li>
+<li><p>‘ball_tree’ will use <a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a></p></li>
+<li><p>‘kd_tree’ will use <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a></p></li>
+<li><p>‘brute’ will use a brute-force search.</p></li>
+<li><p>‘auto’ will attempt to decide the most appropriate algorithm
+based on the values passed to <a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.fit" title="skhubness.neighbors.RadiusNeighborsRegressor.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> method.</p></li>
+</ul>
+<p>Note: fitting on sparse input will override the setting of
+this parameter, using brute force.</p>
+</dd>
+<dt><strong>algorithm_params: dict, optional</strong></dt><dd><p>Override default parameters of the NN algorithm.
+For example, with algorithm=’lsh’ and algorithm_params={n_candidates: 100}
+one hundred approximate neighbors are retrieved with LSH.
+If parameter hubness is set, the candidate neighbors are further reordered
+with hubness reduction.
+Finally, n_neighbors objects are used from the (optionally reordered) candidates.</p>
+</dd>
+<dt><strong>hubness: {‘mutual_proximity’, ‘local_scaling’, ‘dis_sim_local’, None}, optional</strong></dt><dd><p>Hubness reduction algorithm</p>
+<ul class="simple">
+<li><p>‘mutual_proximity’ or ‘mp’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">MutualProximity</span></code></p></li>
+<li><p>‘local_scaling’ or ‘ls’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">LocalScaling</span></code></p></li>
+<li><p>‘dis_sim_local’ or ‘dsl’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">DisSimLocal</span></code></p></li>
+</ul>
+<p>If None, no hubness reduction will be performed (=vanilla kNN).</p>
+</dd>
+<dt><strong>hubness_params: dict, optional</strong></dt><dd><p>Override default parameters of the selected hubness reduction algorithm.
+For example, with hubness=’mp’ and hubness_params={‘method’: ‘normal’}
+a mutual proximity variant is used, which models distance distributions
+with independent Gaussians.</p>
+</dd>
+<dt><strong>leaf_size: int, optional (default = 30)</strong></dt><dd><p>Leaf size passed to BallTree or KDTree.  This can affect the
+speed of the construction and query, as well as the memory
+required to store the tree.  The optimal value depends on the
+nature of the problem.</p>
+</dd>
+<dt><strong>p: integer, optional (default = 2)</strong></dt><dd><p>Power parameter for the Minkowski metric. When p = 1, this is
+equivalent to using manhattan_distance (l1), and euclidean_distance
+(l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.</p>
+</dd>
+<dt><strong>metric: string or callable, default ‘minkowski’</strong></dt><dd><p>the distance metric to use for the tree.  The default metric is
+minkowski, and with p=2 is equivalent to the standard Euclidean
+metric. See the documentation of the DistanceMetric class for a
+list of available metrics.</p>
+</dd>
+<dt><strong>metric_params: dict, optional (default = None)</strong></dt><dd><p>Additional keyword arguments for the metric function.</p>
+</dd>
+<dt><strong>n_jobs: int or None, optional (default=None)</strong></dt><dd><p>The number of parallel jobs to run for neighbors search.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors. See scikit-learn
+<a class="reference external" href="https://scikit-learn.org/stable/glossary.html#term-n-jobs">Glossary</a>
+for more details.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="skhubness.neighbors.NearestNeighbors.html#skhubness.neighbors.NearestNeighbors" title="skhubness.neighbors.NearestNeighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NearestNeighbors</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="skhubness.neighbors.KNeighborsRegressor.html#skhubness.neighbors.KNeighborsRegressor" title="skhubness.neighbors.KNeighborsRegressor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KNeighborsRegressor</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="skhubness.neighbors.KNeighborsClassifier.html#skhubness.neighbors.KNeighborsClassifier" title="skhubness.neighbors.KNeighborsClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KNeighborsClassifier</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="skhubness.neighbors.RadiusNeighborsClassifier.html#skhubness.neighbors.RadiusNeighborsClassifier" title="skhubness.neighbors.RadiusNeighborsClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RadiusNeighborsClassifier</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>See <a class="reference external" href="https://scikit-learn.org/stable/modules/neighbors.html#neighbors">Nearest Neighbors</a>
+in the scikit-learn online documentation for a discussion
+of the choice of <code class="docutils literal notranslate"><span class="pre">algorithm</span></code> and <code class="docutils literal notranslate"><span class="pre">leaf_size</span></code>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/K-nearest_neighbor_algorithm">https://en.wikipedia.org/wiki/K-nearest_neighbor_algorithm</a></p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhubness.neighbors</span> <span class="k">import</span> <span class="n">RadiusNeighborsRegressor</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span> <span class="o">=</span> <span class="n">RadiusNeighborsRegressor</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">RadiusNeighborsRegressor(...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">1.5</span><span class="p">]]))</span>
+<span class="go">[0.5]</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">radius=1.0</em>, <em class="sig-param">weights='uniform'</em>, <em class="sig-param">algorithm: str = 'auto'</em>, <em class="sig-param">algorithm_params: dict = None</em>, <em class="sig-param">hubness: str = None</em>, <em class="sig-param">hubness_params: dict = None</em>, <em class="sig-param">leaf_size=30</em>, <em class="sig-param">p=2</em>, <em class="sig-param">metric='minkowski'</em>, <em class="sig-param">metric_params=None</em>, <em class="sig-param">n_jobs=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/regression.py#L339"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.__init__" title="skhubness.neighbors.RadiusNeighborsRegressor.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, radius, weights, leaf_size, …])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.fit" title="skhubness.neighbors.RadiusNeighborsRegressor.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, X, y)</p></td>
+<td><p>Fit the model using X as training data and y as target values</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.get_params" title="skhubness.neighbors.RadiusNeighborsRegressor.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>(self[, deep])</p></td>
+<td><p>Get parameters for this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.kcandidates" title="skhubness.neighbors.RadiusNeighborsRegressor.kcandidates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kcandidates</span></code></a>(self[, X, n_neighbors, …])</p></td>
+<td><p>Finds the K-neighbors of a point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.predict" title="skhubness.neighbors.RadiusNeighborsRegressor.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(self, X)</p></td>
+<td><p>Predict the target for the provided data</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors" title="skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radius_neighbors</span></code></a>(self[, X, radius, …])</p></td>
+<td><p>Finds the neighbors within a given radius of a point or points.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors_graph" title="skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radius_neighbors_graph</span></code></a>(self[, X, radius, mode])</p></td>
+<td><p>Computes the (weighted) graph of Neighbors for points in X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.score" title="skhubness.neighbors.RadiusNeighborsRegressor.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(self, X, y[, sample_weight])</p></td>
+<td><p>Returns the coefficient of determination R^2 of the prediction.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.RadiusNeighborsRegressor.set_params" title="skhubness.neighbors.RadiusNeighborsRegressor.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(self, \*\*params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/base.py#L858"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the model using X as training data and y as target values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix, BallTree, KDTree}</span></dt><dd><p>Training data. If array or matrix, shape [n_samples, n_features],
+or [n_samples, n_samples] if metric=’precomputed’.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">{array-like, sparse matrix}</span></dt><dd><dl class="simple">
+<dt>Target values, array of float values, shape = [n_samples]</dt><dd><p>or [n_samples, n_outputs]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>deep</strong><span class="classifier">boolean, optional</span></dt><dd><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt><dd><p>Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.kcandidates">
+<code class="sig-name descname">kcandidates</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X=None</em>, <em class="sig-param">n_neighbors=None</em>, <em class="sig-param">return_distance=True</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/base.py#L428"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.kcandidates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the K-neighbors of a point.
+Returns indices of and distances to the neighbors of each point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape (n_query, n_features), or (n_query, n_indexed) if metric == ‘precomputed’</span></dt><dd><p>The query point or points.
+If not provided, neighbors of each indexed point are returned.
+In this case, the query point is not considered its own neighbor.</p>
+</dd>
+<dt><strong>n_neighbors</strong><span class="classifier">int</span></dt><dd><p>Number of neighbors to get (default is the value
+passed to the constructor).</p>
+</dd>
+<dt><strong>return_distance</strong><span class="classifier">boolean, optional. Defaults to True.</span></dt><dd><p>If False, distances will not be returned</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dist</strong><span class="classifier">array</span></dt><dd><p>Array representing the lengths to points, only present if
+return_distance=True</p>
+</dd>
+<dt><strong>ind</strong><span class="classifier">array</span></dt><dd><p>Indices of the nearest points in the population matrix.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>In the following example, we construct a NeighborsClassifier
+class from an array representing our data set and ask who’s
+the closest point to [1,1,1]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">samples</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhubness.neighbors</span> <span class="k">import</span> <span class="n">NearestNeighbors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">NearestNeighbors(algorithm=&#39;auto&#39;, leaf_size=30, ...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]))</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">(array([[0.5]]), array([[2]]))</span>
+</pre></div>
+</div>
+<p>As you can see, it returns [[0.5]], and [[2]], which means that the
+element is at distance 0.5 and is the third element of samples
+(indexes start at 0). You can also query for multiple points:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">array([[1],</span>
+<span class="go">       [2]]...)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/regression.py#L355"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the target for the provided data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: array-like, shape (n_query, n_features), or (n_query, n_indexed) if metric == ‘precomputed’</strong></dt><dd><p>Test samples.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>y: array of float, shape = [n_samples] or [n_samples, n_outputs]</dt><dd><p>Target values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors">
+<code class="sig-name descname">radius_neighbors</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X=None</em>, <em class="sig-param">radius=None</em>, <em class="sig-param">return_distance=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/base.py#L661"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the neighbors within a given radius of a point or points.</p>
+<p>Return the indices and distances of each point from the dataset
+lying in a ball with size <code class="docutils literal notranslate"><span class="pre">radius</span></code> around the points of the query
+array. Points lying on the boundary are included in the results.</p>
+<p>The result points are <em>not</em> necessarily sorted by distance to their
+query point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, (n_samples, n_features), optional</span></dt><dd><p>The query point or points.
+If not provided, neighbors of each indexed point are returned.
+In this case, the query point is not considered its own neighbor.</p>
+</dd>
+<dt><strong>radius</strong><span class="classifier">float</span></dt><dd><p>Limiting distance of neighbors to return.
+(default is the value passed to the constructor).</p>
+</dd>
+<dt><strong>return_distance</strong><span class="classifier">boolean, optional. Defaults to True.</span></dt><dd><p>If False, distances will not be returned</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dist</strong><span class="classifier">array, shape (n_samples,) of arrays</span></dt><dd><p>Array representing the distances to each point, only present if
+return_distance=True. The distance values are computed according
+to the <code class="docutils literal notranslate"><span class="pre">metric</span></code> constructor parameter.</p>
+</dd>
+<dt><strong>ind</strong><span class="classifier">array, shape (n_samples,) of arrays</span></dt><dd><p>An array of arrays of indices of the approximate nearest points
+from the population matrix that lie within a ball of size
+<code class="docutils literal notranslate"><span class="pre">radius</span></code> around the query points.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Because the number of neighbors of each point is not necessarily
+equal, the results for multiple query points cannot be fit in a
+standard data array.
+For efficiency, <cite>radius_neighbors</cite> returns arrays of objects, where
+each object is a 1D array of indices or distances.</p>
+<p class="rubric">Examples</p>
+<p>In the following example, we construct a NeighborsClassifier
+class from an array representing our data set and ask who’s
+the closest point to [1, 1, 1]:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">samples</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhubness.neighbors</span> <span class="k">import</span> <span class="n">NearestNeighbors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">1.6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">NearestNeighbors(algorithm=&#39;auto&#39;, leaf_size=30, ...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">radius_neighbors</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">[1.5 0.5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">[1 2]</span>
+</pre></div>
+</div>
+<p>The first array returned contains the distances to all points which
+are closer than 1.6, while the second array returned contains their
+indices.  In general, multiple points can be queried at the same time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors_graph">
+<code class="sig-name descname">radius_neighbors_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X=None</em>, <em class="sig-param">radius=None</em>, <em class="sig-param">mode='connectivity'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/base.py#L838"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.radius_neighbors_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the (weighted) graph of Neighbors for points in X</p>
+<p>Neighborhoods are restricted the points at a distance lower than
+radius.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features], optional</span></dt><dd><p>The query point or points.
+If not provided, neighbors of each indexed point are returned.
+In this case, the query point is not considered its own neighbor.</p>
+</dd>
+<dt><strong>radius</strong><span class="classifier">float</span></dt><dd><p>Radius of neighborhoods.
+(default is the value passed to the constructor).</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">{‘connectivity’, ‘distance’}, optional</span></dt><dd><p>Type of returned matrix: ‘connectivity’ will return the
+connectivity matrix with ones and zeros, in ‘distance’ the
+edges are Euclidean distance between points.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>A</strong><span class="classifier">sparse matrix in CSR format, shape = [n_samples, n_samples]</span></dt><dd><p>A[i, j] is assigned the weight of edge that connects i to j.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="skhubness.neighbors.kneighbors_graph.html#skhubness.neighbors.kneighbors_graph" title="skhubness.neighbors.kneighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kneighbors_graph</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">NearestNeighbors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">NearestNeighbors(algorithm=&#39;auto&#39;, leaf_size=30, ...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">radius_neighbors_graph</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="go">array([[1., 0., 1.],</span>
+<span class="go">       [0., 1., 0.],</span>
+<span class="go">       [1., 0., 1.]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em>, <em class="sig-param">sample_weight=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L364"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the coefficient of determination R^2 of the prediction.</p>
+<p>The coefficient R^2 is defined as (1 - u/v), where u is the residual
+sum of squares ((y_true - y_pred) ** 2).sum() and v is the total
+sum of squares ((y_true - y_true.mean()) ** 2).sum().
+The best possible score is 1.0 and it can be negative (because the
+model can be arbitrarily worse). A constant model that always
+predicts the expected value of y, disregarding the input features,
+would get a R^2 score of 0.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = (n_samples, n_features)</span></dt><dd><p>Test samples. For some estimators this may be a
+precomputed kernel matrix instead, shape = (n_samples,
+n_samples_fitted], where n_samples_fitted is the number of
+samples used in the fitting for the estimator.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples) or (n_samples, n_outputs)</span></dt><dd><p>True values for X.</p>
+</dd>
+<dt><strong>sample_weight</strong><span class="classifier">array-like, shape = [n_samples], optional</span></dt><dd><p>Sample weights.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>R^2 of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The R2 score used when calling <code class="docutils literal notranslate"><span class="pre">score</span></code> on a regressor will use
+<code class="docutils literal notranslate"><span class="pre">multioutput='uniform_average'</span></code> from version 0.23 to keep consistent
+with <cite>metrics.r2_score</cite>. This will influence the <code class="docutils literal notranslate"><span class="pre">score</span></code> method of
+all the multioutput regressors (except for
+<cite>multioutput.MultiOutputRegressor</cite>). To specify the default value
+manually and avoid the warning, please either call <cite>metrics.r2_score</cite>
+directly or make a custom scorer with <cite>metrics.make_scorer</cite> (the
+built-in scorer <code class="docutils literal notranslate"><span class="pre">'r2'</span></code> uses <code class="docutils literal notranslate"><span class="pre">multioutput='uniform_average'</span></code>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.RadiusNeighborsRegressor.set_params">
+<code class="sig-name descname">set_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.RadiusNeighborsRegressor.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.RandomProjectionTree.html" class="btn btn-neutral float-right" title="skhubness.neighbors.RandomProjectionTree">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.RadiusNeighborsClassifier.html" class="btn btn-neutral" title="skhubness.neighbors.RadiusNeighborsClassifier"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

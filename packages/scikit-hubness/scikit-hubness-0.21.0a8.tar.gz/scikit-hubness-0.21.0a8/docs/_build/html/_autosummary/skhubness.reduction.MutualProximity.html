@@ -1,0 +1,309 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.reduction.MutualProximity &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.reduction.LocalScaling" href="skhubness.reduction.LocalScaling.html"/>
+        <link rel="prev" title="skhubness.neighbors.NeighborhoodComponentsAnalysis" href="skhubness.neighbors.NeighborhoodComponentsAnalysis.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-reduction-mutualproximity">
+<h1>skhubness.reduction.MutualProximity<a class="headerlink" href="#skhubness-reduction-mutualproximity" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.reduction.MutualProximity">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.reduction.</code><code class="sig-name descname">MutualProximity</code><span class="sig-paren">(</span><em class="sig-param">method: str = 'normal'</em>, <em class="sig-param">verbose: int = 0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/reduction/mutual_proximity.py#L15"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.reduction.MutualProximity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubness reduction with Mutual Proximity <a class="reference internal" href="#r5a390b9a9956-1" id="id1"><span>[R5a390b9a9956-1]</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>method: ‘normal’ or ‘empiric’, default = ‘normal’</strong></dt><dd><p>Model distance distribution with ‘method’.</p>
+<ul class="simple">
+<li><p>‘normal’ or ‘gaussi’ model distance distributions with independent Gaussians (fast)</p></li>
+<li><p>‘empiric’ or ‘exact’ model distances with the empiric distributions (slow)</p></li>
+</ul>
+</dd>
+<dt><strong>verbose: int, default = 0</strong></dt><dd><p>If verbose &gt; 0, show progress bar.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="r5a390b9a9956-1"><span class="brackets"><a class="fn-backref" href="#id1">R5a390b9a9956-1</a></span></dt>
+<dd><p>Schnitzer, D., Flexer, A., Schedl, M., &amp; Widmer, G. (2012).
+Local and global scaling reduce hubs in space. The Journal of Machine
+Learning Research, 13(1), 2871–2902.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.reduction.MutualProximity.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">method: 'str' = 'normal'</em>, <em class="sig-param">verbose: 'int' = 0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/reduction/mutual_proximity.py#L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.reduction.MutualProximity.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.reduction.MutualProximity.__init__" title="skhubness.reduction.MutualProximity.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, method, verbose, \*\*kwargs)</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.reduction.MutualProximity.fit" title="skhubness.reduction.MutualProximity.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, neigh_dist, neigh_ind[, X, …])</p></td>
+<td><p>Fit the model using neigh_dist and neigh_ind as training data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.reduction.MutualProximity.fit_transform" title="skhubness.reduction.MutualProximity.fit_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code></a>(self, neigh_dist, neigh_ind, X)</p></td>
+<td><p>Equivalent to call .fit().transform()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.reduction.MutualProximity.transform" title="skhubness.reduction.MutualProximity.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(self, neigh_dist, neigh_ind[, X, …])</p></td>
+<td><p>Transform distance between test and training data with Mutual Proximity.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.reduction.MutualProximity.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">neigh_dist</em>, <em class="sig-param">neigh_ind</em>, <em class="sig-param">X=None</em>, <em class="sig-param">assume_sorted=None</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; 'MutualProximity'<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/reduction/mutual_proximity.py#L41"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.reduction.MutualProximity.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the model using neigh_dist and neigh_ind as training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>neigh_dist: np.ndarray, shape (n_samples, n_neighbors)</strong></dt><dd><p>Distance matrix of training objects (rows) against their
+individual k nearest neighbors (colums).</p>
+</dd>
+<dt><strong>neigh_ind: np.ndarray, shape (n_samples, n_neighbors)</strong></dt><dd><p>Neighbor indices corresponding to the values in neigh_dist.</p>
+</dd>
+<dt><strong>X: ignored</strong></dt><dd></dd>
+<dt><strong>assume_sorted: ignored</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.reduction.MutualProximity.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">neigh_dist</em>, <em class="sig-param">neigh_ind</em>, <em class="sig-param">X</em>, <em class="sig-param">assume_sorted=True</em>, <em class="sig-param">return_distance=True</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/reduction/base.py#L22"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.reduction.MutualProximity.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equivalent to call .fit().transform()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.reduction.MutualProximity.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">neigh_dist</em>, <em class="sig-param">neigh_ind</em>, <em class="sig-param">X=None</em>, <em class="sig-param">assume_sorted=None</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/reduction/mutual_proximity.py#L78"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.reduction.MutualProximity.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform distance between test and training data with Mutual Proximity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>neigh_dist: np.ndarray</strong></dt><dd><p>Distance matrix of test objects (rows) against their individual
+k nearest neighbors among the training data (columns).</p>
+</dd>
+<dt><strong>neigh_ind: np.ndarray</strong></dt><dd><p>Neighbor indices corresponding to the values in neigh_dist</p>
+</dd>
+<dt><strong>X: ignored</strong></dt><dd></dd>
+<dt><strong>assume_sorted: ignored</strong></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>hub_reduced_dist, neigh_ind</dt><dd><p>Mutual Proximity distances, and corresponding neighbor indices</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The returned distances are NOT sorted! If you use this class directly,
+you will need to sort the returned matrices according to hub_reduced_dist.
+Classes from <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code> do this automatically.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.reduction.LocalScaling.html" class="btn btn-neutral float-right" title="skhubness.reduction.LocalScaling">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.NeighborhoodComponentsAnalysis.html" class="btn btn-neutral" title="skhubness.neighbors.NeighborhoodComponentsAnalysis"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

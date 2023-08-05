@@ -1,0 +1,442 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.analysis API &mdash; scikit-hubness 0.21a1 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21a1 documentation" href="../index.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-analysis-api">
+<h1>skhubness.analysis API<a class="headerlink" href="#skhubness-analysis-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-skhubness.analysis">
+<span id="skhubness-analysis-package"></span><h2>skhubness.analysis Package<a class="headerlink" href="#module-skhubness.analysis" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#module-skhubness.analysis" title="skhubness.analysis"><code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a> package provides methods for measuring hubness.</p>
+<dl class="class">
+<dt id="skhubness.analysis.Hubness">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.analysis.</code><code class="sig-name descname">Hubness</code><span class="sig-paren">(</span><em class="sig-param">k: int = 10</em>, <em class="sig-param">hub_size: float = 2.0</em>, <em class="sig-param">metric='euclidean'</em>, <em class="sig-param">k_neighbors: bool = False</em>, <em class="sig-param">k_occurrence: bool = False</em>, <em class="sig-param">verbose: int = 0</em>, <em class="sig-param">n_jobs: int = 1</em>, <em class="sig-param">random_state=None</em>, <em class="sig-param">shuffle_equal: bool = True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L27"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubness characteristics of data set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k</strong><span class="classifier">int</span></dt><dd><p>Neighborhood size</p>
+</dd>
+<dt><strong>hub_size</strong><span class="classifier">float</span></dt><dd><p>Hubs are defined as objects with k-occurrence &gt; hub_size * k.</p>
+</dd>
+<dt><strong>metric</strong><span class="classifier">string, one of [‘euclidean’, ‘cosine’, ‘precomputed’]</span></dt><dd><p>Metric to use for distance computation. Currently, only
+Euclidean, cosine, and precomputed distances are supported.</p>
+</dd>
+<dt><strong>k_neighbors</strong><span class="classifier">bool</span></dt><dd><p>Whether to save the k-neighbor lists. Requires O(n_test * k) memory.</p>
+</dd>
+<dt><strong>k_occurrence</strong><span class="classifier">bool</span></dt><dd><p>Whether to save the k-occurrence. Requires O(n_test) memory.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, optional</span></dt><dd><p>CURRENTLY IGNORED.
+If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p>
+</dd>
+<dt><strong>shuffle_equal</strong><span class="classifier">bool, optional</span></dt><dd><p>If true and metric=’precomputed’, shuffle neighbors with identical distances
+to avoid artifact hubness.
+NOTE: This is especially useful for secondary distance measures
+with a finite number of possible values, e.g. SNN or MP empiric.</p>
+</dd>
+<dt><strong>n_jobs</strong><span class="classifier">int, optional</span></dt><dd><p>CURRENTLY IGNORED.
+Number of processes for parallel computations.
+- <cite>1</cite>: Don’t use multiprocessing.
+- <cite>-1</cite>: Use all CPUs</p>
+</dd>
+<dt><strong>verbose</strong><span class="classifier">int, optional</span></dt><dd><p>Level of output messages</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="ra56b19eecc1a-1"><span class="brackets"><a class="fn-backref" href="#id3">Ra56b19eecc1a-1</a></span></dt>
+<dd><p><cite>Radovanović, M.; Nanopoulos, A. &amp; Ivanovic, M.
+Hubs in space: Popular nearest neighbors in high-dimensional data.
+Journal of Machine Learning Research, 2010, 11, 2487-2531</cite></p>
+</dd>
+<dt class="label" id="ra56b19eecc1a-2"><span class="brackets"><a class="fn-backref" href="#id4">Ra56b19eecc1a-2</a></span></dt>
+<dd><p><cite>Feldbauer, R.; Leodolter, M.; Plant, C. &amp; Flexer, A.
+Fast approximate hubness reduction for large high-dimensional data.
+IEEE International Conference of Big Knowledge (2018).</cite></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_skewness_</strong><span class="classifier">float</span></dt><dd><p>Hubness, measured as skewness of k-occurrence histogram <a class="reference internal" href="#ra56b19eecc1a-1" id="id3"><span>[Ra56b19eecc1a-1]</span></a></p>
+</dd>
+<dt><strong>k_skewness_truncnom</strong><span class="classifier">float</span></dt><dd><p>Hubness, measured as skewness of truncated normal distribution
+fitted with k-occurrence histogram</p>
+</dd>
+<dt><strong>atkinson_index_</strong><span class="classifier">float</span></dt><dd><p>Hubness, measured as the Atkinson index of k-occurrence distribution</p>
+</dd>
+<dt><strong>gini_index_</strong><span class="classifier">float</span></dt><dd><p>Hubness, measured as the Gini index of k-occurrence distribution</p>
+</dd>
+<dt><strong>robinhood_index_</strong><span class="classifier">float</span></dt><dd><p>Hubness, measured as Robin Hood index of k-occurrence distribution <a class="reference internal" href="#ra56b19eecc1a-2" id="id4"><span>[Ra56b19eecc1a-2]</span></a></p>
+</dd>
+<dt><strong>antihubs_</strong><span class="classifier">int</span></dt><dd><p>Indices to antihubs</p>
+</dd>
+<dt><strong>antihub_occurrence_</strong><span class="classifier">float</span></dt><dd><p>Proportion of antihubs in data set</p>
+</dd>
+<dt><strong>hubs_</strong><span class="classifier">int</span></dt><dd><p>Indices to hubs</p>
+</dd>
+<dt><strong>hub_occurrence_</strong><span class="classifier">float</span></dt><dd><p>Proportion of k-nearest neighbor slots occupied by hubs</p>
+</dd>
+<dt><strong>groupie_ratio_</strong><span class="classifier">float</span></dt><dd><p>Proportion of objects with the largest hub in their neighborhood</p>
+</dd>
+<dt><strong>k_occurrence_</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse neighbor count for each object</p>
+</dd>
+<dt><strong>k_neighbors_</strong><span class="classifier">ndarray</span></dt><dd><p>Indices to k-nearest neighbors for each object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.antihub_occurrence">
+<em class="property">static </em><code class="sig-name descname">antihub_occurrence</code><span class="sig-paren">(</span><em class="sig-param">k_occurrence: numpy.ndarray) -&gt; (&lt;built-in function array&gt;</em>, <em class="sig-param">&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L339"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.antihub_occurrence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proportion of antihubs in data set.</p>
+<p>Antihubs are objects that are never among the nearest neighbors
+of other objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_occurrence</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse nearest neighbor count for each object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.atkinson_index">
+<em class="property">static </em><code class="sig-name descname">atkinson_index</code><span class="sig-paren">(</span><em class="sig-param">k_occurrence: numpy.ndarray</em>, <em class="sig-param">eps: float = 0.5</em><span class="sig-paren">)</span> &#x2192; float<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L322"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.atkinson_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubness measure; Atkinson index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_occurrence</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse nearest neighbor count for each object.</p>
+</dd>
+<dt><strong>eps</strong><span class="classifier">float, default = 0.5</span></dt><dd><p>‘Income’ weight. Turns the index into a normative measure.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.estimate">
+<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X: numpy.ndarray</em>, <em class="sig-param">Y: numpy.ndarray = None</em>, <em class="sig-param">has_self_distances: bool = False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L374"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.estimate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate hubness in a data set.</p>
+<p>Hubness is estimated from the distances between all objects in X to all objects in Y.
+If Y is None, all-against-all distances between the objects in X are used.
+If self.metric == ‘precomputed’, X must be a distance matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">ndarray, shape (n_query, n_features) or (n_query, n_indexed)</span></dt><dd><p>Array of query vectors, or distance, if self.metric == ‘precomputed’</p>
+</dd>
+<dt><strong>Y</strong><span class="classifier">ndarray, shape (n_indexed, n_features) or None</span></dt><dd><p>Array of indexed vectors. If None, calculate distance between all pairs of
+objects in X.</p>
+</dd>
+<dt><strong>has_self_distances</strong><span class="classifier">bool, default = False</span></dt><dd><p>Define, whether a precomputed distance matrix contains self distances,
+which need to be excluded.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">Hubness</span></dt><dd><p>An instance of class Hubness is returned. Hubness indices are
+provided as attributes (e.g. <code class="xref py py-func docutils literal notranslate"><span class="pre">robinhood_index_()</span></code>).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.gini_index">
+<em class="property">static </em><code class="sig-name descname">gini_index</code><span class="sig-paren">(</span><em class="sig-param">k_occurrence: numpy.ndarray</em>, <em class="sig-param">limiting='memory'</em><span class="sig-paren">)</span> &#x2192; float<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L266"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.gini_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubness measure; Gini index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_occurrence</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse nearest neighbor count for each object.</p>
+</dd>
+<dt><strong>limiting</strong><span class="classifier">‘memory’ or ‘cpu’</span></dt><dd><p>If ‘cpu’, use fast implementation with high memory usage,
+if ‘memory’, use slighly slower, but memory-efficient implementation,
+otherwise use naive implementation (slow, low memory usage)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.hub_occurrence">
+<em class="property">static </em><code class="sig-name descname">hub_occurrence</code><span class="sig-paren">(</span><em class="sig-param">k: int</em>, <em class="sig-param">k_occurrence: numpy.ndarray</em>, <em class="sig-param">n_test: int</em>, <em class="sig-param">hub_size: float = 2</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L355"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.hub_occurrence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proportion of nearest neighbor slots occupied by hubs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k</strong><span class="classifier">int</span></dt><dd><p>Specifies the number of nearest neighbors</p>
+</dd>
+<dt><strong>k_occurrence</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse nearest neighbor count for each object.</p>
+</dd>
+<dt><strong>n_test</strong><span class="classifier">int</span></dt><dd><p>Number of queries (or objects in a test set)</p>
+</dd>
+<dt><strong>hub_size</strong><span class="classifier">float</span></dt><dd><p>Factor to determine hubs</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.robinhood_index">
+<em class="property">static </em><code class="sig-name descname">robinhood_index</code><span class="sig-paren">(</span><em class="sig-param">k_occurrence: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; float<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L295"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.robinhood_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubness measure; Robin hood/Hoover/Schutz index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_occurrence</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse nearest neighbor count for each object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The Robin Hood index was proposed in <a class="reference internal" href="#r6e1a46d4491a-1" id="id5">[1]</a> and is especially suited
+for hubness estimation in large data sets. Additionally, it offers
+straight-forward interpretability by answering the question:
+What share of k-occurrence must be redistributed, so that all objects
+are equally often nearest neighbors to others?</p>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="r6e1a46d4491a-1"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dd><p><cite>Feldbauer, R.; Leodolter, M.; Plant, C. &amp; Flexer, A.
+Fast approximate hubness reduction for large high-dimensional data.
+IEEE International Conference of Big Knowledge (2018).</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.skewness_truncnorm">
+<em class="property">static </em><code class="sig-name descname">skewness_truncnorm</code><span class="sig-paren">(</span><em class="sig-param">k_occurrence: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; float<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/3e17387/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L245"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.skewness_truncnorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubness measure; corrected for non-negativity of k-occurrence.</p>
+<p>Hubness as skewness of truncated normal distribution
+estimated from k-occurrence histogram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_occurrence</strong><span class="classifier">ndarray</span></dt><dd><p>Reverse nearest neighbor count for each object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.analysis.Hubness" title="skhubness.analysis.Hubness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Hubness</span></code></a>([k, hub_size, metric, k_neighbors, …])</p></td>
+<td><p>Hubness characteristics of data set.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+digraph inheritance511f505042 {
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;Hubness&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Hubness characteristics of data set.&quot;];
+}
+</div>
+</div>
+</div>
+
+
+	    </div>
+            <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21a1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

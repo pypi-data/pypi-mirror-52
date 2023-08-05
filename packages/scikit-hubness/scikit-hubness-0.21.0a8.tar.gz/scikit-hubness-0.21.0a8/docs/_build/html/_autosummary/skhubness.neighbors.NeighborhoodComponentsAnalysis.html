@@ -1,0 +1,468 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.NeighborhoodComponentsAnalysis &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.reduction.MutualProximity" href="skhubness.reduction.MutualProximity.html"/>
+        <link rel="prev" title="skhubness.neighbors.LocalOutlierFactor" href="skhubness.neighbors.LocalOutlierFactor.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-neighborhoodcomponentsanalysis">
+<h1>skhubness.neighbors.NeighborhoodComponentsAnalysis<a class="headerlink" href="#skhubness-neighbors-neighborhoodcomponentsanalysis" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">NeighborhoodComponentsAnalysis</code><span class="sig-paren">(</span><em class="sig-param">n_components=None</em>, <em class="sig-param">init='auto'</em>, <em class="sig-param">warm_start=False</em>, <em class="sig-param">max_iter=50</em>, <em class="sig-param">tol=1e-05</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">verbose=0</em>, <em class="sig-param">random_state=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nca.py#L29"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Neighborhood Components Analysis</p>
+<p>Neighborhood Component Analysis (NCA) is a machine learning algorithm for
+metric learning. It learns a linear transformation in a supervised fashion
+to improve the classification accuracy of a stochastic nearest neighbors
+rule in the transformed space.</p>
+<p>Read more in the <span class="xref std std-ref">User Guide</span>.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>n_components</strong><span class="classifier">int, optional (default=None)</span></dt><dd><p>Preferred dimensionality of the projected space.
+If None it will be set to <code class="docutils literal notranslate"><span class="pre">n_features</span></code>.</p>
+</dd>
+<dt><strong>init</strong><span class="classifier">string or numpy array, optional (default=’auto’)</span></dt><dd><p>Initialization of the linear transformation. Possible options are
+‘auto’, ‘pca’, ‘lda’, ‘identity’, ‘random’, and a numpy array of shape
+(n_features_a, n_features_b).</p>
+<dl class="simple">
+<dt>‘auto’</dt><dd><p>Depending on <code class="docutils literal notranslate"><span class="pre">n_components</span></code>, the most reasonable initialization
+will be chosen. If <code class="docutils literal notranslate"><span class="pre">n_components</span> <span class="pre">&lt;=</span> <span class="pre">n_classes</span></code> we use ‘lda’, as
+it uses labels information. If not, but
+<code class="docutils literal notranslate"><span class="pre">n_components</span> <span class="pre">&lt;</span> <span class="pre">min(n_features,</span> <span class="pre">n_samples)</span></code>, we use ‘pca’, as
+it projects data in meaningful directions (those of higher
+variance). Otherwise, we just use ‘identity’.</p>
+</dd>
+<dt>‘pca’</dt><dd><p><code class="docutils literal notranslate"><span class="pre">n_components</span></code> principal components of the inputs passed
+to <a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> will be used to initialize the transformation.
+(See <cite>decomposition.PCA</cite>)</p>
+</dd>
+<dt>‘lda’</dt><dd><p><code class="docutils literal notranslate"><span class="pre">min(n_components,</span> <span class="pre">n_classes)</span></code> most discriminative
+components of the inputs passed to <a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> will be used to
+initialize the transformation. (If <code class="docutils literal notranslate"><span class="pre">n_components</span> <span class="pre">&gt;</span> <span class="pre">n_classes</span></code>,
+the rest of the components will be zero.) (See
+<cite>discriminant_analysis.LinearDiscriminantAnalysis</cite>)</p>
+</dd>
+<dt>‘identity’</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">n_components</span></code> is strictly smaller than the
+dimensionality of the inputs passed to <a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a>, the identity
+matrix will be truncated to the first <code class="docutils literal notranslate"><span class="pre">n_components</span></code> rows.</p>
+</dd>
+<dt>‘random’</dt><dd><p>The initial transformation will be a random array of shape
+<cite>(n_components, n_features)</cite>. Each value is sampled from the
+standard normal distribution.</p>
+</dd>
+<dt>numpy array</dt><dd><p>n_features_b must match the dimensionality of the inputs passed to
+<a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> and n_features_a must be less than or equal to that.
+If <code class="docutils literal notranslate"><span class="pre">n_components</span></code> is not None, n_features_a must match it.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>warm_start</strong><span class="classifier">bool, optional, (default=False)</span></dt><dd><p>If True and <a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> has been called before, the solution of the
+previous call to <a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> is used as the initial linear
+transformation (<code class="docutils literal notranslate"><span class="pre">n_components</span></code> and <code class="docutils literal notranslate"><span class="pre">init</span></code> will be ignored).</p>
+</dd>
+<dt><strong>max_iter</strong><span class="classifier">int, optional (default=50)</span></dt><dd><p>Maximum number of iterations in the optimization.</p>
+</dd>
+<dt><strong>tol</strong><span class="classifier">float, optional (default=1e-5)</span></dt><dd><p>Convergence tolerance for the optimization.</p>
+</dd>
+<dt><strong>callback</strong><span class="classifier">callable, optional (default=None)</span></dt><dd><p>If not None, this function is called after every iteration of the
+optimizer, taking as arguments the current solution (flattened
+transformation matrix) and the number of iterations. This might be
+useful in case one wants to examine or store the transformation
+found after each iteration.</p>
+</dd>
+<dt><strong>verbose</strong><span class="classifier">int, optional (default=0)</span></dt><dd><p>If 0, no progress messages will be printed.
+If 1, progress messages will be printed to stdout.
+If &gt; 1, progress messages will be printed and the <code class="docutils literal notranslate"><span class="pre">disp</span></code>
+parameter of <code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.optimize.minimize()</span></code> will be set to
+<code class="docutils literal notranslate"><span class="pre">verbose</span> <span class="pre">-</span> <span class="pre">2</span></code>.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int or numpy.RandomState or None, optional (default=None)</span></dt><dd><p>A pseudo random number generator object or a seed for it if int. If
+<code class="docutils literal notranslate"><span class="pre">init='random'</span></code>, <code class="docutils literal notranslate"><span class="pre">random_state</span></code> is used to initialize the random
+transformation. If <code class="docutils literal notranslate"><span class="pre">init='pca'</span></code>, <code class="docutils literal notranslate"><span class="pre">random_state</span></code> is passed as an
+argument to PCA when initializing the transformation.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="r750cac44dbd5-1"><span class="brackets">R750cac44dbd5-1</span></dt>
+<dd><p>J. Goldberger, G. Hinton, S. Roweis, R. Salakhutdinov.
+“Neighbourhood Components Analysis”. Advances in Neural Information
+Processing Systems. 17, 513-520, 2005.
+<a class="reference external" href="http://www.cs.nyu.edu/~roweis/papers/ncanips.pdf">http://www.cs.nyu.edu/~roweis/papers/ncanips.pdf</a></p>
+</dd>
+<dt class="label" id="r750cac44dbd5-2"><span class="brackets">R750cac44dbd5-2</span></dt>
+<dd><p>Wikipedia entry on Neighborhood Components Analysis
+<a class="reference external" href="https://en.wikipedia.org/wiki/Neighbourhood_components_analysis">https://en.wikipedia.org/wiki/Neighbourhood_components_analysis</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.neighbors.nca</span> <span class="k">import</span> <span class="n">NeighborhoodComponentsAnalysis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+<span class="gp">... </span><span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nca</span> <span class="o">=</span> <span class="n">NeighborhoodComponentsAnalysis</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">NeighborhoodComponentsAnalysis(...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">KNeighborsClassifier(...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">0.933333...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">nca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> <span class="n">y_train</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">KNeighborsClassifier(...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">nca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="n">y_test</span><span class="p">))</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">0.961904...</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>components_</strong><span class="classifier">array, shape (n_components, n_features)</span></dt><dd><p>The linear transformation learned during fitting.</p>
+</dd>
+<dt><strong>n_iter_</strong><span class="classifier">int</span></dt><dd><p>Counts the number of iterations performed by the optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">n_components=None</em>, <em class="sig-param">init='auto'</em>, <em class="sig-param">warm_start=False</em>, <em class="sig-param">max_iter=50</em>, <em class="sig-param">tol=1e-05</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">verbose=0</em>, <em class="sig-param">random_state=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nca.py#L158"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.__init__" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, n_components, init, …])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, X, y)</p></td>
+<td><p>Fit the model according to the given training data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit_transform" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code></a>(self, X[, y])</p></td>
+<td><p>Fit to data, then transform it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.get_params" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>(self[, deep])</p></td>
+<td><p>Get parameters for this estimator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.set_params" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(self, \*\*params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.transform" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(self, X)</p></td>
+<td><p>Applies the learned transformation to the given data.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nca.py#L170"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the model according to the given training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>The training samples.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape (n_samples,)</span></dt><dd><p>The corresponding training labels.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>returns a trained NeighborhoodComponentsAnalysis model.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y=None</em>, <em class="sig-param">**fit_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L529"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit to data, then transform it.</p>
+<p>Fits transformer to X and y with optional parameters fit_params
+and returns a transformed version of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">numpy array of shape [n_samples, n_features]</span></dt><dd><p>Training set.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">numpy array of shape [n_samples]</span></dt><dd><p>Target values.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>X_new</strong><span class="classifier">numpy array of shape [n_samples, n_features_new]</span></dt><dd><p>Transformed array.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>deep</strong><span class="classifier">boolean, optional</span></dt><dd><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt><dd><p>Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis.set_params">
+<code class="sig-name descname">set_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.NeighborhoodComponentsAnalysis.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/nca.py#L238"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the learned transformation to the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Data samples.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>X_embedded: array, shape (n_samples, n_components)</dt><dd><p>The data samples transformed.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>NotFittedError</dt><dd><p>If <a class="reference internal" href="#skhubness.neighbors.NeighborhoodComponentsAnalysis.fit" title="skhubness.neighbors.NeighborhoodComponentsAnalysis.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> has not been called before.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.reduction.MutualProximity.html" class="btn btn-neutral float-right" title="skhubness.reduction.MutualProximity">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.LocalOutlierFactor.html" class="btn btn-neutral" title="skhubness.neighbors.LocalOutlierFactor"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

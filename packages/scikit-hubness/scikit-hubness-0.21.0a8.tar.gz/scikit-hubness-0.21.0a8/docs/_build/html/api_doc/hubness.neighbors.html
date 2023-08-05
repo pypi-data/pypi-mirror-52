@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>hubness.neighbors API &#8212; hubness 0.21a1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="hubness-neighbors-api">
+<h1>hubness.neighbors API<a class="headerlink" href="#hubness-neighbors-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-hubness.neighbors">
+<span id="hubness-neighbors-package"></span><h2>hubness.neighbors Package<a class="headerlink" href="#module-hubness.neighbors" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#module-hubness.neighbors" title="hubness.neighbors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hubness.neighbors</span></code></a> module implements the (hubness reduced) k-nearest neighbors algorithm.</p>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/hubness.neighbors.kneighbors_graph.html#hubness.neighbors.kneighbors_graph" title="hubness.neighbors.kneighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kneighbors_graph</span></code></a>(X, n_neighbors[, mode, …])</p></td>
+<td><p>Computes the (weighted) graph of k-Neighbors for points in X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/hubness.neighbors.radius_neighbors_graph.html#hubness.neighbors.radius_neighbors_graph" title="hubness.neighbors.radius_neighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radius_neighbors_graph</span></code></a>(X, radius[, mode, …])</p></td>
+<td><p>Computes the (weighted) graph of Neighbors for points in X</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">BallTree</span></code></p></td>
+<td><p>BallTree for fast generalized N-point problems</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistanceMetric</span></code></p></td>
+<td><p>DistanceMetric class</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">KDTree</span></code></p></td>
+<td><p>KDTree for fast generalized N-point problems</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/hubness.neighbors.HNSW.html#hubness.neighbors.HNSW" title="hubness.neighbors.HNSW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HNSW</span></code></a>([n_candidates, metric, method, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/hubness.neighbors.KNeighborsClassifier.html#hubness.neighbors.KNeighborsClassifier" title="hubness.neighbors.KNeighborsClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KNeighborsClassifier</span></code></a>([n_neighbors, weights, …])</p></td>
+<td><p>Classifier implementing the k-nearest neighbors vote.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/hubness.neighbors.KNeighborsRegressor.html#hubness.neighbors.KNeighborsRegressor" title="hubness.neighbors.KNeighborsRegressor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KNeighborsRegressor</span></code></a>([n_neighbors, weights, …])</p></td>
+<td><p>Regression based on k-nearest neighbors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/hubness.neighbors.LSH.html#hubness.neighbors.LSH" title="hubness.neighbors.LSH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LSH</span></code></a>([n_candidates, radius, metric, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">NearestCentroid</span></code>([metric, shrink_threshold])</p></td>
+<td><p>Nearest centroid classifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/hubness.neighbors.NearestNeighbors.html#hubness.neighbors.NearestNeighbors" title="hubness.neighbors.NearestNeighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NearestNeighbors</span></code></a>([n_neighbors, radius, …])</p></td>
+<td><p>Unsupervised learner for implementing neighbor searches.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/hubness.neighbors.RadiusNeighborsClassifier.html#hubness.neighbors.RadiusNeighborsClassifier" title="hubness.neighbors.RadiusNeighborsClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RadiusNeighborsClassifier</span></code></a>([radius, weights, …])</p></td>
+<td><p>Classifier implementing a vote among neighbors within a given radius Read more in the <span class="xref std std-ref">User Guide</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/hubness.neighbors.RadiusNeighborsRegressor.html#hubness.neighbors.RadiusNeighborsRegressor" title="hubness.neighbors.RadiusNeighborsRegressor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RadiusNeighborsRegressor</span></code></a>([radius, weights, …])</p></td>
+<td><p>Regression based on neighbors within a fixed radius.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">KernelDensity</span></code>([bandwidth, algorithm, …])</p></td>
+<td><p>Kernel Density Estimation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/hubness.neighbors.LocalOutlierFactor.html#hubness.neighbors.LocalOutlierFactor" title="hubness.neighbors.LocalOutlierFactor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalOutlierFactor</span></code></a>([n_neighbors, algorithm, …])</p></td>
+<td><p>Unsupervised Outlier Detection using Local Outlier Factor (LOF)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">NeighborhoodComponentsAnalysis</span></code>([…])</p></td>
+<td><p>Neighborhood Components Analysis</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h3>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h3>
+digraph inheritance1db0dba9d5 {
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;ABC&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
+  &quot;ApproximateNearestNeighbor&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Abstract base class for approximate nearest neighbor search methods.&quot;];
+  &quot;ABC&quot; -&gt; &quot;ApproximateNearestNeighbor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;BaseEstimator&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Base class for all estimators in scikit-learn&quot;];
+  &quot;ClassifierMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin class for all classifiers in scikit-learn.&quot;];
+  &quot;HNSW&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;ApproximateNearestNeighbor&quot; -&gt; &quot;HNSW&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsClassifier&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Classifier implementing the k-nearest neighbors vote.&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;KNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsMixin&quot; -&gt; &quot;KNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;SupervisedIntegerMixin&quot; -&gt; &quot;KNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;ClassifierMixin&quot; -&gt; &quot;KNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin for k-neighbors searches.&quot;];
+  &quot;KNeighborsMixin&quot; -&gt; &quot;KNeighborsMixin&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin for k-neighbors searches&quot;];
+  &quot;KNeighborsRegressor&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Regression based on k-nearest neighbors.&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;KNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsMixin&quot; -&gt; &quot;KNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;SupervisedFloatMixin&quot; -&gt; &quot;KNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RegressorMixin&quot; -&gt; &quot;KNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;LSH&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;ApproximateNearestNeighbor&quot; -&gt; &quot;LSH&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;LocalOutlierFactor&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Unsupervised Outlier Detection using Local Outlier Factor (LOF)&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;LocalOutlierFactor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsMixin&quot; -&gt; &quot;LocalOutlierFactor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;UnsupervisedMixin&quot; -&gt; &quot;LocalOutlierFactor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;OutlierMixin&quot; -&gt; &quot;LocalOutlierFactor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;MultiOutputMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin to mark estimators that support multioutput.&quot;];
+  &quot;NearestNeighbors&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Unsupervised learner for implementing neighbor searches.&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;NearestNeighbors&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;KNeighborsMixin&quot; -&gt; &quot;NearestNeighbors&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RadiusNeighborsMixin&quot; -&gt; &quot;NearestNeighbors&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;UnsupervisedMixin&quot; -&gt; &quot;NearestNeighbors&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;NeighborsBase&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Base class for nearest neighbors estimators.&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;NeighborsBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;NeighborsBase&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Base class for nearest neighbors estimators.&quot;];
+  &quot;BaseEstimator&quot; -&gt; &quot;NeighborsBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;MultiOutputMixin&quot; -&gt; &quot;NeighborsBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;OutlierMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin class for all outlier detection estimators in scikit-learn.&quot;];
+  &quot;RadiusNeighborsClassifier&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Classifier implementing a vote among neighbors within a given radius&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;RadiusNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RadiusNeighborsMixin&quot; -&gt; &quot;RadiusNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;SupervisedIntegerMixin&quot; -&gt; &quot;RadiusNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;ClassifierMixin&quot; -&gt; &quot;RadiusNeighborsClassifier&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RadiusNeighborsMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin for radius-based neighbors searches&quot;];
+  &quot;RadiusNeighborsMixin&quot; -&gt; &quot;RadiusNeighborsMixin&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RadiusNeighborsMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin for radius-based neighbors searches&quot;];
+  &quot;RadiusNeighborsRegressor&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Regression based on neighbors within a fixed radius.&quot;];
+  &quot;NeighborsBase&quot; -&gt; &quot;RadiusNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RadiusNeighborsMixin&quot; -&gt; &quot;RadiusNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;SupervisedFloatMixin&quot; -&gt; &quot;RadiusNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RegressorMixin&quot; -&gt; &quot;RadiusNeighborsRegressor&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RegressorMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;,tooltip=&quot;Mixin class for all regression estimators in scikit-learn.&quot;];
+  &quot;SupervisedFloatMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;SupervisedIntegerMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;UnsupervisedMixin&quot; [fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5)&quot;];
+}
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">hubness</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_hubness.html"><cite>hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Roman Feldbauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api_doc/hubness.neighbors.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

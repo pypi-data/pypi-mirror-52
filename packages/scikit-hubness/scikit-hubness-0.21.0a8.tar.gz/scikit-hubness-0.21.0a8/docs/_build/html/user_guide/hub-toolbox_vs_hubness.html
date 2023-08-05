@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>hubness: successor to the Hub-Toolbox &#8212; hubness 0.21a1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="hubness: high-dimensional data mining" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="hubness-successor-to-the-hub-toolbox">
+<h1><cite>hubness</cite>: successor to the Hub-Toolbox<a class="headerlink" href="#hubness-successor-to-the-hub-toolbox" title="Permalink to this headline">¶</a></h1>
+<p>The <cite>hubness</cite> package builds upon previous software: the Hub-Toolbox.
+The original <a class="reference external" href="https://github.com/OFAI/hub-toolbox-matlab">Hub-Toolbox</a>
+was written for Matlab, and released in parallel
+with the release of the first hubness reduction methods in
+<a class="reference external" href="http://www.jmlr.org/papers/v13/schnitzer12a.html">JMLR</a>.
+In essence, it comprises methods to reduce hubness in distance matrices.</p>
+<p>The <a class="reference external" href="https://github.com/OFAI/hub-toolbox-python3">Hub-Toolbox for Python3</a>
+is a port from Matlab to Python,
+which over the years got several extensions and additional functionality,
+such as more hubness reduction methods (Localized Centering, DisSimLocal, mp-dissim, etc.),
+approximate hubness reduction, and more.
+The software was developed by hubness researchers for hubness research.</p>
+<p>The new <cite>hubness</cite> package is rewritten from scratch with a different goal in mind:
+Providing easy-to-use neighborhood-based data mining methods (classification, regression, etc.)
+with transparent hubness reduction.
+Building upon scikit-learn’s <cite>neighbors</cite> package, we provide a drop-in replacement
+called <cite>hubness.neighbors</cite>, which offers all the functionality of <cite>sklearn.neighbors</cite>,
+but adds additional functionality (approximate nearest neighbor search, hubness reduction).</p>
+<p>This way, we think that machine learning researchers and practitioners
+(many of which will be fluent in scikit-learn)
+can quickly and effectively employ <cite>hubness</cite> in their existing workflows,
+and improve learning in their high-dimensional data.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">hubness</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><cite>hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation.html">API Documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter"><cite>hubness</cite>: high-dimensional data mining</a></li>
+      <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Roman Feldbauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/user_guide/hub-toolbox_vs_hubness.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

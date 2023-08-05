@@ -1,0 +1,302 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.radius_neighbors_graph &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.KernelDensity" href="skhubness.neighbors.KernelDensity.html"/>
+        <link rel="prev" title="skhubness.neighbors.kneighbors_graph" href="skhubness.neighbors.kneighbors_graph.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-radius-neighbors-graph">
+<h1>skhubness.neighbors.radius_neighbors_graph<a class="headerlink" href="#skhubness-neighbors-radius-neighbors-graph" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="skhubness.neighbors.radius_neighbors_graph">
+<code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">radius_neighbors_graph</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">radius</em>, <em class="sig-param">mode='connectivity'</em>, <em class="sig-param">algorithm: str = 'auto'</em>, <em class="sig-param">algorithm_params: dict = None</em>, <em class="sig-param">hubness: str = None</em>, <em class="sig-param">hubness_params: dict = None</em>, <em class="sig-param">metric='minkowski'</em>, <em class="sig-param">p=2</em>, <em class="sig-param">metric_params=None</em>, <em class="sig-param">include_self=False</em>, <em class="sig-param">n_jobs=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/graph.py#L160"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.radius_neighbors_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the (weighted) graph of Neighbors for points in X</p>
+<p>Neighborhoods are restricted the points at a distance lower than
+radius.</p>
+<p>Read more in the
+<a class="reference external" href="https://scikit-learn.org/stable/modules/neighbors.html#unsupervised-neighbors">scikit-learn User Guide</a></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>X: array-like or BallTree, shape = [n_samples, n_features]</strong></dt><dd><p>Sample data, in the form of a numpy array or a precomputed
+<a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a>.</p>
+</dd>
+<dt><strong>radius: float</strong></dt><dd><p>Radius of neighborhoods.</p>
+</dd>
+<dt><strong>mode: {‘connectivity’, ‘distance’}, optional</strong></dt><dd><p>Type of returned matrix: ‘connectivity’ will return the connectivity
+matrix with ones and zeros, and ‘distance’ will return the distances
+between neighbors according to the given metric.</p>
+</dd>
+<dt><strong>algorithm: {‘auto’, ‘hnsw’, ‘falconn_lsh’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional</strong></dt><dd><p>Algorithm used to compute the nearest neighbors:</p>
+<ul class="simple">
+<li><p>‘hnsw’ will use <a class="reference internal" href="skhubness.neighbors.HNSW.html#skhubness.neighbors.HNSW" title="skhubness.neighbors.HNSW"><code class="xref py py-class docutils literal notranslate"><span class="pre">HNSW</span></code></a></p></li>
+<li><p>‘falconn_lsh’ will use <a class="reference internal" href="skhubness.neighbors.FalconnLSH.html#skhubness.neighbors.FalconnLSH" title="skhubness.neighbors.FalconnLSH"><code class="xref py py-class docutils literal notranslate"><span class="pre">FalconnLSH</span></code></a></p></li>
+<li><p>‘ball_tree’ will use <a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a></p></li>
+<li><p>‘kd_tree’ will use <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a></p></li>
+<li><p>‘brute’ will use a brute-force search.</p></li>
+<li><p>‘auto’ will attempt to decide the most appropriate algorithm
+based on the values passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code> method.</p></li>
+</ul>
+<p>Note: fitting on sparse input will override the setting of
+this parameter, using brute force.</p>
+</dd>
+<dt><strong>algorithm_params: dict, optional</strong></dt><dd><p>Override default parameters of the NN algorithm.
+For example, with algorithm=’lsh’ and algorithm_params={n_candidates: 100}
+one hundred approximate neighbors are retrieved with LSH.
+If parameter hubness is set, the candidate neighbors are further reordered
+with hubness reduction.
+Finally, n_neighbors objects are used from the (optionally reordered) candidates.</p>
+</dd>
+<dt><strong>hubness: {‘mutual_proximity’, ‘local_scaling’, ‘dis_sim_local’, None}, optional</strong></dt><dd><p>Hubness reduction algorithm</p>
+<ul class="simple">
+<li><p>‘mutual_proximity’ or ‘mp’ will use :class:<a href="#id1"><span class="problematic" id="id2">`</span></a>MutualProximity’</p></li>
+<li><p>‘local_scaling’ or ‘ls’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">LocalScaling</span></code></p></li>
+<li><p>‘dis_sim_local’ or ‘dsl’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">DisSimLocal</span></code></p></li>
+</ul>
+<p>If None, no hubness reduction will be performed (=vanilla kNN).</p>
+</dd>
+<dt><strong>hubness_params: dict, optional</strong></dt><dd><p>Override default parameters of the selected hubness reduction algorithm.
+For example, with hubness=’mp’ and hubness_params={‘method’: ‘normal’}
+a mutual proximity variant is used, which models distance distributions
+with independent Gaussians.</p>
+</dd>
+<dt><strong>metric: string, default ‘minkowski’</strong></dt><dd><p>The distance metric used to calculate the neighbors within a
+given radius for each sample point. The DistanceMetric class
+gives a list of available metrics. The default distance is
+‘euclidean’ (‘minkowski’ metric with the param equal to 2.)</p>
+</dd>
+<dt><strong>p: int, default 2</strong></dt><dd><p>Power parameter for the Minkowski metric. When p = 1, this is
+equivalent to using manhattan_distance (l1), and euclidean_distance
+(l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.</p>
+</dd>
+<dt><strong>metric_params: dict, optional</strong></dt><dd><p>additional keyword arguments for the metric function.</p>
+</dd>
+<dt><strong>include_self: bool, default=False</strong></dt><dd><p>Whether or not to mark each sample as the first nearest neighbor to
+itself. If <cite>None</cite>, then True is used for mode=’connectivity’ and False
+for mode=’distance’ as this will preserve backwards compatibility.</p>
+</dd>
+<dt><strong>n_jobs: int or None, optional (default=None)</strong></dt><dd><p>The number of parallel jobs to run for neighbors search.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors. See
+<a class="reference external" href="https://scikit-learn.org/stable/glossary.html#term-n-jobs">Glossary</a>
+for more details.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>A: sparse matrix in CSR format, shape = [n_samples, n_samples]</dt><dd><p>A[i, j] is assigned the weight of edge that connects i to j.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="skhubness.neighbors.kneighbors_graph.html#skhubness.neighbors.kneighbors_graph" title="skhubness.neighbors.kneighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kneighbors_graph</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhubness.neighbors</span> <span class="k">import</span> <span class="n">radius_neighbors_graph</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">radius_neighbors_graph</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;connectivity&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">include_self</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="go">array([[1., 0., 1.],</span>
+<span class="go">       [0., 1., 0.],</span>
+<span class="go">       [1., 0., 1.]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.KernelDensity.html" class="btn btn-neutral float-right" title="skhubness.neighbors.KernelDensity">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.kneighbors_graph.html" class="btn btn-neutral" title="skhubness.neighbors.kneighbors_graph"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

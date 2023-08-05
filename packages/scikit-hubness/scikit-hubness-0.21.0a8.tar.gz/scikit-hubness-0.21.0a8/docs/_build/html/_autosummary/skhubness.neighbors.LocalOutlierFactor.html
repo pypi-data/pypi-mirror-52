@@ -1,0 +1,686 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.LocalOutlierFactor &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.NeighborhoodComponentsAnalysis" href="skhubness.neighbors.NeighborhoodComponentsAnalysis.html"/>
+        <link rel="prev" title="skhubness.neighbors.KernelDensity" href="skhubness.neighbors.KernelDensity.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-localoutlierfactor">
+<h1>skhubness.neighbors.LocalOutlierFactor<a class="headerlink" href="#skhubness-neighbors-localoutlierfactor" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.neighbors.LocalOutlierFactor">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">LocalOutlierFactor</code><span class="sig-paren">(</span><em class="sig-param">n_neighbors=20</em>, <em class="sig-param">algorithm: str = 'auto'</em>, <em class="sig-param">algorithm_params: Optional[dict] = None</em>, <em class="sig-param">hubness: Optional[str] = None</em>, <em class="sig-param">hubness_params: Optional[dict] = None</em>, <em class="sig-param">leaf_size=30</em>, <em class="sig-param">metric='minkowski'</em>, <em class="sig-param">p=2</em>, <em class="sig-param">metric_params=None</em>, <em class="sig-param">contamination='auto'</em>, <em class="sig-param">novelty=False</em>, <em class="sig-param">n_jobs=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/lof.py#L23"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsupervised Outlier Detection using Local Outlier Factor (LOF)</p>
+<p>The anomaly score of each sample is called Local Outlier Factor.
+It measures the local deviation of density of a given sample with
+respect to its neighbors.
+It is local in that the anomaly score depends on how isolated the object
+is with respect to the surrounding neighborhood.
+More precisely, locality is given by k-nearest neighbors, whose distance
+is used to estimate the local density.
+By comparing the local density of a sample to the local densities of
+its neighbors, one can identify samples that have a substantially lower
+density than their neighbors. These are considered outliers.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>n_neighbors</strong><span class="classifier">int, optional (default=20)</span></dt><dd><p>Number of neighbors to use by default for <a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors" title="skhubness.neighbors.LocalOutlierFactor.kneighbors"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kneighbors()</span></code></a> queries.
+If n_neighbors is larger than the number of samples provided,
+all samples will be used.</p>
+</dd>
+<dt><strong>algorithm</strong><span class="classifier">{‘auto’, ‘hnsw’, ‘lsh’, ‘falconn_lsh’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional</span></dt><dd><p>Algorithm used to compute the nearest neighbors:</p>
+<ul class="simple">
+<li><p>‘hnsw’ will use <a class="reference internal" href="skhubness.neighbors.HNSW.html#skhubness.neighbors.HNSW" title="skhubness.neighbors.HNSW"><code class="xref py py-class docutils literal notranslate"><span class="pre">HNSW</span></code></a></p></li>
+<li><p>‘lsh’ will use <a class="reference internal" href="skhubness.neighbors.PuffinnLSH.html#skhubness.neighbors.PuffinnLSH" title="skhubness.neighbors.PuffinnLSH"><code class="xref py py-class docutils literal notranslate"><span class="pre">PuffinnLSH</span></code></a></p></li>
+<li><p>‘falconn_lsh’ will use <a class="reference internal" href="skhubness.neighbors.FalconnLSH.html#skhubness.neighbors.FalconnLSH" title="skhubness.neighbors.FalconnLSH"><code class="xref py py-class docutils literal notranslate"><span class="pre">FalconnLSH</span></code></a></p></li>
+<li><p>‘ball_tree’ will use <a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a></p></li>
+<li><p>‘kd_tree’ will use <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a></p></li>
+<li><p>‘brute’ will use a brute-force search.</p></li>
+<li><p>‘auto’ will attempt to decide the most appropriate algorithm
+based on the values passed to <a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.fit" title="skhubness.neighbors.LocalOutlierFactor.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> method.</p></li>
+</ul>
+<p>Note: fitting on sparse input will override the setting of
+this parameter, using brute force.</p>
+</dd>
+<dt><strong>algorithm_params</strong><span class="classifier">dict, optional</span></dt><dd><p>Override default parameters of the NN algorithm.
+For example, with algorithm=’lsh’ and algorithm_params={n_candidates: 100}
+one hundred approximate neighbors are retrieved with LSH.
+If parameter hubness is set, the candidate neighbors are further reordered
+with hubness reduction.
+Finally, n_neighbors objects are used from the (optionally reordered) candidates.</p>
+</dd>
+<dt><strong>hubness</strong><span class="classifier">{‘mutual_proximity’, ‘local_scaling’, ‘dis_sim_local’, None}, optional</span></dt><dd><p>Hubness reduction algorithm</p>
+<ul class="simple">
+<li><p>‘mutual_proximity’ or ‘mp’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">MutualProximity</span></code></p></li>
+<li><p>‘local_scaling’ or ‘ls’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">LocalScaling</span></code></p></li>
+<li><p>‘dis_sim_local’ or ‘dsl’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">DisSimLocal</span></code></p></li>
+</ul>
+<p>If None, no hubness reduction will be performed (=vanilla kNN).</p>
+</dd>
+<dt><strong>hubness_params: dict, optional</strong></dt><dd><p>Override default parameters of the selected hubness reduction algorithm.
+For example, with hubness=’mp’ and hubness_params={‘method’: ‘normal’}
+a mutual proximity variant is used, which models distance distributions
+with independent Gaussians.</p>
+</dd>
+<dt><strong>leaf_size: int, optional (default=30)</strong></dt><dd><p>Leaf size passed to <a class="reference internal" href="skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></a> or <a class="reference internal" href="skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></a>. This can
+affect the speed of the construction and query, as well as the memory
+required to store the tree. The optimal value depends on the
+nature of the problem.</p>
+</dd>
+<dt><strong>metric: string or callable, default ‘minkowski’</strong></dt><dd><p>metric used for the distance computation. Any metric from scikit-learn
+or scipy.spatial.distance can be used.</p>
+<p>If ‘precomputed’, the training input X is expected to be a distance
+matrix.</p>
+<p>If metric is a callable function, it is called on each
+pair of instances (rows) and the resulting value recorded. The callable
+should take two arrays as input and return one value indicating the
+distance between them. This works for Scipy’s metrics, but is less
+efficient than passing the metric name as a string.</p>
+<p>Valid values for metric are:</p>
+<ul class="simple">
+<li><p>from scikit-learn: [‘cityblock’, ‘cosine’, ‘euclidean’, ‘l1’, ‘l2’,
+‘manhattan’]</p></li>
+<li><p>from scipy.spatial.distance: [‘braycurtis’, ‘canberra’, ‘chebyshev’,
+‘correlation’, ‘dice’, ‘hamming’, ‘jaccard’, ‘kulsinski’,
+‘mahalanobis’, ‘minkowski’, ‘rogerstanimoto’, ‘russellrao’,
+‘seuclidean’, ‘sokalmichener’, ‘sokalsneath’, ‘sqeuclidean’,
+‘yule’]</p></li>
+</ul>
+<p>See the documentation for scipy.spatial.distance for details on these
+metrics:
+<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/spatial.distance.html">https://docs.scipy.org/doc/scipy/reference/spatial.distance.html</a></p>
+</dd>
+<dt><strong>p: integer, optional (default=2)</strong></dt><dd><p>Parameter for the Minkowski metric from
+<code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise.pairwise_distances()</span></code>. When p = 1, this
+is equivalent to using manhattan_distance (l1), and euclidean_distance
+(l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.</p>
+</dd>
+<dt><strong>metric_params: dict, optional (default=None)</strong></dt><dd><p>Additional keyword arguments for the metric function.</p>
+</dd>
+<dt><strong>contamination: ‘auto’ or float, optional (default=’auto’)</strong></dt><dd><p>The amount of contamination of the data set, i.e. the proportion
+of outliers in the data set. When fitting this is used to define the
+threshold on the scores of the samples.</p>
+<ul class="simple">
+<li><p>if ‘auto’, the threshold is determined as in the
+original paper,</p></li>
+<li><p>if a float, the contamination should be in the range [0, 0.5].</p></li>
+</ul>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.22: </span>The default value of <code class="docutils literal notranslate"><span class="pre">contamination</span></code> changed from 0.1
+to <code class="docutils literal notranslate"><span class="pre">'auto'</span></code>.</p>
+</div>
+</dd>
+<dt><strong>novelty: boolean, default False</strong></dt><dd><p>By default, LocalOutlierFactor is only meant to be used for outlier
+detection (novelty=False). Set novelty to True if you want to use
+LocalOutlierFactor for novelty detection. In this case be aware that
+that you should only use predict, decision_function and score_samples
+on new unseen data and not on the training set.</p>
+</dd>
+<dt><strong>n_jobs: int or None, optional (default=None)</strong></dt><dd><p>The number of parallel jobs to run for neighbors search.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.
+See <a class="reference external" href="https://scikit-learn.org/stable/glossary.html#term-n-jobs/">Glossary</a> for more details.
+Affects only <a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors" title="skhubness.neighbors.LocalOutlierFactor.kneighbors"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kneighbors()</span></code></a> and <a class="reference internal" href="skhubness.neighbors.kneighbors_graph.html#skhubness.neighbors.kneighbors_graph" title="skhubness.neighbors.kneighbors_graph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kneighbors_graph()</span></code></a> methods.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="r7589c8045adf-1"><span class="brackets">R7589c8045adf-1</span></dt>
+<dd><p>Breunig, M. M., Kriegel, H. P., Ng, R. T., &amp; Sander, J. (2000, May).
+LOF: identifying density-based local outliers. In ACM sigmod record.</p>
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl>
+<dt><strong>negative_outlier_factor_: numpy array, shape (n_samples,)</strong></dt><dd><p>The opposite LOF of the training samples. The higher, the more normal.
+Inliers tend to have a LOF score close to 1 (<code class="docutils literal notranslate"><span class="pre">negative_outlier_factor_</span></code>
+close to -1), while outliers tend to have a larger LOF score.</p>
+<p>The local outlier factor (LOF) of a sample captures its
+supposed ‘degree of abnormality’.
+It is the average of the ratio of the local reachability density of
+a sample and those of its k-nearest neighbors.</p>
+</dd>
+<dt><strong>n_neighbors_: integer</strong></dt><dd><p>The actual number of neighbors used for <a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors" title="skhubness.neighbors.LocalOutlierFactor.kneighbors"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kneighbors()</span></code></a> queries.</p>
+</dd>
+<dt><strong>offset_: float</strong></dt><dd><p>Offset used to obtain binary labels from the raw scores.
+Observations having a negative_outlier_factor smaller than <cite>offset_</cite>
+are detected as abnormal.
+The offset is set to -1.5 (inliers score around -1), except when a
+contamination parameter different than “auto” is provided. In that
+case, the offset is defined in such a way we obtain the expected
+number of outliers in training.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">n_neighbors=20</em>, <em class="sig-param">algorithm: 'str' = 'auto'</em>, <em class="sig-param">algorithm_params: 'dict' = None</em>, <em class="sig-param">hubness: 'str' = None</em>, <em class="sig-param">hubness_params: 'dict' = None</em>, <em class="sig-param">leaf_size=30</em>, <em class="sig-param">metric='minkowski'</em>, <em class="sig-param">p=2</em>, <em class="sig-param">metric_params=None</em>, <em class="sig-param">contamination='auto'</em>, <em class="sig-param">novelty=False</em>, <em class="sig-param">n_jobs=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/lof.py#L183"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.__init__" title="skhubness.neighbors.LocalOutlierFactor.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, n_neighbors, leaf_size, …])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.fit" title="skhubness.neighbors.LocalOutlierFactor.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, X[, y])</p></td>
+<td><p>Fit the model using X as training data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.get_params" title="skhubness.neighbors.LocalOutlierFactor.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>(self[, deep])</p></td>
+<td><p>Get parameters for this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.kcandidates" title="skhubness.neighbors.LocalOutlierFactor.kcandidates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kcandidates</span></code></a>(self[, X, n_neighbors, …])</p></td>
+<td><p>Finds the K-neighbors of a point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors" title="skhubness.neighbors.LocalOutlierFactor.kneighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kneighbors</span></code></a>(self[, X, n_neighbors, …])</p></td>
+<td><p>TODO</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors_graph" title="skhubness.neighbors.LocalOutlierFactor.kneighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kneighbors_graph</span></code></a>(self[, X, n_neighbors, mode])</p></td>
+<td><p>Computes the (weighted) graph of k-Neighbors for points in X</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.set_params" title="skhubness.neighbors.LocalOutlierFactor.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(self, \*\*params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.decision_function" title="skhubness.neighbors.LocalOutlierFactor.decision_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decision_function</span></code></a></p></td>
+<td><p>Shifted opposite of the Local Outlier Factor of X.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.fit_predict" title="skhubness.neighbors.LocalOutlierFactor.fit_predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_predict</span></code></a></p></td>
+<td><p>“Fits the model to the training set X and returns the labels.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.predict" title="skhubness.neighbors.LocalOutlierFactor.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a></p></td>
+<td><p>Predict the labels (1 inlier, -1 outlier) of X according to LOF.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.LocalOutlierFactor.score_samples" title="skhubness.neighbors.LocalOutlierFactor.score_samples"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score_samples</span></code></a></p></td>
+<td><p>Opposite of the Local Outlier Factor of X.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.decision_function">
+<em class="property">property </em><code class="sig-name descname">decision_function</code><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.decision_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifted opposite of the Local Outlier Factor of X.</p>
+<p>Bigger is better, i.e. large values correspond to inliers.</p>
+<p>The shift offset allows a zero threshold for being an outlier.
+Only available for novelty detection (when novelty is set to True).
+The argument X is supposed to contain <em>new data</em>: if X contains a
+point from training, it considers the later in its own neighborhood.
+Also, the samples in X are not considered in the neighborhood of any
+point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: array-like, shape (n_samples, n_features)</strong></dt><dd><p>The query sample or samples to compute the Local Outlier Factor
+w.r.t. the training samples.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>shifted_opposite_lof_scores: array, shape (n_samples,)</dt><dd><p>The shifted opposite of the Local Outlier Factor of each input
+samples. The lower, the more abnormal. Negative scores represent
+outliers, positive scores represent inliers.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y=None</em><span class="sig-paren">)</span> &#x2192; 'LocalOutlierFactor'<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/lof.py#L254"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the model using X as training data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: {array-like, sparse matrix, BallTree, KDTree}</strong></dt><dd><p>Training data. If array or matrix, shape [n_samples, n_features],
+or [n_samples, n_samples] if metric=’precomputed’.</p>
+</dd>
+<dt><strong>y: Ignored</strong></dt><dd><p>not used, present for API consistency by convention.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self: object</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.fit_predict">
+<em class="property">property </em><code class="sig-name descname">fit_predict</code><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.fit_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Fits the model to the training set X and returns the labels.</p>
+<p>Label is 1 for an inlier and -1 for an outlier according to the LOF
+score and the contamination parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: array-like, shape (n_samples, n_features), default=None</strong></dt><dd><p>The query sample or samples to compute the Local Outlier Factor
+w.r.t. to the training samples.</p>
+</dd>
+<dt><strong>y: Ignored</strong></dt><dd><p>not used, present for API consistency by convention.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>is_inlier: array, shape (n_samples,)</dt><dd><p>Returns -1 for anomalies/outliers and 1 for inliers.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>deep</strong><span class="classifier">boolean, optional</span></dt><dd><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt><dd><p>Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.kcandidates">
+<code class="sig-name descname">kcandidates</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X=None</em>, <em class="sig-param">n_neighbors=None</em>, <em class="sig-param">return_distance=True</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/base.py#L428"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.kcandidates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the K-neighbors of a point.
+Returns indices of and distances to the neighbors of each point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape (n_query, n_features), or (n_query, n_indexed) if metric == ‘precomputed’</span></dt><dd><p>The query point or points.
+If not provided, neighbors of each indexed point are returned.
+In this case, the query point is not considered its own neighbor.</p>
+</dd>
+<dt><strong>n_neighbors</strong><span class="classifier">int</span></dt><dd><p>Number of neighbors to get (default is the value
+passed to the constructor).</p>
+</dd>
+<dt><strong>return_distance</strong><span class="classifier">boolean, optional. Defaults to True.</span></dt><dd><p>If False, distances will not be returned</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dist</strong><span class="classifier">array</span></dt><dd><p>Array representing the lengths to points, only present if
+return_distance=True</p>
+</dd>
+<dt><strong>ind</strong><span class="classifier">array</span></dt><dd><p>Indices of the nearest points in the population matrix.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>In the following example, we construct a NeighborsClassifier
+class from an array representing our data set and ask who’s
+the closest point to [1,1,1]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">samples</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhubness.neighbors</span> <span class="k">import</span> <span class="n">NearestNeighbors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">NearestNeighbors(algorithm=&#39;auto&#39;, leaf_size=30, ...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]))</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">(array([[0.5]]), array([[2]]))</span>
+</pre></div>
+</div>
+<p>As you can see, it returns [[0.5]], and [[2]], which means that the
+element is at distance 0.5 and is the third element of samples
+(indexes start at 0). You can also query for multiple points:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">array([[1],</span>
+<span class="go">       [2]]...)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.kneighbors">
+<code class="sig-name descname">kneighbors</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X=None</em>, <em class="sig-param">n_neighbors=None</em>, <em class="sig-param">return_distance=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/neighbors/base.py#L605"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.kneighbors_graph">
+<code class="sig-name descname">kneighbors_graph</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X=None</em>, <em class="sig-param">n_neighbors=None</em>, <em class="sig-param">mode='connectivity'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/neighbors/base.py#L494"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.kneighbors_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the (weighted) graph of k-Neighbors for points in X</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape (n_query, n_features),                 or (n_query, n_indexed) if metric == ‘precomputed’</span></dt><dd><p>The query point or points.
+If not provided, neighbors of each indexed point are returned.
+In this case, the query point is not considered its own neighbor.</p>
+</dd>
+<dt><strong>n_neighbors</strong><span class="classifier">int</span></dt><dd><p>Number of neighbors for each sample.
+(default is value passed to the constructor).</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">{‘connectivity’, ‘distance’}, optional</span></dt><dd><p>Type of returned matrix: ‘connectivity’ will return the
+connectivity matrix with ones and zeros, in ‘distance’ the
+edges are Euclidean distance between points.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>A</strong><span class="classifier">sparse matrix in CSR format, shape = [n_samples, n_samples_fit]</span></dt><dd><p>n_samples_fit is the number of samples in the fitted data
+A[i, j] is assigned the weight of edge that connects i to j.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="skhubness.neighbors.NearestNeighbors.html#skhubness.neighbors.NearestNeighbors.radius_neighbors_graph" title="skhubness.neighbors.NearestNeighbors.radius_neighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NearestNeighbors.radius_neighbors_graph</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">NearestNeighbors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1"># doctest: +ELLIPSIS</span>
+<span class="go">NearestNeighbors(algorithm=&#39;auto&#39;, leaf_size=30, ...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors_graph</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="go">array([[1., 0., 1.],</span>
+<span class="go">       [0., 1., 1.],</span>
+<span class="go">       [1., 0., 1.]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.predict">
+<em class="property">property </em><code class="sig-name descname">predict</code><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict the labels (1 inlier, -1 outlier) of X according to LOF.</p>
+<p>This method allows to generalize prediction to <em>new observations</em> (not
+in the training set). Only available for novelty detection (when
+novelty is set to True).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: array-like, shape (n_samples, n_features)</strong></dt><dd><p>The query sample or samples to compute the Local Outlier Factor
+w.r.t. to the training samples.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>is_inlier: array, shape (n_samples,)</dt><dd><p>Returns -1 for anomalies/outliers and +1 for inliers.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.score_samples">
+<em class="property">property </em><code class="sig-name descname">score_samples</code><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.score_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opposite of the Local Outlier Factor of X.</p>
+<p>It is the opposite as bigger is better, i.e. large values correspond
+to inliers.</p>
+<p>Only available for novelty detection (when novelty is set to True).
+The argument X is supposed to contain <em>new data</em>: if X contains a
+point from training, it considers the later in its own neighborhood.
+Also, the samples in X are not considered in the neighborhood of any
+point.
+The score_samples on training data is available by considering the
+the <code class="docutils literal notranslate"><span class="pre">negative_outlier_factor_</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: array-like, shape (n_samples, n_features)</strong></dt><dd><p>The query sample or samples to compute the Local Outlier Factor
+w.r.t. the training samples.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>opposite_lof_scores: array, shape (n_samples,)</dt><dd><p>The opposite of the Local Outlier Factor of each input samples.
+The lower, the more abnormal.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.LocalOutlierFactor.set_params">
+<code class="sig-name descname">set_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.neighbors.LocalOutlierFactor.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.NeighborhoodComponentsAnalysis.html" class="btn btn-neutral float-right" title="skhubness.neighbors.NeighborhoodComponentsAnalysis">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.KernelDensity.html" class="btn btn-neutral" title="skhubness.neighbors.KernelDensity"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

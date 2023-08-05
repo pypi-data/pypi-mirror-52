@@ -1,0 +1,442 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.analysis.Hubness &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.BallTree" href="skhubness.neighbors.BallTree.html"/>
+        <link rel="prev" title="API Documentation" href="../documentation.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-analysis-hubness">
+<h1>skhubness.analysis.Hubness<a class="headerlink" href="#skhubness-analysis-hubness" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.analysis.Hubness">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.analysis.</code><code class="sig-name descname">Hubness</code><span class="sig-paren">(</span><em class="sig-param">k: int = 10</em>, <em class="sig-param">return_value: str = 'k_skewness'</em>, <em class="sig-param">hub_size: float = 2.0</em>, <em class="sig-param">metric='euclidean'</em>, <em class="sig-param">store_k_neighbors: bool = False</em>, <em class="sig-param">store_k_occurrence: bool = False</em>, <em class="sig-param">algorithm: str = 'auto'</em>, <em class="sig-param">algorithm_params: Optional[dict] = None</em>, <em class="sig-param">hubness: Optional[str] = None</em>, <em class="sig-param">hubness_params: Optional[dict] = None</em>, <em class="sig-param">verbose: int = 0</em>, <em class="sig-param">n_jobs: int = 1</em>, <em class="sig-param">random_state=None</em>, <em class="sig-param">shuffle_equal: bool = True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L50"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Examine hubness characteristics of data.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>k: int</strong></dt><dd><p>Neighborhood size</p>
+</dd>
+<dt><strong>return_value: str, default = “k_skewness”</strong></dt><dd><p>Hubness measure to return by <a class="reference internal" href="#skhubness.analysis.Hubness.score" title="skhubness.analysis.Hubness.score"><code class="xref py py-meth docutils literal notranslate"><span class="pre">score()</span></code></a>
+By default, this is the skewness of the k-occurrence histogram.
+Use “all” to return a dict of all available measures,
+or check <cite>skhubness.analysis.VALID_HUBNESS_MEASURE</cite>
+for available measures.</p>
+</dd>
+<dt><strong>hub_size: float</strong></dt><dd><p>Hubs are defined as objects with k-occurrence &gt; hub_size * k.</p>
+</dd>
+<dt><strong>metric: string, one of [‘euclidean’, ‘cosine’, ‘precomputed’]</strong></dt><dd><p>Metric to use for distance computation. Currently, only
+Euclidean, cosine, and precomputed distances are supported.</p>
+</dd>
+<dt><strong>store_k_neighbors: bool</strong></dt><dd><p>Whether to save the k-neighbor lists. Requires O(n_test * k) memory.</p>
+</dd>
+<dt><strong>store_k_occurrence: bool</strong></dt><dd><p>Whether to save the k-occurrence. Requires O(n_test) memory.</p>
+</dd>
+<dt><strong>algorithm: {‘auto’, ‘hnsw’, ‘lsh’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, optional</strong></dt><dd><p>Algorithm used to compute the nearest neighbors:</p>
+<ul class="simple">
+<li><p>‘hnsw’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">HNSW</span></code></p></li>
+<li><p>‘lsh’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">FalconnLSH</span></code></p></li>
+<li><p>‘ball_tree’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">BallTree</span></code></p></li>
+<li><p>‘kd_tree’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">KDTree</span></code></p></li>
+<li><p>‘brute’ will use a brute-force search.</p></li>
+<li><p>‘auto’ will attempt to decide the most appropriate algorithm
+based on the values passed to <a class="reference internal" href="#skhubness.analysis.Hubness.fit" title="skhubness.analysis.Hubness.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> method.</p></li>
+</ul>
+<p>Note: fitting on sparse input will override the setting of
+this parameter, using brute force.</p>
+</dd>
+<dt><strong>algorithm_params: dict, optional</strong></dt><dd><p>Override default parameters of the NN algorithm.
+For example, with algorithm=’lsh’ and algorithm_params={n_candidates: 100}
+one hundred approximate neighbors are retrieved with LSH.
+If parameter hubness is set, the candidate neighbors are further reordered
+with hubness reduction.
+Finally, n_neighbors objects are used from the (optionally reordered) candidates.</p>
+</dd>
+<dt><strong>hubness: {‘mutual_proximity’, ‘local_scaling’, ‘dis_sim_local’, None}, optional</strong></dt><dd><p>Hubness reduction algorithm</p>
+<ul class="simple">
+<li><p>‘mutual_proximity’ or ‘mp’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">MutualProximity</span></code></p></li>
+<li><p>‘local_scaling’ or ‘ls’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">LocalScaling</span></code></p></li>
+<li><p>‘dis_sim_local’ or ‘dsl’ will use <code class="xref py py-class docutils literal notranslate"><span class="pre">DisSimLocal</span></code></p></li>
+</ul>
+<p>If None, no hubness reduction will be performed (=vanilla kNN).</p>
+</dd>
+<dt><strong>hubness_params: dict, optional</strong></dt><dd><p>Override default parameters of the selected hubness reduction algorithm.
+For example, with hubness=’mp’ and hubness_params={‘method’: ‘normal’}
+a mutual proximity variant is used, which models distance distributions
+with independent Gaussians.</p>
+</dd>
+<dt><strong>random_state: int, RandomState instance or None, optional</strong></dt><dd><p>If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p>
+</dd>
+<dt><strong>shuffle_equal: bool, optional</strong></dt><dd><p>If true and metric=’precomputed’, shuffle neighbors with identical distances
+to avoid artifact hubness.
+NOTE: This is especially useful for secondary distance measures
+with a finite number of possible values, e.g. SNN or MP empiric.</p>
+</dd>
+<dt><strong>n_jobs: int, optional</strong></dt><dd><p>CURRENTLY IGNORED.
+Number of processes for parallel computations.
+- <cite>1</cite>: Don’t use multiprocessing.
+- <cite>-1</cite>: Use all CPUs</p>
+</dd>
+<dt><strong>verbose: int, optional</strong></dt><dd><p>Level of output messages</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="ra56b19eecc1a-1"><span class="brackets"><a class="fn-backref" href="#id3">Ra56b19eecc1a-1</a></span></dt>
+<dd><p><cite>Radovanović, M.; Nanopoulos, A. &amp; Ivanovic, M.
+Hubs in space: Popular nearest neighbors in high-dimensional data.
+Journal of Machine Learning Research, 2010, 11, 2487-2531</cite></p>
+</dd>
+<dt class="label" id="ra56b19eecc1a-2"><span class="brackets"><a class="fn-backref" href="#id4">Ra56b19eecc1a-2</a></span></dt>
+<dd><p><cite>Feldbauer, R.; Leodolter, M.; Plant, C. &amp; Flexer, A.
+Fast approximate hubness reduction for large high-dimensional data.
+IEEE International Conference of Big Knowledge (2018).</cite></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>k_skewness: float</strong></dt><dd><p>Hubness, measured as skewness of k-occurrence histogram <a class="reference internal" href="#ra56b19eecc1a-1" id="id3"><span>[Ra56b19eecc1a-1]</span></a></p>
+</dd>
+<dt><strong>k_skewness_truncnorm: float</strong></dt><dd><p>Hubness, measured as skewness of truncated normal distribution
+fitted with k-occurrence histogram</p>
+</dd>
+<dt><strong>atkinson_index: float</strong></dt><dd><p>Hubness, measured as the Atkinson index of k-occurrence distribution</p>
+</dd>
+<dt><strong>gini_index: float</strong></dt><dd><p>Hubness, measured as the Gini index of k-occurrence distribution</p>
+</dd>
+<dt><strong>robinhood_index: float</strong></dt><dd><p>Hubness, measured as Robin Hood index of k-occurrence distribution <a class="reference internal" href="#ra56b19eecc1a-2" id="id4"><span>[Ra56b19eecc1a-2]</span></a></p>
+</dd>
+<dt><strong>antihubs: int</strong></dt><dd><p>Indices to antihubs</p>
+</dd>
+<dt><strong>antihub_occurrence: float</strong></dt><dd><p>Proportion of antihubs in data set</p>
+</dd>
+<dt><strong>hubs: int</strong></dt><dd><p>Indices to hubs</p>
+</dd>
+<dt><strong>hub_occurrence: float</strong></dt><dd><p>Proportion of k-nearest neighbor slots occupied by hubs</p>
+</dd>
+<dt><strong>groupie_ratio: float</strong></dt><dd><p>Proportion of objects with the largest hub in their neighborhood</p>
+</dd>
+<dt><strong>k_occurrence: ndarray</strong></dt><dd><p>Reverse neighbor count for each object</p>
+</dd>
+<dt><strong>k_neighbors: ndarray</strong></dt><dd><p>Indices to k-nearest neighbors for each object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">k: 'int' = 10</em>, <em class="sig-param">return_value: 'str' = 'k_skewness'</em>, <em class="sig-param">hub_size: 'float' = 2.0</em>, <em class="sig-param">metric='euclidean'</em>, <em class="sig-param">store_k_neighbors: 'bool' = False</em>, <em class="sig-param">store_k_occurrence: 'bool' = False</em>, <em class="sig-param">algorithm: 'str' = 'auto'</em>, <em class="sig-param">algorithm_params: 'dict' = None</em>, <em class="sig-param">hubness: 'str' = None</em>, <em class="sig-param">hubness_params: 'dict' = None</em>, <em class="sig-param">verbose: 'int' = 0</em>, <em class="sig-param">n_jobs: 'int' = 1</em>, <em class="sig-param">random_state=None</em>, <em class="sig-param">shuffle_equal: 'bool' = True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L185"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.analysis.Hubness.__init__" title="skhubness.analysis.Hubness.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, k, return_value, hub_size[, …])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.analysis.Hubness.fit" title="skhubness.analysis.Hubness.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(self, X[, y])</p></td>
+<td><p>Fit indexed objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.analysis.Hubness.get_params" title="skhubness.analysis.Hubness.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>(self[, deep])</p></td>
+<td><p>Get parameters for this estimator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.analysis.Hubness.score" title="skhubness.analysis.Hubness.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(self, X[, y])</p></td>
+<td><p>Estimate hubness in a data set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.analysis.Hubness.set_params" title="skhubness.analysis.Hubness.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(self, \*\*params)</p></td>
+<td><p>Set the parameters of this estimator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">y=None</em><span class="sig-paren">)</span> &#x2192; 'Hubness'<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L207"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit indexed objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: {array-like, sparse matrix}, shape (n_samples, n_features) or (n_query, n_indexed) if metric==’precomputed’</strong></dt><dd><p>Training data vectors or distance matrix, if metric == ‘precomputed’.</p>
+</dd>
+<dt><strong>y: ignored</strong></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self:</dt><dd><p>Fitted instance of :mod:Hubness</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.get_params">
+<code class="sig-name descname">get_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>deep</strong><span class="classifier">boolean, optional</span></dt><dd><p>If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">mapping of string to any</span></dt><dd><p>Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X: 'np.ndarray' = None</em>, <em class="sig-param">y=None</em>, <em class="sig-param">has_self_distances: 'bool' = False</em><span class="sig-paren">)</span> &#x2192; 'List[float, dict]'<a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/../../../../../../../PycharmProjects/hubness/skhubness/analysis/estimation.py#L537"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate hubness in a data set.</p>
+<p>Hubness is estimated from the distances between all objects in X to all objects in Y.
+If Y is None, all-against-all distances between the objects in X are used.
+If self.metric == ‘precomputed’, X must be a distance matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X: ndarray, shape (n_query, n_features) or (n_query, n_indexed)</strong></dt><dd><p>Array of query vectors, or distance, if self.metric == ‘precomputed’</p>
+</dd>
+<dt><strong>y: ignored</strong></dt><dd></dd>
+<dt><strong>has_self_distances: bool, default = False</strong></dt><dd><p>Define, whether a precomputed distance matrix contains self distances,
+which need to be excluded.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>hubness_measure: float or dict</dt><dd><p>Return the hubness measure as indicated by <cite>return_value</cite>.
+Additional hubness indices are provided as attributes
+(e.g. <code class="xref py py-func docutils literal notranslate"><span class="pre">robinhood_index_()</span></code>).
+if return_value is ‘all’, a dict of all hubness measures is returned.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.analysis.Hubness.set_params">
+<code class="sig-name descname">set_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/scikit-learn/scikit-learn/blob/22f2cf8/sklearn/base.py#L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#skhubness.analysis.Hubness.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.BallTree.html" class="btn btn-neutral float-right" title="skhubness.neighbors.BallTree">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../documentation.html" class="btn btn-neutral" title="API Documentation"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

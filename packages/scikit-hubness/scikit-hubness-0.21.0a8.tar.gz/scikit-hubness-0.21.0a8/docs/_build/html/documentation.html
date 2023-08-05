@@ -1,0 +1,307 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>API Documentation &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="index.html"/>
+        <link rel="next" title="skhubness.analysis.Hubness" href="_autosummary/skhubness.analysis.Hubness.html"/>
+        <link rel="prev" title="Tutorial" href="user_guide/tutorial.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is the API documentation for <code class="docutils literal notranslate"><span class="pre">scikit-hubness</span></code>.</p>
+<div class="section" id="analysis-skhubness-analysis">
+<span id="data-ref"></span><h2>Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code><a class="headerlink" href="#analysis-skhubness-analysis" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code> package provides methods for measuring hubness.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.analysis.Hubness.html#skhubness.analysis.Hubness" title="skhubness.analysis.Hubness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analysis.Hubness</span></code></a></p></td>
+<td><p>Examine hubness characteristics of data.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="neighbors-skhubness-neighbors">
+<h2>Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code><a class="headerlink" href="#neighbors-skhubness-neighbors" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code> package is a drop-in replacement for <code class="xref py py-mod docutils literal notranslate"><span class="pre">sklearn.neighbors</span></code>,
+providing all of its features, while adding transparent support for hubness reduction
+and approximate nearest neighbor search.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.BallTree.html#skhubness.neighbors.BallTree" title="skhubness.neighbors.BallTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.BallTree</span></code></a></p></td>
+<td><p>BallTree for fast generalized N-point problems</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.DistanceMetric.html#skhubness.neighbors.DistanceMetric" title="skhubness.neighbors.DistanceMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.DistanceMetric</span></code></a></p></td>
+<td><p>DistanceMetric class</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.KDTree.html#skhubness.neighbors.KDTree" title="skhubness.neighbors.KDTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.KDTree</span></code></a></p></td>
+<td><p>KDTree for fast generalized N-point problems</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.HNSW.html#skhubness.neighbors.HNSW" title="skhubness.neighbors.HNSW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.HNSW</span></code></a></p></td>
+<td><p>Wrapper for using nmslib</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.KNeighborsClassifier.html#skhubness.neighbors.KNeighborsClassifier" title="skhubness.neighbors.KNeighborsClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.KNeighborsClassifier</span></code></a></p></td>
+<td><p>Classifier implementing the k-nearest neighbors vote.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.KNeighborsRegressor.html#skhubness.neighbors.KNeighborsRegressor" title="skhubness.neighbors.KNeighborsRegressor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.KNeighborsRegressor</span></code></a></p></td>
+<td><p>Regression based on k-nearest neighbors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.FalconnLSH.html#skhubness.neighbors.FalconnLSH" title="skhubness.neighbors.FalconnLSH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.FalconnLSH</span></code></a></p></td>
+<td><p>Wrapper for using falconn LSH</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.NearestCentroid.html#skhubness.neighbors.NearestCentroid" title="skhubness.neighbors.NearestCentroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.NearestCentroid</span></code></a></p></td>
+<td><p>Nearest centroid classifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.NearestNeighbors.html#skhubness.neighbors.NearestNeighbors" title="skhubness.neighbors.NearestNeighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.NearestNeighbors</span></code></a></p></td>
+<td><p>Unsupervised learner for implementing neighbor searches.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.ONNG.html#skhubness.neighbors.ONNG" title="skhubness.neighbors.ONNG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.ONNG</span></code></a></p></td>
+<td><p>Wrapper for ngtpy and ONNG</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.PuffinnLSH.html#skhubness.neighbors.PuffinnLSH" title="skhubness.neighbors.PuffinnLSH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.PuffinnLSH</span></code></a></p></td>
+<td><p>Wrap Puffinn LSH for scikit-learn compatibility.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.RadiusNeighborsClassifier.html#skhubness.neighbors.RadiusNeighborsClassifier" title="skhubness.neighbors.RadiusNeighborsClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.RadiusNeighborsClassifier</span></code></a></p></td>
+<td><p>Classifier implementing a vote among neighbors within a given radius</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.RadiusNeighborsRegressor.html#skhubness.neighbors.RadiusNeighborsRegressor" title="skhubness.neighbors.RadiusNeighborsRegressor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.RadiusNeighborsRegressor</span></code></a></p></td>
+<td><p>Regression based on neighbors within a fixed radius.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.RandomProjectionTree.html#skhubness.neighbors.RandomProjectionTree" title="skhubness.neighbors.RandomProjectionTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.RandomProjectionTree</span></code></a></p></td>
+<td><p>Wrapper for using annoy.AnnoyIndex</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.kneighbors_graph.html#skhubness.neighbors.kneighbors_graph" title="skhubness.neighbors.kneighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.kneighbors_graph</span></code></a></p></td>
+<td><p>Computes the (weighted) graph of k-Neighbors for points in X</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.radius_neighbors_graph.html#skhubness.neighbors.radius_neighbors_graph" title="skhubness.neighbors.radius_neighbors_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.radius_neighbors_graph</span></code></a></p></td>
+<td><p>Computes the (weighted) graph of Neighbors for points in X</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.KernelDensity.html#skhubness.neighbors.KernelDensity" title="skhubness.neighbors.KernelDensity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.KernelDensity</span></code></a></p></td>
+<td><p>Kernel Density Estimation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.LocalOutlierFactor.html#skhubness.neighbors.LocalOutlierFactor" title="skhubness.neighbors.LocalOutlierFactor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.LocalOutlierFactor</span></code></a></p></td>
+<td><p>Unsupervised Outlier Detection using Local Outlier Factor (LOF)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.neighbors.NeighborhoodComponentsAnalysis.html#skhubness.neighbors.NeighborhoodComponentsAnalysis" title="skhubness.neighbors.NeighborhoodComponentsAnalysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors.NeighborhoodComponentsAnalysis</span></code></a></p></td>
+<td><p>Neighborhood Components Analysis</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="reduction-skhubness-reduction">
+<h2>Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code><a class="headerlink" href="#reduction-skhubness-reduction" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code> package provides methods for hubness reduction.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.reduction.MutualProximity.html#skhubness.reduction.MutualProximity" title="skhubness.reduction.MutualProximity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduction.MutualProximity</span></code></a></p></td>
+<td><p>Hubness reduction with Mutual Proximity <a class="reference internal" href="_autosummary/skhubness.reduction.MutualProximity.html#r5a390b9a9956-1" id="id1"><span>[R5a390b9a9956-1]</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/skhubness.reduction.LocalScaling.html#skhubness.reduction.LocalScaling" title="skhubness.reduction.LocalScaling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduction.LocalScaling</span></code></a></p></td>
+<td><p>Hubness reduction with Local Scaling <a class="reference internal" href="_autosummary/skhubness.reduction.LocalScaling.html#rf1f7cb70176a-1" id="id2"><span>[Rf1f7cb70176a-1]</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/skhubness.reduction.DisSimLocal.html#skhubness.reduction.DisSimLocal" title="skhubness.reduction.DisSimLocal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduction.DisSimLocal</span></code></a></p></td>
+<td><p>Hubness reduction with DisSimLocal <a class="reference internal" href="_autosummary/skhubness.reduction.DisSimLocal.html#r3ede0f1b99b2-1" id="id3"><span>[R3ede0f1b99b2-1]</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="_autosummary/skhubness.analysis.Hubness.html" class="btn btn-neutral float-right" title="skhubness.analysis.Hubness">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="user_guide/tutorial.html" class="btn btn-neutral" title="Tutorial"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

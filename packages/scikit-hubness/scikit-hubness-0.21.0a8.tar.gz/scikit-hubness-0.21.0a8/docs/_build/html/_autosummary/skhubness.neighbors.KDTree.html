@@ -1,0 +1,543 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>skhubness.neighbors.KDTree &mdash; scikit-hubness 0.21.0a8 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="scikit-hubness 0.21.0a8 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../documentation.html"/>
+        <link rel="next" title="skhubness.neighbors.HNSW" href="skhubness.neighbors.HNSW.html"/>
+        <link rel="prev" title="skhubness.neighbors.DistanceMetric" href="skhubness.neighbors.DistanceMetric.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> scikit-hubness </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/hub-toolbox_vs_scikit-hubness.html"><cite>scikit-hubness</cite>: successor to the Hub-Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-pypi">From PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#from-source">From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/installation.html#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-1">Tutorial 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/tutorial.html#tutorial-2">Tutorial 2</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#analysis-skhubness-analysis">Analysis: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.analysis</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../documentation.html#neighbors-skhubness-neighbors">Neighbors: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.neighbors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation.html#reduction-skhubness-reduction">Reduction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">skhubness.reduction</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <div class="section" id="skhubness-neighbors-kdtree">
+<h1>skhubness.neighbors.KDTree<a class="headerlink" href="#skhubness-neighbors-kdtree" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhubness.neighbors.KDTree">
+<em class="property">class </em><code class="sig-prename descclassname">skhubness.neighbors.</code><code class="sig-name descname">KDTree</code><a class="headerlink" href="#skhubness.neighbors.KDTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>KDTree for fast generalized N-point problems</p>
+<p>KDTree(X, leaf_size=40, metric=’minkowski’, **kwargs)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features]</span></dt><dd><p>n_samples is the number of points in the data set, and
+n_features is the dimension of the parameter space.
+Note: if X is a C-contiguous array of doubles then data will
+not be copied. Otherwise, an internal copy will be made.</p>
+</dd>
+<dt><strong>leaf_size</strong><span class="classifier">positive integer (default = 40)</span></dt><dd><p>Number of points at which to switch to brute-force. Changing
+leaf_size will not affect the results of a query, but can
+significantly impact the speed of a query and the memory required
+to store the constructed tree.  The amount of memory needed to
+store the tree scales as approximately n_samples / leaf_size.
+For a specified <code class="docutils literal notranslate"><span class="pre">leaf_size</span></code>, a leaf node is guaranteed to
+satisfy <code class="docutils literal notranslate"><span class="pre">leaf_size</span> <span class="pre">&lt;=</span> <span class="pre">n_points</span> <span class="pre">&lt;=</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">leaf_size</span></code>, except in
+the case that <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">&lt;</span> <span class="pre">leaf_size</span></code>.</p>
+</dd>
+<dt><strong>metric</strong><span class="classifier">string or DistanceMetric object</span></dt><dd><p>the distance metric to use for the tree.  Default=’minkowski’
+with p=2 (that is, a euclidean metric). See the documentation
+of the DistanceMetric class for a list of available metrics.
+kd_tree.valid_metrics gives a list of the metrics which
+are valid for KDTree.</p>
+</dd>
+<dt><strong>Additional keywords are passed to the distance metric class.</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Query for k-nearest neighbors</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random_sample</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 10 points in 3 dimensions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>              <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span><span class="p">,</span> <span class="n">ind</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>                <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>  <span class="c1"># indices of 3 closest neighbors</span>
+<span class="go">[0 3 1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>  <span class="c1"># distances to 3 closest neighbors</span>
+<span class="go">[ 0.          0.19662693  0.29473397]</span>
+</pre></div>
+</div>
+<p>Pickle and Unpickle a tree.  Note that the state of the tree is saved in the
+pickle operation: the tree needs not be rebuilt upon unpickling.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random_sample</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 10 points in 3 dimensions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>        <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>                     <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree_copy</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>                <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span><span class="p">,</span> <span class="n">ind</span> <span class="o">=</span> <span class="n">tree_copy</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>     <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>  <span class="c1"># indices of 3 closest neighbors</span>
+<span class="go">[0 3 1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>  <span class="c1"># distances to 3 closest neighbors</span>
+<span class="go">[ 0.          0.19662693  0.29473397]</span>
+</pre></div>
+</div>
+<p>Query for neighbors within a given radius</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random_sample</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 10 points in 3 dimensions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>     <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">query_radius</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">count_only</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ind</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_radius</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>  <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>  <span class="c1"># indices of neighbors within distance 0.3</span>
+<span class="go">[3 0 1]</span>
+</pre></div>
+</div>
+<p>Compute a gaussian kernel density estimate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random_sample</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>                <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span><span class="o">.</span><span class="n">kernel_density</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">h</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;gaussian&#39;</span><span class="p">)</span>
+<span class="go">array([ 6.94114649,  7.83281226,  7.2071716 ])</span>
+</pre></div>
+</div>
+<p>Compute a two-point auto-correlation function</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random_sample</span><span class="p">((</span><span class="mi">30</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span> <span class="o">=</span> <span class="n">KDTree</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>                <span class="c1"># doctest: +SKIP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span><span class="o">.</span><span class="n">two_point_correlation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+<span class="go">array([ 30,  62, 278, 580, 820])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">memory view</span></dt><dd><p>The training data</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="skhubness.neighbors.KDTree.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#skhubness.neighbors.KDTree.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KDTree.__init__" title="skhubness.neighbors.KDTree.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, /, \*args, \*\*kwargs)</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_arrays</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_n_calls</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_tree_stats</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KDTree.kernel_density" title="skhubness.neighbors.KDTree.kernel_density"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kernel_density</span></code></a>(self, X, h[, kernel, atol, …])</p></td>
+<td><p>Compute the kernel density estimate at points X with the given kernel, using the distance metric specified at tree creation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skhubness.neighbors.KDTree.query" title="skhubness.neighbors.KDTree.query"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query</span></code></a>(X[, k, return_distance, dualtree, …])</p></td>
+<td><p>query the tree for the k nearest neighbors</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KDTree.query_radius" title="skhubness.neighbors.KDTree.query_radius"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_radius</span></code></a>()</p></td>
+<td><p>query_radius(self, X, r, count_only = False):</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_n_calls</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skhubness.neighbors.KDTree.two_point_correlation" title="skhubness.neighbors.KDTree.two_point_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">two_point_correlation</span></code></a>()</p></td>
+<td><p>Compute the two-point correlation function</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">idx_array</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">node_bounds</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">node_data</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample_weight</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sum_weight</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_metrics</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="skhubness.neighbors.KDTree.kernel_density">
+<code class="sig-name descname">kernel_density</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">X</em>, <em class="sig-param">h</em>, <em class="sig-param">kernel='gaussian'</em>, <em class="sig-param">atol=0</em>, <em class="sig-param">rtol=1E-8</em>, <em class="sig-param">breadth_first=True</em>, <em class="sig-param">return_log=False</em><span class="sig-paren">)</span><a class="headerlink" href="#skhubness.neighbors.KDTree.kernel_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the kernel density estimate at points X with the given kernel,
+using the distance metric specified at tree creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features]</span></dt><dd><p>An array of points to query.  Last dimension should match dimension
+of training data.</p>
+</dd>
+<dt><strong>h</strong><span class="classifier">float</span></dt><dd><p>the bandwidth of the kernel</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">string</span></dt><dd><p>specify the kernel to use.  Options are
+- ‘gaussian’
+- ‘tophat’
+- ‘epanechnikov’
+- ‘exponential’
+- ‘linear’
+- ‘cosine’
+Default is kernel = ‘gaussian’</p>
+</dd>
+<dt><strong>atol, rtol</strong><span class="classifier">float (default = 0)</span></dt><dd><p>Specify the desired relative and absolute tolerance of the result.
+If the true result is K_true, then the returned result K_ret
+satisfies <code class="docutils literal notranslate"><span class="pre">abs(K_true</span> <span class="pre">-</span> <span class="pre">K_ret)</span> <span class="pre">&lt;</span> <span class="pre">atol</span> <span class="pre">+</span> <span class="pre">rtol</span> <span class="pre">*</span> <span class="pre">K_ret</span></code>
+The default is zero (i.e. machine precision) for both.</p>
+</dd>
+<dt><strong>breadth_first</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>if True, use a breadth-first search.  If False (default) use a
+depth-first search.  Breadth-first is generally faster for
+compact kernels and/or high tolerances.</p>
+</dd>
+<dt><strong>return_log</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>return the logarithm of the result.  This can be more accurate
+than returning the result itself for narrow kernels.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>density</strong><span class="classifier">ndarray</span></dt><dd><p>The array of (log)-density evaluations, shape = X.shape[:-1]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KDTree.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">k=1</em>, <em class="sig-param">return_distance=True</em>, <em class="sig-param">dualtree=False</em>, <em class="sig-param">breadth_first=False</em><span class="sig-paren">)</span><a class="headerlink" href="#skhubness.neighbors.KDTree.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>query the tree for the k nearest neighbors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features]</span></dt><dd><p>An array of points to query</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">integer  (default = 1)</span></dt><dd><p>The number of nearest neighbors to return</p>
+</dd>
+<dt><strong>return_distance</strong><span class="classifier">boolean (default = True)</span></dt><dd><p>if True, return a tuple (d, i) of distances and indices
+if False, return array i</p>
+</dd>
+<dt><strong>dualtree</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>if True, use the dual tree formalism for the query: a tree is
+built for the query points, and the pair of trees is used to
+efficiently search this space.  This can lead to better
+performance as the number of points grows large.</p>
+</dd>
+<dt><strong>breadth_first</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>if True, then query the nodes in a breadth-first manner.
+Otherwise, query the nodes in a depth-first manner.</p>
+</dd>
+<dt><strong>sort_results</strong><span class="classifier">boolean (default = True)</span></dt><dd><p>if True, then distances and indices of each point are sorted
+on return, so that the first column contains the closest points.
+Otherwise, neighbors are returned in an arbitrary order.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>i</strong><span class="classifier">if return_distance == False</span></dt><dd></dd>
+<dt><strong>(d,i)</strong><span class="classifier">if return_distance == True</span></dt><dd></dd>
+<dt><strong>d</strong><span class="classifier">array of doubles - shape: x.shape[:-1] + (k,)</span></dt><dd><p>each entry gives the list of distances to the
+neighbors of the corresponding point</p>
+</dd>
+<dt><strong>i</strong><span class="classifier">array of integers - shape: x.shape[:-1] + (k,)</span></dt><dd><p>each entry gives the list of indices of
+neighbors of the corresponding point</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KDTree.query_radius">
+<code class="sig-name descname">query_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhubness.neighbors.KDTree.query_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>query_radius(self, X, r, count_only = False):</p>
+<p>query the tree for neighbors within a radius r</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features]</span></dt><dd><p>An array of points to query</p>
+</dd>
+<dt><strong>r</strong><span class="classifier">distance within which neighbors are returned</span></dt><dd><p>r can be a single value, or an array of values of shape
+x.shape[:-1] if different radii are desired for each point.</p>
+</dd>
+<dt><strong>return_distance</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>if True,  return distances to neighbors of each point
+if False, return only neighbors
+Note that unlike the query() method, setting return_distance=True
+here adds to the computation time.  Not all distances need to be
+calculated explicitly for return_distance=False.  Results are
+not sorted by default: see <code class="docutils literal notranslate"><span class="pre">sort_results</span></code> keyword.</p>
+</dd>
+<dt><strong>count_only</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>if True,  return only the count of points within distance r
+if False, return the indices of all points within distance r
+If return_distance==True, setting count_only=True will
+result in an error.</p>
+</dd>
+<dt><strong>sort_results</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>if True, the distances and indices will be sorted before being
+returned.  If False, the results will not be sorted.  If
+return_distance == False, setting sort_results = True will
+result in an error.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>count</strong><span class="classifier">if count_only == True</span></dt><dd></dd>
+<dt><strong>ind</strong><span class="classifier">if count_only == False and return_distance == False</span></dt><dd></dd>
+<dt><strong>(ind, dist)</strong><span class="classifier">if count_only == False and return_distance == True</span></dt><dd></dd>
+<dt><strong>count</strong><span class="classifier">array of integers, shape = X.shape[:-1]</span></dt><dd><p>each entry gives the number of neighbors within
+a distance r of the corresponding point.</p>
+</dd>
+<dt><strong>ind</strong><span class="classifier">array of objects, shape = X.shape[:-1]</span></dt><dd><p>each element is a numpy integer array listing the indices of
+neighbors of the corresponding point.  Note that unlike
+the results of a k-neighbors query, the returned neighbors
+are not sorted by distance by default.</p>
+</dd>
+<dt><strong>dist</strong><span class="classifier">array of objects, shape = X.shape[:-1]</span></dt><dd><p>each element is a numpy double array
+listing the distances corresponding to indices in i.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhubness.neighbors.KDTree.two_point_correlation">
+<code class="sig-name descname">two_point_correlation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhubness.neighbors.KDTree.two_point_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the two-point correlation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like, shape = [n_samples, n_features]</span></dt><dd><p>An array of points to query.  Last dimension should match dimension
+of training data.</p>
+</dd>
+<dt><strong>r</strong><span class="classifier">array_like</span></dt><dd><p>A one-dimensional array of distances</p>
+</dd>
+<dt><strong>dualtree</strong><span class="classifier">boolean (default = False)</span></dt><dd><p>If true, use a dualtree algorithm.  Otherwise, use a single-tree
+algorithm.  Dual tree algorithms can have better scaling for
+large N.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>counts</strong><span class="classifier">ndarray</span></dt><dd><p>counts[i] contains the number of pairs of points with distance
+less than or equal to r[i]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+	    </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="skhubness.neighbors.HNSW.html" class="btn btn-neutral float-right" title="skhubness.neighbors.HNSW">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="skhubness.neighbors.DistanceMetric.html" class="btn btn-neutral" title="skhubness.neighbors.DistanceMetric"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Roman Feldbauer.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.21.0a8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/language_data.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>
