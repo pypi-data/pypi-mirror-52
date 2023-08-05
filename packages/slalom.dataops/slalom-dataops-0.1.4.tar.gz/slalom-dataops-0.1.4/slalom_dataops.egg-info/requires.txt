@@ -1,0 +1,10 @@
+awscli
+azure-common
+azure-datalake-store
+boto3
+fire
+joblib
+pandas
+psutil
+pyspark
+s3fs
