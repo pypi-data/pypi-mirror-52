@@ -1,0 +1,23 @@
+[Unit]
+Description={{ description }} [{{ instance }}]
+After=network.target
+
+[Service]
+Type={{ deploy.settings.systemd_type }}
+User={{ deploy.settings.user }}
+Group={{ deploy.settings.user }}
+ExecStart={{ deploy.settings.bin }}
+WorkingDirectory={{ deploy.settings.home_abs }}
+LimitNOFILE={{ limit_nofile }}
+
+Environment=PYTHONPATH={{ deploy.settings.home_abs }}
+Environment=SETTINGS={{ deploy.settings.module }}
+Environment=SETTINGS_DEPLOY_COMPONENTS_WEB_INSTANCE={{ instance }}
+Environment=SETTINGS_DEPLOY_COMPONENTS_WEB_HOST={{ deploy.private_ip }}
+
+{% for conf in deploy.settings.systemd_config %}
+{{ conf }}
+{% endfor %}
+
+[Install]
+WantedBy=multi-user.target
