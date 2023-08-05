@@ -1,0 +1,11 @@
+README.md
+setup.py
+gaapi4py/__init__.py
+gaapi4py/__version__.py
+gaapi4py/client.py
+gaapi4py.egg-info/PKG-INFO
+gaapi4py.egg-info/SOURCES.txt
+gaapi4py.egg-info/dependency_links.txt
+gaapi4py.egg-info/not-zip-safe
+gaapi4py.egg-info/requires.txt
+gaapi4py.egg-info/top_level.txt
