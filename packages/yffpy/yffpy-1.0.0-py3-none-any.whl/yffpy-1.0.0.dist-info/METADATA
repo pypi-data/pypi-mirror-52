@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: yffpy
+Version: 1.0.0
+Summary: Python API wrapper for the Yahoo Fantasy Football public API.
+Home-page: https://github.com/uberfastman/yffpy
+Author: Wren J. R.
+Author-email: wrenjr@yahoo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: yahoo-oauth (==0.1.9)
+Requires-Dist: stringcase (==1.2.0)
+
+```
+ __     ________ ______ _______     __
+ \ \   / /  ____|  ____|  __ \ \   / /
+  \ \_/ /| |__  | |__  | |__) \ \_/ / 
+   \   / |  __| |  __| |  ___/ \   /  
+    | |  | |    | |    | |      | |   
+    |_|  |_|    |_|    |_|      |_|   
+```
+
+### Python API wrapper for the Yahoo Fantasy Football public API
+##### By Wren J. R. (uberfastman)
+
+
