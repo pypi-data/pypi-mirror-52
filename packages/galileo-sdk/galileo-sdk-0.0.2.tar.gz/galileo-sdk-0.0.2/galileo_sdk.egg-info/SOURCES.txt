@@ -1,0 +1,11 @@
+README.md
+setup.py
+galileo/__init__.py
+galileo/api.py
+galileo/cli.py
+galileo_sdk.egg-info/PKG-INFO
+galileo_sdk.egg-info/SOURCES.txt
+galileo_sdk.egg-info/dependency_links.txt
+galileo_sdk.egg-info/entry_points.txt
+galileo_sdk.egg-info/requires.txt
+galileo_sdk.egg-info/top_level.txt

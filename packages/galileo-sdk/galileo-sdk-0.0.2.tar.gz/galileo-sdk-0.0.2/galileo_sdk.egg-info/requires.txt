@@ -1,0 +1,6 @@
+requests>=2.21.0
+galileo-socketio
+
+[docs]
+sphinx>=2.2.0
+sphinx_rtd_theme>=0.4.3
