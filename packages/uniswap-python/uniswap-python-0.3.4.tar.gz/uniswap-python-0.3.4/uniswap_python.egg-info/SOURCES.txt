@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+uniswap/__init__.py
+uniswap/uniswap.py
+uniswap/assets/contract_addresses.JSON
+uniswap/assets/erc20.abi
+uniswap/assets/uniswap_exchange.abi
+uniswap_python.egg-info/PKG-INFO
+uniswap_python.egg-info/SOURCES.txt
+uniswap_python.egg-info/dependency_links.txt
+uniswap_python.egg-info/requires.txt
+uniswap_python.egg-info/top_level.txt
