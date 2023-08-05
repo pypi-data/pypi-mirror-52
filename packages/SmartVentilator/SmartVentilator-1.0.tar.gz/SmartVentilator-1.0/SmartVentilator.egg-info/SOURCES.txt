@@ -1,0 +1,8 @@
+setup.py
+SmartVentilator.egg-info/PKG-INFO
+SmartVentilator.egg-info/SOURCES.txt
+SmartVentilator.egg-info/dependency_links.txt
+SmartVentilator.egg-info/top_level.txt
+fanscript/__init__.py
+fanscript/activate.py
+fanscript/fan_script.py
