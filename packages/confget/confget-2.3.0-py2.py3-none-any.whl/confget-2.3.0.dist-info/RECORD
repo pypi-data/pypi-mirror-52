@@ -1,0 +1,15 @@
+confget/__init__.py,sha256=YwL-kDRZZjac6g6Ki--BeFXCOQpDZ16uTVEazagaPAE,4761
+confget/__main__.py,sha256=AMFmzVlqLGgZ6LhxOdj82RkBoHjlDLG5OAugv4k9b1U,11266
+confget/defs.py,sha256=rbedcZJhK1rzK7WsAt0_GAS5Fl87AkimjArrnYAGIuE,2231
+confget/format.py,sha256=RxzSXy2K355dEzcOpERFL1wETIDAy4aeYZDwyfqBvPs,8083
+confget/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+confget/backend/__init__.py,sha256=dR_Ut_P-lZAxI5zBpCgV1zS9mlq5etb2Q4wUKPtYF-4,1702
+confget/backend/abstract.py,sha256=-X2PMB5wkwJYJWrBMwtwvnBW5DhMTLg7qJIxwCyEY1U,2554
+confget/backend/http_get.py,sha256=CiK0LO2YD2F79Ikntq4fAxKy4HaTag5CucSylKsqvEw,4293
+confget/backend/ini.py,sha256=9ymT_sVVdHR5aft_BdgWN12O17wwaeGJnB8MmnmymWs,6640
+confget-2.3.0.dist-info/METADATA,sha256=29_t2y78EtSIM7Brw9CFatrFYDmMQ-6jpCOlgUtPVWo,4687
+confget-2.3.0.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+confget-2.3.0.dist-info/entry_points.txt,sha256=mEbYcClhxp5mEYC4S6sDSbUee1z76M-GWqyrrPxrJ68,51
+confget-2.3.0.dist-info/top_level.txt,sha256=qhRztpUIc51peVJDR7oqhqChPaa1PSxeMxQtWwz2nSQ,8
+confget-2.3.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+confget-2.3.0.dist-info/RECORD,,
