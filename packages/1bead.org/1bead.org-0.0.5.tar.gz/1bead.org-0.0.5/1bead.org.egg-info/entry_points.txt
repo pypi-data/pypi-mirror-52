@@ -1,0 +1,3 @@
+[console_scripts]
+web-app = web.cli:main
+
