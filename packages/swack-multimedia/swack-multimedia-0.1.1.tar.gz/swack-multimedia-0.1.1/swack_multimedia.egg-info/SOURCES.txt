@@ -1,0 +1,11 @@
+README.md
+setup.py
+swack/__init__.py
+swack/video/__init__.py
+swack/video/overview.py
+swack_multimedia.egg-info/PKG-INFO
+swack_multimedia.egg-info/SOURCES.txt
+swack_multimedia.egg-info/dependency_links.txt
+swack_multimedia.egg-info/not-zip-safe
+swack_multimedia.egg-info/requires.txt
+swack_multimedia.egg-info/top_level.txt

@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: swack-multimedia
+Version: 0.1.1
+Summary: Multimedia files processing.
+Home-page: https://github.com/casen45/swack-multimedia
+Author: Casen
+Author-email: casen@swack.win
+License: GNU
+Description: # Swack Multimedia
+        
+        ## Install
+        ```
+        pip install swack-multimedia
+        ```
+        
+        ## Usage
+        
+        ```Python3
+        from swack.video import VideoOverview
+        
+        vo = VideoOverview(video="test_video.mp4", w=5, h=8)
+        vo.run()
+        ```
+        
+Keywords: multimedia
+Platform: any
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
