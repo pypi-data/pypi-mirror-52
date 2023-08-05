@@ -1,0 +1,11 @@
+# use glob syntax.
+syntax: glob
+
+*.swp
+*.pyc
+*.retry
+links
+__pycache__/
+*.egg-info/
+dist/
+scratch/
