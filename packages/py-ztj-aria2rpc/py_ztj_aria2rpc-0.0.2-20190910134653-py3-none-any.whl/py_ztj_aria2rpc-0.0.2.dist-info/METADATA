@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: py-ztj-aria2rpc
+Version: 0.0.2
+Summary: python aria2rpc package
+Home-page: http://github.com/ztj1993/PythonPackages/blob/master/py_aria2rpc
+Author: ZhangTianJie
+Author-email: ztj1993@gmail.com
+License: MIT License
+Keywords: aria2 rpc client
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Python Aria2 RPC 调用模块
+
+### 说明
+这是一个 aria2rpc 调用模块。
+
+## 安装
+```
+pip install py-ztj-aria2rpc
+```
+
+### 使用
+```
+from aria2rpc import Aria2Rpc
+
+rpc = Aria2Rpc(uri='http://127.0.0.1:6800/rpc')
+print(rpc.get_version())
+```
+
+
