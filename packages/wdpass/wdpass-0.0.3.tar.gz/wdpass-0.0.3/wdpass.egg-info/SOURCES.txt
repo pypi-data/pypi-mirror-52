@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+wdpass/__init__.py
+wdpass/version.py
+wdpass.egg-info/PKG-INFO
+wdpass.egg-info/SOURCES.txt
+wdpass.egg-info/dependency_links.txt
+wdpass.egg-info/entry_points.txt
+wdpass.egg-info/not-zip-safe
+wdpass.egg-info/requires.txt
+wdpass.egg-info/top_level.txt
