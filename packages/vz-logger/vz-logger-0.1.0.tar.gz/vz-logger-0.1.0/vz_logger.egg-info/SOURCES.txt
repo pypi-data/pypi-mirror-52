@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+vz_logger.egg-info/PKG-INFO
+vz_logger.egg-info/SOURCES.txt
+vz_logger.egg-info/dependency_links.txt
+vz_logger.egg-info/not-zip-safe
+vz_logger.egg-info/requires.txt
+vz_logger.egg-info/top_level.txt
+vzlogger/__init__.py
+vzlogger/logger.py
