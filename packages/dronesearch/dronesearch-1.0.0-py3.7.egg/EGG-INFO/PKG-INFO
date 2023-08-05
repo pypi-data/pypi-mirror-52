@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dronesearch
+Version: 1.0.0
+Summary: A computer vision pipeline for live video search on drone video feeds leveraging edge servers.
+Home-page: https://github.com/cmusatyalab/dronesearch
+Author: Junjue Wang
+Author-email: junjuew@cs.cmu.edu
+License: Apache License 2.0
+Description: python -m dronesearch.onboard --input-source 0 --filter-config-file dronesearch/cfg/filter_config.ini
+        python dronesearch/onserver.py
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Requires-Python: >3.5, <4
+Description-Content-Type: text/markdown
