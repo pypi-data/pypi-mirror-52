@@ -1,0 +1,27 @@
+joblib
+numexpr
+tqdm
+formulate
+uproot
+
+[complete]
+bumpversion
+flake8
+pytest
+pytest-runner
+rootpy
+
+[complete:python_version >= "3.6"]
+black
+
+[develop]
+pytest
+pytest-runner
+flake8
+bumpversion
+
+[develop:python_version >= "3.6"]
+black
+
+[plot]
+rootpy

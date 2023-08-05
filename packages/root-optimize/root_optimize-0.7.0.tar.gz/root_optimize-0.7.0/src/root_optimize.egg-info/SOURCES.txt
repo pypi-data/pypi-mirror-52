@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+src/root_optimize/__init__.py
+src/root_optimize/commandline.py
+src/root_optimize/json.py
+src/root_optimize/plotting.py
+src/root_optimize/timing.py
+src/root_optimize/utils.py
+src/root_optimize/version.py
+src/root_optimize.egg-info/PKG-INFO
+src/root_optimize.egg-info/SOURCES.txt
+src/root_optimize.egg-info/dependency_links.txt
+src/root_optimize.egg-info/entry_points.txt
+src/root_optimize.egg-info/requires.txt
+src/root_optimize.egg-info/top_level.txt
