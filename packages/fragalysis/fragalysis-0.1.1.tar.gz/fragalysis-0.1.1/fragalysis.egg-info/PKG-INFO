@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: fragalysis
+Version: 0.1.1
+Summary: Library for fragment based analysis
+Home-page: https://github.com/xchem/fragalysis.git
+Author: Rachael Skyner
+Author-email: rachael.skyner@diamond.ac.uk
+License: Apache 2.0
+Description: Fragalysis
+        ==========
+        
+        Basic RDKit based Python tools for analysis of protein-ligand interactions.
+        
+        Currently contains the following: -
+        
+        1.  Clustering - based on WONKA method - but separated from that code-base.
+            Cluster waters, residues, ligands and pharmacophores. (Under development)
+        2.  Astex Fragment Network - implementation on the basis of their recent paper
+        3.  Conformer generation code - based on known X-ray structures
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides-Extra: dev
+Provides-Extra: test
