@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        s2k=send_to_kindle.cli:download
+    
