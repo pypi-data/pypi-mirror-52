@@ -1,0 +1,3 @@
+include tfidfpackage/schema.sql
+graft tfidfpackage/static
+global-exclude *.pyc
