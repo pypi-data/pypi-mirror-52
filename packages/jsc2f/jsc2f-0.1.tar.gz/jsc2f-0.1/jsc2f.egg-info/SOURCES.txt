@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+jsc2f/__init__.py
+jsc2f/cli.py
+jsc2f/lib.py
+jsc2f.egg-info/PKG-INFO
+jsc2f.egg-info/SOURCES.txt
+jsc2f.egg-info/dependency_links.txt
+jsc2f.egg-info/entry_points.txt
+jsc2f.egg-info/requires.txt
+jsc2f.egg-info/top_level.txt
