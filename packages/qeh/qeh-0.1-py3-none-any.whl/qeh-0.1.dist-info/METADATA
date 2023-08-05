@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: qeh
+Version: 0.1
+Summary: Quantum Electrostatic Heterostructure Model
+Home-page: https://gitlab.com/camd/qeh
+Author: CAMD
+Author-email: mogje@fysik.dtu.dk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+Requires-Dist: ase
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib-programoutput ; extra == 'docs'
+
+Quantum Electrostatic Heterostructure Model
+===========================================
+The quantum electrostatic heterostructure (QEH) model is a
+fast and accurate model for simulating optical properties
+of stacks of 2D materials (heterostructures).
+
+- Documentation: https://qeh.readthedocs.io
+- Code: https://gitlab.com/camd/qeh.git
+
+
