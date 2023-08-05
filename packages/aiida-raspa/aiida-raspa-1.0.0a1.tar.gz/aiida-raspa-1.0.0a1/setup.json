@@ -1,0 +1,47 @@
+{
+    "name": "aiida-raspa",
+    "author": "Aliaksandr Yakutovich",
+    "author_email": "aliaksandr.yakutovich@epfl.ch",
+    "description": "AiiDA plugin for RASPA code",
+    "url": "https://github.com/yakutovicha/aiida-raspa",
+    "license": "MIT License",
+    "classifiers": [
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Development Status :: 4 - Beta"
+    ],
+    "version": "1.0.0a1",
+    "setup_requires": ["reentry"],
+    "install_requires": [
+        "aiida_core >= 1.0.0b5"
+    ],
+    "entry_points": {
+        "aiida.calculations": [
+            "raspa = aiida_raspa.calculations:RaspaCalculation"
+        ],
+        "aiida.parsers": [
+            "raspa = aiida_raspa.parsers:RaspaParser"
+        ],
+        "aiida.workflows": [
+            "raspa.converge = aiida_raspa.workflows:RaspaConvergeWorkChain"
+        ]
+    },
+    "reentry_register": true,
+    "data_files": [
+        [".", ["setup.json"]]
+    ],
+    "extras_require": {
+        "test": [
+            "pytest==4.4.1"
+        ],
+        "pre-commit": [
+                "pre-commit==1.16.1",
+                "yapf==0.27.0",
+                "prospector==1.1.6.2",
+                "pylint==1.9.4; python_version<'3.0'",
+                "pylint==2.2.2; python_version>='3.0'"
+        ]
+    }
+}

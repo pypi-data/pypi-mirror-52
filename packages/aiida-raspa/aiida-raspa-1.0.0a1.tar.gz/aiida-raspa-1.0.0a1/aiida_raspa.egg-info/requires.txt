@@ -1,0 +1,15 @@
+aiida_core>=1.0.0b5
+
+[pre-commit]
+pre-commit==1.16.1
+yapf==0.27.0
+prospector==1.1.6.2
+
+[pre-commit:python_version < "3.0"]
+pylint==1.9.4
+
+[pre-commit:python_version >= "3.0"]
+pylint==2.2.2
+
+[test]
+pytest==4.4.1
