@@ -1,0 +1,3 @@
+[console_scripts]
+torbjorn = torbjorn.shell:run
+
