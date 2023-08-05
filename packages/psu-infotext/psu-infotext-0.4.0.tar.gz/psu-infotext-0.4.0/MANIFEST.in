@@ -1,0 +1,5 @@
+global-exclude *.orig *.pyc *.log *.swp local_settings.py
+include README.md
+include requirements.txt
+graft psu_infotext
+graft docs
