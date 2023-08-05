@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: switter
+Version: 0.1.0
+Summary: 
+Author: michaeldel
+Author-email: michaeldel@protonmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests-html (>=0.10.0,<0.11.0)
