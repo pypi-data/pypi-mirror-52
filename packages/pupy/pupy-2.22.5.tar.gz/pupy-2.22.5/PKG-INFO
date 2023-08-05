@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: pupy
+Version: 2.22.5
+Summary: pretty useful python
+Home-page: https://github.com/jessekrubin/pupy
+License: BSD-2-Clause
+Keywords: useful,utils,tool,cli
+Author: jessekrubin
+Author-email: jessekrubin@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Provides-Extra: io
+Requires-Dist: aiofiles (>=0.4.0,<0.5.0); extra == "io"
+Requires-Dist: msgpack (>=0.6.1,<0.7.0); extra == "io"
+Requires-Dist: python-rapidjson (>=0.7.2,<0.8.0); extra == "io"
+Requires-Dist: ruamel.yaml (>=0.15.97,<0.16.0); extra == "io"
+Requires-Dist: toml (>=0.10.0,<0.11.0); extra == "io"
+Project-URL: Repository, https://github.com/jessekrubin/pupy
+Description-Content-Type: text/markdown
+
+# PUPY ~ Pretty Useful Python
+
+This package (pupy) is full of Pretty Useful Python.
+
+## These things
+
+[![Build Status](https://travis-ci.org/jessekrubin/pupy.svg?branch=master)](https://travis-ci.org/jessekrubin/pupy) 
+[![Wheel](https://img.shields.io/pypi/wheel/pupy.svg)](https://img.shields.io/pypi/wheel/pupy.svg) 
+[![Version](https://img.shields.io/pypi/v/pupy.svg)](https://img.shields.io/pypi/v/pupy.svg) 
+[![py_versions](https://img.shields.io/pypi/pyversions/pupy.svg)](https://img.shields.io/pypi/pyversions/pupy.svg) 
+ 
+
+## Installin'
+
+Installing is EZPZ...
+
+    pip install pupy
+
+### Want more???
+
+Pupy has a few optional dependenies for reading and writing files which can be installed with the following command:
+    
+    pip install pupy[io]
+
+Or you can pick and choose...
+
+If you plan on using Jason you can install `ujson` 
+
+    pip install ujson 
+    
+or `rapidjson` for a speed boost 
+
+    pip install python-rapidjson
+
+and if pupy can't find either it'll fall back on the python-stdlib json thing.
+
+But wait theres more! Pupy has several optional dependencies for savings and loads which you can install with...
+    
+    pip install ruamel.yaml  # If ya mel in your spare time
+    pip install msgpack  # If you wanna pack messages
+    pip install toml  # toml (aka 'that other markup language'(?))
+    pip install aiofiles  # if you wanna do async stuff
+
+## Testimonials
+
+*'Ahead of the curve.' -Haley who goes to Harvard*
+
+*'huh?' -Tim Apple*
+
+*'If I were stranded on a dessert island and had to pick between having a copy pupy or a thing of water I would pick the water, but if I didn't have to pick it wouldn't hurt to have.' -Ryan of the fro with his fro*
+
+*'I don't use python.' -KirstenKirsten Chief Evernote Officer*
+
+*'I can't say google wouldn't not go down if it weren't for pupy.' -Ben W from the g-suite*
+
+*'A literary masterpiece on par with my second greatest work finite jest.' -Bananas Foster Wallace*
+
+*'Best place for python savings and loads in the tri-content area.' -Genghis Khan*
+
+
+
