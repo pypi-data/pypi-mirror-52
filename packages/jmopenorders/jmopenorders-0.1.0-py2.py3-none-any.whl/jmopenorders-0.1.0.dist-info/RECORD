@@ -1,0 +1,13 @@
+jmopenorders/__init__.py,sha256=AXSKLjvY3ykX5X5WhOEaoCt68x67wDpqTeZxxqrLMOI,45
+jmopenorders/__main__.py,sha256=_xwqSQHeTHFHMLnzWjUbKaiJNV4-klI8ahdqQQCdByg,5402
+jmopenorders/openorders/__init__.py,sha256=76gxv2rxhDduaXOqGTM_RLR6W-_GCR_pLv2A8Ri1QCk,1790
+jmopenorders/openorders/cleanoutputdir.py,sha256=xem62K_KusalhDDFW5zBJOQOBH_oBYdfUdfOOZBTz9w,1942
+jmopenorders/openorders/generateorders.py,sha256=4RUDGg4m77LYOiKv5wRB3__J6GNgfs6zPhBGE87uAPc,5539
+jmopenorders/openorders/getdata.py,sha256=HgxOH1egdS6QAIAj7ch99uG_7hzWBQz41d9gryjUkfQ,2404
+jmopenorders/openorders/getserviceperson.py,sha256=22DA1NHk-Kf5CQpb6mYYiSiQqh49n47gqdLBs-IqeC0,2444
+jmopenorders-0.1.0.dist-info/LICENSE,sha256=V_tC-80LA3zlKO2PcvHsCV1nvGgl7PFEj_Ob4f5opLQ,13792
+jmopenorders-0.1.0.dist-info/METADATA,sha256=JlAOiPkkTL5Bz1Cd8nKKZVszZPTtJOkg5joYopk-5U4,3277
+jmopenorders-0.1.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+jmopenorders-0.1.0.dist-info/entry_points.txt,sha256=iqX5UL-yWosa876Y2r-2O9V2wd7wE78UAbgPI52TQQs,61
+jmopenorders-0.1.0.dist-info/top_level.txt,sha256=vf4bIlDxXoV7zSyxQvkybsHT6Gv8q_DXTJNCdIgZ3IQ,13
+jmopenorders-0.1.0.dist-info/RECORD,,
