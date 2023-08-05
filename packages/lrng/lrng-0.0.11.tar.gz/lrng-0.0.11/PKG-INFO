@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: lrng
+Version: 0.0.11
+Summary: Labeled Ranges
+Home-page: https://gitlab.com/SumNeuron/lrng
+Author: Sumner Magruder
+Author-email: sumner.magruder@zmnh.uni-hamburg.de
+License: UNKNOWN
+Description: # lrng
+        
+        A simple utility for labeled ranges
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
