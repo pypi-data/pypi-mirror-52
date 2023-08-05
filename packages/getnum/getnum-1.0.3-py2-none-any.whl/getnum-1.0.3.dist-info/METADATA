@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: getnum
+Version: 1.0.3
+Summary: get a num by random
+Home-page: https://github.com/guoyali.git
+Author: guoyali
+Author-email: 840431172@qq.com
+Maintainer-email: 840431172@qq.com
+License: BSD License
+Platform: all
+Requires-Dist: mock (>=2.0.0)
+Requires-Dist: flake8 (>=3.2.1)
+Requires-Dist: eventlet (>=0.19.0)
+Requires-Dist: nose2 (>=0.6.5)
+Requires-Dist: cov-core (>=1.15.0)
+Requires-Dist: virtualenv (>=15.1.0)
+
+UNKNOWN
+
+
