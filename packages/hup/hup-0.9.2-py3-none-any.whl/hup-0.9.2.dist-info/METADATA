@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: hup
+Version: 0.9.2
+Summary: Hup
+Home-page: https://www.frootlab.org/hup
+Author: Frootlab Developers
+Author-email: contact@frootlab.org
+License: GPLv3
+Keywords: library shared-library python-library
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs (>=1.4.1)
+Requires-Dist: pyparsing (>=2.2)
+Provides-Extra: numpy
+Requires-Dist: numpy (>=1.15) ; extra == 'numpy'
+
+Hup
+===
+
+[![Building Status](https://travis-ci.org/frootlab/hup.svg?branch=master)](https://travis-ci.org/frootlab/hup)
+[![Documentation Status](https://readthedocs.org/projects/hup/badge/?version=latest)](https://hup.readthedocs.io/en/latest/?badge=latest)
+[![PIP Version](https://badge.fury.io/py/hup.svg)](https://badge.fury.io/py/hup)
+
+**Hup** is a multi-purpose [Python](https://www.python.org/) library, which
+primarily aims to support [Frootlab](https://www.frootlab.org) projects by
+serving as a common base library. It was originally created in 2019 for the
+[Liquid Code](https://www.frootlab.org/liquid) project to separate
+[Pandora](https://www.frootlab.org/pandora) and
+[Nemoa](https://www.frootlab.org/nemoa). The majority of the provided
+modules, however, are kept generic to facilitate their application beyond
+Frootlab projects as well.
+
+Hup is free and open source software, based on the
+[Python](https://www.python.org/) programming language and actively developed at
+[Frootlab](https://www.frootlab.org).
+
+Current Development Status
+--------------------------
+
+The individual modules comprised within Hup are in
+different development stages, ranging from *Planning* to *Mature*. In case of
+doubt, the individual stages can be requested by the authors listed within the
+\_\_authors\_\_ attribute of the respective modules.
+
+Installation
+------------
+
+Comprehensive information and installation support is provided within the
+[online manual](https://hup.readthedocs.io/en/latest/). If you already have a
+Python environment configured on your computer, you can install the latest
+distributed version by using pip:
+
+    $ pip install hup
+
+Documentation
+-------------
+
+The documentation of the latest distributed version is available as an [online
+manual](https://hup.readthedocs.io/en/latest/) and for download, given in the
+formats [PDF](https://readthedocs.org/projects/hup/downloads/pdf/latest/),
+[EPUB](https://readthedocs.org/projects/hup/downloads/epub/latest/) and
+[HTML](https://readthedocs.org/projects/hup/downloads/htmlzip/latest/).
+
+Contribute
+----------
+
+Contributors are very welcome! Feel free to report bugs and feature requests to
+the [issue tracker](https://github.com/frootlab/hup/issues) provided by GitHub.
+Currently, as the Frootlab Developers team still is growing, we do not provide
+any Contribution Guide Lines to collaboration partners. However, if you are
+interested to join the team, we would be glad, to receive an informal
+[application](mailto:application@frootlab.org).
+
+License
+-------
+
+Hup is [open source](https://github.com/frootlab/pandora) and available free for
+any use under the [GPLv3 license](https://www.gnu.org/licenses/gpl.html):
+
+    Â© 2019 Frootlab Developers:
+      Patrick Michl <patrick.michl@frootlab.org>
+
+
