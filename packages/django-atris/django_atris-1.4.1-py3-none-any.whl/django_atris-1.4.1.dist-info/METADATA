@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: django-atris
+Version: 1.4.1
+Summary: Django history logging.
+Home-page: https://github.com/pbs/django-atris
+Author: Bogdan Andrei Pop
+Author-email: bpop2232@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Django (<2.3,>=1.10)
+
+Django history logger that keeps track of changes on a global level.
+
+
