@@ -1,0 +1,3 @@
+[console_scripts]
+jupytab = jupytab.__main__:main
+
