@@ -1,0 +1,1 @@
+{"extensions": {"python.details": {"document_names": {"description": "DESCRIPTION.rst"}}}, "extras": [], "generator": "bdist_wheel (0.29.0)", "metadata_version": "2.0", "name": "toolbox-geohash", "run_requires": [{"requires": ["numpy"]}], "summary": "Module to encode any coordinate on earth to an integer and back to coordinates.", "version": "0.1.0"}
