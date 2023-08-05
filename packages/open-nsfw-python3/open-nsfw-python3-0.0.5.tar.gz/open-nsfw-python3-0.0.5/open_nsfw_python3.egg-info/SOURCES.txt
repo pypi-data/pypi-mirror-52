@@ -1,0 +1,12 @@
+README.md
+setup.py
+open_nsfw_python3/LICENSE.md
+open_nsfw_python3/README.md
+open_nsfw_python3/__init__.py
+open_nsfw_python3/deploy.prototxt
+open_nsfw_python3/resnet_50_1by2_nsfw.caffemodel
+open_nsfw_python3.egg-info/PKG-INFO
+open_nsfw_python3.egg-info/SOURCES.txt
+open_nsfw_python3.egg-info/dependency_links.txt
+open_nsfw_python3.egg-info/requires.txt
+open_nsfw_python3.egg-info/top_level.txt
