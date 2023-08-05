@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: riberry-web
+Version: 0.1.1
+Summary: 
+Home-page: None
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: fastapi[all] (>=0.38.1,<0.39.0)
+Requires-Dist: riberry (>=0.10.8,<0.11.0)
