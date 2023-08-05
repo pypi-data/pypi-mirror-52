@@ -1,0 +1,8 @@
+setup.py
+pelican_htmlmin/__init__.py
+pelican_htmlmin/minify.py
+pelican_htmlmin.egg-info/PKG-INFO
+pelican_htmlmin.egg-info/SOURCES.txt
+pelican_htmlmin.egg-info/dependency_links.txt
+pelican_htmlmin.egg-info/requires.txt
+pelican_htmlmin.egg-info/top_level.txt
