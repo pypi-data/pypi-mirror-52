@@ -1,0 +1,4 @@
+protobuf>=3.9.1
+retrying>=1.2.3
+requests>=2.4.1
+requests-unixsocket>=0.2.0
