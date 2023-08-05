@@ -1,0 +1,5 @@
+[plover.command]
+space_placement_after = plover_space_config:space_placement_after
+space_placement_before = plover_space_config:space_placement_before
+space_placement_toggle = plover_space_config:space_placement_toggle
+
