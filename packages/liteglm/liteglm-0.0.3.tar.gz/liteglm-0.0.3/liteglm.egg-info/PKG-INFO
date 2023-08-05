@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: liteglm
+Version: 0.0.3
+Summary: GLM methods for robust or incremental GLM, based on Mike Kane and Bryan W. Lewis code
+Home-page: https://github.com/tuxcell/liteglm
+Author: Jose Gama
+Author-email: josephgama@yahoo.com
+License: UNKNOWN
+Description: # liteglm
+        GLM methods for robust or incremental GLM, based on Mike Kane and Bryan W. Lewis code
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
