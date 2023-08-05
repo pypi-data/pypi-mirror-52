@@ -1,0 +1,11 @@
+include *.lock
+include *.py
+include *.txt
+include *.yml
+include Dockerfile
+include LICENSE
+include Pipfile
+include tox.ini
+recursive-include Python_CI_CD_Test *.py
+recursive-include docs *.py
+recursive-include tests *.py

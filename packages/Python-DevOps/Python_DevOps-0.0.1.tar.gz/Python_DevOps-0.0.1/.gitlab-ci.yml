@@ -1,0 +1,122 @@
+image: python:3.7
+# These paths will be cached in between test runs. Very useful for reducing the build time.
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+ paths:
+  - ~/.cache/pip/
+  - venv/
+ 
+# Register any environment variables you need here.
+variables:
+ MyDocker_Container: "mycontainer"
+  #DOCKER_DRIVER: overlay2
+
+
+ 
+.before_script:
+ - python -V
+ - apt-get update -q -y
+ 
+
+stages:
+#- ver
+ - install_dependencies
+ - unit_tests
+ - build_docker
+ - run_docker
+
+.Job_ver:
+   stage: ver
+   script:
+     - python -V
+
+Job_install_dependencies:  
+    stage: install_dependencies
+     # This runs before the unit_tests task and should do any miscellaneous setup that's needed.
+    before_script:
+     - echo "install dependencies Stage"
+    
+    script:
+     - pip install -U virtualenv
+     - virtualenv venv
+     - source venv/bin/activate
+     - pip install -r requirements.txt
+    artifacts:
+    #FIRST I HAVE TO SETTING TEST TO STORE RESULT TO SUCH .XML FILE AFTER THAT KEEP IN IT IN ARTIFACT
+    # reports:
+    #  junit: rspec.xml // for unit test
+    #  codequality: some.txt //for code review
+     paths:
+      - venv/
+      - venv/bin/
+     expire_in: 60 minutes
+    
+    # The main task to run your tests.
+    # This imports the Docker image for Python. Useful so you don't have to do any Python setup manually.
+Job_unit_tests:    
+    stage: unit_tests
+    script:
+     - echo "Running unit tests…"
+     - . venv/bin/activate
+     #- flake8 --ignore W292,W391 --exclude=venv* --statistics
+     - pytest -v --cov=calculator
+
+.build-docker:
+   # Official docker image.
+  #image: docker:git #docker:latestmycontainer
+   image: docker:latest
+   stage: build_docker
+   services:
+    - docker:dind
+   before_script:
+    - docker --version
+    - docker info
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+   script:
+    #- docker build --pull -t "$CI_REGISTRY_IMAGE" .
+    #- docker push "$CI_REGISTRY_IMAGE"
+    #- docker build --pull -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
+    #- docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    - docker build --pull -t $CI_REGISTRY_IMAGE:"OKOK" .
+    - docker push $CI_REGISTRY_IMAGE:"OKOK"
+   #only:
+   # - tags
+   # - master
+ 
+.run_docker:
+  #image: docker:git
+   image: docker:latest
+   services:
+    - docker:dind
+
+   stage: run_docker
+   script:
+    - docker pull $CI_REGISTRY_IMAGE:"OKOK"
+    - docker tag $CI_REGISTRY_IMAGE:"OKOK" myimage
+    - docker run --name "$MyDocker_Container" myimage
+ 
+   after_script:
+    - docker stop "$MyDocker_Container"
+    - docker info
+   #- docker rm -f $CI_REGISTRY_IMAGE:"OKOK" myimage || true
+   #- docker rmi -f myrepo:myimage image
+
+    
+.build:
+  # Official docker image.
+   image: docker:latest
+   stage: build
+   services:
+    - docker:dind
+   before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+   script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
+    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+   except:
+    - master
+   
+
+
+  

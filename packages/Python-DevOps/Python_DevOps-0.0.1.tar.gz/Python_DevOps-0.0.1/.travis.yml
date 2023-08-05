@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.7"
+  - "3.6"
+ stages:
+  - execute
+  
+jobs:
+  include:
+    - stage: execute
+      name: "Running the Script"
+      script:
+      - echo "hi"
+      #- echo $message 
+      #- python hello-world-travis.py
+      #- echo "Run  pytest"
+      #- pytest -v --cov=calculator
