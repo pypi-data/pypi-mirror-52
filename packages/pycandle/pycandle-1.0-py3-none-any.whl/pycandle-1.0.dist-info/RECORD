@@ -1,0 +1,16 @@
+pycandle/__init__.py,sha256=Rou2V5QY3r4DJziIjZ-X5KXSLnM4qQWBverkSaVbUdI,242
+pycandle/general/__init__.py,sha256=v4-HjOLiH5tAro3_Dwo_-jMIGdW51zAIwrqydjRA6A4,55
+pycandle/general/experiment.py,sha256=eFb7cxh6XPUQNoaEojoJ7MCyXOZcex52koNjuPs0kxE,3976
+pycandle/general/tee.py,sha256=FBk_f6SvQCjogcrY9Y0GU_HptyKTvWP8HiouxWnm_V0,1072
+pycandle/general/utils.py,sha256=p4vQ9mklpXSIU1k79P_XFY83rN59lVi225vaRafTm5k,2517
+pycandle/layers/__init__.py,sha256=hafaFBNtO9UP4Z_zfDucm7ILXEN4WhQpISOKX0N3bAY,53
+pycandle/layers/conv.py,sha256=NZIa5hARQasPIO4uOQP8eET5LZMTSGpfr3EEdHID8uU,9023
+pycandle/training/__init__.py,sha256=RfAuK2UQVVtCfWG8wrWQKQN1KxKusAAmHUGtHpDDeqM,263
+pycandle/training/abstract_callback.py,sha256=YO8g9cI9wBHxO1tJWhnnNP-T7vhWDO3LpD0Fd2lCMDI,727
+pycandle/training/callbacks.py,sha256=3FPgB8dbfcD98SgFJP9TmF2WF1CTdAqJWsuqD8kddY0,10029
+pycandle/training/model_trainer.py,sha256=6COsk83x2v1OrNwcjIwvkuyJeavCU0wf0lpiu3fgRa4,9625
+pycandle-1.0.dist-info/LICENSE,sha256=AFVpUs4a5j6B5Uh05NEvBCNjvZdA_9p2-y3FEpeDmvo,1065
+pycandle-1.0.dist-info/METADATA,sha256=SbawflljMo6oFkFZbb3Wp2FluF8lbbCaS4pNGW1QSqo,1961
+pycandle-1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pycandle-1.0.dist-info/top_level.txt,sha256=roPuk2nOJs1wbY0rL2C4oRr3IvZMMRjz35cs3HS1JoY,9
+pycandle-1.0.dist-info/RECORD,,
