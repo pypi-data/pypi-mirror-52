@@ -1,0 +1,14 @@
+brainiac/__init__.py,sha256=mwLJwdUYSPHCf2OHBgWYUZiOZWNrDtWZVoLiJmg-sCk,216
+brainiac/_version.py,sha256=3EKC-olYRb47rLndTtcF7_wlBB-J173C2_rPnyfcnow,15767
+brainiac/abstract_model.py,sha256=KoMm2igUHd2qQzQ6VMGVz-3UIw8g_zdujA2BiRZmwiQ,258
+brainiac/scientist.py,sha256=RVp6sBMcIl4KQaTEY2wiWkySPWR0te2wgnJkCf8_uUU,844
+memex_client/__init__.py,sha256=mwLJwdUYSPHCf2OHBgWYUZiOZWNrDtWZVoLiJmg-sCk,216
+memex_client/_version.py,sha256=3EKC-olYRb47rLndTtcF7_wlBB-J173C2_rPnyfcnow,15767
+memex_client/abstract_model.py,sha256=KoMm2igUHd2qQzQ6VMGVz-3UIw8g_zdujA2BiRZmwiQ,258
+memex_client/scientist.py,sha256=zu0MhAOZO2AaBg6mA-AqzQT67FMx1HJ9JP_7ClGFTCo,852
+memex_client-0.0.2rc0.dist-info/AUTHORS.rst,sha256=drgzEadw1tRDRH1CWRqUjSBNIDKamq0h4FczhMdSWGo,166
+memex_client-0.0.2rc0.dist-info/LICENSE,sha256=hum8vylNR_bzT3265AFImqzD4L6eseG9UC8g_foVDyc,1077
+memex_client-0.0.2rc0.dist-info/METADATA,sha256=dRF4NS6mVbtT9ImvQDjUqC4A1KQNsdTtjopL-zd7LCM,470
+memex_client-0.0.2rc0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+memex_client-0.0.2rc0.dist-info/top_level.txt,sha256=V_9Q9VfaANVhj6EPK91VwbRIFrvlwvVQor5kYOmP4BU,13
+memex_client-0.0.2rc0.dist-info/RECORD,,
