@@ -1,0 +1,13 @@
+generic_relations/__init__.py,sha256=b6-WiVk0Li5MaV2rBnHYl104TsouINojSWKqHDas0js,22
+generic_relations/relations.py,sha256=VWVM7GTqJX99IbvcvcnHIF9JV6pZK2e1k8FwJS4M5VE,805
+generic_relations/serializers.py,sha256=YI1_WsxaSllTZpNnRNap4iCA59xiorf6MU6rCa7E7nI,3377
+generic_relations/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+generic_relations/tests/models.py,sha256=m8WNDZj7N2zhBnOn_Aer1Zj7DS62WaJub07gjv0lBPI,1472
+generic_relations/tests/test_relations.py,sha256=QmEPNzlJ_67UtQ_8O1yxNx40bbYt_tSaR22NfHOG9lk,17147
+generic_relations/tests/test_serializers.py,sha256=Pa6XgFpxXMojrCofcP50QmEMQO1ITp88xmHzIi0ArGE,2573
+generic_relations/tests/migrations/0001_initial.py,sha256=Kaz-hrZwm9nIR_72pUxnt4zYXh7oEQ-lHJgsjt1G53k,2111
+generic_relations/tests/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rest_framework_generic_relations-1.2.2.dist-info/METADATA,sha256=claaUo3Ci5yCaGHZR7ejsxpF0Pri3lfbpyDfnKHuupM,948
+rest_framework_generic_relations-1.2.2.dist-info/RECORD,,
+rest_framework_generic_relations-1.2.2.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+rest_framework_generic_relations-1.2.2.dist-info/top_level.txt,sha256=z-fWDoJPEBHsgv68znYOJQBfHcu08h-I6AnCc4Y7554,18
