@@ -1,0 +1,12 @@
+hillPeakFactorMinLength=400
+hillPeakFactor=4
+hillBatchSize=400
+hillValleyFactor=1.6
+hillMinLength=3
+hillNBoots=300
+maxBootSize=600
+noHillSplit=True
+hillPPM=10
+deisoCorr=0.8
+averagineCorr=0.5
+averagineExplained=0.5
