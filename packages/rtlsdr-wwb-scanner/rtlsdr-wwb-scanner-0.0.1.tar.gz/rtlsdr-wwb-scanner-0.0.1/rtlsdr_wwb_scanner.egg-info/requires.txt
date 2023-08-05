@@ -1,0 +1,6 @@
+numpy>=1.13
+scipy
+pyrtlsdr>=0.2.6
+tinydb
+json-object-factory
+PySide2>=5.13.1
