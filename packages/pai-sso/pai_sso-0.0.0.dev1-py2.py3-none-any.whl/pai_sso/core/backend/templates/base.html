@@ -1,0 +1,73 @@
+{% load i18n static %}{% get_current_language as LANGUAGE_CODE %}<!DOCTYPE html>
+<html lang="{{LANGUAGE_CODE}}">
+  <head>
+  {% block head %}
+    <meta charset="utf-8">
+
+    <title>{% block head_title %}Accounts{% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <link rel="icon" type="image/png" href="/static/favicon.ico">
+
+    <meta name="theme-color" content="#00bea4"/>
+    <link rel="manifest" href="{% static 'manifest.json' %}">
+
+    <!--META-->
+
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #efefef;
+        }
+    </style>
+
+
+    {% if DISABLE_JS %}
+      {% include "frontend/partials/nojs_style.html" %}
+    {% endif %}
+  
+
+  {% include "cookie_consent.html" %}
+
+  {% endblock head %}
+  </head>
+  <body>
+
+
+{% block body %}
+
+{% if DISABLE_JS %}
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+{% endif %}
+
+    {% block main %}
+    {% block content %}
+    {% endblock content %}
+    {% endblock main%}
+
+{% endblock %}
+    
+
+{% include "polyfills/custom_event_polyfill.html" %}
+
+{% include "polyfills/console_polyfill.html" %}
+
+<script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+
+{% block script %}{% endblock %}
+
+  </body>
+</html>
