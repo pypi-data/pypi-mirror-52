@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: wecolib
+Version: 1.0.7
+Summary: Quantitative trading tools for our economic liberty
+Home-page: https://github.com/onewquant/wecolib
+Author: Onew
+Author-email: seunghwan0216@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Onewquant/wecolib/archive/master.zip
+Keywords: wecolib,Wecolib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+Requires-Dist: PyAutoGUI (<=0.9.39)
+Requires-Dist: PyQt5
+Requires-Dist: SQLAlchemy
+Requires-Dist: XlsxWriter
+Requires-Dist: beautifulsoup4
+Requires-Dist: bs4
+Requires-Dist: certifi
+Requires-Dist: idna
+Requires-Dist: lxml
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: pyodbc
+Requires-Dist: pywin32
+Requires-Dist: pywinauto
+Requires-Dist: requests
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: selenium
+Requires-Dist: urllib3
+Requires-Dist: xlrd
+
+UNKNOWN
+
+
