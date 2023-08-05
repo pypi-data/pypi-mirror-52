@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: turta-relayhat2
+Version: 1.0.2
+Summary: Python Libraries for Turta Relay HAT 2
+Home-page: https://www.turta.io/relayhat
+Author: Turta LLC
+Author-email: hello@turta.io
+License: UNKNOWN
+Project-URL: Documentation, https://docs.turta.io/raspberry-pi-hats/relay-hat-2
+Project-URL: Community, https://community.turta.io
+Project-URL: GitHub Repository, https://github.com/Turta-io/RelayHAT2
+Description: # Turta Relay HAT 2 for Raspberry Pi
+        Relay HAT is a stackable, high-quality relay module for Raspberry Pi.
+        
+        ## Features
+        - 5Ch OMRON 10A Relays.
+        - Stackable design.
+        - Only uses I2C pins.
+        - Grove compatible I2C port.
+        - Optical isolation and isolation slot.
+        - Internal or external power input option.
+        - Power filter.
+        - ID EEPROM for Raspberry Pi HAT specification compliance.
+        
+        ## Documentation
+        Visit [docs.turta.io](https://docs.turta.io) for documentation.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Topic :: System :: Hardware
+Description-Content-Type: text/markdown
