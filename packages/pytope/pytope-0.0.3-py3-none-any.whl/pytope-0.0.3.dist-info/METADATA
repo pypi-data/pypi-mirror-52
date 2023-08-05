@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pytope
+Version: 0.0.3
+Summary: Polytope operations --- minimal functionality
+Home-page: https://github.com/heirung/pytope
+Author: Tor Aksel N. Heirung
+Author-email: github@torheirung.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pycddlib
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
