@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: rbnf-rts
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://github.com/thautwarm/rbnf-rts
+Author: thautwarm
+Author-email: twshere@outlook.com
+License: mit
+Platform: any
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML
+Requires-Dist: prettyprinter
+
+# rbnf-rts
+Runtime support for generated parsers of RBNF.hs
+
+
+# Native Dependencies
+
+- The Haskell Stack Toolchain
+
+- The executable `rbnf-pgen` in PATH.
+
+    If `~/.local/bin` is already in PATH:
+    ```
+    git clone https://github.com/thautwarm/RBNF.hs
+    cd RBNF.hs
+    stack install .
+    ```
+
+# Usage
+
+Check test directory:
+
+```python
+import operator
+from rbnf_rts.rbnf_prims import link, Tokens, State
+from rbnf_rts.lexical import *
+from rbnf_rts.rbnf_api import codegen
+from rbnf_rts.token import Token
+from pathlib import Path
+import tempfile
+import ast
+from subprocess import CalledProcessError
+
+grammar_file = "./grammar.rbnf"
+py_file = "./py.py"
+
+with tempfile.TemporaryDirectory() as tdir:
+    tdir = Path(tdir)
+    with (tdir / grammar_file).open("w") as f:
+        f.write("""
+Mul  ::= !lhs=<Mul> "*" !rhs=<Atom> -> mul(lhs, rhs);
+Mul  ::= !a=<Atom>                  -> a;
+Atom ::= "(" !a=<Mul> ")"           -> a;
+Atom ::= !a=number                  -> unwrap(a);
+
+TOP  ::= BOF !a=<Mul> EOF           -> a;
+    """)
+    try:
+        codegen((tdir/grammar_file), (tdir/py_file), k=1, inline=False, traceback=True)
+    except CalledProcessError as e:
+        print(e.stderr)
+        exit(0)
+        raise Exception
+
+    with (tdir / py_file).open('r') as f:
+        code = f.read()
+
+gencode = ast.parse(code)
+
+lexicals, run_lexer = lexer(
+    r(number='\d+'),
+    l["*"],
+    l(space=" "),
+    l['('],
+    l[')'],
+    ignores=['space']
+)
+
+def unwrap(x: Token):
+    return int(x.value)
+
+
+scope = link(lexicals, gencode, scope=dict(unwrap=unwrap, mul=operator.mul), filename=py_file)
+
+tokens = list(run_lexer("<current file>", "1 * 2 * (3 * 4)"))
+got = scope['parse_TOP'](State(), Tokens(tokens))
+print(got)
+```
+
+Got `(True, 24)`, where `True` indicates the parsing succeeded.
+
