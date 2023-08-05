@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ml_pipelines
+Version: 1.0.13
+Summary: Python client for ML Pipelines
+Home-page: https://github.com/bitgn/ml-pipelines
+Author: Rinat Abdullin
+Author-email: rinat@abdullin.com
+License: UNKNOWN
+Description: # BitGN MLP Client
+        
+        Python client for the BitGN Machine Learning Pipelines project.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Education
+Description-Content-Type: text/markdown
