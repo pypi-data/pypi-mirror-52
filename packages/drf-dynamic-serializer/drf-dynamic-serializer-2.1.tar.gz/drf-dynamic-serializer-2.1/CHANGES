@@ -1,0 +1,24 @@
+Release 2.1
+-----------
+*
+
+Release 2.0
+-----------
+* BACKWARD INCOMPATIBLE
+* Removes DynamicField*
+* Raise Exception if wrong serializer
+* new DynamicSerializer create on the fly serializer with user selected fields
+
+
+Release 1.2
+-----------
+* removed pinned requirements
+
+Release 1.1
+-----------
+* allow `field=None` and `exclude=None` in serializer_factory
+
+
+Release 1.0
+-----------
+* Initial release
