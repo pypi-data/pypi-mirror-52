@@ -1,0 +1,3 @@
+[console_scripts]
+easymodels = charlagui.__main__:start
+

@@ -1,0 +1,13 @@
+README.md
+setup.py
+CharlaGUI.egg-info/PKG-INFO
+CharlaGUI.egg-info/SOURCES.txt
+CharlaGUI.egg-info/dependency_links.txt
+CharlaGUI.egg-info/entry_points.txt
+CharlaGUI.egg-info/requires.txt
+CharlaGUI.egg-info/top_level.txt
+charlagui/__init__.py
+charlagui/__main__.py
+charlagui/gui/__init__.py
+charlagui/utils/__init__.py
+charlagui/utils/parser.py
