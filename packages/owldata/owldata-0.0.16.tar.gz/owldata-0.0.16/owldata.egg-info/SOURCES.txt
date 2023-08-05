@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+owldata/__init__.py
+owldata/__version__.py
+owldata/_owlerror.py
+owldata/_owltime.py
+owldata/api.py
+owldata/config.py
+owldata.egg-info/PKG-INFO
+owldata.egg-info/SOURCES.txt
+owldata.egg-info/dependency_links.txt
+owldata.egg-info/requires.txt
+owldata.egg-info/top_level.txt
