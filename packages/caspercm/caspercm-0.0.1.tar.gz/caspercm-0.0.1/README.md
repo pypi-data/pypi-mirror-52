@@ -1,0 +1,57 @@
+# Purpose
+Allow JupyterLab user to save content to Oracle Object Storage.
+
+# 3 Steps to Config
+
+## Step 1: Install this package
+```
+# You may want to install it in the virtualenv you created for your JupyterLab
+pip install caspercm
+```
+
+## Step 2: Config your jupyterlab
+```
+# Edit your jupyterlab config file
+# e.g. vi ~/.jupyter/jupyter_notebook_config.py
+# add following
+
+from caspercm import JupyterCasperCM
+c.NotebookApp.contents_manager_class = JupyterCasperCM
+c.NotebookApp.JupyterCasperCM.fstab = '/root/.oci/fstab.json'
+```
+
+The example above shows your fstab.json is located at `/root/.oci/fstab.json`, it can be placed other places as well.
+
+## Step 3: Config your fstab.json
+Here is an example of fstab.json
+```
+{
+    "/": {
+        "namespace": "bmcdw",
+        "bucket": "beta_jupyterlab_notebook",
+        "prefix": "stonezhong/",
+        "api_config": "/root/.oci/config"
+    },
+    "/public": {
+        "namespace": "bmcdw",
+        "bucket": "beta_jupyterlab_notebook",
+        "prefix": "public/",
+        "api_config": "/root/.oci/config"
+    }
+}
+```
+* Your notebooks root directory (aka `/`) is at `stonezhong/` of bucket `beta_jupyterlab_notebook` in oci namespace `bmcdw`
+* Your notebooks directory `/public` is at `public/` of bucket `beta_jupyterlab_notebook` in oci namespace `bmcdw`
+* For each mount point, told system your oci config is at `/root/.oci/config`
+
+Here is how `/root/.oci/config` looks like: (the content is just an example, secret part has been altered)
+```
+[DEFAULT]
+key_file=/root/.oci/oci_api_key.pem
+region=us-phoenix-1
+tenancy=ocid1.tenancy.oc1..xyz
+user=ocid1.user.oc1..xyz
+fingerprint=00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+```
+
+Note, it points to key file `/root/.oci/oci_api_key.pem` which shuold exist.
