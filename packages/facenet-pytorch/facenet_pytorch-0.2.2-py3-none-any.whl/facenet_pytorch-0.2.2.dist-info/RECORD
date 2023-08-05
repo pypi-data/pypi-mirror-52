@@ -1,0 +1,15 @@
+facenet_pytorch/__init__.py,sha256=vNg-9M5hmaOoNlEiJaQTPqODWtjVUzsUXCkDVwteWcc,205
+facenet_pytorch/data/onet.pt,sha256=Flv75ClAQWzPuXdUXPDpdtW_Mh9nCDriqqpcdkKAEY0,1559269
+facenet_pytorch/data/pnet.pt,sha256=oqcZJeC5mWpC9j5H78HKGQQ-aVWLXFI7l41hHfrknI8,28570
+facenet_pytorch/data/rnet.pt,sha256=u7k33nLvye-DsYbEn19VhGeh1-NFOo7ODXGohmM_aoY,403147
+facenet_pytorch/models/inception_resnet_v1.py,sha256=lNxcOJWCxJgOZYUczvLWTGpjPibAx_jF0l3XM00OOCw,11260
+facenet_pytorch/models/mtcnn.py,sha256=Ro3w5NclzVObQ5Ocsyw8iKbM-Iok951hadDEdx0eALc,12111
+facenet_pytorch/models/utils/detect_face.py,sha256=jXBDoAdpKnFjtA0dL5vy4zVOyyj0o7WgnG9k_ln0AZw,9963
+facenet_pytorch/models/utils/example.py,sha256=MqT--prtZHtLY_Rc-x4pHwJiyq3FcZqLXZfyYtVg2Bw,1899
+facenet_pytorch/models/utils/tensorflow2pytorch.py,sha256=FlK9dZ13RYgMqjetOZOWJ8Z_vmsrl6p_k2AiqyQEAq8,16090
+facenet_pytorch/models/utils/training.py,sha256=R_IaKXwrA43DWQuzZvieTwyhZPVeY-Oaoj1eSyVqIEQ,4949
+facenet_pytorch-0.2.2.dist-info/LICENSE.md,sha256=n6xXgeFSn03RoEVxbhhZQ2A40t754QjRAbbfIMWhExg,1070
+facenet_pytorch-0.2.2.dist-info/METADATA,sha256=PhPN-_ukJZwOXGE5wrEPAGftHCK1bJ85Plg6I2krWsg,8775
+facenet_pytorch-0.2.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+facenet_pytorch-0.2.2.dist-info/top_level.txt,sha256=4aQ4VHtnQRKS8Fxa7omifaPDlbgpEH6CCSto3X6ibGo,16
+facenet_pytorch-0.2.2.dist-info/RECORD,,
