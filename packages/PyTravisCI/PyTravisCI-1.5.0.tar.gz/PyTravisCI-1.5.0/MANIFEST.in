@@ -1,0 +1,11 @@
+graft PyTravisCI
+graft tests
+
+recursive-include docs *.rst Makefile *.bat *.py
+include .coveragerc
+include .pylintrc
+include LICENSE
+include README.rst
+include requirements.txt
+
+global-exclude *.py[co]
