@@ -1,0 +1,3 @@
+[console_scripts]
+imdbwho = imdbwho.__main__:main
+

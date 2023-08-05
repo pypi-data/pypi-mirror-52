@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+imdbwho/Console.py
+imdbwho/IMDB.py
+imdbwho/__init__.py
+imdbwho/__main__.py
+imdbwho.egg-info/PKG-INFO
+imdbwho.egg-info/SOURCES.txt
+imdbwho.egg-info/dependency_links.txt
+imdbwho.egg-info/entry_points.txt
+imdbwho.egg-info/requires.txt
+imdbwho.egg-info/top_level.txt
