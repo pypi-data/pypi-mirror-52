@@ -1,0 +1,12 @@
+biopython
+cffi
+dill
+h5py==2.7.1
+intervaltree
+tensorflow==1.14.0
+numpy==1.16.1
+mappy
+parasail
+pysam==0.15.2
+pyyaml==5.1
+whatshap==0.18
