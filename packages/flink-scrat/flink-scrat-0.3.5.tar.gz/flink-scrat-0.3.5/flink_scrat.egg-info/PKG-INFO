@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: flink-scrat
+Version: 0.3.5
+Summary: Python client to deploy flink applications to remote clusters via the flink cluster API
+Home-page: https://github.com/Cobliteam/flink-scrat
+Author: Nicolau Tahan
+Author-email: tech@cobli.co
+License: MIT
+Download-URL: https://github.com/Cobliteam/flink-scrat/archive/0.3.5.tar.gz
+Description: UNKNOWN
+Keywords: flink deploy emr aws
+Platform: UNKNOWN
