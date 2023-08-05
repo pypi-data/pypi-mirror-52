@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: snakipy
+Version: 0.0.1
+Summary: Snake
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Gabriel Kabbe
+Author-email: gabriel.kabbe@mail.de
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: abc_algorithm
+Requires-Dist: numpy
+Requires-Dist: fire
+Requires-Dist: tqdm
