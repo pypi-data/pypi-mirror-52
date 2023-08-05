@@ -1,0 +1,10 @@
+README.md
+setup.py
+dictionary_navigator/__init__.py
+dictionary_navigator/navigator.py
+dictionary_navigator.egg-info/PKG-INFO
+dictionary_navigator.egg-info/SOURCES.txt
+dictionary_navigator.egg-info/dependency_links.txt
+dictionary_navigator.egg-info/top_level.txt
+tests/__init__.py
+tests/navigator_test.py
