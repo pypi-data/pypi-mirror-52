@@ -1,0 +1,3 @@
+[console_scripts]
+svmodp = svmodule.cli:main
+
