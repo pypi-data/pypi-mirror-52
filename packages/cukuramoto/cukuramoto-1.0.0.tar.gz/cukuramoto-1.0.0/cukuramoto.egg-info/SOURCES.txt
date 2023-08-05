@@ -1,0 +1,15 @@
+.gitignore
+MANIFEST.in
+README.md
+img.png
+setup.py
+wrapper.pyx
+cukuramoto.egg-info/PKG-INFO
+cukuramoto.egg-info/SOURCES.txt
+cukuramoto.egg-info/dependency_links.txt
+cukuramoto.egg-info/not-zip-safe
+cukuramoto.egg-info/requires.txt
+cukuramoto.egg-info/top_level.txt
+src/kernel.cu
+src/manager.cu
+src/manager.hh
