@@ -1,0 +1,4 @@
+[console_scripts]
+telegram-tui = telegramtui.__main__:main
+telegramtui = telegramtui.__main__:main
+
