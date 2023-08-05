@@ -1,0 +1,15 @@
+quart
+hypercorn==0.7.2
+h11~=0.8.1
+requests
+PyYAML
+jinja2
+flask-log-request-id
+structlog
+cryptography
+jsonschema
+datadog
+cachelib
+schedule
+pydantic
+glom
