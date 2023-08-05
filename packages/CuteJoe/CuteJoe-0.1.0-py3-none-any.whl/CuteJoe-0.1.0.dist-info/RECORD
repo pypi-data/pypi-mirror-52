@@ -1,0 +1,16 @@
+cutejoe/__init__.py,sha256=DQotWH-j1lq1cSdgOsbYDcSQhiYN0y3-U5g5Bys9VgM,217
+cutejoe/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cutejoe/commands/changelog.py,sha256=D5-kAMyFaKPCTHMLNX_VJS5wC7zx_OQwmHgTHyR0m6c,2091
+cutejoe/commands/config_file.py,sha256=_CfNPYMs--xZtjhdk8uK9ik9EXLpcUVX2ZBzSdMJVjI,669
+cutejoe/helpers/__init__.py,sha256=fxhfv0Csj6TaZgIE0HX8WDgb6N9bmUq5UQgqPjbaC_g,112
+cutejoe/helpers/changelog.py,sha256=3jFryF8LA2OcYJExBoGrJOeaBwynEbsDpoVJE9koGtc,3052
+cutejoe/helpers/utils.py,sha256=ORl7RYmwKT1nvBO0wmmPQO5sMtCR-SD_Xqh7KVLif-4,1465
+cutejoe/helpers/configurations/__init__.py,sha256=MHTujT6SQxEGqWk7IiAvJU1tlbb4ku1WFOe1PRg12Bw,156
+cutejoe/helpers/configurations/base.py,sha256=jJlFC7hipM3G6q6lHxtyiUQozB3Suk2mBpjsE9Ab0_Y,1649
+cutejoe/helpers/configurations/config_v1.py,sha256=09lHWpHKTJsAKKNB1cHaruxjPkL-5uKracGag3-DMtA,806
+CuteJoe-0.1.0.dist-info/LICENSE,sha256=a083gDWzp7lfRzTcRqsLLbHt28La8USQC8kRxyVEidE,1070
+CuteJoe-0.1.0.dist-info/METADATA,sha256=2XNundxt-Ngd8D8bz17vhO-fEGBoFaAj6IBMcbwyoRc,4559
+CuteJoe-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+CuteJoe-0.1.0.dist-info/entry_points.txt,sha256=D68ZWZTYrnDlS4B0hi3_djDXSPXqiBC83rE5lOdm3Qw,41
+CuteJoe-0.1.0.dist-info/top_level.txt,sha256=v-EhdeCZddSMOOFd0qCg43pguxHSd9F-tbfwSXSgpKI,8
+CuteJoe-0.1.0.dist-info/RECORD,,
