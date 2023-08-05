@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+src/ddns_for_aws.egg-info/PKG-INFO
+src/ddns_for_aws.egg-info/SOURCES.txt
+src/ddns_for_aws.egg-info/dependency_links.txt
+src/ddns_for_aws.egg-info/entry_points.txt
+src/ddns_for_aws.egg-info/requires.txt
+src/ddns_for_aws.egg-info/top_level.txt
+src/ddnsaws/__init__.py
+src/ddnsaws/ddnsaws.py
+src/ddnsaws/getmyip.py
+src/ddnsaws/setddns.py
