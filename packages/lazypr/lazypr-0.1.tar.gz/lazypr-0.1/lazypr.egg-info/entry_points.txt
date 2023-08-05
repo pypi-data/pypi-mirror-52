@@ -1,0 +1,3 @@
+[console_scripts]
+lazypr = lazypr.main:main
+
