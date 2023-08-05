@@ -1,0 +1,31 @@
+Test package .
+==================
+
+Introduction
+-------------
+This is a command line game test pkg. ignore.
+
+Documentation
+--------------
+Documentation can be found at...
+
+Example Usage
+--------------
+Here is an example to import the modules from this package.
+
+.. code:: python
+
+    from modularize.attackoftheorcs import attackoftheorcs
+    game = AttackOfTheOrcs()
+    game.play()
+
+Contributing
+------------
+To contribute...
+
+LICENSE
+-------
+See LICENSE.txt file.
+
+
+
