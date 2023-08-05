@@ -1,0 +1,11 @@
+README.rst
+setup.py
+mvgavg/__init__.py
+mvgavg/main.py
+mvgavg/mvgavg.py
+mvgavg/version.py
+mvgavg.egg-info/PKG-INFO
+mvgavg.egg-info/SOURCES.txt
+mvgavg.egg-info/dependency_links.txt
+mvgavg.egg-info/requires.txt
+mvgavg.egg-info/top_level.txt
