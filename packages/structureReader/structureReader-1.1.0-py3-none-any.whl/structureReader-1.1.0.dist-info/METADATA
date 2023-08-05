@@ -1,0 +1,147 @@
+Metadata-Version: 2.1
+Name: structureReader
+Version: 1.1.0
+Summary: Simple static structure parser
+Home-page: UNKNOWN
+Author: gibartes
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# structureReader
+C-style structure reader for data parsing with python 
+
+## Python package dependency
+Nothing
+
+*****
+# The Description about StructureReader Class
+
+## StructureReader Class
+
+### Static methods
+* byte2int(data,order='little')
+  - 기본 설정은 리틀 엔디안이며, 바이트 값을 정수형으로 변환한다. 
+* align(data,word)
+  - 정렬에 사용할 패딩 바이트 수를 리턴한다.
+* sizeof(structure)
+  - 구조체의 크기를 계산한다.
+* read_value(structure,field)
+  - 구조체 필드 값을 반환한다.
+* read_field_size(structure,field)
+  - 구조체 필드의 사이즈를 반환한다.
+* read_field_offset(structure,field)
+  - 구조체 필드의 오프셋을 반환한다.
+* generate(field,offset,size)
+  - Field 이름, Offset 정보, Size 정보를 가지고 새 구조체를 생성한다. 세 파라미터의 길이는 모두 같아야한다.
+* sprint(structure,endian='little')
+  - 구조체 형태를 출력한다.
+* parse_as_byte(structure,text,offset=0,order='big)
+  - 주어진 구조체 형식대로 offset에서부터 구조체 크기만큼 바이너리 텍스트를 읽는다.
+* parse_as_int(structure,offset=0,order='big')
+  - 주어진 구조체 형식대로 offset에서부터 구조체 크기만큼 바이너리 텍스트를 읽는다. 구조체 값에는 정수로 변환되어 저장된다.
+* take(structure,text,offset=0,option='byte',order='big')
+  - parse_as_byte메소드와 parse_as_int 메소드의 래퍼 메소드이다. option에 'int'를 주면 구조체 값에는 정수로 변환되어 저장된다.
+* parse(structure,text,offset=0,option='byte',order='big)
+  - 주어진 구조체 형식대로 offset에서부터 구조체 크기만큼 바이너리 텍스트를 읽는다. option에 'int'를 주면 구조체 값에는 정수로 변환되어 저장된다. 첫번째 인자 structure는 [Structure,Cursor,Flag] 형식으로 구성되어야한다. Structure는 구조체이며, Cursor는 다음 차시에 읽을 오프셋 값, Flag는 파싱 결과를 가지고 있다. 이 함수는 새 구조체 객체를 생성하지 않으므로 데이터 저장에 사용할 구조체 객체를 미리 선언할 필요가 있다.
+```python
+    from structureReader import structureReader as sr
+
+    ...
+    header  = sr._MFTEntryHeader()
+    cursor  = 1024
+
+    pair    = [header.MFTEntryHeader,cursor,False]
+    sr.StructureReader.parse(pair,buffer,cursor,'int')
+    if(pair[2]==True):
+        sr.StructureReader.sprint(pair[0])
+    ...
+
+```
+### General methods
+* get_file_handle(path,base=0,mode=0)
+  - mode가 0이면 일반형식으로 0이 아니면 바이너리형식으로 파일을 연다.
+* cleanup()
+  - StructureReader 객체를 정리한다. 이 메소드를 호출하면 열러진 모든 파일을 닫는다.
+* get_size()
+  - 현재 매핑된 구조체 크기를 얻는다.
+* tell()
+  - 현재 열린 파일 커서 위치를 반환한다.
+* btell()
+  - 현재 열린 바이너리 파일 커서 위치를 반환한다.
+* goto(offset=0,mode=os.SEEK_CUR)
+  - 파일 커서를 mode 기준으로 offset만큼 이동한다.
+* bgoto(offset=0,mode=os.SEEK_CUR)
+  - 바이너리 파일 커서를 mode 기준으로 offset만큼 이동한다.
+* execute(structure,option='byte',offset=0,mode=os.SEEK_CUR,order='big')
+  - 파일을 mode 기준으로 offset에서 structure의 사이즈만큼 option 형식으로 structure에 따라 읽는다. byte모드는 각 필드 값이 byte로 저장되고, int모드로 읽으면 각 필드 값은 int로 변환된다.
+* bexecute(structure,option='byte',offset=0,mode=os.SEEK_CUR,order='big')
+  - 바이너리 파일을 mode 기준으로 offset에서 structure의 사이즈만큼 option 형식으로 structure에 따라 읽는다. byte모드는 각 필드 값이 byte로 저장되고, int모드로 읽으면 각 필드 값은 int로 변환된다.
+* read_raw(self,offset,size,mode=os.SEEK_CUR,order='big')
+  - 파일을 구조체 없이 mode 기준으로 offset에서 size만큼 읽는다.
+* bread_raw(self,offset,size,mode=os.SEEK_CUR,order='big')
+  - 바이너리 파일을 구조체 없이 mode 기준으로 offset에서 size만큼 읽는다.
+* read(structure,option='byte',offset=0,mode=os.SEEK_SET,order='big')
+  - execute 메소드와 bexecute 메소드의 래퍼 메소드이다. 현재 열려진 파일이 바이너리 모드이면 bexecute 함수를 호출하고, 그렇지 않으면 execute 메소드를 호출한다.
+* get_value(self,field)
+  - 현재 구조체의 field에 있는 값을 반환한다. 
+* get_field_size(self,field)
+  - 현재 구조체의 field 크기를 반환한다.
+* get_field_offset(self,field)
+  - 현재 구조체의 field의 오프셋을 반환한다.
+* copy()
+  - 현재 구조체의 파싱한 결과를 반환한다.
+* print()
+  - 파싱 결과를 출력한다.
+* fsize()
+  - 현재 객체 내에 열린 파일의 크기를 계산한다.
+* size
+  - 현재 객체 내에 열린 파일의 크기를 튜플 형태로 반환한다. 첫번째 항은 일반 파일의 크기이고, 두번째 항은 바이너리 파일의 크기를 나타낸다. 
+*****
+## Example
+```python
+    from structureReader import structureReader as sr
+
+    if __name__ == '__main__':
+        parser  = sr.StructureReader()
+        header  = sr._MFTEntryHeader()
+
+        """ Generate Structure """
+        field  = ["version","signature","unknown","size","name","hash","flag"]
+        offset = [ 0, 4, 8,12,16,76,80]
+        size   = [ 4, 4, 4,60, 4, 4, 4]
+
+        SCCA = sr.StructureReader.generate(field,offset,size)
+
+        """ Sample Code """
+        ret = parser.get_file_handle("0xcbac000.MFT",0,1)
+        if(ret!=sr._StructureReaderConstant.SUCCESS):
+            exit(ret)
+
+        parser.fsize()
+
+        while(1):
+            parser.read(header.MFTEntryHeader,'int',0,os.SEEK_CUR)
+            if(parser.flag==False):
+                break
+
+            parser.bgoto(1024-parser.sizeof(header.MFTEntryHeader))
+            parser.print()
+
+            if(parser.btell()>=parser.size[1]):
+                break
+
+        parser.cleanup()
+        exit(ret)
+```
+
+
