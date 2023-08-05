@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        evolv=evolvcli.cli:cli
+    
