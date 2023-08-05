@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+examples/GCA_000027325.1_ASM2732v1_protein.faa
+examples/GCA_000027325.1_ASM2732v1_protein.faa.Sillero.png
+examples/GCA_000027325.1_ASM2732v1_protein.faa.pI.txt
+examples/GCA_000027325.1_ASM2732v1_protein.faa.png
+examples/NC_010473_Ecoli.faa
+isoelectric/__init__.py
+isoelectric/ipc.py
+isoelectric.egg-info/PKG-INFO
+isoelectric.egg-info/SOURCES.txt
+isoelectric.egg-info/dependency_links.txt
+isoelectric.egg-info/top_level.txt

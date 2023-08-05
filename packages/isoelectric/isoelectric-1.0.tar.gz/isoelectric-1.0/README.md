@@ -1,0 +1,157 @@
+
+**IPC** `is a program (available also as web service at isoelectric.org) for the accurate estimation of protein and peptide
+isoelectric point (pI) using  Henderson-Hasselbach equation and pKa sets.`
+
+It allows you to compute theoretical pI using 16 pKa sets (for individual references see http://isoelectric.org/theory.html)
+
+**IPC** introduce also two new computationally optimized pKa sets. They were benchmarked against 14 different pKa sets and 
+3 pI prediction programs on two protein databases (2,324 proteins) and three peptide datasets (16,882 peptides).
+
+Program is written in Python programing language and thus it should be able to run it on any operating system.
+
+**AUTHOR**:         Lukasz Pawel Kozlowski, lukaszkozlowski.lpk@gmail.com
+**COPYRIGHTS**:     Lukasz Pawel Kozlowski
+**LICENCE**:        PUBLIC DOMAIN http://isoelectric.org/license.txt
+
+## How to cite:
+Kozlowski LP (2016) IPC - Isoelectric Point Calculator. Biology Direct 11:55. doi: http://dx.doi.org/10.1186/s13062-016-0159-9
+
+## INSTALLATION:
+wget http://isoelectric.org/ipc.zip;
+unzip ipc.zip; # sudo apt-get install unzip (if not present)
+cd ipc;
+sudo python setup.py install
+
+## USAGE:
+python ipc.py <fasta_file> <pKa set> <output_file> <plot_file>
+
+ipc <fasta_file> <pKa set> <output_file> <plot_file> (if installed into system using setup.py)
+``` 
+<fasta_file>    protein sequence(s) in fasta format, see ./examples
+<pKa set>       one from pKa sets which will be used to calculate pI, default 'ALL' (report pI using all models)
+                valid options are:
+                        'ALL', 'IPC_protein', 'IPC_peptide',
+                        'Bjellqvist', 'Dawson', 'Grimsley', 
+                        'Toseland', 'EMBOSS', 'Kozlowski', 
+                        'DTASelect', 'Wikipedia', 'Rodwell', 
+                        'Patrickios', 'Sillero', 'Thurlkill', 
+                        'Solomon', 'Nozaki_Tanford', 
+                        'Lehninger', 'ProMoST'
+                
+<output_file>   output of the program with pI predicted using selected model(s), default name <fasta_file>.pI.txt
+<plot_file>     virtual 2D-PAGE scatter plot (molecular weight vs. isoelectric point) represented as heat map, 
+                this option is available only if numpy and matplotlib and scipy are installed  
+```              
+E.g. ipc ./examples/NC_010473_Ecoli.faa ALL out.txt out.png
+
+The result should be following files located in the <fasta_file> directory:
+- NC_010473_Ecoli.faa.pI.txt with predictions
+- NC_010473_Ecoli.faa.png with virtual 2D-PAGE scatter plot
+
+Please note that this exemplary command will predict isoelectric point using all pKa sets for the whole E.coli proteome
+(4218 proteins). Nevertheless, it should be done in ~5 seconds.
+
+Please, follow the order of input files and parameters. Intentionally, IPC does not use optparse or argparse as those 
+packages are different for different version of python. And their names also may change in future.
+
+
+Additionally, IPC can be used interactively in python shell:
+``` 
+from isoelectric import ipc
+help(ipc)
+``` 
+---
+Help on module ipc:
+
+NAME
+    ipc
+
+FILE
+    /home/lukaskoz/IPC_standalone_version/ipc.py
+
+### FUNCTIONS
+    calculate_molecular_weight(seq)
+        molecular weight
+    
+    check_additional_libraries()
+        check libraries for plotting
+    
+    error_information()
+        information how to run IPC script
+    
+    fasta_reader(fasta_string)
+        reads fasta file and return table [ [head1, seq1], [head2, seq2], ...]
+        it is endure for all  errors like: multiple line for sequence, white spaces etc.
+    
+    ipc_author_information()
+        add information about IPC
+    
+    make_heat_map(mw_tab, pI_tab, fasta_file, input_pKa_set)
+        virtual 2D-PAGE scatter plot, heat map
+    
+    predict_isoelectric_point(sequence, input_pKa_set)
+        accurate estimation of protein and peptide isoelectric point (pI) 
+        using Henderson-Hasselbach equation and pKa sets
+    
+    predict_isoelectric_point_ProMoST(seq)
+        Calculate isoelectric point using ProMoST model
+
+### DATA
+    __author__ = 'Lukasz Pawel Kozlowski'
+    __copyrights__ = 'Lukasz Pawel Kozlowski'
+    __email__ = 'lukaszkozlowski.lpk@gmail.com'
+    __licence__ = 'http://isoelectric.org/licence.txt'
+    __webserver__ = 'http://isoelectric.org'
+    aaDict = {'Ala': 'A', 'Arg': 'R', 'Asn': 'N', 'Asp': 'D', 'Asx': 'B', ...
+    acidic = ['D', 'E', 'C', 'Y']
+    basic = ['K', 'R', 'H']
+    promost = {'C': [8.0, 8.28, 9.0], 'D': [3.57, 4.07, 4.57], 'E': [4.15,...
+    promost_mid = {'A': [7.58, 3.75], 'B': [7.46, 3.57], 'C': [8.12, 3.1],...
+    sample_protein_sequence = 'MKKMQSIVLALSLVLVAPMAAQAAEITLVPSVKLQIGDRDNRG...
+    scales = {'Bjellqvist': {'C': 9.0, 'Cterm': 3.55, 'D': 4.05, 'E': 4.45...
+
+### AUTHOR Lukasz Pawel Kozlowski
+
+``` 
+In [1]: import ipc
+In [2]: ipc.scales.keys()
+Out[2]: 
+['DTASelect',
+ 'IPC_protein',
+ 'Lehninger',
+ 'Bjellqvist',
+ 'Toseland',
+ 'Wikipedia',
+ 'Grimsley',
+ 'Patrickios',
+ 'Rodwell',
+ 'Solomon',
+ 'IPC_peptide',
+ 'Sillero',
+ 'Dawson',
+ 'EMBOSS',
+ 'Nozaki',
+ 'Thurlkill']
+
+In [3]: sequence = ipc.sample_protein_sequence
+
+In [4]: sequence
+Out[4]: 'MKKMQSIVLALSLVLVAPMAAQAAEITLVPSVKLQIGDRDNRGYYWDGGHWRDHGWWKQHYEWRGNRWHLHGPPPPPRHHKKAPHDHHGGHGPGKHHR'
+
+In [5]: ipc.predict_isoelectric_point_ProMoST(sequence)
+Out[5]: 10.159912109374998
+
+In [6]: ipc.predict_isoelectric_point(sequence)
+Out[6]: 9.779560546874999
+
+In [7]: ipc.predict_isoelectric_point(sequence, 'IPC_protein')
+Out[7]: 9.779560546874999
+
+In [8]: ipc.predict_isoelectric_point(sequence, 'IPC_peptide')
+Out[8]: 10.569521484375
+
+In [9]: ipc.predict_isoelectric_point(sequence, 'EMBOSS')
+Out[9]: 10.774326171875
+
+...
+``` 
