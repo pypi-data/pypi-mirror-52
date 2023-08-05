@@ -1,0 +1,11 @@
+BeautifulSauce/__init__.py,sha256=cDtCfQg1jlCt6XnhB3Np3u7WK3w4yw0ZleO1UfD0yVs,83
+BeautifulSauce/css_attrs.csv,sha256=FbCXW6U1T3mF5gAGUlD-y0HEwJeqsQfhhSmi1zCIXVM,1976
+BeautifulSauce/featurizer.py,sha256=bPu9-mwPb8zcv-5RkLDCGXD1QLgIqtcXMKvUYl1EraI,6961
+BeautifulSauce/sauce.py,sha256=llGXfKCmc2Z8bfKuE-KWnjEFHZxwnShdRom_0k0CqCs,3373
+BeautifulSauce-0.0.7.dist-info/METADATA,sha256=X8s5SiX4L_ERPW3ifEJoZmMouiX1SHjAW8CelXsAAiw,867
+BeautifulSauce-0.0.7.dist-info/RECORD,,
+BeautifulSauce-0.0.7.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+BeautifulSauce-0.0.7.dist-info/top_level.txt,sha256=I992rlOygu3KVj6r2AiiIrpVSPOpakZoRpkLT9NuVIY,21
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_featurizer.py,sha256=6AE_y0QALymo0WewNlqUuBoNsNiPxR6fZoHzan0FmdE,4696
+tests/test_sauce.py,sha256=7QRe_E7nIFz7qy2LXdSClXK7r6VcMs2SVQ4gv5gXYWY,2280
