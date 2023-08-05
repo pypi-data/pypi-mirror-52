@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: barfoo
+Version: 0.1.0
+Summary: Foo bar? No, bar foo!
+Home-page: https://github.com/gilbertohasnofb/barfoo
+Author: Gilberto Agostinho
+Author-email: gilbertohasnofb@gmail.com
+License: MIT
+Description: barfoo
+        ======
+        
+        yadda yadda
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
