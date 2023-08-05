@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: masciitable
+Version: 1.0.0
+Summary: MXCHIP ASCII Table Convertor
+Home-page: https://github.com/smartsnow/masciitable
+Author: Snow Yang
+Author-email: yangsw@mxchip.com
+License: UNKNOWN
+Description: # MXCHIP ASCII Table Convertor
+        
+        This tool is written by [Snow Yang](yangsw@mxchip.com) for MXCHIP IoT module developer to convert excel table to ASCII format.
+        
+        The source code is at here: https://github.com/smartsnow/masciitable
+Keywords: MXCHIP ASCII Table Convertor
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+masciitable/__init__.py
+masciitable/main.py
+masciitable.egg-info/PKG-INFO
+masciitable.egg-info/SOURCES.txt
+masciitable.egg-info/dependency_links.txt
+masciitable.egg-info/entry_points.txt
+masciitable.egg-info/requires.txt
+masciitable.egg-info/top_level.txt
