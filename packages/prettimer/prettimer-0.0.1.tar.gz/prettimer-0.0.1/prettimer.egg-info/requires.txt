@@ -1,0 +1,8 @@
+
+[dev]
+pytest==5.0.1
+Sphinx==1.8.2
+sphinx_rtd_theme==0.4.2
+numpydoc==0.8.0
+check-manifest==0.39
+twine==1.13

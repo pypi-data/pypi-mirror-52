@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+prettimer/__init__.py
+prettimer/logutils.py
+prettimer.egg-info/PKG-INFO
+prettimer.egg-info/SOURCES.txt
+prettimer.egg-info/dependency_links.txt
+prettimer.egg-info/requires.txt
+prettimer.egg-info/top_level.txt
