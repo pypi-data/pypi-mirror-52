@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: video_facenet
+Version: 0.1.0
+Summary: Face detection/embeding/clustering for video using TensorFlow
+Home-page: https://github.com/act-labs/video_facenet/
+Maintainer: act7labs
+Maintainer-email: act7labs@gmail.com
+License: MIT
+Description: Face detection/embeddings/clustering for video  files using Google's FaceNet deep neural network & TensorFlow.
+Platform: UNKNOWN
