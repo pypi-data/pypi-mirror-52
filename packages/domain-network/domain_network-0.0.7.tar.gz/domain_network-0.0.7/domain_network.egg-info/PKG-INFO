@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: domain-network
+Version: 0.0.7
+Summary: Makes a network out of a URLs in a dataset of tweets
+Home-page: https://git.science.uu.nl/research-it-support/domain_network
+Author: Research-IT support
+Author-email: p.zahedi@uu.nl
+License: UNKNOWN
+Description: # Domain Network
+        A package to create a domain network of the URLs mentioned in a dataset of texts. 
+        In the current version it works for tweets. It may process any kind of text in the future versions.
+        ##Installation
+        The easiest way to install the domain_network package is to use the following command in a terminal:
+        ``` bash
+        pip install -i https://test.pypi.org/simple/ domain-network
+        
+        ```
+        ##Usage
+        
+        ##
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
