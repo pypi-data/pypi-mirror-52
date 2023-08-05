@@ -1,0 +1,3 @@
+[console_scripts]
+bumprevision-1 = bumprevision.bump:main
+

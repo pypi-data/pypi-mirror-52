@@ -1,0 +1,12 @@
+setup.py
+bumprevision/__init__.py
+bumprevision/bump.py
+bumprevision/revision.py
+bumprevision/vcshelper/__init__.py
+bumprevision/vcshelper/githelper.py
+bumprevision/vcshelper/mercurialhelper.py
+bumprevision_1.egg-info/PKG-INFO
+bumprevision_1.egg-info/SOURCES.txt
+bumprevision_1.egg-info/dependency_links.txt
+bumprevision_1.egg-info/entry_points.txt
+bumprevision_1.egg-info/top_level.txt
