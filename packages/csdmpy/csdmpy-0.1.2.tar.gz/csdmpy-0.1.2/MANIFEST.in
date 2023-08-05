@@ -1,0 +1,11 @@
+
+include README.md
+include LICENSE
+include CHANGELOG
+recursive-include csdmpy/tests/*
+include requirements.txt
+# include CITATION
+
+recursive-include docs *
+
+global-exclude *.pyc *.o
