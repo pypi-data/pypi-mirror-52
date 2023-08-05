@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vtwirp
+Version: 0.0.3
+Summary: Verloop twirp server
+Home-page: UNKNOWN
+Author: Piyush
+Author-email: piyush@verloop.io
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: ujson
+Requires-Dist: requests
+Requires-Dist: verloopcontext
+
+UNKNOWN
+
+
