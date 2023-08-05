@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: langlab
+Version: 0.1.1
+Summary: Programming Language Laboratory
+Home-page: https://github.com/grnydawn/langlab
+Author: Youngsung Kim
+Author-email: grnydawn@gmail.com
+License: MIT
+Description: langlab : A base package for multiple programming language research tools.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Code Generators
