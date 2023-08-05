@@ -1,0 +1,13 @@
+README.rst
+setup.py
+tavolo/__init__.py
+tavolo/embeddings.py
+tavolo/learning.py
+tavolo/normalization.py
+tavolo/seq2seq.py
+tavolo/seq2vec.py
+tavolo.egg-info/PKG-INFO
+tavolo.egg-info/SOURCES.txt
+tavolo.egg-info/dependency_links.txt
+tavolo.egg-info/requires.txt
+tavolo.egg-info/top_level.txt
