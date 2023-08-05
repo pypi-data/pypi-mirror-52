@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+masc.py
+setup.py
+amuse_masc.egg-info/PKG-INFO
+amuse_masc.egg-info/SOURCES.txt
+amuse_masc.egg-info/dependency_links.txt
+amuse_masc.egg-info/requires.txt
+amuse_masc.egg-info/top_level.txt
+src/amuse/ext/masc/__init__.py
+src/amuse/ext/masc/binaries.py
+src/amuse/ext/masc/cluster.py
