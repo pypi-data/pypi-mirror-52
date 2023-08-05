@@ -1,0 +1,14 @@
+trio_run_in_process/__init__.py,sha256=krb1JNQ7DfmrJea2EQrgDMdf51ap1BLQSmwfaBEGsjc,223
+trio_run_in_process/_child.py,sha256=XnEW780O7NEaxKx0_Age3ZWfXXZ6r2U3MZFHhTv_FeM,3667
+trio_run_in_process/_utils.py,sha256=WlQKRb4A7IRvuGHfzne6FdE3QcFlBaovTLUeQHSOyFo,2046
+trio_run_in_process/abc.py,sha256=T57m9UAtJaTLrS5N2Q7VKHXSUufnIjf1wyBtZixZyRg,2199
+trio_run_in_process/exceptions.py,sha256=fsCOsGvvH8vbK_Xj545_Ev1nzdhTuoOzB4ogSnJJ3b4,170
+trio_run_in_process/process.py,sha256=VkyiojWLCkhEXb8dZhAgVzQXbbYCsiNTkEQ9m882RQY,5208
+trio_run_in_process/run_in_process.py,sha256=GvEhGINA-GEor9FiXLsMaSbf7fYAFY6q9_EV9wW4iTE,6788
+trio_run_in_process/state.py,sha256=IzpzE1VkoT2k90DbPzWf50BEvLRDqLE5vrFucc3KTtY,894
+trio_run_in_process/typing.py,sha256=8_EL5AQ4zwIYvLHpMnKAUoZI-n9MZdW3MUPjsB5xWZY,57
+trio_run_in_process-0.1.0a1.dist-info/LICENSE,sha256=cM36Yl4EdfyKjk6yN6mo39G3XAYuucKNjjwoeh6tKuI,1090
+trio_run_in_process-0.1.0a1.dist-info/METADATA,sha256=lsAHRKeKU6ckkyvo6-UjNfSO0UGuRW_m8o_BCmBZHr4,5822
+trio_run_in_process-0.1.0a1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+trio_run_in_process-0.1.0a1.dist-info/top_level.txt,sha256=6OVsgnHiMSz-t51COyKb69rK9R9gbBQh6PfYkfyqhWM,20
+trio_run_in_process-0.1.0a1.dist-info/RECORD,,
