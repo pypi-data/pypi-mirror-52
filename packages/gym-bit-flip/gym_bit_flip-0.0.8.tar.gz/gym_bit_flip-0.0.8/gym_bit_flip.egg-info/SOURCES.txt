@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+gym_bit_flip/__init__.py
+gym_bit_flip/bit_flip.py
+gym_bit_flip.egg-info/PKG-INFO
+gym_bit_flip.egg-info/SOURCES.txt
+gym_bit_flip.egg-info/dependency_links.txt
+gym_bit_flip.egg-info/requires.txt
+gym_bit_flip.egg-info/top_level.txt
