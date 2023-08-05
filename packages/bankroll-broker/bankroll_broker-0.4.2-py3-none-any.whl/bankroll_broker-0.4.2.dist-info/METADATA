@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: bankroll-broker
+Version: 0.4.2
+Summary: Brokerage plugin interface
+Home-page: https://github.com/bankroll-py/bankroll-broker
+Author: Justin Spahr-Summers
+Author-email: justin@jspahrsummers.com
+License: MIT
+Keywords: trading investing finance portfolio
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+Requires-Dist: bankroll-model (~=0.4.0)
+
+# bankroll-broker [![PyPI version](https://badge.fury.io/py/bankroll-broker.svg)](https://badge.fury.io/py/bankroll-broker) [![CircleCI](https://circleci.com/gh/bankroll-py/bankroll-broker.svg?style=svg&circle-token=e6296f2cf190b21eb0362b41cde7797aa583eb47)](https://circleci.com/gh/bankroll-py/bankroll-broker)
+
+This library defines an abstract interface representing a brokerage and its capabilities, decoupling tools which want to consume brokerage data from implementations of the brokerage APIs themselves.
+
+This library is part of the [bankroll](https://github.com/bankroll-py) project.
+
+
