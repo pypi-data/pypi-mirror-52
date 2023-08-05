@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+NOTICE
+README.md
+setup.cfg
+setup.py
+cloudwatch_fluent_metrics.egg-info/PKG-INFO
+cloudwatch_fluent_metrics.egg-info/SOURCES.txt
+cloudwatch_fluent_metrics.egg-info/dependency_links.txt
+cloudwatch_fluent_metrics.egg-info/top_level.txt
+fluentmetrics/__init__.py
+fluentmetrics/buffer.py
+fluentmetrics/metric.py
+tests/__init__.py
+tests/test_buffer.py
+tests/test_metric.py
