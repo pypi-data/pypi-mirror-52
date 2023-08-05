@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: py-ztj-aria2client
+Version: 0.0.1
+Summary: python aria2client package
+Home-page: http://github.com/ztj1993/PythonPackages/blob/master/py_aria2rpc
+Author: ZhangTianJie
+Author-email: ztj1993@gmail.com
+License: MIT License
+Keywords: aria2 client rpc start stop service
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: py-ztj-aria2local
+Requires-Dist: py-ztj-aria2rpc
+
+# Python Aria2 客户端模块
+
+### 说明
+这是一个 aria2 客户端模块。
+
+## 安装
+```
+pip install py-ztj-aria2client
+```
+
+### 使用
+```
+from py_aria2client.aria2client import Aria2Client
+
+client = Aria2Client()
+
+print(client.check_state())
+```
+
+
