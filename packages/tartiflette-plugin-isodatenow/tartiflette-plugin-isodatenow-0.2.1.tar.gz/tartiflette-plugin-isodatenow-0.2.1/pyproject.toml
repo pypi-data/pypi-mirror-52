@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "tartiflette-plugin-isodatenow"
+version = "0.2.1"
+description = "ISO Date Formatter for Tartiflette"
+authors = ["Ben Riggleman <ben.riggleman@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/briggleman/tartiflette-plugin-isodate"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+keywords = [
+    "api",
+    "graphql",
+    "tartiflette",
+    "iso8601",
+    "directive"
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+tartiflette = "^0.12.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "=5.0.1"
+xenon = "=0.5.5"
+pytest-asyncio = "=0.10.0"
+black = "=18.9b0"
+isort = "=4.3.4"
+freezegun = "^0.3.12"
+pylint = "^2.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
