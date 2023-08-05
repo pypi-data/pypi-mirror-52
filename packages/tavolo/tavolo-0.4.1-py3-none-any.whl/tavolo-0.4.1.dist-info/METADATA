@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tavolo
+Version: 0.4.1
+Summary: Collection of deep learning modules and layers for the TensorFlow framework
+Home-page: https://github.com/eliorc/tavolo
+Author: Elior Cohen
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Requires-Dist: numpy
+
+UNKNOWN
+
+
