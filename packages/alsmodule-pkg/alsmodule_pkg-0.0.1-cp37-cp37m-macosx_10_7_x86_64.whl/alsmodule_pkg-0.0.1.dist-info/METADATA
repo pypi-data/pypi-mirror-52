@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: alsmodule-pkg
+Version: 0.0.1
+Summary: A simple module to access ambient light sensors samples on Mac OS X
+Home-page: UNKNOWN
+Author: Jean-Jacques Puig
+Author-email: jjp-pypi@espci.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Ambient Light Sensor (ALS) Package
+# Copyright (C) 2019 Jean-Jacques Puig
+
+This module implements a trivial interface to access ambient light sensors
+available on some Apple computers (iMac...).
+
+Usage is very simple; the 'als' module exports only one module method,
+getSensorReadings(), which returns raw samples values as a list of two (Long)
+integers.
+
+import als
+print(als.getSensorReadings())
+
+
