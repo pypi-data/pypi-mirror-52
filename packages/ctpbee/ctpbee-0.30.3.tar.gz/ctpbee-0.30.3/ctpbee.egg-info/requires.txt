@@ -1,0 +1,7 @@
+flask>=1.1.1
+blinker
+dataclasses
+requests
+simplejson
+lxml
+pandas
