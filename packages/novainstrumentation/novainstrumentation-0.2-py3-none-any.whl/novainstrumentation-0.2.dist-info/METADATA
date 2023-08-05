@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: novainstrumentation
+Version: 0.2
+Summary: Supporting code for Digital Instrumentation class at Universidade Nova de Lisboa.
+Home-page: https://github.com/hgamboa/novainstrumentation
+Author: hgamboa
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+UNKNOWN
+
+
