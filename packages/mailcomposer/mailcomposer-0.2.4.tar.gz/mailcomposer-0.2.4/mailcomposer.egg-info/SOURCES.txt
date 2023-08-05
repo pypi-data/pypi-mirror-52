@@ -1,0 +1,15 @@
+README.md
+setup.py
+mailcomposer/__init__.py
+mailcomposer/__main__.py
+mailcomposer/base.py
+mailcomposer/dummy.py
+mailcomposer/exceptions.py
+mailcomposer/outlook.py
+mailcomposer/thunderbird.py
+mailcomposer/util.py
+mailcomposer/xdg_email.py
+mailcomposer.egg-info/PKG-INFO
+mailcomposer.egg-info/SOURCES.txt
+mailcomposer.egg-info/dependency_links.txt
+mailcomposer.egg-info/top_level.txt
