@@ -1,0 +1,33 @@
+---
+- hosts: undercloud
+  vars:
+    metadata:
+      name: Check if ceph-ansible is installed on the undercloud
+      description: >
+        Prints a message if ceph-ansible isn't installed
+      groups:
+        - pre-deployment
+    fail_without_ceph_ansible: false
+  tasks:
+  - include_tasks: tasks/deprecation.yaml
+  - name: Check if ceph-ansible is installed
+    shell: rpm -q ceph-ansible || true
+    args:
+      warn: no
+    changed_when: False
+    ignore_errors: True
+    register: ceph_ansible_installed
+
+  - name: Warn about missing ceph-ansible
+    warn:
+      msg: If planning to use Ceph, it is necessary to install the ceph-ansible package on the undercloud
+    when:
+      - ceph_ansible_installed.stdout.find('is not installed') != -1
+      - not fail_without_ceph_ansible|default(false)|bool
+
+  - name: Fail if ceph-ansible is missing
+    fail:
+      msg: If planning to use Ceph, it is necessary to install the ceph-ansible package on the undercloud
+    when:
+      - ceph_ansible_installed.stdout.find('is not installed') != -1
+      - fail_without_ceph_ansible|default(false)|bool

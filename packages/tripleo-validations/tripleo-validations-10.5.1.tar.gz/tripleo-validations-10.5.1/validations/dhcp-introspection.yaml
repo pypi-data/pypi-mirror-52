@@ -1,0 +1,37 @@
+---
+- hosts: undercloud
+  become: true
+  vars:
+    metadata:
+      name: DHCP on the Introspection Network
+      description: >
+        An unexpected DHCP server on the network used for node
+        introspection can cause some nodes to not be inspected.
+
+        This validations checks for the DHCP responses on the
+        interface specified in ironic-inspector.conf.
+      groups:
+        - pre-introspection
+      ironic_inspector_conf: "/var/lib/config-data/puppet-generated/ironic_inspector/etc/ironic-inspector/inspector.conf"
+  tasks:
+  - include_tasks: tasks/deprecation.yaml
+
+  - name: Look up the introspection interface
+    become: True
+    ini:
+      path: "{{ ironic_inspector_conf }}"
+      section: iptables
+      key: dnsmasq_interface
+    register: interface
+
+  - name: Look up the introspection interface from the deprecated option
+    become: True
+    ini:
+      path: "{{ ironic_inspector_conf }}"
+      section: firewall
+      key: dnsmasq_interface
+    register: interface_deprecated
+
+  - name: Look for rogue DHCP servers
+    script: files/rogue_dhcp.py {{ interface.value or interface_deprecated.value or 'br-ctlplane' }}
+    changed_when: False
