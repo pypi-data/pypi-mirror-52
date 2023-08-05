@@ -1,0 +1,3 @@
+[console_scripts]
+mooda = mooda.cli:main
+
