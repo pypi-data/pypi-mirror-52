@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: rltime
+Version: 0.1.2
+Summary: RLtime is a reinforcement learning library focused on state-of-the-art q-learning algorithms and features
+Home-page: UNKNOWN
+Author: Opher Lieber
+Author-email: opherlie@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: gym
+Requires-Dist: cloudpickle
+Requires-Dist: opencv-python
+
+
+RLtime is a reinforcement learning library, currently supporting PyTorch, with focus on state-of-the-art q-learning algorithms and features, and interacting with real-time environments which require low-latency acting and sample-efficient training.
+The latest code and instructions can be found here:
+https://github.com/opherlieber/rltime
+
+
