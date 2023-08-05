@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+# export DH_VERBOSE=1
+export PYBUILD_NAME=amethyst-core
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+## Sample package: python-backports.functools-lru-cache
+override_dh_python2:
+	dh_python2 --namespace amethyst
