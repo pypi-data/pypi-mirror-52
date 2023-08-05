@@ -1,0 +1,4 @@
+[console_scripts]
+cvcreate = cvcreator.cvcreate:main
+txt2yaml = cvcreator.txt2yaml:main
+
