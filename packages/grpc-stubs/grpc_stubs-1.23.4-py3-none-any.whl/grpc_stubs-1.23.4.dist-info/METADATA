@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: grpc-stubs
+Version: 1.23.4
+Summary: Mypy stubs for gRPC
+Home-page: https://github.com/shabbyrobe/grpc-stubs
+Author: Blake Williams
+Author-email: code@shabbyrobe.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: mypy (>=0.720)
+Requires-Dist: typing-extensions
+Requires-Dist: grpcio
+
+gRPC Typing Stubs for Python
+============================
+
+This is a PEP-561-compliant stub-only package which provides type information of
+`gRPC <https://grpc.io>`_.
+
+Install using pip::
+
+    pip install grpc-stubs
+
+
+
+
