@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+from gitz import git_functions
+from gitz.program import PROGRAM
+from gitz.program import git
+
+SUMMARY = 'Push a sequence of commit IDs to a remote repository'
+
+HELP = """
+Starting with a given commit ID, and moving backwards from there,
+push each commit ID to its own disposable branch name.
+
+Useful to bring these commits to the attention of your CI if has missed some of
+your commit IDs because you rebased or pushed a sequences of commits too fast.
+"""
+
+EXAMPLES = """
+Assume the current branch is master:
+
+git stripe
+    Pushes HEAD~, HEAD~2 and HEAD~3 into their own branches named
+    _gitz_stripe_master_0, _gitz_stripe_master_1
+    and _gitz_stripe_master_2
+
+git stripe --delete
+git stripe -d
+    Delete any branches named _gitz_stripe_master_0,
+    _gitz_stripe_master_1 and _gitz_stripe_master_2.
+
+    git-stripe -d does not fail if some or all of the branches
+    to be deleted are missing
+
+git stripe --base-branch=BBBB
+git stripe -b=BBBB
+    Pushes HEAD~, HEAD~2 and HEAD~3 into their own branches named
+    BBBB_0, BBBB_1, BBBB_2
+
+git stripe --count=2 --base-branch=BBBB
+git stripe -c=2 -b=BBBB
+    Pushes HEAD~ and HEAD~2 into their own branches named BBBB_0
+    and BBBB_1
+"""
+
+PREFIX = '_gitz_stripe_'
+BAD_BRANCH_CHARS = frozenset('~^: ')
+_STRIPE_FMT = '{self.commit_id}~{i_offset}:refs/heads/{branch}'
+
+
+def git_stripe():
+    Stripe().stripe()
+
+
+class Stripe:
+    def __init__(self):
+        self.remote_branches = git_functions.remote_branches()
+        args = PROGRAM.args
+        commit_id, count = args.commit_id, args.count
+
+        if len(count) >= 7 or not count.isnumeric():
+            commit_id, count = count, commit_id
+
+        try:
+            self.count = int(count)
+        except ValueError:
+            PROGRAM.exit('Cannot understand count:', count)
+
+        self.commit_id = commit_id or 'HEAD~'
+        if not git_functions.commit_id(self.commit_id, short=True):
+            PROGRAM.exit('Cannot resolve to a commit ID:', self.commit_id)
+
+        if BAD_BRANCH_CHARS.intersection(args.prefix):
+            PROGRAM.exit(_ERROR_BRANCH_NAME, args.prefix)
+
+        self.prefix = args.prefix
+        if not self.prefix.startswith('_'):
+            self.prefix = '_' + self.prefix
+
+        self.remotes = list(self._remotes())
+        self.indexes = range(args.offset, args.offset + self.count)
+
+    def stripe(self):
+        args = PROGRAM.args
+        if args.delete:
+            if args.delete_all:
+                PROGRAM.exit(_ERROR_DELETE)
+            self._delete()
+
+        elif args.delete_all:
+            self._delete_all()
+
+        else:
+            self._stripe()
+
+    def _delete(self):
+        deleted = []
+        for i in self.indexes:
+            branch = '%s%d' % (self.prefix, i)
+            refspec = ':refs/heads/' + branch
+            for remote in self.remotes:
+                if branch in self.remote_branches[remote]:
+                    git.push(remote, refspec, quiet=True)
+                    deleted.append('%s/%s' % (remote, branch))
+
+        PROGRAM.log.message('Deleted', *deleted)
+
+    def _stripe(self):
+        args = PROGRAM.args
+        if not args.force:
+            branches = {self.prefix + str(i) for i in self.indexes}
+            remote_branches = set()
+            for remote in self.remotes:
+                remote_branches.update(self.remote_branches[remote])
+
+            existing = sorted(branches.intersection(remote_branches))
+            if existing:
+                PROGRAM.exit('Cannot overwrite existing', *existing)
+
+        for i in self.indexes:
+            branch = '%s%d' % (self.prefix, i)
+            i_offset = i - args.offset
+            refspec = _STRIPE_FMT.format(**locals())
+            force = git_functions.force_flags()
+
+            striped = []
+            for remote in self.remotes:
+                git.push(*force, remote, refspec, quiet=True)
+                striped.append('%s/%s' % (remote, branch))
+
+            id = git_functions.commit_id(striped[0], short=True)
+            PROGRAM.log.message('Created', branch, id)
+
+    def _remotes(self):
+        for remote in PROGRAM.args.remotes.split(':'):
+            if remote == '^':
+                try:
+                    yield git_functions.upstream_branch()[0]
+                except Exception:
+                    PROGRAM.exit('Branch has no upstream remote')
+            elif remote == '.' or remote in self.remote_branches:
+                yield remote
+            else:
+                PROGRAM.exit('Unknown remote', remote)
+
+    def _delete_all(self):
+        for remote in self.remotes:
+            for branch in self.remote_branches[remote]:
+                if branch.startswith(self.prefix):
+                    git.push(remote, ':refs/heads/' + branch, quiet=True)
+                    PROGRAM.log.message('Deleted', '%s/%s' % (remote, branch))
+
+
+def add_arguments(parser):
+    add = parser.add_argument
+
+    add('count', default='3', nargs='?', help=_HELP_COUNT)
+    add('commit_id', default='', nargs='?', help=_HELP_COMMIT_ID)
+
+    add('-D', '--delete-all', action='store_true', help=_HELP_DELETE_ALL)
+    add('-d', '--delete', action='store_true', help=_HELP_DELETE)
+    add('-f', '--force', action='store_true', help=_HELP_FORCE)
+    add('-o', '--offset', default=0, type=int, help=_HELP_OFFSET)
+    add('-p', '--prefix', default=PREFIX, help=_HELP_PREFIX)
+    add('-r', '--remotes', default='^', help=_HELP_REMOTE)
+
+
+_ERROR_BRANCH_NAME = 'Illegal character in branch name'
+_ERROR_DELETE = 'Cannot set both of -d/--delete and -D/--delete-all'
+
+_HELP_COMMIT_ID = 'Branch/commit ID of the first stripe (or HEAD~ if none)'
+_HELP_COUNT = 'The number of stripe branches to be created'
+_HELP_DELETE = 'Delete the striped branches for this request'
+_HELP_DELETE_ALL = 'Delete all striped branches'
+_HELP_FORCE = 'Force push over existing stripes'
+_HELP_PREFIX = 'Base name for stripe branches (autogenerated if none)'
+_HELP_OFFSET = 'Offset to start numbering stripes'
+_HELP_REMOTE = (
+    'One or more remote remotes to push to, separated by colon. '
+    '  "." means the local repo, "^" means the upstream repo'
+)
+
+if __name__ == '__main__':
+    PROGRAM.start()

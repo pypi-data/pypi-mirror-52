@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+from gitz import git_functions
+from gitz.program import PROGRAM
+from gitz.program import git
+
+SUMMARY = (
+    'Rotate the current branch forward or backward in the list of branches'
+)
+
+HELP = """
+Change the current branch by rotating through all the branches for
+this repo in the order given by the `git branch` command
+"""
+
+EXAMPLES = """
+git rotate
+    Rotate to the next branch
+
+git rotate 3
+    Rotate 3 branches ahead
+
+git rotate -1
+git rotate -
+    Rotate 1 branch backward
+"""
+
+
+def git_rotate():
+    args = PROGRAM.args
+    git_functions.check_clean_workspace()
+    if args.steps == '-':
+        steps = -1
+    else:
+        try:
+            steps = int(args.steps)
+        except ValueError:
+            PROGRAM.exit('steps must be an integer, not', args.steps)
+
+    branches = git_functions.branches()
+    pos = branches.index(git_functions.branch_name()) + steps
+    git.checkout(branches[pos % len(branches)])
+
+
+def add_arguments(parser):
+    parser.add_argument('steps', nargs='?', default='1', help=_HELP_STEPS)
+
+
+_HELP_STEPS = 'Number of steps to rotate (positive or negative)'
+
+if __name__ == '__main__':
+    PROGRAM.start()

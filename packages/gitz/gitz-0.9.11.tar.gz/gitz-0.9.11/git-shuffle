@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+from gitz import combine
+from gitz import git_functions
+from gitz.program import PROGRAM
+
+SUMMARY = 'Reorder and delete commits in the existing branch'
+
+DANGER = 'Rewrites history!'
+
+HELP = """
+Shuffles the current sequence of commits, perhaps deleting some.
+"""
+
+EXAMPLES = """
+git shuffle
+git shuffle ba
+git shuffle 10
+git shuffle 21
+    Switches the first and second commit
+
+git shuffle ab
+git shuffle 01
+git shuffle 12
+    Do nothing
+
+git shuffle 312
+git shuffle cab
+git shuffle zxy
+    Cycles the first three commits so the third one is first
+
+git shuffle __321_
+    Deletes the first two commits, reverses the next three, and
+    deletes one more.
+
+git shuffle __321_ -s "Commit message"
+git shuffle __321_ --squash="Commit messager"
+    Deletes the first two commits, reverses the next three, squashes them
+    into one, and deletes one more.
+"""
+
+
+def git_shuffle():
+    git_functions.check_clean_workspace()
+    shuffle, unchanged = combine.shuffle(PROGRAM.args.shuffle)
+    if not shuffle:
+        PROGRAM.message('No change')
+        return
+
+    shuffle = ['HEAD~%d' % i for i in reversed(shuffle)]
+    combine.combine(PROGRAM.args, *shuffle)
+
+    shuffled = len(shuffle) - 1
+    if shuffled:
+        s = '' if shuffled == 1 else 's'
+        PROGRAM.message(shuffled, 'commit%s shuffled' % s)
+
+    deleted = len(PROGRAM.args.shuffle) - shuffled - unchanged
+    if deleted:
+        s = '' if deleted == 1 else 's'
+        PROGRAM.message(deleted, 'commit%s deleted' % s)
+
+
+def add_arguments(parser):
+    add_arg = parser.add_argument
+    add_arg('shuffle', help='Pattern string to shuffle')
+    combine.add_arguments(parser)
+
+
+if __name__ == '__main__':
+    PROGRAM.start()
