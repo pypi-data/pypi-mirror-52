@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+appstoreconnectapi/__init__.py
+appstoreconnectapi/app.py
+appstoreconnectapi.egg-info/PKG-INFO
+appstoreconnectapi.egg-info/SOURCES.txt
+appstoreconnectapi.egg-info/dependency_links.txt
+appstoreconnectapi.egg-info/requires.txt
+appstoreconnectapi.egg-info/top_level.txt
