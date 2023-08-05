@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+django_ief/__init__.py
+django_ief/fields.py
+django_ief/urls.py
+django_ief/views.py
+django_ief.egg-info/PKG-INFO
+django_ief.egg-info/SOURCES.txt
+django_ief.egg-info/dependency_links.txt
+django_ief.egg-info/requires.txt
+django_ief.egg-info/top_level.txt
+django_ief/static/django_ief/ckeditor.js
+django_ief/templates/editor.html
+django_ief/templatetags/__init__.py
+django_ief/templatetags/ief_permission.py
