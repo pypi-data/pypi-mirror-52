@@ -1,0 +1,321 @@
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Mar 13 11:13:28 2019 -0700
+
+    Limit retries in delegate_request().
+    
+    If we continuously fail to pass a request to a child, give up after a
+    certain number of attempts (30).  Otherwise, delegate_request() will
+    never return.  If this happens, something is seriously wrong with the
+    SCGI application but it seems slightly better to start dropping incoming
+    requests in that case rather than never making progress.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Mar 13 11:02:00 2019 -0700
+
+    Improve exception handling in Child.process().
+    
+    Since Python 3.5, EINTR is no longer returned to user code.  So, remove
+    handling of it.  In Python 3, socket.error is OSError.  So, use OSError
+    directly rather than socket.error.
+    
+    If an exception occurs inside Child.process(), close the connection to
+    the child.  That will cause the child to exit and be reaped.  The
+    previous behavior of raising an exception from process() could cause the
+    master SCGI process to exit in some cases.  We want to avoid that.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jan 18 11:49:27 2018 -0800
+
+    Update version to 2.0b1, Python 3 only.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Jun 24 18:06:14 2016 +0000
+
+    If available, inherit listening socket.
+    
+    Use LISTEN_PID environment variable to determine if we should
+    inherit the listening socket (i.e. from systemd).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Jun 7 20:16:18 2016 +0000
+
+    Ignore errors from socket.shutdown().
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu May 26 20:21:17 2016 +0000
+
+    Fix bug in child cleanup, need real list, not iterator.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu May 26 17:34:10 2016 +0000
+
+    Create a new server that provides session affinity.
+    
+    Add a new module session_server.py.  The default server tries to run
+    a minimal number of worker processes and passes requests to the
+    workers in the order they have been started.  This new server peeks
+    at the HTTP session cookie and associates a worker process with each
+    session.  There are advantages to each approach.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu May 26 16:28:43 2016 +0000
+
+    Explicity call shutdown() on socket.
+    
+    This prevents the TCP connection from staying open if for some
+    reason the reference count on the socket file descriptor doesn't go
+    to zero (e.g. a forked child that inherits it).
+    
+    Move close() for the connection out of handle_connection() and do it
+    in the caller.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed May 25 16:43:11 2016 +0000
+
+    Update Apache module version to 2.0a1.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed May 25 16:42:42 2016 +0000
+
+    Port Apache module to 2.4 (patch from Debian).
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed May 25 16:39:45 2016 +0000
+
+    Remove Apache 1.x module, it is obsolete.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Apr 1 20:52:24 2016 +0000
+
+    Changes to support Python 3.
+    
+    Thanks to Robert Ladyman <it@file-away.co.uk> for implementing
+    most of these changes.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Feb 4 16:01:28 2016 -0800
+
+    Close unneeded file handles in child processes.
+    
+    Previous fix from Mark as not quite right, we need to close
+    fds even if 'conn' is None.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Dec 10 12:23:38 2015 -0800
+
+    Update version numbers for 1.15 release.
+
+Author: Mark Lightfoot <moog@gmx.it>
+Date:   Sun Aug 25 08:29:50 2013 -0600
+
+    Improve comments.
+
+Author: Mark Lightfoot <moog@gmx.it>
+Date:   Sun Aug 25 08:26:33 2013 -0600
+
+    Close unwanted file descriptors.
+    
+    In scgi_server.py, spawn_child() is called at startup to start the
+    first child and also from delegate_request() when more children are
+    needed. In the latter case, the parameter 'conn' is passed to
+    spawn_child() so that the newly-created child knows to close the
+    file descriptor it has inherited but doesn't need.
+    
+    The bug is that in the latter case the new child also inherits
+    various other file descriptors which are not similarly closed,
+    namely the Unix sockets to its elder siblings, and the TCP listener
+    socket.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Nov 30 15:16:52 2009 -0600
+
+    Improve Apache 2 mod_scgi error messages.
+    
+    If the connection is aborted while sending the response, log an
+    error but don't generate an internal server error. This can happen
+    if the client closes the connection before the entire response has
+    been read. There's nothing the server can do about it.
+    
+    When an error occurs while reading the response headers, don't
+    log an error since ap_scan_script_header_err_brigade() has already
+    done so.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Nov 21 17:02:23 2009 -0600
+
+    Update version numbers for v1.14 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Tue Oct 27 17:06:12 2009 -0600
+
+    Improve logic for reaping dead child processes.
+    
+    Simply the logic for reaping dead children. This also fixes some
+    corner case bugs related to signal handling.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Jul 20 11:16:23 2009 -0600
+
+    Properly handle interrupted system calls while doing a restart.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Thu Jul 9 21:35:42 2009 -0600
+
+    Drop GIL when passing file descriptors.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sat Aug 9 18:12:22 2008 -0600
+
+    Add target to build multi-architecture mod_scgi for Mac OS.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Jun 11 17:40:47 2008 -0600
+
+    Send Content-Length provided by client, rather than r->remaining.
+    
+    This new approach is simpler and appears to solve a bug that shows
+    up on OS X Leopard.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Sun Apr 6 15:01:08 2008 -0600
+
+    Generate CHANGES.txt from git log.
+    
+    Generate CHANGES.txt using "git log" instead of manually maintaining
+    it.  Improve README text.  Update version numbers to 1.13.
+
+Author: Daniel Rall <dlr@finemaltcoding.com>
+Date:   Wed Mar 26 15:20:39 2008 -0600
+
+    Fix error message typo in passfd.c.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 25 11:29:37 2007 -0600
+
+    Remove duplicated text from Apache error messages.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Feb 7 11:29:04 2007 -0600
+
+    Ensure that PATH_INFO is correct even with mod_rewrite
+    
+    mod_rewrite can modify r->path_info.  One way this could happen is if
+    the path being served by SCGI exists on the filesystem.  Ensure that
+    PATH_INFO is correct.  Thanks to David Binger for point out the fix.
+
+Author: Jeroen T. Vermeulen <jtv@thaiopensource.org>
+Date:   Wed Feb 7 11:28:22 2007 -0600
+
+    Add guide.html.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Aug 25 17:43:42 2006 -0600
+
+    Provide CMSG_* macros if they are missing.
+    
+    Some platforms don't provide them.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Aug 25 17:25:48 2006 -0600
+
+    Preserve original os.environ dictionary.
+    
+    Also, make some formatting tweaks.
+
+Author: Jeroen T. Vermeulen <jtv@thaiopensource.org>
+Date:   Fri Aug 25 15:50:39 2006 +0700
+
+    Document produce() and produce_cgilike()
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Aug 25 15:29:50 2006 +0700
+
+    Remove unnecessary os.putenv() call.
+    
+    Calling os.putenv() is not necessary since os.environ alone will do
+    the job.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri Aug 25 13:41:38 2006 +0700
+
+    Add more friendly overridable methods in SCGIHandler.
+    
+    Optional, more user-friendly overridable methods in SCGIHandler: produce() and
+    produce_cgilike().  Overriding handle_connection() will still work, but
+    overriding produce() instead takes a lot of the household activities
+    (reading CGI variables, opening socket for reading/writing, cleanup) out
+    of the application's hands.
+    
+    Another alternative, produce_cgilike(), makes things even easier (at
+    least for some uses): it can read its message body from stdin and write
+    its output from stdout, and get its CGI parameters from its set of
+    environment variables.
+    
+    Thanks to Jeroen Vermeulen <jtv@thaiopensource.org> for code and ideas.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Wed Aug 23 20:42:07 2006 -0600
+
+    Add some pypi information.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 14 15:49:04 2006 -0600
+
+    Update version numbers in mod_scgi.
+    
+    Alos, make version number check in setup.py smarter.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 14 12:11:33 2006 -0600
+
+    Update MANIFEST for 1.11 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 14 12:08:10 2006 -0600
+
+    Prepare for 1.11 release.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 14 12:07:59 2006 -0600
+
+    Improve passfd test a little.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Mon Aug 14 12:06:41 2006 -0600
+
+    Improve portability of passfd extension.
+
+Author: Joseph Tate <jtate@rpath.com>
+Date:   Thu May 25 12:55:49 2006 -0600
+
+    Allow SCGIServer to use an already open socket.
+    
+    Add serve_on_socket() method that allows an already open socket to be
+    used.  The existing serve() method remains the same.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 11:46:19 2006 -0600
+
+    In passfd.c, initialize tmpbuf contents.
+    
+    Jonathan Corbet suggested this as a fix for trouble on an AMD64
+    machine.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 11:41:59 2006 -0600
+
+    Fix a mod_scgi bug that caused a segfault
+    
+    Fix a bug that resulted in a NULL pointer dereference (under certain
+    configurations). Thanks to Thomas Yandell for helping track down the
+    bug.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 09:41:25 2006 -0600
+
+    Update README and LICENSE files.
+
+Author: Neil Schemenauer <nas@arctrix.com>
+Date:   Fri May 19 09:30:23 2006 -0600
+
+    Import scgi 1.10.
