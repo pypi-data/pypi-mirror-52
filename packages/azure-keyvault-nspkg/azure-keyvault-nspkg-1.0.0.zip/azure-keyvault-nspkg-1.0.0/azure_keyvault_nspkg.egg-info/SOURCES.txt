@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+azure/__init__.py
+azure/keyvault/__init__.py
+azure_keyvault_nspkg.egg-info/PKG-INFO
+azure_keyvault_nspkg.egg-info/SOURCES.txt
+azure_keyvault_nspkg.egg-info/dependency_links.txt
+azure_keyvault_nspkg.egg-info/not-zip-safe
+azure_keyvault_nspkg.egg-info/requires.txt
+azure_keyvault_nspkg.egg-info/top_level.txt
