@@ -1,0 +1,21 @@
+{
+  "development": {
+    "debug": True,
+    "ip": "127.0.0.1",
+    "port": "1234"
+  },
+  "testing": {
+    "debug": True,
+    "ip": "127.0.0.1",
+    "port": "1234"
+  },
+  "mertest": {
+    "ip": "127.0.0.1",
+    "port": "1234"
+  },
+  "product": {
+    "debug": False,
+    "ip": "127.0.0.1",
+    "port": "1234"
+  }
+}

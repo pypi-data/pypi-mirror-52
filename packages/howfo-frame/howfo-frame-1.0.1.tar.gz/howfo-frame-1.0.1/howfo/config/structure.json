@@ -1,0 +1,194 @@
+[
+  {
+    "name": "app",
+    "is_folder": true,
+    "child": [
+      {
+        "name": "controllers",
+        "is_folder": true,
+        "child": [
+          {
+            "name": "hello_controller.py",
+            "is_folder": false,
+            "content": "hello_controller.tpl"
+          }
+        ]
+      },
+      {
+        "name": "models",
+        "is_folder": true,
+        "child": [
+          {
+            "name": "user_model.py",
+            "is_folder": false,
+            "content": "user_model.tpl"
+          }
+        ]
+      },
+      {
+        "name": "helpers",
+        "is_folder": true,
+        "child": [
+          {
+            "name": "tools.py",
+            "is_folder": false,
+            "content": "tools.tpl"
+          }
+        ]
+      },
+      {
+        "name": "plugins",
+        "is_folder": true,
+        "child": [
+          {
+            "name": "demo_plugin.py",
+            "is_folder": false,
+            "content": "demo_plugin.tpl"
+          }
+        ]
+      },
+      {
+        "name": "views",
+        "is_folder": true,
+        "child": [
+          {
+            "name": "static",
+            "is_folder": true,
+            "child": [
+              {
+                "name": "css",
+                "is_folder": true,
+                "child": []
+              },
+              {
+                "name": "js",
+                "is_folder": true,
+                "child": []
+              },
+              {
+                "name": "img",
+                "is_folder": true,
+                "child": []
+              }
+            ]
+          },
+          {
+            "name": "templates",
+            "is_folder": true,
+            "child": [
+              {
+                "name": "hello_handler.py",
+                "is_folder": false,
+                "content": "hello_handler.tpl"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "router.py",
+        "is_folder": false,
+        "content": "router.tpl"
+      },
+      {
+        "name": "__init__.py",
+        "is_folder": false,
+        "content": "__init__.tpl"
+      }
+    ]
+  },
+  {
+    "name": "config",
+    "is_folder": true,
+    "child": [
+      {
+        "name": "app.json",
+        "is_folder": false,
+        "content": "../config/app.json"
+      },
+      {
+        "name": "log.json",
+        "is_folder": false,
+        "content": "../config/log.json"
+      },
+      {
+        "name": "const.py",
+        "is_folder": false,
+        "content": "../config/const.py"
+      }
+    ]
+  },
+  {
+    "name": "docker",
+    "is_folder": true,
+    "child": [
+      {
+        "name": "docker-compose.yml",
+        "is_folder": false,
+        "content": "docker-compose.tpl"
+      },
+      {
+        "name": "start.sh",
+        "is_folder": false,
+        "content": "start.tpl"
+      }
+    ]
+  },
+  {
+    "name": "log",
+    "is_folder": true,
+    "child": []
+  },
+  {
+    "name": "test",
+    "is_folder": true,
+    "child": [
+      {
+        "name": "test_api.py",
+        "is_folder": false,
+        "content": "test_api.tpl"
+      },
+      {
+        "name": "test_db.py",
+        "is_folder": false,
+        "content": "test_db.tpl"
+      },
+      {
+        "name": "conftest.py",
+        "is_folder": false,
+        "content": "conftest.tpl"
+      }
+    ]
+  },
+  {
+    "name": "tools",
+    "is_folder": true,
+    "child": [
+      {
+        "name": "error.py",
+        "is_folder": false,
+        "content": "error.tpl"
+      }
+    ]
+  },
+  {
+    "name": ".gitignore",
+    "is_folder": false,
+    "content": ".gitignore.tpl"
+  },
+  {
+    "name": "gunicorn.conf",
+    "is_folder": false,
+    "content": "gunicorn.tpl"
+  },
+  {
+    "name": "requirements.txt",
+    "is_folder": false,
+    "content": "requirements.tpl"
+  },
+  {
+    "name": "server.py",
+    "is_folder": false,
+    "content": "server.tpl"
+  }
+]

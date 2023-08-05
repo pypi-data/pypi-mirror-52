@@ -1,0 +1,7 @@
+# include *.txt
+include README.txt
+include requirements.txt
+recursive-include howfo/tpl  *.tpl
+recursive-include howfo/config *.json *.py
+# recursive-include howfo/project *.json *.py
+# graft howfo/app

@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "disable_existing_loggers": False,
+    "loggers": {
+        "default": {
+            "handlers": ["console", "log"],
+            "level": "DEBUG",
+            "propagate": True
+        }
+    },
+    "handlers": {
+        "console": {
+            "level": "INFO",
+            "class": "logging.StreamHandler",
+            "formatter": "standard",
+            "filters": ["require_debug_true"]
+        },
+        "log": {
+            "level": "INFO",
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "standard",
+            "filename": "日志文件路径",
+            "maxBytes": 1024 * 1024 * 5,
+            "backupCount": 5,
+            "encoding": "utf8"
+        }
+    },
+    "filters": {
+        "require_debug_true": {
+            "()": RequireDebugTrue
+        }
+    },
+    "formatters": {
+        "standard": {
+            "format": "[%(asctime)s][%(name)s:%(levelname)s(%(lineno)d)]--[%(module)s]:%(message)s"
+        }
+    }
+}
