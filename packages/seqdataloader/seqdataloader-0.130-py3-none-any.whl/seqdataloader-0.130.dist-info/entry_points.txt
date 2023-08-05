@@ -1,0 +1,4 @@
+[console_scripts]
+db_ingest = seqdataloader.dbingest.__init__:main
+genomewide_labels = seqdataloader.labelgen.__init__:main
+
