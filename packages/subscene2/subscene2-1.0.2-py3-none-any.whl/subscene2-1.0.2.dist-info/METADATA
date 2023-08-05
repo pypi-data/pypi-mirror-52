@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: subscene2
+Version: 1.0.2
+Summary: A Python wrapper for SubScene
+Home-page: https://github.com/dreygur/subscene-api
+Author: Rakibul Yeasin
+Author-email: ryeasin03@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: tqdm (==2.2.3)
+
+# Python wraper for SubScene(.)com
+
+We are working on developing an api for Subscene(.)com. And making the code more managable.
+Before using in production please be sure it works well.
+
+### Usage:
+
+CLI:
+```
+Use: -n 'name' -y 'year' -l 'language' [Optional]
+    Usage:
+        -h or --help | Show this help message
+        -n or --name | Name of the movie/media
+        -y or --year | Year of release
+        -l or --lang | Language of desired subtitle
+```
+
+Script:
+```python3
+from subscene.SubScene import SubScene
+
+sub = SubScene() # Initialize the api Class
+detail = {
+    'name': 'Hello',
+    'year': '2008'
+    }
+link = sub.getDetail(detail) # Available Subtitles
+print(link)
+links = sub.getSubLink(link) # Link to Specific Subtitle
+print(links)
+down = sub.getDownLink(links[0]) # DownLoad link for Specific Language
+print(down)
+```
+
+Making with love by [Rakibul Yeasin](https://github.com/dreygur) and [Abdullah Zayed](https://github.com/xaadu)
+
