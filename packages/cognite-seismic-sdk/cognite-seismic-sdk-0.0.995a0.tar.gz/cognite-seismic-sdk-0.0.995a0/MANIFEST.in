@@ -1,0 +1,13 @@
+recursive-include cognite *.py
+
+include *.md
+include LICENSE
+include Pipfile
+include Pipfile.lock
+include examples.py
+include pyproject.toml
+
+exclude *.sh
+exclude .gitmodules
+exclude seismic-proto
+recursive-exclude seismic-proto *
