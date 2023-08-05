@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: SW_wrapper
+Version: 1.0.2
+Summary: A simple python wrapper for a C implementation of Smith-Waterman algorithm
+Home-page: https://github.com/AndreaTirelli1991/Complete-Striped-Smith-Waterman-Library
+Author: Andrea Tirelli
+Author-email: andrea.tirelli@ieo.it
+License: MIT
+Download-URL: https://github.com/AndreaTirelli1991/Complete-Striped-Smith-Waterman-Library/archive/v_1.0.2.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
