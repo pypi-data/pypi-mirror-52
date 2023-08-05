@@ -1,0 +1,3 @@
+[console_scripts]
+fetch_models = fetching.fetch_models:fetch
+
