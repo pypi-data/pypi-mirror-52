@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: DynamicWebParse
+Version: 0.2.1.11
+Summary: Parse dynamic content from web page
+Home-page: https://github.com/AZch/DynamicParse
+Author: Anton Zhuikov
+Author-email: antonzhuikov@domain.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: DynamicWebParse js,web content,dynamic DynamicWebParse
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
