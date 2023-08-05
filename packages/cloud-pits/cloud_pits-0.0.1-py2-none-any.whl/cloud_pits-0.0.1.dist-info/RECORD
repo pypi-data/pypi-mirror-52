@@ -1,0 +1,15 @@
+cloud_pits-0.0.1.data/scripts/cloudpits_create_ondemand_jm,sha256=n9OacEnwWj2kS8c37gcZXHR_KMHpo5M8zpSRGRLIu9Q,4813
+cloud_pits-0.0.1.data/scripts/cloudpits_simulation,sha256=r0_xp5s9qgCMMMQ8dpu6Ankk-yM9Q9KRs-Pifvg_ZkM,13903
+cloud_pits-0.0.1.data/scripts/cloudpits_to_execute,sha256=ddjJg78YnyPIvgB-K75jfH8ifvXT6oPVUq2lFW4Vgww,18298
+cloudpits/__init__.py,sha256=oPy6sf_wKdeMJvCEgJb5CAsL2pUzw0BTuztOFIFdCnk,1254
+cloudpits/instance_operations.py,sha256=-1uchhTuOJWxYnlT5JgosXU3IAgItnM-OZXi-4yZT1s,13405
+cloudpits/pseudo_instance_operations.py,sha256=r-qgPBc1Zzf-VIeVnYEzj5eKC0YaaYRT1UszpISbBZw,3884
+cloudpits/rds_config.py,sha256=GxcglpVtyw6IJHUtisgMbGjpMujLaVt_t5rkkSKA4g0,1484
+cloudpits/rds_operations.py,sha256=3JEY5M7SLlI-v6uF7vir6IpXChXVhl63fnBzSZ0Xfv8,10333
+cloudpits/save_interpols.py,sha256=e8-jLu6SpmS4IeJoX-8Oh0mJxIwmKBetAg20h1je_pQ,3135
+cloudpits/save_performance.py,sha256=4brld8aayC1ed96Bw8xBqZpW-nBOOxlP11sJUizD-QU,3809
+cloud_pits-0.0.1.dist-info/LICENSE,sha256=d9eR71dVBELMHQP2ZdYUh0JP8PGRWuyx7EbbgDUjBHo,1088
+cloud_pits-0.0.1.dist-info/METADATA,sha256=mZdgQtHhGf4SLMvQmGlR-g4iCl92ECeqNTfo5avvJuM,4688
+cloud_pits-0.0.1.dist-info/WHEEL,sha256=g3LQva5oS9Ma-DPFwX8R7Ke-NO25KWW489RoZdNxJXc,92
+cloud_pits-0.0.1.dist-info/top_level.txt,sha256=OQbd0cFMzp_BZfhCpLU5HWmYxPvgTFnKB_JAgpqOCVQ,10
+cloud_pits-0.0.1.dist-info/RECORD,,
