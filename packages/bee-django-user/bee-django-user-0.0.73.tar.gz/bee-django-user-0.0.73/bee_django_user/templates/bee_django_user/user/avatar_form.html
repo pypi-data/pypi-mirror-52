@@ -1,0 +1,44 @@
+{% extends 'bee_django_user/custom_base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% block styles %}
+    <style>
+    .avatar_div img{
+        width: 100px;
+        height: 100px;
+    }
+    .form{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        max-width: 400px;
+    }
+    input{
+        width: 100%;
+    }
+    #id_avatar{
+        padding: 8px;
+        background-color: #eeeeee;
+        border:solid #CCCCCC 1px;
+        border-radius:4px;
+    }
+    </style>
+{% endblock %}
+{% block content %}
+    <div><h4>修改头像</h4></div>
+    <div class="avatar_div">{% include 'bee_django_user/user/_avatar.html' %}</div>
+    <div class="form">
+
+        <form method="post" enctype="multipart/form-data">
+            {{ msg }}
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input class="btn btn-primary" type="submit" value="上传">
+        </form>
+    </div>
+    <div><p>图片建议：</p>
+
+        <p>长度宽度相等，即正方形图片</p>
+
+        <p>图片大小不要超过1M</p>
+    </div>
+{% endblock content %}

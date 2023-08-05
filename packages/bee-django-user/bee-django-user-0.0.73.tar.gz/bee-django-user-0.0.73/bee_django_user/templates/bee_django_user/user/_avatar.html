@@ -1,0 +1,12 @@
+{% load static %}
+{% if user.get_user_profile_image %}
+    <img src="{{ user.get_user_profile_image }}" alt="">
+{% else %}
+    {% if user.userprofile.preuser.gender == 1 %}
+        <img src="{% static 'bee_django_user/img/default_avatar_boy.png' %}" alt="">
+    {% elif user.userprofile.preuser.gender == 2 %}
+        <img src="{% static 'bee_django_user/img/default_avatar_girl.png' %}" alt="">
+    {% else %}
+        <img src="{% static 'bee_django_user/img/default_avatar.jpg' %}" alt="">
+    {% endif %}
+{% endif %}
