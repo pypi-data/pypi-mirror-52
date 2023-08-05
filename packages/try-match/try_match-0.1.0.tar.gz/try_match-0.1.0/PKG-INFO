@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: try-match
+Version: 0.1.0
+Summary: Pattern matching
+Author: Zhengyu Xu
+Author-email: zen-xu@outlook.com
+Requires-Python: >=2.7,<3.0
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
