@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-progressor"
+module_name = "progressor"
+version = "0.2.0"
+description = "A client library to Progressor server, able to track multiple progress bars simultaneously."
+authors = ["Alexander Artemenko <svetlyak.40wt@gmail.com>"]
+keywords = ["progress", "bar", "long", "running", "processes"]
+homepage = "https://github.com/40ants/python-progressor"
+repository = "https://github.com/40ants/python-progressor"
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.6"
+jsonrpc-requests = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+# pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
