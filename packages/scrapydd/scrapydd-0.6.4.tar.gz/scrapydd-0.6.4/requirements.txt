@@ -1,0 +1,11 @@
+tornado>=4.4.2,<5.0
+apscheduler
+sqlalchemy
+sqlalchemy-migrate
+poster>=0.8.1
+service-identity
+virtualenv
+pysyncobj>=0.2.3
+attrs>=17.4.0
+scrapy
+six
