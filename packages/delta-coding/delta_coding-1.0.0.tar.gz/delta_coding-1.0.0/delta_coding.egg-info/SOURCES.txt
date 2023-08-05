@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+delta_coding/__init__.py
+delta_coding/__version__.py
+delta_coding/delta_coding.py
+delta_coding.egg-info/PKG-INFO
+delta_coding.egg-info/SOURCES.txt
+delta_coding.egg-info/dependency_links.txt
+delta_coding.egg-info/requires.txt
+delta_coding.egg-info/top_level.txt
