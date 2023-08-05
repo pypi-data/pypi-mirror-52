@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: vartrix
+Version: 0.0.1
+Summary: Easily manange and automate variables and parameters.
+Home-page: https://github.com/pythoro/vartrix.git
+Author: Reuben Rusk
+License: UNKNOWN
+Download-URL: https://github.com/pythoro/vartrix/archive/v0.0.1.zip
+Description: # vartrix
+        
+        Vartrix is about managing and automating parameters used in code.
+Keywords: PARAMETERS,VARIABLES,PARAMETRIC,AUTOMATION,AUTOMATE
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
