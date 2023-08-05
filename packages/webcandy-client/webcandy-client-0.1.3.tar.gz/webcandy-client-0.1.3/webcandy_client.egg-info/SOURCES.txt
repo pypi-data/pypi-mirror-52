@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+webcandy_client/__init__.py
+webcandy_client/client.py
+webcandy_client/controller.py
+webcandy_client/test.py
+webcandy_client.egg-info/PKG-INFO
+webcandy_client.egg-info/SOURCES.txt
+webcandy_client.egg-info/dependency_links.txt
+webcandy_client.egg-info/entry_points.txt
+webcandy_client.egg-info/not-zip-safe
+webcandy_client.egg-info/requires.txt
+webcandy_client.egg-info/top_level.txt
