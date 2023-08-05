@@ -1,0 +1,15 @@
+LICENSE-AGPL-3.0-or-later
+LICENSE-Apache-2.0
+MANIFEST.in
+setup.py
+src/pymedphys_base/__init__.py
+src/pymedphys_base/_install_requires.py
+src/pymedphys_base/_version.py
+src/pymedphys_base.egg-info/PKG-INFO
+src/pymedphys_base.egg-info/SOURCES.txt
+src/pymedphys_base.egg-info/dependency_links.txt
+src/pymedphys_base.egg-info/requires.txt
+src/pymedphys_base.egg-info/top_level.txt
+src/pymedphys_base/delivery/__init__.py
+src/pymedphys_base/delivery/exportable.py
+src/pymedphys_base/delivery/utilities.py
