@@ -1,0 +1,4 @@
+[console_scripts]
+csr2transmart = csr2transmart.csr2transmart:main
+sources2csr = sources2csr.sources2csr:main
+
