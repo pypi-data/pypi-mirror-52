@@ -1,0 +1,14 @@
+graft src/collective
+prune src/collective/editablemenu/browser/static/js/widget/node_modules
+graft docs
+include *.cfg *.rst *.in
+include *.py
+exclude Gruntfile.js
+exclude *.json
+include .coveragerc
+recursive-include docs *
+recursive-include src *
+global-exclude *pyc
+include .editorconfig
+include .gitattributes
+include *.txt

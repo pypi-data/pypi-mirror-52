@@ -1,0 +1,72 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-09-03 15:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.editablemenu\n"
+
+#: ../configure.zcml:48
+msgid "Clean registry from old field for the collective.editablemenu add-on."
+msgstr ""
+
+#: ../browser/controlpanel.py:13
+msgid "Editable Menu Settings"
+msgstr ""
+
+#: ../configure.zcml:27
+msgid "Editable menu"
+msgstr ""
+
+#: ../profiles/default/controlpanel.xml
+#: ../profiles/uninstall/controlpanel.xml
+msgid "Editable menu configuration"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "Editable menu: uninstall"
+msgstr ""
+
+#: ../configure.zcml:27
+msgid "Installs Editable menu."
+msgstr ""
+
+#: ../configure.zcml:62
+msgid "Move static assets to resource registry."
+msgstr ""
+
+#: ../configure.zcml:55
+msgid "Remove non minified js resource."
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "Uninstalls Editable menu."
+msgstr ""
+
+#: ../configure.zcml:48
+msgid "collective.editablemenu: clean"
+msgstr ""
+
+#: ../configure.zcml:62
+msgid "collective.editablemenu: move to resource registry"
+msgstr ""
+
+#: ../configure.zcml:55
+msgid "collective.editablemenu: remove old js"
+msgstr ""
+
+#. Default: "Menu configuration."
+#: ../browser/interfaces.py:14
+msgid "config_tabs_label"
+msgstr ""
