@@ -1,0 +1,3 @@
+[console_scripts]
+trampolino = trampolino.cli:cli
+
