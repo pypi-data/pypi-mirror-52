@@ -1,0 +1,3 @@
+[console_scripts]
+yamlparse = ymlparse.parse_yaml:main
+
