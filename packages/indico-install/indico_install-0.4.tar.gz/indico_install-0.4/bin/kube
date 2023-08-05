@@ -1,0 +1,152 @@
+#! /bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+export zone=us-east4-c
+
+if [ $1 = "switch" ]; then
+    export PYTHONWARNINGS="ignore"
+    cluster_name=$(gcloud container clusters list | grep ${zone} | grep ${2} | head -n 1 | awk '{print $1}' )
+    gcloud container clusters get-credentials ${cluster_name} --zone ${zone} --project new-indico
+    gcloud config set compute/zone ${zone}
+fi
+
+if [ $1 = "exec" ]; then
+    kubectl exec -it $(kubectl get pods | grep $2 | head -n 1 | awk '{print $1}') ${3:-bash}
+fi
+
+if [ $1 = "pods" ]; then
+    indico pod ls
+fi
+
+if [ $1 = "update" ]; then
+    indico svc restart ${@:2}
+fi
+
+if [ $1 = "apply" ]; then
+    indico apply ${@:2}
+fi
+
+if [ $1 = "get-env" ]; then
+    gcloud container clusters list --filter="resourceLabels.environment=${2}" | tail -n +2 | awk '{print $1}'
+fi
+
+if [ $1 = "scale" ]; then
+    $DIR/indico svc scale --yes ${@:2}
+fi
+
+if [ $1 = "get-cluster" ]; then
+      cluster_name=$(kubectl config current-context | awk -F "_" '{print $NF}')
+      if [[ $cluster_name == *"dev"* ]]; then
+            color="92"
+      fi
+
+      if [[ $cluster_name == *"prod"* ]]; then
+            color="91"
+      fi
+
+      if [[ $2 == "raw" ]]; then
+          echo -e $cluster_name
+      else
+          echo -e "\\[\e[${color}m\\]${cluster_name}\\[\e[m\\]"
+      fi
+fi
+
+if [ $1 = "gen" ]; then
+    api=$2
+    queue=$3
+    tag=$4
+    workers=${5:-1}
+    scaling=${6:-1}
+
+    helm template -f $DIR"/../values/api.yaml" $DIR"/../worker" --set api.name=$api,api.queue=$queue,api.workers=$workers,image.tag=$tag,scaling.default=$scaling> $DIR"/../kubernetes/build/${tag}/${api}${queue}.yaml"
+fi
+
+if [ $1 = "image" ]; then
+    deployment=$2
+    image=$3
+    kubectl set image --record=true deployment/${deployment} ${deployment}=${image}
+fi
+
+if [ $1 = "drain" ]; then
+    kubectl drain $2 --ignore-daemonsets --delete-local-data
+fi
+
+if [ $1 = "copy-cluster" ]; then
+    # Copies images per deployment from current cluster to given cluster
+    newcluster=$2
+    images=$(kubectl get deploy -o wide | grep gcr.io/new-indico/ | awk '{print $7"::"$8}')
+    kube switch $newcluster
+    for image in ${images[@]}; do
+        echo $image
+        deploy=$(echo ${image} | awk -F "::" '{print $1}')
+        docker=$(echo ${image} | awk -F "::" '{print $2}')
+        echo "kube image ${deploy} ${docker}"
+        kube image $deploy $docker
+    done
+fi
+
+if [ $1 = "images" ]; then
+    kubectl get deploy -o wide | grep gcr.io/new-indico/ | awk '{print $7"\t\t\t"$8}'
+fi
+
+if [ $1 = "pod-images" ]; then
+    kubectl get pods -o custom-columns=NAME:.metadata.name,IMAGE:{.status.containerStatuses[0].image}
+fi
+
+if [ $1 = "top" ]; then
+    kubectl top pods | sort -nk 3 -
+fi
+
+if [ $1 = "rbac" ]; then
+    kubectl create clusterrolebinding cluster-admin-binding-$(echo $2 | awk -F "@" '{print $1}') --clusterrole cluster-admin --user $2
+fi
+
+if [ $1 = "reset" ]; then
+    instance=$2
+    kubectl cordon ${instance}
+    gcloud compute instances reset $instance
+    sleep 10
+    gcloud compute ssh --zone ${zone} $instance --command "wget -O - https://storage.googleapis.com/indicoapi/nvidia-driver.sh | bash"
+    gcloud compute ssh --zone ${zone} $instance --command "sudo service kubelet restart"
+fi
+
+if [ $1 = "nvidia" ]; then
+    gcloud compute ssh --zone ${zone} $2 --command "wget -O - https://storage.googleapis.com/indicoapi/nvidia-driver.sh | bash"
+    gcloud compute ssh --zone ${zone} $2 --command "sudo service kubelet restart"
+fi
+
+
+if [ $1 = "scripts" ]; then
+    cluster=$2
+    gcloud compute config-ssh -q
+    kubectl create namespace cadvisor
+    kubectl create namespace monitoring
+    instance_group=$(gcloud compute instance-groups list | awk '{print $1}' |  grep $2 )
+    for instance in $(gcloud compute instance-groups list-instances $instance_group --zone ${zone} | tail -n +2 | awk '{print $1'}); do
+        echo "RUNNING ON ${instance}"
+        gcloud compute ssh --zone ${zone} $instance --command "wget -O - https://storage.googleapis.com/indicoapi/nvidia-driver.sh | bash"
+    done
+fi
+
+if [ $1 = "script" ]; then
+    instance=$2
+    echo "RUNNING ON ${instance}"
+    kubectl label nodes ${instance} gpushare=true
+    gcloud compute ssh --zone ${zone} $instance --command "wget -O - https://storage.googleapis.com/indicoapi/nvidia-driver.sh | bash"
+fi
+
+if [ $1 = "namespace" ]; then
+    kubectl config set-context $(kubectl config current-context) --namespace=${2}
+fi
+
+if [ $1 = "cluster" ]; then
+    indico infra gke create ${@:2}
+    kube switch $2
+    email=$(cat /indico-deployment/.config/gcloud/configurations/config_default | grep account | awk -F "=" '{print $2}')
+
+    kube rbac $email
+fi
+
+if [ $1 = "sync-images" ]; then
+    ${DIR}/indico sync images $2
+fi
