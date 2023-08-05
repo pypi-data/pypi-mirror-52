@@ -1,0 +1,13 @@
+README.md
+setup.py
+ignis/__init__.py
+ignis/agents.py
+ignis/callbacks.py
+ignis/datasets.py
+ignis/loaders.py
+ignis/memories.py
+ignis/supervised.py
+ignis.egg-info/PKG-INFO
+ignis.egg-info/SOURCES.txt
+ignis.egg-info/dependency_links.txt
+ignis.egg-info/top_level.txt
