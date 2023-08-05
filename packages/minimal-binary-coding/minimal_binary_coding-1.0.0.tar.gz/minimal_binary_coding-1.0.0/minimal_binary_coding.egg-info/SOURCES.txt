@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+minimal_binary_coding/__init__.py
+minimal_binary_coding/__version__.py
+minimal_binary_coding/minimal_binary_coding.py
+minimal_binary_coding.egg-info/PKG-INFO
+minimal_binary_coding.egg-info/SOURCES.txt
+minimal_binary_coding.egg-info/dependency_links.txt
+minimal_binary_coding.egg-info/requires.txt
+minimal_binary_coding.egg-info/top_level.txt
