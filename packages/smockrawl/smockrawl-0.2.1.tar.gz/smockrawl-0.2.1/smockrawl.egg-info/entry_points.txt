@@ -1,0 +1,3 @@
+[console_scripts]
+smockeo = smockrawl.__main__:main
+
