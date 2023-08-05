@@ -1,0 +1,3 @@
+[console_scripts]
+escam_sliceselector = escam_sliceselector.cli:main
+
