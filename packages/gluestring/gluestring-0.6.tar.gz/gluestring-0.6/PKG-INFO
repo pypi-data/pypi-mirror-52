@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: gluestring
+Version: 0.6
+Summary: Easy way to create template strings
+Home-page: https://github.com/aananya27/gluestring
+Author: Aananya
+Author-email: astream.h@outlook.com
+License: MIT
+Download-URL: https://github.com/aananya27/gluestring/archive/v_06.tar.gz
+Description: UNKNOWN
+Keywords: template,string-formatter,util
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
