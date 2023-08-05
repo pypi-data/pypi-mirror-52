@@ -1,0 +1,12 @@
+jinja2
+prettytable
+simplejson
+
+[images]
+PIL
+
+[phantomjs]
+snapshot-phantomjs
+
+[selenium]
+snapshot-selenium
