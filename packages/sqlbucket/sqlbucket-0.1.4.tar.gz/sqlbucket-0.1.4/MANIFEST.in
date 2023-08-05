@@ -1,0 +1,4 @@
+include sqlbucket/template/integrity/
+include sqlbucket/template/queries/query_one.sql
+include sqlbucket/template/queries/query_two.sql
+include sqlbucket/template/config.py
