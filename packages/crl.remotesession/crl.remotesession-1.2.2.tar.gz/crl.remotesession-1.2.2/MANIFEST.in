@@ -1,0 +1,9 @@
+include tox.ini
+include tests/*.py
+include robottests/*
+include .coveragerc
+include .pylintrc
+include etc/Dockerfile
+include etc/docker-robottests
+include etc/docker_cmd
+include etc/sshd_config
