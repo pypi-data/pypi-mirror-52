@@ -1,0 +1,9 @@
+requests>=2.0.0
+PySocks
+cryptography
+pyyaml
+
+[dev]
+flake8<3.6,>=3.5
+tox<3,>=2.3
+rstcheck<4.0,>=2.2
