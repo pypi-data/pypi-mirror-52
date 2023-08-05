@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: cimetrics
+Version: 0.1.9
+Summary: Lightweight python module to track crucial metrics
+Home-page: https://github.com/jumaffre/cimetrics
+Author: Julien Maffre
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
