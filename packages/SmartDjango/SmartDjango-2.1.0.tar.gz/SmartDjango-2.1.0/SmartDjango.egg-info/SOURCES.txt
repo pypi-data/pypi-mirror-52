@@ -1,0 +1,16 @@
+setup.py
+SmartDjango/__init__.py
+SmartDjango/analyse.py
+SmartDjango/arg.py
+SmartDjango/attribute.py
+SmartDjango/error.py
+SmartDjango/model.py
+SmartDjango/packing.py
+SmartDjango/pager.py
+SmartDjango/param.py
+SmartDjango/trans.py
+SmartDjango.egg-info/PKG-INFO
+SmartDjango.egg-info/SOURCES.txt
+SmartDjango.egg-info/dependency_links.txt
+SmartDjango.egg-info/requires.txt
+SmartDjango.egg-info/top_level.txt
