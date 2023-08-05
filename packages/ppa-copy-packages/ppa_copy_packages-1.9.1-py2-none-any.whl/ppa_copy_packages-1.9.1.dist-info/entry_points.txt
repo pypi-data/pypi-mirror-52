@@ -1,0 +1,3 @@
+[console_scripts]
+ppa-copy-packages = ppa_copy_packages:main
+
