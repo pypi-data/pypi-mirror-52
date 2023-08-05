@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{% load bulb_static static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin - Login</title>
+        {% if DEBUG %}
+<!--        <link rel="stylesheet" href="{% static " admin/css/0_admin_login_general_page.css" %}"/>-->
+<!--        <link rel="stylesheet" href="{% static " admin/css/1_admin_login_small_page.css" %}"/>-->
+<!--        <link rel="stylesheet" href="{% static " admin/css/2_admin_login_medium_page.css" %}"/>-->
+<!--        <link rel="stylesheet" href="{% static " admin/css/3_admin_login_large_page.css" %}"/>-->
+        <link rel="stylesheet" href="{% static "utils/css/modal_popup.scss" %}"/>
+
+        {% elif not DEBUG %}
+        <link rel="stylesheet" href="{% static_bundled_src 'admin/bundle_admin_login.css' %}"/>
+
+        {% endif %}
+    </head>
+
+    <body>
+        <h1>Connexion :</h1>
+
+        <form id="admin_login_form" action="{% url 'admin_login' %}" method="post" novalidate>
+            {% csrf_token %}
+
+            {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+            {% endif %}
+
+            {{ form.as_p }}
+
+            <input type="submit" value="Se connecter" disabled="disabled"/>
+        </form>
+
+        {% if DEBUG %}
+            <script crossorigin="anonymous"  src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=blissfuljs%2Cdefault%2Ces2015%2Ces2016%2Ces2017%2Ces5%2Ces6%2Ces7"></script>
+            <script type="module" src="{% static "admin/js/admin_login_validation.js" %}"></script>
+
+        {% elif not DEBUG %}
+            <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=blissfuljs%2Cdefault%2Ces2015%2Ces2016%2Ces2017%2Ces5%2Ces6%2Ces7"></script>
+            <script src="{% static_bundled_src 'admin/bundle_admin_login.js' %}"></script>
+
+        {% endif %}
+    </body>
+</html>
