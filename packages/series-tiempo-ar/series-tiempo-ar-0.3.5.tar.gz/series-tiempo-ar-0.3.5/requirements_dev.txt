@@ -1,0 +1,5 @@
+nose
+pylint
+black
+pyyaml
+cryptography
