@@ -1,0 +1,15 @@
+README.md
+setup.py
+numproto/__init__.py
+numproto/__version__.py
+numproto/numproto.py
+numproto.egg-info/PKG-INFO
+numproto.egg-info/SOURCES.txt
+numproto.egg-info/dependency_links.txt
+numproto.egg-info/not-zip-safe
+numproto.egg-info/requires.txt
+numproto.egg-info/top_level.txt
+numproto/protobuf/__init__.py
+numproto/protobuf/ndarray.proto
+numproto/protobuf/ndarray_pb2.py
+numproto/protobuf/ndarray_pb2_grpc.py
