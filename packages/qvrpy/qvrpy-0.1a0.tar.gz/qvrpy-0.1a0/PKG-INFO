@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: qvrpy
+Version: 0.1a0
+Summary: An abstraction of the QVR Pro API
+Home-page: https://github.com/DasUberLeo/qvrpy
+Author: Grant Patterson
+Author-email: patterson.grant@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/DasUberLeo/qvrpy/archive/v0.1-alpha.tar.gz
+Description: 
+        # qvrpy - python interface to QVR Pro
+        
+        This is a high-level abstraction of the interface to the [QVR Pro](https://www.qnap.com/solution/qvr-pro-official/) surveillance system by [QNAP](https://www.qnap.com)
+        
+        The specifications for the raw QVR Pro API can be found [at this link](http://petstore.swagger.io/?url=https://download.qnap.com/apidoc/qvrpro/qvr_pro_api_1.1.0.yaml#/).
+        
+Keywords: QVR Pro,QVRPro,QNAP,IoT,Surveillance
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Hardware
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+qvrpy/__init__.py
+qvrpy/camera.py
+qvrpy/enums.py
+qvrpy/instance.py
+qvrpy/qvrapi.py
+qvrpy/stream.py
+qvrpy.egg-info/PKG-INFO
+qvrpy.egg-info/SOURCES.txt
+qvrpy.egg-info/dependency_links.txt
+qvrpy.egg-info/requires.txt
+qvrpy.egg-info/top_level.txt
