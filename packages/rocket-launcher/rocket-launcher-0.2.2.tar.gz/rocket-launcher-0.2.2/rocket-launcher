@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import os
+import threading
+import time
+from rockets import *
+threads = [threading.Thread(target=git, name='git'),
+    threading.Thread(target=dockerd, name='docker'),
+    threading.Thread(target=ranger, name='ranger')]
+for i in threads:
+    i.start()
+multiplexer()
+editor()
+os.system('sudo -H -u who byobu');
