@@ -1,0 +1,14 @@
+# third-part dependency:
+# tensorflow >>
+tensorflow-datasets>=1.2.0 # 可能依赖$pip install siphash
+# pytorch >>
+torch>=1.2.0
+torchvision>=0.4.0  # see https://github.com/pytorch/vision/releases
+# ray-project >>
+ray>=0.7.4
+# redis cluster: redis和redis-py-cluster冲突，可能需要先uninstall已安装高版本的redis, 然后再安装redis-py-cluster, 最后再$pip install -U redis==3.0.1
+redis==3.0.1
+redis-py-cluster==2.0.0
+# self-research framework:
+py-common-util>=0.0.62
+skydl>=0.0.16

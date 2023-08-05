@@ -1,0 +1,16 @@
+###python3.6.8###
+###查询最新版本 https://pypi.org/search/?q=numpy
+###或者$pip3 search tensorflow | egrep "^.*tensorflow.*\("
+###usage(以下常用lib需要手工执行更新):
+##让PIP源使用国内镜像，提升下载速度和安装成功率。https://www.cnblogs.com/microman/p/6107879.html
+##别再使用pip安装TensorFlow了！用conda吧～ https://www.jiqizhixin.com/articles/2018-10-12-2
+##pip或pi3安装$pip install -U tensorflow-gpu>=2.0.0-beta1 -i https://pypi.tuna.tsinghua.edu.cn/simple (清华加速pip源可用)
+###手工升级$pip3 install -U tensorflow-gpu==2.0.0-beta1 -i https://pypi.douban.com/simple
+###手工升级$pip3 install -U tensorflow-hub==0.1.1 -i https://pypi.douban.com/simple
+###遵照https://pytorch.org/页面提示手工升级$pip3 install -U torch torchvision -i https://pypi.douban.com/simple
+###手工升级$pip3 install -U numpy==1.15.2 -i https://pypi.douban.com/simple
+###手工升级$pip3 install -U pandas==0.23.4 -i https://pypi.douban.com/simple
+###手工升级(需要才升级):$sudo pip3 install -U h5py
+##########################################################
+# for gpu, import requirements-gpu.txt
+# for cpu, import requirements.txt

@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: skydl
+Version: 0.0.17
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: tony
+Author-email: UNKNOWN
+License: BSD
+Description: # skydl
+        high efficiency deep learning framework
+        
+        # add skydl quickly
+        pip install skydl (or: pip install --no-deps skydl)
+        
+        # how to use skydl
+        ```
+        >>> import skydl
+        >>> skydl.__version__
+        ```
+        
+        # how to setup
+        $python setup.py install or $python3 setup.py sdist bdist_wheel --universal , it will create folder: build, dist, egg-info
+        
+Keywords: skydl: high efficiency deep learning framework
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: BSD License
