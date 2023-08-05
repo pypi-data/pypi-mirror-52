@@ -1,0 +1,22 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  i18n_domain="plone">
+
+    <include package="plone.behavior" file="meta.zcml"/>
+
+    <!-- -*- extra stuff goes here -*- -->
+
+    <plone:behavior
+        name="cs.behavior.footerhtmlcode.footer_html_code"
+        title="FooterHTMLCode"
+        description="This behavior provides a new field to enter an arbitrary HTML code in a LRF object that will be shown in a viewlet in all contents below the LRF"
+        provides=".footer_html_code.IFooterHTMLCode"
+        factory=".footer_html_code.FooterHTMLCode"
+        marker=".footer_html_code.IFooterHTMLCodeMarker"
+        />
+
+
+</configure>

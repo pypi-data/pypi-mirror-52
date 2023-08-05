@@ -1,0 +1,3 @@
+<div id="custom-html-code-viewlet" tal:content="structure view/html_code">
+  HTML Code
+</div>
