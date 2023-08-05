@@ -1,0 +1,17 @@
+README.md
+setup.py
+PySSL.egg-info/PKG-INFO
+PySSL.egg-info/SOURCES.txt
+PySSL.egg-info/dependency_links.txt
+PySSL.egg-info/top_level.txt
+pyssl/__init__.py
+pyssl/cmdIf/Qt5Core.dll
+pyssl/cmdIf/Qt5Network.dll
+pyssl/cmdIf/__init__.py
+pyssl/cmdIf/boost_python37-vc140-mt-x64-1_67.dll
+pyssl/cmdIf/cmdIf.pyd
+pyssl/visionIf/Qt5Core.dll
+pyssl/visionIf/Qt5Network.dll
+pyssl/visionIf/__init__.py
+pyssl/visionIf/boost_python37-vc140-mt-x64-1_67.dll
+pyssl/visionIf/visionIf.pyd
