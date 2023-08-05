@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.PluginPipInterface</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.PluginPipInterface</h1>
+<p>
+Module implementing the pip interface plug-in.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>author</td></tr><tr><td>autoactivate</td></tr><tr><td>className</td></tr><tr><td>deactivateable</td></tr><tr><td>error</td></tr><tr><td>longDescription</td></tr><tr><td>name</td></tr><tr><td>needsRestart</td></tr><tr><td>packageName</td></tr><tr><td>pipPluginObject</td></tr><tr><td>pyqtApi</td></tr><tr><td>python2Compatible</td></tr><tr><td>shortDescription</td></tr><tr><td>version</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#PipInterfacePlugin">PipInterfacePlugin</a></td>
+<td>Class implementing the pip interface plug-in.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#createPipPage">createPipPage</a></td>
+<td>Module function to create the pip configuration page.</td>
+</tr><tr>
+<td><a href="#exeDisplayDataList">exeDisplayDataList</a></td>
+<td>Module function to support the display of some executable info.</td>
+</tr><tr>
+<td><a href="#getConfigData">getConfigData</a></td>
+<td>Module function returning data as required by the configuration dialog.</td>
+</tr><tr>
+<td><a href="#prepareUninstall">prepareUninstall</a></td>
+<td>Module function to prepare for an un-installation.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="PipInterfacePlugin" ID="PipInterfacePlugin"></a>
+<h2>PipInterfacePlugin</h2>
+<p>
+    Class implementing the pip interface plug-in.
+</p><h3>Signals</h3>
+<dl>
+<dt>currentEnvironmentChanged(str)</dt>
+<dd>
+emitted to signal a change of the
+        currently selected virtual environment
+</dd>
+</dl>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>PreferencesKey</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#PipInterfacePlugin.__init__">PipInterfacePlugin</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.__initialize">__initialize</a></td>
+<td>Private slot to (re)initialize the plugin.</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.activate">activate</a></td>
+<td>Public method to activate this plugin.</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.deactivate">deactivate</a></td>
+<td>Public method to deactivate this plugin.</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.getMenu">getMenu</a></td>
+<td>Public method to get a reference to the requested menu.</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.getMenuNames">getMenuNames</a></td>
+<td>Public method to get the names of all menus.</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.getPreferences">getPreferences</a></td>
+<td>Public method to retrieve the various pip related settings.</td>
+</tr><tr>
+<td><a href="#PipInterfacePlugin.setPreferences">setPreferences</a></td>
+<td>Public method to store the various pip related settings.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="PipInterfacePlugin.__init__" ID="PipInterfacePlugin.__init__"></a>
+<h4>PipInterfacePlugin (Constructor)</h4>
+<b>PipInterfacePlugin</b>(<i>ui</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the user interface object (UI.UserInterface)
+</dd>
+</dl><a NAME="PipInterfacePlugin.__initialize" ID="PipInterfacePlugin.__initialize"></a>
+<h4>PipInterfacePlugin.__initialize</h4>
+<b>__initialize</b>(<i></i>)
+<p>
+        Private slot to (re)initialize the plugin.
+</p><a NAME="PipInterfacePlugin.activate" ID="PipInterfacePlugin.activate"></a>
+<h4>PipInterfacePlugin.activate</h4>
+<b>activate</b>(<i></i>)
+<p>
+        Public method to activate this plugin.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of None and activation status
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (None, bool)
+</dd>
+</dl><a NAME="PipInterfacePlugin.deactivate" ID="PipInterfacePlugin.deactivate"></a>
+<h4>PipInterfacePlugin.deactivate</h4>
+<b>deactivate</b>(<i></i>)
+<p>
+        Public method to deactivate this plugin.
+</p><a NAME="PipInterfacePlugin.getMenu" ID="PipInterfacePlugin.getMenu"></a>
+<h4>PipInterfacePlugin.getMenu</h4>
+<b>getMenu</b>(<i>name</i>)
+<p>
+        Public method to get a reference to the requested menu.
+</p><dl>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the menu
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the menu or None, if no
+            menu with the given name exists
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+QMenu or None
+</dd>
+</dl><a NAME="PipInterfacePlugin.getMenuNames" ID="PipInterfacePlugin.getMenuNames"></a>
+<h4>PipInterfacePlugin.getMenuNames</h4>
+<b>getMenuNames</b>(<i></i>)
+<p>
+        Public method to get the names of all menus.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+menu names
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl><a NAME="PipInterfacePlugin.getPreferences" ID="PipInterfacePlugin.getPreferences"></a>
+<h4>PipInterfacePlugin.getPreferences</h4>
+<b>getPreferences</b>(<i>key</i>)
+<p>
+        Public method to retrieve the various pip related settings.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+the key of the value to get
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the requested setting
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+any
+</dd>
+</dl><a NAME="PipInterfacePlugin.setPreferences" ID="PipInterfacePlugin.setPreferences"></a>
+<h4>PipInterfacePlugin.setPreferences</h4>
+<b>setPreferences</b>(<i>key, value</i>)
+<p>
+        Public method to store the various pip related settings.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+the key of the setting to be set
+</dd><dt><i>value</i> (any)</dt>
+<dd>
+the value to be set
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="createPipPage" ID="createPipPage"></a>
+<h2>createPipPage</h2>
+<b>createPipPage</b>(<i>configDlg</i>)
+<p>
+    Module function to create the pip configuration page.
+</p><dl>
+<dt><i>configDlg</i></dt>
+<dd>
+reference to the configuration dialog
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the configuration page
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="exeDisplayDataList" ID="exeDisplayDataList"></a>
+<h2>exeDisplayDataList</h2>
+<b>exeDisplayDataList</b>(<i></i>)
+<p>
+    Module function to support the display of some executable info.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of dictionaries containing the data to query the presence of
+        the executable
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getConfigData" ID="getConfigData"></a>
+<h2>getConfigData</h2>
+<b>getConfigData</b>(<i></i>)
+<p>
+    Module function returning data as required by the configuration dialog.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary containing the relevant data
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="prepareUninstall" ID="prepareUninstall"></a>
+<h2>prepareUninstall</h2>
+<b>prepareUninstall</b>(<i></i>)
+<p>
+    Module function to prepare for an un-installation.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
