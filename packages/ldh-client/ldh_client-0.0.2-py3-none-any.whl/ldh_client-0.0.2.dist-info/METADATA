@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ldh-client
+Version: 0.0.2
+Summary: Liberty CLI is a user-facing command-line client for interacting with a Liberty Deckplan Host (LDH).
+Home-page: https://source.puri.sm/liberty/ldh_client
+Author: Purism SPC
+Author-email: liberty@puri.sm
+License: AGPL-3.0-or-later
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Requires-Dist: click (>=6.7)
+Requires-Dist: PyGObject (>=3.32.0)
+Requires-Dist: requests (>=2.21.0)
+
+UNKNOWN
+
+
