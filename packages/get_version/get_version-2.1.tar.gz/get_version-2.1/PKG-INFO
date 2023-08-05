@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: get_version
+Version: 2.1
+Summary: A version helper in the spirit of versioneer.
+Home-page: https://github.com/flying-sheep/get_version
+Author: Philipp Angerer
+Author-email: phil.angerer@gmail.com
