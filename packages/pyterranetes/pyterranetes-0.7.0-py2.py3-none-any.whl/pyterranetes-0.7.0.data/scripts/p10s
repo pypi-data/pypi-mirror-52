@@ -1,0 +1,120 @@
+#!python
+import click
+from pprint import pprint  # noqa: F401
+import subprocess
+import sys
+import os
+
+from p10s.generator import Generator
+from p10s.watcher import Watcher
+from p10s.__version__ import __version__
+
+
+class AliasedGroup(click.Group):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.alias_mapping = {}
+
+    def add_mapping(self, frm, to):
+        self.alias_mapping[frm] = to
+
+    def get_command(self, ctx, cmd_name):
+        rv = click.Group.get_command(self, ctx, cmd_name)
+        if rv is not None:
+            return rv
+
+        if cmd_name in self.alias_mapping:
+            return click.Group.get_command(self, ctx, self.alias_mapping[cmd_name])
+
+        matches = [x for x in self.list_commands(ctx)
+                   if x.startswith(cmd_name)]
+        if not matches:
+            return None
+        elif len(matches) == 1:
+            return click.Group.get_command(self, ctx, matches[0])
+        ctx.fail('Too many matches: %s' % ', '.join(sorted(matches)))
+
+
+@click.group(cls=AliasedGroup)
+@click.version_option(__version__)
+def cli():
+    pass
+
+
+@cli.command()
+@click.argument('filename', nargs=-1)
+@click.option('-v', '--verbose', type=bool, default=False, is_flag=True)
+def generate(filename, verbose):
+    if len(filename) == 0:
+        filename = ['.']
+    for f in filename:
+        Generator().generate(f, verbose=verbose)
+
+
+@cli.command()
+@click.option('--ignore-dotfiles', type=bool, default=True)
+@click.option('-v', '--verbose', type=bool, default=False, is_flag=True)
+@click.argument('directory', nargs=1, default='.')
+def watch(directory, ignore_dotfiles, verbose):
+    watcher = Watcher(directory, ignore_dotfiles)
+    watcher.install_signal_handlers()
+    watcher.watch(verbose=bool(verbose))
+
+
+@cli.command()
+@click.option('--terraform', type=str, default='terraform', envvar='PYTERRANETES_TERRAFORM')
+@click.argument('command', nargs=-1)
+def terraform(terraform, command):
+    Generator().generate(".")
+    os.execvp(terraform, [terraform] + list(command))
+
+
+@cli.command()
+@click.option('--terraform', type=str, default='terraform', envvar='PYTERRANETES_TERRAFORM')
+@click.argument('command', nargs=1)
+def tf(terraform, command):
+    Generator().generate(".")
+
+    if command == "plan":
+        proc = subprocess.run(
+            "%s plan -detailed-exitcode" % terraform,
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+
+        if proc.returncode == 0:
+            print("No changes. Infrastructure is up-to-date.")
+        else:
+            sys.stdout.buffer.write(proc.stdout)
+
+        sys.exit(proc.returncode)
+
+    if command == "apply":
+        proc = subprocess.run(
+            "%s apply -auto-approve" % terraform,
+            shell=True,
+        )
+        sys.exit(proc.returncode)
+
+    raise Exception("Unknown command `%s`" % command)
+
+
+@cli.command()
+@click.option('--kubectl', type=str, default='terraform', envvar='PYTERRANETES_KUBECTL')
+@click.argument('command', nargs=-1)
+def kubectl(kubectl, command):
+    Generator().generate(".")
+    os.execvp(kubectl, [kubectl] + list(command))
+
+
+cli.add_mapping("kubectl", "k8s")
+
+
+@cli.command()
+def version():
+    print("p10s, v%s" % __version__)
+
+
+if __name__ == '__main__':
+    cli()
