@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nas
+Version: 0.0.0
+Summary: a library of network architecture search
+Home-page: http://github.com/zhiqingxiao/nas/
+Author: Zhiqing Xiao
+Author-email: xzq.xiaozhiqing@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+
+nas
+=======================
+
+A library for Network Architecture Search (NAS)
+
