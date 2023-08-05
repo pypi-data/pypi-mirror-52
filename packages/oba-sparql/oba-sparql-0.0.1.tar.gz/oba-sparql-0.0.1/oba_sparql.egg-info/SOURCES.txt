@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+oba-sparql/__init__.py
+oba-sparql/query_manager.py
+oba_sparql.egg-info/PKG-INFO
+oba_sparql.egg-info/SOURCES.txt
+oba_sparql.egg-info/dependency_links.txt
+oba_sparql.egg-info/requires.txt
+oba_sparql.egg-info/top_level.txt
