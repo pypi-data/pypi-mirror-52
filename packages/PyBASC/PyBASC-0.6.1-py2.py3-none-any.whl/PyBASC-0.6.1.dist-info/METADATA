@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: PyBASC
+Version: 0.6.1
+Summary: Bootstrap Analysis for Stable Clustering in Python
+Home-page: https://github.com/akinikolaidis/pybasc
+Author: Aki Nikolaidis
+Author-email: aki.nikolaidis@childmind.org
+License: MIT
+Keywords: parcellation bagging functional neuroimaging nipype nipy nibabel nilearn scikit-learn
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test
+Requires-Dist: nilearn
+Requires-Dist: scikit-learn
+Requires-Dist: nibabel
+Requires-Dist: nipype
+Requires-Dist: scipy
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: pyyaml
+Provides-Extra: test
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: codecov; extra == 'test'
+Requires-Dist: pytest-env; extra == 'test'
+Requires-Dist: pytest-xdist; extra == 'test'
+
+Volumetric functional parcellation of fMRI data that uses bootstrap aggregation to improve reproducibility, reliability, and stability of clusters
+
+
