@@ -1,0 +1,25 @@
+{% load i18n %}{% load static %}
+<div id='easy_login' class="easy_login_bottom_left">
+  <form method="post" action="{% url 'easy-login:easy-login-change' %}" id="easy_login_form">
+      {% csrf_token %}
+      <img onclick="EasyLogin.onImageClick()" alt="User" src="{% static 'easy_login/icons/user.svg' %}">
+    <span id='easy_login_box' class='visible_box'>
+        {%  if form.login_by == 'both' %}
+            {{ form.user_name }}
+            or by
+            {{ form.user_id }}
+        {% elif form.login_by == 'select' %}
+            {{ form.user_name }}
+        {% elif form.login_by == 'id' %}
+            {{ form.user_id }}
+        {% endif %}
+        {% if form.login_by in 'both,id' %}
+        <input type="submit" value="{{ form.login_button }}">
+        {% endif %}
+      <span id='current_user_information'>Current User: {{ current_user }} - ID: {{ current_user.id }}</span>
+    </span>
+  </form>
+</div>
+
+<link rel="stylesheet" href="{% static 'easy_login/css/main.css' %}" type="text/css" media="screen">
+<script type="text/javascript" src="{% static 'easy_login/js/easy-login.js' %}"></script>
