@@ -1,0 +1,101 @@
+CHANGES
+=======
+
+1.4.0
+-----
+
+* Build pdf doc
+* Blacklist sphinx 2.1.0 (autodoc bug)
+* Fix networking-baremetal CI
+* Fix unit tests for networking-baremetal
+* Bump the openstackdocstheme extension to 1.20
+* Update api-ref location
+* Update networking-baremetal installation
+* Update Python 3 test runtimes for Train
+* Update sphinx requirements
+* Use opendev repository
+* OpenDev Migration Patch
+* Replace openstack.org git:// URLs with https://
+* Update master for stable/stein
+
+1.3.0
+-----
+
+* Supporting all py3 environments with tox
+* Zuulv3 - Use ironic-base job
+* Rename agent queue - fixes broken minor update
+* Clean up oslo.messaging listener properly
+* Ensure notifications are consumed from non-pool queue
+* Set amqp\_auto\_delete=true for notifications transport
+* Docs: Devstack quickstart guides - change drivers
+* Break out ironic client from neutron agent
+* Change networking-baremetal to zuulv3/python3
+* Correcting a typo in plugin.sh
+* Change openstack-dev to openstack-discuss
+* Restrict bashate to devstack/lib instead of lib
+* Change openstack-dev to openstack-discuss
+* Don't quote {posargs} in tox.ini
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Changing CI job templates for python3-first
+* Update reno for stable/rocky
+
+1.2.0
+-----
+
+* Remove testrepository and .testr.conf
+* Update neutron-lib requirement for rocky
+* Add release notes link in README
+* Updating required neutron version
+* Switch to using stestr
+* fix tox python3 overrides
+* Remove the duplicated "the"
+
+1.1.0
+-----
+
+* fix tox python3 overrides
+* add lower-constraints job
+* Do not run functional (API) tests in the CI
+* ML2 Agent: Handle SIGHUP mutable config options
+* Change Launchpad references to Storyboard
+* Updated from global requirements
+* Avoid tox\_install.sh
+* use common agent topics from neutron-lib
+* Update reno for stable/queens
+
+1.0.0
+-----
+
+* Add unit tests for member manager
+* Make the agent distributed using hashring and notifications
+* Fix devstack example
+* Node state configuration - add log\_agent\_heartbeat
+* Fix nits in networking-baremetal docs
+* Add dsvm job
+* Update docs and generate config file example
+* Add support to bind type vlan networks
+* Devstack - Add ironic-neutron-agent
+* Use reporting\_interval option from neutron
+* Switch from MechanismDriver to SimpleAgentMechanismDriverBase
+* Updated from global requirements
+* start\_flag = True, only first time, or conf change
+* Add baremetal neutron agent
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Use constants from neutron-lib
+* Update URLs in documents according to document migration
+* Fix to use "." to source script files
+* Update reno for stable/pike
+
+0.1.0
+-----
+
+* Add initial release note
+* Add installation documentation
+* Add devstack plugin to install networking\_baremetal
+* Add baremetal ML2 driver
+* Add .gitignore
+* Initial commit from cookiecutter
+* Added .gitreview
