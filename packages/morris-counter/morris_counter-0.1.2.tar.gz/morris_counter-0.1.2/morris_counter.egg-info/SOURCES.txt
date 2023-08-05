@@ -1,0 +1,11 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+morris_counter/__init__.py
+morris_counter/morris_counter.py
+morris_counter.egg-info/PKG-INFO
+morris_counter.egg-info/SOURCES.txt
+morris_counter.egg-info/dependency_links.txt
+morris_counter.egg-info/top_level.txt
