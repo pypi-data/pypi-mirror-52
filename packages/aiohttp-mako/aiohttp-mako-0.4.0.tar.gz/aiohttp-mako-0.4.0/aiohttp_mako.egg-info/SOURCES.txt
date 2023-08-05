@@ -1,0 +1,12 @@
+CHANGES.txt
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+aiohttp_mako/__init__.py
+aiohttp_mako.egg-info/PKG-INFO
+aiohttp_mako.egg-info/SOURCES.txt
+aiohttp_mako.egg-info/dependency_links.txt
+aiohttp_mako.egg-info/requires.txt
+aiohttp_mako.egg-info/top_level.txt
