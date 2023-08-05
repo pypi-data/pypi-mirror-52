@@ -1,0 +1,11 @@
+README.md
+setup.py
+bw2agg/__init__.py
+bw2agg/aggregate.py
+bw2agg/scores.py
+bw2agg/utils.py
+bw2agg.egg-info/PKG-INFO
+bw2agg.egg-info/SOURCES.txt
+bw2agg.egg-info/dependency_links.txt
+bw2agg.egg-info/requires.txt
+bw2agg.egg-info/top_level.txt
