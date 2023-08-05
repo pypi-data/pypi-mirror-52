@@ -1,0 +1,5 @@
+jinja2
+configparser
+pyroyale>=1.0.1
+requests
+discord-webhook
