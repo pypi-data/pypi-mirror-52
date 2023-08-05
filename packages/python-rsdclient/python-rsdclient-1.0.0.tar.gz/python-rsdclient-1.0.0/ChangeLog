@@ -1,0 +1,92 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* Update rsd-lib dependency to 1.2.0
+* Add generic Patch and Post command
+* Add generic Delete command to delete one resource
+* Add generic get command to retrieve all resources
+* Ignore vscode related files in .gitignore
+* Set default boot source mode to "once"
+* OpenDev Migration Patch
+
+0.2.0
+-----
+
+* Add command to create new endpoint
+* Update attach action for RSD 2.3
+* Support to show System resource details
+* Update home-page
+* Change openstack-dev to openstack-discuss
+* Add Python 3.6 classifier to setup.cfg
+* Remove invalid url
+* Add python 3.6 unit test job
+* fix tox python3 overrides
+* Removed older version of python added 3.5
+* Update the URL in HACKING.rst
+* Update remote drive requiement of node composition for RSD 2.3
+* Add "security" parameter in node compose for RSD 2.3
+* Upgrade command version to v2
+* Update storage service for RSD 2.3
+* Filter out the path variable of field
+* New command to show endpoint details
+* New command to list all endpoints of one fabric
+* New command to show storage pool details
+* New command to list all storage pools of one storage service
+* New command to show drive details
+* New command to list all drives of one storage service
+* New command to delete a volume
+* New command to create new volume
+* Allow user to Initialize (erase) volume
+* Allow user to update volume properties
+* Add command to show volume detail
+* Allow user to list all volumes
+* Use resource URI as its identity
+
+0.1.3
+-----
+
+* Add new subcommand to set node boot source
+* Add new subcommand to reset node power
+* Remove unused tools directory
+* Assemble node after node composition
+* Add more details of compose node
+* Avoid tox\_install.sh for constraints support
+
+0.1.2
+-----
+
+* Update rsd-lib client initialization process
+
+0.1.1
+-----
+
+* Add comment for each OSC subcommand
+* Add User Guide to documentation
+* Fix pip install package failure
+
+0.1.0
+-----
+
+* Update CLI usage doc
+* Cleanup test-requirements
+* Allow set RSD related environment variables
+* Use new node composition API in rsd-lib
+* Add new command to show fabric details
+* Update OpenStack Client Command-Line Interface documents
+* Add list fabrics command
+* Add new command to detach resource endpoint
+* Add new command to attach resource endpoint
+* Add show storage detail command
+* Support more arguments for node compose command
+* Add list storage services command
+* Add list composed node command
+* Add show composed node detail command
+* Return new composed node ID
+* Add delete composed node command
+* Add basic code structure of OSC plugin
+* Use py35 instead of py34 in tox
+* Initial Cookiecutter Commit
+* Added .gitreview
