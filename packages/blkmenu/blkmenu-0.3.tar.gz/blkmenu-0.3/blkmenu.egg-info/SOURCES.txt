@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+blkmenu
+blkmenu.1
+blkmenu.adoc
+setup.py
+_assets/screenshot.png
+blkmenu.egg-info/PKG-INFO
+blkmenu.egg-info/SOURCES.txt
+blkmenu.egg-info/dependency_links.txt
+blkmenu.egg-info/top_level.txt
