@@ -1,0 +1,449 @@
+Metadata-Version: 2.1
+Name: flowbber
+Version: 1.10.0
+Summary: Flowbber is a generic tool and framework that allows to execute custom pipelines for data gathering, publishing and analysis.
+Home-page: https://docs.kuralabs.io/flowbber/
+Author: KuraLabs S.R.L
+Author-email: info@kuralabs.io
+License: UNKNOWN
+Keywords: flowbber
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: toml
+Requires-Dist: ujson
+Requires-Dist: pyyaml
+Requires-Dist: colorlog
+Requires-Dist: pprintpp
+Requires-Dist: cerberus (>=1.3.1)
+Requires-Dist: setuptools
+Requires-Dist: pytimeparse
+Requires-Dist: setproctitle
+Provides-Extra: archive
+Provides-Extra: cobertura
+Requires-Dist: pycobertura ; extra == 'cobertura'
+Provides-Extra: config
+Provides-Extra: cpu
+Requires-Dist: psutil ; extra == 'cpu'
+Provides-Extra: data_splitter
+Provides-Extra: env
+Provides-Extra: expander
+Provides-Extra: filter
+Provides-Extra: git
+Provides-Extra: github
+Requires-Dist: pygithub ; extra == 'github'
+Provides-Extra: gtest
+Provides-Extra: influx
+Requires-Dist: influxdb ; extra == 'influx'
+Provides-Extra: json
+Provides-Extra: lcov
+Requires-Dist: lcov-cobertura ; extra == 'lcov'
+Provides-Extra: lcov_html
+Provides-Extra: lcov_merger
+Requires-Dist: lcov-cobertura ; extra == 'lcov_merger'
+Provides-Extra: mongo
+Requires-Dist: pymongo ; extra == 'mongo'
+Provides-Extra: print
+Provides-Extra: pytest
+Provides-Extra: sloc
+Requires-Dist: pygount ; extra == 'sloc'
+Provides-Extra: speed
+Requires-Dist: pyspeedtest ; extra == 'speed'
+Provides-Extra: template
+Requires-Dist: jinja2 ; extra == 'template'
+Provides-Extra: timestamp
+Provides-Extra: user
+Provides-Extra: valgrind_memcheck
+Requires-Dist: xmltodict ; extra == 'valgrind_memcheck'
+
+======================================
+Flowbber - The Data Pipeline Framework
+======================================
+
+Flowbber is a generic tool and framework that allows to execute custom
+pipelines for data gathering, publishing and analysis.
+
+.. image:: https://build.kuralabs.io/buildStatus/icon?job=GitHub/flowbber/master
+   :target: https://build.kuralabs.io/job/GitHub/job/flowbber/job/master/
+   :alt: Build Status
+
+.. image:: https://img.shields.io/pypi/v/flowbber
+   :target: https://pypi.org/project/flowbber/
+   :alt: PyPI
+
+.. image:: https://img.shields.io/github/license/kuralabs/flowbber
+   :target: https://choosealicense.com/licenses/apache-2.0/
+   :alt: License
+
+
+Documentation
+=============
+
+    https://docs.kuralabs.io/flowbber/
+
+
+Install
+=======
+
+.. code-block:: sh
+
+    pip3 install flowbber
+
+
+Changelog
+=========
+
+1.10.0 (2019-09-10)
+-------------------
+
+New
+~~~
+
+- New Data Splitter Sink.
+
+  The new DataSplitterSink allows users to extract branches of the data tree
+  and dynamically create files with that data using other parts of the data
+  tree as ID.
+
+  Check the `documentation <https://docs.kuralabs.io/flowbber/sinks.html#data-splitter-sink>`_
+  for more information.
+
+- Adds new field total_issues to Valgrind source.
+
+  Now the Valgrind XML sources will have a new field called ``total_errors``.
+  The idea of this field is to have a count of the amount of errors that
+  ocurred. Users won't need to calculate the length of the errors list
+  manually.
+
+- Allow to save the journal in a specific location.
+
+  The journal is a JSON file that reports all details about the execution of
+  the pipeline including how many times the pipeline was run, when, which
+  components passed or failed, among others.
+
+  The journal was a debug tool but now its user consumable. To accommodate this
+  the format of the journal changed to have more information.
+
+  To save the journal issue the flag ``--journal myjournal.json``.
+
+  See ``examples/journal/journal.json`` for an example.
+
+
+1.9.0 (2019-08-12)
+------------------
+
+New
+~~~
+
+- Add option to Mongo sink to allow key overwrite.
+
+  This allows a pipeline to override an entry in the database using the same
+  key.
+
+  .. code-block:: toml
+
+     [sinks.config]
+     overwrite = true
+
+- Add type parsing in env source.
+
+  A type can be specified for each environment variable, so that it is parsed
+  and collected with the expected datatype. Types available are:
+
+  :integer: Using Python's ``int()`` function.
+  :float: Using Python's ``float()`` function.
+  :string: Using Python's ``str()`` function.
+  :auto: Using Flowbber's ``flowbber.utils.types.autocast``.
+  :boolean: Using Flowbber's ``flowbber.utils.types.booleanize``.
+  :iso8601: Using Flowbber's ``flowbber.utils.iso8601.iso8601_to_datetime``.
+
+  Usage:
+
+  .. code-block:: toml
+
+     [sources.config]
+     include = [
+         "TESTENV_INT",
+     ]
+
+     [sources.config.types]
+     TESTENV_INT = "integer"
+
+- Pipelines can now be defined in YAML format.
+
+  For example:
+
+  .. code-block:: yaml
+
+     sources:
+       - type: timestamp
+         id: timestamp
+         config:
+           epochf: true
+           iso8601: true
+           strftime: '%Y-%m-%d %H:%M:%S'
+
+Fixes
+~~~~~
+
+- Use which genhtml to find executable on lcov_html sink.
+
+  This fixes an issue where the executable could not be found if a custom
+  ``PATH`` was used.
+
+
+1.8.0 (2019-07-12)
+------------------
+
+New
+~~~
+
+- The gtest source now supports XML files generated by gtest 1.8.1+.
+- New ``include_files`` and ``exclude_files`` options in many Sinks and Sources.
+  See `FilterSink Options <https://docs.kuralabs.io/flowbber/flowbber/flowbber.components.sink.html#filter-sink-options>`_
+  for more information.
+- New ``compress`` option added to the archive sink allow to create compressed ZIP archives.
+- New ``extract`` option added to the JSON source allow to load JSON files from ZIP archives.
+- The ``--extract`` and ``--derive-func-data`` options are now available to use on the LCOV source.
+
+Changes
+~~~~~~~
+
+- Updated schemas to use Cerberus >=1.3.1 definition.
+
+
+1.7.0 (2019-03-22)
+------------------
+
+New
+~~~
+
+- New ``--dry-run`` flag allows to parse, load, validate and build a pipeline
+  without executing it.
+
+Changes
+~~~~~~~
+
+- Improved logging when trying to instance a component to help debugging a
+  pipeline that went wrong.
+- Improved logging to show a log in higher level when things go bad.
+
+Fixes
+~~~~~
+
+- Fix for missing plugin entries in documentation.
+- Fix for documentation issue #27.
+
+
+1.6.0 (2019-03-12)
+------------------
+
+New
+~~~
+
+- New LCOV merger aggregator allows to sum multiple LCOV sources.
+
+Fixes
+~~~~~
+
+- Fix a bug that ignored ``rc_overrides`` when using a file input in LCOV
+  source.
+
+
+1.5.0 (2019-02-22)
+------------------
+
+Changes
+~~~~~~~
+
+- lcov source no longer accepts ``directory`` as configuration.
+  New option ``source`` superseded it, and allows to specify a directory to
+  generate a tracefile or load one already generated.
+
+
+1.4.0 (2019-01-28)
+------------------
+
+New
+~~~
+
+- Refactored Valgrind source to support loading data from Helgrind and DRD
+  tools.
+- New "Expander" aggregator that allows to move subdata to top level. This is
+  useful to load data using JSONSource or similar sources and place it in the
+  top level as if it were data from other anonymous sources. Or to replay
+  a pipeline using previously collected data.
+
+
+1.3.2 (2018-11-20)
+------------------
+
+New
+~~~
+
+- Add support for path in InfluxDB sink.
+
+Fixes
+~~~~~
+
+- Fixed flake8 issues shown in new version.
+
+
+1.3.1 (2018-09-19)
+------------------
+
+Fixes
+~~~~~
+
+- Source for Valgrind's memcheck will now always output the ``stack`` attribute
+  as a list.
+
+
+1.3.0 (2018-08-23)
+------------------
+
+New
+~~~
+
+- New Config source that allows to add arbitrary data directly from the
+  pipeline definition.
+- All plugins now show the example usage in both JSON and TOML.
+- Improved documentation for the memcheck source.
+
+Changes
+~~~~~~~
+
+- The Internet speed source plugin is unavailable as the upstream package
+  providing the measurement is currently broken:
+  https://github.com/fopina/pyspeedtest/issues/15
+
+Fixes
+~~~~~
+
+- Fix in pytest source that caused a test case with both failure and error
+  to be overridden by the other:
+  https://github.com/pytest-dev/pytest/issues/2228
+- Minor fix in memcheck source plugin that caused output that violates the
+  expected schema.
+
+
+1.2.1 (2017-11-26)
+------------------
+
+Fixes
+~~~~~
+
+- The InfluxDB sink is now compatible with influxdb client version 5.0.0.
+
+
+1.2.0 (2017-11-13)
+------------------
+
+New
+~~~
+
+- New timezone option for the timestamp source.
+- New source for Valgrind's Memcheck.
+- Add lcov source and lcov html sink.
+- New JSON source for fetch and parse local (file system) or remote
+  (http, https) JSON files.
+- The CoberturaSource now returns the list of ignored files.
+- TemplateSink now support passing filters.
+- All sinks can now filter the input data.
+- New FilterAggregator allows to filter the data structure before sending it to
+  the sinks.
+- When using the TemplateSink, extra data can now be passed from the pipeline
+  definition to the template by using the new 'payload' configuration option.
+  Fixes #5.
+- Each entry from the collected data can now be put into its own collection
+  when using the MongoDBSink. Fixes #2.
+- Added a source that counts lines of code in a directory.
+- Added a new Git source that provides revision, tag and author information of
+  a git repository.
+- New GitHub source that allows to collect statistics of closed / open pull
+  requests and issues.
+- New Google Test source.
+- Added a "pretty" option to the ArchiveSink to make JSON output pretty. Also,
+  JSON file is now saved in UTF-8.
+- Added new source plugin for pytest's JUnit-like XML test results.
+- CoberturaSource now supports filenames include and exclude patterns.
+
+Changes
+~~~~~~~
+
+- UserSource no longer returns the login key and instead returns a user key.
+- Templates used in the TemplateSink can now load sibling templates.
+  Previous way to specify python:// templates changed.
+- MongoDBSink now uses None as default for the ``key`` configuration option.
+  Related to #4.
+- InfluxDBSink now uses None as default for the ``key`` configuration option.
+  Related to #4.
+
+Fixes
+~~~~~
+
+- Local flowconf can now be reloaded in the same process.
+- Fix a deadlock condition when a non-optional component failed with still
+  running siblings components.
+- Fixes #6 : InfluxDBSink doesn't support None values.
+- Journal is now saved in UTF-8.
+- Fixed high CPU usage by the logging manager subprocess.
+- ``flowbber.logging.print`` will now convert to string any input provided.
+- Fix minor typo in EnvSource include / exclude logic.
+- The pipeline executor will now join the process of a component (max 100ms)
+  after fetching its response in order to try to get its exit code.
+
+
+1.1.0 (2017-09-07)
+------------------
+
+New
+~~~
+
+- Added "optional" and "timeout" features to pipeline components.
+
+Changes
+~~~~~~~
+
+- Git helpers now live into its own utilities module ``flowbber.utils.git``.
+
+Fixes
+~~~~~
+
+- Fixed bug where pipeline execution counter didn't increment.
+
+
+1.0.0 (2017-08-30)
+------------------
+
+New
+~~~
+
+- Initial version.
+
+
+License
+=======
+
+::
+
+   Copyright (C) 2017-2019 KuraLabs S.R.L
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+
+
