@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+jpostcode/__init__.py
+jpostcode/data/KEN_ALL_ROME.CSV
+jpostcode/data/README.md
+jpostcode_python.egg-info/PKG-INFO
+jpostcode_python.egg-info/SOURCES.txt
+jpostcode_python.egg-info/dependency_links.txt
+jpostcode_python.egg-info/top_level.txt
