@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: mogu
+Version: 0.5.1
+Summary: Collection of Simple Numerical Routines
+Home-page: https://github.com/stephenhky/MoguNumerics
+Author: Kwan-Yuet Ho
+Author-email: stephenhky@yahoo.com.hk
+License: MIT
+Description: Collection of simple numerical routines, independent of each other
+Keywords: mogu numerics computation
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Fortran
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: C
+Classifier: Topic :: System :: Distributed Computing
+Classifier: License :: OSI Approved :: MIT License
