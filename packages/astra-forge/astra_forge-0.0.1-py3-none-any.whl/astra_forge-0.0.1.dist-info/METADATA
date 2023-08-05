@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: astra-forge
+Version: 0.0.1
+Summary: A library for training PyTorch models.
+Home-page: https://github.com/astra-ai/forge
+Author: Astra AI, LLC
+Author-email: contact@astraai.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+
+A library for training PyTorch models.
+
+
