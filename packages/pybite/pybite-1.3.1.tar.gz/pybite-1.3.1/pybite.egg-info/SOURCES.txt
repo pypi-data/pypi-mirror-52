@@ -1,0 +1,14 @@
+README.md
+setup.py
+pybite/__init__.py
+pybite/iterate.py
+pybite.egg-info/PKG-INFO
+pybite.egg-info/SOURCES.txt
+pybite.egg-info/dependency_links.txt
+pybite.egg-info/top_level.txt
+pybite/file/__init__.py
+pybite/file/_open.py
+pybite/file/chunk.py
+pybite/file/iterate.py
+test/test_file.py
+test/test_iterate.py
