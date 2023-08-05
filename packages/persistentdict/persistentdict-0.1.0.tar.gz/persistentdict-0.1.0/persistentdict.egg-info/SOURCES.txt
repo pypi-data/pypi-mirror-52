@@ -1,0 +1,16 @@
+.gitignore
+.pre-commit-config.yaml
+.travis.yml
+LICENSE
+README.md
+setup.cfg
+setup.py
+test-with-redis.sh
+persistentdict/__init__.py
+persistentdict/dict_in_redis.py
+persistentdict.egg-info/PKG-INFO
+persistentdict.egg-info/SOURCES.txt
+persistentdict.egg-info/dependency_links.txt
+persistentdict.egg-info/requires.txt
+persistentdict.egg-info/top_level.txt
+tests/test_dict_in_redis.py
