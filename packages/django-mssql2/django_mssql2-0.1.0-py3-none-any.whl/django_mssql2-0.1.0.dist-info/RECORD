@@ -1,0 +1,14 @@
+django_mssql2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_mssql2/base.py,sha256=tdlVWPkE7-6pKUkwDhhSt6FlOVrFl1bKYV4okshyxRg,1508
+django_mssql2/pyodbc/__init__.py,sha256=8OJswBYcDL2mtXvh9Q13oI-giH5ESZQs-1c50YxldZU,207
+django_mssql2/pyodbc/base.py,sha256=0yd7-NBdaxIcYXkJXMeVS2GArnBFyCrdNjx7odWzaKc,22947
+django_mssql2/pyodbc/client.py,sha256=-u6T0caYoaiubsPDAWxuGTeJoZGVK-kOFpINl0NpwRk,1730
+django_mssql2/pyodbc/compiler.py,sha256=T4u2Y3Ie7ruUfdSZEjaoIJ1cwxzPcXrNf6Y5NLtNlxg,22383
+django_mssql2/pyodbc/creation.py,sha256=aU6c-f8aS1PjGSs7JzUcAYpL4CYfxkvijbTW2Dra0x4,1216
+django_mssql2/pyodbc/features.py,sha256=3etaAbNzs2YWmhu3QAv46Z38VW7K5c4oottjjJUbwPo,1200
+django_mssql2/pyodbc/introspection.py,sha256=fuKollgmtaZHxstI7P0tdlUY8jE0eRMXBAyMQvRPArc,14648
+django_mssql2/pyodbc/operations.py,sha256=wMRttp0aSoLiaHfLs9k7eHjb5Cda-sWc4gDcQ13dT8s,18620
+django_mssql2/pyodbc/schema.py,sha256=WqSnWDRsh4NgtPk2RwIg3snCypTX9pRHGPVfvFfmrIU,38075
+django_mssql2-0.1.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+django_mssql2-0.1.0.dist-info/METADATA,sha256=VYEOTxQlz3UhXHf1nWwGTHauyoKspLNHvS-mcaoK1Pk,483
+django_mssql2-0.1.0.dist-info/RECORD,,
