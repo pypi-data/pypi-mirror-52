@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py-analytics
+Version: 0.0.1
+Summary: A wrapper for the Analytics API
+Home-page: https://gde.kapschtraffic.com/brandon/py_analytics_api
+Author: Alvaro Brandon
+Author-email: alvaro.brandon@kapsch.net
+License: UNKNOWN
+Description: # py_analytics_api
+        
+        A wrapper for the Analytics API to be used in python
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
