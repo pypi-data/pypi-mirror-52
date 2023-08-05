@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: django-payment
+Version: 1.0
+Summary: UNKNOWN
+Home-page: https://github.com/skioo/django-payment
+Author: Nicholas Wolff
+Author-email: nwolff@gmail.com
+License: MIT
+Download-URL: https://pypi.python.org/pypi/django-payment
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
