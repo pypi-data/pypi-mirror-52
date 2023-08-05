@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: scrapydd
+Version: 0.6.3
+Summary: UNKNOWN
+Home-page: http://github.com/kevenli/scrapydd
+Author: kevenli
+Author-email: pbleester@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: tornado (<5.0,>=4.4.2)
+Requires-Dist: apscheduler
+Requires-Dist: sqlalchemy
+Requires-Dist: sqlalchemy-migrate
+Requires-Dist: poster (>=0.8.1)
+Requires-Dist: service-identity
+Requires-Dist: virtualenv
+Requires-Dist: pysyncobj (>=0.2.3)
+Requires-Dist: attrs (>=17.4.0)
+Requires-Dist: scrapy
+Requires-Dist: six
+
+UNKNOWN
+
+
