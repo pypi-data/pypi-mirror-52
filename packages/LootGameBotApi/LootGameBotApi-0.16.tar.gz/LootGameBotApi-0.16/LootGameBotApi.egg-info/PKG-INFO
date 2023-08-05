@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: LootGameBotApi
+Version: 0.16
+Summary: Python wrapper per le API di LootBot
+Home-page: https://github.com/Anatras
+Author: Alessio Balderi
+Author-email: balderialessio@gmail.com
+License: MIT
+Download-URL: https://github.com/Anatras/LootBotApiPython/archive/0.13.tar.gz
+Description: UNKNOWN
+Keywords: LootBot,API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
