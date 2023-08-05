@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: pystockfilter
+Version: 1.0.8
+Summary: Financial technical and fundamental analysis indicator library for pystockdb.
+Home-page: https://github.com/portfolioplus/pystockfilter
+Author: Slash Gordon
+Author-email: slash.gordon.dev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Description-Content-Type: text/markdown
+Requires-Dist: pystockdb (>=1.0.11)
+Requires-Dist: cython (==0.29.13)
+Requires-Dist: python-dateutil (==2.8.0)
+Requires-Dist: numpy (==1.17.1)
+Requires-Dist: tulipy (==0.4.0)
+
+# pystockfilter
+
+[![Build Status](https://travis-ci.org/portfolioplus/pystockfilter.svg?branch=master)](https://travis-ci.org/portfolioplus/pystockfilter)
+[![Coverage Status](https://coveralls.io/repos/github/portfolioplus/pystockfilter/badge.svg?branch=master)](https://coveralls.io/github/portfolioplus/pystockfilter?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07e6231a5a8c415a9f27736e02a286da)](https://www.codacy.com/app/SlashGordon/pystockfilter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=portfolioplus/pystockfilter&amp;utm_campaign=Badge_Grade)
+
+Create your own fundamental or chart based stock filter. All you need is a database set up with [pystockdb](https://github.com/portfolioplus/pystockdb).
+
+## built-in filters
+
+### technical filters
+
+- [x] [ADX](https://en.wikipedia.org/wiki/Average_directional_movement_index)
+- [x] [RSI](https://en.wikipedia.org/wiki/Relative_strength_index)
+- [x] StockIsHot: Simple trend indicator
+- [x] StockIsHotSecure: improved StockIsHot version.
+
+### fundamental filters
+
+- [x] Lervermann
+- [x] [Piotroski F-Score](https://en.wikipedia.org/wiki/Piotroski_F-Score)
+- [x] Price Target Score: analysts price targets compared with actual price
+
+## install
+
+```shell
+pip install pystockfilter
+```
+
+## quick start
+
+Build internal filters:
+
+```python
+import logging
+from pystockdb.db.schema.stocks import db
+
+from pystockfilter.tool.build_internal_filters import BuildInternalFilters
+
+# connect to database
+arguments = {'db_args': {
+    'provider': 'sqlite',
+    'filename': db_path_test,
+    'create_db': False
+    }
+}
+db.bind(**arguments["db_args"])
+db.generate_mapping()
+# create internal filters for Adidas AG and Infineon
+arguments = {'symbols': ['ADS.F', 'IFX.F']}
+builder = BuildInternalFilters(arguments, logger)
+builder.build()
+# create internal filters for all stocks in database
+arguments = {'symbols': ['ALL']}
+builder = BuildInternalFilters(arguments, logger)
+builder.build()
+```
+
+## issue tracker
+
+[https://github.com/portfolioplus/pystockfilter/issuese](https://github.com/portfolioplus/pystockfilter/issues")
+
+
