@@ -1,0 +1,12 @@
+dmfrbloom/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmfrbloom/__version__.py,sha256=N7s4tilihIzm-_rmrHOytSrpqrzkhKHb--tpPT8HMvQ,288
+dmfrbloom/bitfield.py,sha256=vCAg_QKFyWDqrakK8yMXy286ufuKmQlz54hSjlffN4M,3121
+dmfrbloom/bloomfilter.py,sha256=tO-4UNaYRRiDcvqcQOLRIN8DxSnPr6SBmK6QEKV76t4,4507
+dmfrbloom/dmfrbloom.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmfrbloom/pymmh3.py,sha256=a2dc1Ci8IuOe2YTYc1eDbkJzZX93yK_kExqsBS2I8xg,14603
+dmfrbloom/timefilter.py,sha256=0B6GciWmpSIlBN3e8aYbXh1q46W53Wq9Q7BYTeSHS7w,2700
+dmfrbloom-0.0.6.dist-info/LICENSE,sha256=GPYLXrcRCQNiS8CF96aNqXgxhrTuxCfL0_QIykwUIFw,1059
+dmfrbloom-0.0.6.dist-info/METADATA,sha256=DbGyJ-MumQyLN05CKUYWNHTVQUPLZVSB6mvwo7VS3lw,1229
+dmfrbloom-0.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dmfrbloom-0.0.6.dist-info/top_level.txt,sha256=lSGwiVxw18jCsrbh7nUc-PZCZ86OyDC0CphzWa8pkoQ,10
+dmfrbloom-0.0.6.dist-info/RECORD,,
