@@ -1,0 +1,12 @@
+pymongo
+click
+mailchimp3
+tqdm
+gspread
+oauth2client
+mongozen
+
+[test]
+pytest
+coverage
+pytest-cov
