@@ -1,0 +1,15 @@
+dezero/__init__.py,sha256=efNmDML1RsECPIswwWTgeQvh4oGEpO31SyznEozRmAw,913
+dezero/core.py,sha256=bmfUbvYxWgMKVJ-dl-FFJJll8P8KWzerJIcWJ7DK3NU,7159
+dezero/core_simple.py,sha256=YJ0iGe-pe1UcEhvu_mZLMk1diu6TNFQg03VFbnNcqsw,5586
+dezero/dataset.py,sha256=YOAEkApbrU-G8msSN3P56OY3QmI8UoJYjHAQ5ItMUQQ,170
+dezero/datasets.py,sha256=TgQpYzlP93IfmZ_bL4cnEB71CaU31xNImsGGJ6qQ02E,5524
+dezero/functions.py,sha256=-eSIV70jqJLxseauM1mm1oMx97JTf7D1VWxkLcdJ7JA,7719
+dezero/iterators.py,sha256=fsmNL9l3RU11zIlhnk8XTRqqflRgTRcO7P2BSb-SRx8,2462
+dezero/links.py,sha256=jkE2XcVavRfBZK0L1jFAPADq2tKPkVjPxNPu2v9MSvk,5497
+dezero/optimizers.py,sha256=PlFmfvDXKeH6sP1N9SUk4R4apI-XiA_GMl-FA8qkk5U,3180
+dezero/serializers.py,sha256=LZbFTUHyih3z2mK8eGaD5px2flCN39tcAzGGZIlTX4U,3922
+dezero/utils.py,sha256=v0yJ4zkB60S7JC9aT4QZcqMFCYGch61G3U1KgbfWRNQ,3497
+dezero-0.0.7.dist-info/METADATA,sha256=yeAo7DKrrIRHYcng2boZ4SEd3eC1PdDl5HkfE1auWK8,236
+dezero-0.0.7.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+dezero-0.0.7.dist-info/top_level.txt,sha256=QLRl32gWPvHp4GcnxYO0KFpFk23LivrgCr0fDMLT9fI,7
+dezero-0.0.7.dist-info/RECORD,,
