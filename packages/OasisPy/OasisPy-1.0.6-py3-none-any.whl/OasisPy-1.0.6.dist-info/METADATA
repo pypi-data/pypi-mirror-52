@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: OasisPy
+Version: 1.0.6
+Summary: Difference Imaging Engine for Optical SETI Applications
+Home-page: https://github.com/ahstewart/OASIS
+Author: Andrew Stewart
+Author-email: ah.stewart@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: astropy
+Requires-Dist: numpy
+Requires-Dist: datetime
+Requires-Dist: tabulate
+Requires-Dist: scipy
+Requires-Dist: requests
+Requires-Dist: MontagePy
+Requires-Dist: tqdm
+Requires-Dist: astroscrappy
+Requires-Dist: astroalign
+Requires-Dist: image-registration
+Requires-Dist: photutils
+Requires-Dist: pytest
+
+[![Documentation Status](https://readthedocs.org/projects/oasispy/badge/?version=latest)](https://oasispy.readthedocs.io/en/latest/?badge=latest)
+
+# **OasisPy**-- Difference Imaging Engine for Optical SETI Applications
+
+See documentation [here](https://oasispy.readthedocs.io/en/latest/?).
+
