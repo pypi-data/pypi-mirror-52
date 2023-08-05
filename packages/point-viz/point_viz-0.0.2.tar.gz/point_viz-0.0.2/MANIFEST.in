@@ -1,0 +1,5 @@
+include point_viz/*
+include point_viz/src/*
+include point_viz/src/build/*
+include point_viz/src/jsm/controls/*
+include point_viz/src/jsm/libs/*
