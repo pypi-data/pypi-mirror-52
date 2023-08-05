@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        jsc2f=jsc2f.cli:cli
+    
