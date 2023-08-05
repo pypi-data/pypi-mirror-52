@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+ns/__init__.py
+ns/api.py
+ns/models.py
+ns_api.egg-info/PKG-INFO
+ns_api.egg-info/SOURCES.txt
+ns_api.egg-info/dependency_links.txt
+ns_api.egg-info/not-zip-safe
+ns_api.egg-info/requires.txt
+ns_api.egg-info/top_level.txt
