@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+remote_debugging_path_chromium/chromium.py
+remote_debugging_path_chromium.egg-info/PKG-INFO
+remote_debugging_path_chromium.egg-info/SOURCES.txt
+remote_debugging_path_chromium.egg-info/dependency_links.txt
+remote_debugging_path_chromium.egg-info/entry_points.txt
+remote_debugging_path_chromium.egg-info/requires.txt
+remote_debugging_path_chromium.egg-info/top_level.txt

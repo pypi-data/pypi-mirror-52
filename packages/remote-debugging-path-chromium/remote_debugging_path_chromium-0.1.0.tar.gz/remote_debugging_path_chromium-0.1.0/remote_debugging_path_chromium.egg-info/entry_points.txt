@@ -1,0 +1,3 @@
+[console_scripts]
+remote_debugging_path_chromium = remote_debugging_path_chromium.chromium:main
+
