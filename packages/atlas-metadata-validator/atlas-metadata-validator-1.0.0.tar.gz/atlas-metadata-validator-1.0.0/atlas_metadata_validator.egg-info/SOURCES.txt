@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+atlas_validation.py
+setup.py
+atlas_metadata_validator.egg-info/PKG-INFO
+atlas_metadata_validator.egg-info/SOURCES.txt
+atlas_metadata_validator.egg-info/dependency_links.txt
+atlas_metadata_validator.egg-info/requires.txt
+atlas_metadata_validator.egg-info/top_level.txt
+checks/__init__.py
+checks/atlas_checker.py
+config/__init__.py
+config/atlas_validation_config.json
+utils/__init__.py
+utils/fetch.py
+utils/file.py
+utils/parser.py
