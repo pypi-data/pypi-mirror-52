@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: jk-simplexml
+Version: 0.2019.9.11
+Summary: This python module provides a simple XML implementation. This is intentionally simple in order to give programmers more control over white spaces used for indentation.
+Home-page: https://github.com/jkpubsrc/python-module-jk-simplexml
+Author: Jürgen Knauth
+Author-email: pubsrc@binary-overflow.de
+License: Apache 2.0
+Download-URL: https://github.com/jkpubsrc/python-module-jk-simplexml/tarball/0.2019.9.11
+Description: jk_simplexml
+        ============
+        
+        Introduction
+        ------------
+        
+        This python module provides a simple XML implementation.
+        
+        Information about this module can be found here:
+        
+        * [github.org](https://github.com/jkpubsrc/python-module-jk-simplexml)
+        * [pypi.python.org](https://pypi.python.org/pypi/jk_simplexml)
+        
+        How to use this module
+        ----------------------
+        
+        ### ....
+        
+        ....
+        
+        Contact Information
+        -------------------
+        
+        This is Open Source code. That not only gives you the possibility of freely using this code it also
+        allows you to contribute. Feel free to contact the author(s) of this software listed below, either
+        for comments, collaboration requests, suggestions for improvement or reporting bugs:
+        
+        * Jürgen Knauth: jknauth@uni-goettingen.de, pubsrc@binary-overflow.de
+        
+        License
+        -------
+        
+        This software is provided under the following license:
+        
+        * Apache Software License 2.0
+        
+        
+        
+        
+Keywords: utilities,xml,html
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
