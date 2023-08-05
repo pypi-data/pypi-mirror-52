@@ -1,0 +1,12 @@
+pysasl
+typing-extensions
+
+[grpc]
+grpclib
+protobuf
+
+[redis]
+aioredis>=1.2.0
+
+[sieve]
+sievelib
