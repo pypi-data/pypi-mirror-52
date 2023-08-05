@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Header App</title>
+<link href="static/API_validate.css" rel="stylesheet" type="text/css">
+     <script language="JavaScript">
+        function shutdownServer(){
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    callback(xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", "https://localhost:5000/closing", true); // true for asynchronous
+            xmlHttp.send(null);
+        }
+     </script>
+</head>
+
+<body onload="shutdownServer()">
+	<div class="PageValidateAPI">
+        <div class="LogoBraincube"></div>
+        <div class="Icone IconValidate"></div>
+        <div class="Titre">Braincube connector retrieved and ready to use !</div>
+        <div class="Description">You can now close this page</div>
+	</div>
+</body>
+</html>
