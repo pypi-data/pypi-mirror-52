@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: tngcli
+Version: 5.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/sonata-nfv/tng-cli
+Author: Thomas Soenen
+Author-email: thomas.soenen@ugent.be
+License: Apache License, Version 2.0
+Description: 
+        Component to interface with the various 5GTANGO components
+        
+Platform: UNKNOWN
