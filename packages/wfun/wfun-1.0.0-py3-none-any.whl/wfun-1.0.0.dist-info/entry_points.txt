@@ -1,0 +1,3 @@
+[console_scripts]
+wfun = fun.main:program.run
+
