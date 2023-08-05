@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: prettimer
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://gitlab.com/giordano.zanoli/prettimer
+Author: Giordano Zanoli
+Author-email: giordano.zanoli84@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest (==5.0.1) ; extra == 'dev'
+Requires-Dist: Sphinx (==1.8.2) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (==0.4.2) ; extra == 'dev'
+Requires-Dist: numpydoc (==0.8.0) ; extra == 'dev'
+Requires-Dist: check-manifest (==0.39) ; extra == 'dev'
+Requires-Dist: twine (==1.13) ; extra == 'dev'
+
+
+# prettimer
+
+Is a package that gives a timer utility, with prettifiers that prompt a 
+prettified runtime to the standard output.
+
+The prettifiers are decorator functions built upon the `Elapsed` object, that 
+allow either to assess the runtime of a function without having to explicitly 
+call any magic, or to log a step of a process where the `logging.logger` is 
+pointing to.
+
+## Examples
+
+Can use the the main time handler this way:
+
+    >>> from prettimer import Elapsed
+
+    >>> et = Elapsed()
+    >>> # do some process in between
+    >>> et.stampFromStart() # this returns a string
+    'Elapsed Time: 1 [mins] 3.785 [secs]'
+
+Otherwise, can use decorator functions:
+
+    >>> from prettimer import timeit
+
+    >>> @timeit
+    ... def prova():
+    ...     return np.random.randn(100000)
+    >>> prova()
+    prova: Elapsed Time: 0.002 [secs]
+
+Full documentation can be found [here]()
+
+# Installing prettimer
+
+To install prettimer package, just:
+
+    pip install prettimer
+
+# Developing prettimer
+
+To install prettimer along with the tools you need to develop and run tests, 
+run the following in your virtual env:
+
+    pip install -e .[dev]
+
+
+
