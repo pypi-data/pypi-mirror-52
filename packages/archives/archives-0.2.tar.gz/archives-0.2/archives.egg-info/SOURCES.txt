@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+archives.egg-info/PKG-INFO
+archives.egg-info/SOURCES.txt
+archives.egg-info/dependency_links.txt
+archives.egg-info/entry_points.txt
+archives.egg-info/not-zip-safe
+archives.egg-info/requires.txt
+archives.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_archives.py
