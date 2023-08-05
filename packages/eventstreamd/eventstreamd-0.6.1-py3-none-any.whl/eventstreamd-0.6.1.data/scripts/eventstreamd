@@ -1,0 +1,6 @@
+#!python
+
+from evtstrd.main import main
+
+
+main()
