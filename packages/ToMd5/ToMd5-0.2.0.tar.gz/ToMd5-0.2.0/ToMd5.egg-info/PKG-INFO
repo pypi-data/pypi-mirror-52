@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ToMd5
+Version: 0.2.0
+Summary: this is MD5 Encryption code 0.2.0
+Home-page: https://github.com/xuchengzhi/pipy
+Author: OrangeCoCo
+Author-email: xudear@live.com
+License: MIT
+Description: 
+        Installation
+        -----
+        
+        ```bash
+        cd ToMd5
+        
+        python setup.py install
+        
+        
+        ```
+Keywords: demo
+Platform: windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
