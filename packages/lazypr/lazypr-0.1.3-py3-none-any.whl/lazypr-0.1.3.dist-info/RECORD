@@ -1,0 +1,14 @@
+lazypr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lazypr/config.py,sha256=CCQuL2t6zUe63pHrAdrNvYMF97Zo05pDRqu9gBsCTgE,3672
+lazypr/github_api.py,sha256=Xh_MlHXPJRg5W97wuJfFe4rvgWFWt7kmDxz0nPlizUU,2697
+lazypr/jira_api.py,sha256=7FD02tFk-ElKj4H40DSPd-s35poTy4OHhYTTNrOdNcE,2529
+lazypr/main.py,sha256=oEiAuPe_ZUrFgnvePNeKO1rSRLb4U8UFvCh4hauy4VM,2024
+lazypr/pull_request.py,sha256=P0lDTSSl3qleJcLQIOAG2zE4gf3TJ_UczxkInF62hCI,2563
+lazypr/utils.py,sha256=nWRwCIIkA224VKWQOEjhAvaRXZ2xiI6csZaSP9RX8Pw,569
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_config.py,sha256=N44-gG6OP2FO5iS1TeI53Z5_ix7LuemUk-1QR0R0UDU,1030
+lazypr-0.1.3.dist-info/METADATA,sha256=WU1obvNKgZcJdHrBh2F_qemQxeOMfOs85B2yRzP-Rdc,3912
+lazypr-0.1.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+lazypr-0.1.3.dist-info/entry_points.txt,sha256=1qtnJ6DoxdTzgwHE7zKgIsYCpZipHYeWNjAG9tqyCXo,45
+lazypr-0.1.3.dist-info/top_level.txt,sha256=IB3HuAM4F1telXSJcKDZOXp2P--ozIQj_dnJfXYoRi0,13
+lazypr-0.1.3.dist-info/RECORD,,
