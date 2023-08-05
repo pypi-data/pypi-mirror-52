@@ -1,0 +1,16 @@
+retaggr/__init__.py,sha256=DkUUffXRpZBG06rNlSN-zAfy1-3zsjEodD9t0ZQKyUw,540
+retaggr/config.py,sha256=STAM9pJ5dO0oQsvO-w9m3BjfmBWg4PXMIvtncRHeRYc,1056
+retaggr/core.py,sha256=koT6b4RX7abylMixKx5w2Cqe3OK6fRg4YjkrKaqpNmg,5253
+retaggr/errors.py,sha256=6jYeGCFPZPpjJq4pIxfrZdKmZfNYylhQZfv42BCD6p4,561
+retaggr/engines/__init__.py,sha256=_wUw6RJKx0QPWvRdCCU6kW9dN-Qzolnu4MdCqgQyRTU,190
+retaggr/engines/base.py,sha256=EDtkbIbhnwv3V7uHnlNHcbW9vN1A-7Mh3zh5die6qQE,2705
+retaggr/engines/danbooru.py,sha256=fnRvE7jfOFumlDR5MjK9zVRfE2T8WOdJ9Uspd1iOnsU,1609
+retaggr/engines/e621.py,sha256=NF9fMFC-9p7I44NhYXzAi2QZ5zTecgpc-TUtakbBGJQ,2619
+retaggr/engines/iqdb.py,sha256=rkMyX8O0Q38YRTOJxnMgIxut1QGY9XcilOVfByLvTSI,2298
+retaggr/engines/paheal.py,sha256=PMCJKMlHB1nYaFiZf6YnxB1A8bItOY6IBpfJ_SFnSMw,1287
+retaggr/engines/saucenao.py,sha256=XaMXmptsQd5C8-eiupJxskdJilsvtUNYNActcSiZXUY,6766
+retaggr-2.1.4.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+retaggr-2.1.4.dist-info/METADATA,sha256=sY7G7i7-A-dbKuyTikxb97o0RizItPqNvUwm4iPma6Q,1657
+retaggr-2.1.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+retaggr-2.1.4.dist-info/top_level.txt,sha256=YxBg6-ctzG7KIMwAlq6aL-__8SXITzpvYi3AuGOIhwI,8
+retaggr-2.1.4.dist-info/RECORD,,
