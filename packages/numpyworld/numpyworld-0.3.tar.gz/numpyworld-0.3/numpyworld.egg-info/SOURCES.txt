@@ -1,0 +1,10 @@
+README.md
+setup.py
+numpyworld/__init__.py
+numpyworld/main.py
+numpyworld/test_main.py
+numpyworld.egg-info/PKG-INFO
+numpyworld.egg-info/SOURCES.txt
+numpyworld.egg-info/dependency_links.txt
+numpyworld.egg-info/requires.txt
+numpyworld.egg-info/top_level.txt

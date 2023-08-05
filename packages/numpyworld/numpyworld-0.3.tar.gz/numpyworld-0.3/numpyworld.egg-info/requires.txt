@@ -1,0 +1,8 @@
+setuptools
+numpy
+matplotlib
+pillow
+moviepy
+
+[animation]
+pygame
