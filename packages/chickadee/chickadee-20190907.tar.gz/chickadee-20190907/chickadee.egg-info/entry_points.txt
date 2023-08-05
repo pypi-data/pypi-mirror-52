@@ -1,0 +1,3 @@
+[console_scripts]
+chickadee = libchickadee.chickadee:__entry__
+
