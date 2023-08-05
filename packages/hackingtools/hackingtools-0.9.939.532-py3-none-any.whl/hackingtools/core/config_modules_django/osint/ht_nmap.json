@@ -1,0 +1,41 @@
+{
+    "__gui_label__": "Scan for hosts",
+    "django_form_main_function": {
+        "__function__": "getConnectedDevices",
+        "ip": {
+            "__type__": "text",
+            "label_desc": "Enter an IP range to scan",
+            "required": true
+        },
+        "close": {
+            "__type__": "button",
+            "value": "Close"
+        },
+        "submit": {
+            "__id__": "getConnectedDevices",
+            "__type__": "submit",
+            "value": "Scan",
+            "loading_text": "Scanning..."
+        }
+    },
+    "django_form_module_function": {
+        "getConnectedDevices": {
+            "__function__": "getConnectedDevices",
+            "__async__": false,
+            "__return__": "text",
+            "ip": {
+                "__type__": "text",
+                "placeholder": "0.0.0.0",
+                "value": "",
+                "label_desc": "Search IP",
+                "required": true
+            },
+            "shodanKeyString": {
+                "__type__": "text",
+                "placeholder": "abcdef0123456789",
+                "value": "",
+                "label_desc": "Shodan API Key"
+            }
+        }
+    }
+}
