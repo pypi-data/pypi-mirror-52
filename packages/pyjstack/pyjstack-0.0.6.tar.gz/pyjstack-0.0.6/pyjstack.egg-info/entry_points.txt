@@ -1,0 +1,3 @@
+[console_scripts]
+pyjstack = pyjstack.pyjstack:main
+

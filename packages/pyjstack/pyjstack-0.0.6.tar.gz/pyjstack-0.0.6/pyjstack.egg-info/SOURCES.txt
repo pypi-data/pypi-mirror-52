@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+pyjstack/__init__.py
+pyjstack/_version.py
+pyjstack/dispatcher.py
+pyjstack/exceptions.py
+pyjstack/pyjstack.py
+pyjstack/sysconfig.py
+pyjstack.egg-info/PKG-INFO
+pyjstack.egg-info/SOURCES.txt
+pyjstack.egg-info/dependency_links.txt
+pyjstack.egg-info/entry_points.txt
+pyjstack.egg-info/not-zip-safe
+pyjstack.egg-info/requires.txt
+pyjstack.egg-info/top_level.txt
