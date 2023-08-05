@@ -1,0 +1,4 @@
+[console_scripts]
+apogee = apogee.apogee_main:main
+create_genomes = apogee.create_genomes:main
+

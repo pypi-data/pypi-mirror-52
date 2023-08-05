@@ -1,0 +1,14 @@
+apogee/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apogee/align.py,sha256=TBIgs7pk74C3ncmNMyghi4f5Zl13qhO4H_0hQikvlFA,4808
+apogee/apogee.py,sha256=b1cgQ2xG-dFIRCbC6p3Wr_LfnVOjjWqTiRrScMgf4Xg,3128
+apogee/apogee_main.py,sha256=b1cgQ2xG-dFIRCbC6p3Wr_LfnVOjjWqTiRrScMgf4Xg,3128
+apogee/create_genomes.py,sha256=cXakmEunpsOT406DdHd3709SDKFOepQF5JTilo6uOMc,2158
+apogee/rna_align.py,sha256=8MP5f5Y7hGh9QqDNIRN1P2pJ2jpmoNAG1Mw4Zw1Nc6g,3112
+apogee/seq_utils.py,sha256=2ezEKysIk0Z9tkld3SKJxTBO3NM0vB27I_iIteDRkis,3191
+apogee/vcf_utils.py,sha256=yWrFemt38J0G1XULw-9XyYEp89InrJI6Qt9Gol3ApJM,512
+RNA_APoGee-0.0.5.dist-info/LICENSE,sha256=mmMiF2WsBm1JEGkqEB5h8s6eAsK9lNMZXSzLbeeNM7M,728
+RNA_APoGee-0.0.5.dist-info/METADATA,sha256=gQtrjPrSECMCfT58pjrkibszENmPSwt0-w_aIPulLIo,4762
+RNA_APoGee-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+RNA_APoGee-0.0.5.dist-info/entry_points.txt,sha256=yqi7ICXTHITvXVn3W1DHObFn20kRcyxTpfB39xv5m1Y,96
+RNA_APoGee-0.0.5.dist-info/top_level.txt,sha256=WXfIIJtxuxOH6l_6IkEcYZY9b98_NtAJXOx6lySLjM8,7
+RNA_APoGee-0.0.5.dist-info/RECORD,,
