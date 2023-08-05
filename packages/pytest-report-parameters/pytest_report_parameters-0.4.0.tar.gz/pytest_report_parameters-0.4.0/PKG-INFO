@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: pytest_report_parameters
+Version: 0.4.0
+Summary: pytest plugin for adding tests' parameters to junit report
+Home-page: https://gitlab.com/mkourim/pytest-report-parameters
+Author: Martin Kourim
+Author-email: mkourim@redhat.com
+License: MIT
+Description: ========================
+        pytest-report-parameters
+        ========================
+        
+        pytest plugin for adding tests' parameters to junit report.
+        
+        
+        Install
+        -------
+        Install this plugin::
+        
+            $ pip install pytest-report-parameters
+Keywords: polarion,py.test,pytest,testing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Pytest
+Classifier: Topic :: Software Development :: Testing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Developers

@@ -1,0 +1,11 @@
+.gitignore
+README.rst
+pytest_report_parameters.py
+setup.cfg
+setup.py
+pytest_report_parameters.egg-info/PKG-INFO
+pytest_report_parameters.egg-info/SOURCES.txt
+pytest_report_parameters.egg-info/dependency_links.txt
+pytest_report_parameters.egg-info/entry_points.txt
+pytest_report_parameters.egg-info/requires.txt
+pytest_report_parameters.egg-info/top_level.txt
