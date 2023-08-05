@@ -1,0 +1,2 @@
+# Bitplanar
+Synthetic dataset generation
