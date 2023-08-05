@@ -1,0 +1,14 @@
+setup.py
+bin/blupants
+bin/qrcode_wifi
+src/python/blupants/__init__.py
+src/python/blupants/blupants_car.py
+src/python/blupants/blupants_client.py
+src/python/blupants/edumip.py
+src/python/blupants/rc_balance_dstr.py
+src/python/blupants/sonar.py
+src/python/blupants.egg-info/PKG-INFO
+src/python/blupants.egg-info/SOURCES.txt
+src/python/blupants.egg-info/dependency_links.txt
+src/python/blupants.egg-info/requires.txt
+src/python/blupants.egg-info/top_level.txt

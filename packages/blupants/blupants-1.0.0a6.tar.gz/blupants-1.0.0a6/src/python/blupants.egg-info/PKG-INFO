@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: blupants
+Version: 1.0.0a6
+Summary: BluPants client module. This module allows your robot to execute commands from the BluPants Coding Lab (https://blupants.org).
+Home-page: https://blupants.com
+Author: BluPants
+Author-email: blupants.robot@gmail.com
+License: Apache-2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4
