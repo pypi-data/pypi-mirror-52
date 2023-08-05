@@ -1,0 +1,12 @@
+smsfly/__init__.py,sha256=tlA2VZsNrmb0bdikeWLh9N06Ah2Wmt_lE2YVxWqZ6VA,55
+smsfly/errors.py,sha256=aHw13wK3Xr26m3S1lhBRddjc-z1v5KE_tqGVtww3yyI,869
+smsfly/smsfly.py,sha256=sZFSICzY4e5eal3cx_pF44-X9fhcsWnBlJ8pcxOYtzY,4954
+smsfly/util.py,sha256=jajf82VwYaUta_GGh6_8lQYKLCI_vXHmdoWv4RWZb_A,1714
+smsfly/versiontools.py,sha256=mHKi1aTu19cNtrzfmX7sHgXki8CUNh1_fNtOLH3yrRk,950
+tests/.gitdir,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/api_test.py,sha256=4P9VIs4DO41GvRp2eM9bXm5Sa_vHrYjVruoxNa6sdcg,8156
+SMSFly-0.1.6.dist-info/LICENSE.rst,sha256=uzuD5szAIOaYp-ZKJVCs0lOYPyGnYAreL1nuDO3R6fc,1308
+SMSFly-0.1.6.dist-info/METADATA,sha256=JiXNm8hWkP9iTOY3P59ksxzahfb8DMLGGOVgZULjEEk,3569
+SMSFly-0.1.6.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+SMSFly-0.1.6.dist-info/top_level.txt,sha256=WyN6grZI8KQVJG-64-Ww0XGptZ-GXSjvjspq8JZsgZg,13
+SMSFly-0.1.6.dist-info/RECORD,,
