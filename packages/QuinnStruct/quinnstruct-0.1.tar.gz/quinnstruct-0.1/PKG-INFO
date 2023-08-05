@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: quinnstruct
+Version: 0.1
+Summary: My personal data-struct library
+Home-page: http://github.com/marvincolgin/quinnstruct
+Author: Marvin Colgin
+Author-email: me@marvincolgin.com
+License: GNU GPLv3
+Description: This is a data-structure library that I wrote in Python at CodeFellows in Summer 2019
+Keywords: classic data structures
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
