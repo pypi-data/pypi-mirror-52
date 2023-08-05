@@ -1,0 +1,10 @@
+README.md
+setup.py
+inherit/__init__.py
+inherit/inherit.py
+inherit.egg-info/PKG-INFO
+inherit.egg-info/SOURCES.txt
+inherit.egg-info/dependency_links.txt
+inherit.egg-info/entry_points.txt
+inherit.egg-info/not-zip-safe
+inherit.egg-info/top_level.txt
