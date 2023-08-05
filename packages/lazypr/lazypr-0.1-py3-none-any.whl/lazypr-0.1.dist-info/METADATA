@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lazypr
+Version: 0.1
+Summary: Creating a pull request on GitHub
+Home-page: https://github.com/sanjaz/lazypr
+Author: Sanja Segan
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyGithub
+Requires-Dist: pygit2
+
+UNKNOWN
+
+
