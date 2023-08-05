@@ -1,0 +1,18 @@
+numpy
+netcdf4
+pyproj
+pykdtree
+
+[:(sys_platform == 'linux2')]
+pykdtree
+
+[:(sys_platform == 'win32')]
+scipy
+
+[:(sys_platform == 'win64')]
+scipy
+
+[test]
+pytest-cov
+coverage==4.5.2
+pytest==3.8.2
