@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: datalab-on-jupyter
+Version: 2.2.1
+Summary: Extension for the jupyter notebook server.
+Home-page: https://github.com/chwzr/datalab
+Author: Felix Koppe
+Author-email: jupyter@googlegroups.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: notebook
+
+UNKNOWN
+
+
