@@ -1,0 +1,13 @@
+lupyne/__init__.py,sha256=dPlvkeVPIaror5bRaSxddGM42v_Sc2ekYuszGpq2SNE,20
+lupyne/server.py,sha256=1CXZDO5q_2TeL4NCwzrtaK4GJPr5J2ul9UR4pc5K6ps,37283
+lupyne/engine/__init__.py,sha256=DxXaox-S8cmrPss4D3wUyQdCSs03msHIwAnAopALyjU,556
+lupyne/engine/analyzers.py,sha256=-T_yXwoDYjlCZUlvkAwbuUxRoHhtzYoGwEjOkCTbr4U,5856
+lupyne/engine/documents.py,sha256=IvZHQX8heP_mITVZy8pPGlzavxqJHvsOME1uA6VQEzk,17905
+lupyne/engine/indexers.py,sha256=RFKkw8ApAut_7nBVRJgVfuYFW3gotr0RSfSPIHYPg48,27292
+lupyne/engine/queries.py,sha256=jsN_Twmm3EFQVGBVurBivtBXv3duj6NBTAQWdxHdWJg,11648
+lupyne/engine/utils.py,sha256=_AmFv5MP4mEynf710wrWLAP_dGKTLj4rg6D61wjZKNU,2506
+lupyne-2.3.dist-info/LICENSE.txt,sha256=w8T_3wyPK5cviWrytR25z5unKYMPZIttg8mddzu9JP0,576
+lupyne-2.3.dist-info/METADATA,sha256=XNEtRep3ekI34BoC1jLuFTwmnGoHxh_qAcLSEX7i-i4,4807
+lupyne-2.3.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+lupyne-2.3.dist-info/top_level.txt,sha256=8JiBMJCBKduxEcYs7ll0TkbQqaliSjbi9l2g4AyhxUM,7
+lupyne-2.3.dist-info/RECORD,,
