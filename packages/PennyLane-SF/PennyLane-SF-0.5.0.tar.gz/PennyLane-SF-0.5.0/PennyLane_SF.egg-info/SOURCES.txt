@@ -1,0 +1,14 @@
+README.rst
+setup.py
+PennyLane_SF.egg-info/PKG-INFO
+PennyLane_SF.egg-info/SOURCES.txt
+PennyLane_SF.egg-info/dependency_links.txt
+PennyLane_SF.egg-info/entry_points.txt
+PennyLane_SF.egg-info/requires.txt
+PennyLane_SF.egg-info/top_level.txt
+pennylane_sf/__init__.py
+pennylane_sf/_version.py
+pennylane_sf/expectations.py
+pennylane_sf/fock.py
+pennylane_sf/gaussian.py
+pennylane_sf/simulator.py
