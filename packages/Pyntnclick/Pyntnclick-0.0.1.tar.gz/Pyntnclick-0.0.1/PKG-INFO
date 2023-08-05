@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: Pyntnclick
+Version: 0.0.1
+Summary: Point-and-click adventure game engine using Pygame.
+Home-page: https://github.com/CTPUG/pyntnclick
+Author: Simon Cross
+Author-email: hodgestar+rinkhals@gmail.com
+Maintainer: Simon Cross
+Maintainer-email: hodgestar+rinkhals@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/pyntnclick/
+Description: Pyntnclick
+        ==========
+        
+        pyntnclick is a library for building point and click adventure games using Python and PyGame.
+        
+        Originally part of our PyWeek 11 entry, [Suspended Sentence](https://pyweek.org/e/boomslang/),
+        this has been split out to be a more general purpose library.
+        
+        A version of Suspended Sentence that uses pyntnclick is available as an example
+        from [github](https://github.com/CTPUG/suspended_sentence).
+        
+        License
+        =======
+        
+        MIT License. See the COPYING file in the repository.
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Topic :: Games/Entertainment
+Description-Content-Type: text/markdown
