@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+
+import sys
+import argparse
+import logging
+import logging.handlers
+from quwiki.generate import generate
+from quwiki.initialization import initialize
+
+
+logger = logging.getLogger()
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Transform your Google Docs into a beautiful Wiki for your team.')
+    subparsers = parser.add_subparsers()
+
+    gdrive_parser = subparsers.add_parser('init', description='Initialize QuWiki configuration')
+    gdrive_parser.set_defaults(func=initialize)
+
+    generate_parser = subparsers.add_parser('generate', description='Generates static, Wiki like, HTML files out of the given sources')
+    generate_parser.set_defaults(func=generate)
+    generate_parser.add_argument('--config', default='quwiki.yaml')
+
+    args = parser.parse_args(['generate'] if len(sys.argv) == 1 else None)
+    args.func(args)
+
+
+if __name__ == '__main__':
+    main()
