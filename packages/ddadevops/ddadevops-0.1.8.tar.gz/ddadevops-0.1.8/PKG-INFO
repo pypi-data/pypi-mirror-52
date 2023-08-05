@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: ddadevops
+Version: 0.1.8
+Summary: tools to support builds combining gopass, terraform, dda-pallet, aws & hetzner-cloud
+Home-page: https://github.com/DomainDrivenArchitecture/dda-devops-build
+Author: meissa GmbH
+Author-email: buero@meissa-gmbh.de
+License: Apache Software License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Build Tools
