@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: c_sum_py
+Version: 0.4.0
+Summary: 姬小野的pypi测试项目.
+Home-page: https://github.com/JameyWoo
+Author: Fiveplus
+Author-email: 2622075127@qq.com
+License: MIT
+Description: 
+        # python的c扩展学习
+        
+        将c文件编译成dll库
+        `gcc -shared -o c_sum.dll c_sum.c`
+        
+        出现错误`OSError: [WinError 193] %1 is not a valid Win32 application`, 原因是64位的python无法直接调用32位的dll, 下载64位的MinGW64替代32位的(或者用python 32)
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
