@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+imread_benchmark/__init__.py
+imread_benchmark/benchmark.py
+imread_benchmark.egg-info/PKG-INFO
+imread_benchmark.egg-info/SOURCES.txt
+imread_benchmark.egg-info/dependency_links.txt
+imread_benchmark.egg-info/entry_points.txt
+imread_benchmark.egg-info/requires.txt
+imread_benchmark.egg-info/top_level.txt
