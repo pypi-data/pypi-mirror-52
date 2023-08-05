@@ -1,0 +1,52 @@
+---
+dist: xenial
+language: python
+python:
+- 3.5
+- 3.6
+- 3.7
+- 3.7-dev
+- 3.8-dev
+- nightly
+
+# Cache pip downloads to speed-up build
+cache: pip
+
+# Scripts to install dependencies
+before_install:
+- python3 -m pip install -U tox
+install:
+- python3 -m tox --notest
+
+# Run tests
+script:
+- python3 -m tox
+
+jobs:
+  fast_finish: true
+  include:
+  - python: 3.7
+    name: Checking pre-commit linter compliance
+    env:
+      TOXENV: pre-commit
+
+  - &deploy-job
+    stage: Upload a new version of python package to PYPI
+    name: Publishing current Git tagged version of dist to PyPI
+    if: repo == "open-craft-guild/python-smsfly" AND tag IS present
+    python: 3.7
+    env:
+      TOXENV: build-dists
+    before_deploy:
+    - echo > setup.py
+    deploy:
+      provider: pypi
+      on:
+        all_branches: true
+        tags: true
+      user: __token__
+      password:
+        secure: >-
+          GTXOZWMvSM6i/E8UaJcf4yo9YoeFTvhHlqVrK0fBRqoXWfenY+auuR2TYd3BtwObM653OcMtNVeVPP0nQ+bSL0YjhIAixNGkWNIZVnf3rHdRxgtmpif1LOmduIUBpZVPqm+X3/R0drzDzv/OSZsvEEZFz8x4L/lIdwD+bL+7/hlLfEK23gjlO/GRtCXaFy7k3t0L6wCSmarNr28DGCtWf7oldx6EWflrWkpJlzmnTwbzAJhOJlnOeglrxTqmdGvuU6BM//5SnWkxS1lVJbcw5eMejzVmI6nTMyCUtm0LBr8NRgdm86qpbWyMqctiEZeqSS/dsAYRP8bKIARZ0UJjnaaggdpg1hGPQQoUH5xryKbcf2DwHH4jaH49rOIed7RJBJ7zbZNNVfsREh3TMsw/xtNHiZhnZyqNfKZyIaCkbD60D8o3qDmW4arBB6aG5o2wircmEK5WYpFUXXLLiDknYAsjOz6YU9vBVG7XiHKLCbD8vkd0uQ67qX0rnFtnFK9bKd8jf+HRnyQEGsEvxXzvJJyrNmhFOAnJRbUCbYlF9l3EHQThKslitBZFZ5BWTosNLmPjLanso9EHW+BrmlrHy1u2+WnY9THi96KFryAhm6Ydm2XbqvZjRqcg72U9NItYQ28+yBM1HbRJiajv+MVAiTq9jeHlgwLPXke3n4SRDB4=
+      distributions: release
+      skip-cleanup: true
