@@ -1,0 +1,65 @@
+Metadata-Version: 1.2
+Name: google-search-results
+Version: 1.5.0
+Summary: Scrape and search localized results from Google, Bing, Baidu at scale using SerpApi.com
+Home-page: https://github.com/serpapi/google-search-results-python
+Author: vikoky
+Author-email: victor@serpapi.com
+License: UNKNOWN
+Description: # Google Search Results in Python
+        
+        [![Build Status](https://travis-ci.org/serpapi/google-search-results-python.svg?branch=master)](https://travis-ci.org/serpapi/google-search-results-python)
+        
+        This Python package is meant to scrape and parse Google, Bing, Baidu results using [SERP API](https://serpapi.com). 
+        The following services are provided:
+        - [Search API](https://serpapi.com/search-api)
+        - [Search Archive API](https://serpapi.com/search-archive-api)
+        - [Account API](https://serpapi.com/account-api)
+        - [Location API](https://serpapi.com/locations-api) (Google Only)
+        
+        SerpApi provides a [script builder](https://serpapi.com/demo) to get you started quickly.
+        
+        Feel free to fork this repository to add more backends.
+        
+        ## Installation
+        
+        Python 2.7 or 3.7 
+        ```bash
+        pip install google-search-results
+        ```
+        
+        [Link to the python package page](https://pypi.org/project/google-search-results/)
+        
+        ## Quick start
+        
+        ```python
+        from lib.google_search_results import GoogleSearchResults
+        client = GoogleSearchResults({"q": "coffee", "location": "Austin,Texas"})
+        result = client.get_dict()
+        ```
+        
+        This example runs a search about "coffee" using your secret api key.
+        
+        The Serp API service (backend)
+        - searches on Google using the client: q = "coffee"
+        - parses the messy HTML responses
+        - return a standardizes JSON response
+        The GoogleSearchResults class
+        - Format the request
+        - Execute GET http request against Serp API service
+        - Parse JSON response into a dictionary
+        Et voila..
+        
+        Alternatively, you can search:
+        - Bing using BingSearchResults class
+        - Baidu using BaiduSearchResults class
+        
+        See the [playground to generate your code.](https://serpapi.com/playground)
+        
+        
+        For more [README](https://github.com/serpapi/google-search-results-python/blob/master/README.md)
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.6, !=3.0.*, !=3.1.*, !=3.2.*
