@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: mit-d3m
+Version: 0.2.0
+Summary: MIT tools to work with D3M datasets.
+Home-page: https://github.com/HDI-Project/mit-d3m
+Author: MIT Data To AI Lab
+Author-email: dailabmit@gmail.com
+License: MIT license
+Description: <p align="left">
+        <img width=15% src="https://dai.lids.mit.edu/wp-content/uploads/2018/06/Logo_DAI_highres.png" alt=“mit-d3m” />
+        <i>An open source project from Data to AI Lab at MIT.</i>
+        </p>
+        
+        
+        [![Travis](https://travis-ci.org/HDI-Project/mit-d3m.svg?branch=master)](https://travis-ci.org/HDI-Project/mit-d3m)
+        [![PyPi Shield](https://img.shields.io/pypi/v/mit-d3m.svg)](https://pypi.python.org/pypi/mit-d3m)
+        
+        
+        # mit-d3m
+        
+        - License: MIT
+        - Documentation: https://HDI-Project.github.io/mit-d3m/
+        - Homepage: https://github.com/HDI-Project/mit-d3m
+        
+        # Overview
+        
+        MIT tools to work with D3M datasets.
+        
+        # Install
+        
+        ## Requirements
+        
+        **mit-d3m** has been developed and tested on [Python 3.5, 3.6 and 3.7](https://www.python.org/downloads/)
+        
+        Also, although it is not strictly required, the usage of a
+        [virtualenv](https://virtualenv.pypa.io/en/latest/) is highly recommended in order to avoid
+        interfering with other software installed in the system where **mit-d3m** is run.
+        
+        These are the minimum commands needed to create a virtualenv using python3.6 for **mit-d3m**:
+        
+        ```bash
+        pip install virtualenv
+        virtualenv -p $(which python3.6) mit-d3m-venv
+        ```
+        
+        Afterwards, you have to execute this command to have the virtualenv activated:
+        
+        ```bash
+        source mit-d3m-venv/bin/activate
+        ```
+        
+        Remember about executing it every time you start a new console to work on **mit-d3m**!
+        
+        ## Install with pip
+        
+        After creating the virtualenv and activating it, we recommend using
+        [pip](https://pip.pypa.io/en/stable/) in order to install **mit-d3m**:
+        
+        ```bash
+        pip install mit-d3m
+        ```
+        
+        This will pull and install the latest stable release from [PyPi](https://pypi.org/).
+        
+        ## Install from source
+        
+        Alternatively, with your virtualenv activated, you can clone the repository and install it from
+        source by running `make install` on the `stable` branch:
+        
+        ```bash
+        git clone git@github.com:HDI-Project/mit-d3m.git
+        cd mit-d3m
+        git checkout stable
+        make install
+        ```
+        
+        For development, you can use `make install-develop` instead in order to install all
+        the required dependencies for testing and code linting.
+        
+        
+        # History
+        
+        ## 0.2.0
+        
+        * `disk_usage` fails on macOS/BSD with human=True
+        * Support latest d3m schema versions
+        * Support python 3.7+
+        
+        ## 0.1.2
+        
+        * Set the d3mIndex column as a DataFrame column in the TabularLoader
+        
+        ## 0.1.1
+        
+        * Removal of unnecessary dependencies
+        * Separate `tabular` into `single_table` and `multi_table`
+        * Improve datasets stats collection.
+        
+        ## 0.1.0
+        
+        * D3M Dataset parser
+        * Loaders by Data Modality
+        * Dataset Stats generator
+        * Dataset Configuration generator
+        * Metrics functions
+        * MongoDB connector
+        
+Keywords: mit-d3m
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
