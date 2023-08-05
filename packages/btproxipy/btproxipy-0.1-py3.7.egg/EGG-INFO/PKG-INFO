@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: btproxipy
+Version: 0.1
+Summary: Detects if a Bluetooth device is near by querying its RSSI value and executes commands when the device leaves or comes back.
+Home-page: https://github.com/LukeSkywalker92/btproxipy
+Author: Lukas Scheffler
+Author-email: lukecodewalker92@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
