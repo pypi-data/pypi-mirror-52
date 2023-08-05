@@ -1,0 +1,15 @@
+face_engine/__init__.py,sha256=otOOljYvlQNqDxn1OI5FLB4LP9noCqcFMCDOEluphbk,14436
+face_engine/exceptions.py,sha256=tYMzsxZ_9vGTBamUt8xrsrtLv5NNOxuFf2icAkIF0io,875
+face_engine/models/__init__.py,sha256=vXk9cE9KZERNbDc7VKJOmg1eFq_enh_iH7oAKl2vZRg,6166
+face_engine/models/hog_detector.py,sha256=STCwcVtDF-jOT7_L6kcTTCqe4A0niD6AgGTG7DVXMZ4,1945
+face_engine/models/linear_predictor.py,sha256=JTZ4Clmyjacl0u3SLVksaomE4vP2i-liHJAc6jSknBQ,2589
+face_engine/models/mmod_detector.py,sha256=xkQkuoZEubv_jBKlZT-wq1q5OjAEpc53JtDPD8sVrVU,2782
+face_engine/models/resnet_embedder.py,sha256=JcclSd2h_OIbmSe0LmNUA5Ez6kY_xrywC2bEyWnY0Ts,2954
+fetching/__init__.py,sha256=P0tKi9g21pEK-Rq91r-Bjv366y0NS6mIWjqsiXVq1ys,2900
+fetching/fetch_models.py,sha256=smDKZ6CcEkgBiBJZ4dWuMUkEXmnOC8R_B6EvkqzJHSI,1434
+face_engine-1.1.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+face_engine-1.1.1.dist-info/METADATA,sha256=UmRR8UmLDOewiM3MrU7N-pIqgGjP4Vv-YtYNSwdXt1M,707
+face_engine-1.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+face_engine-1.1.1.dist-info/entry_points.txt,sha256=UDkT05DzxbEjPCwQ4Qc-9EkRuJh2O81qcaD-vL9xzJ4,62
+face_engine-1.1.1.dist-info/top_level.txt,sha256=1olUjMYUoPJriLoz15kV-Bs5-apFcU6TzmcrCJBAqmk,21
+face_engine-1.1.1.dist-info/RECORD,,
