@@ -1,0 +1,16 @@
+copinicoos/__init__.py,sha256=4idJFhVCQsTzyYsb1DBGlBVBMqLEP2zKVL6LfwLSt0A,363
+copinicoos/__main__.py,sha256=wKHq0ngoGF3MA5LPUYW94bdCMpoFoF_sEEDbDc6mro8,506
+copinicoos/account_manager.py,sha256=r6XAK-g2AS9PFL_P2-t-cUi2uaSFM_skQLoM_ghUR3E,4020
+copinicoos/input_manager.py,sha256=68Q1H7IjtS7psDPcSkVkMfWv7xbPgpI2h1bfF7soxv8,11122
+copinicoos/loggable.py,sha256=gFXzq1zAiNaZNNd7yFg4sjPcXWOY6yaHwrUkP1v6U7g,2100
+copinicoos/query_formatter.py,sha256=68siV6EAPLsfcBQ6plA_XlI0F9Uw9aHii8UK4p5Cnyg,1169
+copinicoos/resumable.py,sha256=fHyzB_pRek-G16SDIp5Iv7lrFOk_8pqqAYLvvZPqYGI,1881
+copinicoos/secure.py,sha256=csCc2YAZUWrFhcnfcXWGel-J4ksZ4nRL0Odwn-I9MAQ,847
+copinicoos/wget_check.py,sha256=Mm2oEZ8-N1fCbC9MUuUUL0ZqUtC3k1JC70bDhbT4S8Q,3189
+copinicoos/worker.py,sha256=9vzfnqehKcDNWZS8z4p0JF9ciKkEe2TsD3QITFJbFvg,12347
+copinicoos/worker_manager.py,sha256=odLr17gVwtAZSs39iNZwSh9LqLxE-DXCX7Bb6EjCwL8,5477
+copinicoos-0.0.1.dist-info/LICENSE,sha256=GsefQncji3TO2f-qSzchwRKzxAOPwzpbsQNnzmNj4zI,1096
+copinicoos-0.0.1.dist-info/METADATA,sha256=6wkSwHwVxe4O0KycDLNdJS7a_HNO474eWKyvSsmR1lo,4890
+copinicoos-0.0.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+copinicoos-0.0.1.dist-info/top_level.txt,sha256=tpQDkZT99jCRJPgbCtwscSOeRp4B0mECjwd4ZXxi5jQ,11
+copinicoos-0.0.1.dist-info/RECORD,,
