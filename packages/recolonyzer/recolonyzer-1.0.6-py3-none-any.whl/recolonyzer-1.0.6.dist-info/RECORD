@@ -1,0 +1,17 @@
+recolonyzer/__init__.py,sha256=iNeZ6LZ9iCV_ugsqAh5K1fFqbKkfU8o3NbLYBWI3m1I,22
+recolonyzer/__main__.py,sha256=WUr5g8JfFwt8Zw700iPuJu99dwBz_S4CnhzfgbS-lEk,62
+recolonyzer/analysis.py,sha256=OZH6mPBLGr5MAebSuKdsDIL74M_aaQeBNtNOu1Y4auQ,8126
+recolonyzer/filesystem.py,sha256=5bkpvzns8qxgBH1vt4TGH6NlkvM18G4Z05GH8If5uFc,3328
+recolonyzer/image_processing.py,sha256=zUGKCfTPkMlHeHtlia_hT-uTaeQ1SRiaPuilcffaqD0,3705
+recolonyzer/utils.py,sha256=zBXbpEcJtmUkYoYH-TUUOmFbKsbRCAMEK-zkk5G63zQ,3106
+recolonyzer/commands/__init__.py,sha256=OmTo1E6EcD3JpFz7PAD-9V1AeXjE9_PElR-gyQqO-kA,52
+recolonyzer/commands/abstract.py,sha256=h0Q8ymE5eGilYIkR8TV7I1sI7SB0orBqlzSOdmzpOZ0,1007
+recolonyzer/commands/analyse.py,sha256=r2jKJz9l2YmvZPjtICJb24_DJnZT85feDRENZR83BQA,4018
+recolonyzer/commands/entrypoint.py,sha256=J5Ei0Vh34jJuW1pu9pJxMKXBQ5HdOme-vsctE-rHYX4,944
+recolonyzer/commands/rename_images.py,sha256=Txfq8KSt7uUaSNHkTrnrUJu5hsz-Pho0zTOR_fubMeA,4029
+recolonyzer-1.0.6.dist-info/LICENSE,sha256=flUgRXs7dbS_75_lJ_FQeRrYp0KpoCMKCdQrmFXj9WM,1079
+recolonyzer-1.0.6.dist-info/METADATA,sha256=5LHK078ySY9XJK9FEjF4oO7LzTDp07I5jvakzfLLCzA,1242
+recolonyzer-1.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+recolonyzer-1.0.6.dist-info/entry_points.txt,sha256=D81UlTyOlrQRCum15kiYt-kUmXCm66GOhaRUBpoqMRM,69
+recolonyzer-1.0.6.dist-info/top_level.txt,sha256=r-5PZrm_EXM5DsrHz_zNfHUnzkQrsxBNIP4SwY6e-jA,12
+recolonyzer-1.0.6.dist-info/RECORD,,
