@@ -1,0 +1,9 @@
+six
+
+[docs]
+nbsphinx
+jupyter
+
+[server]
+cherrypy>=11
+clients>=0.2
