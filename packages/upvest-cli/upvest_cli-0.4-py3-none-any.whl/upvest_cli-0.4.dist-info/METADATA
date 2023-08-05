@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: upvest-cli
+Version: 0.4
+Summary: Upvest CLI: CLI for using the Upvest CLI
+Home-page: https://docs.upvest.co
+Author: upvest.co
+Author-email: tech@upvest.co
+License: MIT
+Keywords: upvest blockchain api cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: upvest (>=0.0.6)
+Provides-Extra: dev
+Requires-Dist: pre-commit (==1.10.5) ; extra == 'dev'
+Requires-Dist: prospector (==1.1.6.2) ; extra == 'dev'
+
+Upvest CLI
+**********
+
+Use the Upvest API from the command line!
+
+Installation
+------------
+
+To install the Upvest CLI, using Python 3.6+::
+
+  pip install upvest-cli
+
+or alternatively directly from the repository::
+
+  pip install https://github.com/toknapp/upvest-cli
+
+Basic usage
+-----------
+
+There are three 'layers' of the upvest CLI commands.
+
+- :code:`upvest` the starting point for commands to configure which endpoint to talk to
+- :code:`app` or :code:`user` to decide between using the application (tenant) API or the user (clientele) API and include the necessary credentials
+- commands : such as 'createuser' or 'listassets' or 'createwallet'
+
+For example:
+
+Create a user::
+
+  upvest -e https://api.playground.upvest.co/ app -K keyid -S keysecret -P keypassphrase createuser username password
+
+Configuration file
+------------------
+
+A configuration file will help to fill in most command line arguments, thus avoiding
+having to repeat several credentials and ensuring secrets and passwords do not linger
+in your bash history.
+
+:code:`--help` on each subcommand will show which environment variables to set in place
+of commandline arguments, however a configuration file can also be used.
+
+This will be loaded by default from :code:`upvest.yaml` or :code:`.upvest.yaml` however
+this can be configured using the :code:`--configfile` or :code:`-c` flag to pass in the path
+to the configuration file.
+
+The configuration file should take the following form::
+
+  endpoints:
+    my_example_name:
+      base_url: https://api.playground.upvest.co/
+      api_key: ...
+      api_key_secret: ...
+      api_key_passphrase: ...
+      oauth_client_id: ...
+      oauth_client_secret: ...
+
+This can then be referenced from the command line to switch between
+environments or applications as you define them::
+
+  upvest -e my_example_name user -l username -w password listwallets
+
+
+Example Usage
+-------------
+
+Here is a quick guide on how to create a user, create a wallet for that user,
+then receive and send to and from it. Once you have created an API key at
+https://login.upvest.co, and created a configuration file as above, take the
+following steps.
+
+Step 1 - Create a user
+______________________
+
+Create a single user with the given username and password::
+
+  upvest -e my_example_name app createuser test_username test_password
+
+Step 2 - Create a wallet
+________________________
+
+First list the assets available for your application to use::
+
+  upvest -e my_example_name app listassets
+
+  Symbol |                                        Name | ID
+  -------| ------------------------------------------- | ------------------------------------
+     ETH |                             Ether (Ropsten) | deaaa6bf-d944-57fa-8ec4-2dd45d1f5d3f
+      UP |       Upvest Testing ERC20 Faucet (Ropsten) | cf08564b-8fa3-5c88-a29b-029915471249
+
+Then create a wallet for the test user using one or more asset IDs from that list. In this
+example, creating an Ether Ropsten wallet::
+
+  upvest -e my_example_name user --login test_username --password test_password createwallet deaaa6bf-d944-57fa-8ec4-2dd45d1f5d3f
+
+  2bd5f676-e86c-4cb4-bdaf-4afefffed3f4 0x16edb0e94d0baa4d0a528b501e9dcffbd7752d5d
+
+This returns firstly the unique ID of the wallet, as well as the public address.
+
+Step 3 - Receive tokens
+_______________________
+
+Go to a public faucet - for example, the `public ropsten faucet
+<https://faucet.ropsten.be>`_ - and send to the address of the user's wallet.
+
+Now, once the transfer has been confirmed, you can see the balances of the
+user's wallet::
+
+  upvest -e my_example_name user --login test_username --password test_password listwallets
+
+  2bd5f676-e86c-4cb4-bdaf-4afefffed3f4 0x16edb0e94d0baa4d0a528b501e9dcffbd7752d5d
+     deaaa6bf-d944-57fa-8ec4-2dd45d1f5d3f Ether (Ropsten) 1000000000000000000 10^18
+
+This returns the unique wallet ID followed by the public address, then a balance of
+each of the tokens the wallet can hold. In this case, the balance is 1*10^18.
+
+Step 4 - Sending
+________________
+
+Now that you have a wallet containing some tokens, you can send them to another
+wallet. For example, to send the tokens back to the faucet wallet::
+
+  # example:
+  upvest -e my_example_name user -l test_username -w test_password send <walletid> <assetid> <quantity> <fee> <recipient>
+  # real transaction:
+  upvest -e my_example_name user -l test_username -w test_password send 2bd5f676-e86c-4cb4-bdaf-4afefffed3f4 deaaa6bf-d944-57fa-8ec4-2dd45d1f5d3f 900000000000000000 5000000000 0x687422eea2cb73b5d3e242ba5456b782919afc85
+  Transaction successfully created: 0xa536ffdfcee7d6cf49bd68eb8186089dd7588797daf8b9e8db88a84a732e8cf2
+
+This will return the transaction ID.
+
+
+Advanced API usage
+------------------
+
+The Upvest CLI is meant as a simple tool to test and inspect how the Upvest API
+works and responds. When you have more complicated applications to build, head
+over to `the Upvest documentation <https://docs.upvest.co>`_ to read more about
+how the API works. This CLI tool uses `the Upvest Python SDK <https://github.com/toknapp/python-sdk-upvest>`_
+however there are tools for other languages too. Happy hacking!
+
+
