@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: show-weather-data
+Version: 0.0.1
+Summary: A python package to get weather reports
+Home-page: https://github.com/aswinayyolath/pythonpy
+Author: Aswin A
+Author-email: aswin6303@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: bs4
+
+Package to show weather report based on city selected
+
+
