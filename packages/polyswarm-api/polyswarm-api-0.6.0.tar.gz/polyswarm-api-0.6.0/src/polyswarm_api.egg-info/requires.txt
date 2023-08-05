@@ -1,0 +1,8 @@
+click==6.7
+aiohttp==3.5.4
+requests==2.20.1
+aiofiles==0.4.0
+aiodns==1.2.0
+polyswarm-artifact==1.2.1
+pytest==3.9.2
+pytest-aiohttp==0.3.0
