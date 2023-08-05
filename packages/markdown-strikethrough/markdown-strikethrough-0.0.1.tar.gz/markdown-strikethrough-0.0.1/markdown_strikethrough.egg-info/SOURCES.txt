@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+markdown_strikethrough/__init__.py
+markdown_strikethrough/extension.py
+markdown_strikethrough.egg-info/PKG-INFO
+markdown_strikethrough.egg-info/SOURCES.txt
+markdown_strikethrough.egg-info/dependency_links.txt
+markdown_strikethrough.egg-info/requires.txt
+markdown_strikethrough.egg-info/top_level.txt
