@@ -1,0 +1,11 @@
+patool
+colorama
+appdirs
+black
+GitPython
+PyYAML
+progressbar2
+RestrictedPython
+
+[:platform_system == "Windows"]
+pywin32
