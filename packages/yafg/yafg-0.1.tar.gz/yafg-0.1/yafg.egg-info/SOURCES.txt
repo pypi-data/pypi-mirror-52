@@ -1,0 +1,12 @@
+README.md
+setup.py
+test/__init__.py
+test/test_yafg.py
+yafg/__init__.py
+yafg/yafg.py
+yafg.egg-info/PKG-INFO
+yafg.egg-info/SOURCES.txt
+yafg.egg-info/dependency_links.txt
+yafg.egg-info/entry_points.txt
+yafg.egg-info/requires.txt
+yafg.egg-info/top_level.txt
