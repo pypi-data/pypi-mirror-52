@@ -1,0 +1,11 @@
+README.md
+setup.py
+dmfrbloom/__init__.py
+dmfrbloom/bitfield.py
+dmfrbloom/bloomfilter.py
+dmfrbloom/pymmh3.py
+dmfrbloom/timefilter.py
+dmfrbloom.egg-info/PKG-INFO
+dmfrbloom.egg-info/SOURCES.txt
+dmfrbloom.egg-info/dependency_links.txt
+dmfrbloom.egg-info/top_level.txt
