@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+elias_fano/__init__.py
+elias_fano/__version__.py
+elias_fano/elias_fano.py
+elias_fano.egg-info/PKG-INFO
+elias_fano.egg-info/SOURCES.txt
+elias_fano.egg-info/dependency_links.txt
+elias_fano.egg-info/requires.txt
+elias_fano.egg-info/top_level.txt

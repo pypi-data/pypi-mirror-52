@@ -1,0 +1,72 @@
+elias_fano
+=========================================================================================
+|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+
+Python package implementing an educational version of Elias-Fano succint structure. This package is not thought for efficient data storing as the superior and inferior data vectors are implemented as strings to show the results step by step for educational purposes.
+
+How do I install this package?
+----------------------------------------------
+As usual, just download it using pip:
+
+.. code:: shell
+
+    pip install elias_fano
+
+Tests Coverage
+----------------------------------------------
+Since some software handling coverages sometime get slightly different results, here's three of them:
+
+|coveralls| |sonar_coverage| |code_climate_coverage|
+
+
+Usage example
+----------------------------------------------
+
+.. code:: python
+
+    from elias_fano import EliasFano
+
+    ef = EliasFano([0, 0, 0, 5, 6, 8, 12])
+    ef.selection(3) # 5
+    ef.rank(6) # 4
+
+
+.. |travis| image:: https://travis-ci.org/LucaCappelletti94/elias_fano.png
+   :target: https://travis-ci.org/LucaCappelletti94/elias_fano
+   :alt: Travis CI build
+
+.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_elias_fano&metric=alert_status
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_elias_fano
+    :alt: SonarCloud Quality
+
+.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_elias_fano&metric=sqale_rating
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_elias_fano
+    :alt: SonarCloud Maintainability
+
+.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_elias_fano&metric=coverage
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_elias_fano
+    :alt: SonarCloud Coverage
+
+.. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/elias_fano/badge.svg?branch=master
+    :target: https://coveralls.io/github/LucaCappelletti94/elias_fano?branch=master
+    :alt: Coveralls Coverage
+
+.. |pip| image:: https://badge.fury.io/py/elias_fano.svg
+    :target: https://badge.fury.io/py/elias_fano
+    :alt: Pypi project
+
+.. |downloads| image:: https://pepy.tech/badge/elias_fano
+    :target: https://pepy.tech/badge/elias_fano
+    :alt: Pypi total project downloads 
+
+.. |codacy|  image:: https://api.codacy.com/project/badge/Grade/22ac0b213d0748efb19490810827da56
+    :target: https://www.codacy.com/manual/LucaCappelletti94/elias_fano?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/elias_fano&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Maintainability
+
+.. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/8daba58e41a3472f841b/maintainability
+    :target: https://codeclimate.com/github/LucaCappelletti94/elias_fano/maintainability
+    :alt: Maintainability
+
+.. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/8daba58e41a3472f841b/test_coverage
+    :target: https://codeclimate.com/github/LucaCappelletti94/elias_fano/test_coverage
+    :alt: Code Climate Coverate
