@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: flatjson
+Version: 0.1.1
+Summary: Flatten json.
+Home-page: https://github.com/gaojiuli/flatjson
+Author: Jiuli Gao
+Author-email: gaojiuli@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/gaojiuli/flatjson
+Description-Content-Type: text/markdown
+
+## Flatjson
+
+Flatten JSON.
+
+## Installation
+
+`pip install flatjson`
+
+## Usage
+
+```python
+import flatjson
+
+data = {
+    "list":[{"a":1},{"b":True}],
+    "dict":{"c":1.1,"d":{"e":"string"}}
+}
+flatjson.dumps(data)
+
+# {'list[0].a': 1, 'list[1].b': True, 'dict.c': 1.1, 'dict.d.e': 'string'}
+```
+
