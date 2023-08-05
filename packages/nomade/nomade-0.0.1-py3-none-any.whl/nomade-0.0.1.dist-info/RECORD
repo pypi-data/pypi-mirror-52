@@ -1,0 +1,16 @@
+nomade/__init__.py,sha256=DsAHdxLC16H2VjdFOU5tBx2xT9VnNQ-XbTS24fRCa_w,22
+nomade/assets/.nomade.yml,sha256=VTSZKcekyDy7EjghsENJ4T08_IxWeyhX82YmI_9HGXo,181
+nomade/assets/template.py,sha256=xFrV260ME2C9B-nkuOa0Zs4Fa8Mr10Zs1FKr7kcchaI,417
+nomade/constants/level.py,sha256=Ho9IjWAVKQ_4HhgGemurjzNfpERVVUBPuKklK2cmGIo,81
+nomade/database.py,sha256=KFBrIcCLDTiffOtaZ1pRVOBAQ3FJ54QpHgBopEMhVTc,2385
+nomade/main.py,sha256=8jpEhubKlQuXre7CfoZ3YAF6BGcKzfaDUDohJUuyn6Q,1367
+nomade/migration.py,sha256=drqyFy_5Z7Qigb--NgAbeZNngp-bkrMmXDOkXvCUBOk,4513
+nomade/migrations.py,sha256=6_suQyB61SvE01jKy1vzznxkrI8uGAxRe3Novyru5F4,4406
+nomade/nomad.py,sha256=9_UsbDZSCJ3nGr8Ihn12zEhBFp-npiA4gdqJR0DvtGg,4953
+nomade/settings.py,sha256=-YmZ70jJkRFxBQYorZ89WQETT1Crwx-ORS8EYl26v4w,658
+nomade/utils.py,sha256=hHl0jNxgVnzfeVoXzQBroo3-xdsjDpAyDzeUqjJd8gk,611
+nomade-0.0.1.dist-info/entry_points.txt,sha256=BaggeK1k9IsO-hf6fP0WIJskMoSuvT7NWMMdgiR7LJw,42
+nomade-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nomade-0.0.1.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+nomade-0.0.1.dist-info/METADATA,sha256=5HqlmSXnhe6caM-lg8hzV6buNcIfLw3PktsjqD_19AY,2409
+nomade-0.0.1.dist-info/RECORD,,
