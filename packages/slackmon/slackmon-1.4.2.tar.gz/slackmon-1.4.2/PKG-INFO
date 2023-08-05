@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: slackmon
+Version: 1.4.2
+Summary: A Slack channel message retriever. This script obtains   Slack messages for all channels (public, private, direct, and group) for   a specified amount of time for a Workspace.
+Home-page: https://github.com/corpseReviver/python-slackmon
+Author: Rob Sitro
+Author-email: rsitro4@gmail.com
+License: GNU GENERAL PUBLIC LICENSE
+Download-URL: https://github.com/corpseReviver/python-slackmon/archive/v_1_4_3.tar.gz
+Description: UNKNOWN
+Keywords: slack auditor,slack,slack message retriever,slack logging,logging
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
