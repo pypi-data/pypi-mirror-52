@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: python-seafile-api
+Version: 0.2.2
+Summary: Client interface for Seafile Web API
+Home-page: https://github.com/Widly/python-seafile
+Author: Igor Rumyantsev
+Author-email: igorrum@mail.ru
+License: BSD
+Description: UNKNOWN
+Platform: Any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
