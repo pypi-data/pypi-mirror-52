@@ -1,0 +1,3 @@
+[console_scripts]
+beefore = beefore.__main__:main
+
