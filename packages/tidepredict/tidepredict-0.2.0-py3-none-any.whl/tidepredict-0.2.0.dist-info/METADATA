@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: tidepredict
+Version: 0.2.0
+Summary: Tide Prediction tools
+Home-page: https://github.com/windcrusader/tidepredict
+Author: Brad Henderson
+Author-email: ba.henderson@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: jinja2
+Requires-Dist: scipy
+
+# tides
+tide tracking applications
+
+

@@ -1,0 +1,17 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_processdata.py,sha256=IGE7CQMacvoC6R8rOR3KhhmAbxEY_6jkNfSH3nA7zqE,365
+tidepredict/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidepredict/__main__.py,sha256=rjCPqpkFMQY62J5SR10LkoGQoy5ky2cT4zkLm45tdHg,5581
+tidepredict/astro.py,sha256=0pohl8JKPiQ1kPDn3PUqKkJmoJUaurCCRJV3Ecq6pb0,6036
+tidepredict/constants.py,sha256=b_eZvAaxa_pIAp5dChLPmUlhPBLGeNiph40BpaYudGg,451
+tidepredict/constituent.py,sha256=mO5XLHv_8KL8XDPG-X_JxwQH-1wmO9L9fGLx4Vm1vS8,6359
+tidepredict/ftp_helpers.py,sha256=lErKrFEGC32HyG6uZh4OFhwgY_lrXvUa36CtYWq1fCg,724
+tidepredict/nodal_corrections.py,sha256=69aYWBPDYuVNM0P4dfY5N4dc_TmXjDSM0h9WbxVOcRc,3707
+tidepredict/process_station_list.py,sha256=TWCDBmMU51xQBrD1lOEbLJMGRtT6XY-OLo7JUvJJwbw,1797
+tidepredict/processdata.py,sha256=oARvwFAvHAoZpsoqXIgi2eKmWPoQNm__rmPotvcB60s,9150
+tidepredict/tide.py,sha256=bz_rmZciRRymkNLQ0va120kVMGlpFYv2uajQgjggYnw,13991
+tidepredict-0.2.0.dist-info/LICENSE,sha256=9zxvKBREYVsFgR39L4Y-9A7X06m92bi1hAYm5bWZjqM,1071
+tidepredict-0.2.0.dist-info/METADATA,sha256=2ZYwA_RJkOxO0xxdZVegTEmWPBXNeIabJ2UO19tFl0g,692
+tidepredict-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+tidepredict-0.2.0.dist-info/top_level.txt,sha256=Z_ZIpIN-8Gs1bKpM3ARxEuXg7AWz1QPtxNOYQ3JSmZQ,12
+tidepredict-0.2.0.dist-info/RECORD,,
