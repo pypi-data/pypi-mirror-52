@@ -1,0 +1,13 @@
+README.md
+setup.py
+bin/waws
+waws/__init__.py
+waws/bucket_manager.py
+waws/instance_manager.py
+waws.egg-info/PKG-INFO
+waws.egg-info/SOURCES.txt
+waws.egg-info/dependency_links.txt
+waws.egg-info/requires.txt
+waws.egg-info/top_level.txt
+waws/utils/__init__.py
+waws/utils/configure.py
