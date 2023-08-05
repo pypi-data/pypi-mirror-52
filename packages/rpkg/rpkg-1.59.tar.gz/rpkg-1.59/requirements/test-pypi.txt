@@ -1,0 +1,5 @@
+coverage
+mock == 1.0.1
+
+# used in MBS tests
+openidc-client
