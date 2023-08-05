@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: torchgel
+Version: 1.0.0
+Summary: PyTorch implementation of group elastic net
+Home-page: https://github.com/jayanthkoushik/torch-gel
+Author: Jayanth Koushik
+Author-email: jnkoushik@gmail.com
+Keywords: pytorch,lasso,elasticnet
+Requires-Python: >=3.5,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Provides-Extra: test
+Requires-Dist: cvxopt; extra == "test"
+Requires-Dist: cvxpy (>=1.0,<2.0); extra == "test"
+Requires-Dist: numpy (>=1.10,<2.0)
+Requires-Dist: scipy; extra == "test"
+Requires-Dist: tqdm (>=4.0,<5.0)
+Project-URL: Repository, https://github.com/jayanthkoushik/torch-gel
