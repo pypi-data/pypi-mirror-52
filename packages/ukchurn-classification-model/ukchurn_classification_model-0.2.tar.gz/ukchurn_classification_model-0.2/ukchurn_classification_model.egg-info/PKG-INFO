@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ukchurn-classification-model
+Version: 0.2
+Summary: A library for predicting pannelist churn.
+Home-page: https://github.com/diogo22santos/churn_model.git
+Author: Lisbon Data Science Hub
+Author-email: diogo.santos@kantar.com
+License: MIT
+Description: 
+        # UK Panelists - Churn Model
+Platform: UNKNOWN
+Requires-Python: >=3.7.4
+Description-Content-Type: text/markdown
