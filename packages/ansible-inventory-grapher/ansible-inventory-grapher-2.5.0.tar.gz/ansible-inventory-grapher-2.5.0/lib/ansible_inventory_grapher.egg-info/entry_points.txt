@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-inventory-grapher = ansibleinventorygrapher.__main__:main
+
