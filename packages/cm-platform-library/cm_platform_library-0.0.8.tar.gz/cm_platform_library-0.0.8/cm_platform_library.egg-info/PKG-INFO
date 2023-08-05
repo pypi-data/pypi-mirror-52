@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: cm-platform-library
+Version: 0.0.8
+Summary: Handles our platform and authentication requests
+Home-page: https://gitlab.com/cloudmicro/pypi/cm_platform_library
+Author: Trent Murray
+Author-email: trent@cloudmicro.io
+License: UNKNOWN
+Description: # cloudmicro platform library
+        
+        As most services require the requests to them to be authenticated and checked
+        for permissions - the speed of traversing these requests via HTTPS is 
+        prohibitive. Therefore, we give each service direct access to the platform
+        database to query via predefined methods.
+        
+        This library also includes license, provider and user JSON serialisation. 
+        
+        Our mission is to have all single resource requests to return in under
+        100ms, and this will never happen if we have to authenticate between
+        microservices. 
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
