@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: qisa
+Version: 0.0.0
+Summary: qISA is an extended ISA data model with enhanced quality assurance layer. This tool provides a command line UI and user-friendly GUI.
+Home-page: https://github.com/rcfgroup/qISA
+Author: Bo Zhao
+Author-email: bo.zhao@leicester.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# qISA
+
+qISA is an extended ISA data model with enhanced quality assurance layer. This tool provides a command line UI and user-friendly GUI.
+
