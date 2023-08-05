@@ -1,0 +1,6 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+robostash/__init__.py
+robostash/cli.py
