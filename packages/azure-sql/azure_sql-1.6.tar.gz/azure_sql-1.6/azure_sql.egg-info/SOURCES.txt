@@ -1,0 +1,9 @@
+setup.py
+azure_sql/README.md
+azure_sql/__init__.py
+azure_sql/lib.py
+azure_sql.egg-info/PKG-INFO
+azure_sql.egg-info/SOURCES.txt
+azure_sql.egg-info/dependency_links.txt
+azure_sql.egg-info/requires.txt
+azure_sql.egg-info/top_level.txt
