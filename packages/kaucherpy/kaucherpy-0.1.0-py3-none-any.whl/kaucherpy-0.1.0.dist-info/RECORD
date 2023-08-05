@@ -1,0 +1,15 @@
+kaucherpy/__init__.py,sha256=aGaNeWLX76qLP3xRT6M8oPLfYmrzF2QMlsoYIJAi-0M,2882
+kaucherpy/core/Round.py,sha256=hn8ly3nHQo_pWEMeBP1Od5aTd2buLUHaWvOsrl4XSfQ,375
+kaucherpy/core/__init__.py,sha256=FcHLTHfJK2NrVEygpe_HWiPBzRHFKutSh58xx6vg4Ts,1123
+kaucherpy/core/fenv.py,sha256=j-Ji_YhhX7oxaovboKku3HwjU2K7owMz944s9QlPe8E,7468
+kaucherpy/kaucher/Kaucher.py,sha256=H0wuq2hPY2B-ZaTd9VpsNbsYVEuZU0SAwAa1orf-sBE,18463
+kaucherpy/kaucher/__init__.py,sha256=thk1kstNEOWrE7elqdwQ_l7L7Am2qzbvQs4HtM9aH8Q,1094
+kaucherpy/support/__init__.py,sha256=BV1Vs6FuSVSGrI2gplfIPhG9f6e_q-_-11QNTHOdcs8,1054
+kaucherpy/support/error.py,sha256=miotMipCvqH6S-Y2C51wPgPdOlvvYVFpA7ZvIkKMCV0,1914
+kaucherpy/utils/KMath.py,sha256=OL_ruN-m3zyAiufiyVxWzhjBvvn0slKeOpVWZpvi5U8,2800
+kaucherpy/utils/QualitativeMetrics.py,sha256=mK6Diu454jkuw-CSYfBEin-fYYAaAmobbvrj-N2InbM,1920
+kaucherpy/utils/__init__.py,sha256=3tC79zaOD9IDV_-2SFdcUmA_5uPkNQp0qtBdPyVicLA,1102
+kaucherpy-0.1.0.dist-info/METADATA,sha256=xNb5KWR8-sdgpo-WtzeL3MD2cTDKkVX_WRMHVX6XiSs,409
+kaucherpy-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+kaucherpy-0.1.0.dist-info/top_level.txt,sha256=Q_yK7_bJ977WCWTq2mZHgf6yAGvbmZ-8j-FtGim41TM,10
+kaucherpy-0.1.0.dist-info/RECORD,,

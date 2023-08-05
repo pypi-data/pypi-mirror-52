@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kaucherpy
+Version: 0.1.0
+Summary: Interval Arithmetic Package for Kaucher's Interval Arithmetic
+Home-page: https://github.com/lmtortelli/kaucherpy
+Author: Lucas Mendes Tortelli, Dirceu Maraschin Jr.
+Author-email: lmtortelli@inf.ufpel.edu.br,dmaraschin@inf.ufpel.edu.br
+License: GPL
+Platform: Windows
+Platform: Linux
+Requires-Dist: numpy (>=1.13.0)
+Requires-Dist: enum34
+
+UNKNOWN
+
+
