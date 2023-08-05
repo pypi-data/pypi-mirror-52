@@ -1,0 +1,3 @@
+[console_scripts]
+gampy = gampy.__main__:main
+
