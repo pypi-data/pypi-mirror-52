@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "blackini"
+version = "0.1.6"
+description = ""
+authors = ["Pablo Woolvett <pablowoolvett@gmail.com>"]
+
+[tool.poetry.scripts]
+black = "blackini.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+black = { version = "^19.3b0"}
+
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.6.2"
+flake8 = "^3.7.8"
+mypy = "^0.720"
+autopep8 = "^1.4.4"
+isort = "^4.3.21"
+docformatter = "^1.3"
+pylint = "^2.3.1"
+pytest = "^5.1.2"
+pytest-cov = "^2.7.1"
+black = { version = "^19.3b0", extras = [ "d" ] }
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
