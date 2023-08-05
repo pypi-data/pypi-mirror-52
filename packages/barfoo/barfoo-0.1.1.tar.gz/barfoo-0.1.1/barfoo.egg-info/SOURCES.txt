@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+barfoo/__init__.py
+barfoo.egg-info/PKG-INFO
+barfoo.egg-info/SOURCES.txt
+barfoo.egg-info/dependency_links.txt
+barfoo.egg-info/requires.txt
+barfoo.egg-info/top_level.txt
+barfoo/tools/Bar.py
+barfoo/tools/__init__.py
+barfoo/tools/foo.py
+tests/__init__.py
+tests/test_Bar.py
+tests/test_foo.py
