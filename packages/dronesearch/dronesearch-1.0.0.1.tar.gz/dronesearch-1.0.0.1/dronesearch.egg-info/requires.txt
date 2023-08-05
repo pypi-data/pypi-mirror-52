@@ -1,0 +1,6 @@
+setuptools>=41.0.0
+logzero
+fire
+tensorflow
+pyzmq
+opencv-python
