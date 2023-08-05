@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: fragalysis
+Version: 0.0.42
+Summary: Library for fragment based analysis
+Home-page: https://github.com/xchem/fragalysis.git
+Author: Anthony Bradley
+Author-email: anthony.bradley@diamond.ac.uk
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: tqdm
+Requires-Dist: neo4j-driver
+Requires-Dist: numpy
+Requires-Dist: nose
+Requires-Dist: pprint
+Requires-Dist: socketIO-client-nexus
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+UNKNOWN
+
+
