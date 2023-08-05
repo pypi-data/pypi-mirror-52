@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: itrsstatsd
+Version: 1.3.0
+Summary: ITRS StatsD Client
+Home-page: https://www.itrsgroup.com
+Author: ITRS Group Ltd.
+Author-email: support@itrsgroup.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python 
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Monitoring
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# itrsstatsd
+
+[![PyPI Version](https://img.shields.io/pypi/v/itrsstatsd)](https://pypi.org/project/itrsstatsd)
+
+Python module for publishing custom metrics to an ITRS StatsD server.
+
+The module is part of the [Orchestrated Netprobe][1] solution for collecting metrics in orchestrated environments.
+See the [docs][1] for complete details.
+
+## Requirements
+- Python 3.7
+
+## Installation
+
+The module is available via PyPI:
+```
+pip3 install itrsstatsd
+```
+
+## Module Documentation
+
+How to get and use a statsd API handle:  
+```
+pydoc3 itrsstatsd  
+```
+
+API documentation:  
+```
+pydoc3 itrsstatsd.api
+```
+
+Units of measure documentation:
+```  
+pydoc3 itrsstatsd.units
+```
+
+## Getting Started
+
+```python
+from itrsstatsd import build_statsd
+from itrsstatsd.units import Unit
+
+# Create an instance of the client that sends to localhost:8125
+statsd = build_statsd()
+
+# Optionally add dimension(s) to all metrics
+statsd.default_dimensions(app_name="pyapp")
+
+# Record some metrics
+statsd.increment("failed_logins")
+statsd.gauge("cache_size", 52.5, Unit.Megabytes)
+statsd.timer("query_time", 56)
+```
+
+Refer to the pydoc for complete usage details.
+
+
+[1]: https://docs.itrsgroup.com/docs/orchestrated-netprobe
+
+# Change Log
+
+## v1.3.0 (2019-09-11)
+
+New Features:
+- License changed to BSD 3-Clause
+- C2-77: Nano and micro resolution in timer metrics
+
+Resolved:
+- C2-78: Statsd client sends malformed message with sample rate
+
+
+## v1.2.0 (2019-08-23)
+
+New Features:
+- C2-72: Discard oldest metrics when sending queue full
+
+
+## v1.1.0 (2019-08-23)
+
+New Features:
+- C2-69: Statsd over TCP
+
+
+## v1.0.0 (2019-08-15)
+
+First version.
+
+
