@@ -1,0 +1,4 @@
+[pennylane.plugins]
+default.gaussian = pennylane.plugins:DefaultGaussian
+default.qubit = pennylane.plugins:DefaultQubit
+
