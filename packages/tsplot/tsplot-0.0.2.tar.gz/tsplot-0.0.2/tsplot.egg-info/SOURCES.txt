@@ -1,0 +1,22 @@
+LICENCE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+docs/examples.md
+docs/index.md
+docs/install.md
+examples/notebooks/Plot_Sea_ice_extent.ipynb
+examples/notebooks/.ipynb_checkpoints/Plot Sea ice extent-checkpoint.ipynb
+examples/notebooks/.ipynb_checkpoints/Plot_Sea_ice_extent-checkpoint.ipynb
+examples/scripts/sea_ice_extent.py
+tsplot/__init__.py
+tsplot/data.py
+tsplot/plot.py
+tsplot/time.py
+tsplot/version.py
+tsplot.egg-info/PKG-INFO
+tsplot.egg-info/SOURCES.txt
+tsplot.egg-info/dependency_links.txt
+tsplot.egg-info/requires.txt
+tsplot.egg-info/top_level.txt

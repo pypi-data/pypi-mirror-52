@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: tsplot
+Version: 0.0.2
+Summary:  tsplot is a Python package, built on matplotlib, for plotting time series data 
+Home-page: http://github.com/brett-hosking/tsplot
+Author: brett hosking
+Author-email: wilski@noc.ac.uk
+License: MIT
+Description:  tsplot is a Python package, built on matplotlib, for plotting time series data 
+        
+Platform: UNKNOWN
