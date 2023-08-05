@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+pynumbpkg/__init__.py
+pynumbpkg/__main__.py
+pynumbpkg/config.txt
+pynumbpkg/feed.py
+pynumbpkg/viewer.py
+pynumbpkg.egg-info/PKG-INFO
+pynumbpkg.egg-info/SOURCES.txt
+pynumbpkg.egg-info/dependency_links.txt
+pynumbpkg.egg-info/entry_points.txt
+pynumbpkg.egg-info/requires.txt
+pynumbpkg.egg-info/top_level.txt
