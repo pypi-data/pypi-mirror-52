@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+isogeo_export_docx.egg-info/PKG-INFO
+isogeo_export_docx.egg-info/SOURCES.txt
+isogeo_export_docx.egg-info/dependency_links.txt
+isogeo_export_docx.egg-info/requires.txt
+isogeo_export_docx.egg-info/top_level.txt
+isogeotodocx/__about__.py
+isogeotodocx/__init__.py
+isogeotodocx/isogeo2docx.py
+isogeotodocx/utils/__init__.py
+isogeotodocx/utils/formatter.py
