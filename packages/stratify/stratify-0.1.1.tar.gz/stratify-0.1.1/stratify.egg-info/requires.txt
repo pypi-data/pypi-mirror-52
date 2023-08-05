@@ -1,0 +1,6 @@
+setuptools>=40.8.0
+numpy
+Cython
+
+[test]
+nose
