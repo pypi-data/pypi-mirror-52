@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: consul-owl
+Version: 0.0.6
+Summary: Owl is a python Consul config center for Tornado, Gevent, Flask and AioHTTP
+Home-page: https://github.com/xtqxk/owl
+Author: XTQXK
+Author-email: xtqxk.kilroy@gmail.com
+License: http://www.apache.org/licenses/LICENSE-2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
