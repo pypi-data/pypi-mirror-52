@@ -1,0 +1,11 @@
+flask>=1.1
+trimport
+
+[dev]
+pytest
+coverage
+sphinx
+
+[docs]
+sphinx
+numpydoc
