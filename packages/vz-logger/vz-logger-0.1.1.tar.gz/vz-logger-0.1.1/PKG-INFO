@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: vz-logger
+Version: 0.1.1
+Summary: Send beautiful messages to the Vizstack Logger.
+Home-page: https://github.com/vizstack/vz-logger
+Author: Ryan Holmdahl & Nikhil Bhattasali
+Author-email: vizstack@gmail.com
+License: MIT
+Description: # vz-logger
+        Send beautiful messages to the [Vizstack logger](https://github.com/vizstack/vz-logger).
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
