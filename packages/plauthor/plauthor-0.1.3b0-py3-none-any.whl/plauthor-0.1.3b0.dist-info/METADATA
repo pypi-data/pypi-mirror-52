@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: plauthor
+Version: 0.1.3b0
+Summary: Plauthor: Machine Learning Focused Interface for Dataframe-related Visualizations
+Home-page: https://github.com/shayanfazeli/plauthor
+Author: Shayan Fazeli
+Author-email: shayan@cs.ucla.edu
+License: Apache
+Keywords: plauthor machine learning dataframe label plot graphics grammer ggplot matplotlib
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >3.6.0
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: plotnine
+
+UNKNOWN
+
+
