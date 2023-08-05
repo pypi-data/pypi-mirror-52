@@ -1,0 +1,459 @@
+CHANGES
+=======
+
+1.9.18
+------
+
+* Test load/reload of invalid/valid config
+* Update config watcher on error
+* Gauge senses changes in FAUCET configs
+* Gauge unit tests
+* DPs can be a list
+* Gauge unit tests should log
+* Gauge config manager needs hashes and FAUCET config file names
+* Add TODO that multi DP routing needs to flood out stack ports
+* syntax
+* Disable targetted gw resolution for multi DP routing
+* multi DP no vlans test is flaky
+* Need to compare DONTCARE
+* Don't process packets with all zero MAC addresses
+* Speed up fping by skipping DNS and using standard fast retry timers
+* Add notes for use with Poseidon
+* 8021X periodic reauth test could still get out of sync
+* Stickler
+* Update dependency pytype to v2019.9.6
+* Increase code reuse in warm start config changes, ensure port and VLAN caches are kept on an ACL-only change
+* pylint
+* Incremental smoke test coverage for ryuapp
+* Re-do Stickler
+* Revert "Stickler."
+* Revert "Stickler."
+* Stickler
+* Stickler
+* Shard out Ryu app smoke test
+* Stickler
+* Shard out egress pipeline test
+* Shard out config tests
+* Shard out dot1x tests
+* Upgrade prometheus to 2.12.0
+* Update grafana/grafana-arm32v7-linux Docker tag to v6.3.5
+* Update grafana/grafana Docker tag to v6.3.5
+* Remove vendor specific details from Aruba config. Remove DNS dependant examples. Explain requirements for VLAN VIDs
+* Demote flakey call to warning
+* syntax
+* Don't sleep on last scrape try
+* Take less time scraping table IDs that aren't present
+* Update dependency pytype to v2019.8.29
+* Update grafana/grafana-arm32v7-linux Docker tag to v6.3.4
+* Update grafana/grafana Docker tag to v6.3.4
+* Filter other\_valves first
+* pytype
+* pylint
+* Simplify peer DP logic for size 2 stacks further
+
+1.9.17
+------
+
+* Add a profiling option to the integration tests
+* withing -> within
+* Implement away port pruning and re-enable separate broadcast/unicast testing
+* Split stacking class into reflection/non reflection implementations
+* force ARP transaction
+* Change 3DP unicast/broadcast test to simple ping
+* Add --loglevel option to set mininet log level
+* Tests for up to 48 ports
+* Don't need to check for learn reflection on stacks size <= 2
+* Add non-compliant match fields to FaucetBadFlowModTest
+* Update blog references
+
+1.9.16
+------
+
+* too many values
+* list index
+* Use topo introspection to discover int/ext hosts
+* Need int dpid
+* Map dpid port/host name assignment
+* Factor LACP health into stack root health
+* Separate health function
+* stickler
+* No longer need remote stack state
+* Don't need remote state
+* Simplify state machine
+* Missed stack state recovery DOWN -> UP
+
+1.9.15
+------
+
+* Include command output in switch.cmd() exception
+* xcast helper should wait longer (still too load sensitive)
+* Add test to use redundant link
+* tunnel tests belong with stacking
+* Split stack tests from test\_valve.py
+* Move base test classes to valve\_test\_lib.py
+* Move test configs to library
+* Move test\_valve functions to separate library
+* Ignore is a list
+* Disable W1619 division w/o future statement
+* stickler
+* FaucetSingleStackStringOf3DPExtLoopProtUntaggedTest load sensitive
+* Guard time 2
+* less aggressive short guard time
+* Debias stack port
+* Refresh bias
+* short term guard too long
+* Non stack port learn bias
+* Revert "Re-enable proactive distributed learning."
+* Re-enable proactive distributed learning
+* Stack init. state links should be removed from graph
+* pylint, python 3 changes
+* \* Correct L2 rerouting failed stack links. \* Stack links need to prove themselves before they can be used at cold start. \* Loose synchronization of learning timeouts across DPs for consistent learning. \* LACP/external ports on a redundant root should not be used. \* Special case multi DP routing until it can be generalized
+* Add exit code checking to FaucetSwitch.cmd()
+* Update prom/prometheus Docker tag to v2.12.0
+* Update dependency sphinx to v2.2.0
+* verify bcast and ucast helpers should use common, less load sensitive code
+* ebtables needs to be run before the controller starts to avoid learning test host MAC addresses
+* Update grafana/grafana-arm32v7-linux Docker tag to v6.3.3
+* Update grafana/grafana Docker tag to v6.3.3
+* Better to use less than rather than equality for debian version matches
+
+1.9.14
+------
+
+* Update faucet/dbuilder Docker tag to v3.0.3
+* verify\_broadcast() tests can flake because it did not check that a scapy originated UDP broadcast was sent
+* verify\_broadcast() helper doesn't actually send a broadcast
+* Ignore W1618
+* Upgrade chewie
+* Obsolete test
+* Use ordered host names everywhere
+* Need to check version comparators separately
+* host\_name\_ordered()
+* Open file as UTF8
+* self.host\_name\_ordered()
+* loop protection tests flakey due to host name order
+* Add unit test
+* Should handle empty graph
+* Fix unhandled exception when LLDP beacon ttl out of range
+* Use pyyaml 3.13 or older (avoid 5.x for now)
+* Add missing %s to format string in require\_host\_learned()
+* Deflake FaucetTaggedExtLoopProtectTest (should not use confusing ACL)
+* Add unit test for stacking external/loop protection (missing test coverage)
+* Fix recovery from a bad config
+* Need to catch no self.stack but stack\_ports
+* Stacking enables LLDP
+* Global LLDP beacon config not required anymore for stacking
+* Make builds more reproducible by locking versions
+* Correct standalone loop protect external case
+* pylint
+* stickler
+* Add test for size 3 stacked switches
+* stickler
+* pylint
+* all flood managers need canonical port ordering
+* Fix external loop protection for stacks of size 2
+* Use external forwarding requested constants
+* stickler
+* stack + route tests use a lot of DPs
+* Further simplification to external field matching
+* Refactor setting of external forwarding requested field to common functions
+* Move loop protect field definitions to valve\_of
+* Use common port number sort ordering
+* Seperate logic for LACP forwarding
+* Use PCP 2
+* Prototype stack redundancy
+* Stickler
+* Test tech debt
+* Fix lldp error
+* Make sure routers on each DP have the required VLANs to route
+* Update dependency pytype to v2019.8.9
+* Update faucet/prometheus-pi Docker tag to v2.11.1
+* Add timeout cmd and quote
+* Re-enable ARP fuzzing for scapy 2.4.3
+* Update grafana/grafana-arm32v7-linux Docker tag to v6.3.2
+* Update grafana/grafana Docker tag to v6.3.2
+* Update dependency scapy to v2.4.3
+* Make stack ACL tests more reliable by cleaning up nc and using a unique string per test
+* verify influx DB log should retry
+* hotfix: a split/controller stacked network will not learn from stack links
+* pep8 indenting
+* Stickler is a stickler
+* pylint
+* StackedRouting tests incompatible with pyyaml 3.12 and pytest 3.3.2
+* 80 is a bit short for us, try 120 char lines
+
+1.9.13
+------
+
+* refactor for future stack redundancy support
+* Don't require errors always (test code doesn't always cause them)
+* Aggressively re-learn on LAGs
+* Add .stickler.yml
+* Prune flood redudant learn path, to reduce unnecessary learn flaps
+* add basic adapter for faucetagent
+* tunnel\_updated\_flags updated for all
+* unused now
+* Low risk pylint cleanup for tests
+* pylint
+* Consistency with n\_tagged
+* pylint
+* Add extra detail when L2 learning
+* Add extra log detail when L2 learning and describing a stack port
+* Send bad flow mods to switch
+* pylint
+* pylint
+* pylint
+* enable stacking + routing
+* Update dependency pytype to v2019.7.30
+* BugFix: Repeat Test Fails on Dot1X Events Verify
+* failure can still stay the same if the port is down (ie. we didn't explicitly log a failure)
+* expected total should be dynamic
+* Don't verify logoff if not asked to
+* Don't wait for 8021x flows on a port that might be down
+* Generic kill for all NFV pids
+* Remove more redundant args
+* Check success flows only if not logging off
+* Remove redundant 8021x prom var checks
+* Remove redundant calls to wait\_for\_eap
+* pylint
+* Remove redundant 8021x prometheus variable checks
+
+1.9.12
+------
+
+* pylint
+* Revert stack topo updates to all valves
+* pylint
+* Add workaround for Aruba not accepting empty miss instructions
+* Remove processing of stack changes on other\_valves
+* Don't calculate flows for DPs that are down when considering stack changes
+* disable unnecessary duplicate test
+* Make verify\_broadcast() more load friendly by calling scapy fewer times
+* Move more tests to run in parallel (they ran alone before due to historical performance problems)
+* Verify that switch works after several disconnections
+* Speed up verify\_broadcast() and verify\_unicast() which had unnecessarily high timers, and improve their diagnostic messages
+* Don't leave behind empty temporary directory if we ran no tests
+* Make external loop protection/stacking test far more readable
+* Implement flood pruning and make stack state changes more efficient
+* Update dependency pytype to v2019.7.26
+* Lock scapy to 2.4.2
+* Consider OFPPS\_LINK\_DOWN flag only
+* Don't reset existing default
+* Add default test duration
+* Cleaner to move duration calculation to test class
+* Share test start time via file as parallel runner can't access it directly
+* OVS TFM ordering
+* No need to str() test time
+* Add TODOs
+* Add TFM OVS version for testing
+* Incremental TFM support for OVS
+* Later pytype has its own parallel run capability. Use that rather than GNU parallel - much faster since running under GNU parallel can have a run time of 30m!
+
+1.9.11
+------
+
+* Mark ARP fuzzing busted in 2.4.2
+* Allow renovate to upgrade scapy
+* Update prom/prometheus Docker tag to v2.11.1
+
+1.9.10
+------
+
+* Add Test Users to the Radius Config in Mininet\_tests
+* Add Dot1x RADIUS-selected ACLs
+* Allow FaucetSanityTest to be run standalone
+* - Fix some tests to avoid some failures on Cisco C9K
+* Remove Invalid Usage of NFV Port from 8021XPortFlapTest and 8021XVLANTest
+* BUGFIX: Enforce output\_only restraint on nfv\_sw\_port
+* Add Kill On Exception flag to API for Chewie
+* Add MAB to Faucet
+* Add note to disable keepalives as well
+* Add Skip PIP Setup Option to Test Run Script
+* No tests is not an error
+* SameDPTest also needs ordering
+* Require strict host name ordering too (tunnel test needs to reference hosts connected to specific switches)
+* Use common tunnel verification function
+* Stable switch name order
+* Cleanup, cleanup order
+* Set port up again after test
+* More helpful message if no tests selected
+* Need to use count method
+* Don't repeat 0 tests
+* Tunnel tests are flakey because tunnel verifier may pick a stack rather than host port
+* Add -r option to test suite to allow repeated runs until failure is detected
+* Fix incorrect comparison for global group
+* Add tests for flow reordering and fix missing global group del
+* LACP state changes need full VLAN rule re-write
+* LACP use of port flood state still specific to LACP
+* pylint
+* Use \_warm\_reconfig\_port\_vlans() consistently
+* Simplify dot1x port state changes further
+* Remove flow table manipulation from one half of dot1x native VLAN handling
+* Simplify 8021x native VLAN add/remove
+* TODO to separate handling of add/change VLANs
+* Use update\_vlan() consistently
+* \_reset\_dot1x\_port\_flood() doesn't flood table ref
+* Update manager API for update
+* Add add/del VLAN helpers
+* Remove direct calls to flood manager build\_flood\_rules()
+* Update flood manager API
+* README version no longer needed
+* If we don't specify an explict version PBR will calculate from git tags
+* Update dependency pytype to v2019.6.28
+* Don't profile setting a port that is already up, up
+* Profile test duplicates flow deduping
+* Must be a list
+* Avoid dedupe when OF message kind is not sent
+* More efficient OF message classification
+* Faster dedupe ofmsgs
+* More efficient classification of global deletes
+* TunnelTest use of FakeOFTable() conflicts with base test's pipeline. Integration test covers correct tunnel behavior across multiple actual DPs anyway
+* Missing hardware declaration
+* Suppress all but global deletes, if global deletes are present
+* Test that table specific flowmods are not sent before TFM
+* Update grafana/grafana-arm32v7-linux Docker tag to v6.2.5
+* Update grafana/grafana Docker tag to v6.2.5
+* Handle unknown ICMP6 type
+* Add unit test for ping controller with size 64 bytes (previous integration test used fping which did not verify length)
+* Cleanup incorrect documentation in test cases
+* Preversion 1.9.10
+
+1.9.9
+-----
+
+* self
+* Reauth test can fail if more attempts occur than the hard coded timeout expects
+* Making LACP resp rate configurable
+* Config unit test cases for lacp\_resp\_interval
+* config unit tests for LLDP src mac validation
+* Upgrade Chewie Version to 0.0.18
+* Change API between Chewie and Faucet to use KWARGS
+* FIX: Use acl\_manager directly instead of Valve inside Faucet\_Dot1x
+* Set :preserveSemverRanges for renovatebot
+* Add note to disable DTP
+* Bump README to 1.9.9
+* Update dependency pytype to v2019.6.21
+* Allow fixed or random ordering for port\_map
+* Update prom/prometheus Docker tag to v2.10.0
+* Simulated hardware switch also needs all IP functionality deconfigured
+* First pass at a "silence" sanity check; must hear no unexpected packets in test environment where all hosts are deconfigured
+* Remove debugging print()
+* set/type
+* Generate flowdel for potentially stale existing port specific flood rule
+* Update dependency prometheus\_client to v0.7.1
+* Update faucet/prometheus-pi Docker tag to v2.10.0
+* Update dependency sphinx to v2.1.2
+* Add missing :
+* Remove port out pcp
+* Should not fall through to default flood rule if stack port is not up
+* Move ARP loop test to standard stack test base
+* Also check no leaked p=0
+* Move pcp set to vlan
+* Only test
+* pyup -> renovate
+* Configure .renovaterc.json
+* conf-zodiac.sh: set Zodiac and OF controller network details
+* FAUCET can send truncated ICMP6 echo replies
+* update grafana to 6.2.4
+* err -> out
+* Pin exabgp to 4.0.10
+* Update apt dependency for python3-prometheus-client
+* Update prometheus\_client from 0.6.0 to 0.7.0
+* Update sphinx from 2.1.0 to 2.1.1
+* Making LACP resp rate configurable
+* LLDP src validation
+* test\_topo.py tests clib rather than faucet
+* Simplify get\_config() in mininet\_tests.py
+
+1.9.8
+-----
+
+* Changing age calculation for LACP response
+* Fix LLDP redundant logging
+* Log error for types
+* Fix missing parsing of optional hw\_switch\_config.yaml parameters
+* setup 1.9.9
+* README 1.9.8
+* self.threads continually grows leading to high CPU. thread schedule jitter can be a float for better load distribution
+* Fix crash when optional include file does not exist
+
+1.9.7
+-----
+
+* Handle shell still running
+* setup 1.9.8
+* README 1.9.7
+* Update pytype from 2019.5.24 to 2019.5.31
+* Update sphinx from 2.0.1 to 2.1.0
+* Add diagnostics for docker container tests. Handle read() possibly returning more than ps1
+* host/switch prefixes should be sorted
+* Consolidate common hardware switch remap code. Explicitly garbage collect OVS switches in tearDown()
+* Lengthen marginal test timeouts
+* Make pip cache easier to use for docker test runs
+* Fix SameDp test for hardware
+* Simulated hardware switch needs to be able to configure two VLAN headers
+* pylint
+* DPIDs cannot be duplicated
+* Remove dangling faucet\_log function
+* Stricter syntax checking for hardware test config, and smoke tests for hardware tests
+* Convert to \_lacp\_actions
+* Making test work properly
+* Preversion 1.9.7
+* README 1.9.6
+
+1.9.6
+-----
+
+* Revert "Merge pull request #2957 from lantz/random-ports"
+* ensure config\_hash metric exists even if parsing fails
+* Update pytype from 2019.5.15 to 2019.5.24
+
+1.9.5
+-----
+
+* Upgrade to grafana 6.2.0
+* Cleanup PR
+* Working test version
+* Fixing basic clone
+* update readme to broaden potential adapters
+* update copyright for 2019
+* Timeout should adjust for packets sent
+* Capture only echo packets for tunnel test
+* Include unicast and routed packets in egress acl unit tests
+* Apply egress ACLs to flooded packets
+* add integration test for egress acls
+* Bump README 1.9.5
+* Reverting some changes from master
+* Fix conditional iteration
+* Fix porty copy in case of port-down
+* add unit test for egress acls
+* install egress acls on datapath
+* add accept to egress function in ValvePipeline
+* verify\_unicast() doesn't handle for possible packet loss. pylint
+* Add some error debugging info
+* Don't send suppressed lacp
+* Port Randomization Support
+* Ignore case when searching for "tshark"
+* Make wireshark regex less greedy so it can match newer versions
+* Update control
+* Add monkey@vandervecken to AUTHORS
+* TunnelTests should send more than one test packet
+* Update verify\_unicast\_not\_looped to use new scapy\_template format
+* Revert "Workaround for https://www.traviscistatus.com/incidents/kyf149kl6bvp?u=3g7kt113nmgs."
+
+1.9.4
+-----
+
+* Preversion 1.9.5
+* More strict tunnel verification
+* Detect coredumps after tests
+* Update debian/control
+
+1.9.2
+-----
+
+* Preversion 1.9.3
+* Release version 1.9.2
+* fix pytype issue
+* add requirements file for rabbitmq for tests
+* minor linting
