@@ -1,0 +1,16 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+setup_meta.py
+src/kivy_garden/zbarcam/__init__.py
+src/kivy_garden/zbarcam/utils.py
+src/kivy_garden/zbarcam/version.py
+src/kivy_garden/zbarcam/zbarcam.kv
+src/kivy_garden/zbarcam/zbarcam.py
+src/zbarcam.egg-info/PKG-INFO
+src/zbarcam.egg-info/SOURCES.txt
+src/zbarcam.egg-info/dependency_links.txt
+src/zbarcam.egg-info/requires.txt
+src/zbarcam.egg-info/top_level.txt
