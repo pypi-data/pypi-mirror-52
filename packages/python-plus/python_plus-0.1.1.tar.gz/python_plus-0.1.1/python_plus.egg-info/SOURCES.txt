@@ -1,0 +1,10 @@
+README.rst
+setup.py
+python_plus/__init__.py
+python_plus/__main__.py
+python_plus/setup.py
+python_plus.egg-info/PKG-INFO
+python_plus.egg-info/SOURCES.txt
+python_plus.egg-info/dependency_links.txt
+python_plus.egg-info/not-zip-safe
+python_plus.egg-info/top_level.txt
