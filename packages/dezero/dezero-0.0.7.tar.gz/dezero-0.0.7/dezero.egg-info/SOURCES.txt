@@ -1,0 +1,17 @@
+setup.py
+dezero/__init__.py
+dezero/core.py
+dezero/core_simple.py
+dezero/dataset.py
+dezero/datasets.py
+dezero/functions.py
+dezero/iterators.py
+dezero/links.py
+dezero/optimizers.py
+dezero/serializers.py
+dezero/utils.py
+dezero.egg-info/PKG-INFO
+dezero.egg-info/SOURCES.txt
+dezero.egg-info/dependency_links.txt
+dezero.egg-info/requires.txt
+dezero.egg-info/top_level.txt
