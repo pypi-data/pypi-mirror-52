@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: spooner
+Version: 0.3
+Summary: spooner
+Home-page: https://github.com/danmaps/spooner
+License: UNKNOWN
+Author: Danny McVey
+Author-email: 
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: tox; extra == "test"
+Provides-Extra: test
