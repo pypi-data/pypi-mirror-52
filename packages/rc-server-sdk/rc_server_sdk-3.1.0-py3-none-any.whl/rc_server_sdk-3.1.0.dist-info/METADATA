@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: rc-server-sdk
+Version: 3.1.0
+Summary: rongcloud python server sdk
+Home-page: https://github.com/rongcloud/server-sdk-python
+Author: zhanglei1
+Author-email: zhanglei1@rongcloud.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+### v3.0 使用的 Python 3.6+ 版本
+
+### 安装运行所需的包
+
+```
+$ sudo pip3 install jinja2
+```
+
+### pip 安装方式
+```
+$ pip install rc-server-sdk
+```
+
+
