@@ -1,0 +1,10 @@
+setup.py
+sparti/__init__.py
+sparti.egg-info/PKG-INFO
+sparti.egg-info/SOURCES.txt
+sparti.egg-info/dependency_links.txt
+sparti.egg-info/top_level.txt
+sparti/BSPF/BSPF_M.py
+sparti/BSPF/__init__.py
+sparti/BSPF/bsp_p_class.py
+sparti/BSPF/bsp_utility.py
