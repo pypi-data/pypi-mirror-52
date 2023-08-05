@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: django-thjwt
+Version: 0.1
+Summary: A simple django app to use th-icloud web platform,
+Home-page: https://www.th-icloud.cn
+Author: JiaZiao & TianYang
+Author-email: jiaza@nscc-tj.cn
+License: BSD License
+Description: =====
+        thjwt
+        =====
+        
+        thapi is a simple app to connect to th-ciloud platform applcations
+        
+        detauk documentation is in the "docs" directory
+        
+        Quick start
+        
+        -----------
+        
+        1. Add "thjwt" to your INSTALLED_APPS setting like this::
+        
+            INSTALL_APPS = [
+                ...
+                'thjwt',
+            ]
+        
+        2. Include the thapi URLconf in your project urls.py like this::
+        
+            url(r'^thjwt/',include('thjwt.urls')),
+        
+        3. Run `python manage.py migrate` to create thapi models
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to create a thapi (you'll need the Admin app enabled).
+        
+        5. Visti http://127.0.0.1:8000/thjwt/ to participate int he thapi
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
