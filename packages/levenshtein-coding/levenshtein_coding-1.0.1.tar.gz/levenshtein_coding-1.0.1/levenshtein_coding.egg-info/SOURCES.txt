@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+levenshtein_coding/__init__.py
+levenshtein_coding/__version__.py
+levenshtein_coding/levenshtein_coding.py
+levenshtein_coding.egg-info/PKG-INFO
+levenshtein_coding.egg-info/SOURCES.txt
+levenshtein_coding.egg-info/dependency_links.txt
+levenshtein_coding.egg-info/requires.txt
+levenshtein_coding.egg-info/top_level.txt

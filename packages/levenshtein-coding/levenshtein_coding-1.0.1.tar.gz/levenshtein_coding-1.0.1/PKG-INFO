@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: levenshtein_coding
+Version: 1.0.1
+Summary: Python package implementing Levenshtein coding.
+Home-page: https://github.com/LucaCappelletti94/levenshtein_coding
+Author: Luca Cappelletti
+Author-email: cappelletti.luca94@gmail.com
+License: MIT
+Description: levenshtein_coding
+        =========================================================================================
+        |travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+        
+        Python package implementing Levenshtein coding.
+        
+        How do I install this package?
+        ----------------------------------------------
+        As usual, just download it using pip:
+        
+        .. code:: shell
+        
+            pip install levenshtein_coding
+        
+        Tests Coverage
+        ----------------------------------------------
+        Since some software handling coverages sometime get slightly different results, here's three of them:
+        
+        |coveralls| |sonar_coverage| |code_climate_coverage|
+        
+        Usage example
+        -----------------------------------------------
+        
+        .. code:: python
+        
+            from levenshtein_coding image levenshtein_coding, decode_levenshtein_coding
+        
+            levenshtein_coding(14) # 11101110
+            assert decode_levenshtein_coding(levenshtein_coding(14)) == 14 # True
+        
+        
+        .. |travis| image:: https://travis-ci.org/LucaCappelletti94/levenshtein_coding.png
+           :target: https://travis-ci.org/LucaCappelletti94/levenshtein_coding
+           :alt: Travis CI build
+        
+        .. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_levenshtein_coding&metric=alert_status
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_levenshtein_coding
+            :alt: SonarCloud Quality
+        
+        .. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_levenshtein_coding&metric=sqale_rating
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_levenshtein_coding
+            :alt: SonarCloud Maintainability
+        
+        .. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_levenshtein_coding&metric=coverage
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_levenshtein_coding
+            :alt: SonarCloud Coverage
+        
+        .. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/levenshtein_coding/badge.svg?branch=master
+            :target: https://coveralls.io/github/LucaCappelletti94/levenshtein_coding?branch=master
+            :alt: Coveralls Coverage
+        
+        .. |pip| image:: https://badge.fury.io/py/levenshtein-coding.svg
+            :target: https://badge.fury.io/py/levenshtein-coding
+            :alt: Pypi project
+        
+        .. |downloads| image:: https://pepy.tech/badge/levenshtein-coding
+            :target: https://pepy.tech/badge/levenshtein-coding
+            :alt: Pypi total project downloads 
+        
+        .. |codacy|  image:: https://api.codacy.com/project/badge/Grade/c4a4d08aba0a4fa0a9cc263dc78f7ee7
+            :target: https://www.codacy.com/manual/LucaCappelletti94/levenshtein_coding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/levenshtein_coding&amp;utm_campaign=Badge_Grade
+            :alt: Codacy Maintainability
+        
+        .. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/9d2d1c1102b1b8b3bfbf/maintainability
+            :target: https://codeclimate.com/github/LucaCappelletti94/levenshtein_coding/maintainability
+            :alt: Maintainability
+        
+        .. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/9d2d1c1102b1b8b3bfbf/test_coverage
+            :target: https://codeclimate.com/github/LucaCappelletti94/levenshtein_coding/test_coverage
+            :alt: Code Climate Coverate
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: test
