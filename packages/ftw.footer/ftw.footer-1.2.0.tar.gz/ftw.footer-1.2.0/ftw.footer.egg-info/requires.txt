@@ -1,0 +1,10 @@
+Plone
+setuptools
+
+[tests]
+plone.app.contenttypes
+plone.app.testing
+ftw.builder
+ftw.testbrowser
+pyquery
+unittest2

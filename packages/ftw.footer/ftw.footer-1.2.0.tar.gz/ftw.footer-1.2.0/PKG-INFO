@@ -1,0 +1,168 @@
+Metadata-Version: 2.1
+Name: ftw.footer
+Version: 1.2.0
+Summary: Adds portlet columns as footer to Plone.
+Home-page: https://github.com/4teamwork/ftw.footer
+Author: 4teamwork AG
+Author-email: mailto:info@4teamwork.ch
+Maintainer: Mathias Leimgruber
+License: GPL2
+Description: Introduction
+        ============
+        
+        ``ftw.footer`` provides a viewlet, which shows 1 - 4 contextual portlet columns.
+        
+        Compatibility
+        -------------
+        
+        - Plone 4.3.x
+        - Plone 5.1.x
+        
+        Plone 5 notes
+        -------------
+        
+        - Since Plone 5 provides the means to edit any portlet manager through the
+          Manage portlets menu item, we've taken the step to disable the manage-footer
+          view from Plone 5 onwards.  (It also didn't work well on small screens).
+        
+        - Plone 5's (default) Barceloneta theme automatically distributes the portlet
+          managers from this product across the footer.  This is usually OK, but if it
+          does not suit your requirements, then you should use a different theme.
+        
+        Installation
+        ============
+        
+        
+        - Add ``ftw.footer`` to your buildout configuration:
+        
+        ::
+        
+            [instance]
+            eggs +=
+                ftw.footer
+        
+        - Run `bin/buildout`
+        
+        - Install the generic import profile.
+        
+        
+        Configuration
+        =============
+        
+        The amount of portlet columns in the footer can be configured in the
+        `portal_registry` option `IFooterSettings.columns_count`.
+        
+        Up to four columns are currently supported.
+        
+        
+        Screenshot
+        ===========
+        
+        .. image:: https://raw.github.com/4teamwork/ftw.footer/master/docs/screenshot.png
+        
+        The screenshot is created with
+        `plonetheme.onegov <https://github.com/OneGov/plonetheme.onegov>`_.
+        
+        
+        
+        Links
+        =====
+        
+        - Github: https://github.com/4teamwork/ftw.footer
+        - Issues: https://github.com/4teamwork/ftw.footer/issues
+        - Pypi: http://pypi.python.org/pypi/ftw.footer
+        - Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.footer
+        
+        
+        Copyright
+        =========
+        
+        This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
+        
+        ``ftw.footer`` is licensed under GNU General Public License, version 2.
+        
+        Changelog
+        =========
+        
+        1.2.0 (2019-09-12)
+        ------------------
+        
+        - Add support for Plone 5.1.x. [mbaechtold]
+        
+        - Drop support for Plone 4.2.x. [mbaechtold]
+        
+        - Fix tests for Plone 5 [busykoala, djowett-ftw]
+        
+        - Disable manage-footer view on Plone 5, since Plone 5 provides the means to
+          edit any portlet manager through the Manage portlets menu item. [djowett-ftw]
+        
+        - Accommodate the Grid system in Plone 5 (12 column bootstrap grid, instead of
+          16 column Deco.gs) [djowett-ftw]
+        
+        
+        1.1.2 (2017-08-08)
+        ------------------
+        
+        - Enable the footer on non-contentish items.
+          [lknoepfel]
+        
+        
+        1.1.1 (2016-05-20)
+        ------------------
+        
+        - CSS adjustment for compatibility with newer plonetheme.blueberry.
+          [Kevin Bieri]
+        
+        
+        1.1.0 (2016-03-03)
+        ------------------
+        
+        - Use alternate color for links in the footer.
+          Remove border below the footer portlets.
+          [Kevin Bieri]
+        
+        - Adapt footer styling based on ftw.theming rework.
+          [Kevin Bieri]
+        
+        - Implement responsive footer according the latest ftw.theming implementation.
+          [mathias.leimgruber]
+        
+        - Translate the lawgiver action group to be used in German workflow specifications.
+          [mbaechtold]
+        
+        
+        1.0.3 (2015-09-02)
+        ------------------
+        
+        - Define resources for ftw.theming.
+          [Kevin bieri]
+        
+        
+        1.0.2 (2014-12-23)
+        ------------------
+        
+        - Do not redirect to manage-footer view after modifying regular portlet
+          managers.
+          [mathias.leimgruber]
+        
+        
+        1.0.1 (2014-12-02)
+        ------------------
+        
+        - Stay on the footer management view after modifying the portlet blacklist status.
+          [mbaechtold]
+        
+        
+        1.0.0 (2013-09-24)
+        ------------------
+        
+        - Initial release
+        
+Keywords: plone ftw viewlet footer
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.3
+Classifier: Framework :: Plone :: 5.1
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: tests
