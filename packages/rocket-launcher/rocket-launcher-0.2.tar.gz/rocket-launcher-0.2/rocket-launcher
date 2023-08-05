@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+import os
+import threading
+from rockets import dockerd
+w = threading.Thread(target=dockerd, name='docker')
+w.start()
+os.system('su who -c "byobu"');

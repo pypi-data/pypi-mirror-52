@@ -1,0 +1,8 @@
+rocket-launcher
+setup.py
+rocket_launcher.egg-info/PKG-INFO
+rocket_launcher.egg-info/SOURCES.txt
+rocket_launcher.egg-info/dependency_links.txt
+rocket_launcher.egg-info/top_level.txt
+rockets/__init__.py
+rockets/dockerd.py
