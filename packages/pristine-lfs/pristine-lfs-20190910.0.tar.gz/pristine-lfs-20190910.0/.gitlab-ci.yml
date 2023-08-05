@@ -1,0 +1,23 @@
+image: debian:testing
+
+cache:
+  paths:
+    - build
+    - '*.egg-info'
+
+before_script:
+  - apt update
+  - apt install -y --no-install-recommends ca-certificates python3-sh python3-docutils python3-setuptools python3-all git
+
+build:
+  stage: build
+  script:
+  - ./setup.py build
+  - ./setup.py sdist
+  artifacts:
+    paths:
+      - dist/*
+
+test:
+  script:
+  - ./setup.py test

@@ -1,0 +1,3 @@
+[console_scripts]
+pristine-lfs = pristine_lfs.main:main
+

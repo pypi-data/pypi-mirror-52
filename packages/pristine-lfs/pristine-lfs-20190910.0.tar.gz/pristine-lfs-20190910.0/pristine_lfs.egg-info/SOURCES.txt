@@ -1,0 +1,17 @@
+.gitignore
+.gitlab-ci.yml
+CONTRIBUTORS
+COPYING
+README.rst
+pristine-lfs.1
+pristine-lfs.rst
+setup.py
+pristine_lfs/__init__.py
+pristine_lfs/main.py
+pristine_lfs/util.py
+pristine_lfs.egg-info/PKG-INFO
+pristine_lfs.egg-info/SOURCES.txt
+pristine_lfs.egg-info/dependency_links.txt
+pristine_lfs.egg-info/entry_points.txt
+pristine_lfs.egg-info/requires.txt
+pristine_lfs.egg-info/top_level.txt
