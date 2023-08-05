@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: robin-stocks
+Version: 0.9.9.4
+Summary: A Python wrapper around the Robinhood API
+Home-page: https://github.com/jmfernandes/robin_stocks
+Author: Josh Fernandes
+Author-email: joshfernandes@mac.com
+License: MIT
+Keywords: robinhood,robin stocks,finance app,stocks,options,trading,investing
+Platform: UNKNOWN
+Requires: requests
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+A Python wrapper around the Robinhood API
+
+
