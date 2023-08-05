@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+python_semantic_release_poc.egg-info/PKG-INFO
+python_semantic_release_poc.egg-info/SOURCES.txt
+python_semantic_release_poc.egg-info/dependency_links.txt
+python_semantic_release_poc.egg-info/top_level.txt
+sample/__init__.py
+sample/main.py
