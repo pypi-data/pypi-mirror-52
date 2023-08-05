@@ -1,0 +1,17 @@
+zort/VERSION,sha256=v-wuNFg62n5q8stzmT-3Wj9xR6bJQ-X_X1xClPxXe5A,5
+zort/__init__.py,sha256=KxvSavWgvRQdtBP2JtoDE6K6zjUVugV57dW38uIttYY,43
+zort/initialize.py,sha256=jeUvLBJfceFbWnmxyx0KuI_jApz-W3KljWnve1gNFv0,5663
+zort/lightcurve.py,sha256=29E2ImQvrHm7wk9BSgVG8P_uhWejdLdtyYdQqy1XqPU,4041
+zort/lightcurveFile.py,sha256=6x4WD5A73c5Nvg6xmWe3dNIvoLpU98MxtZICvkgb7L8,4521
+zort/object.py,sha256=zXhb-oN2FIamDJZ-5aqvSclSCSy41QoOUFsvLZge3t0,15983
+zort/parallel.py,sha256=xjpydwOgXVRYueG2NT3q1cxXcsdUg-W3aSNMpjsRkUc,1857
+zort/photometry.py,sha256=EOHb4_q6aoc7TCftfyNPT8NsOPh4GzW9TLd5BmgST8s,1413
+zort/radec.py,sha256=vMs2Cjc8-_O57fP1ENyfgvOL4ZUxZ2Y-ybal1pqK5rY,5385
+zort/data/ZTF_CCD_Layout.tbl,sha256=J-hLoUY6aE8d7FxSvBmvqaaIab0DastmoSkVmkqjmrk,1692
+zort/data/ZTF_Fields.txt,sha256=i_eAM7Ovw06Qm2Nei9B3mAgt2yJirLJlecLdIyBicPU,160110
+zort-1.2.0.data/scripts/zort-initialize,sha256=v0STS3IWxx_GH22zUft8DFhbt2RcH7XSGwj9FSIcINg,5444
+zort-1.2.0.dist-info/LICENSE,sha256=neTPhi-NcyIa85mq6eKYFHqKi73dsdoBgmYyx-rx7Vc,1072
+zort-1.2.0.dist-info/METADATA,sha256=FZfAzZkGNX6mOLsPNImHcYSyjgh2iyhaAfpkaceMYsg,9450
+zort-1.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+zort-1.2.0.dist-info/top_level.txt,sha256=V2vxmNOTlTIiqNAfxIfvcG2vs1JDPu_2CfR78D5AogU,5
+zort-1.2.0.dist-info/RECORD,,
