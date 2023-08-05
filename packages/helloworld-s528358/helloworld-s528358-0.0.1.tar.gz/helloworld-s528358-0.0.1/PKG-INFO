@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: helloworld-s528358
+Version: 0.0.1
+Summary: say hello buddy
+Home-page: https://github.com/pypa/twine/issues/372
+Author: ashish
+Author-email: ashish.turbobit@gmail.com
+License: UNKNOWN
+Description: hello world file
+        
+        steps to run the code
+        
+        python
+        
+        >>>from helloworld import say_hello
+        >>>say_hello()
+        
+        should return "hello world"
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
