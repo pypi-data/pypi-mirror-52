@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Quiik
+Version: 2.0
+Summary: Fun reaction based game in the terminal. Play full screen for best results!
+Home-page: https://github.com/M4cs/Quiik
+Author: Max Bridgland
+Author-email: mabridgland@protonmail.com
+License: UNKNOWN
+Keywords: command line,game,fun,terminal,object oriented
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: fabulous (>=0.3.0)
+
+UNKNOWN
+
+
