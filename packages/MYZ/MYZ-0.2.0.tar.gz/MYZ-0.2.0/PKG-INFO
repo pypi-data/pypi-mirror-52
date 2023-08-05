@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: MYZ
+Version: 0.2.0
+Summary: A practical toolkit for Ming & Yun & Zhe.
+Home-page: http://jiaozhe.me/
+Author: Jiao Zhe
+Author-email: jiaozhe1987@163.com
+License: BSD
+Description: MYZ is a practical toolkit for Ming & Yun & Zhe.
+        
+        For more information, please visit <http://jiaozhe.me>.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7

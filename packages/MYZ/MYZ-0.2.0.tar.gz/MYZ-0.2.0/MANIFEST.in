@@ -1,0 +1,6 @@
+include AUTHORS
+include LICENSE
+include MANIFEST.in
+include *.rst
+graft docs
+graft tests
