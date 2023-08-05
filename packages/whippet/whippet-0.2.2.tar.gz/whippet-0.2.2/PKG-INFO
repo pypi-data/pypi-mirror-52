@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: whippet
+Version: 0.2.2
+Summary: Install make based hooks with ease.
+Home-page: https://github.com/BorePlusPlus/whippet
+Author: Dalibor Novak
+Author-email: BorePlusPlus@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
+
+Whippet - like husky, but leaner
+################################
+A simple git hooks installer. Inspired by husky_.
+
+.. _husky: https://github.com/typicode/husky#readme
+
