@@ -1,0 +1,158 @@
+language: python
+
+sudo: false
+
+cache:
+    apt: true
+    pip: true
+
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+  - nightly
+  - pypy3
+
+env:
+  - DIST=sdist
+    WITH_COVERAGE=1
+  - DIST=wheel
+    WITH_COVERAGE=0
+
+matrix:
+  fast_finish: true
+  include:
+    - python: 3.6
+      env: TOXENV=check
+    - python: 3.6
+      env:
+        - TOXENV=regression
+          WITH_COVERAGE=1
+      addons:
+        apt:
+          packages:
+            - imagemagick
+            # poppler dependencies
+            - libfreetype6
+            - libfontconfig1
+            - libopenjpeg2
+            - libjpeg8
+            - libtiff5
+            - liblcms2-2
+            - libcairo2
+      before_install:
+        # install poppler (required by the diffpdf script)
+        - travis_retry curl -L https://github.com/brechtm/rinohtype-travis/releases/download/v1/dotlocal.tar.xz | tar xJ -C ~
+        - export PATH=$HOME/.local/bin:$PATH
+        - export LD_LIBRARY_PATH=$HOME/.local/lib
+    - os: osx
+      sudo: required
+      language: objective-c
+      cache:
+        pip: false
+        directories:
+          - $HOME/Library/Caches/pip
+          - $HOME/.pyenv
+      env:
+        - DIST=sdist
+          TOXENV=py34,py35,py36
+          WITH_COVERAGE=1
+      before_install:
+        - brew update
+        - brew unlink pyenv
+        - brew install --HEAD pyenv
+        - eval "$(pyenv init -)"
+        - pyenv install --skip-existing 3.4.6
+        - pyenv install --skip-existing 3.5.3
+        - pyenv install --skip-existing 3.6.1
+        - pyenv global 3.6.1 3.4.6 3.5.3
+        - python --version
+        - python3 --version
+        - python3.4 --version
+        - python3.5 --version
+        - python3.6 --version
+    - os: osx
+      sudo: required
+      language: objective-c
+      cache:
+        pip: false
+        directories:
+          - $HOME/Library/Caches/pip
+          - $HOME/.pyenv
+      env:
+        - TOXENV=regression
+          WITH_COVERAGE=1
+      before_install:
+        - brew update
+        - brew install imagemagick poppler
+        - brew unlink pyenv
+        - brew install --HEAD pyenv
+        - eval "$(pyenv init -)"
+        - pyenv install --skip-existing 3.6.1
+        - pyenv global 3.6.1
+        - python --version
+        - python3 --version
+    - python: 3.6
+      env:
+        - TOXENV=longrunning
+          TIMEOUT=45
+          WITH_COVERAGE=0
+      addons:
+        apt:
+          packages:
+            - imagemagick
+            # poppler dependencies
+            - libfreetype6
+            - libfontconfig1
+            - libopenjpeg2
+            - libjpeg8
+            - libtiff5
+            - liblcms2-2
+            - libcairo2
+      before_install:
+        # install poppler (required by the diffpdf script)
+        - travis_retry curl -L https://github.com/brechtm/rinohtype-travis/releases/download/v1/dotlocal.tar.xz | tar xJ -C ~
+        - export PATH=$HOME/.local/bin:$PATH
+        - export LD_LIBRARY_PATH=$HOME/.local/lib
+    - python: 3.6
+      env: TOXENV=test-docs
+    - python: 3.6
+      env: TOXENV=build-docs
+    - os: osx
+      sudo: required
+      language: objective-c
+      cache:
+        pip: false
+        directories:
+          - $HOME/Library/Caches/pip
+          - $HOME/.pyenv
+      env:
+        - TOXENV=macapp
+      before_install:
+        - brew update
+        - brew unlink pyenv
+        - brew install --HEAD pyenv
+        - eval "$(pyenv init -)"
+        - pyenv install --skip-existing 3.5.3
+        - pyenv global 3.5.3
+        - python --version
+
+install:
+  - pip install tox-travis wheel
+  - python setup.py bdist_wheel
+
+script:
+  - function timeout { [ -z $TIMEOUT ] || echo "travis_wait $TIMEOUT"; }
+  - function installpkg { [[ $DIST == "wheel" ]] && echo "--installpkg ./dist/rinohtype-*.whl"; }
+  - $(timeout) tox -v $(installpkg)
+
+after_success:
+  - "[[ $WITH_COVERAGE -eq 1 ]] && bash <(curl -s https://codecov.io/bash) -f coverage.xml -F ${TOXENV:-unittests}"
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/cccb04073ce95d678fd3
+    on_success: change  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always
