@@ -1,0 +1,10 @@
+---
+- include_tasks: deploy.yml
+
+# NOTE(chenxing): Disallowing pre-luminous OSDs and enabling all
+# new Luminous-only functionality
+- name: Enabling all new Luminous-only functionality
+  command: docker exec ceph_mon ceph osd require-osd-release luminous
+  delegate_to: "{{ groups['ceph-mon'][0] }}"
+  changed_when: False
+  run_once: True
