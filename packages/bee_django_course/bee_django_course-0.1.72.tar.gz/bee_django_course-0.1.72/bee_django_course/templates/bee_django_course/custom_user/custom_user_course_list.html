@@ -1,0 +1,15 @@
+{% extends "bee_django_course/user_base.html" %}
+{% load bee_django_course_filter %}
+{% load bootstrap3 %}
+{% block content %}
+    <h3>课程列表</h3>
+    {% for uc in user_course_list %}
+        <div class="col-md-3">
+            <div class="well">
+                <a href="#">
+                    <a href="{% url 'bee_django_course:custom_user_course_detail' uc.id %}">{{ uc.name }}</a>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
