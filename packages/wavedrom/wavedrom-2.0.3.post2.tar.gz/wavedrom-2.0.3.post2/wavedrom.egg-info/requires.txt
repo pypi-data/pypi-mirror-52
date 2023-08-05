@@ -1,0 +1,8 @@
+attrdict
+six
+svgwrite
+
+[test]
+cairosvg
+pillow
+xmldiff
