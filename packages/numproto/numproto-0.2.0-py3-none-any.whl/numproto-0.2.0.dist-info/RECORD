@@ -1,0 +1,12 @@
+numproto/__init__.py,sha256=GRyD1AuA3_N_opGWeNydhA0QovkCoRNJatovz0otYYE,101
+numproto/__version__.py,sha256=bQxZFeCMVEUgCHqqrQctq_Yrg9axXL2Itq3sjLQcenw,63
+numproto/numproto.py,sha256=4ZYuti7NMB2f6N7P_t7UTVp0rRm4O_mE_f3jUaBoB1U,886
+numproto/protobuf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numproto/protobuf/ndarray.proto,sha256=Xje3mNV2zfUfguTGldePiOScvkoAuVyuDeGoU2pxG1Q,91
+numproto/protobuf/ndarray_pb2.py,sha256=Cn_iiFESpdYh3IxprW2OaKi-QwoGMggi4fwUFPkFTqg,1922
+numproto/protobuf/ndarray_pb2_grpc.py,sha256=s9KvvTKGqObFxOBLz6ktRK2g4c8yLiOXt7p2M71egTM,83
+numproto-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+numproto-0.2.0.dist-info/METADATA,sha256=MXMtOHFrQtHffL0FRA6DRjXei2WEgqQyzRGgcrYEVSo,3308
+numproto-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+numproto-0.2.0.dist-info/top_level.txt,sha256=eMw7qiL2CYpXWF1PWmSZkSwUNQorbAOYbaU4M4-Bk8k,9
+numproto-0.2.0.dist-info/RECORD,,
