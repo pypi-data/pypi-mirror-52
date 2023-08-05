@@ -1,0 +1,50 @@
+{% extends "bee_django_user/base.html" %}
+{% load bee_django_user_filter %}
+{% load bootstrap3 %}
+{% block content %}
+    {% include 'bee_django_user/logo.html' %}
+    {% include 'bee_django_user/nav.html' %}
+    {% include 'bee_django_user/messages.html' %}
+    <div style="margin: 10px auto;">
+        <a href="{% url 'bee_django_user:user_detail' user.id %}">{{ user.first_name }}详情</a>
+    </div>
+    <h4>{{ user.first_name }}的家长助教</h4>
+    <table class="table">
+        {% for mid in user_parent_relation %}
+            <tr>
+                <td class="col-xs-3">{{ forloop.counter }}</td>
+                <td>{{ mid.parent.user.first_name|default:'' }}</td>
+                <td>
+                    {% if perms.bee_django_user.can_change_user_parent %}
+                        <a href="#" id="delete_{{ mid.id }}"
+                           data-confirm="{% url "bee_django_user:user_parent_delete" mid.id %}"
+                           onclick="click_del(this)" class="btn btn-danger">删除</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    {% if perms.bee_django_user.can_change_user_parent %}
+        <h4>新增{{ user.first_name }}的家长助教</h4>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% bootstrap_button '提交' %}
+        </form>
+    {% endif %}
+{% endblock %}
+{% block scripts %}
+    <script>
+        function click_del(_this) {
+            if (!confirm('确认要执行这个操作？')) {
+                return false;
+            }
+            var url = $(_this).attr('data-confirm');
+            $.post(url).done(function (data) {
+                alert('删除成功!');
+                location.reload();
+            });
+        }
+    </script>
+{% endblock %}
