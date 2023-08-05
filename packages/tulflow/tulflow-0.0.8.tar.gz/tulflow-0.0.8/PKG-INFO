@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tulflow
+Version: 0.0.8
+Summary: Package of Temple University Library Indexing & ETL functions used by Airflow.
+Home-page: https://github.com/tulibraries/tulflow
+Author: Temple University Libraries
+Author-email: tul08567@temple.edu
+License: UNKNOWN
+Description: # TULFLOW
+        
+        [![Build Status](https://travis-ci.com/tulibraries/tulflow.svg?branch=master)](https://travis-ci.com/tulibraries/tulflow)
+        
+        Small Python package / library for common ETL-adjacent functions, primarily used in the TU Libraries Airflow tasks.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
