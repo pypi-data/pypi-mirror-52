@@ -1,0 +1,89 @@
+[tool.poetry]
+name = "01d61084-d29e-11e9-96d1-7c5cf84ffe8e"
+version = "0.1.0" # PACKAGE_VERSION  (This comment helps bumpversion find the right line.)
+description = ""
+authors = ["retool <email@example.com>"]
+readme = "README.rst"
+packages = [
+    { include = "lib1", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "7.0"
+attrs = "19.1.0"
+
+
+[tool.poetry.dev-dependencies]
+coverage = "^4.5"
+pytest = "^5.0"
+
+[tool.poetry.extras]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-autodoc-typehints",
+    "sphinx-click",
+    "marshmallow-jsonschema",
+    "sphinx-jsonschema",
+
+]
+
+
+[tool.poetry.scripts]
+lib1 = "lib1.cli:cli"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+
+
+[tool.towncrier]
+
+   package = "lib1"
+   package_dir = "src"
+   filename = "CHANGELOG.rst"
+   template = "changelog.d/towncrier_template.rst"
+   issue_format = "`#{issue} <https://github.com/python-retool/01d61084-d29e-11e9-96d1-7c5cf84ffe8e/issues/{issue}>`_"
+   directory = "changelog.d"
+   title_format = "{version} ({project_date})"
+   underlines = ["-", "^"]
+
+   [[tool.towncrier.section]]
+       path = ""
+
+    [[tool.towncrier.type]]
+        directory = "breaking"
+        name = "Backward-incompatible Changes"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "deprecation"
+        name = "Deprecations"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "change"
+        name = "Changes"
+        showcontent = true
+
+
+[tool.black]
+
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.?venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
