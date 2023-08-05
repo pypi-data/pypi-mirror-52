@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+populate/__init__.py
+populate/__main__.py
+populate/logger.py
+populate/support.py
+populate.egg-info/PKG-INFO
+populate.egg-info/SOURCES.txt
+populate.egg-info/dependency_links.txt
+populate.egg-info/requires.txt
+populate.egg-info/top_level.txt
