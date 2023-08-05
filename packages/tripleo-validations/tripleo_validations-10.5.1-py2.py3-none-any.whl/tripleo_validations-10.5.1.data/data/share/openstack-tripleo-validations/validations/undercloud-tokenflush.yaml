@@ -1,0 +1,43 @@
+---
+- hosts: undercloud
+  vars:
+    metadata:
+      name: Verify token_flush is enabled in keystone users crontab
+      description: >
+        Without a token_flush crontab enabled for the keystone user, the
+        keystone database can grow very large.  This validation checks that
+        the keystone token_flush crontab has been set up.
+      groups:
+      - pre-introspection
+    cron_check: "keystone-manage token_flush"
+  tasks:
+  - include_tasks: tasks/deprecation.yaml
+
+  - name: Get the path of tripleo undercloud config file
+    become: true
+    hiera: name="tripleo_undercloud_conf_file"
+
+  - name: Get the Container CLI from the undercloud.conf file
+    become: true
+    ini:
+      path: "{{ tripleo_undercloud_conf_file }}"
+      section: DEFAULT
+      key: container_cli
+      ignore_missing_file: true
+    register: container_cli
+
+  - name: Get keystone crontab
+    become: true
+    shell: |
+      set -o pipefail
+      {{ container_cli.value|default('podman', true) }} exec keystone_cron crontab -l -u keystone |grep -v '^#'
+    register: cron_result
+    changed_when: False
+
+  - name: Check keystone crontab
+    fail:
+      msg: >-
+        keystone token_flush does not appear to be enabled via cron. You should
+        add '<desired interval > {{ cron_check }}' to the keystone users
+        crontab.
+    failed_when: "cron_check not in cron_result.stdout"

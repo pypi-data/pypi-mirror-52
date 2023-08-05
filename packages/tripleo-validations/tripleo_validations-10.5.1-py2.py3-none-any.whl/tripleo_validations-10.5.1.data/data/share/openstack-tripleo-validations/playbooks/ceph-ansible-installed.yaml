@@ -1,0 +1,14 @@
+---
+- hosts: undercloud
+  vars:
+    metadata:
+      name: Check if ceph-ansible is installed on the undercloud
+      description: >
+        Prints a message if ceph-ansible isn't installed
+      groups:
+        - pre-deployment
+    fail_without_ceph_ansible: false
+  tasks:
+    - include_role:
+        name: ceph
+        tasks_from: ceph-ansible-installed
