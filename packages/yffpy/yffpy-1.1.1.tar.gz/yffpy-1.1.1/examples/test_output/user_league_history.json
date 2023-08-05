@@ -1,0 +1,413 @@
+{
+  "games": {
+    "0": {
+      "game": {
+        "code": "nfl",
+        "game_id": "359",
+        "game_key": "359",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "leagues": {
+          "0": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": "16",
+              "draft_status": "postdraft",
+              "edit_key": "16",
+              "end_date": "2016-12-26",
+              "end_week": "16",
+              "entry_fee": "20",
+              "game_code": "nfl",
+              "iris_group_chat_id": "72FHS7IQJPTBDGEB2OAK5GHX6M",
+              "is_cash_league": "1",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "5521",
+              "league_key": "359.l.5521",
+              "league_type": "private",
+              "league_update_timestamp": "1483604795",
+              "logo_url": "https://ct.yimg.com/cy/8580/27742202165_e80282757f_192sq.jpg?ct=fantasy",
+              "name": "League of Emperors",
+              "num_teams": 12,
+              "password": null,
+              "payment_deadline": "2016-09-08",
+              "renew": "348_70753",
+              "renewed": "371_52364",
+              "scoring_type": "head",
+              "season": "2016",
+              "short_invitation_url": "https://football.fantasysports.yahoo.com/archive/nfl/2016/5521/invitation?key=216227770f988b08&ikey=3731c07ca1b25e30",
+              "start_date": "2016-09-08",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2016/5521",
+              "weekly_deadline": null
+            }
+          },
+          "1": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": "17",
+              "draft_status": "postdraft",
+              "edit_key": "17",
+              "end_date": "2017-01-01",
+              "end_week": "17",
+              "game_code": "nfl",
+              "iris_group_chat_id": "DLNPOCIEGNBX3LSJV2TTXVW47I",
+              "is_cash_league": "0",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "806145",
+              "league_key": "359.l.806145",
+              "league_type": "private",
+              "league_update_timestamp": "1483604208",
+              "logo_url": "https://ct.yimg.com/cy/8339/29230499805_0b56fd9fc6_192sq.jpg?ct=fantasy?ct=fantasy",
+              "name": "Making Football Orange",
+              "num_teams": 12,
+              "renew": null,
+              "renewed": "371_1010149",
+              "scoring_type": "head",
+              "season": "2016",
+              "start_date": "2016-09-08",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2016/806145",
+              "weekly_deadline": null
+            }
+          }
+        },
+        "name": "Football",
+        "season": "2016",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2016"
+      }
+    },
+    "1": {
+      "game": {
+        "code": "nfl",
+        "game_id": "371",
+        "game_key": "371",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "leagues": {
+          "0": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": "16",
+              "draft_status": "postdraft",
+              "edit_key": "16",
+              "end_date": "2017-12-25",
+              "end_week": "16",
+              "game_code": "nfl",
+              "iris_group_chat_id": "3EHETAHO4JCGDIXV2ZI72YTW7A",
+              "is_cash_league": "0",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "52364",
+              "league_key": "371.l.52364",
+              "league_type": "private",
+              "league_update_timestamp": "1515060250",
+              "logo_url": "https://ct.yimg.com/cy/8580/36576257611_39161a_192sq.jpg",
+              "name": "League of Emperors",
+              "num_teams": 12,
+              "password": null,
+              "renew": "359_5521",
+              "renewed": "380_169896",
+              "scoring_type": "head",
+              "season": "2017",
+              "short_invitation_url": "https://football.fantasysports.yahoo.com/archive/nfl/2017/52364/invitation?key=62a28736c8d49233&ikey=01bab4c2a485c8ab",
+              "start_date": "2017-09-07",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2017/52364",
+              "weekly_deadline": null
+            }
+          },
+          "1": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": "17",
+              "draft_status": "postdraft",
+              "edit_key": "17",
+              "end_date": "2017-12-31",
+              "end_week": "17",
+              "game_code": "nfl",
+              "iris_group_chat_id": "3JNXYPV7XZFKTCLWM65JXXNW5A",
+              "is_cash_league": "0",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "363515",
+              "league_key": "371.l.363515",
+              "league_type": "private",
+              "league_update_timestamp": "1515057617",
+              "logo_url": null,
+              "name": "Things Won't Change",
+              "num_teams": 10,
+              "renew": "359_832925",
+              "renewed": "380_717231",
+              "scoring_type": "head",
+              "season": "2017",
+              "start_date": "2017-09-07",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2017/363515",
+              "weekly_deadline": null
+            }
+          }
+        },
+        "name": "Football",
+        "season": "2017",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2017"
+      }
+    },
+    "2": {
+      "game": {
+        "code": "nfl",
+        "game_id": "380",
+        "game_key": "380",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "leagues": {
+          "0": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": "16",
+              "draft_status": "postdraft",
+              "edit_key": "16",
+              "end_date": "2018-12-24",
+              "end_week": "16",
+              "game_code": "nfl",
+              "iris_group_chat_id": "3EHETAHO4JCGDIXV2ZI72YTW7A",
+              "is_cash_league": "0",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "169896",
+              "league_key": "380.l.169896",
+              "league_type": "private",
+              "league_update_timestamp": "1546498723",
+              "logo_url": "https://ct.yimg.com/cy/8580/36576257611_39161a_192sq.jpg?ct=fantasy",
+              "name": "League of Emperors",
+              "num_teams": 12,
+              "password": null,
+              "renew": "371_52364",
+              "renewed": "390_78725",
+              "scoring_type": "head",
+              "season": "2018",
+              "short_invitation_url": "https://football.fantasysports.yahoo.com/archive/nfl/2018/169896/invitation?key=c6c505ec6051c5d2&ikey=136f5fbf1ccb006c",
+              "start_date": "2018-09-06",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2018/169896",
+              "weekly_deadline": null
+            }
+          },
+          "1": {
+            "league": {
+              "allow_add_to_dl_extra_pos": 1,
+              "current_week": "16",
+              "draft_status": "postdraft",
+              "edit_key": "16",
+              "end_date": "2018-12-24",
+              "end_week": "16",
+              "game_code": "nfl",
+              "iris_group_chat_id": "IB52KVN2ZRGKFK7HKAQHBZ5FJ4",
+              "is_cash_league": "0",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "1130352",
+              "league_key": "380.l.1130352",
+              "league_type": "private",
+              "league_update_timestamp": "1546499582",
+              "logo_url": null,
+              "name": "The Redditeers",
+              "num_teams": 12,
+              "renew": null,
+              "renewed": "390_79230",
+              "scoring_type": "head",
+              "season": "2018",
+              "start_date": "2018-09-06",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2018/1130352",
+              "weekly_deadline": null
+            }
+          },
+          "2": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": "17",
+              "draft_status": "postdraft",
+              "edit_key": "17",
+              "end_date": "2018-12-30",
+              "end_week": "17",
+              "game_code": "nfl",
+              "iris_group_chat_id": "DLNPOCIEGNBX3LSJV2TTXVW47I",
+              "is_cash_league": "0",
+              "is_finished": 1,
+              "is_pro_league": "0",
+              "league_id": "813785",
+              "league_key": "380.l.813785",
+              "league_type": "private",
+              "league_update_timestamp": "1546499046",
+              "logo_url": null,
+              "name": "Radiant Footballs",
+              "num_teams": 10,
+              "renew": "371_1010149",
+              "renewed": null,
+              "scoring_type": "head",
+              "season": "2018",
+              "start_date": "2018-09-06",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/archive/nfl/2018/813785",
+              "weekly_deadline": null
+            }
+          }
+        },
+        "name": "Football",
+        "season": "2018",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2018"
+      }
+    },
+    "3": {
+      "game": {
+        "code": "nfls",
+        "game_id": 384,
+        "game_key": "384"
+      }
+    },
+    "4": {
+      "game": {
+        "code": "yahoops",
+        "game_id": 389,
+        "game_key": "389"
+      }
+    },
+    "5": {
+      "game": {
+        "code": "nfl",
+        "game_id": "390",
+        "game_key": "390",
+        "is_game_over": null,
+        "is_live_draft_lobby_active": 1,
+        "is_offseason": null,
+        "is_registration_over": null,
+        "leagues": {
+          "0": {
+            "league": {
+              "allow_add_to_dl_extra_pos": null,
+              "current_week": 1,
+              "draft_status": "postdraft",
+              "edit_key": 1,
+              "end_date": "2019-12-23",
+              "end_week": "16",
+              "game_code": "nfl",
+              "iris_group_chat_id": "3EHETAHO4JCGDIXV2ZI72YTW7A",
+              "is_cash_league": "0",
+              "is_pro_league": "0",
+              "league_id": "78725",
+              "league_key": "390.l.78725",
+              "league_type": "private",
+              "league_update_timestamp": "1567749246",
+              "logo_url": "https://ct.yimg.com/cy/8580/36576257611_39161a_192sq.jpg?ct=fantasy",
+              "name": "League of Emperors",
+              "num_teams": 12,
+              "password": null,
+              "renew": "380_169896",
+              "renewed": null,
+              "scoring_type": "head",
+              "season": "2019",
+              "short_invitation_url": "https://football.fantasysports.yahoo.com/f1/78725/invitation?key=e6131b074f919bfa&ikey=b53256bd1605c8d1",
+              "start_date": "2019-09-05",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/f1/78725",
+              "weekly_deadline": null
+            }
+          },
+          "1": {
+            "league": {
+              "allow_add_to_dl_extra_pos": 1,
+              "current_week": 1,
+              "draft_status": "postdraft",
+              "edit_key": 1,
+              "end_date": "2019-12-23",
+              "end_week": "16",
+              "game_code": "nfl",
+              "iris_group_chat_id": "IB52KVN2ZRGKFK7HKAQHBZ5FJ4",
+              "is_cash_league": "0",
+              "is_pro_league": "0",
+              "league_id": "79230",
+              "league_key": "390.l.79230",
+              "league_type": "private",
+              "league_update_timestamp": "1567749287",
+              "logo_url": null,
+              "name": "The Redditeers",
+              "num_teams": 12,
+              "password": null,
+              "renew": "380_1130352",
+              "renewed": null,
+              "scoring_type": "head",
+              "season": "2019",
+              "short_invitation_url": "https://football.fantasysports.yahoo.com/f1/79230/invitation?key=d9a3fda48d2f09ba&ikey=1b495581978c1cab",
+              "start_date": "2019-09-05",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/f1/79230",
+              "weekly_deadline": null
+            }
+          },
+          "2": {
+            "league": {
+              "allow_add_to_dl_extra_pos": 1,
+              "current_week": 1,
+              "draft_status": "postdraft",
+              "edit_key": 1,
+              "end_date": "2019-12-23",
+              "end_week": "16",
+              "entry_fee": "30",
+              "game_code": "nfl",
+              "iris_group_chat_id": null,
+              "is_cash_league": "1",
+              "is_pro_league": "0",
+              "league_id": "799466",
+              "league_key": "390.l.799466",
+              "league_type": "private",
+              "league_update_timestamp": "1567749534",
+              "logo_url": "https://ct.yimg.com/cy/5893/59575240972_d11214_192sq.jpg?ct=fantasy",
+              "name": "The Cape",
+              "num_teams": 12,
+              "password": null,
+              "payment_deadline": "2019-08-28",
+              "renew": null,
+              "renewed": null,
+              "scoring_type": "head",
+              "season": "2019",
+              "short_invitation_url": "https://football.fantasysports.yahoo.com/f1/799466/invitation?key=9c0674bc5e172091&ikey=90221d3f6ae23a51",
+              "start_date": "2019-09-05",
+              "start_week": "1",
+              "url": "https://football.fantasysports.yahoo.com/f1/799466",
+              "weekly_deadline": null
+            }
+          }
+        },
+        "name": "Football",
+        "season": "2019",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/f1"
+      }
+    },
+    "6": {
+      "exceptions": [
+        {
+          "exception": {
+            "key": 384,
+            "message": "Invalid subresource leagues requested"
+          }
+        },
+        {
+          "exception": {
+            "key": 389,
+            "message": "Invalid subresource leagues requested"
+          }
+        }
+      ]
+    }
+  },
+  "guid": "W6723TWEB3WMKQKL4SCBOWA4BQ"
+}

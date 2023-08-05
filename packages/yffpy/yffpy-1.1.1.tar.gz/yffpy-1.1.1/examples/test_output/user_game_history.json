@@ -1,0 +1,90 @@
+{
+  "games": {
+    "0": {
+      "game": {
+        "code": "nfl",
+        "game_id": "359",
+        "game_key": "359",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "name": "Football",
+        "season": "2016",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2016"
+      }
+    },
+    "1": {
+      "game": {
+        "code": "nfl",
+        "game_id": "371",
+        "game_key": "371",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "name": "Football",
+        "season": "2017",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2017"
+      }
+    },
+    "2": {
+      "game": {
+        "code": "nfl",
+        "game_id": "380",
+        "game_key": "380",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "name": "Football",
+        "season": "2018",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2018"
+      }
+    },
+    "3": {
+      "game": {
+        "code": "nfls",
+        "game_id": "384",
+        "game_key": "384",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "name": "Survival Football",
+        "season": "2018",
+        "type": "pickem-group",
+        "url": "https://football.fantasysports.yahoo.com/survival"
+      }
+    },
+    "4": {
+      "game": {
+        "code": "yahoops",
+        "game_id": "389",
+        "game_key": "389",
+        "is_game_over": 1,
+        "is_offseason": 1,
+        "is_registration_over": 1,
+        "name": "Tourney Pick'em",
+        "season": "2019",
+        "type": "pickem-team-list",
+        "url": "https://tournament.fantasysports.yahoo.com/t1"
+      }
+    },
+    "5": {
+      "game": {
+        "code": "nfl",
+        "game_id": "390",
+        "game_key": "390",
+        "is_game_over": null,
+        "is_live_draft_lobby_active": 1,
+        "is_offseason": null,
+        "is_registration_over": null,
+        "name": "Football",
+        "season": "2019",
+        "type": "full",
+        "url": "https://football.fantasysports.yahoo.com/f1"
+      }
+    }
+  },
+  "guid": "W6723TWEB3WMKQKL4SCBOWA4BQ"
+}
