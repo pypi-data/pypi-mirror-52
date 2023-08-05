@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+csv2vcard/__init__.py
+csv2vcard/create_vcard.py
+csv2vcard/csv2vcard.py
+csv2vcard/export_vcard.py
+csv2vcard/parse_csv.py
+csvTovcf.egg-info/PKG-INFO
+csvTovcf.egg-info/SOURCES.txt
+csvTovcf.egg-info/dependency_links.txt
+csvTovcf.egg-info/top_level.txt
