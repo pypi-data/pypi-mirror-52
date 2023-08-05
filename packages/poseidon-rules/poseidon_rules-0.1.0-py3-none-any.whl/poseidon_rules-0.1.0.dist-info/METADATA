@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: poseidon-rules
+Version: 0.1.0
+Summary: validate complex json data against rules you defined
+Home-page: https://github.com/weaming/poseidon-rules
+Author: weaming
+Author-email: garden.yuen@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/weaming/poseidon-rules
+Project-URL: Bug Reports, https://github.com/weaming/poseidon-rules
+Keywords: validate,json
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: dictate (==0.2.0)
+
+# Poseidon Rules
+
+Validate complex json data against rules you defined.
+
+## Usage
+
+See [test](poseidon_rules/test_statement.py)
+
+
