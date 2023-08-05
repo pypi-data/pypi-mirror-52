@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: scaaml
+Version: 0.0.1.1568062973
+Summary: Side Channel Attack Assisted with Machine Learning
+Home-page: https://github.com/google/scaaml
+Author: Elie Bursztein
+Author-email: scaaml@google.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: Jupyter
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: colorama
+Requires-Dist: termcolor
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: tabulate
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: Pillow
+
+
+FIXME
+
+
