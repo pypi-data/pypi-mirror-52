@@ -1,0 +1,15 @@
+klisch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+klisch/command.py,sha256=H3MICgf92rRZIVhqeTZX7WDv67qyth6a3QlmTqvRI6M,3512
+klisch/config.py,sha256=UYH8Pj8YfNGqgnYXuzJbt4hFt08ti7TDUrDI78DEqRw,924
+klisch/deploy.py,sha256=zbEHdK9buPK8EbvYU3WFndVGHJC9xQ0fbKoW-ApkqaY,2115
+klisch/env.py,sha256=Wt52oZidesRAdjQOuJ44AOpxuqooE9SGD7c8Ee8i9Ls,4053
+klisch/files.py,sha256=TqiZqUXn_s8-5dyWIrcn14Mp32S2CF5j0NHxgdZvQmE,1456
+klisch/logger.py,sha256=TdqIBs8AP-lnX5u1apr30gp1HBOxOHC8SY5Tjias6i8,516
+klisch/utils.py,sha256=ZKwhCzG4amcpmKCmKEk722oeq00M4RaGiGCFexI5ceE,118
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_command.py,sha256=6eb7pQrd7YoX1y3QmV3pQqYvkn44I8PwmXr9WYm9SbM,1211
+klisch-0.6.0.dist-info/LICENSE,sha256=Wuw2PP8-QwKZ255WDDca6njr5uy3qMVN6YydNS43JrY,1075
+klisch-0.6.0.dist-info/METADATA,sha256=FvBwuMQVdfM8T_pClShxW8B8zxMrQFal2CeRVzfZh7E,567
+klisch-0.6.0.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+klisch-0.6.0.dist-info/top_level.txt,sha256=TGNZ6E6eUNZ2doQWedGNUggvKbP-4TtE3sZK-PghSSk,12
+klisch-0.6.0.dist-info/RECORD,,
