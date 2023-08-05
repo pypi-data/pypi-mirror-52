@@ -1,0 +1,7 @@
+certifi
+ipython>=7.6.1
+matplotlib>=3.1.1
+numpy>=1.16.4
+pandas>=0.24.2
+six
+urllib3
