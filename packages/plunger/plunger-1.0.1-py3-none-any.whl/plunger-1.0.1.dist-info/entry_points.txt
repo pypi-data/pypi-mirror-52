@@ -1,0 +1,5 @@
+
+    [console_scripts]
+    plunger = plunger.main:main
+    plunger-version = plunger.version:main
+    
