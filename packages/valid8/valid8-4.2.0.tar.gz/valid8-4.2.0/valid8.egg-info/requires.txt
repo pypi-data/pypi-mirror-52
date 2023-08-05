@@ -1,0 +1,6 @@
+makefun
+decopatch
+
+[:python_version < "3.3"]
+future
+funcsigs
