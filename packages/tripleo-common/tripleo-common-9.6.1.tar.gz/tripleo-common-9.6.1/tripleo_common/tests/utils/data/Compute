@@ -1,0 +1,18 @@
+Compute_pre_deployments:
+  - ComputeHostEntryDeployment
+  - NetworkDeployment
+  - MyExtraConfigPost
+  - AnsibleDeployment
+
+Compute_post_deployments:  []
+
+pre_deployments_Compute:
+  - ComputeHostEntryDeployment
+  - NetworkDeployment
+  - MyExtraConfigPost
+  - AnsibleDeployment
+
+post_deployments_Compute:  []
+
+max_fail_percentage: 15
+any_errors_fatal: yes
