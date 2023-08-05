@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: aio-pika-rpc
+Version: 1.0.1
+Summary: aio-pika RPC
+Home-page: https://github.com/SandLabs/aio-pika-rpc
+License: MIT
+Author: m.shlyamov
+Author-email: m.shlyamov@yandex.com
+Requires-Python: >=3.6,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: aio-pika (>=6.1,<7.0)
+Requires-Dist: ddtrace (>=0.29,<0.30)
+Requires-Dist: msgpack (>=0.6,<0.7)
+Description-Content-Type: text/markdown
+
+# aio-pika-msgpack-rpc
+
+aio-pika msgpack RPC
+
