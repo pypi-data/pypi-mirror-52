@@ -1,0 +1,546 @@
+{
+  "teams": {
+    "0": {
+      "team": {
+        "clinched_playoffs": 1,
+        "draft_grade": "C+",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/8/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "PMTCFWSK5U5LI4SKWREUR56B5A",
+            "manager_id": "8",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "clam dam",
+        "number_of_moves": "27",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "8",
+        "team_key": "331.l.729259.t.8",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_1.png"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1507.06"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 2,
+            "percentage": 0.857,
+            "ties": 0,
+            "wins": 12
+          },
+          "playoff_seed": "1",
+          "points_against": 1263.78,
+          "points_for": 1507.06,
+          "rank": 1,
+          "streak": {
+            "type": "win",
+            "value": "2"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/8",
+        "waiver_priority": 10
+      }
+    },
+    "1": {
+      "team": {
+        "clinched_playoffs": 1,
+        "draft_grade": "B",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/1/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "BMACD7S5UXV7JIQX4PGGUVQJAU",
+            "manager_id": "1",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Hellacious Hill 12",
+        "number_of_moves": "71",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "1",
+        "team_key": "331.l.729259.t.1",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://ct.yimg.com/cy/1441/24935131299_a8242dab70_192sq.jpg?ct=fantasy"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1409.24"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 5,
+            "percentage": 0.643,
+            "ties": 0,
+            "wins": 9
+          },
+          "playoff_seed": "2",
+          "points_against": 1266.6599999999999,
+          "points_for": 1409.24,
+          "rank": 2,
+          "streak": {
+            "type": "win",
+            "value": "1"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/1",
+        "waiver_priority": 9
+      }
+    },
+    "2": {
+      "team": {
+        "clinched_playoffs": 1,
+        "draft_grade": "B",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/2/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "RSS5W62SRBJWRTU7EFUWZMAK3E",
+            "manager_id": "2",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Wax On Wax Off",
+        "number_of_moves": "30",
+        "number_of_trades": "2",
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "2",
+        "team_key": "331.l.729259.t.2",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_1.png"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1430.72"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 6,
+            "percentage": 0.571,
+            "ties": 0,
+            "wins": 8
+          },
+          "playoff_seed": "3",
+          "points_against": 1383.34,
+          "points_for": 1430.72,
+          "rank": 3,
+          "streak": {
+            "type": "win",
+            "value": "4"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/2",
+        "waiver_priority": 8
+      }
+    },
+    "3": {
+      "team": {
+        "clinched_playoffs": 1,
+        "draft_grade": "B-",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/4/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "5KLNXUYW5RP22UMRKUXHBCIITI",
+            "manager_id": "4",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "hold my D",
+        "number_of_moves": "27",
+        "number_of_trades": "1",
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "4",
+        "team_key": "331.l.729259.t.4",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://ct.yimg.com/cy/1589/24677593583_68859308dd_192sq.jpg?ct=fantasy"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1419.34"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 7,
+            "percentage": 0.5,
+            "ties": 0,
+            "wins": 7
+          },
+          "playoff_seed": "4",
+          "points_against": 1300.1,
+          "points_for": 1419.34,
+          "rank": 4,
+          "streak": {
+            "type": "win",
+            "value": "1"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/4",
+        "waiver_priority": 7
+      }
+    },
+    "4": {
+      "team": {
+        "draft_grade": "B",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/5/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "U2UUVY5I7YGGKOWHOMGZVWPY4I",
+            "manager_id": "5",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Res Ipsa Loquitur",
+        "number_of_moves": "27",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "5",
+        "team_key": "331.l.729259.t.5",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_10.png"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1372.92"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 7,
+            "percentage": 0.5,
+            "ties": 0,
+            "wins": 7
+          },
+          "playoff_seed": "5",
+          "points_against": 1440.6199999999997,
+          "points_for": 1372.92,
+          "rank": 5,
+          "streak": {
+            "type": "loss",
+            "value": "1"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/5",
+        "waiver_priority": 4
+      }
+    },
+    "5": {
+      "team": {
+        "draft_grade": "A-",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/9/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "DW5EB5U5NWTRYSEOCFC2UNCAN4",
+            "manager_id": "9",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Bob's wv cowboys",
+        "number_of_moves": "15",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "9",
+        "team_key": "331.l.729259.t.9",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_2.png"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1369.12"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 7,
+            "percentage": 0.5,
+            "ties": 0,
+            "wins": 7
+          },
+          "playoff_seed": "6",
+          "points_against": 1427.1599999999996,
+          "points_for": 1369.12,
+          "rank": 6,
+          "streak": {
+            "type": "loss",
+            "value": "2"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/9",
+        "waiver_priority": 5
+      }
+    },
+    "6": {
+      "team": {
+        "draft_grade": "B-",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/7/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "T5FS62WECPINZJD3M3DSWRK6XE",
+            "manager_id": "7",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Saigon Whore",
+        "number_of_moves": "22",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "7",
+        "team_key": "331.l.729259.t.7",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_2.png"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1379.08"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 8,
+            "percentage": 0.429,
+            "ties": 0,
+            "wins": 6
+          },
+          "playoff_seed": "7",
+          "points_against": 1496.28,
+          "points_for": 1379.08,
+          "rank": 7,
+          "streak": {
+            "type": "win",
+            "value": "1"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/7",
+        "waiver_priority": 2
+      }
+    },
+    "7": {
+      "team": {
+        "draft_grade": "C+",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/10/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "TZQVTNZLIWIJC72A6PYKXI7D2Y",
+            "manager_id": "10",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Legion",
+        "number_of_moves": "25",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "10",
+        "team_key": "331.l.729259.t.10",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://ct.yimg.com/cy/1460/25175132092_0607572781_192sq.jpg?ct=fantasy"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1319.82"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 9,
+            "percentage": 0.357,
+            "ties": 0,
+            "wins": 5
+          },
+          "playoff_seed": "8",
+          "points_against": 1330.64,
+          "points_for": 1319.82,
+          "rank": 8,
+          "streak": {
+            "type": "loss",
+            "value": "4"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/10",
+        "waiver_priority": 3
+      }
+    },
+    "8": {
+      "team": {
+        "draft_grade": "B",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/3/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "2DG2PUYOHZQHS5KVEUKU5JE5I4",
+            "manager_id": "3",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "OICUNVdaAisle72",
+        "number_of_moves": "10",
+        "number_of_trades": null,
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "3",
+        "team_key": "331.l.729259.t.3",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://ct.yimg.com/cy/1613/24667509324_69521b5ef9_192sq.jpg?ct=fantasy"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1170.80"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 9,
+            "percentage": 0.357,
+            "ties": 0,
+            "wins": 5
+          },
+          "points_against": 1301.98,
+          "points_for": 1170.8,
+          "rank": "9",
+          "streak": {
+            "type": "loss",
+            "value": "1"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/3",
+        "waiver_priority": 1
+      }
+    },
+    "9": {
+      "team": {
+        "draft_grade": "B",
+        "draft_recap_url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/6/draftrecap",
+        "has_draft_grade": 1,
+        "league_scoring_type": "head",
+        "managers": {
+          "manager": {
+            "guid": "3EFYAEK2MQ6O2AXMZHW2QVPSLM",
+            "manager_id": "6",
+            "nickname": "--hidden--"
+          }
+        },
+        "name": "Michael's Team",
+        "number_of_moves": "25",
+        "number_of_trades": "1",
+        "roster_adds": {
+          "coverage_type": "week",
+          "coverage_value": "17",
+          "value": "0"
+        },
+        "team_id": "6",
+        "team_key": "331.l.729259.t.6",
+        "team_logos": {
+          "team_logo": {
+            "size": "large",
+            "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_1.png"
+          }
+        },
+        "team_points": {
+          "coverage_type": "season",
+          "season": "2014",
+          "total": "1276.44"
+        },
+        "team_standings": {
+          "outcome_totals": {
+            "losses": 10,
+            "percentage": 0.286,
+            "ties": 0,
+            "wins": 4
+          },
+          "points_against": 1443.98,
+          "points_for": 1276.44,
+          "rank": "10",
+          "streak": {
+            "type": "loss",
+            "value": "1"
+          }
+        },
+        "url": "https://football.fantasysports.yahoo.com/archive/nfl/2014/729259/6",
+        "waiver_priority": 6
+      }
+    }
+  }
+}

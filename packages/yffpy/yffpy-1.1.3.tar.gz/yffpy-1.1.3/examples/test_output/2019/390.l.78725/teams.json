@@ -1,0 +1,421 @@
+{
+  "0": {
+    "team": {
+      "draft_grade": "C+",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/1/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "wrenjr@yahoo.com",
+          "guid": "W6723TWEB3WMKQKL4SCBOWA4BQ",
+          "image_url": "https://s.yimg.com/ag/images/1728/59132763602_a75338_64sq.jpg",
+          "manager_id": "1",
+          "nickname": "uberfastman"
+        }
+      },
+      "name": "Legion",
+      "number_of_moves": "8",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "2"
+      },
+      "team_id": "1",
+      "team_key": "390.l.78725.t.1",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/1460/25175132092_0607572781_192sq.jpg?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/1",
+      "waiver_priority": 8
+    }
+  },
+  "1": {
+    "team": {
+      "draft_grade": "B",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/2/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "guid": "CZTC3BWLJYGFO47DPANUQ5N3TU",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "2",
+          "nickname": "james"
+        }
+      },
+      "name": "Beckham come back",
+      "number_of_moves": null,
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "2",
+      "team_key": "390.l.78725.t.2",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_4.png"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/2",
+      "waiver_priority": 6
+    }
+  },
+  "2": {
+    "team": {
+      "draft_grade": "C",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/3/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "alonso.huete@yahoo.com",
+          "guid": "RKDRW4V6IGLS57LFETQ6MVDUY4",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "3",
+          "nickname": "Alonso"
+        }
+      },
+      "name": "FlaccTion Jackson",
+      "number_of_moves": "4",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "3",
+      "team_key": "390.l.78725.t.3",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/1872/30034737727_68b2b6_192sq.jpg?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/3",
+      "waiver_priority": 12
+    }
+  },
+  "3": {
+    "team": {
+      "draft_grade": "A",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/4/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "westhamuntd22@yahoo.com",
+          "guid": "5MF7AYYOUGVMUUBBGZARJH62NQ",
+          "image_url": "https://s.yimg.com/ag/images/4581/37740928860_28b934_64sq.jpg",
+          "manager_id": "4",
+          "nickname": "john"
+        }
+      },
+      "name": "Keke Do You Love Me",
+      "number_of_moves": "1",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "1"
+      },
+      "team_id": "4",
+      "team_key": "390.l.78725.t.4",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_9.png"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/4",
+      "waiver_priority": 1
+    }
+  },
+  "4": {
+    "team": {
+      "draft_grade": "C-",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/5/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "pkgarretson@gmail.com",
+          "guid": "77L5BAEEI3LFX6KXKDHXACRKJA",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "5",
+          "nickname": "Phillip"
+        }
+      },
+      "name": "Maniacs",
+      "number_of_moves": "3",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "2"
+      },
+      "team_id": "5",
+      "team_key": "390.l.78725.t.5",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_3.png"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/5",
+      "waiver_priority": 4
+    }
+  },
+  "5": {
+    "team": {
+      "draft_grade": "C",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/6/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "g.drewhoover@gmail.com",
+          "guid": "Q5IAQKO3U47O5A3FSYSSWQPLAE",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "6",
+          "nickname": "Drew"
+        }
+      },
+      "name": "Beefy Bois",
+      "number_of_moves": "1",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "6",
+      "team_key": "390.l.78725.t.6",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/1937/56481563551_822c18_192sq.jpg?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/6",
+      "waiver_priority": 9
+    }
+  },
+  "6": {
+    "team": {
+      "draft_grade": "C",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/7/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "mvandy514@yahoo.com",
+          "guid": "QBPF5IJOMAEEP7EBUPRRTQS2KY",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "7",
+          "nickname": "Mike"
+        }
+      },
+      "name": "The Jolly Rodgers",
+      "number_of_moves": "1",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "7",
+      "team_key": "390.l.78725.t.7",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/1762/30422797458_997501_192sq.jpg?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/7",
+      "waiver_priority": 10
+    }
+  },
+  "7": {
+    "team": {
+      "draft_grade": "A-",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/8/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "cal3dt@virginia.edu",
+          "guid": "CDJFHRN4NW72JKCD7TRAH5M2FA",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "8",
+          "nickname": "Carl"
+        }
+      },
+      "name": "The OG Shenanigans",
+      "number_of_moves": "1",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "8",
+      "team_key": "390.l.78725.t.8",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_1.png"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/8",
+      "waiver_priority": 11
+    }
+  },
+  "8": {
+    "team": {
+      "draft_grade": "B",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/9/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "cpclark@email.wm.edu",
+          "guid": "NL4NGXXH2SXOIL7JHPIC5C5IJI",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "9",
+          "nickname": "Charlie"
+        }
+      },
+      "name": "National Champs",
+      "number_of_moves": "2",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "1"
+      },
+      "team_id": "9",
+      "team_key": "390.l.78725.t.9",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/1979/59559511792_20090c_192sq.jpg?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/9",
+      "waiver_priority": 5
+    }
+  },
+  "9": {
+    "team": {
+      "draft_grade": "B+",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/10/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "btrisney@gmail.com",
+          "guid": "52BVXK4LAUXI7FOWY4ABYXQLXM",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "10",
+          "nickname": "Brent"
+        }
+      },
+      "name": "Kelce U Later Nerds",
+      "number_of_moves": null,
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "10",
+      "team_key": "390.l.78725.t.10",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/4314/25090971998_c59c6c_192sq.jpg?ct=fantasy?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/10",
+      "waiver_priority": 3
+    }
+  },
+  "10": {
+    "team": {
+      "draft_grade": "C",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/11/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "vichnin@yahoo.com",
+          "guid": "EEO3CAAZV3UGQ4BXIBVGFP6EPY",
+          "image_url": "https://s.yimg.com/ag/images/4540/37373431643_dbf3c1_64sq.jpg",
+          "manager_id": "11",
+          "nickname": "Michael"
+        }
+      },
+      "name": "Wentz Wagon",
+      "number_of_moves": "2",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "0"
+      },
+      "team_id": "11",
+      "team_key": "390.l.78725.t.11",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://ct.yimg.com/cy/8531/29242544850_8898e35f08_192sq.jpg?ct=fantasy"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/11",
+      "waiver_priority": 2
+    }
+  },
+  "11": {
+    "team": {
+      "draft_grade": "C",
+      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/78725/12/draftrecap",
+      "has_draft_grade": 1,
+      "league_scoring_type": "head",
+      "managers": {
+        "manager": {
+          "email": "kyle.oliver@richmond.edu",
+          "guid": "5TUJ2E2GWTJTZKSQHYL2YEJWYE",
+          "image_url": "https://ct.yimg.com/cy/1768/39361574426_98028a_64sq.jpg",
+          "manager_id": "12",
+          "nickname": "Kyle"
+        }
+      },
+      "name": "Zeus' Bolts",
+      "number_of_moves": "9",
+      "number_of_trades": null,
+      "roster_adds": {
+        "coverage_type": "week",
+        "coverage_value": 1,
+        "value": "2"
+      },
+      "team_id": "12",
+      "team_key": "390.l.78725.t.12",
+      "team_logos": {
+        "team_logo": {
+          "size": "large",
+          "url": "https://s.yimg.com/cv/apiv2/default/nfl/nfl_11.png"
+        }
+      },
+      "url": "https://football.fantasysports.yahoo.com/f1/78725/12",
+      "waiver_priority": 7
+    }
+  }
+}
