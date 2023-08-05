@@ -1,0 +1,9 @@
+minimal_binary_coding
+unary_coding
+
+[test]
+pytest
+pytest-cov
+coveralls
+validate_version_code
+codacy-coverage
