@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module =  "skeleton"
+dist-name = "skeleton-mindcloud"
+author = "Jozsef Barcza"
+author-email = "jozsef.barcza@upscale.hu"
+home-page = "https://upscale.hu"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires = [
+    "pyhocon",
+    "confluent-kafka",
+]
+requires-python=">=3.7"
+description-file="README.md"
+
