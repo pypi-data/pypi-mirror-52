@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: skeleton-mindcloud
+Version: 0.3.0
+Summary: Small library to develop MindCloud apps in python
+Home-page: https://upscale.hu
+License: UNKNOWN
+Author: Jozsef Barcza
+Author-email: jozsef.barcza@upscale.hu
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pyhocon
+Requires-Dist: confluent-kafka
+
+# Skeleton library
+
+Small library to help creating MindCloud enabled Python applications
+
