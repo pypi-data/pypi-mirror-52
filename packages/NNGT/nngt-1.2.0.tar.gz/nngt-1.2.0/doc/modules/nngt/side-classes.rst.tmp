@@ -1,0 +1,15 @@
+Side classes
+============
+
+.. autosummary::
+
+    nngt.GroupProperty
+    nngt.NeuralGroup
+    nngt.NeuralPop
+
+
+Details
+-------
+
+.. currentmodule:: nngt
+@autosum@
