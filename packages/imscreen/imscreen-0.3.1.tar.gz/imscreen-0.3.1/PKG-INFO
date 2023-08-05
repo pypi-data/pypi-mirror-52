@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: imscreen
+Version: 0.3.1
+Summary: This Library is used to Capture your "Computer's Screen / Webcam" with Ultra High FPS.
+Home-page: https://github.com/imneonizer/imscreen
+Author: Nitin Rai
+Author-email: mneonizer@gmail.com
+License: MIT
+Download-URL: https://github.com/imneonizer/imscreen/releases/tag/v0.3.1
+Description: UNKNOWN
+Keywords: Screen Shot,Screen Capture,Webcam Reading
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
