@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --plot-internal-width: 100px;
+  --plot-internal-height: 100px;
+  --plot-border-size: 1px;
+  --plot-width: calc(var(--plot-border-size)*2 + var(--plot-internal-width));
+  --plot-height: calc(var(--plot-border-size)*2 + var(--plot-internal-height));
+  --col-width: var(--plot-width);
+  --row-height: var(--plot-height);
+}
+
+.rg_details{
+  padding: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.rg_details .title {
+  font-size: 10pt;
+}
+
+.rg_details .controls {
+  font-size: 10pt;
+}
+
+.rg_details .rg_view {
+  min-height: 0;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 100px auto 10px;
+  grid-template-rows:  20px auto 10px;
+  grid-gap: 5px 5px;
+  grid-template-areas:
+   "measure top     ."
+   "left    main    right"
+   ".       bottom  ."
+}
+
+/* Measure name */
+.rg_details .rg_measure {
+  grid-area: measure;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* TOP */
+
+.rg_details .rg_top {
+  grid-area: top;
+  overflow-x: hidden;
+  white-space: nowrap;
+  /* padding: 0 0 0 5px; */
+}
+
+.rg_details .rg_top .rg_col_header {
+  width: var(--col-width);
+  margin: 0 5px 0 0;
+  background-color: lightgreen;
+  display: inline-block;
+}
+
+/* LEFT */
+
+.rg_details .rg_left {
+  grid-area: left;
+  overflow-y: hidden;
+}
+
+.rg_row_header {
+  height: var(--row-height);
+  width: 90px;
+  margin: 0 0 5px 0;
+  background-color: lightgreen;
+  border: 1px solid gray;
+}
+
+.rg_row_header.highlight {
+  border: 2px solid red;
+}
+
+/* RIGHT */
+
+.rg_details .rg_right {
+  grid-area: right;
+  overflow-y: auto;
+}
+
+.rg_details .rg_right_scroll {
+  width: 1px;
+}
+
+/* BOTTOM */
+
+.rg_details .rg_bottom {
+  grid-area: bottom;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 0 0 5px;
+}
+
+.rg_bottom_scroll {
+  height: 1px;
+}
+
+/* PLOTS */
+
+.rg_details .rg_plots {
+  grid-area: main;
+  overflow: hidden;
+  position: relative;
+}
+
+.rg_plot_item {
+  width: var(--plot-width);
+  height: var(--plot-height);
+  border: var(--plot-border-size) solid gray;
+  /* background: lightblue; */
+  position: absolute;
+}
+
+.rg_plot {
+}
+
+.rg_plot_canvas-bg {
+  position: absolute;
+}
+
+.rg_plot_canvas-fg {
+  position: absolute;
+}
+
+.rg_plot_svg {
+  position: absolute;
+}

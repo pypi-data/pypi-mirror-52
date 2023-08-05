@@ -1,0 +1,32 @@
+.rg_graph .view {
+    /*background-color: lightyellow;*/
+}
+
+.rg_graph .view .origin {
+    fill: black;
+    stroke: steelblue;
+    stroke-width: 1px;
+}
+
+.rg_graph .view .axis {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 1.5px;
+}
+
+.rg_graph .view .axis:hover {
+    stroke: red;
+    stroke-width: 3px;
+}
+
+.rg_graph .view .label:hover {
+    stroke: red;
+    /*stroke-width: 3px;*/
+}
+
+.rg_graph .view .pts .pt {
+    fill: steelblue;
+    stroke: none;
+    /*stroke-width: 1px;*/
+}
+
