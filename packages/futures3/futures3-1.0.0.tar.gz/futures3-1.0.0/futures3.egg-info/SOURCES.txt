@@ -1,0 +1,11 @@
+README.rst
+setup.py
+futures3/__init__.py
+futures3/_base.py
+futures3/process.py
+futures3/thread.py
+futures3.egg-info/PKG-INFO
+futures3.egg-info/SOURCES.txt
+futures3.egg-info/dependency_links.txt
+futures3.egg-info/not-zip-safe
+futures3.egg-info/top_level.txt
