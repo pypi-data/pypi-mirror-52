@@ -1,0 +1,15 @@
+README.md
+setup.py
+pysid/__init__.py
+pysid.egg-info/PKG-INFO
+pysid.egg-info/SOURCES.txt
+pysid.egg-info/dependency_links.txt
+pysid.egg-info/requires.txt
+pysid.egg-info/top_level.txt
+pysid/correlation/__init__.py
+pysid/correlation/autocorr.py
+pysid/correlation/croscorr.py
+pysid/identification/__init__.py
+pysid/identification/ivmethod.py
+pysid/identification/pemethod.py
+pysid/identification/tseries.py

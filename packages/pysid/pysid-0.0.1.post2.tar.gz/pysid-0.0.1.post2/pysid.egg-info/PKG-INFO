@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pysid
+Version: 0.0.1.post2
+Summary: System Identification tools for python
+Home-page: https://github.com/edumapurunga/pysid
+Author: Eduardo Mapurunga and Emerson Boeira
+Author-email: edumapurunga@gmail.com
+License: UNKNOWN
+Description: # pysid
+        
+        This is a python System Identification package, based on numpy and scipy, that
+        provide some tools for parametric identification of causal linear time-invariant systems.
+        
+        ## Supported methods
+        
+        Here are the list of the implemented methods
+        - Least Squares
+        - Instrumental Variables
+        - Prediction Error method
+        
+        ## Dependencies
+        
+        Currently, this packages is based on numpy. For this reason, the basic package dependencies are:
+        
+        - Numpy
+        - Scipy
+        
+        ## Installation
+        
+        ```pip install pysid```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
