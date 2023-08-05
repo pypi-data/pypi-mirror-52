@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Default settings &mdash; Django Security Headers  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Middleware" href="middleware.html" />
+    <link rel="prev" title="Quick start" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Django Security Headers
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Default settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#django-settings">Django settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#csrf-cookie-name">CSRF_COOKIE_NAME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csrf-cookie-samesite">CSRF_COOKIE_SAMESITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csrf-cookie-secure">CSRF_COOKIE_SECURE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-browser-xss-filter">SECURE_BROWSER_XSS_FILTER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-content-type-nosniff">SECURE_CONTENT_TYPE_NOSNIFF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-hsts-include-subdomains">SECURE_HSTS_INCLUDE_SUBDOMAINS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-hsts-preload">SECURE_HSTS_PRELOAD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secure-hsts-seconds">SECURE_HSTS_SECONDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#session-cookie-httponly">SESSION_COOKIE_HTTPONLY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#session-cookie-samesite">SESSION_COOKIE_SAMESITE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#session-cookie-secure">SESSION_COOKIE_SECURE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#django-csp-settings">Django-CSP settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#csp-default-src">CSP_DEFAULT_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-font-src">CSP_FONT_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-frame-src">CSP_FRAME_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-img-src">CSP_IMG_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-media-src">CSP_MEDIA_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-script-src">CSP_SCRIPT_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-style-src">CSP_STYLE_SRC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-include-nonce-in">CSP_INCLUDE_NONCE_IN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csp-report-percentage">CSP_REPORT_PERCENTAGE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#middleware-settings">Middleware settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#referrer-policy">REFERRER_POLICY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-policy">FEATURE_POLICY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="middleware.html">Middleware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Django Security Headers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>Default settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="default-settings">
+<h1>Default settings<a class="headerlink" href="#default-settings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="django-settings">
+<h2>Django settings<a class="headerlink" href="#django-settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="csrf-cookie-name">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#csrf-cookie-name">CSRF_COOKIE_NAME</a><a class="headerlink" href="#csrf-cookie-name" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">__Host-csrftoken</span></code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See the Mozilla Http Observatory recommendations regarding <a class="reference external" href="https://infosec.mozilla.org/guidelines/web_security#directives-2">cookies</a>.</p>
+</div>
+</div>
+<div class="section" id="csrf-cookie-samesite">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#csrf-cookie-samesite">CSRF_COOKIE_SAMESITE</a><a class="headerlink" href="#csrf-cookie-samesite" title="Permalink to this headline">¶</a></h3>
+<p>Default:  <code class="docutils literal notranslate"><span class="pre">Lax</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This setting is available in Django 2.2 or through the <code class="docutils literal notranslate"><span class="pre">django-cookie-samesite</span></code> package in Django 1.11.</p>
+</div>
+</div>
+<div class="section" id="csrf-cookie-secure">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#csrf-cookie-secure/">CSRF_COOKIE_SECURE</a><a class="headerlink" href="#csrf-cookie-secure" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Requires an HTTPS connection.</p>
+</div>
+</div>
+<div class="section" id="secure-browser-xss-filter">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#secure-browser-xss-filter">SECURE_BROWSER_XSS_FILTER</a><a class="headerlink" href="#secure-browser-xss-filter" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</div>
+<div class="section" id="secure-content-type-nosniff">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#secure-content-type-nosniff">SECURE_CONTENT_TYPE_NOSNIFF</a><a class="headerlink" href="#secure-content-type-nosniff" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</div>
+<div class="section" id="secure-hsts-include-subdomains">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#secure-hsts-include-subdomains">SECURE_HSTS_INCLUDE_SUBDOMAINS</a><a class="headerlink" href="#secure-hsts-include-subdomains" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Activating HSTS may irreversibly break your site (for <code class="docutils literal notranslate"><span class="pre">SECURE_HSTS_SECONDS</span></code>) if improperly configured.  Review <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/middleware/#http-strict-transport-security">Django’s advice</a> regarding HSTS first!</p>
+</div>
+</div>
+<div class="section" id="secure-hsts-preload">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#secure-hsts-preload">SECURE_HSTS_PRELOAD</a><a class="headerlink" href="#secure-hsts-preload" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Activating HSTS may irreversibly break your site (for <code class="docutils literal notranslate"><span class="pre">SECURE_HSTS_SECONDS</span></code>) if improperly configured.  Review <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/middleware/#http-strict-transport-security">Django’s advice</a> regarding HSTS first!</p>
+</div>
+</div>
+<div class="section" id="secure-hsts-seconds">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#secure-hsts-seconds">SECURE_HSTS_SECONDS</a><a class="headerlink" href="#secure-hsts-seconds" title="Permalink to this headline">¶</a></h3>
+<p>Default:  183 * 24 * 60 * 60</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Activating HSTS may irreversibly break your site (for <code class="docutils literal notranslate"><span class="pre">SECURE_HSTS_SECONDS</span></code>) if improperly configured.  Review <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/middleware/#http-strict-transport-security">Django’s advice</a> regarding HSTS first!</p>
+</div>
+</div>
+<div class="section" id="session-cookie-httponly">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#session-cookie-httponly">SESSION_COOKIE_HTTPONLY</a><a class="headerlink" href="#session-cookie-httponly" title="Permalink to this headline">¶</a></h3>
+<p>Default:  <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This is already true by default in Django 1.11 and 2.2.</p>
+</div>
+</div>
+<div class="section" id="session-cookie-samesite">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#session-cookie-samesite">SESSION_COOKIE_SAMESITE</a><a class="headerlink" href="#session-cookie-samesite" title="Permalink to this headline">¶</a></h3>
+<p>Default:  <code class="docutils literal notranslate"><span class="pre">Lax</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This setting is available in Django 2.2 or through <code class="docutils literal notranslate"><span class="pre">django-cookie-samesite</span></code> package in Django 1.11.</p>
+</div>
+</div>
+<div class="section" id="session-cookie-secure">
+<h3><a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#session-cookie-secure">SESSION_COOKIE_SECURE</a><a class="headerlink" href="#session-cookie-secure" title="Permalink to this headline">¶</a></h3>
+<p>Default:  <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Requires an HTTPS connection.</p>
+</div>
+</div>
+</div>
+<div class="section" id="django-csp-settings">
+<h2>Django-CSP settings<a class="headerlink" href="#django-csp-settings" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference external" href="https://django-csp.readthedocs.io/en/latest/">django-csp docs</a> for full details.</p>
+<div class="section" id="csp-default-src">
+<h3>CSP_DEFAULT_SRC<a class="headerlink" href="#csp-default-src" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;'self'&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-font-src">
+<h3>CSP_FONT_SRC<a class="headerlink" href="#csp-font-src" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;'self'&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-frame-src">
+<h3>CSP_FRAME_SRC<a class="headerlink" href="#csp-frame-src" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;*&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-img-src">
+<h3>CSP_IMG_SRC<a class="headerlink" href="#csp-img-src" title="Permalink to this headline">¶</a></h3>
+<p>Default:  <code class="docutils literal notranslate"><span class="pre">[&quot;*&quot;,</span> <span class="pre">&quot;data:&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-media-src">
+<h3>CSP_MEDIA_SRC<a class="headerlink" href="#csp-media-src" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;*&quot;,</span> <span class="pre">&quot;data:&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-script-src">
+<h3>CSP_SCRIPT_SRC<a class="headerlink" href="#csp-script-src" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;'self'&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-style-src">
+<h3>CSP_STYLE_SRC<a class="headerlink" href="#csp-style-src" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;'self'&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-include-nonce-in">
+<h3>CSP_INCLUDE_NONCE_IN<a class="headerlink" href="#csp-include-nonce-in" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[&quot;script-src&quot;,</span> <span class="pre">&quot;style-src&quot;]</span></code></p>
+</div>
+<div class="section" id="csp-report-percentage">
+<h3>CSP_REPORT_PERCENTAGE<a class="headerlink" href="#csp-report-percentage" title="Permalink to this headline">¶</a></h3>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">0.1</span></code></p>
+</div>
+</div>
+<div class="section" id="middleware-settings">
+<h2>Middleware settings<a class="headerlink" href="#middleware-settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="referrer-policy">
+<h3>REFERRER_POLICY<a class="headerlink" href="#referrer-policy" title="Permalink to this headline">¶</a></h3>
+<p>Default:  <code class="docutils literal notranslate"><span class="pre">same-origin</span></code></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See the Mozilla Http Observatory recommendations regarding the <a class="reference external" href="https://infosec.mozilla.org/guidelines/web_security#referrer-policy">referrer-policy</a> as well as Scott Helme’s <a class="reference external" href="https://scotthelme.co.uk/a-new-security-header-referrer-policy/">discussion</a>.</p>
+</div>
+</div>
+<div class="section" id="feature-policy">
+<h3>FEATURE_POLICY<a class="headerlink" href="#feature-policy" title="Permalink to this headline">¶</a></h3>
+<p>Default:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="s2">&quot;autoplay &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;camera &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;display-capture &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;document-domain &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;encrypted-media &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fullscreen *&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;geolocation &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;microphone &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;midi &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;payment &#39;none&#39;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;vr *&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See Scott Helme’s discussion on the new <a class="reference external" href="https://scotthelme.co.uk/a-new-security-header-feature-policy/">feature policy header</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="middleware.html" class="btn btn-neutral float-right" title="Middleware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J. Sumner and A. Lefebvre-Brossard
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: django-security-headers
+Version: 0.3.0
+Summary: A simple app to add some configurable security headers to Django 1.11-LTS and 2.2-LTS responses.
+Home-page: https://bitbucket.org/scivero/django-security-headers/src/master/
+Author: Scivero
+Author-email: UNKNOWN
+License: BSD License
+Description: .. image:: https://circleci.com/bb/scivero/django-security-headers.svg?style=svg
+            :target: https://circleci.com/bb/scivero/django-security-headers
+        
+        See: https://django-security-headers.readthedocs.io/en/stable/
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

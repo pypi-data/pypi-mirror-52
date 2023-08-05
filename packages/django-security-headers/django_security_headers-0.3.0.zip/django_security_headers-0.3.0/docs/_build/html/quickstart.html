@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick start &mdash; Django Security Headers  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CSRF_COOKIE_NAME" href="settings.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="contents.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Django Security Headers
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#default-configuration">Default configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-configuration">Optional configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-settings">Development settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">CSRF_COOKIE_NAME</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html#csrf-cookie-secure">CSRF_COOKIE_SECURE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html#secure-browser-xss-filter">SECURE_BROWSER_XSS_FILTER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html#secure-content-type-nosniff">SECURE_CONTENT_TYPE_NOSNIFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html#secure-hsts-include-subdomains">SECURE_HSTS_INCLUDE_SUBDOMAINS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html#secure-hsts-preload">SECURE_HSTS_PRELOAD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html#secure-hsts-seconds">SECURE_HSTS_SECONDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="middleware.html">Middleware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Django Security Headers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>Quick start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start">
+<h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="default-configuration">
+<h2>Default configuration<a class="headerlink" href="#default-configuration" title="Permalink to this headline">¶</a></h2>
+<p>To apply default security headers to all responses:</p>
+<ol class="arabic">
+<li><p>Installation</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p>From <code class="docutils literal notranslate"><span class="pre">pip</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">django</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">headers</span>
+</pre></div>
+</div>
+</li>
+<li><p>To access the <code class="docutils literal notranslate"><span class="pre">scan</span></code> function from <code class="docutils literal notranslate"><span class="pre">httpobs</span></code>, add the following to your project’s dev requirements</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">e</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jsumnerPhD</span><span class="o">/</span><span class="n">http</span><span class="o">-</span><span class="n">observatory</span><span class="c1">#egg=httpobs</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">csp</span></code>, <code class="docutils literal notranslate"><span class="pre">security_headers</span></code> middlewares.  For Django 1.11, also add the <code class="docutils literal notranslate"><span class="pre">samesite</span></code> middleware</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MIDDLEWARES</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s2">&quot;django.middleware.security.SecurityMiddleware&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;csp.middleware.CSPMiddleware&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;security_headers.middleware.extra_security_headers_middleware&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;django_cookies_samesite.middleware.CookiesSameSite&quot;</span><span class="p">,</span> <span class="c1"># Not needed for Django 2.2</span>
+   <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add the default <code class="docutils literal notranslate"><span class="pre">csp</span></code> and <code class="docutils literal notranslate"><span class="pre">security_headers</span></code> settings by importing the defaults to your local <code class="docutils literal notranslate"><span class="pre">settings.py</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">security_headers.defaults</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">security_headers</span></code> to your <code class="docutils literal notranslate"><span class="pre">INSTALLED_APPS</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="o">...</span>
+  <span class="s2">&quot;security_headers&quot;</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This will expose a simple admin interface for specifying safe domains.</p>
+</div>
+<div class="section" id="optional-configuration">
+<h2>Optional configuration<a class="headerlink" href="#optional-configuration" title="Permalink to this headline">¶</a></h2>
+<p>If you included step 1b, you can add a scan link to <code class="docutils literal notranslate"><span class="pre">urls.py</span></code>.  Accessing this link will run a scan against <code class="docutils literal notranslate"><span class="pre">https://127.0.0.1:8000/&lt;path&gt;</span></code> where the path is determined from reversing <code class="docutils literal notranslate"><span class="pre">url_name</span></code>.  Note that the sslserver must be running in parallel to the request.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">security_headers.views</span> <span class="k">import</span> <span class="n">scan_url</span>
+
+<span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+    <span class="n">urlpatterns</span> <span class="o">+=</span> <span class="n">i18n_patterns</span><span class="p">(</span>
+        <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^security/(?P&lt;url_name&gt;[\w-]+)/&quot;</span><span class="p">,</span> <span class="n">scan_url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;scan&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>For newer Django syntax</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urlpatterns</span> <span class="o">+=</span> <span class="p">[</span><span class="n">path</span><span class="p">(</span><span class="s2">&quot;security/&lt;slug:url_name&gt;/&quot;</span><span class="p">,</span> <span class="n">scan_url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;scan&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>To access template tags provided by <code class="docutils literal notranslate"><span class="pre">django-csp</span></code>, add <code class="docutils literal notranslate"><span class="pre">csp</span></code> to <code class="docutils literal notranslate"><span class="pre">INSTALLED_APPS</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="o">...</span>
+  <span class="s2">&quot;security_headers&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;csp&quot;</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>To use the sslserver (provided by <a class="reference external" href="https://github.com/teddziuba/django-sslserver">django-sslserver</a> through <code class="docutils literal notranslate"><span class="pre">./manage.py</span> <span class="pre">runsslserver</span></code>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="o">...</span>
+  <span class="s2">&quot;security_headers&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;csp&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;sslserver&quot;</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="development-settings">
+<h2>Development settings<a class="headerlink" href="#development-settings" title="Permalink to this headline">¶</a></h2>
+<p>During development, you will need to overwrite some default settings if not using the ssl server.  At the very end of your <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> file, include</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;runsslserver&quot;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">:</span>
+    <span class="n">SSL_CONTEXT</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">SECURE_HSTS_SECONDS</span> <span class="o">=</span> <span class="mi">3600</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">SSL_CONTEXT</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">SECURE_HSTS_SECONDS</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">CSRF_COOKIE_SECURE</span> <span class="o">=</span> <span class="n">SSL_CONTEXT</span>
+<span class="n">SECURE_SSL_REDIRECT</span> <span class="o">=</span> <span class="n">SSL_CONTEXT</span>
+<span class="n">SESSION_COOKIE_SECURE</span> <span class="o">=</span> <span class="n">SSL_CONTEXT</span>
+</pre></div>
+</div>
+<p>Reducing <code class="docutils literal notranslate"><span class="pre">SECURE_HSTS_SECONDS</span></code> time is also a good idea during development.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="settings.html" class="btn btn-neutral float-right" title="CSRF_COOKIE_NAME" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contents.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, J. Sumner and A. Lefebvre-Brossard
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
