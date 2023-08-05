@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "django_mssql2"
+version = "0.1.0"
+description = "Django database adapter for MS SQL Server"
+authors = ["Тряпчев Данил Павлович <tryapchev@tochka.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+django = "^2.2"
+pymssql = "^2.1"
+Cython = "^0.29.13"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
