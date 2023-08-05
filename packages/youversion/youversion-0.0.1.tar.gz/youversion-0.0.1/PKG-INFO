@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: youversion
+Version: 0.0.1
+Summary: YouVersion API Client
+Home-page: https://github.com/jyksnw/yv-api-python
+Author: Jason Snow
+Author-email: jsn.snw@gmail.com
+License: Apache License, Version 2.0
+Description: # yv-api-python
+        YouVersion API Client for Python
+        
+Keywords: YouVersion Bible API Client
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Religion
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Religion
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
