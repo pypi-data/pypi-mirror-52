@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: markdown-strikethrough
+Version: 0.1.1
+Summary: support strikethrough in markdown
+Home-page: https://github.com/codejamninja/markdown-strikethrough
+Author: Jam Risser
+Author-email: jam@codejam.ninja
+License: MIT
+Keywords: markdown strikethrough
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Markdown
+Requires-Dist: unify
+Requires-Dist: yapf
+
+# markdown-strikethrough
+
+> support strikethrough in markdown
+
+Please ★ this repo if you found it useful ★ ★ ★
+
+## Installation
+
+```sh
+pip3 install markdown-strikethrough
+```
+
+## Dependencies
+
+* [Python 3](https://www.python.org)
+
+
