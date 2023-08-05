@@ -1,0 +1,4 @@
+sqlalchemy
+cm_service_library
+psycopg2-binary
+databases[postgresql]
