@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django2-manager-cache
+Version: 1.0.0
+Summary: Manager to Cache Django Models
+Home-page: https://github.com/gabomasi/django2_manager_cache
+Author: Gabriel Omar Masi (rayser)
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: django2_manager_cache
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: django
+
+
+
+History
+-------
+
+1.0.0
+-----
+
+* First beta release
+
+
