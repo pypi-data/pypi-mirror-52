@@ -1,0 +1,3 @@
+[console_scripts]
+wmc = wmc.cli:main
+
