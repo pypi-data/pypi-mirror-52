@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pyMIH
+Version: 0.7.1
+Summary: Python implementation of Multiple-Index Hashing (MIH), an efficient technique for accelerating lookups for fuzzy hashes such as PDQ.
+Home-page: https://github.com/AiLECS/pyMIH
+Author: Janis Dalins
+Author-email: janis.dalins@monash.edu
+License: MIT
+Description: A python implementation of multiple index hashing (MIH) by Norouzi et al (see https://www.cs.toronto.edu/~norouzi/research/papers/multi_index_hashing.pdf), based on a description in the Threatexchange repository (see https://github.com/facebook/ThreatExchange/blob/master/hashing/hashing.pdf).
+         See homepage for usage instructions
+Platform: UNKNOWN
