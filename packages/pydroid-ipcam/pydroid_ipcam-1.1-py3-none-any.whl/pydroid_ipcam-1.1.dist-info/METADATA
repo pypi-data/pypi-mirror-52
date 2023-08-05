@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pydroid-ipcam
+Version: 1.1
+Summary: A asyncio library for handling android ipcam
+Home-page: https://github.com/pvizeli/pydroid-ipcam
+Author: Pascal Vizeli
+Author-email: pvizeli@syshack.ch
+License: BSD License
+Download-URL: https://github.com/pvizeli/pydroid-ipcam/tarball/1.1
+Keywords: android,ipcam,api,asyncio
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: yarl
+
+# PyDroid-IpCam
+
+A python asyncio library for handling android ipcam.
+
+Original written for Home-Assistant
+
+## Links
+- https://play.google.com/store/apps/details?id=com.pas.webcam
+- http://home-assistant.io
+
+
