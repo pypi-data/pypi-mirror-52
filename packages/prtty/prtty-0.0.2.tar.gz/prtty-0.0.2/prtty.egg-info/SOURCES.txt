@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+prtty/__init__.py
+prtty/__main__.py
+prtty/logger.py
+prtty.egg-info/PKG-INFO
+prtty.egg-info/SOURCES.txt
+prtty.egg-info/dependency_links.txt
+prtty.egg-info/requires.txt
+prtty.egg-info/top_level.txt
