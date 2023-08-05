@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: scopeagent
+Version: 0.3.5
+Summary: Scope agent for Python
+Home-page: https://scope.undefinedlabs.com
+Author: Undefined Labs, Inc
+Author-email: info@undefinedlabs.com
+License: Apache
+Description: # scope-python-agent
+        
+        Python agent for [Scope](https://scope.dev)
+        
+        
+        ## Install
+        
+            pip install scopeagent
+        
+        
+        ## Usage
+        
+        Please refer to the documentation at [https://docs.scope.dev/docs/python-installation](https://docs.scope.dev/docs/python-installation)
+        
+        
+        ## Development
+        
+        ### Automated Testing
+        
+        The following environment variables are used for database tests:
+        
+        * `POSTGRES_DBURL`
+        
+        To run the tests:
+        
+            tox
+        
+        ### Publishing
+        
+        To publish a new version of `scopeagent` to [pypi](https://pypi.org/):
+        
+            make publish
+        
+        You will need valid [pypi](https://pypi.org/) credentials with access to the `scopeagent` package.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Provides-Extra: tests
