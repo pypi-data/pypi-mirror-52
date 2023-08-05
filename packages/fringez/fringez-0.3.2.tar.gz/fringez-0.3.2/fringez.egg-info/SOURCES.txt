@@ -1,0 +1,15 @@
+README.md
+setup.py
+bin/fringez-clean
+bin/fringez-download
+bin/fringez-generate
+fringez/__init__.py
+fringez/fringe.py
+fringez/model.py
+fringez/plot.py
+fringez/utils.py
+fringez.egg-info/PKG-INFO
+fringez.egg-info/SOURCES.txt
+fringez.egg-info/dependency_links.txt
+fringez.egg-info/requires.txt
+fringez.egg-info/top_level.txt
