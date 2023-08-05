@@ -1,0 +1,10 @@
+blacklisted_tests:
+    - '\[.*rhev'
+
+whitelisted_tests:
+    - 'test_tenant_quota.py'
+    - 'test_.*whitelisted'
+
+docstrings:
+    required_fields:
+        - initialEstimate
