@@ -1,0 +1,17 @@
+SQLAlchemy
+arrow
+python_debian
+requests
+setuptools
+xmltodict
+iso8601
+beautifulsoup4
+swh.core
+swh.storage[schemata]>=0.0.122
+swh.scheduler>=0.0.58
+
+[testing]
+pytest
+pytest-postgresql
+requests_mock
+testing.postgresql
