@@ -1,0 +1,11 @@
+README.md
+setup.py
+texshade/__init__.py
+texshade/hankel.py
+texshade/texshade.py
+texshade.egg-info/PKG-INFO
+texshade.egg-info/SOURCES.txt
+texshade.egg-info/dependency_links.txt
+texshade.egg-info/requires.txt
+texshade.egg-info/top_level.txt
+texshade.egg-info/zip-safe
