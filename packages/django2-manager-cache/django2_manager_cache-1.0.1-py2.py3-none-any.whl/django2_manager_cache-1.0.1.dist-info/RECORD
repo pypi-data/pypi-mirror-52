@@ -1,0 +1,16 @@
+django2_manager_cache/__init__.py,sha256=BQl41hvn8OMdHc-58UiLukAWG6MCf4HF8gwKTXh2ouY,67
+django2_manager_cache/cache_manager.py,sha256=DzQXV44n9fMOJhhGQ2vJy-rFLnIdURXsOpZIYoSunEM,3026
+django2_manager_cache/mixins.py,sha256=XoLHd14Tj1UORzjTj6kt2Aggq4ILHKfXxXlJ5V9T3F4,3655
+django2_manager_cache/models.py,sha256=y6435eP4l7wap4ECzV4T7tRMq1JUJZ2GBd4r8I71RCY,2869
+django2_manager_cache/model_cache_sharing/__init__.py,sha256=0aNG7UyJRELU6VhDab5UaI1kmyWNvBfwcY0YX8aNqT4,197
+django2_manager_cache/model_cache_sharing/types.py,sha256=H31FG6kVmI1UY2HLkWFMOTRQ5YUTks_zW_1O7FIpamw,212
+django2_manager_cache/model_cache_sharing/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django2_manager_cache/model_cache_sharing/backends/base.py,sha256=dwU0I0rJMHPUhQZ-FGgvpuPsu-28VEa1nFUROtsKzT4,932
+django2_manager_cache/model_cache_sharing/backends/ipc.py,sha256=k6fPd1ipGWL2Rf1YG3sloAPoOfg9MQxucVuM2T6IFbk,612
+django2_manager_cache/model_cache_sharing/backends/shared_memory.py,sha256=yr7JN9OERzHbJ0NZQ_SOlhIyylbeYKTJjIqqStD2B98,1152
+django2_manager_cache-1.0.1.dist-info/AUTHORS.md,sha256=MCBfrIQNY2R-i_NzUxIi_7YrfK7lq4pShVzihAwrpII,52
+django2_manager_cache-1.0.1.dist-info/LICENSE,sha256=pxaYw_Gj2Zn6Q--JrpKYqxzmrKksPNz3heqAA_2Qr78,1107
+django2_manager_cache-1.0.1.dist-info/METADATA,sha256=rwdwM-orKRWclVlT8sdOD5KfXhbyfDwAqvYQ0jNI7hs,3175
+django2_manager_cache-1.0.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+django2_manager_cache-1.0.1.dist-info/top_level.txt,sha256=_gbnuGoQYKgTEojiuO1Jq0wHQZ8zB1cZxnVW-JIH0p0,22
+django2_manager_cache-1.0.1.dist-info/RECORD,,
