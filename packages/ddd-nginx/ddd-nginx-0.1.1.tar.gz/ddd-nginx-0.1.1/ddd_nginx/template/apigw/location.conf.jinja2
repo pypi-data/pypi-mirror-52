@@ -1,0 +1,9 @@
+location {{ name }} {
+{% if scope %}
+    internal;
+{% endif %}
+{% for var in variables %}
+    set {{ var.key }} {{ var.value }};
+{% endfor %}
+    {{ proxy.strategy }} {{ proxy.rule }};
+}
