@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+aiohttp_oauth_client/__init__.py
+aiohttp_oauth_client/assertion_client.py
+aiohttp_oauth_client/base.py
+aiohttp_oauth_client/oauth1_client.py
+aiohttp_oauth_client/oauth2_client.py
+aiohttp_oauth_client.egg-info/PKG-INFO
+aiohttp_oauth_client.egg-info/SOURCES.txt
+aiohttp_oauth_client.egg-info/dependency_links.txt
+aiohttp_oauth_client.egg-info/not-zip-safe
+aiohttp_oauth_client.egg-info/requires.txt
+aiohttp_oauth_client.egg-info/top_level.txt
