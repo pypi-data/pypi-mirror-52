@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+tfidfpackage/PdfReader.py
+tfidfpackage/__init__.py
+tfidfpackage/config.py
+tfidfpackage/db.py
+tfidfpackage/extract.py
+tfidfpackage/schema.sql
+tfidfpackage/tf_idf.py
+tfidfpackage/tfidf.py
+tfidfpackage.egg-info/PKG-INFO
+tfidfpackage.egg-info/SOURCES.txt
+tfidfpackage.egg-info/dependency_links.txt
+tfidfpackage.egg-info/not-zip-safe
+tfidfpackage.egg-info/top_level.txt
