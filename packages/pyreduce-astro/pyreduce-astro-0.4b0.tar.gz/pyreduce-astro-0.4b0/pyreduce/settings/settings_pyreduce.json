@@ -1,0 +1,99 @@
+{
+    "$schema": "./settings_schema.json",
+    "__instrument__": "DEFAULT",
+    "__skip_existing__": false,
+    "reduce": {
+        "base_dir": "./",
+        "input_dir": "raw",
+        "output_dir": "reduced"
+    },
+    "instrument": {},
+    "mask": {
+        "directory": "{reduce}/masks"
+    },
+    "bias": {
+        "plot": true
+    },
+    "flat": {
+        "plot": true
+    },
+    "orders": {
+        "degree": 4,
+        "degree_before_merge": 2,
+        "regularization": 0,
+        "closing_shape": [5, 5],
+        "auto_merge_threshold": 0.9,
+        "merge_min_threshold": 0.1,
+        "split_sigma": 0,
+        "filter_size": null,
+        "min_cluster": null,
+        "min_width": null,
+        "noise": null,
+        "border_width": null,
+        "manual": true,
+        "plot": true
+    },
+    "scatter": {
+        "scatter_degree": 4,
+        "sigma_cutoff": 2,
+        "border_width": null,
+        "extraction_width": 0.3,
+        "plot": true
+    },
+    "norm_flat": {
+        "extraction_method": "normalize",
+        "smooth_slitfunction": 4,
+        "smooth_spectrum": 0,
+        "oversampling": 10,
+        "swath_width": 200,
+        "extraction_width": 0.2,
+        "threshold": 0.6,
+        "plot": true
+    },
+    "wavecal": {
+        "extraction_method": "arc",
+        "extraction_width": 0.5,
+        "manual": false,
+        "threshold": 100,
+        "iterations": 3,
+        "dimensionality": "2D",
+        "degree": [6, 6],
+        "nstep": 0,
+        "shift_window": 0.01,
+        "plot": true
+    },
+    "freq_comb": {
+        "extraction_method": "arc",
+        "extraction_width": 0.5,
+        "peak_width": 3,
+        "dimensionality": "2D",
+        "nstep": 0,
+        "degree": [6, 6],
+        "threshold": 100,
+        "plot": true
+    },
+    "curvature": {
+        "dimensionality": "1D",
+        "degree": 2,
+        "curv_degree": 2,
+        "extraction_width": 0.2,
+        "sigma_cutoff": 3,
+        "plot": true
+    },
+    "science": {
+        "extraction_method": "optimal",
+        "extraction_width": 0.25,
+        "oversampling": 10,
+        "swath_width": 300,
+        "smooth_slitfunction": 20,
+        "smooth_spectrum": 0.0,
+        "plot": true
+    },
+    "continuum": {
+        "plot": true
+    },
+    "finalize": {
+        "filename": "{instrument}.{night}_{number}.final.ech",
+        "plot": true
+    }
+}
