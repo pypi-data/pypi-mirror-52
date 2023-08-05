@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+find_files/__init__.py
+find_files/file.py
+find_files.egg-info/PKG-INFO
+find_files.egg-info/SOURCES.txt
+find_files.egg-info/dependency_links.txt
+find_files.egg-info/top_level.txt
