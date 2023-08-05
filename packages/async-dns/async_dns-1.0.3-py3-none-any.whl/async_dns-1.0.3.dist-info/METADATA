@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: async-dns
+Version: 1.0.3
+Summary: Asynchronous DNS client and server
+Home-page: https://github.com/gera2ld/async_dns
+Author: Gerald
+Author-email: i@gerald.top
+License: MIT
+Keywords: async dns asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+
+Asynchronous DNS client and server written in pure Python, based on asyncio.
+
+
