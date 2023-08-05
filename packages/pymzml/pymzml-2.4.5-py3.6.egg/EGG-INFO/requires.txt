@@ -1,0 +1,16 @@
+numpy>=1.8.0
+regex
+
+[deconvolution]
+ms_deisotope
+
+[full]
+plotly<2.0
+pynumpress>=0.0.4
+ms_deisotope
+
+[plot]
+plotly<2.0
+
+[pynumpress]
+pynumpress>=0.0.4
