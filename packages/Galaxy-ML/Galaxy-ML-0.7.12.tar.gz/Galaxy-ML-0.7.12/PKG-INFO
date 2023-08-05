@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: Galaxy-ML
+Version: 0.7.12
+Summary: Galaxy Machine Learning Library
+Home-page: https://github.com/goeckslab/Galaxy-ML/
+License: UNKNOWN
+Description: 
+        
+        This library contains APIs for
+        [Galaxy](https://github.com/galaxyproject/galaxy)
+        machine learning tools(Galaxy-ML).
+        
+        Galaxy-ML is a web machine learning end-to-end pipeline building
+        framework, with special support to biomedical data. Under the
+        management of unified scikit-learn APIs, cutting-edge machine
+        learning libraries (scikit-learn, keras, mlxtend, imbalanced-learn,
+        and more) are combined together to provide thousands
+        of different pipelines suitable for various needs. In the form
+        of Galalxy tools, Galaxy-ML provides scalabe, reproducible and
+        transparent machine learning computations.
+        
+        This library and tools are hosted at
+        https://github.com/geockslab/Galaxy-ML.
+        
+        The documentation can be found at
+        https://goeckslab.github.io/Galaxy-ML/
+        
+        
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+Provides-Extra: docs
