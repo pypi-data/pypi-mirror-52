@@ -1,0 +1,58 @@
+.PS
+scale=2.54
+cct_init
+l=elen_
+
+# Let's do the power supply first
+setrgb(0.8,0,0)
+Inici: Here
+dot(,,1)
+"$+V_{cc}$" above
+# Interestingly, the "dotrad" constant avoids having to draw the dot *after* drawing the line
+line down_ l/4 from Here-(0,dotrad_)
+dot
+
+# Collector circuit
+{
+  resistor(down_ l);llabel(,R_C)
+  b_current(I_C,,O,E,0.5)
+  up_
+  setrgb(0,0,1)
+  T: bi_tr() with .C at Here
+  resetrgb
+  line right_ l/2 from T.C
+  Out: dot(,,1)
+  "$V_x$" ljust
+}
+
+# Base circuit
+{
+  setrgb(0.8,0,0)
+  line left_ 3*l/4
+  corner
+  resistor(down_ l);rlabel(,R_B)
+  arrowline(down_ Here.y-T.B.y);rlabel(,I_B)
+  resetrgb
+  corner
+  line to T.B
+}
+
+# Emitter circuit
+arrowline(down_ l/2 from T.E);llabel(,I_E)
+GND: ground(,T,E)
+
+# Vbe label halfway between base and emitter
+move to (T.B+T.E)/2
+# Must put some (invisible) object there because otherwise the "move" is useless
+dot(,0) at Here
+Point_(-35)
+dlabel(0.5,-0.4,+,V_{BE},-)
+
+# Vce label halfway between collector and emitter
+move to (T.C+T.E)/2 - (0,0.15)
+# Must put some (invisible) object there because otherwise the "move" is useless
+dot(,0) at Here
+Point_(-90)
+dlabel(0.35,0.3,+,V_{CE},-)
+
+.PE
