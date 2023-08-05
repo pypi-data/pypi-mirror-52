@@ -1,0 +1,3 @@
+[console_scripts]
+otf2ttf = otf2ttf:main
+
