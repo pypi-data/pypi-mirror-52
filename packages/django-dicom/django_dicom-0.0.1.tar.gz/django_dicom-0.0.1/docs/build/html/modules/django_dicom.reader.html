@@ -1,0 +1,782 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>django_dicom.reader package &mdash; django_dicom 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="django_dicom.reader.code_strings package" href="django_dicom.reader.code_strings.html" />
+    <link rel="prev" title="django_dicom.models.managers package" href="django_dicom.models.managers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> django_dicom
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="django_dicom.html">django_dicom package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom">Module contents</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="django_dicom.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.data_import.html">django_dicom.data_import package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.filters.html">django_dicom.filters package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.models.html">django_dicom.models package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">django_dicom.reader package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.serializers.html">django_dicom.serializers package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.admin">django_dicom.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.apps">django_dicom.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#django-dicom-urls-module">django_dicom.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.utils">django_dicom.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#django-dicom-views-module">django_dicom.views module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">django_dicom</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="documentation.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="django_dicom.html">django_dicom package</a> &raquo;</li>
+        
+      <li>django_dicom.reader package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/django_dicom.reader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="django-dicom-reader-package">
+<h1>django_dicom.reader package<a class="headerlink" href="#django-dicom-reader-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-django_dicom.reader">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-django_dicom.reader" title="Permalink to this headline">¶</a></h2>
+<p>Facilitates retrieval of <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> <a class="reference external" href="https://dcm4che.atlassian.net/wiki/spaces/d2/pages/1835038/A+Very+Basic+DICOM+Introduction">header information</a>
+using the <a class="reference internal" href="#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code></a> class. This functionality relies on a <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a>
+parser with a callable <code class="docutils literal notranslate"><span class="pre">parser()</span></code> method which accepts a <a class="reference external" href="https://pydicom.github.io/pydicom/stable/api_ref.html#pydicom.dataelem.DataElement" title="(in pydicom v1.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataElement</span></code></a> instance and returns a parsed value. By default, the provided
+<a class="reference internal" href="#django_dicom.reader.parser.DicomParser" title="django_dicom.reader.parser.DicomParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">DicomParser</span></code></a> class will be used.</p>
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="django_dicom.reader.code_strings.html">django_dicom.reader.code_strings package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#module-django_dicom.reader.code_strings">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#module-django_dicom.reader.code_strings.modality">django_dicom.reader.code_strings.modality module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#module-django_dicom.reader.code_strings.patient_position">django_dicom.reader.code_strings.patient_position module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#module-django_dicom.reader.code_strings.scanning_sequence">django_dicom.reader.code_strings.scanning_sequence module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#module-django_dicom.reader.code_strings.sequence_variant">django_dicom.reader.code_strings.sequence_variant module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.reader.code_strings.html#module-django_dicom.reader.code_strings.sex">django_dicom.reader.code_strings.sex module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-django_dicom.reader.header_information">
+<span id="django-dicom-reader-header-information-module"></span><h2>django_dicom.reader.header_information module<a class="headerlink" href="#module-django_dicom.reader.header_information" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.reader.header_information.HeaderInformation">
+<em class="property">class </em><code class="descclassname">django_dicom.reader.header_information.</code><code class="descname">HeaderInformation</code><span class="sig-paren">(</span><em>raw: pydicom.dataset.FileDataset</em>, <em>parser: type = &lt;class 'django_dicom.reader.parser.DicomParser'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Facilitates access to <a class="reference external" href="https://www.dicomstandard.org/">DICOM</a> header information from <a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a>’s <a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataset.py">FileDataset</a>.</p>
+<dl class="method">
+<dt id="django_dicom.reader.header_information.HeaderInformation.get_element">
+<code class="descname">get_element</code><span class="sig-paren">(</span><em>tag_or_keyword</em><span class="sig-paren">)</span> &#x2192; pydicom.dataelem.DataElement<a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation.get_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a> <a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataelem.py">DataElement</a> from the associated <a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataset.py">FileDataset</a> either by
+tag (passed as a tuple) or a keyword (passed as a string). If none found
+or the tag or keyword are invalid, returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tag_or_keyword</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Tag or keyword representing the requested data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The requested data element.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataElement</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.header_information.HeaderInformation.get_element_by_keyword">
+<code class="descname">get_element_by_keyword</code><span class="sig-paren">(</span><em>keyword: str</em><span class="sig-paren">)</span> &#x2192; pydicom.dataelem.DataElement<a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation.get_element_by_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a> <a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataelem.py">DataElement</a> from the header (<a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataset.py">FileDataset</a> isntance)
+by keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keyword</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – The keyword representing the DICOM data element in pydicom.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The requested data element.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataElement</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.header_information.HeaderInformation.get_element_by_tag">
+<code class="descname">get_element_by_tag</code><span class="sig-paren">(</span><em>tag: tuple</em><span class="sig-paren">)</span> &#x2192; pydicom.dataelem.DataElement<a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation.get_element_by_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a> <a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataelem.py">DataElement</a> from the header (<a class="reference external" href="https://github.com/pydicom/pydicom/blob/master/pydicom/dataset.py">FileDataset</a> isntance)
+by tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tag</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a>) – The DICOM tag of the desired data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The requested data element..</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataElement</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.header_information.HeaderInformation.get_parsed_value">
+<code class="descname">get_parsed_value</code><span class="sig-paren">(</span><em>tag_or_keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation.get_parsed_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the parsed value of <a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a> data element using the this class’s
+parser attribute. The data element may be represented by tag or by its
+<a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a> keyword. If none is found will return None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tag_or_keyword</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Tag or keyword representing the requested data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parsed data element value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.7)">type</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.header_information.HeaderInformation.get_raw_value">
+<code class="descname">get_raw_value</code><span class="sig-paren">(</span><em>tag_or_keyword</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation.get_raw_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the raw value for the requested data element, as returned by
+<a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a>. If none is found will return None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tag_or_keyword</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Tag or keyword representing the requested data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The raw value of the data element.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.7)">type</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.header_information.HeaderInformation.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>tag_or_keyword</em>, <em>parsed: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.header_information.HeaderInformation.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of a pydicom data element, selected by tag (<cite>tuple</cite>) or
+keyword (<cite>str</cite>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tag_or_keyword</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Tag or keyword representing the requested data element.</p></li>
+<li><p><strong>parsed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to return a parsed or raw value (the default is True, which will return the parsed value).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The requested data element value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.7)">type</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.reader.parser">
+<span id="django-dicom-reader-parser-module"></span><h2>django_dicom.reader.parser module<a class="headerlink" href="#module-django_dicom.reader.parser" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.reader.parser.DicomParser">
+<em class="property">class </em><code class="descclassname">django_dicom.reader.parser.</code><code class="descname">DicomParser</code><a class="headerlink" href="#django_dicom.reader.parser.DicomParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="django_dicom.reader.parser.DicomParser.CODE_STRINGS_DICT">
+<code class="descname">CODE_STRINGS_DICT</code><em class="property"> = {'(0008, 0060)': &lt;enum 'Modality'&gt;, '(0010, 0040)': &lt;enum 'Sex'&gt;, '(0018, 0020)': &lt;enum 'ScanningSequence'&gt;, '(0018, 0021)': &lt;enum 'SequenceVariant'&gt;, '(0018, 5100)': &lt;enum 'PatientPosition'&gt;}</em><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.CODE_STRINGS_DICT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.parser.DicomParser.N_IN_YEAR">
+<code class="descname">N_IN_YEAR</code><em class="property"> = {'D': 365.2422, 'M': 12, 'W': 52.1429, 'Y': 1}</em><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.N_IN_YEAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.parser.DicomParser.PARSING_METHOD">
+<code class="descname">PARSING_METHOD</code><em class="property"> = {&lt;ValueRepresentation.AGE_STRING: 'AS'&gt;: 'parse_age_string', &lt;ValueRepresentation.DATE: 'DA'&gt;: 'parse_date', &lt;ValueRepresentation.TIME: 'TM'&gt;: 'parse_time', &lt;ValueRepresentation.DATE_TIME: 'DT'&gt;: 'parse_datetime', &lt;ValueRepresentation.INTEGER_STRING: 'IS'&gt;: 'parse_integer_string', &lt;ValueRepresentation.DECIMAL_STRING: 'DS'&gt;: 'parse_decimal_string', &lt;ValueRepresentation.UNKNOWN: 'UN'&gt;: 'parse_unknown', &lt;ValueRepresentation.CODE_STRING: 'CS'&gt;: 'parse_code_string'}</em><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.PARSING_METHOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.parser.DicomParser.SINGLE_VALUE_CODE_STRINGS">
+<code class="descname">SINGLE_VALUE_CODE_STRINGS</code><em class="property"> = ['(0010, 0040)', '(0018, 5100)', '(0008, 0060)']</em><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.SINGLE_VALUE_CODE_STRINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to parse a <a class="reference external" href="https://github.com/pydicom/pydicom">pydicom</a> DICOM data element using its value-representation
+(VR) attribute. If no parser method is registered for the VR under the
+PARSING_METHOD dictionary, will simply return the raw value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM data element as represented by pydicom.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parsed DICOM data element value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.7)">type</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_age_string">
+<code class="descname">parse_age_string</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_age_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses Age String (AS) data elements into a float representation of the
+age in years.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Age String (AS) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The age in years.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_code_string">
+<code class="descname">parse_code_string</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_code_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses Code String (CS) data elements to a more readable string or list
+of strings. This method relies on an Enum representation of the data element’s
+possible values to be registered in the Parser’s CODE_STRINGS_DICT by tag.
+If no Enum is registered, will return <cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Code String (CS) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parsed value/s.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_date">
+<code class="descname">parse_date</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span> &#x2192; None.datetime.date<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses Date (DA) data elements to date objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Date (DA) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Native python date object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.7)">datetime.date</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_datetime">
+<code class="descname">parse_datetime</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span> &#x2192; datetime.datetime<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_datetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses Date Time (DT) data elements to datetime objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Date Time (DT) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Native python datetime object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.time" title="(in Python v3.7)">datetime.time</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_decimal_string">
+<code class="descname">parse_decimal_string</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_decimal_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses Decimal String (DS) data elements to floats. In case the
+<a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part05/sect_6.4.html">Value Multiplicity</a> (VM) is greater than one, returns a list of floats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Decimal String (DS) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Data element value/s.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)">float</a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_integer_string">
+<code class="descname">parse_integer_string</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_integer_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses DICOM Integer String (IS) data elements to integers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Integer String (IS) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Data element value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_siemens_gradient_direction">
+<code class="descname">parse_siemens_gradient_direction</code><span class="sig-paren">(</span><em>value: bytes</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_siemens_gradient_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a SIEMENS MR image’s B-vector as represented in the private
+(0019, 100E) <a class="reference external" href="https://na-mic.org/wiki/NAMIC_Wiki:DTI:DICOM_for_DWI_and_DTI#Private_vendor:_Siemens">DiffusionGradientDirection</a> DICOM tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – SIEMENS private DiffusionGradientDirection data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gradient directions (B-vector).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_siemens_slice_timing">
+<code class="descname">parse_siemens_slice_timing</code><span class="sig-paren">(</span><em>value: bytes</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_siemens_slice_timing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a SIEMENS MR image’s slice timing as saved in the private
+(0019, 1029) <a class="reference external" href="https://en.wikibooks.org/wiki/SPM/Slice_Timing#Siemens_scanners">MosaicRefAcqTimes</a> tag to a list of floats representing
+slice times in milliseconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.7)"><em>bytes</em></a>) – SIEMENS private MosaicRefAcqTimes data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Slice times in milliseconds.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_time">
+<code class="descname">parse_time</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span> &#x2192; None.datetime.time<a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses Time (TM) data elements to time objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Time (TM) data element.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Native python time object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.time" title="(in Python v3.7)">datetime.time</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.reader.parser.DicomParser.parse_unknown">
+<code class="descname">parse_unknown</code><span class="sig-paren">(</span><em>element: pydicom.dataelem.DataElement</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.reader.parser.DicomParser.parse_unknown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses private tags and other Unknown (UN) data elememts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>DataElement</em>) – DICOM Unknown (UN) data element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.reader.value_representation">
+<span id="django-dicom-reader-value-representation-module"></span><h2>django_dicom.reader.value_representation module<a class="headerlink" href="#module-django_dicom.reader.value_representation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation">
+<em class="property">class </em><code class="descclassname">django_dicom.reader.value_representation.</code><code class="descname">ValueRepresentation</code><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>DICOM <a class="reference external" href="http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Value_Representations.html">value-representations (VRs)</a>.</p>
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.AGE_STRING">
+<code class="descname">AGE_STRING</code><em class="property"> = 'AS'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.AGE_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.APPLICATION_ENTITY">
+<code class="descname">APPLICATION_ENTITY</code><em class="property"> = 'AE'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.APPLICATION_ENTITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.ATTRIBUTE_TAG">
+<code class="descname">ATTRIBUTE_TAG</code><em class="property"> = 'AT'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.ATTRIBUTE_TAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.CODE_STRING">
+<code class="descname">CODE_STRING</code><em class="property"> = 'CS'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.CODE_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.DATE">
+<code class="descname">DATE</code><em class="property"> = 'DA'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.DATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.DATE_TIME">
+<code class="descname">DATE_TIME</code><em class="property"> = 'DT'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.DATE_TIME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.DECIMAL_STRING">
+<code class="descname">DECIMAL_STRING</code><em class="property"> = 'DS'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.DECIMAL_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.FLOATING_POINT_DOUBLE">
+<code class="descname">FLOATING_POINT_DOUBLE</code><em class="property"> = 'FD'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.FLOATING_POINT_DOUBLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.FLOATING_POINT_SINGLE">
+<code class="descname">FLOATING_POINT_SINGLE</code><em class="property"> = 'FL'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.FLOATING_POINT_SINGLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.INTEGER_STRING">
+<code class="descname">INTEGER_STRING</code><em class="property"> = 'IS'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.INTEGER_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.LONG_STRING">
+<code class="descname">LONG_STRING</code><em class="property"> = 'LO'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.LONG_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.LONG_TEXT">
+<code class="descname">LONG_TEXT</code><em class="property"> = 'LT'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.LONG_TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.OTHER_64_BIT_VERY_LONG">
+<code class="descname">OTHER_64_BIT_VERY_LONG</code><em class="property"> = 'OV'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.OTHER_64_BIT_VERY_LONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.OTHER_BYTE">
+<code class="descname">OTHER_BYTE</code><em class="property"> = 'OB'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.OTHER_BYTE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.OTHER_DOUBLE">
+<code class="descname">OTHER_DOUBLE</code><em class="property"> = 'OD'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.OTHER_DOUBLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.OTHER_FLOAT">
+<code class="descname">OTHER_FLOAT</code><em class="property"> = 'OF'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.OTHER_FLOAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.OTHER_LONG">
+<code class="descname">OTHER_LONG</code><em class="property"> = 'OL'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.OTHER_LONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.OTHER_WORD">
+<code class="descname">OTHER_WORD</code><em class="property"> = 'OW'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.OTHER_WORD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.PERSON_NAME">
+<code class="descname">PERSON_NAME</code><em class="property"> = 'PN'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.PERSON_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.SEQUENCE_OF_ITEMS">
+<code class="descname">SEQUENCE_OF_ITEMS</code><em class="property"> = 'SQ'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.SEQUENCE_OF_ITEMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.SHORT_STRING">
+<code class="descname">SHORT_STRING</code><em class="property"> = 'SH'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.SHORT_STRING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.SHORT_TEXT">
+<code class="descname">SHORT_TEXT</code><em class="property"> = 'ST'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.SHORT_TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.SIGNED_64_BIT_VERY_LONG">
+<code class="descname">SIGNED_64_BIT_VERY_LONG</code><em class="property"> = 'SV'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.SIGNED_64_BIT_VERY_LONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.SIGNED_LONG">
+<code class="descname">SIGNED_LONG</code><em class="property"> = 'SL'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.SIGNED_LONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.SIGNED_SHORT">
+<code class="descname">SIGNED_SHORT</code><em class="property"> = 'SS'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.SIGNED_SHORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.TIME">
+<code class="descname">TIME</code><em class="property"> = 'TM'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.TIME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNIQUE_IDENTIFIER">
+<code class="descname">UNIQUE_IDENTIFIER</code><em class="property"> = 'UI'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNIQUE_IDENTIFIER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNIVERSAL_RESOURCE">
+<code class="descname">UNIVERSAL_RESOURCE</code><em class="property"> = 'UR'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNIVERSAL_RESOURCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNKNOWN">
+<code class="descname">UNKNOWN</code><em class="property"> = 'UN'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNLIMITED_CHARACTERS">
+<code class="descname">UNLIMITED_CHARACTERS</code><em class="property"> = 'UC'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNLIMITED_CHARACTERS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNLIMITED_TEXT">
+<code class="descname">UNLIMITED_TEXT</code><em class="property"> = 'UT'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNLIMITED_TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNSIGNED_64_BIT_VERY_LONG">
+<code class="descname">UNSIGNED_64_BIT_VERY_LONG</code><em class="property"> = 'UV'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNSIGNED_64_BIT_VERY_LONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNSIGNED_LONG">
+<code class="descname">UNSIGNED_LONG</code><em class="property"> = 'UL'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNSIGNED_LONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.reader.value_representation.ValueRepresentation.UNSIGNED_SHORT">
+<code class="descname">UNSIGNED_SHORT</code><em class="property"> = 'US'</em><a class="headerlink" href="#django_dicom.reader.value_representation.ValueRepresentation.UNSIGNED_SHORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="django_dicom.reader.code_strings.html" class="btn btn-neutral float-right" title="django_dicom.reader.code_strings package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="django_dicom.models.managers.html" class="btn btn-neutral float-left" title="django_dicom.models.managers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zvi Baratz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

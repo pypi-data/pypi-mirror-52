@@ -1,0 +1,1390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>django_dicom.models package &mdash; django_dicom 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="django_dicom.models.managers package" href="django_dicom.models.managers.html" />
+    <link rel="prev" title="django_dicom.filters package" href="django_dicom.filters.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> django_dicom
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="django_dicom.html">django_dicom package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom">Module contents</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="django_dicom.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.data_import.html">django_dicom.data_import package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.filters.html">django_dicom.filters package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">django_dicom.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.reader.html">django_dicom.reader package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.serializers.html">django_dicom.serializers package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.admin">django_dicom.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.apps">django_dicom.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#django-dicom-urls-module">django_dicom.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.utils">django_dicom.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#django-dicom-views-module">django_dicom.views module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">django_dicom</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="documentation.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="django_dicom.html">django_dicom package</a> &raquo;</li>
+        
+      <li>django_dicom.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/django_dicom.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="django-dicom-models-package">
+<span id="django-dicom-models"></span><h1>django_dicom.models package<a class="headerlink" href="#django-dicom-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-django_dicom.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-django_dicom.models" title="Permalink to this headline">¶</a></h2>
+<p>Creates <a class="reference external" href="https://docs.djangoproject.com/en/2.2/topics/db/models/">models</a> to represent the various
+<a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> entities: <a class="reference internal" href="#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>, <a class="reference internal" href="#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a>,
+<a class="reference internal" href="#django_dicom.models.study.Study" title="django_dicom.models.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a>, and <a class="reference internal" href="#django_dicom.models.patient.Patient" title="django_dicom.models.patient.Patient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Patient</span></code></a>
+(see <a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part03/chapter_A.html">here</a>
+and <a class="reference external" href="http://dicomiseasy.blogspot.com/2011/12/chapter-4-dicom-objects-in-chapter-3.html">here</a> for more information).</p>
+<p>The relationship between entities in <cite>django_dicom</cite>:</p>
+<img alt="Image could not be retrieved!" class="align-center" src="../_images/models.png" />
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="django_dicom.models.managers.html">django_dicom.models.managers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.models.managers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.models.managers.html#module-django_dicom.models.managers.series">django_dicom.models.managers.series module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.models.managers.html#module-django_dicom.models.managers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-django_dicom.models.choice_enum">
+<span id="django-dicom-models-choice-enum-module"></span><h2>django_dicom.models.choice_enum module<a class="headerlink" href="#module-django_dicom.models.choice_enum" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.choice_enum.ChoiceEnum">
+<em class="property">class </em><code class="descclassname">django_dicom.models.choice_enum.</code><code class="descname">ChoiceEnum</code><a class="headerlink" href="#django_dicom.models.choice_enum.ChoiceEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="django_dicom.models.choice_enum.ChoiceEnum.choices">
+<code class="descname">choices</code><em class="property"> = &lt;bound method ChoiceEnum.choices of &lt;enum 'ChoiceEnum'&gt;&gt;</em><a class="headerlink" href="#django_dicom.models.choice_enum.ChoiceEnum.choices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.dicom_entity">
+<span id="django-dicom-models-dicom-entity-module"></span><h2>django_dicom.models.dicom_entity module<a class="headerlink" href="#module-django_dicom.models.dicom_entity" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.dicom_entity.DicomEntity">
+<em class="property">class </em><code class="descclassname">django_dicom.models.dicom_entity.</code><code class="descname">DicomEntity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django_extensions.db.models.TimeStampedModel</span></code></p>
+<p>An abstract model to represent a <a class="reference external" href="https://dcm4che.atlassian.net/wiki/spaces/d2/pages/1835038/A+Very+Basic+DICOM+Introduction">DICOM entity</a>.</p>
+<dl class="attribute">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.FIELD_TO_HEADER">
+<code class="descname">FIELD_TO_HEADER</code><em class="property"> = {}</em><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.FIELD_TO_HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.Meta.abstract">
+<code class="descname">abstract</code><em class="property"> = False</em><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.Meta.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.NOT_HEADER_FIELD">
+<code class="descname">NOT_HEADER_FIELD</code><em class="property"> = {'names': ('created', 'modified'), 'types': (&lt;class 'django.db.models.fields.related.OneToOneField'&gt;, &lt;class 'django.db.models.fields.related.ForeignKey'&gt;, &lt;class 'django.db.models.fields.AutoField'&gt;, &lt;class 'django.db.models.fields.reverse_related.ManyToOneRel'&gt;, &lt;class 'django.db.models.fields.files.FileField'&gt;, &lt;class 'django.db.models.fields.TextField'&gt;)}</em><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.NOT_HEADER_FIELD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.get_header_fields">
+<code class="descname">get_header_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.get_header_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the derived model’s fields which represent DICOM header
+information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Fields representing DICOM header information.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.get_header_keyword">
+<em class="property">classmethod </em><code class="descname">get_header_keyword</code><span class="sig-paren">(</span><em>field_name: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.get_header_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the pydicom keyword to return the requested field’s value from
+header data. Relies on the derived model’s <cite>FIELD_TO_HEADER</cite> class attribute.
+If no matching key is found, will simply return the field’s name in
+CamelCase formatting (the formatting of pydicom’s header keywords).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>pydicom header keyword.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.get_next_by_created">
+<code class="descname">get_next_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.get_next_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.get_next_by_modified">
+<code class="descname">get_next_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.get_next_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.get_previous_by_created">
+<code class="descname">get_previous_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.get_previous_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.get_previous_by_modified">
+<code class="descname">get_previous_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.get_previous_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.is_header_field">
+<code class="descname">is_header_field</code><span class="sig-paren">(</span><em>field: django.db.models.fields.Field</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.is_header_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a boolean indicating whether this field represents DICOM header
+information or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>field</strong> (<em>models.Field</em>) – The field in question.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether this field represent DICOM header information or not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header">
+<code class="descname">update_fields_from_header</code><span class="sig-paren">(</span><em>header: django_dicom.reader.header_information.HeaderInformation</em>, <em>exclude: list = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update model fields from header data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> (<a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><em>HeaderInformation</em></a>) – DICOM header data.</p></li>
+<li><p><strong>exclude</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><em>optional</em>) – Field names to exclude (the default is [], which will not exclude any header fields).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.fields">
+<span id="django-dicom-models-fields-module"></span><h2>django_dicom.models.fields module<a class="headerlink" href="#module-django_dicom.models.fields" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.fields.ChoiceArrayField">
+<em class="property">class </em><code class="descclassname">django_dicom.models.fields.</code><code class="descname">ChoiceArrayField</code><span class="sig-paren">(</span><em>base_field</em>, <em>size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.fields.ChoiceArrayField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.postgres.fields.array.ArrayField</span></code></p>
+<p>A field that allows us to store an array of choices.</p>
+<p>Uses Django 1.9’s postgres ArrayField
+and a MultipleChoiceField for its formfield.</p>
+<dl class="method">
+<dt id="django_dicom.models.fields.ChoiceArrayField.formfield">
+<code class="descname">formfield</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.fields.ChoiceArrayField.formfield" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.help_text">
+<span id="django-dicom-models-help-text-module"></span><h2>django_dicom.models.help_text module<a class="headerlink" href="#module-django_dicom.models.help_text" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-django_dicom.models.image">
+<span id="django-dicom-models-image-module"></span><h2>django_dicom.models.image module<a class="headerlink" href="#module-django_dicom.models.image" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.image.Image">
+<em class="property">class </em><code class="descclassname">django_dicom.models.image.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.models.dicom_entity.DicomEntity</span></code></a></p>
+<p>A model to represent a single <a class="reference external" href="https://www.dicomstandard.org/">DICOM</a> image. This model is meant to be
+instantiated with the <cite>file</cite> field set to some <em>.dcm</em> file, and then it is
+updated automatically by inspection of the file’s header information.</p>
+<dl class="exception">
+<dt id="django_dicom.models.image.Image.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#django_dicom.models.image.Image.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.FIELD_TO_HEADER">
+<code class="descname">FIELD_TO_HEADER</code><em class="property"> = {'date': 'InstanceCreationDate', 'number': 'InstanceNumber', 'time': 'InstanceCreationTime', 'uid': 'SOPInstanceUID'}</em><a class="headerlink" href="#django_dicom.models.image.Image.FIELD_TO_HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="django_dicom.models.image.Image.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#django_dicom.models.image.Image.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.date">
+<code class="descname">date</code><a class="headerlink" href="#django_dicom.models.image.Image.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.dcm">
+<code class="descname">dcm</code><a class="headerlink" href="#django_dicom.models.image.Image.dcm" title="Permalink to this definition">¶</a></dt>
+<dd><p>The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="k">import</span> <span class="n">MyModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">instance</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+<p>Assign a file object on assignment so you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/path/to/hello.world&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.models.image.Image.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_b_value">
+<code class="descname">get_b_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#django_dicom.models.image.Image.get_b_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <a class="reference external" href="https://radiopaedia.org/articles/b-values-1">b-value</a> for diffusion weighted images (<a class="reference external" href="https://en.wikipedia.org/wiki/Diffusion_MRI#Diffusion_imaging">DWI</a>).
+Currently only SIEMENS tags are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Degree of diffusion weighting applied.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><em>as_json: bool = False</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#django_dicom.models.image.Image.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the image’s pixel array as a <a class="reference external" href="http://www.numpy.org/">NumPy</a> array or as a JSON-like string if <em>as_json</em> is True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>as_json</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Return the pixel array as a JSON formatted string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Image’s pixel array.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_next_by_created">
+<code class="descname">get_next_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image.get_next_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_next_by_date">
+<code class="descname">get_next_by_date</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateField: date&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image.get_next_by_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_next_by_modified">
+<code class="descname">get_next_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image.get_next_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_previous_by_created">
+<code class="descname">get_previous_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image.get_previous_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_previous_by_date">
+<code class="descname">get_previous_by_date</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateField: date&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image.get_previous_by_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.get_previous_by_modified">
+<code class="descname">get_previous_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.image.Image.get_previous_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.gradient_direction">
+<code class="descname">gradient_direction</code><a class="headerlink" href="#django_dicom.models.image.Image.gradient_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the gradient direction vector for this image.
+Currently only SIEMENS tags are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This image’s gradient direction.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.header">
+<code class="descname">header</code><a class="headerlink" href="#django_dicom.models.image.Image.header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Caches the created <a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code></a>
+instance to prevent multiple reades.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The image’s header information.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.id">
+<code class="descname">id</code><a class="headerlink" href="#django_dicom.models.image.Image.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.number">
+<code class="descname">number</code><a class="headerlink" href="#django_dicom.models.image.Image.number" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#django_dicom.models.image.Image.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.read_file">
+<code class="descname">read_file</code><span class="sig-paren">(</span><em>header_only: bool = False</em><span class="sig-paren">)</span> &#x2192; pydicom.dataset.FileDataset<a class="headerlink" href="#django_dicom.models.image.Image.read_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the DICOM image file to memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>header_only</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Exclude pixel data or not, by default False which will include pixel data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DICOM image file as object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://pydicom.github.io/pydicom/stable/api_ref.html#pydicom.dataset.FileDataset" title="(in pydicom v1.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydicom.dataset.FileDataset</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.image.Image.read_header">
+<code class="descname">read_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; django_dicom.reader.header_information.HeaderInformation<a class="headerlink" href="#django_dicom.models.image.Image.read_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the header information from the associated DICOM file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Image’s header information.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.series">
+<code class="descname">series</code><a class="headerlink" href="#django_dicom.models.image.Image.series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.series_id">
+<code class="descname">series_id</code><a class="headerlink" href="#django_dicom.models.image.Image.series_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.slice_timing">
+<code class="descname">slice_timing</code><a class="headerlink" href="#django_dicom.models.image.Image.slice_timing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the slice timing vector for this image.
+Currently only SIEMENS tags are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This image’s slice times.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.time">
+<code class="descname">time</code><a class="headerlink" href="#django_dicom.models.image.Image.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.image.Image.uid">
+<code class="descname">uid</code><a class="headerlink" href="#django_dicom.models.image.Image.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.patient">
+<span id="django-dicom-models-patient-module"></span><h2>django_dicom.models.patient module<a class="headerlink" href="#module-django_dicom.models.patient" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.patient.Patient">
+<em class="property">class </em><code class="descclassname">django_dicom.models.patient.</code><code class="descname">Patient</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.patient.Patient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.models.dicom_entity.DicomEntity</span></code></a></p>
+<p>A model to represent <a class="reference external" href="https://www.dicomstandard.org/">DICOM</a>’s <a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part03/chapter_A.html">patient entity</a>. Holds the corresponding
+attributes as discovered in created <code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.Image</span></code> instances.</p>
+<dl class="exception">
+<dt id="django_dicom.models.patient.Patient.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#django_dicom.models.patient.Patient.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.FIELD_TO_HEADER">
+<code class="descname">FIELD_TO_HEADER</code><em class="property"> = {'date_of_birth': 'PatientBirthDate', 'sex': 'PatientSex', 'uid': 'PatientID'}</em><a class="headerlink" href="#django_dicom.models.patient.Patient.FIELD_TO_HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="django_dicom.models.patient.Patient.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#django_dicom.models.patient.Patient.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.NAME_PARTS">
+<code class="descname">NAME_PARTS</code><em class="property"> = ['given_name', 'family_name', 'middle_name', 'name_prefix', 'name_suffix']</em><a class="headerlink" href="#django_dicom.models.patient.Patient.NAME_PARTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.date_of_birth">
+<code class="descname">date_of_birth</code><a class="headerlink" href="#django_dicom.models.patient.Patient.date_of_birth" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.family_name">
+<code class="descname">family_name</code><a class="headerlink" href="#django_dicom.models.patient.Patient.family_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.models.patient.Patient.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_full_name">
+<code class="descname">get_full_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.models.patient.Patient.get_full_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first and last names of the patient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Patient’s first and last names.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_next_by_created">
+<code class="descname">get_next_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.patient.Patient.get_next_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_next_by_modified">
+<code class="descname">get_next_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.patient.Patient.get_next_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_previous_by_created">
+<code class="descname">get_previous_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.patient.Patient.get_previous_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_previous_by_modified">
+<code class="descname">get_previous_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.patient.Patient.get_previous_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.get_sex_display">
+<code class="descname">get_sex_display</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.CharField: sex&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.patient.Patient.get_sex_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.given_name">
+<code class="descname">given_name</code><a class="headerlink" href="#django_dicom.models.patient.Patient.given_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.id">
+<code class="descname">id</code><a class="headerlink" href="#django_dicom.models.patient.Patient.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.middle_name">
+<code class="descname">middle_name</code><a class="headerlink" href="#django_dicom.models.patient.Patient.middle_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.name_prefix">
+<code class="descname">name_prefix</code><a class="headerlink" href="#django_dicom.models.patient.Patient.name_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.name_suffix">
+<code class="descname">name_suffix</code><a class="headerlink" href="#django_dicom.models.patient.Patient.name_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#django_dicom.models.patient.Patient.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.series_set">
+<code class="descname">series_set</code><a class="headerlink" href="#django_dicom.models.patient.Patient.series_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.sex">
+<code class="descname">sex</code><a class="headerlink" href="#django_dicom.models.patient.Patient.sex" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.to_jstree">
+<code class="descname">to_jstree</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.models.patient.Patient.to_jstree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a list of jstree nodes (dictionaries) representing this patient’s
+series set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This patient’s series set representation for jstree.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.patient.Patient.uid">
+<code class="descname">uid</code><a class="headerlink" href="#django_dicom.models.patient.Patient.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.update_fields_from_header">
+<code class="descname">update_fields_from_header</code><span class="sig-paren">(</span><em>header: django_dicom.reader.header_information.HeaderInformation</em>, <em>exclude: list = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.models.patient.Patient.update_fields_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override <code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.DicomEntity</span></code>’s <code class="xref py py-meth docutils literal notranslate"><span class="pre">django_dicom.DicomEntity.update_fields_from_header()</span></code>
+in order to handle setting the name parts seperately.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>header</strong> (<a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><em>HeaderInformation</em></a>) – DICOM header data.</p></li>
+<li><p><strong>exclude</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><em>optional</em>) – Field names to exclude (the default is [], which will not exclude any header fields).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.patient.Patient.update_patient_name">
+<code class="descname">update_patient_name</code><span class="sig-paren">(</span><em>header: django_dicom.reader.header_information.HeaderInformation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.models.patient.Patient.update_patient_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the patient’s name from the DICOM header and updates the instance’s
+fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>header</strong> (<a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code></a>) – A DICOM image’s <a class="reference internal" href="django_dicom.reader.html#django_dicom.reader.header_information.HeaderInformation" title="django_dicom.reader.header_information.HeaderInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code></a> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.series">
+<span id="django-dicom-models-series-module"></span><h2>django_dicom.models.series module<a class="headerlink" href="#module-django_dicom.models.series" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.series.Series">
+<em class="property">class </em><code class="descclassname">django_dicom.models.series.</code><code class="descname">Series</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.models.dicom_entity.DicomEntity</span></code></a></p>
+<p>A model to represent <a class="reference external" href="https://www.dicomstandard.org/">DICOM</a>’s <a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part03/chapter_A.html">series entity</a>. Holds the corresponding
+attributes as discovered in created <code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.Image</span></code> instances.</p>
+<dl class="exception">
+<dt id="django_dicom.models.series.Series.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#django_dicom.models.series.Series.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.FIELD_TO_HEADER">
+<code class="descname">FIELD_TO_HEADER</code><em class="property"> = {'date': 'SeriesDate', 'description': 'SeriesDescription', 'mr_acquisition_type': 'MRAcquisitionType', 'number': 'SeriesNumber', 'time': 'SeriesTime', 'uid': 'SeriesInstanceUID'}</em><a class="headerlink" href="#django_dicom.models.series.Series.FIELD_TO_HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.MR_ACQUISITION_2D">
+<code class="descname">MR_ACQUISITION_2D</code><em class="property"> = '2D'</em><a class="headerlink" href="#django_dicom.models.series.Series.MR_ACQUISITION_2D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.MR_ACQUISITION_3D">
+<code class="descname">MR_ACQUISITION_3D</code><em class="property"> = '3D'</em><a class="headerlink" href="#django_dicom.models.series.Series.MR_ACQUISITION_3D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.MR_ACQUISITION_TYPE_CHOICES">
+<code class="descname">MR_ACQUISITION_TYPE_CHOICES</code><em class="property"> = (('2D', '2D'), ('3D', '3D'))</em><a class="headerlink" href="#django_dicom.models.series.Series.MR_ACQUISITION_TYPE_CHOICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="django_dicom.models.series.Series.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#django_dicom.models.series.Series.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.body_part_examined">
+<code class="descname">body_part_examined</code><a class="headerlink" href="#django_dicom.models.series.Series.body_part_examined" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.date">
+<code class="descname">date</code><a class="headerlink" href="#django_dicom.models.series.Series.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.description">
+<code class="descname">description</code><a class="headerlink" href="#django_dicom.models.series.Series.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.device_serial_number">
+<code class="descname">device_serial_number</code><a class="headerlink" href="#django_dicom.models.series.Series.device_serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.echo_time">
+<code class="descname">echo_time</code><a class="headerlink" href="#django_dicom.models.series.Series.echo_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.echo_train_length">
+<code class="descname">echo_train_length</code><a class="headerlink" href="#django_dicom.models.series.Series.echo_train_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.flip_angle">
+<code class="descname">flip_angle</code><a class="headerlink" href="#django_dicom.models.series.Series.flip_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.models.series.Series.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><em>as_json: bool = False</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#django_dicom.models.series.Series.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a NumPy array with the series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>as_json</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Return the pixel array as a JSON formatted string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Series pixel array.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_gradient_directions">
+<code class="descname">get_gradient_directions</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.models.series.Series.get_gradient_directions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <a class="reference external" href="https://na-mic.org/wiki/NAMIC_Wiki:DTI:DICOM_for_DWI_and_DTI#DICOM_for_DWI">gradient directions (B-vectors)</a> for <a class="reference external" href="https://na-mic.org/wiki/NAMIC_Wiki:DTI:DICOM_for_DWI_and_DTI#Private_vendor:_Siemens">SIEMENS originated DWI</a> DICOM data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>B-vectors for the three dimensions.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_modality_display">
+<code class="descname">get_modality_display</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.CharField: modality&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_modality_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_mr_acquisition_type_display">
+<code class="descname">get_mr_acquisition_type_display</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.CharField: mr_acquisition_type&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_mr_acquisition_type_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_next_by_created">
+<code class="descname">get_next_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_next_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_next_by_modified">
+<code class="descname">get_next_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_next_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_path">
+<code class="descname">get_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.models.series.Series.get_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the base directory containing the images composing this series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This series’s base directory path.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_patient_position_display">
+<code class="descname">get_patient_position_display</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.CharField: patient_position&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_patient_position_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_previous_by_created">
+<code class="descname">get_previous_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_previous_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_previous_by_modified">
+<code class="descname">get_previous_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.series.Series.get_previous_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_scanning_sequence_display">
+<code class="descname">get_scanning_sequence_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.models.series.Series.get_scanning_sequence_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <a class="reference internal" href="django_dicom.reader.code_strings.html#django_dicom.reader.code_strings.scanning_sequence.ScanningSequence" title="django_dicom.reader.code_strings.scanning_sequence.ScanningSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScanningSequence</span></code></a>
+Enum values corresponding to the <em>scanning_sequence</em> field’s value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="django_dicom.reader.code_strings.html#django_dicom.reader.code_strings.scanning_sequence.ScanningSequence" title="django_dicom.reader.code_strings.scanning_sequence.ScanningSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScanningSequence</span></code></a> Enum values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.get_sequence_variant_display">
+<code class="descname">get_sequence_variant_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#django_dicom.models.series.Series.get_sequence_variant_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <a class="reference internal" href="django_dicom.reader.code_strings.html#django_dicom.reader.code_strings.sequence_variant.SequenceVariant" title="django_dicom.reader.code_strings.sequence_variant.SequenceVariant"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequenceVariant</span></code></a>
+Enum values corresponding to the <em>sequence_variant</em> field’s value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="django_dicom.reader.code_strings.html#django_dicom.reader.code_strings.sequence_variant.SequenceVariant" title="django_dicom.reader.code_strings.sequence_variant.SequenceVariant"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequenceVariant</span></code></a> Enum values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.id">
+<code class="descname">id</code><a class="headerlink" href="#django_dicom.models.series.Series.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.image_set">
+<code class="descname">image_set</code><a class="headerlink" href="#django_dicom.models.series.Series.image_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.institution_name">
+<code class="descname">institution_name</code><a class="headerlink" href="#django_dicom.models.series.Series.institution_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.inversion_time">
+<code class="descname">inversion_time</code><a class="headerlink" href="#django_dicom.models.series.Series.inversion_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.magnetic_field_strength">
+<code class="descname">magnetic_field_strength</code><a class="headerlink" href="#django_dicom.models.series.Series.magnetic_field_strength" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.manufacturer">
+<code class="descname">manufacturer</code><a class="headerlink" href="#django_dicom.models.series.Series.manufacturer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.manufacturer_model_name">
+<code class="descname">manufacturer_model_name</code><a class="headerlink" href="#django_dicom.models.series.Series.manufacturer_model_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.modality">
+<code class="descname">modality</code><a class="headerlink" href="#django_dicom.models.series.Series.modality" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.mr_acquisition_type">
+<code class="descname">mr_acquisition_type</code><a class="headerlink" href="#django_dicom.models.series.Series.mr_acquisition_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.number">
+<code class="descname">number</code><a class="headerlink" href="#django_dicom.models.series.Series.number" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django_dicom.models.managers.series.SeriesManager object&gt;</em><a class="headerlink" href="#django_dicom.models.series.Series.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.operators_name">
+<code class="descname">operators_name</code><a class="headerlink" href="#django_dicom.models.series.Series.operators_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.patient">
+<code class="descname">patient</code><a class="headerlink" href="#django_dicom.models.series.Series.patient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.patient_id">
+<code class="descname">patient_id</code><a class="headerlink" href="#django_dicom.models.series.Series.patient_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.patient_position">
+<code class="descname">patient_position</code><a class="headerlink" href="#django_dicom.models.series.Series.patient_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.pixel_spacing">
+<code class="descname">pixel_spacing</code><a class="headerlink" href="#django_dicom.models.series.Series.pixel_spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.protocol_name">
+<code class="descname">protocol_name</code><a class="headerlink" href="#django_dicom.models.series.Series.protocol_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.repetition_time">
+<code class="descname">repetition_time</code><a class="headerlink" href="#django_dicom.models.series.Series.repetition_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.scanning_sequence">
+<code class="descname">scanning_sequence</code><a class="headerlink" href="#django_dicom.models.series.Series.scanning_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.sequence_variant">
+<code class="descname">sequence_variant</code><a class="headerlink" href="#django_dicom.models.series.Series.sequence_variant" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.slice_thickness">
+<code class="descname">slice_thickness</code><a class="headerlink" href="#django_dicom.models.series.Series.slice_thickness" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.study">
+<code class="descname">study</code><a class="headerlink" href="#django_dicom.models.series.Series.study" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.study_id">
+<code class="descname">study_id</code><a class="headerlink" href="#django_dicom.models.series.Series.study_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.time">
+<code class="descname">time</code><a class="headerlink" href="#django_dicom.models.series.Series.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.series.Series.to_jstree_node">
+<code class="descname">to_jstree_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#django_dicom.models.series.Series.to_jstree_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a jstree node representation of this instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>jstree node dictionary.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.series.Series.uid">
+<code class="descname">uid</code><a class="headerlink" href="#django_dicom.models.series.Series.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.study">
+<span id="django-dicom-models-study-module"></span><h2>django_dicom.models.study module<a class="headerlink" href="#module-django_dicom.models.study" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.models.study.Study">
+<em class="property">class </em><code class="descclassname">django_dicom.models.study.</code><code class="descname">Study</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.study.Study" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.models.dicom_entity.DicomEntity</span></code></a></p>
+<p>A model to represent <a class="reference external" href="https://www.dicomstandard.org/">DICOM</a>’s <a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part03/chapter_A.html">study entity</a>. Holds the corresponding
+attributes as discovered in created <code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.Image</span></code> instances.</p>
+<dl class="exception">
+<dt id="django_dicom.models.study.Study.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#django_dicom.models.study.Study.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.ObjectDoesNotExist" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.FIELD_TO_HEADER">
+<code class="descname">FIELD_TO_HEADER</code><em class="property"> = {'date': 'StudyDate', 'description': 'StudyDescription', 'time': 'StudyTime', 'uid': 'StudyInstanceUID'}</em><a class="headerlink" href="#django_dicom.models.study.Study.FIELD_TO_HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="django_dicom.models.study.Study.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#django_dicom.models.study.Study.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/exceptions.html#django.core.exceptions.MultipleObjectsReturned" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.date">
+<code class="descname">date</code><a class="headerlink" href="#django_dicom.models.study.Study.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.description">
+<code class="descname">description</code><a class="headerlink" href="#django_dicom.models.study.Study.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.study.Study.get_absolute_url">
+<code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.study.Study.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.study.Study.get_next_by_created">
+<code class="descname">get_next_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.study.Study.get_next_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.study.Study.get_next_by_modified">
+<code class="descname">get_next_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.study.Study.get_next_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.study.Study.get_previous_by_created">
+<code class="descname">get_previous_by_created</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.CreationDateTimeField: created&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.study.Study.get_previous_by_created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.models.study.Study.get_previous_by_modified">
+<code class="descname">get_previous_by_modified</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django_extensions.db.fields.ModificationDateTimeField: modified&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.study.Study.get_previous_by_modified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.id">
+<code class="descname">id</code><a class="headerlink" href="#django_dicom.models.study.Study.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.objects">
+<code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#django_dicom.models.study.Study.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.series_set">
+<code class="descname">series_set</code><a class="headerlink" href="#django_dicom.models.study.Study.series_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.time">
+<code class="descname">time</code><a class="headerlink" href="#django_dicom.models.study.Study.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="django_dicom.models.study.Study.uid">
+<code class="descname">uid</code><a class="headerlink" href="#django_dicom.models.study.Study.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.models.validators">
+<span id="django-dicom-models-validators-module"></span><h2>django_dicom.models.validators module<a class="headerlink" href="#module-django_dicom.models.validators" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="django_dicom.models.validators.validate_file_extension">
+<code class="descclassname">django_dicom.models.validators.</code><code class="descname">validate_file_extension</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.models.validators.validate_file_extension" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="django_dicom.models.managers.html" class="btn btn-neutral float-right" title="django_dicom.models.managers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="django_dicom.filters.html" class="btn btn-neutral float-left" title="django_dicom.filters package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zvi Baratz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

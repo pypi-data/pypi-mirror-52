@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>django_dicom.data_import package &mdash; django_dicom 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="django_dicom.filters package" href="django_dicom.filters.html" />
+    <link rel="prev" title="django_dicom package" href="django_dicom.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> django_dicom
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="django_dicom.html">django_dicom package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom">Module contents</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="django_dicom.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">django_dicom.data_import package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.filters.html">django_dicom.filters package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.models.html">django_dicom.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.reader.html">django_dicom.reader package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="django_dicom.serializers.html">django_dicom.serializers package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.admin">django_dicom.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.apps">django_dicom.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#django-dicom-urls-module">django_dicom.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#module-django_dicom.utils">django_dicom.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django_dicom.html#django-dicom-views-module">django_dicom.views module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">django_dicom</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="documentation.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="django_dicom.html">django_dicom package</a> &raquo;</li>
+        
+      <li>django_dicom.data_import package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/django_dicom.data_import.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="django-dicom-data-import-package">
+<span id="django-dicom-data-import"></span><h1>django_dicom.data_import package<a class="headerlink" href="#django-dicom-data-import-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-django_dicom.data_import">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-django_dicom.data_import" title="Permalink to this headline">¶</a></h2>
+<p>Provides classes that supervise data import. These classes manage the creation and association
+of <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> entities (see <a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part03/chapter_A.html">here</a>
+and <a class="reference external" href="http://dicomiseasy.blogspot.com/2011/12/chapter-4-dicom-objects-in-chapter-3.html">here</a> for more information).</p>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-django_dicom.data_import.import_image">
+<span id="django-dicom-data-import-import-image-module"></span><h2>django_dicom.data_import.import_image module<a class="headerlink" href="#module-django_dicom.data_import.import_image" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.data_import.import_image.ImportImage">
+<em class="property">class </em><code class="descclassname">django_dicom.data_import.import_image.</code><code class="descname">ImportImage</code><span class="sig-paren">(</span><em>dcm: _io.BufferedReader</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A class to handle importing new DICOM files to the database. Takes care of
+maintaining the Series, Study, and Patient relations with the created Image.</p>
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.create_image">
+<code class="descname">create_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; django_dicom.models.image.Image<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.create_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the DICOM file locally and creates an Image instance from it without
+saving it (allowing for the fields to be updated from the header beforehand).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The created Image for the given file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.generate_entities_and_relationships">
+<code class="descname">generate_entities_and_relationships</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.generate_entities_and_relationships" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the generation and association of the new image’s DICOM entities.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.get_entity_uid_from_header">
+<code class="descname">get_entity_uid_from_header</code><span class="sig-paren">(</span><em>Entity: django_dicom.models.dicom_entity.DicomEntity</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.get_entity_uid_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the UID of the given entity from the DICOM header information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Entity</strong> (<a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><em>DicomEntity</em></a>) – One of the DICOM entities (Image, Series, Study, and Patient).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The UID value for the given entity.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.get_image_destination">
+<code class="descname">get_image_destination</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.get_image_destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the default relative path for this image under <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#media-root">MEDIA_ROOT</a>.
+TODO: Add a way for the user to configure this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Default relative path for this image.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.get_or_create_entity">
+<code class="descname">get_or_create_entity</code><span class="sig-paren">(</span><em>Entity: django_dicom.models.dicom_entity.DicomEntity</em>, <em>save: bool = True</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.get_or_create_entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets or creates an instance of the given <code class="xref py py-class docutils literal notranslate"><span class="pre">django_dicom.DicomEntity</span></code>
+using its UID.
+The <em>save</em> parameter is mostly meant to help with testing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Entity</strong> (<a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><em>DicomEntity</em></a>) – One of the DICOM entities (Image, Series, Study, and Patient).</p></li>
+<li><p><strong>save</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Whether to save the instance to the database if it is created (default to True, which will call the save() method).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(dicom_entity, created)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)">tuple</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.handle_integrity_error">
+<code class="descname">handle_integrity_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.handle_integrity_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>If an IntegrityError is raised during generation of the DICOM entities,
+delete the temporary file.
+An InegrityError should indicate the image already exists in the database,
+so the method also tries to return the existing Image instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>( existing_image , created )</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)">tuple</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.move_image_to_destination">
+<code class="descname">move_image_to_destination</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.move_image_to_destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the created image to its default location under <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#media-root">MEDIA_ROOT</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Full path of the new location.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the image to the database and generates its associated entities as
+an atomic transaction. If the transaction fails, calls <a class="reference internal" href="#django_dicom.data_import.import_image.ImportImage.handle_integrity_error" title="django_dicom.data_import.import_image.ImportImage.handle_integrity_error"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle_integrity_error()</span></code></a>
+This assumes an existing image and tries to return it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>( image_instance, created )</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)">tuple</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.import_image.ImportImage.store_file">
+<code class="descname">store_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.data_import.import_image.ImportImage.store_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the DICOM file in a temporary location under <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/settings/#media-root">MEDIA_ROOT</a>
+using Django’s <a class="reference external" href="https://docs.djangoproject.com/en/2.2/topics/files/#file-storage">default_storage</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The name of the temporary file created.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-django_dicom.data_import.local_import">
+<span id="django-dicom-data-import-local-import-module"></span><h2>django_dicom.data_import.local_import module<a class="headerlink" href="#module-django_dicom.data_import.local_import" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="django_dicom.data_import.local_import.LocalImport">
+<em class="property">class </em><code class="descclassname">django_dicom.data_import.local_import.</code><code class="descname">LocalImport</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span><a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class handles importing data from a local directory. Any <em>.dcm</em> files
+under the directory tree will be imported using <a class="reference internal" href="#django_dicom.data_import.import_image.ImportImage" title="django_dicom.data_import.import_image.ImportImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImportImage</span></code></a>.</p>
+<p>TODO: This should be made into a custom django-admin command:
+<a class="reference external" href="https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/">https://docs.djangoproject.com/en/2.2/howto/custom-management-commands/</a></p>
+<dl class="method">
+<dt id="django_dicom.data_import.local_import.LocalImport.import_dcm_files">
+<code class="descname">import_dcm_files</code><span class="sig-paren">(</span><em>verbose: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport.import_dcm_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates <code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code> instances for each “<em>.dcm</em>”
+file under the given directory tree. Prints an iterations counter and
+reports the number of instances added in the end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Shows an iterations/second meter (default to True).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="django_dicom.data_import.local_import.LocalImport.import_local_dcm">
+<em class="property">classmethod </em><code class="descname">import_local_dcm</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; django_dicom.models.image.Image<a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport.import_local_dcm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the local DICOM image into an <a class="reference external" href="https://docs.python.org/3/library/io.html#io.BufferedReader" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedReader</span></code></a> and uses
+<a class="reference internal" href="#django_dicom.data_import.import_image.ImportImage" title="django_dicom.data_import.import_image.ImportImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImportImage</span></code></a> to create an
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code> from it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – The local path of the DICOM image.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting <code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code> instance.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="django_dicom.data_import.local_import.LocalImport.import_local_zip_archive">
+<em class="property">classmethod </em><code class="descname">import_local_zip_archive</code><span class="sig-paren">(</span><em>path: str</em>, <em>verbose: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport.import_local_zip_archive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates over the files within a ZIP archive and imports any “<em>.dcm</em>” files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Local ZIP archive path.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Show a progressbar (default to True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.local_import.LocalImport.import_zip_archives">
+<code class="descname">import_zip_archives</code><span class="sig-paren">(</span><em>verbose: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport.import_zip_archives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds ZIP archives under the current directory tree and imports any DICOM
+data (<em>.dcm</em> files) found within them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Shows a progressbar (default to True).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.local_import.LocalImport.path_generator">
+<code class="descname">path_generator</code><span class="sig-paren">(</span><em>extension: str = ''</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport.path_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates paths from the given directory tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>extension</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – A file extension to filter the generated files with.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>File path.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="django_dicom.data_import.local_import.LocalImport.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>import_zip: bool = True</em>, <em>verbose: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#django_dicom.data_import.local_import.LocalImport.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports any DICOM data (<em>.dcm</em> files) found under the given path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>import_zip</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Find and import data from ZIP archives (the default is True, which will import any ZIP archived DICOM images).</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Shows a progressbar (default to True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="django_dicom.filters.html" class="btn btn-neutral float-right" title="django_dicom.filters package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="django_dicom.html" class="btn btn-neutral float-left" title="django_dicom package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zvi Baratz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

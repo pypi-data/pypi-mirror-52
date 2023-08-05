@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Importing Data &mdash; django_dicom 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reading Header Information" href="reading_header.html" />
+    <link rel="prev" title="User Guide" href="user_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> django_dicom
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Importing Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#importing-a-local-dicom-repository">Importing a Local DICOM repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reading_header.html">Reading Header Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reading_data.html">Reading Series Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/documentation.html">Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">django_dicom</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="user_guide.html">User Guide</a> &raquo;</li>
+        
+      <li>Importing Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user_guide/importing_data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="importing-data">
+<h1>Importing Data<a class="headerlink" href="#importing-data" title="Permalink to this headline">¶</a></h1>
+<p>Currently, <cite>django_dicom</cite> only provides methods to import data from a local repository. In general, <cite>django_dicom</cite> uses its
+<a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.import_image.ImportImage" title="django_dicom.data_import.import_image.ImportImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImportImage</span></code></a> class in order to read imported <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> images and supervise
+their addition to the database.</p>
+<div class="section" id="importing-a-local-dicom-repository">
+<h2>Importing a Local <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> repository<a class="headerlink" href="#importing-a-local-dicom-repository" title="Permalink to this headline">¶</a></h2>
+<p>To import <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> images and <a class="reference external" href="https://en.wikipedia.org/wiki/Zip_(file_format)">ZIP archives</a> containing <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> images
+from a directory tree found under a <em>/path/to/repository/</em> base directory, simply use the
+<a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport" title="django_dicom.data_import.local_import.LocalImport"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocalImport</span></code></a> class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_dicom.data_import</span> <span class="k">import</span> <span class="n">LocalImport</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/path/to/repository/&quot;</span>
+<span class="n">LocalImport</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This should produce output similar to this:</p>
+<img alt="Image could not be retrieved!" class="align-center" src="../_images/local_import.png" />
+<p>We can see that <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport" title="django_dicom.data_import.local_import.LocalImport"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocalImport</span></code></a>’s
+<a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport.run" title="django_dicom.data_import.local_import.LocalImport.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method first imports any
+files with the <em>dcm</em> extension under the base directory, and then inspects any <a class="reference external" href="https://en.wikipedia.org/wiki/Zip_(file_format)">ZIP archives</a>
+found under it. <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport" title="django_dicom.data_import.local_import.LocalImport"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocalImport</span></code></a> generates
+the paths of files using its <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport.path_generator" title="django_dicom.data_import.local_import.LocalImport.path_generator"><code class="xref py py-meth docutils literal notranslate"><span class="pre">path_generator()</span></code></a>
+method, and imports the images using the <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport.import_local_dcm" title="django_dicom.data_import.local_import.LocalImport.import_local_dcm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">import_local_dcm()</span></code></a>
+and <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport.import_local_zip_archive" title="django_dicom.data_import.local_import.LocalImport.import_local_zip_archive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">import_local_zip_archive()</span></code></a>
+<a class="reference external" href="https://www.geeksforgeeks.org/class-method-vs-static-method-python/">class methods</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport.run" title="django_dicom.data_import.local_import.LocalImport.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method can easily be configured
+to run without the streamed output using <code class="docutils literal notranslate"><span class="pre">verbose=False</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also skip ZIP archive import with <code class="docutils literal notranslate"><span class="pre">import_zip=False</span></code>.
+This is equivalent to running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LocalImport</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">import_local_dcms</span><span class="p">()</span>
+<span class="c1"># == LocalImport(path).run(import_zip=False)</span>
+</pre></div>
+</div>
+<p>For more information see <a class="reference internal" href="../modules/django_dicom.data_import.html#django_dicom.data_import.local_import.LocalImport" title="django_dicom.data_import.local_import.LocalImport"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocalImport</span></code></a>.</p>
+</div>
+<p>You can verify the addition of new data to the database by querying the desired <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DICOM</a> entity:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_dicom.models</span> <span class="k">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Patient</span>
+
+<span class="n">Image</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="c1"># Out: 1083</span>
+<span class="n">Patient</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="c1"># Out: 3</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reading_header.html" class="btn btn-neutral float-right" title="Reading Header Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="user_guide.html" class="btn btn-neutral float-left" title="User Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zvi Baratz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

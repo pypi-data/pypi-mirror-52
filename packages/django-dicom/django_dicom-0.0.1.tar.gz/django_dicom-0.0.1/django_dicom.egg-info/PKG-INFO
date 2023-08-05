@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: django-dicom
+Version: 0.0.1
+Summary: A simple Django app to manage DICOM files.
+Home-page: https://github.com/ZviBaratz/django_dicom
+Author: Zvi Baratz
+Author-email: z.baratz@gmail.com
+License: MIT
+Description: # django-dicom
+        
+        
+        
+        A django app to manage [DICOM][1] files.
+        
+        This app creates the basic models for DICOM data abstraction: Study, Patient, Series, and Image.  
+        The models are complemented with some utility methods to facilitate data access.
+        
+        
+        
+        Quick start
+        -----------
+        
+        1. Add "django_dicom" to your INSTALLED_APPS setting:
+        
+        <pre>
+            INSTALLED_APPS = [  
+                ...  
+                'django_dicom',  
+            ]  
+        </pre>
+        
+        2. Include the dicom URLconf in your project urls.py:
+        
+        <pre>
+            path('dicom/', include('django_dicom.urls')),
+        </pre>
+        
+        3. Run `python manage.py migrate` to create the dicom models.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/.
+        
+        5. Visit http://127.0.0.1:8000/dicom/.
+        
+        
+        
+        
+        [1]: https://www.dicomstandard.org/
+        
+Keywords: django mri dicom dcm neuroimaging
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev

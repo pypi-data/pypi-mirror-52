@@ -1,0 +1,1168 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tests.models package &mdash; django_dicom 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tests.reader package" href="tests.reader.html" />
+    <link rel="prev" title="tests.data_import package" href="tests.data_import.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> django_dicom
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="django_dicom.html">django_dicom package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tests.html">tests package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tests.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tests.data_import.html">tests.data_import package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tests.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.reader.html">tests.reader package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.fixtures">tests.fixtures module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.test_settings">tests.test_settings module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.test_views">tests.test_views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">django_dicom</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="documentation.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="tests.html">tests package</a> &raquo;</li>
+        
+      <li>tests.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/modules/tests.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tests-models-package">
+<h1>tests.models package<a class="headerlink" href="#tests-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tests.models.test_fields">
+<span id="tests-models-test-fields-module"></span><h2>tests.models.test_fields module<a class="headerlink" href="#module-tests.models.test_fields" title="Permalink to this headline">¶</a></h2>
+<p>Tests for custom fields.</p>
+<dl class="class">
+<dt id="tests.models.test_fields.ChoiceArrayFieldTestCase">
+<em class="property">class </em><code class="descclassname">tests.models.test_fields.</code><code class="descname">ChoiceArrayFieldTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_fields.ChoiceArrayFieldTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.fields.ChoiceArrayField" title="django_dicom.models.fields.ChoiceArrayField"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceArrayField</span></code></a> model.</p>
+<dl class="attribute">
+<dt id="tests.models.test_fields.ChoiceArrayFieldTestCase.CHOICES">
+<code class="descname">CHOICES</code><em class="property"> = (('C1', 'First Choice'), ('C2', 'Second Choice'), ('C3', 'Third Choice'))</em><a class="headerlink" href="#tests.models.test_fields.ChoiceArrayFieldTestCase.CHOICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_fields.ChoiceArrayFieldTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_fields.ChoiceArrayFieldTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <a class="reference internal" href="django_dicom.models.html#django_dicom.models.fields.ChoiceArrayField" title="django_dicom.models.fields.ChoiceArrayField"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChoiceArrayField</span></code></a> instance to
+the tests’ contexts.
+For more information see unittest’s <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp" title="(in Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setUp()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_fields.ChoiceArrayFieldTestCase.test_formfield_method">
+<code class="descname">test_formfield_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_fields.ChoiceArrayFieldTestCase.test_formfield_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that <a class="reference external" href="https://django.readthedocs.io/en/latest/ref/models/fields.html#django.db.models.Field.formfield" title="(in Django v3.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formfield()</span></code></a> method returns the
+expected value.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.models.test_image">
+<span id="tests-models-test-image-module"></span><h2>tests.models.test_image module<a class="headerlink" href="#module-tests.models.test_image" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tests.models.test_image.ImageTestCase">
+<em class="property">class </em><code class="descclassname">tests.models.test_image.</code><code class="descname">ImageTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> model.</p>
+<dl class="attribute">
+<dt id="tests.models.test_image.ImageTestCase.HEADER_FIELDS">
+<code class="descname">HEADER_FIELDS</code><em class="property"> = ['uid', 'number', 'date', 'time']</em><a class="headerlink" href="#tests.models.test_image.ImageTestCase.HEADER_FIELDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tests.models.test_image.ImageTestCase.NON_HEADER_FIELDS">
+<code class="descname">NON_HEADER_FIELDS</code><em class="property"> = ['id', 'dcm', 'created', 'modified', 'series']</em><a class="headerlink" href="#tests.models.test_image.ImageTestCase.NON_HEADER_FIELDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the created instances to the tests’ contexts.
+For more information see unittest’s <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp" title="(in Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setUp()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tests.models.test_image.ImageTestCase.setUpTestData">
+<em class="property">classmethod </em><code class="descname">setUpTestData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.setUpTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates instances to test the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>
+model.
+For more information see Django’s <a class="reference external" href="https://django.readthedocs.io/en/latest/topics/testing/tools.html#django.test.TestCase" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a> <a class="reference external" href="https://docs.djangoproject.com/en/2.2/topics/testing/tools/#testcase">documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_dcm_extension_validation">
+<code class="descname">test_dcm_extension_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_dcm_extension_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that only <em>.dcm</em> files may be used to instantiate an
+<a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_fields_blank_and_null_configuration">
+<code class="descname">test_fields_blank_and_null_configuration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_fields_blank_and_null_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> instance must have all of
+their fields set. <em>id</em>, <em>created</em>, and <em>modified</em> my be blank in forms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_get_absolute_url">
+<code class="descname">test_get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> model’s <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#get-absolute-url">get_absolute_url</a>
+method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_get_b_value">
+<code class="descname">test_get_b_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_get_b_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.get_b_value" title="django_dicom.models.image.Image.get_b_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_b_value()</span></code></a> method.
+Should return the B-value for DWI images and None for non-DWI images.
+TODO: Figure out why B-value seems to always be set to 0 for the DWI images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_get_data">
+<code class="descname">test_get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.get_data" title="django_dicom.models.image.Image.get_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">django_dicom.models.image.Image.get_data()</span></code></a> method returns
+the expected NumPy array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_get_header_fields">
+<code class="descname">test_get_header_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_get_header_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.get_header_fields" title="django_dicom.models.dicom_entity.DicomEntity.get_header_fields"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_header_fields()</span></code></a>
+returns the correct fields. The expected fields should be set as this TestCase’s
+HEADER_FIELDS class attribute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_get_header_keyword">
+<code class="descname">test_get_header_keyword</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_get_header_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.get_header_keyword" title="django_dicom.models.dicom_entity.DicomEntity.get_header_keyword"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_header_keyword()</span></code></a>
+method returns the keyword defined in the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>
+class’s FIELD_TO_HEADER dictionary, or a CamelCase version of the field
+name if no such definition exists.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_gradient_diretion">
+<code class="descname">test_gradient_diretion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_gradient_diretion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the gradient direction can be read for SIEMENS DICOM images.
+For more information see: <a class="reference external" href="https://na-mic.org/wiki/NAMIC_Wiki:DTI:DICOM_for_DWI_and_DTI#Private_vendor:_Siemens">https://na-mic.org/wiki/NAMIC_Wiki:DTI:DICOM_for_DWI_and_DTI#Private_vendor:_Siemens</a>.</p>
+<p>TODO: Extend to other vendors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_header">
+<code class="descname">test_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <em>_header</em> class attribute is properly updated by the
+<a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.header" title="django_dicom.models.image.Image.header"><code class="xref py py-attr docutils literal notranslate"><span class="pre">header</span></code></a> property.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_is_dicom_entity">
+<code class="descname">test_is_dicom_entity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_is_dicom_entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the created <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> instance
+inherits from <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity" title="django_dicom.models.dicom_entity.DicomEntity"><code class="xref py py-class docutils literal notranslate"><span class="pre">DicomEntity</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_is_header_field">
+<code class="descname">test_is_header_field</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_is_header_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.is_header_field" title="django_dicom.models.dicom_entity.DicomEntity.is_header_field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">is_header_field()</span></code></a>
+method returns the correct boolean result for the different fields. Relies on this
+TestCase’s defintion for the NON_HEADER_FIELDS class attribute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_number_vebose_name">
+<code class="descname">test_number_vebose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_number_vebose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <em>number</em> field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_read_file_configuration">
+<code class="descname">test_read_file_configuration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_read_file_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.read_file" title="django_dicom.models.image.Image.read_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">django_dicom.models.image.Image.read_file()</span></code></a> method
+is supposed to read the entire image (including the pixel array).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_read_file_method_return_type">
+<code class="descname">test_read_file_method_return_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_read_file_method_return_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.read_file" title="django_dicom.models.image.Image.read_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_file()</span></code></a> method
+return a <a class="reference external" href="https://pydicom.github.io/pydicom/stable/api_ref.html#pydicom.dataset.FileDataset" title="(in pydicom v1.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileDataset</span></code></a> instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_read_file_with_only_headers">
+<code class="descname">test_read_file_with_only_headers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_read_file_with_only_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.read_file" title="django_dicom.models.image.Image.read_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">django_dicom.models.image.Image.read_file()</span></code></a> method
+<em>header_only</em> setting.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_read_header">
+<code class="descname">test_read_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_read_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image.read_header" title="django_dicom.models.image.Image.read_header"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_header()</span></code></a> method
+returns the expected <code class="xref py py-class docutils literal notranslate"><span class="pre">HeaderInformation</span></code> instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_slice_timing">
+<code class="descname">test_slice_timing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_slice_timing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the slice timing can be read for SIEMENS DICOM images.
+For more information see: <a class="reference external" href="https://en.wikibooks.org/wiki/SPM/Slice_Timing#Siemens_scanners">https://en.wikibooks.org/wiki/SPM/Slice_Timing#Siemens_scanners</a>.</p>
+<p>TODO: Extend to other vendors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the instance’s <code class="xref py py-meth docutils literal notranslate"><span class="pre">__str__()</span></code>
+method returns its UID.
+For more information see <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#str">Django’s str method documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_uid_is_unique">
+<code class="descname">test_uid_is_unique</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_uid_is_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates that the UID field is unique.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_uid_max_length">
+<code class="descname">test_uid_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_uid_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/sop-common/00080018">SOPInstanceUID</a> attribute may only be as long as 64 characters (
+see the Unique Identifier (UI) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_uid_validation">
+<code class="descname">test_uid_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_uid_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <a class="reference internal" href="django_dicom.models.html#django_dicom.models.image.Image" title="django_dicom.models.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> instance UID field may only
+be composed of dots and digits.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_uid_vebose_name">
+<code class="descname">test_uid_vebose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_uid_vebose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the UID field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_image.ImageTestCase.test_update_fields_from_header">
+<code class="descname">test_update_fields_from_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_image.ImageTestCase.test_update_fields_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header" title="django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update_fields_from_header()</span></code></a>
+method returns the expected values. This test relies on the created instance’s
+fields containing the expected values beforehand.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.models.test_patient">
+<span id="tests-models-test-patient-module"></span><h2>tests.models.test_patient module<a class="headerlink" href="#module-tests.models.test_patient" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tests.models.test_patient.PatientTestCase">
+<em class="property">class </em><code class="descclassname">tests.models.test_patient.</code><code class="descname">PatientTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.patient.Patient" title="django_dicom.models.patient.Patient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Patient</span></code></a> model.</p>
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the created instances to the tests’ contexts.
+For more information see unittest’s <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp" title="(in Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setUp()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tests.models.test_patient.PatientTestCase.setUpTestData">
+<em class="property">classmethod </em><code class="descname">setUpTestData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.setUpTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates instances to be used in the tests.
+For more information see Django’s <a class="reference external" href="https://django.readthedocs.io/en/latest/topics/testing/tools.html#django.test.TestCase" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a> <a class="reference external" href="https://docs.djangoproject.com/en/2.2/topics/testing/tools/#testcase">documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_date_of_birth_blank_and_null">
+<code class="descname">test_date_of_birth_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_date_of_birth_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/patient/00100030">Patient’s Birth Date</a> attribute may be empty (<a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part05/sect_7.4.html#sect_7.4.3">type 2 data element</a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_get_absolute_url">
+<code class="descname">test_get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.patient.Patient.get_absolute_url" title="django_dicom.models.patient.Patient.get_absolute_url"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_absolute_url()</span></code></a> method
+returns the expeted url.
+<a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#get-absolute-url">More information</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_get_full_name">
+<code class="descname">test_get_full_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_get_full_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.patient.Patient.get_full_name" title="django_dicom.models.patient.Patient.get_full_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_full_name()</span></code></a>
+method returns “{given_name} {family_name}”.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_name_blank_and_null">
+<code class="descname">test_name_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_name_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the name fields are blankable and nullable according to the
+<a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/patient/00100010">Patient’s Name</a> DICOM attribute definition (<a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part05/sect_7.4.html#sect_7.4.3">type 2 data element</a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_name_max_length">
+<code class="descname">test_name_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_name_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the name fields has the expected max_length (see the Person
+Name (PN) <a class="reference external" href="http://dicom.nema.org/medical/dicom/current/output/chtml/part05/sect_6.2.html">value-representation specification</a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_sex_blank_and_null">
+<code class="descname">test_sex_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_sex_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/patient/00100040">Patient’s Sex</a> attribute may be empty (<a class="reference external" href="http://dicom.nema.org/dicom/2013/output/chtml/part05/sect_7.4.html#sect_7.4.3">type 2 data element</a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_sex_max_length">
+<code class="descname">test_sex_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_sex_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that the sex field has the expected max_length.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that an <code class="xref py py-meth docutils literal notranslate"><span class="pre">__str__()</span></code> method returns
+its UID.
+For more information see <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#str">Django’s str method documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_to_jstree">
+<code class="descname">test_to_jstree</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_to_jstree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the creation of a list of dictionairies representing each of this
+patient’s series instances as <a class="reference external" href="https://www.jstree.com/">jstree</a> nodes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_uid_blank_and_null">
+<code class="descname">test_uid_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_uid_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every <a class="reference internal" href="django_dicom.models.html#django_dicom.models.patient.Patient" title="django_dicom.models.patient.Patient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Patient</span></code></a> instance must have a UID.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_uid_is_unique">
+<code class="descname">test_uid_is_unique</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_uid_is_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates that the <em>UID</em> field is unique.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_uid_max_length">
+<code class="descname">test_uid_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_uid_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/patient/00100020">Patient ID</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_uid_verbose_name">
+<code class="descname">test_uid_verbose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_uid_verbose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <em>UID</em> field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_update_fields_from_header">
+<code class="descname">test_update_fields_from_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_update_fields_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header" title="django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update_fields_from_header()</span></code></a>
+method returns the expected values. This test relies on the created instance’s
+fields containing the expected values beforehand.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_patient.PatientTestCase.test_update_patient_name">
+<code class="descname">test_update_patient_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_patient.PatientTestCase.test_update_patient_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests patient name update according to the DICOM header <a class="reference external" href="http://dicom.nema.org/medical/dicom/current/output/chtml/part05/sect_6.2.html">Patient’s Name (PN)</a>
+data element fields.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.models.test_series">
+<span id="tests-models-test-series-module"></span><h2>tests.models.test_series module<a class="headerlink" href="#module-tests.models.test_series" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tests.models.test_series.SeriesTestCase">
+<em class="property">class </em><code class="descclassname">tests.models.test_series.</code><code class="descname">SeriesTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> model.</p>
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the created instances to the tests’ contexts.
+For more information see unittest’s <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp" title="(in Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setUp()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tests.models.test_series.SeriesTestCase.setUpTestData">
+<em class="property">classmethod </em><code class="descname">setUpTestData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.setUpTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates instances to be used in the tests.
+For more information see Django’s <a class="reference external" href="https://django.readthedocs.io/en/latest/topics/testing/tools.html#django.test.TestCase" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a> <a class="reference external" href="https://docs.djangoproject.com/en/2.2/topics/testing/tools/#testcase">documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_body_part_examined_blank_and_null">
+<code class="descname">test_body_part_examined_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_body_part_examined_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00180015">Body Part Examined</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_body_part_examined_max_length">
+<code class="descname">test_body_part_examined_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_body_part_examined_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00180015">Body Part Examined</a> attribute may only be as long as 16 characters (
+see the Code String (CS) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_date_blank_and_null">
+<code class="descname">test_date_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_date_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080021">Series Date</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_description_blank_and_null">
+<code class="descname">test_description_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_description_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00200011">Series Description</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_description_max_length">
+<code class="descname">test_description_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_description_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00200011">Series Description</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_description_vebose_name">
+<code class="descname">test_description_vebose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_description_vebose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <em>description</em> field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_device_serial_number_blank_and_null">
+<code class="descname">test_device_serial_number_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_device_serial_number_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-equipment/00181000">Device Serial Number</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_device_serial_number_max_length">
+<code class="descname">test_device_serial_number_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_device_serial_number_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-equipment/00181000">Device Serial Number</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_echo_time_blank_and_null">
+<code class="descname">test_echo_time_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_echo_time_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180081">Echo Time</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_echo_time_positive_float_validation">
+<code class="descname">test_echo_time_positive_float_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_echo_time_positive_float_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180081">Echo Time</a> attribute measures time in milliseconds and therefore must
+be positive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_flip_angle_blank_and_null">
+<code class="descname">test_flip_angle_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_flip_angle_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00181314">Flip Angle</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_get_absolute_url">
+<code class="descname">test_get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> model’s <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#get-absolute-url">get_absolute_url</a>
+method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_get_data">
+<code class="descname">test_get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests retrieving the series data from the model.
+In this case we only have one instance for each series so the third dimension’s
+size will be 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_get_gradient_directions">
+<code class="descname">test_get_gradient_directions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_get_gradient_directions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series.get_gradient_directions" title="django_dicom.models.series.Series.get_gradient_directions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_gradient_directions()</span></code></a>
+method returns the expected value for the given series.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_get_path">
+<code class="descname">test_get_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_get_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series.get_path" title="django_dicom.models.series.Series.get_path"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_path()</span></code></a> method
+returns the series base directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_get_scanning_sequence_display">
+<code class="descname">test_get_scanning_sequence_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_get_scanning_sequence_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series.get_scanning_sequence_display" title="django_dicom.models.series.Series.get_scanning_sequence_display"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_scanning_sequence_display()</span></code></a>
+method returns the expected value for the given series.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_get_sequence_variant_display">
+<code class="descname">test_get_sequence_variant_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_get_sequence_variant_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series.get_sequence_variant_display" title="django_dicom.models.series.Series.get_sequence_variant_display"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_sequence_variant_display()</span></code></a>
+method returns the expected value for the given series.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_institution_name_blank_and_null">
+<code class="descname">test_institution_name_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_institution_name_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-equipment/00080080">Institution Name</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_institution_name_max_length">
+<code class="descname">test_institution_name_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_institution_name_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-equipment/00080080">Institution Name</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_inversion_time_blank_and_null">
+<code class="descname">test_inversion_time_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_inversion_time_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180082">Inversion Time</a> attribute may be empty (<cite>type 2C data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_inversion_time_positive_float_validation">
+<code class="descname">test_inversion_time_positive_float_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_inversion_time_positive_float_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180082">Inversion Time</a> attribute measures time in milliseconds and therefore must
+be positive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_magnetic_field_strengh_blank_and_null">
+<code class="descname">test_magnetic_field_strengh_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_magnetic_field_strengh_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180087">Magnetic Field Strength</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_magnetic_field_strength_positive_float_validation">
+<code class="descname">test_magnetic_field_strength_positive_float_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_magnetic_field_strength_positive_float_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180087">Magnetic Field Strength</a> attribute measures field strength in <a class="reference external" href="https://en.wikipedia.org/wiki/Tesla_(unit)">Tesla (T)</a>
+and therefore must be positive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_manufacturer_blank_and_null">
+<code class="descname">test_manufacturer_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_manufacturer_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-equipment/00080070">Manufacturer</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_manufacturer_max_length">
+<code class="descname">test_manufacturer_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_manufacturer_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-equipment/00080070">Manufacturer</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_manufacturer_model_name_blank_and_null">
+<code class="descname">test_manufacturer_model_name_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_manufacturer_model_name_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080021">Manufacturer’s Model Name</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_manufacturer_model_name_max_length">
+<code class="descname">test_manufacturer_model_name_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_manufacturer_model_name_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080021">Manufacturer’s Model Name</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_modality_blank_and_null">
+<code class="descname">test_modality_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_modality_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080060">Modality</a> attribute may not be empty (<cite>type 1 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_modality_choices">
+<code class="descname">test_modality_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_modality_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080060">Modality</a> is a <a class="reference external" href="http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Value_Representations.html">Code String (CS)</a> data element and therfores
+has a limited number of possible values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_modality_max_length">
+<code class="descname">test_modality_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_modality_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080060">Modality</a> attribute may only be as long as 10 characters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_mr_acquisition_type_choices">
+<code class="descname">test_mr_acquisition_type_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_mr_acquisition_type_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180023">MR Acquisition Type</a> is a <a class="reference external" href="http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Value_Representations.html">Code String (CS)</a> data element and therfores
+has a limited number of possible values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_mr_acquisition_type_max_length">
+<code class="descname">test_mr_acquisition_type_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_mr_acquisition_type_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180023">MR Acquisition Type</a> attribute may only be as long as 2 characters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_number_blank_and_null">
+<code class="descname">test_number_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_number_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00200011">Series Number</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_number_vebose_name">
+<code class="descname">test_number_vebose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_number_vebose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <em>number</em> field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_patient_blank_and_null">
+<code class="descname">test_patient_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_patient_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s Patient attributes are all either conditionally required or nullable,
+and therefore it is possible for the patient relationship to be unused.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_patient_position_blank_and_null">
+<code class="descname">test_patient_position_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_patient_position_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00185100">Patient Position</a> attribute may be empty (<cite>type 2C data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_patient_position_choices">
+<code class="descname">test_patient_position_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_patient_position_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00185100">Patient Position</a> is a <a class="reference external" href="http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Value_Representations.html">Code String (CS)</a> data element and therfores
+has a limited number of possible values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_patient_position_max_length">
+<code class="descname">test_patient_position_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_patient_position_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00185100">Patient Position</a> attribute may only be as long as 4 characters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_pixel_spacing_blank_and_null">
+<code class="descname">test_pixel_spacing_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_pixel_spacing_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/image-plane/00280030">Pixel Spacing</a> attribute may not be empty (<cite>type 1 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_pixel_spacing_positive_float_validation">
+<code class="descname">test_pixel_spacing_positive_float_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_pixel_spacing_positive_float_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/image-plane/00280030">Pixel Spacing</a> attribute specifies distances in millimeters, and
+therefore must be positive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_pixel_spacing_size">
+<code class="descname">test_pixel_spacing_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_pixel_spacing_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/image-plane/00280030">Pixel Spacing</a> attribute specifies the distance between the centers
+of two adjacent pixels in the <em>row</em> (X) and <em>column</em> (Y) dimensions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_protocol_name_blank_and_null">
+<code class="descname">test_protocol_name_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_protocol_name_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00181030">Protocol Name</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_protocol_name_max_length">
+<code class="descname">test_protocol_name_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_protocol_name_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00181030">Protocol Name</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_repetition_time_blank_and_null">
+<code class="descname">test_repetition_time_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_repetition_time_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180080">Repetition Time</a> attribute may be empty (<cite>type 2C data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_repetition_time_positive_float_validation">
+<code class="descname">test_repetition_time_positive_float_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_repetition_time_positive_float_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180080">Repetition Time</a> attribute measures time in milliseconds and therefore must
+be positive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_scanning_sequence_base_choices">
+<code class="descname">test_scanning_sequence_base_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_scanning_sequence_base_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180020">Scanning Sequence</a> is a <a class="reference external" href="http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Value_Representations.html">Code String (CS)</a> data element and therfores
+has a limited number of possible values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_scanning_sequence_base_max_length">
+<code class="descname">test_scanning_sequence_base_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_scanning_sequence_base_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180020">Scanning Sequence</a> definitions are 2 characters long.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_scanning_sequence_blank_and_null">
+<code class="descname">test_scanning_sequence_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_scanning_sequence_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180020">Scanning Sequence</a> attribute may not be empty (<cite>type 1 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_scanning_sequence_size">
+<code class="descname">test_scanning_sequence_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_scanning_sequence_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180020">Scanning Sequence</a> attribute has five possible values, with some of
+them actually being mutually exclusive. We’re limiting to five in any case.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_sequence_variant_base_choices">
+<code class="descname">test_sequence_variant_base_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_sequence_variant_base_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180021">Sequence Variant</a> is a <a class="reference external" href="http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Value_Representations.html">Code String (CS)</a> data element and therfores
+has a limited number of possible values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_sequence_variant_base_max_length">
+<code class="descname">test_sequence_variant_base_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_sequence_variant_base_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180021">Sequence Variant</a> definitions can be 4 characters long.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_sequence_variant_blank_and_null">
+<code class="descname">test_sequence_variant_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_sequence_variant_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180021">Sequence Variant</a> attribute may not be empty (<cite>type 1 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_sequence_variant_size">
+<code class="descname">test_sequence_variant_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_sequence_variant_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/mr-image/00180021">Sequence Variant</a> attribute has eight possible values, with some of
+them actually being mutually exclusive and also including NONE. We’re
+limiting to six just in case.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_series_ordering">
+<code class="descname">test_series_ordering</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_series_ordering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/options/#ordering">ordering</a> of the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_series_verbose_name_plural">
+<code class="descname">test_series_verbose_name_plural</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_series_verbose_name_plural" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/options/#verbose-name-plural">verbose name plural</a> (“<a class="reference external" href="https://en.wiktionary.org/wiki/series">Series</a>”) of the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_slice_thickness_blank_and_null">
+<code class="descname">test_slice_thickness_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_slice_thickness_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/image-plane/00180050">Slice Thickness</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_slice_thickness_positive_float_validation">
+<code class="descname">test_slice_thickness_positive_float_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_slice_thickness_positive_float_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/image-plane/00180050">Slice Thickness</a> attribute measures thickness in millimeters and therefore must
+be positive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that an <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> instance’s str
+method returns its UID.
+For more information see <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#str">Django’s str method documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_study_blank_and_null">
+<code class="descname">test_study_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_study_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-study/0020000d">Study Instance UID</a> attribute may not be empty (<cite>type 1 data element</cite>)
+and therefore every series must have a study.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_time_blank_and_null">
+<code class="descname">test_time_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_time_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/00080031">Series Time</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_to_jstree_node">
+<code class="descname">test_to_jstree_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_to_jstree_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <a class="reference external" href="https://www.jstree.com/">jstree</a> node representation for a <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a>
+instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_uid_blank_and_null">
+<code class="descname">test_uid_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_uid_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> instance must have a UID.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_uid_is_unique">
+<code class="descname">test_uid_is_unique</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_uid_is_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates that the <em>UID</em> field is unique.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_uid_max_length">
+<code class="descname">test_uid_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_uid_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-series/0020000e">SeriesInstanceUID</a> attribute may only be as long as 64 characters (
+see the Unique Identifier (UI) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_uid_validation">
+<code class="descname">test_uid_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_uid_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <a class="reference internal" href="django_dicom.models.html#django_dicom.models.series.Series" title="django_dicom.models.series.Series"><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></a> instance <em>UID</em> field may only
+be composed of dots and digits.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_uid_verbose_name">
+<code class="descname">test_uid_verbose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_uid_verbose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <em>UID</em> field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_series.SeriesTestCase.test_update_fields_from_header">
+<code class="descname">test_update_fields_from_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_series.SeriesTestCase.test_update_fields_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header" title="django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update_fields_from_header()</span></code></a>
+method returns the expected values. This test relies on the created instance’s
+fields containing the expected values beforehand.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.models.test_study">
+<span id="tests-models-test-study-module"></span><h2>tests.models.test_study module<a class="headerlink" href="#module-tests.models.test_study" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tests.models.test_study.SeriesTestCase">
+<em class="property">class </em><code class="descclassname">tests.models.test_study.</code><code class="descname">SeriesTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>Tests for the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.study.Study" title="django_dicom.models.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> model.</p>
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the created instances to the tests’ contexts.
+For more information see unittest’s <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp" title="(in Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setUp()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tests.models.test_study.SeriesTestCase.setUpTestData">
+<em class="property">classmethod </em><code class="descname">setUpTestData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.setUpTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates instances to be used in the tests.
+For more information see Django’s <a class="reference external" href="https://django.readthedocs.io/en/latest/topics/testing/tools.html#django.test.TestCase" title="(in Django v3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></a> <a class="reference external" href="https://docs.djangoproject.com/en/2.2/topics/testing/tools/#testcase">documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_date_blank_and_null">
+<code class="descname">test_date_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_date_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-study/00080020">Study Date</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_description_blank_and_null">
+<code class="descname">test_description_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_description_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-study/00081030">Study Description</a> attribute is optional (<cite>type 3 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_description_max_length">
+<code class="descname">test_description_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_description_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-study/00081030">Study Description</a> attribute may only be as long as 64 characters (
+see the Long String (LO) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_get_absolute_url">
+<code class="descname">test_get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.study.Study.get_absolute_url" title="django_dicom.models.study.Study.get_absolute_url"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_absolute_url()</span></code></a> method
+returns the expeted url.
+For more information regarding <cite>get_absolute_url</cite> see <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#get-absolute-url">the Django documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that an <code class="xref py py-meth docutils literal notranslate"><span class="pre">__str__()</span></code> method returns
+its UID.
+For more information see <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/instances/#str">Django’s str method documentation</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_study_verbose_name_plural">
+<code class="descname">test_study_verbose_name_plural</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_study_verbose_name_plural" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the <a class="reference external" href="https://docs.djangoproject.com/en/2.2/ref/models/options/#verbose-name-plural">verbose name plural</a> (“Studies”) of the <a class="reference internal" href="django_dicom.models.html#django_dicom.models.study.Study" title="django_dicom.models.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_time_blank_and_null">
+<code class="descname">test_time_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_time_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-study/00080030">Study Time</a> attribute may be empty (<cite>type 2 data element</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_uid_blank_and_null">
+<code class="descname">test_uid_blank_and_null</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_uid_blank_and_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every <a class="reference internal" href="django_dicom.models.html#django_dicom.models.study.Study" title="django_dicom.models.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> instance must have a UID.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_uid_is_unique">
+<code class="descname">test_uid_is_unique</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_uid_is_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates that the <em>UID</em> field is unique.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_uid_max_length">
+<code class="descname">test_uid_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_uid_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM’s <a class="reference external" href="https://dicom.innolitics.com/ciods/mr-image/general-study/0020000d">Study Instance UID</a> attribute may only be as long as 64 characters (
+see the Unique Identifier (UI) <cite>value-representation specification</cite>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_uid_validation">
+<code class="descname">test_uid_validation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_uid_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <a class="reference internal" href="django_dicom.models.html#django_dicom.models.study.Study" title="django_dicom.models.study.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> instance <em>UID</em> field may only
+be composed of dots and digits.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_uid_vebose_name">
+<code class="descname">test_uid_vebose_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_uid_vebose_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the <em>UID</em> field vebose name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.models.test_study.SeriesTestCase.test_update_fields_from_header">
+<code class="descname">test_update_fields_from_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.models.test_study.SeriesTestCase.test_update_fields_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that <a class="reference internal" href="django_dicom.models.html#django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header" title="django_dicom.models.dicom_entity.DicomEntity.update_fields_from_header"><code class="xref py py-meth docutils literal notranslate"><span class="pre">update_fields_from_header()</span></code></a>
+method returns the expected values. This test relies on the created instance’s
+fields containing the expected values beforehand.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests.models" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tests.reader.html" class="btn btn-neutral float-right" title="tests.reader package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tests.data_import.html" class="btn btn-neutral float-left" title="tests.data_import package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zvi Baratz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
