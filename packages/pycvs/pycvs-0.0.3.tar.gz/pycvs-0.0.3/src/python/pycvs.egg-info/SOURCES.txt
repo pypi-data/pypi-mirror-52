@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/python/pycvs/__init__.py
+src/python/pycvs/cli.py
+src/python/pycvs/data.py
+src/python/pycvs.egg-info/PKG-INFO
+src/python/pycvs.egg-info/SOURCES.txt
+src/python/pycvs.egg-info/dependency_links.txt
+src/python/pycvs.egg-info/requires.txt
+src/python/pycvs.egg-info/top_level.txt
+src/scripts/pycvs
