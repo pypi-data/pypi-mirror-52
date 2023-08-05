@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+src/fsource/__init__.py
+src/fsource/__main__.py
+src/fsource/analyzer.py
+src/fsource/common.py
+src/fsource/lexer.py
+src/fsource/parser.py
+src/fsource/splicer.py
+src/fsource.egg-info/PKG-INFO
+src/fsource.egg-info/SOURCES.txt
+src/fsource.egg-info/dependency_links.txt
+src/fsource.egg-info/entry_points.txt
+src/fsource.egg-info/requires.txt
+src/fsource.egg-info/top_level.txt
+src/fsource.egg-info/zip-safe

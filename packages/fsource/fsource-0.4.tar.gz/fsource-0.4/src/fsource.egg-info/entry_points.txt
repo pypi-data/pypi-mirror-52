@@ -1,0 +1,3 @@
+[console_scripts]
+fsource = fsource.__main__:main
+
