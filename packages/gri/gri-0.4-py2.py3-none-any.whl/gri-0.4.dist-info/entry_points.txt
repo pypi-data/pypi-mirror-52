@@ -1,0 +1,3 @@
+[console_scripts]
+gri = gri.__main__:main
+
