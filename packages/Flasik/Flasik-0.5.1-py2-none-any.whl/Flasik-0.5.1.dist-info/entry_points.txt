@@ -1,0 +1,4 @@
+[console_scripts]
+flasik = flasik.cli:cmd
+flasik-admin = flasik.cli:cmd
+
