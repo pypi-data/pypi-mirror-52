@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+wikitablewrapper/__init__.py
+wikitablewrapper/aida.py
+wikitablewrapper/babelfy.py
+wikitablewrapper/freme_ner.py
+wikitablewrapper/tagme.py
+wikitablewrapper/wikitableBenchmark.py
+wikitablewrapper/wikitableWrapper.py
+wikitablewrapper.egg-info/PKG-INFO
+wikitablewrapper.egg-info/SOURCES.txt
+wikitablewrapper.egg-info/dependency_links.txt
+wikitablewrapper.egg-info/requires.txt
+wikitablewrapper.egg-info/top_level.txt
