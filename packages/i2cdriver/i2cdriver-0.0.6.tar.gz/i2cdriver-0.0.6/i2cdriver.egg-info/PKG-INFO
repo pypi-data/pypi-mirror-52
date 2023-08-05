@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: i2cdriver
+Version: 0.0.6
+Summary: I2CDriver is a desktop I2C interface
+Home-page: http://i2cdriver.com
+Author: James Bowman
+Author-email: jamesb@excamera.com
+License: GPL
+Description: I2CDriver is a tool for controlling, monitoring and capturing I2C from your PC's USB port. It connects as a standard USB serial device, so there are no drivers to install.
+Platform: UNKNOWN

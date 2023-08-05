@@ -1,0 +1,10 @@
+EDS.py
+i2cdriver.py
+lm75b.py
+setup.py
+i2cdriver.egg-info/PKG-INFO
+i2cdriver.egg-info/SOURCES.txt
+i2cdriver.egg-info/dependency_links.txt
+i2cdriver.egg-info/requires.txt
+i2cdriver.egg-info/top_level.txt
+samples/i2cgui.py
