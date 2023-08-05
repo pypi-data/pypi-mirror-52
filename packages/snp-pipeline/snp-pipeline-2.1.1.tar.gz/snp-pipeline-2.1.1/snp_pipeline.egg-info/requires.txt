@@ -1,0 +1,5 @@
+jobrunner
+PyVCF>=0.6.7
+setuptools
+psutil
+Biopython
