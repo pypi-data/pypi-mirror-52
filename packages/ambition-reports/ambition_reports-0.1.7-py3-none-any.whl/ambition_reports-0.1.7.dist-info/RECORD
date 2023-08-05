@@ -1,0 +1,14 @@
+ambition_reports/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ambition_reports/ae_report.py,sha256=jnlHJoULcwTPE-_DchwJDFbZiAvSlbE9nKAH1XUxbzQ,10222
+ambition_reports/apps.py,sha256=pEPfma-_vou58rsl7Nc3ZpZUqtnwtbaesM0JdkWPPBg,1202
+ambition_reports/death_report.py,sha256=MO34QNbAYmotwGZOlKoLPHgBahUgPiGjZJ9huKLqz6M,4834
+ambition_reports/pdf_report.py,sha256=ace1I5Fes9lqmQY7YqO4SGrZkZdpcamKo46i79lSJxA,2865
+ambition_reports/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ambition_reports/tests/urls.py,sha256=yrT_bh_fjv3HGc4vdRXy2k5El1sFbrntOiM8FM7ZnBM,284
+ambition_reports/tests/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ambition_reports/tests/tests/test_reports.py,sha256=t4bB5fO_kVyL4t7f0gGVuuruWKgk2t9Gbx5bu0m9rGY,1393
+ambition_reports-0.1.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ambition_reports-0.1.7.dist-info/METADATA,sha256=0CR5v2Gr6TaDRn3dap8dRU7YQA9DOJYyC9TiVPLLv1c,1634
+ambition_reports-0.1.7.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+ambition_reports-0.1.7.dist-info/top_level.txt,sha256=4zFwEMDx-2n9g7chSaz7hgLqwph9TuunbsNmUOzogiU,17
+ambition_reports-0.1.7.dist-info/RECORD,,
