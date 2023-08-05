@@ -1,0 +1,10 @@
+README.md
+setup.py
+rasa_metaform/__init__.py
+rasa_metaform/metaform.py
+rasa_metaform/version.py
+rasa_metaform.egg-info/PKG-INFO
+rasa_metaform.egg-info/SOURCES.txt
+rasa_metaform.egg-info/dependency_links.txt
+rasa_metaform.egg-info/requires.txt
+rasa_metaform.egg-info/top_level.txt
