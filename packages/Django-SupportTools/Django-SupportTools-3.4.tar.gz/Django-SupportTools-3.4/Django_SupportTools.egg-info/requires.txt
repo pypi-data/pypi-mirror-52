@@ -1,0 +1,4 @@
+django<3.0,>2.1
+django-compressor==2.2
+django-userservice<4.0,>3.1
+django-user-agents
