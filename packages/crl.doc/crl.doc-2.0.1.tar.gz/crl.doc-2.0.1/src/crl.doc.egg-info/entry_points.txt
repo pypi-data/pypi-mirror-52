@@ -1,0 +1,3 @@
+[console_scripts]
+crl_doc_generate_rst = crl.doc.cmdline:cmdline
+
