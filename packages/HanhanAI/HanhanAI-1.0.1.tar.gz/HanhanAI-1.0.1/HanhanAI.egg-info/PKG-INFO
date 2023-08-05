@@ -1,0 +1,55 @@
+Metadata-Version: 1.2
+Name: HanhanAI
+Version: 1.0.1
+Summary: Universal game AI system for game developer
+Home-page: https://github.com/hanhan-ai/2019HanHan
+Author: HanhanAI producer1
+Author-email: 1379612504@qq.com
+Maintainer: HanhanAI producer2
+Maintainer-email: 762613908@qq.com
+License: MIT
+Description: HanhanAI
+        ===========================
+        System Overview
+        
+          Universal game AI system.
+          Game developers need to provide functions like those provided by Open-AI game, so they can train their game AI.
+        
+        Use Instructions
+        
+          1. use " init_UDQN(game, inputImageSize, choose_optimizers, learning_rate) " to create your network object.
+          2. the object has the function "run(game, inputImageSize, total_steps, total_reward_list, num, step_num)" to train.
+          3. " plot_cost() " shows the gradient change graph
+        
+        Environment Instructions
+        
+          Python3.7+Graphaiz2.38
+        
+        Directory Structure Instructions
+        
+          HanhanAI
+        
+              __init__.py
+        
+              universal_dqn.py
+        
+          LICENSE
+        
+          README.rsd
+        
+          setup.py
+        
+        
+        V1.0.1 version
+        
+          1. fix bugs
+        
+Platform: all
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Adaptive Technologies
