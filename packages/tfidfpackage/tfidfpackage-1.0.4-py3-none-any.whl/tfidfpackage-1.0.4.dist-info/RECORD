@@ -1,0 +1,13 @@
+tfidfpackage/PdfReader.py,sha256=oUKr_s5jNgVdCPXFMFelSCafzGckTzJ84eoD-j5zOY4,6337
+tfidfpackage/__init__.py,sha256=6VKd1z8BcRj0ju1lRzMsAU13dVfryrTD1MSfFcKBT7U,19
+tfidfpackage/config.py,sha256=xoORl2wvM-pUk_k20UDdb1rbnar9PP-jOby4H82NWHc,159
+tfidfpackage/db.py,sha256=_OgwpNvlIWIi6IFnLIzcNArLMPmbULhl6CwvCwkh2Uo,601
+tfidfpackage/extract.py,sha256=SiKo2IeuNdjd4F67X6ejFHpNR46t346Yfsmf5f749m0,1951
+tfidfpackage/schema.sql,sha256=qSA0JlA6RYpzugG0KlAOLMXx0rCkcLK2QEn7964GrAE,481
+tfidfpackage/tf_idf.py,sha256=IUMsFkdigVJg3BZG4pnBiTUj74NsVoPUSY8P7TOR2yM,4708
+tfidfpackage/tfidf.py,sha256=l05qV2bWty7jZ71FA33-huTvfL04cl_ngRkT7KJbED0,4088
+tfidfpackage-1.0.4.dist-info/LICENSE,sha256=KLUox8Z11yecEA8-C-mcdoxfuaznlP_hhdU_91YeZCA,1071
+tfidfpackage-1.0.4.dist-info/METADATA,sha256=c6oMfk9qi7lBxY3sFIFCu8xqXCULzFWngAJTWym2M4A,290
+tfidfpackage-1.0.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+tfidfpackage-1.0.4.dist-info/top_level.txt,sha256=i0A6UZsPSPg1mwZD-5zvxmeyE2mXX7XxuyTiLDVxNFg,13
+tfidfpackage-1.0.4.dist-info/RECORD,,
