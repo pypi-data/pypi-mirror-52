@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "snapaddy"
+version = "0.0.0"
+description = ""
+license = ""
+authors = ["snapADDY GmbH <info@snapaddy.com>"]
+readme = "README.md"
+homepage = "https://snapaddy.com"
+repository = "https://snapaddy.com"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+black = {version = "*",allows-prereleases = true}
+jupyterlab = "*"
+pytest = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
