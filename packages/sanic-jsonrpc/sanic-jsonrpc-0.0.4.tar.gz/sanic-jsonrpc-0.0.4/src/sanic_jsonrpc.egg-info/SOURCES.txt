@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+src/sanic_jsonrpc/__init__.py
+src/sanic_jsonrpc/errors.py
+src/sanic_jsonrpc/jsonrpc.py
+src/sanic_jsonrpc.egg-info/PKG-INFO
+src/sanic_jsonrpc.egg-info/SOURCES.txt
+src/sanic_jsonrpc.egg-info/dependency_links.txt
+src/sanic_jsonrpc.egg-info/requires.txt
+src/sanic_jsonrpc.egg-info/top_level.txt
