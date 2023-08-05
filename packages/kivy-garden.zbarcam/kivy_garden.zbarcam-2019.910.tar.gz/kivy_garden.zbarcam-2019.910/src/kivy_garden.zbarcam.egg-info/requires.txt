@@ -1,0 +1,6 @@
+kivy
+numpy
+opencv-python>=4
+pillow
+pyzbar
+xcamera
