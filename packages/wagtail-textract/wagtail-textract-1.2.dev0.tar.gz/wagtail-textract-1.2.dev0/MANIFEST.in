@@ -1,0 +1,11 @@
+include *.rst
+include *.md
+include LICENSE
+recursive-include src *
+recursive-include docs *
+include pytest.ini
+include tox.ini
+recursive-include travis-textract-requirements *
+global-exclude __pycache__
+global-exclude *.py[co]
+exclude Makefile
