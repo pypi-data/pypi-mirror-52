@@ -1,0 +1,3 @@
+[console_scripts]
+poorhttp = poorhttp.main:main
+
