@@ -1,0 +1,14 @@
+mate3/__init__.py,sha256=pCNgbEQWAXCqTZF4Akv6wsv0PaUhNemTl6XvoPV2a0s,39
+mate3/api.py,sha256=XRB0451HFVyIFy3DPKsYr_Jv-MQJascXOaBLnx5_5H4,1804
+mate3/base_parser.py,sha256=-s1D0pC_arzIYkDztHFhiXFenXyMWwk1kaCdxT7RG44,3485
+mate3/base_structures.py,sha256=H9OAGHtk-S5Q7WeJil2D3syJzP6xqtAvgaEbdnhS508,998
+mate3/code_generator.py,sha256=hxWJ3BCcySeORqky7A7mCY0w-rJiU-MI3K186rHe6oY,9621
+mate3/csv_generator.py,sha256=hx-9gmLiZ21ZhBbfjvmVUnbosEkAd0bBrjs9nA9P1d0,802
+mate3/io.py,sha256=rL1suScr1bvlnC9tj4VhGPMPlhfTVSPsTky5c1rhAHo,2307
+mate3/main.py,sha256=3EQM9bED8h3dBAFw7y5TOzHMI9p8vya6z8vMEv5QnYQ,1820
+mate3/parsers.py,sha256=NJ6M20QYAOb6zMTtJXnjCcCvvwurqbD-oaJFP5ivcw0,192298
+mate3/structures.py,sha256=LEPqyH2o74yacFdUXcYW1jAmv2AlnW_tz-wAUMt4STg,29075
+mate3-0.2.0.dist-info/entry_points.txt,sha256=rjZHWSbfpGzBcSKPYV_r5Sp3YvfHzvRq1rhGNccAXrg,41
+mate3-0.2.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+mate3-0.2.0.dist-info/METADATA,sha256=U9yzvco1PJPWpwf8fkMy7K2RQn2QZVLkdXpL92YuUS0,280
+mate3-0.2.0.dist-info/RECORD,,
