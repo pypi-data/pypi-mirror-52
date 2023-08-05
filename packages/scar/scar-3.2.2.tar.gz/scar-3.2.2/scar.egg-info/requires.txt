@@ -1,0 +1,9 @@
+setuptools>=40.8.0
+boto3
+urllib3
+faas-supervisor
+tabulate
+configparser
+requests
+pyyaml
+packaging
