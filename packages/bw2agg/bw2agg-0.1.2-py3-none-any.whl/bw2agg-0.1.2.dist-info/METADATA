@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: bw2agg
+Version: 0.1.2
+Summary: Extension to brightway2 package to create and work with aggregated data
+Home-page: https://github.com/pascallesage/brightway2-aggregated
+Author: Pascal Lesage
+Author-email: pascal.lesage@polymtl.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Description-Content-Type: text/markdown
+Requires-Dist: bw2calc
+Requires-Dist: bw2data
+Requires-Dist: numpy
+
+Brightway2-aggregated
+==========================
+
+This package provides tools for the creation and use of aggregated (i.e. cradle-to-gate) LCA data, both at the LCI and LCIA score level. 
+It is an extension to the [Brightway2 LCA framework](https://brightwaylca.org). 
+[Online documentation](https://bw2agg.readthedocs.io/en/latest/) is available, and the source code is hosted on [Github](https://github.com/pascallesage/brightway2-aggregated).
+
+[![Windows build status](https://ci.appveyor.com/api/projects/status/09xc2q44egok02bu?svg=true)](https://ci.appveyor.com/project/PascalLesage/presamples)
+[![Linux/OS X build status](https://travis-ci.org/PascalLesage/brightway2-aggregated.svg?branch=master)](https://travis-ci.org/PascalLesage/brightway2-aggregated)
+[![Coverage Status](https://coveralls.io/repos/github/PascalLesage/brightway2-aggregated/badge.svg?branch=master)](https://coveralls.io/github/PascalLesage/brightway2-aggregated?branch=master)
+
+
