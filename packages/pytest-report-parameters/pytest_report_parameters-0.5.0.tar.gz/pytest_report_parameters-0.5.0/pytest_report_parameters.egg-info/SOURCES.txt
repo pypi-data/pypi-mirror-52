@@ -1,0 +1,16 @@
+.gitignore
+.gitlab-ci.yml
+.pre-commit-config.yaml
+.pylintrc
+.releaserc
+README.rst
+pytest_report_parameters.py
+requirements.txt
+setup.py
+tox.ini
+pytest_report_parameters.egg-info/PKG-INFO
+pytest_report_parameters.egg-info/SOURCES.txt
+pytest_report_parameters.egg-info/dependency_links.txt
+pytest_report_parameters.egg-info/entry_points.txt
+pytest_report_parameters.egg-info/requires.txt
+pytest_report_parameters.egg-info/top_level.txt
