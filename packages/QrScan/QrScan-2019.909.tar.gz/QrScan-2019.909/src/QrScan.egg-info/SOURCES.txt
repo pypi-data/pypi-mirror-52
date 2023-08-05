@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/QrScan.egg-info/PKG-INFO
+src/QrScan.egg-info/SOURCES.txt
+src/QrScan.egg-info/dependency_links.txt
+src/QrScan.egg-info/entry_points.txt
+src/QrScan.egg-info/requires.txt
+src/QrScan.egg-info/top_level.txt
+src/qrscan/__init__.py
+src/qrscan/main.kv
+src/qrscan/main.py
+src/qrscan/version.py
