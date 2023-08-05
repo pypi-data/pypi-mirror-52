@@ -1,0 +1,3 @@
+[console_scripts]
+quiik = quiik.__main__:start
+
