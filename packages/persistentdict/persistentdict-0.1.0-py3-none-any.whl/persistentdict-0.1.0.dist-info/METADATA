@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: persistentdict
+Version: 0.1.0
+Summary: Yet another dictionary backed by Redis DB
+Home-page: https://github.com/user-cont/persistentdict
+Author: Red Hat
+Author-email: user-cont-team@redhat.com
+License: MIT
+Keywords: dict,durable,persistent,redis
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: redis
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+
+# persistentdict
+
+Yet another \[1\] dictionary backed by Redis DB.
+
+We use Redis` 'hash' type \[2\] and store whole dictionary in one hash.
+
+Usage:
+```python
+from persistentdict import PersistentDict
+
+db = PersistentDict(hash_name="my-persistent-dict")
+
+# add key to the db with a value
+db[key] = value
+
+# show whole dictionary
+print(db)
+
+# iterate over keys & values in db
+for key, value in db.items():
+  do_something(key)
+
+# do sth with key if it is in db
+if key in db:
+  do_something(key)
+
+# delete key from db
+del db[key]
+```
+
+\[1\] Alternatives: [persistent-dict](https://github.com/richardARPANET/persistent-dict), [durabledict](https://github.com/disqus/durabledict/)
+
+\[2\] https://redis.io/topics/data-types-intro#hashes is basically Python's dict, but values can be strings only, so we use json serialization
+
+
