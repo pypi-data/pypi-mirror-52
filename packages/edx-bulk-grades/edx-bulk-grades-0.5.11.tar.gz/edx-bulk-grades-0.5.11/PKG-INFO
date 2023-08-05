@@ -1,0 +1,167 @@
+Metadata-Version: 1.1
+Name: edx-bulk-grades
+Version: 0.5.11
+Summary: Support for bulk scoring and grading
+Home-page: https://github.com/edx/edx-bulk-grades
+Author: edX
+Author-email: oscm@edx.org
+License: AGPL 3.0
+Description: edx-bulk-grades
+        =============================
+        
+        |pypi-badge| |travis-badge| |codecov-badge| |doc-badge| |pyversions-badge|
+        |license-badge|
+        
+        Support for bulk scoring and grading. This adds models and an API for reading and modifying
+        scores and grades in bulk.
+        
+        Overview (please modify)
+        ------------------------
+        
+        The ``README.rst`` file should then provide an overview of the code in this
+        repository, including the main components and useful entry points for starting
+        to understand the code in more detail.
+        
+        Documentation
+        -------------
+        
+        The full documentation is at https://edx-bulk-grades.readthedocs.org.
+        
+        License
+        -------
+        
+        The code in this repository is licensed under the AGPL 3.0 unless
+        otherwise noted.
+        
+        Please see ``LICENSE.txt`` for details.
+        
+        How To Contribute
+        -----------------
+        
+        Contributions are very welcome.
+        
+        Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
+        
+        Even though they were written with ``edx-platform`` in mind, the guidelines
+        should be followed for Open edX code in general.
+        
+        The pull request description template should be automatically applied if you are creating a pull request from GitHub. Otherwise you
+        can find it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/edx-bulk-grades/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_.
+        
+        The issue report template should be automatically applied if you are creating an issue on GitHub as well. Otherwise you
+        can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/edx-bulk-grades/blob/master/.github/ISSUE_TEMPLATE.md>`_.
+        
+        Reporting Security Issues
+        -------------------------
+        
+        Please do not report security issues in public. Please email security@edx.org.
+        
+        Getting Help
+        ------------
+        
+        Have a question about this repository, or about Open edX in general?  Please
+        refer to this `list of resources`_ if you need any assistance.
+        
+        .. _list of resources: https://open.edx.org/getting-help
+        
+        
+        .. |pypi-badge| image:: https://img.shields.io/pypi/v/edx-bulk-grades.svg
+            :target: https://pypi.python.org/pypi/edx-bulk-grades/
+            :alt: PyPI
+        
+        .. |travis-badge| image:: https://travis-ci.org/edx/edx-bulk-grades.svg?branch=master
+            :target: https://travis-ci.org/edx/edx-bulk-grades
+            :alt: Travis
+        
+        .. |codecov-badge| image:: http://codecov.io/github/edx/edx-bulk-grades/coverage.svg?branch=master
+            :target: http://codecov.io/github/edx/edx-bulk-grades?branch=master
+            :alt: Codecov
+        
+        .. |doc-badge| image:: https://readthedocs.org/projects/edx-bulk-grades/badge/?version=latest
+            :target: http://edx-bulk-grades.readthedocs.io/en/latest/
+            :alt: Documentation
+        
+        .. |pyversions-badge| image:: https://img.shields.io/pypi/pyversions/edx-bulk-grades.svg
+            :target: https://pypi.python.org/pypi/edx-bulk-grades/
+            :alt: Supported Python versions
+        
+        .. |license-badge| image:: https://img.shields.io/github/license/edx/edx-bulk-grades.svg
+            :target: https://github.com/edx/edx-bulk-grades/blob/master/LICENSE.txt
+            :alt: License
+        
+        
+        Change Log
+        ----------
+        
+        ..
+           All enhancements and patches to bulk_grades will be documented
+           in this file.  It adheres to the structure of http://keepachangelog.com/ ,
+           but in reStructuredText instead of Markdown (for ease of incorporation into
+           Sphinx documentation and the PyPI description).
+        
+           This project adheres to Semantic Versioning (http://semver.org/).
+        
+        .. There should always be an "Unreleased" section for changes pending release.
+        
+        Unreleased
+        ~~~~~~~~~~
+        
+        *
+        
+        [0.5.10] - 2019-09-06
+        ~~~~~~~~~~~~~~~~~~~~~
+        * Prevent user from setting negative grades
+        
+        [0.5.9] - 2019-08-28
+        ~~~~~~~~~~~~~~~~~~~~
+        * Make intervention report display either grade override if exists or original grade.
+        
+        [0.5.8] - 2019-08-26
+        ~~~~~~~~~~~~~~~~~~~~
+        * Make intervention masters track nly. Some clan up.
+        
+        [0.5.3] - 2019-08-16
+        ~~~~~~~~~~~~~~~~~~~~
+        * Add support for filters to Interventions CSV report endpoint, mirroring bulk management filters
+        
+        [0.5.2] - 2019-08-15
+        ~~~~~~~~~~~~~~~~~~~~
+        * Bring datasource for grade information inline with what the rest of gradebook uses
+        
+        [0.4.4] - 2019-08-13
+        ~~~~~~~~~~~~~~~~~~~~
+        Add ability to filter by course grade, provided as a percentage to the endpoint.
+        
+        [0.4.3] - 2019-08-12
+        ~~~~~~~~~~~~~~~~~~~~
+        Add ability to filter by subsection grade, provided as a percentage to the endpoint
+        
+        [0.4.1] - 2019-08-01
+        ~~~~~~~~~~~~~~~~~~~~
+        Added ability to filter by subsection & assignment grading type for bulk management CSV downloads.
+        
+        [0.1.4] - 2019-07-02
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Added an endpoint for this history of bulk management operations on grade overrides.
+        
+        [0.1.0] - 2019-05-24
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        Added
+        _____
+        
+        * First release on PyPI.
+        
+Keywords: Django edx
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
