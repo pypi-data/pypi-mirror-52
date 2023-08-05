@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        sg_go=sg_go:cli
+      
