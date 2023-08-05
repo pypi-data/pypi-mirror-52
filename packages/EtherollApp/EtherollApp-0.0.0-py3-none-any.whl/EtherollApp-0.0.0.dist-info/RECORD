@@ -1,0 +1,16 @@
+distutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+distutils/version.py,sha256=OhahZA66gEegvmRMItlqaEnEVvmE7KeCidMhVxZEY5g,12490
+osc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osc/osc_app_client.py,sha256=5ubicuKyhT-6iyvZ2ePaHNOAMR42W7C5YaYZ5t1rNO8,1056
+osc/osc_app_server.py,sha256=vL9biAKbaITf1G_nSRFFEkwenLDH8rwvgujnZEYrPI0,1896
+service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+service/main.py,sha256=gsOqn3bD-0l6X8k5xLfBPzxtOke1fKu-kIsdCWjnAD8,7733
+service/utils.py,sha256=cs3KNCxAaMKBi1QSxCo_HOAkfV4WsfyZtYmiRZ5n_-M,687
+tests/ui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/ui/test_etheroll_ui.py,sha256=eKg2Ai1i1IUrrskGhP-V8z84fiv6pKxFUjhc8qk59zw,28804
+EtherollApp-0.0.0.dist-info/LICENSE,sha256=l2l7tKwOr86cnr0oSlsj_A84P1ZjU8kUe4IXwctIO8M,1068
+EtherollApp-0.0.0.dist-info/METADATA,sha256=8yFacb6QvJB-BEqQ50mzWhiTBV4W9bZ5ZaheFWej7hc,1650
+EtherollApp-0.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+EtherollApp-0.0.0.dist-info/entry_points.txt,sha256=tDOj5vXC3d0TT1nj7euuQVWPRKynZtHbLDzZ5Ttczc8,43
+EtherollApp-0.0.0.dist-info/top_level.txt,sha256=XRoofWCCT7bd2S9QZjL3mYQeDpsfS6-nVGfvq9dfZJA,28
+EtherollApp-0.0.0.dist-info/RECORD,,
