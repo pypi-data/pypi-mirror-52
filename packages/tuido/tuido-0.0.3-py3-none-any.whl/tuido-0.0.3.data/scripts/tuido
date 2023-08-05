@@ -1,0 +1,490 @@
+#!python
+
+import os
+import shlex
+import errno
+import curses
+import logging
+from inspect import signature
+
+import util.util as util
+from util.list_screen import ListScreen
+from util.item import Item
+
+logging.basicConfig(level=logging.DEBUG)
+log = logging.getLogger('Todo')
+
+TODO_FILE = os.environ.get('TODO_FILE', os.environ.get('HOME')
+                           + '/.config/tmux-dash/modules/todo.yml')
+TODO_DEF_SPACING = os.environ.get('TODO_DEF_SPACING', 2)
+TODO_DEF_INDENT = os.environ.get('TODO_DEF_INDENT', 2)
+TODO_TITLE = os.environ.get('TODO_FILE', 'Todo List: ')
+
+
+class TodoList(ListScreen):
+
+    '''
+    Inheritence: TodoList -> ListScreen -> Screen
+
+    Description: TUI todo list making use of the curses library
+
+    Args:
+        - title: Title of the window (env var: TODO_TITLE)
+        - fn: Config file to load (env var: TODO_FILE)
+        - (kw)?args: See parent class(es)
+    '''
+
+    def __init__(self, title, fn, *args, **kwargs):
+        super().__init__(fn, *args, **kwargs)
+        self.idgen = util.IdGenerator()
+        self.fn = fn
+        self.title = title
+        self.header = 'top level'
+        self.todo = None
+
+    def load_config(self):
+        ''' Loads the 'config' section of TODO_FILE '''
+        config = self.todo['config']
+        self.config = {
+            'indent': int(config['indent']) or TODO_DEF_INDENT,
+            'spacing': int(config['spacing']) or TODO_DEF_SPACING
+        }
+        self.spacing = self.config['spacing']
+
+    def add_children(self, parent, parent_dict):
+        ''' Used by TodoList.load_list to recursively load children of an Item '''
+        if not parent_dict['children']:
+            return
+        for child in parent_dict['children']:
+            parent.append_child(
+                Item(
+                    parent.idgen.get_id(),
+                    child['desc'],
+                    child['done'],
+                    child['deleted'],
+                    parent=parent
+                )
+            )
+            if parent.children:
+                self.add_children(parent.children[-1], child)
+
+    def load_list(self):
+        ''' Loads Item list from the 'list' section of TODO_FILE '''
+        for item in self.todo['list']:
+            self.cur_list().append(
+                Item(
+                    self.idgen.get_id(),
+                    item['desc'],
+                    item['done'],
+                    item['deleted'],
+                    None,
+                    item['progress'],
+                    item['priority']
+                )
+            )
+            self.add_children(self.cur_list()[-1], item)
+
+    def find_item_before_delete(self):
+        ''' Finds idx of last item not marked for deletion '''
+        for i, it in enumerate(self.cur_list()):
+            if it.deleted:
+                return i
+        return len(self.cur_list())
+
+    def cmd_mark_priority(self):
+        self.cur_item().mark_priority()
+
+    def cmd_mark_progress(self):
+        ''' Flips the .progress state of the current Item '''
+        self.cur_item().mark_progress()
+
+    def cmd_mark_progress_recursive(self):
+        '''
+        Based on .progress state of current item, recursively set all
+         children to !.done
+        '''
+        self.cur_item().mark_progress_recursive_top_level()
+
+    def cmd_mark_done(self):
+        ''' Flips the .done state of the current Item '''
+        self.cur_item().mark_done()
+
+    def cmd_mark_done_recursive(self):
+        '''
+        Based on .done state of current item, recursively set all
+         children to !.done
+        '''
+        self.cur_item().mark_done_recursive_top_level()
+
+    def cmd_mark_deleted(self, tmp_item=None):
+        ''' Mark an Item to be deleted '''
+        if tmp_item:
+            tmp_item.mark_deleted()
+            return
+        self.cur_item().mark_deleted()
+        item = self.cur_list().pop(self.cur_item_idx)
+        if item.deleted:
+            self.cur_list().append(item)
+        else:
+            self.cur_list().insert(self.find_item_before_delete(), item)
+        for i, it in enumerate(self.cur_list()):
+            it.id = i + 1
+        if item.id - 1:
+            self.cur_item_idx = item.id - 1
+
+    def cmd_delete(self, tmp_item=None):
+        ''' Permanently delete an Item '''
+        if not self.are_you_sure():
+            return
+        if tmp_item:
+            if tmp_item.parent:
+                tmp_list = tmp_item.parent.children
+            else:
+                tmp_list = self.item_list[0]
+            removed = tmp_list.pop(tmp_list.index(tmp_item))
+            if removed.parent:
+                removed.parent.height -= 1
+            return
+        tmp_list = self.cur_list()
+        removed = tmp_list.pop(self.cur_item_idx)
+        if removed.parent:
+            removed.parent.height -= 1
+        for i, it in enumerate(tmp_list):
+            it.id = i + 1
+        if self.parents:
+            self.parents[-1].idgen.sub_id()
+        else:
+            self.idgen.sub_id()
+        if self.cur_item_idx == len(tmp_list):
+            self.cur_item_idx -= 1
+
+    def move_left(self):
+        ''' Move up one level, i.e. to an Item's parent '''
+        if self.cur_list_idx:
+            self.cur_item_idx = self.parents[-1].id - 1
+            self.parents.pop(-1)
+            if self.parents:
+                self.header = self.parents[-1].__str__()
+            else:
+                self.header = 'top level'
+            self.item_list = self.item_list[:-1]
+            self.cur_list_idx -= 1
+            if self.cur_item_idx not in range(len(self.cur_list())):
+                self.cur_item_idx = 0
+
+    def move_right(self):
+        ''' Move down one level, i.e. to an Item's sub-task(s) '''
+        item = self.cur_item()
+        if item.children:
+            self.parents.append(item)
+            self.header = self.parents[-1].__str__()
+            self.item_list.append(item.children)
+            self.cur_list_idx += 1
+            if self.cur_item_idx not in range(len(self.cur_list())):
+                self.cur_item_idx = 0
+
+    def reorder(self):
+        for idx, item in enumerate(self.cur_list()):
+            item.id = idx + 1
+            if item.deleted:
+                self.cur_list().append(
+                    self.cur_list().pop(idx)
+                )
+                item.id = len(self.cur_list()) - 1
+
+    def cmd_add_item(self, tmp_item=None, item_desc=''):
+        ''' Adds an Item to the current level '''
+        header = 'New item: '
+        if not item_desc:
+            item_desc = self.one_text_input(header)
+        if not item_desc:
+            return
+        if self.parents:
+            ident = self.parents[-1].idgen.get_id()
+        else:
+            ident = self.idgen.get_id()
+        before_delete = self.find_item_before_delete()
+        tmp_list = self.cur_list()
+        if tmp_item:
+            tmp_list = tmp_item.children
+        parent = None
+        if self.cur_list():
+            parent = self.cur_list()[0].parent
+        tmp_list.insert(
+            before_delete,
+            Item(
+                ident,
+                item_desc,
+                parent=parent
+            )
+        )
+        self.reorder()
+        self.cur_item_idx = before_delete
+
+    def cmd_add_sub_item(self, tmp_item=None, item_desc=''):
+        ''' Adds a sub-Item to the currently selected Item '''
+        header = 'Sub item: '
+        if not tmp_item:
+            tmp_item = self.cur_item()
+        if not item_desc:
+            item_desc = self.one_text_input(header)
+        if not item_desc:
+            return
+        tmp_item.append_child(
+            Item(
+                tmp_item.idgen.get_id(),
+                item_desc,
+                parent=tmp_item
+            )
+        )
+
+    def cmd_modify_desc(self, tmp_item=None, item_desc=''):
+        ''' Change an Item's description from the current .desc '''
+        header = 'Change whole item: '
+        if not tmp_item:
+            tmp_item = self.cur_item()
+        if not item_desc:
+            item_desc = self.one_text_input(header)
+        if not item_desc:
+            return
+        tmp_item.set_desc(item_desc)
+
+    def cmd_change_desc(self, tmp_item=None, item_desc=''):
+        ''' Change an Item's description from blank '''
+        header = 'Change item: '
+        if not tmp_item:
+            tmp_item = self.cur_item()
+        if not item_desc:
+            item_desc = self.one_text_input(header, tmp_item.desc)
+        tmp_item.set_desc(item_desc)
+
+    def select_item_by_ids(self, ids):
+        ''' Selects the item by id from the current level '''
+        tmp_item = None
+        tmp_list = self.cur_list()
+        for id in ids:
+            id = int(id) - 1
+            if len(tmp_list) <= id:
+                self.incorrect_command(id)
+                return None
+            tmp_item = tmp_list[id]
+            tmp_list = tmp_item.children
+        return tmp_item
+
+    def command_line(self):
+        header = ': '
+        command = shlex.split(self.one_text_input(header))
+        if not command:
+            self.incorrect_command(header)
+            return
+        cmd = command.pop(0)
+        if cmd not in self.keyfuncs:
+            self.incorrect_command(cmd)
+            return
+        desc = None
+        tmp_item = None
+        if command:
+            if len(signature(self.keyfuncs[cmd]).parameters) == 2:
+                desc = command.pop(0)
+            if command:
+                tmp_item = self.select_item_by_ids(command)
+            else:
+                if cmd == 'a':
+                    tmp_item = Item(0, '')
+                    tmp_item.children = self.cur_list()
+                else:
+                    self.incorrect_command(cmd)
+                    return
+            if not tmp_item:
+                return
+        if tmp_item:
+            if desc:
+                self.keyfuncs[cmd](tmp_item, desc)
+            else:
+                self.keyfuncs[cmd](tmp_item)
+        else:
+            self.keyfuncs[cmd]()
+
+    def set_todo_functions(self):
+        ''' Sets the functions specific to TodoList '''
+        self.keyfuncs['a'] = self.cmd_add_item
+        self.keyfuncs['A'] = self.cmd_add_sub_item
+        self.keyfuncs['c'] = self.cmd_modify_desc
+        self.keyfuncs['C'] = self.cmd_change_desc
+        self.keyfuncs['d'] = self.cmd_mark_deleted
+        self.keyfuncs['D'] = self.cmd_delete
+        self.keyfuncs['h'] = self.move_left
+        self.keyfuncs[' '] = self.cmd_mark_done
+        self.keyfuncs['m'] = self.cmd_mark_done
+        self.keyfuncs['M'] = self.cmd_mark_done_recursive
+        self.keyfuncs['p'] = self.cmd_mark_progress
+        self.keyfuncs['P'] = self.cmd_mark_progress_recursive
+        self.keyfuncs['w'] = self.write_config
+        self.keyfuncs['q'] = self.todo_quit
+        self.keyfuncs['r'] = self.display
+        self.keyfuncs['l'] = self.move_right
+        self.keyfuncs[curses.KEY_LEFT] = self.move_left
+        self.keyfuncs[curses.KEY_RIGHT] = self.move_right
+        self.keyfuncs['?'] = self.show_help
+        self.keyfuncs[':'] = self.command_line
+        self.keyfuncs['!'] = self.cmd_mark_priority
+
+    def show_help(self):
+        ''' Writes over the entire screen and displays command definitions '''
+        tmp_win = curses.newwin(
+            self.t_height - self.spacing,
+            self.t_width - self.spacing,
+            self.spacing,
+            self.spacing
+        )
+        info = [
+            'a  :  Add item to current level',
+            'A  :  Add subtask to highlighted item',
+            'c  :  Edit description (^H to backspace)',
+            'C  :  Change description',
+            'd  :  Mark deleted',
+            'D  :  Delete (permanent)',
+            'h  :  Up level',
+            'j  :  Down',
+            'k  :  Up',
+            'l  :  Down level',
+            'm  :  Mark done',
+            'M  :  Mark done (recursive)',
+            'q  :  Write and quit',
+            'r  :  Refresh screen',
+            'w  :  Write',
+            '?  :  Show (this) help screen',
+            ':  :  Enter command'
+        ]
+        txtbox = curses.textpad.Textbox(tmp_win)
+        for i, line in enumerate(info):
+            tmp_win.addstr(i + 1, self.spacing, line)
+        return txtbox.edit(self.terminate_input_on_all)
+
+    def display_children(self, item, next_line, indent):
+        ''' Recursively display the children of an Item '''
+        ret = len(item.children)
+        if not item.children:
+            return ret
+        for child in item.children:
+            next_line += 1
+            if next_line > self.t_height - self.spacing:
+                break
+            self.screen.addstr(
+                next_line,
+                indent,
+                child.__str__(),
+                self.OFF_COLOR
+            )
+            if not child.deleted:
+                gap = self.display_children(child, next_line, indent + self.config['indent'])
+                ret += gap
+                next_line += gap
+        return ret
+
+    def display(self):
+        ''' Responsible for display the todo/curses screen '''
+        self.screen.erase()
+        self.t_height, self.t_width = self.screen.getmaxyx()
+        self.cur_list().sort(key=lambda e: e.id)
+        item_list = self.cur_list()[self.top_of_screen:]
+        if self.t_height - self.spacing <= 0:
+            return
+        next_line = 1
+        delete_mark = False
+        if self.t_height >= self.spacing * 3:
+            self.screen.addstr(
+                1,
+                self.config['indent'],
+                self.title + self.header
+            )
+        else:
+            next_line = -int(self.spacing / 2)
+        self.bottom_of_screen = len(self.cur_list()) - 1
+        for idx, item in enumerate(item_list):
+            next_line += self.spacing
+            if next_line > self.t_height - self.spacing:
+                self.bottom_of_screen = idx
+                break
+            if item.deleted and not delete_mark:
+                delete_mark = True
+                self.screen.addstr(next_line, self.config['indent'], 'Deleted:')
+                next_line += self.spacing
+            if idx + self.top_of_screen == self.cur_item_idx:
+                if item.priority:
+                    color_pair = self.PRI_SELECTED_COLOR
+                else:
+                    color_pair = self.SELECTED_COLOR
+            else:
+                if item.priority:
+                    color_pair = self.PRI_OFF_COLOR
+                else:
+                    color_pair = self.OFF_COLOR
+            self.screen.addstr(
+                next_line,
+                self.config['indent'],
+                item.__str__(),
+                color_pair
+            )
+            if not item.deleted:
+                next_line += self.display_children(
+                    item, next_line, self.config['indent'] + 2
+                )
+        self.screen.refresh()
+
+    def main_loop(self):
+        ''' Display the current screen then wait for and run a command '''
+        while True:
+            self.display()
+            self.run_command(
+                self.screen.getkey()
+            )
+            self.write_config()
+
+    def run(self):
+        ''' Runs the main loop and catches KeyboardInterrupt '''
+        try:
+            self.main_loop()
+        except KeyboardInterrupt:
+            pass
+        finally:
+            self.quit()
+
+    def todo_quit(self):
+        ''' Calls the Screen quit method closing the curses window '''
+        # TODO: ask to save changes
+        self.write_config()
+        self.quit()
+
+
+def validate_config(fn):
+    '''
+    Checks TODO_FILE exists, creates it if not
+
+    Should actually validate the content of the config file at
+        some point, it does not currently
+    '''
+    if not os.path.exists(os.path.dirname(fn)):
+        try:
+            os.makedirs(os.path.dirname(fn))
+        except OSError as exc:
+            if exc.errno != errno.EEXIST:
+                raise
+    open(fn, 'a').close()
+    if not os.stat(fn).st_size:
+        util.write_yaml(fn, util.DEFAULT_CONFIG_DICT)
+
+def main():
+    validate_config(TODO_FILE)
+    todo = TodoList(TODO_TITLE, TODO_FILE)
+    if not todo.read_config():
+        print("you suck, buddy")
+        return 1
+    todo.load_config()
+    todo.load_list()
+    todo.set_todo_functions()
+    todo.run()
+
+
+if __name__ == '__main__':
+    main()
