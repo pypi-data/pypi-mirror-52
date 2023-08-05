@@ -1,0 +1,6 @@
+boto3
+click==7.0
+docker
+gitpython>=2.1.12
+python-dotenv>=0.10.3
+requests
