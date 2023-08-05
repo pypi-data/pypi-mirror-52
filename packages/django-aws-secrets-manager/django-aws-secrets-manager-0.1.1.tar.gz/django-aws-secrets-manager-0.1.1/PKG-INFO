@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: django-aws-secrets-manager
+Version: 0.1.1
+Summary: Django secrets management tool using AWS Secrets Manager
+Home-page: https://github.com/LeeHanYeong/django-aws-secrets-manager
+Author: Lee HanYeong
+Author-email: dev@lhy.kr
+License: MIT
+Description: # django-aws-secrets-manager
+        
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
