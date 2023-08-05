@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: telegramtui
+Version: 0.1.0
+Summary: Telegram client on your console
+Home-page: https://github.com/vtr0n/TelegramTUI
+Author: Valery Krasnoselsky
+Author-email: valery.krasnoselsky@gmail.com
+License: MIT
+Description: # TelegramTUI
+        Telegram client on your console
+        
+        ![telegram](https://user-images.githubusercontent.com/18473198/37569384-a4d32e70-2af2-11e8-948c-5a177b384657.png)
+        
+        ### Dependencies
+        * [Telethon](https://github.com/LonamiWebs/Telethon)
+        * [NpyScreen](https://github.com/bad-day/npyscreen)
+        * [python-aalib](http://jwilk.net/software/python-aalib)
+        
+        ### Installation
+        ```pip install telegramtui```
+        
+        ### Proxy
+        You can set proxy in config.ini
+        
+        ### Controls
+        * Navigation: `Tab`, `Shift+Tab`, `Mouse`
+        * Send message: `Ctrl+S`, `Alt+Enter`  
+        * Delete message: `Ctrl+R`
+        * Send file: `Ctrl+O`
+        * Exit: `Ctrl+Q`, `ESC`  
+        * Copy: `Shift+Mouse`
+        * Paste: `Shift+Ins`, `Shift+Middle mouse button`
+        
+Keywords: telegram telegramtui telegramcli telegram-cli telegram-tui tui
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
