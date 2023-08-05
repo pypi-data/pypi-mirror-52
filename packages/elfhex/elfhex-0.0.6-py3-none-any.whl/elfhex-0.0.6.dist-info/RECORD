@@ -1,0 +1,16 @@
+elfhex/__init__.py,sha256=FJyIwed1Xd8id1hJVj-cjXngWMyFCLcCUAb1V1vXizQ,832
+elfhex/__main__.py,sha256=ZXO15UdiWtVsM5HaNOtGjoHJLoxuAjSDTb5AQp1ev4g,3745
+elfhex/elf.py,sha256=ppCHSe6OJ35b4yCCndiZlOxitemwfxtpERVWhlwtnHI,3542
+elfhex/elfhex.lark,sha256=DQcNE0K666DSaxXR43AhNmHEXW_omSP9awR6tEQ-22g,2079
+elfhex/file_loader.py,sha256=2ocZdoTBz4sDAxhljMUwZBw7ZxSYj_lPPFuR-bMeDsM,1680
+elfhex/preprocessor.py,sha256=--8kxTohrOZR8q2eEAu8Y9WkwlVVsPsdeCTAE807h0g,7868
+elfhex/program.py,sha256=h8FM1mVOSsi0LZGoUWEgCG3bbBtCtHMOBOv4ofX9gSk,13669
+elfhex/transformer.py,sha256=4Ogfgmady9cuu1BigZgLsbKRIrsckzeDKhL2-ZbA-p4,3398
+elfhex/util.py,sha256=cQgIsPBO5oOni8-9SgbMlNJv7dUtbcNSlxRzv-XULSY,1514
+elfhex-0.0.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+elfhex-0.0.6.dist-info/METADATA,sha256=i-mmGFUc7_cjNhYXETUKCkG5Xz2rpe_iaJy0nEvJ7bA,12207
+elfhex-0.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+elfhex-0.0.6.dist-info/entry_points.txt,sha256=DY5Vv6JlMlGN79ECYDifKGM3cavBWVQyZh8ULzb2a7I,49
+elfhex-0.0.6.dist-info/pbr.json,sha256=rk6AGd0iWOjAL_GjmycSaPypNSeyBlHKhKoD5e0Y0Us,47
+elfhex-0.0.6.dist-info/top_level.txt,sha256=t50FUxuhr4H1xa6ezooxIv2sCx-Qq8Mv8BORgUWd8OM,7
+elfhex-0.0.6.dist-info/RECORD,,
