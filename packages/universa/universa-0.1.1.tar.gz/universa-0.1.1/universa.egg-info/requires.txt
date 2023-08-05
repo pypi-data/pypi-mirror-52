@@ -1,0 +1,5 @@
+pexpect>=4.7.0
+streamexpect>=0.2.1
+
+[dev]
+pytest
