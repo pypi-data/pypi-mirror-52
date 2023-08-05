@@ -1,0 +1,9 @@
+GitPython ~= 2.1
+semantic-version ~= 2.8
+
+[dev]
+coverage ~= 4.5
+isort
+pytest ~= 4.6
+pytest-cov ~= 2.7
+sphinx ~= 1.7
