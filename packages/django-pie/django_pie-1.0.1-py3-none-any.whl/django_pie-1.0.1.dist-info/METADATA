@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: django-pie
+Version: 1.0.1
+Summary: Collections to speed up django development in several minutes
+Home-page: https://github.com/kerol/django-pie
+Author: kerol
+Author-email: ikerol@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: django (>=2.2.5)
+Requires-Dist: redis (>=3.3.8)
+Requires-Dist: pycryptodome (>=3.9.0)
+
+#### Django-Pie
+Collections to speed up django development in several minutes.
+
