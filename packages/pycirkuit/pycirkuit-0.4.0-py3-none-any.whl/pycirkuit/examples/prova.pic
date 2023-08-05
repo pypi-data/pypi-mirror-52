@@ -1,0 +1,52 @@
+.PS
+# cct_init Version 8.9.3: TikZ PGF m4 macro settings.
+  
+  # gen_init Version 8.9.3: TikZ PGF m4 macro settings.
+  
+
+  define rpoint__ {
+    rp_wid = last line.end.x-last line.start.x
+    rp_ht = last line.end.y-last line.start.y
+    rp_len = sqrt(max((rp_wid)^2+(rp_ht)^2,-((rp_wid)^2+(rp_ht)^2))); move to last line.start
+    rp_ang = atan2(rp_ht,rp_wid) }
+
+  rtod_ = 57.295779513082323;  dtor_ = 0.017453292519943295
+  twopi_ = 6.2831853071795862;  pi_ = (twopi_/2)
+  rp_ang = 0;  right
+  
+  
+  linethick = 0.8
+  arrowwid = 0.05*scale; arrowht = 0.1*scale 
+  
+  
+  # gen_init end
+
+  
+
+# cct_init end
+
+   line invis  down
+  rpoint__
+  
+   
+          if linewid/6/4*6*2 > rp_len then { line invis to Here+((linewid/6/4*6*2)*(cos(rp_ang)),(linewid/6/4*6*2)*(sin(rp_ang)))
+  rpoint__
+  
+    }
+    M4_xyO: last line.c
+    { line from last line.start to M4_xyO+(((linewid/6/4)*(-6))*(cos(rp_ang)),((linewid/6/4)*(-6))*(sin(rp_ang)))\
+       then to M4_xyO+((((linewid/6/4)*(-5))*(cos(rp_ang))+((linewid/6/4)*((2)))*((-sin(rp_ang)))),(((linewid/6/4)*(-5))*(sin(rp_ang))+((linewid/6/4)*((2)))*(cos(rp_ang)))) \
+         then to M4_xyO+((((linewid/6/4)*(-3))*(cos(rp_ang))+((linewid/6/4)*((-2)))*((-sin(rp_ang)))),(((linewid/6/4)*(-3))*(sin(rp_ang))+((linewid/6/4)*((-2)))*(cos(rp_ang)))) \
+   then to M4_xyO+(((-(linewid/6/4))*(cos(rp_ang))+((linewid/6/4)*((2)))*((-sin(rp_ang)))),((-(linewid/6/4))*(sin(rp_ang))+((linewid/6/4)*((2)))*(cos(rp_ang)))) \
+         then to M4_xyO+(((linewid/6/4)*(cos(rp_ang))+((linewid/6/4)*((-2)))*((-sin(rp_ang)))),((linewid/6/4)*(sin(rp_ang))+((linewid/6/4)*((-2)))*(cos(rp_ang)))) \
+   then to M4_xyO+((((linewid/6/4)*(3))*(cos(rp_ang))+((linewid/6/4)*((2)))*((-sin(rp_ang)))),(((linewid/6/4)*(3))*(sin(rp_ang))+((linewid/6/4)*((2)))*(cos(rp_ang)))) \
+         then to M4_xyO+((((linewid/6/4)*(5))*(cos(rp_ang))+((linewid/6/4)*((-2)))*((-sin(rp_ang)))),(((linewid/6/4)*(5))*(sin(rp_ang))+((linewid/6/4)*((-2)))*(cos(rp_ang)))) \
+           then to M4_xyO+(((linewid/6/4)*(6))*(cos(rp_ang)),((linewid/6/4)*(6))*(sin(rp_ang))) \
+         then to last line.end
+      [box invis wid linewid/6/4*2*2 ht linewid/6/4*6*2] at 2nd last line.c
+      }
+  
+  
+  line invis from 2nd last line.start to 2nd last line.end 
+.PE
+
