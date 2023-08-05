@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: imread-benchmark
+Version: 0.0.1
+Summary: Benchmark for image reading for different libraries.
+Home-page: https://github.com/ternaus/helper_functions
+Author: Vladimir Iglovikov
+Author-email: iglovikov@gmail.com
+License: MIT
+Description: [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+         [![CircleCI](https://circleci.com/gh/ternaus/io_benchmark/tree/master.svg?style=svg)](https://circleci.com/gh/ternaus/io_benchmark/tree/master)
+        
+        # I/O benchmark
+        I/O benchmark for different image processing python libraries.
+        
+        # To calculate the I/O speed of your SSD/HDD in Linux
+        
+        ```bash
+        sudo apt-get install hdparm
+        
+        sudo hdparm -Tt <disk_id>
+        ```
+        where `disk_id` is of the type `/dev/sda`
+        
+        As a result you may expect something like:
+        
+        ```bash
+        /dev/sda:
+         Timing cached reads:   26114 MB in  1.99 seconds = 13122.03 MB/sec
+         Timing buffered disk reads: 1062 MB in  3.00 seconds = 353.70 MB/sec
+        ```
+        
+        # Libraries that are considered:
+        
+        TODO => Automatic generation of this section
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Provides-Extra: test
