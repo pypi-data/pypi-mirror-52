@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: check-vat
+Version: 0.1.0
+Summary: Checks if a given string is a valid (real, registered) European VAT ID
+Home-page: https://github.com/tuergeist/check-vat
+Author: Christoph Becker
+Author-email: tuergeist@gmail.com
+License: UNKNOWN
+Description: # Check VAT
+        
+        Check European VAT IDs 
+        
+        ## Installation
+        
+        
+            $ pip install check-vat
+            
+            
+        ## Usage
+        
+            >>> import check_vat
+            >>> check_vat.is_valid_vat('DE 320 8 0254)
+            False
+            
+            
+        ## Keywords
+        
+        * VAT ID Check
+        * Umsatzsteuernummer prüfen API
+         
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
