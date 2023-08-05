@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ddadevops
+Version: 0.2.0
+Summary: dda-devops-build
+Home-page: https://github.com/DomainDrivenArchitecture/dda-devops-build
+Author: meissa GmbH
+Author-email: buero@meissa-gmbh.de
+License: Apache Software License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Build Tools
+
+dda-devops-build
+================
+
+|Slack| \| `
+team@social.meissa-gmbh.de <https://social.meissa-gmbh.de/@team>`__ \|
+`Website & Blog <https://domaindrivenarchitecture.org>`__
+
+License
+-------
+
+Copyright © 2019 meissa GmbH Licensed under the `Apache License, Version
+2.0 <LICENSE>`__ (the "License")
+
+.. |Slack| image:: https://img.shields.io/badge/chat-clojurians-green.svg?style=flat
+   :target: https://clojurians.slack.com/messages/#dda-pallet/
+
+
