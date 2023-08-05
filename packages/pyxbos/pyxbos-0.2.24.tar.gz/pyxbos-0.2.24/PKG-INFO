@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyxbos
+Version: 0.2.24
+Summary: Python bindings for XBOS-flavored WAVEMQ and related services
+Author: Gabe Fierro
+Author-email: gtfierro@cs.berkeley.edu
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aiogrpc (>=1.6,<2.0)
+Requires-Dist: beautifulsoup4 (>=4.7,<5.0)
+Requires-Dist: googleapis-common-protos (>=1.5,<2.0)
+Requires-Dist: grpcio (>=1.18,<2.0)
+Requires-Dist: grpcio-tools (>=1.18,<2.0)
+Requires-Dist: jq (>=0.1.6,<0.2.0)
+Requires-Dist: tlslite-ng (>=0.7.5,<0.8.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Requires-Dist: xxhash (>=1.3,<2.0)
