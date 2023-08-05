@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: rapidsockets
+Version: 0.0.4
+Summary: Official Python SDK for the RapidSockets platform
+Home-page: https://github.com/rapidsockets/python
+Author: RapidSockets
+Author-email: support@rapidsockets.com
+License: MIT
+Keywords: websockets
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: websocket-client
+Requires-Dist: requests
+
+## RapidSockets Python SDK
+
+### Introduction
+This is the official Software Development Kit for Python to interact with the RapidSockets real-time messaging platform.
+
+### Installation
+```
+pip install rapidsockets
+```
+
+### Usage
+```python
+rs = RapidSockets({
+    key: 'your key'
+});
+
+def mychannel(packet):
+    print(packet['payload']['message']) # my message
+
+rs.subscribe({
+    'channel': 'mychannel',
+    'callback': mychannel
+})
+
+rs.publish({
+    'channel': 'mychannel',
+    'message': 'my message'
+})
+```
+
+### Development specific notes
+```
+# build test wheel
+python3 setup.py bdist_wheel
+
+# install test wheel
+python3 -m pip install dist/rapidsockets-0.0.4-py3-none-any.whl
+
+# upload to pypi
+python3 -m twine upload dist/rapidsockets-0.0.4-py3-none-any.whl
+```
+
+
