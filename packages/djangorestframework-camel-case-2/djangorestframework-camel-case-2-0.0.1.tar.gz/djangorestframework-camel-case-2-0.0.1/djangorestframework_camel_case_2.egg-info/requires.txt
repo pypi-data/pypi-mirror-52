@@ -1,0 +1,6 @@
+
+[tests]
+pytest
+flake8
+django
+djangorestframework
