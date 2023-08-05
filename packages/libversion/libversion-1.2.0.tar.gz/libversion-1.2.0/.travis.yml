@@ -1,0 +1,46 @@
+language: python
+dist: xenial
+sudo: required
+matrix:
+  include:
+    # base
+    - python: 3.6
+      env: CC=gcc LIBVERSION=master
+    # python versions
+    - python: 3.7
+      env: CC=gcc LIBVERSION=master
+    - python: 3.8-dev
+      env: CC=gcc LIBVERSION=master
+    - python: nightly
+      env: CC=gcc LIBVERSION=master
+    # compilers
+    - python: 3.6
+      env: CC=clang LIBVERSION=master
+    # libversion versions
+    - python: 3.6
+      env: CC=gcc LIBVERSION=2.9.1
+    - python: 3.6
+      env: CC=gcc LIBVERSION=2.8.2
+    - python: 3.6
+      env: CC=gcc LIBVERSION=2.7.0
+    - python: 3.6
+      env: CC=gcc LIBVERSION=2.6.0
+before_script:
+  - pip install flake8
+  - pip install flake8-builtins
+  - pip install flake8-import-order
+  - pip install flake8-quotes
+  - pip install pep8-naming
+  - pip install tabulate
+  - pip install cmp_version
+  - pip install version || true  # for the case it learns python3
+  - pip install mypy
+  - wget -qO- https://github.com/repology/libversion/archive/$LIBVERSION.tar.gz | tar -xzf- && ( cd libversion-$LIBVERSION && cmake . && make && sudo make install && sudo ldconfig )
+script:
+  - flake8
+  - python setup.py test
+  - python setup.py install
+  - mypy --strict tests/*.py
+  - cd demos
+  - ${PYTHON} ./compare.py
+  - ${PYTHON} ./benchmark.py
