@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+promptr/__init__.py
+promptr.egg-info/PKG-INFO
+promptr.egg-info/SOURCES.txt
+promptr.egg-info/dependency_links.txt
+promptr.egg-info/requires.txt
+promptr.egg-info/top_level.txt
+promptr/test/__init__.py
+promptr/test/test_promptr.py
