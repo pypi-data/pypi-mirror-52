@@ -1,0 +1,15 @@
+video_facenet/__init__.py,sha256=DHIZ93Uvy8bR7nmPT_M7_lRWJ4btfhHzid_maSj2_Cc,28
+video_facenet/align.py,sha256=CX5t9GOAoWuJpRw_klXTnAT7RKFK-hN4F8g2L78KGWY,3022
+video_facenet/cluster_analysis.py,sha256=dUmnUuxi7E7NX-ZtdH6ETHUxaqEcO379ZXn67HoZ7Ug,6408
+video_facenet/facenet.py,sha256=U4NtUn8r9GZtOtrcX0b3M_NmJ-Tl76U3l2JO94xSCSo,65
+video_facenet/facenet_encoder.py,sha256=0V10Tk-2PJoS_mx7HgHYrifBxUTP7h4NhghdxhJ138o,4237
+video_facenet/facenet_types.py,sha256=Joug-GU6VMpEwGDF0Y5EBNcD_tCJWY6lBm6C3sjf3A4,1201
+video_facenet/files.py,sha256=10Cfhi5ysy4QPF1zIlcAi3YZH6oEF_Q-94E6YMBXbgE,511
+video_facenet/hdbscan_clustering.py,sha256=pfEKpFg7SlbZ6qnXBeS0m_rh1pMPH1mzr3-1QA76OKQ,2464
+video_facenet/pipelines.py,sha256=itvphb6XzpmIwT1YzWzXtKdO7c6AhotjdZ8Jl5iHh7g,4104
+video_facenet/utils.py,sha256=Tqoeis1IWQiT5dgLCEbAnU5L6fclztNAz9ZQ1Y9jLgE,3978
+video_facenet/video.py,sha256=mQ-oXZtgxq6-snG0RQSy9547-m6kTaMB4rKuTUbywMc,2372
+video_facenet-0.1.0.dist-info/METADATA,sha256=Nz5z2TbP0g1MzjV4z1hLjYJIDEpTd27UpUUWCr9g5F4,583
+video_facenet-0.1.0.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+video_facenet-0.1.0.dist-info/top_level.txt,sha256=VjpQjfnGN-raG86o4vo9orMKcvfEv1ezIsCcpirYCG0,14
+video_facenet-0.1.0.dist-info/RECORD,,

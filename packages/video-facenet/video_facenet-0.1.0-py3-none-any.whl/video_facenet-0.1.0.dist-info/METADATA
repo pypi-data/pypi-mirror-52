@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: video-facenet
+Version: 0.1.0
+Summary: Face detection/embeding/clustering for video using TensorFlow
+Home-page: https://github.com/act-labs/video_facenet/
+Maintainer: act7labs
+Maintainer-email: act7labs@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: tensorflow
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: opencv-python
+Requires-Dist: seaborn
+Requires-Dist: mtcnn
+Requires-Dist: umap-learn
+Requires-Dist: hdbscan
+
+Face detection/embeddings/clustering for video  files using Google's FaceNet deep neural network & TensorFlow.
+
+
