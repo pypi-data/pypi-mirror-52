@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: obst
+Version: 0.12
+Summary: a lightweight low performance lib to save metadata besides files and iterate through them
+Home-page: https://github.com/NineNein/obst
+Author: Alexander Rischka
+Author-email: alexander.rischka@t-online.de
+License: GPL-3.0
+Download-URL: https://github.com/NineNein/obst/archive/v0.12.tar.gz
+Description: UNKNOWN
+Keywords: FILE,METADATA
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
