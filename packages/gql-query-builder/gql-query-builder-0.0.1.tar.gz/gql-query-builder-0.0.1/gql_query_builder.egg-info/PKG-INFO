@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: gql-query-builder
+Version: 0.0.1
+Summary: This is a GraphQL query builder.
+Home-page: https://github.com/youyo/gql-query-builder
+Author: youyo
+Author-email: 1003ni2@gmail.com
+License: MIT License
+Project-URL: Source, https://github.com/youyo/gql-query-builder
+Description: # gql-query-builder
+        
+        This is a GraphQL query builder.
+        
+        ## Install
+        
+        ```
+        pip install gql-query-builder
+        ```
+        
+        ## Usage
+        
+        ```
+        from gql.query.builder import GqlQuery
+        
+        """
+        query { hero { name } }
+        """
+        query = GqlQuery().fields(['name']).query('hero').operation().generate()
+        print(query)
+        ```
+        
+Keywords: graphql gql query-builder
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
