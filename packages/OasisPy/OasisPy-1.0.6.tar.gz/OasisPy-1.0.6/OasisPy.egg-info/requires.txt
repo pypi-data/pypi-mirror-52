@@ -1,0 +1,13 @@
+astropy
+numpy
+datetime
+tabulate
+scipy
+requests
+MontagePy
+tqdm
+astroscrappy
+astroalign
+image_registration
+photutils
+pytest
