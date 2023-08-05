@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wordweaver
+Version: 0.0.29
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: flask
+Requires-Dist: flask-restful
+Requires-Dist: flask-cors
+
+WordWeaver
+
+
