@@ -1,0 +1,8 @@
+eth-account<0.4.0
+eth-utils
+kivy-garden.kivymd
+opencv-python>=4
+oscpy
+raven
+requests-cache
+web3
