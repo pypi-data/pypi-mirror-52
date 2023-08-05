@@ -1,0 +1,3 @@
+[console_scripts]
+usbrip = usbrip.__main__:main
+
