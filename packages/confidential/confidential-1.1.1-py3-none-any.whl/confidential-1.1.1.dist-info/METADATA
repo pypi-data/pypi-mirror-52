@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: confidential
+Version: 1.1.1
+Summary: Manage secrets in your projects using AWS Secrets Manager
+Author: Daniel van Flymen
+Author-email: dvf@candidco.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3 (>=1.7,<2.0)
+Requires-Dist: click (>=7.0,<8.0)
