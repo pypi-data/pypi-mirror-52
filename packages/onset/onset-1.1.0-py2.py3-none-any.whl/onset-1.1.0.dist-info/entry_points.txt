@@ -1,0 +1,3 @@
+[console_scripts]
+onset = onset.__main__:main
+
