@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: oceanex-py3
+Version: 1.0.0
+Summary: Query, trade and manage funds on Oceanex.
+Home-page: https://github.com/laalaguer/oceanex_py3
+Author: laalaguer
+Author-email: laalaguer@gmail.com
+License: MIT
+Description: 
+        oceanex_py3
+        -------------
+        
+        oceanex_py3 is a Python SDK to query, trade and manage funds on Oceanex.
+        
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
