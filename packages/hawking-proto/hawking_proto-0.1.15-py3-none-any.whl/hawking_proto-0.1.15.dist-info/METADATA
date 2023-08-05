@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: hawking-proto
+Version: 0.1.15
+Summary: This package contains Hawking Proto messages and gRPC stubs definitions
+Home-page: https://www.peach.co
+Author: Peach Inc
+Author-email: hi@peach.com
+License: Apache License, Version 2.0
+Keywords: hawking_proto
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: grpcio (>=1.22.0)
+Requires-Dist: protobuf (>=3.9.0)
+
+UNKNOWN
+
+
