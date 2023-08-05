@@ -1,0 +1,6 @@
+PyYAML
+numpy>=1.12
+pydicom
+
+[test]
+pytest
