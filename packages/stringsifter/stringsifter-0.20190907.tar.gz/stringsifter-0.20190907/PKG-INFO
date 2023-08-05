@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: stringsifter
+Version: 0.20190907
+Summary: stringsifter is a machine learning-based tool that automatically ranks the output of the `strings` program for binary triage analysis.
+Home-page: https://github.com/fireeye/stringsifter
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Download-URL: https://github.com/fireeye/stringsifter
+Description: stringsifter is a machine learning-based tool that automatically ranks the output of the `strings` program for binary triage analysis.
+Keywords: stringsifter,rank,strings,binary,triage
+Platform: UNKNOWN
+Provides: stringsifter
