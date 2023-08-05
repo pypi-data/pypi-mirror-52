@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+aliyun_python_sdk_hivisengine.egg-info/PKG-INFO
+aliyun_python_sdk_hivisengine.egg-info/SOURCES.txt
+aliyun_python_sdk_hivisengine.egg-info/dependency_links.txt
+aliyun_python_sdk_hivisengine.egg-info/requires.txt
+aliyun_python_sdk_hivisengine.egg-info/top_level.txt
+aliyunsdkhivisengine/__init__.py
+aliyunsdkhivisengine/endpoint.py
+aliyunsdkhivisengine/request/__init__.py
+aliyunsdkhivisengine/request/v20190625/DiagnosisKneeRequest.py
+aliyunsdkhivisengine/request/v20190625/GetDiagnosisKneeResultRequest.py
+aliyunsdkhivisengine/request/v20190625/__init__.py
