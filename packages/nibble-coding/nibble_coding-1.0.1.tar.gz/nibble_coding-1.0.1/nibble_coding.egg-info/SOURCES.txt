@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+nibble_coding/__init__.py
+nibble_coding/__version__.py
+nibble_coding/nibble_coding.py
+nibble_coding.egg-info/PKG-INFO
+nibble_coding.egg-info/SOURCES.txt
+nibble_coding.egg-info/dependency_links.txt
+nibble_coding.egg-info/requires.txt
+nibble_coding.egg-info/top_level.txt

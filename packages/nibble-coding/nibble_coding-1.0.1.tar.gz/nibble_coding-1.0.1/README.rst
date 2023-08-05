@@ -1,0 +1,95 @@
+nibble_coding
+=========================================================================================
+|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+
+Python package implementing nibble and byte coding.
+
+How do I install this package?
+----------------------------------------------
+As usual, just download it using pip:
+
+.. code:: shell
+
+    pip install nibble_coding
+
+Tests Coverage
+----------------------------------------------
+Since some software handling coverages sometime get slightly different results, here's three of them:
+
+|coveralls| |sonar_coverage| |code_climate_coverage|
+
+Usage examples
+----------------------------------------------
+
+.. code:: python
+
+    from nibble_coding import nibble_coding, byte_coding
+
+    byte_coding(0)# 10000000
+    byte_coding(40)# 10101000
+    byte_coding(80)# 11010000
+    byte_coding(120)# 11111000
+    byte_coding(160)# 0000000110100000
+    byte_coding(200)# 0000000111001000
+    byte_coding(240)# 0000000111110000
+    byte_coding(280)# 0000001010011000
+    byte_coding(320)# 0000001011000000
+    byte_coding(360)# 0000001011101000
+
+    nibble_coding(0) # 1000
+    nibble_coding(1) # 1001
+    nibble_coding(2) # 1010
+    nibble_coding(3) # 1011
+    nibble_coding(4) # 1100
+    nibble_coding(5) # 1101
+    nibble_coding(6) # 1110
+    nibble_coding(7) # 1111
+    nibble_coding(8) # 00011000
+    nibble_coding(9) # 00011001
+    nibble_coding(10) # 00011010
+    nibble_coding(11) # 00011011
+    nibble_coding(12) # 00011100
+    nibble_coding(13) # 00011101
+    nibble_coding(14) # 00011110
+    nibble_coding(15) # 00011111
+
+
+.. |travis| image:: https://travis-ci.org/LucaCappelletti94/nibble_coding.png
+   :target: https://travis-ci.org/LucaCappelletti94/nibble_coding
+   :alt: Travis CI build
+
+.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_nibble_coding&metric=alert_status
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_nibble_coding
+    :alt: SonarCloud Quality
+
+.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_nibble_coding&metric=sqale_rating
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_nibble_coding
+    :alt: SonarCloud Maintainability
+
+.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_nibble_coding&metric=coverage
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_nibble_coding
+    :alt: SonarCloud Coverage
+
+.. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/nibble_coding/badge.svg?branch=master
+    :target: https://coveralls.io/github/LucaCappelletti94/nibble_coding?branch=master
+    :alt: Coveralls Coverage
+
+.. |pip| image:: https://badge.fury.io/py/nibble_coding.svg
+    :target: https://badge.fury.io/py/nibble_coding
+    :alt: Pypi project
+
+.. |downloads| image:: https://pepy.tech/badge/nibble_coding
+    :target: https://pepy.tech/badge/nibble_coding
+    :alt: Pypi total project downloads 
+
+.. |codacy|  image:: https://api.codacy.com/project/badge/Grade/7bad19975c654563b023f690b4c69b5a
+    :target: https://www.codacy.com/manual/LucaCappelletti94/nibble_coding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/nibble_coding&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Maintainability
+
+.. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/72a3591f5ab8ae21322a/maintainability
+    :target: https://codeclimate.com/github/LucaCappelletti94/nibble_coding/maintainability
+    :alt: Maintainability
+
+.. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/72a3591f5ab8ae21322a/test_coverage
+    :target: https://codeclimate.com/github/LucaCappelletti94/nibble_coding/test_coverage
+    :alt: Code Climate Coverate
