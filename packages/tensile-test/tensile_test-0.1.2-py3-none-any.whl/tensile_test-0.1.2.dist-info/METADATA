@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tensile-test
+Version: 0.1.2
+Summary: A package for analysing the results of tensile tests.
+Home-page: UNKNOWN
+Author: Adam J. Plowman
+Author-email: adam.plowman@manchester.ac.uk
+License: UNKNOWN
+Project-URL: Github, https://github.com/LightForm-group/tensile-test
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: plotly
+Requires-Dist: ipywidgets
+
+[![PyPI version](https://badge.fury.io/py/tensile_test.svg)](https://badge.fury.io/py/tensile_test)
+[![Build Status](https://travis-ci.org/LightForm-group/tensile-test.svg?branch=master)](https://travis-ci.org/LightForm-group/tensile-test)
+
+# tensile-test
+
+This is a Python package to assist with analysing the results of tensile tests. Additionally, this package can help with fitting crystal plasticity parameters to experimental tensile tests, using the classes `HardeningLaw` and `HardeningLawFitter`.
+
+## Installation
+
+`pip install tensile-test`
+
+## Demonstration
+
+Check out [this repository](https://github.com/LightForm-group/surfalex-CP-parameters) for an interactive demonstration.
+
+
