@@ -1,0 +1,11 @@
+README.md
+setup.py
+sudokugen/__init__.py
+sudokugen/generator.py
+sudokugen/solver.py
+sudokugen/tests.py
+sudokugen.egg-info/PKG-INFO
+sudokugen.egg-info/SOURCES.txt
+sudokugen.egg-info/dependency_links.txt
+sudokugen.egg-info/top_level.txt
+sudokugen.egg-info/zip-safe
