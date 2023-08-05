@@ -1,0 +1,120 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block pagecontent %}
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th align="right">Site Name/Code:</th>
+            <td>{{ configs.APP_NAME }} ({{ configs.APP_CODE }})</td>
+        </tr>
+        <tr>
+            <th align="right">Site Version:</th>
+            <td>{{ configs.APP_VERSION }}</td>
+        </tr>
+        <tr>
+            <th align="right">Server Time:</th>
+            <td>
+                Timestamp: {{ server_time.timestamp }}<br />
+                Like Banner: {{ server_time.banner_date_time }}<br />
+            </td>
+        </tr>
+        <tr>
+            <th align="right">Environment:</th>
+            <td>{{ configs.ENVIRONMENT }}</td>
+        </tr>
+        <tr>
+            <th align="right">CAS (SSO):</th>
+            <td class="{%if 'cas' in issues%}flagged_issue{%endif%}">
+                {%if 'cas' in issues%}{%fa fa-exclamation-triangle%}{%endif%}
+                {{ cas }}
+            </td>
+        </tr>
+        <tr>
+            <th align="right">Finti URL:</th>
+            <td class="{%if 'finti' in issues%}flagged_issue{%endif%}">
+                {%if 'finti' in issues%}{%fa fa-exclamation-triangle%}{%endif%}
+                {{ finti }}
+            </td>
+        </tr>
+         <tr>
+            <th align="right">SSO Proxy:</th>
+            <td>
+                <b>HTTP Status:</b> {{ sso_proxy.status }}<br />
+                <b>Version:</b> {{ sso_proxy.version }}<br />
+                <b>Database:</b>
+                    {%if sid%}
+                        <span class="{%if 'sid' in issues%}flagged_issue{%endif%}">
+                            {%if 'sid' in issues%}{%fa fa-exclamation-triangle%}{%endif%}
+                            {{ sid }}
+                        </span>
+                        <span class="text-muted indent small">
+                            Note: This is the database used by the "SSO-Proxy" API.
+                            It is not necessarily the database in use for this app.
+                        </span><br />
+                    {%else%}
+                        <span class="{%if 'sid_message' in issues%}flagged_issue{%endif%}">
+                            {%if 'sid_message' in issues%}{%fa fa-exclamation-triangle%}{%endif%}
+                            {{ sid_message }}
+                        </span>
+                    {%endif%}
+            </td>
+        </tr>
+        <tr>
+            <th align="right">Static Content URL:</th>
+            <td>{%static_content_url%}</td>
+        </tr>
+        <tr>
+            <th align="right">Session Duration:</th>
+            <td>
+                {{session_data.expiry_seconds}} seconds<br />
+                <em>{{session_data.expiry_description}} of inactivity</em><br />
+            </td>
+        </tr>
+
+        {%set_auth_object%}
+        {%set_current_user%}
+        <tr>
+            <th align="right">Identity:</th>
+            <td>
+                {%if request.user.is_authenticated and auth_object.is_logged_in%}
+                    {%id_tag current_user%}
+                {%elif request.user.is_authenticated%}
+                    Logged in, but no Banner identity.<br />
+                    {{request.session.attributes}}
+                {%else%}
+                    Not logged in.
+                {%endif%}
+                <br />
+            </td>
+        </tr>
+
+        <tr>
+            <th>PSU Plugins:</th>
+            <td>
+                The following PSU re-usable apps have been installed:<br />
+                <ul>
+                    {%for pp in installed_plugins%}
+                        <li>{{pp}}</li>
+                    {%endfor%}
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <style>
+        .flagged_issue{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+    {% endblock %}
+</body>
+</html>

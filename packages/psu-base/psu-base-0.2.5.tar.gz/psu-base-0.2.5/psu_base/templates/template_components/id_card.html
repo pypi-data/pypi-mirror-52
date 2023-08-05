@@ -1,0 +1,67 @@
+{% load base_taglib %}
+
+<div class="id_card">
+    <div class="id_card-photo">
+        {% id_photo user=user_instance %}<br />
+        {%if user_instance.proxy %}
+        <div  style="text-align:center;color:orangered;font-weight:bold;">PROXY</div>
+        {%endif%}
+    </div>
+    <div class="id_card-name">{{user_instance.display_name}}</div>
+    <div class="id_card-text">
+        {{user_instance.email_address|default:'No Email'}}<br />
+        {%if user_instance.psu_id%}{{user_instance.psu_id}}{%endif%}
+        {%if_has_authority developer%}
+            {%if user_instance.psu_id and user_instance.pidm%} / {%endif%}
+            {%if user_instance.pidm%}{{user_instance.pidm}}{%endif%}
+        {%end_if_has_authority%}<br />
+        <span class="code" style="font-size: 8pt;">
+            {{user_instance.authorities|join:", "|default:"No Authorities" }}
+        </span><br />
+    </div>
+    <div class="id_card-footer">
+        {%if user_instance.proxy %}
+        [x] Remove Proxy
+        {%endif%}
+    </div>
+</div>
+
+
+<style>
+.id_card{
+
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: left;
+
+    display: inline-grid;
+    grid-template-columns: [photo] 100px [text] 1fr;
+    grid-template-rows: [name] 30px [identifiers] auto [footer] 15px;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+
+
+}
+.id_card-photo{
+    grid-area: 1 / photo / 5 / text
+}
+.id_card-name {
+    font-family: times, serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.id_card-photo .id_photo{
+    margin: 5px;
+    border: 1px solid #333;
+}
+.id_card-text{
+    font-size: .9em;
+}
+.id_card-footer{
+    margin-top: 10px;
+    font-size: .8em;
+    text-align: right;
+    padding: 0 5px;
+}
+</style>

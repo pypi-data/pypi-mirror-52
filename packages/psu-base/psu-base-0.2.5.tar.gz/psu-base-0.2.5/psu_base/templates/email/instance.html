@@ -1,0 +1,29 @@
+{% load base_taglib %}
+<input type="hidden" name="email-instance-id" value="{{email_instance.id}}" />
+<table class="table">
+    <tr>
+        <th scope="row" width="50">From</th>
+        <td><input type="text" class="form-control" id="from" value="{{email_instance.from}}" readonly /></td>
+    </tr>
+    <tr>
+        <th scope="row">To</th>
+        <td><input type="text" class="form-control" id="to" value="{{email_instance.get_to_csv}}" readonly /></td>
+    </tr>
+    <tr>
+        <th scope="row">CC</th>
+        <td><input type="text" class="form-control" id="cc" value="{{email_instance.get_cc_csv}}" readonly /></td>
+    </tr>
+    <tr>
+        <th scope="row">BCC</th>
+        <td><input type="text" class="form-control" id="bcc" value="{{email_instance.get_bcc_csv}}" readonly /></td>
+    </tr>
+    <tr>
+        <th scope="row">Subject</th>
+        <td><input type="text" class="form-control" id="subject" value="{{email_instance.subject}}" readonly /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            {{message_content}}
+        </td>
+    </tr>
+</table>

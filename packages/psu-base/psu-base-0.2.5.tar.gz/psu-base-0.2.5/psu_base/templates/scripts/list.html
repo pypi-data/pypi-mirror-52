@@ -1,0 +1,258 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block pagecontent %}
+    <h1>Scripts for {%app_name%}</h1>
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th scope="col">Scope</th>
+            <th scope="col">Description</th>
+            <th scope="col">Target URL</th>
+            <th scope="col">Target User</th>
+            <th scope="col">Enabled</th>
+            <th scope="col">Effective</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Audit</th>
+            <th scope="col">Actions</th>
+        </tr>
+
+        {### ADMIN SCRIPTS ###}
+        {% for ss in app_scripts%}
+        <tr>
+            <td>{{ss.app_code}}</td>
+            <td><input type="text" id="description-{{ss.id}}" value="{{ss.description}}" class="editable" onchange="update_script($(this));" /></td>
+            <td><input type="text" id="target_url-{{ss.id}}" value="{{ss.target_url|default:''}}" class="editable" onchange="update_script($(this));" /></td>
+            <td><input type="text" id="target_username-{{ss.id}}" value="{{ss.target_username|default:''}}" class="editable" onchange="update_script($(this));" /></td>
+            <td>
+                {%select_menu id=ss.id value=ss.enabled options=enabled_options onchange="update_script($(this));" %}
+            </td>
+            <td><input type="date" id="eff_date-{{ss.id}}" value="{{ss.eff_date|default:''}}" class="editable" onchange="update_script($(this));" /></td>
+            <td><input type="date" id="end_date-{{ss.id}}" value="{{ss.end_date|default:''}}" class="editable" onchange="update_script($(this));" /></td>
+            <td class="date">
+                {{ss.developer}}<br />
+                <span title="{{ss.last_updated|date:'g:i A'}}">{{ss.last_updated|date:"d-M-Y"|upper}}</span>
+            </td>
+            <td>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="script-{{ss.id}}" tabindex="-1" role="dialog" aria-labelledby="script-{{ss.id}-label}" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <b class="modal-title" id="script-{{ss.id}}-label">{{ss.description}}</b>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                  $(document).ready(function(){
+                                  <textarea name="javascript" id="javascript-{{ss.id}}">{{ss.javascript}}</textarea>
+                                  });
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="update_script( $('#javascript-{{ss.id}}') );" data-dismiss="modal">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#script-{{ss.id}}">
+                            {%fa fa-file-code-o title="Edit Javascript Code"%}
+                        </button>
+
+
+                {%fa fa-trash-o title="Delete this script" class="btn btn-danger btn-sm" onclick="delete_script($(this), {{ff.id}});"%}
+            </td>
+        </tr>
+        {% endfor %}
+
+        {%set_current_user%}
+        <form action="{% url 'psu:add_script' %}" method="post" id="script-form">
+            {%csrf_token%}
+            <tr>
+                <td>
+                    <select name="app_code">
+                        <option id="{%app_code%}">{%app_name%}</option>
+                        {%if is_global_admin%}
+                            <option value="">Global</option>
+                        {%endif%}
+                    </select>
+                </td>
+                <td><input type="text" name="description" maxlength="100" /></td>
+                <td><input type="text" name="target_url" maxlength="80" /></td>
+                <td><input type="text" name="target_username" maxlength="30" /></td>
+                <td>
+                    {%select_menu name="enabled" id="new" value="N" options=enabled_options %}
+                </td>
+                <td><input type="date" name="eff_date"  min="{%now 'Y-m-d'%}"/></td>
+                <td><input type="date" name="end_date" min="{%now 'Y-m-d'%}" /></td>
+                <td>{{current_user.username}}</td>
+                <td>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <b class="modal-title" id="exampleModalLabel">Modal title</b>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                  $(document).ready(function(){
+                                  <textarea name="javascript" style="width: 100%;min-height:200px;padding-left: 25px;"></textarea>
+                                  });
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal">
+                            {%fa fa-file-code-o title="Edit Javascript Code"%}
+                        </button>
+
+
+
+                    <button type="submit" class="btn btn-success btn-sm" title="Add">
+                        <span class="fa fa-plus" aria-hidden="true"></span>
+                        <span class="sr-only">Add</span>
+                    </button>
+                </td>
+            </tr>
+        </form>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        input.editable{
+            border: 0px;
+            border-bottom: 1px dotted #AAA;
+        }
+        .text-muted input, .text-muted select{
+            color: #777;
+        }
+        .text-danger input, .text-danger select{
+            color: red;
+        }
+        .date{
+            font-size: .75em;
+            cursor: default;
+        }
+
+
+        .modal-dialog {
+            max-width: 800px;
+        }
+        .modal-body {
+            font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+        }
+        .modal-body textarea{
+            width: 100%;
+            min-height: 300px;
+            padding: 5px;
+            padding-left: 20px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #DEDEDE;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function update_script(element){
+            var html_id = element.attr('id');
+            if(element.is('select')){
+                var prop = "enabled";
+                var id = element.attr('id');
+                var value = element.val();
+            }
+            else{
+                var pieces = html_id.split('-');
+                var prop = pieces[0];
+                var id = pieces[1];
+                var value = element.val();
+            }
+
+            $.ajax({
+                type:   "POST",
+                url:    "{% url 'psu:modify_script' %}",
+                data:   {
+                    id: id, prop: prop, value: value,
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                beforeSend:function(){
+                    element.css('border-color', 'orange');
+                },
+                success:function(data){
+                    element.css('border-color', 'green');
+                    element.val(data)
+                    //Update the activity date in the view
+                    var monthNames = [
+                        "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+                    ];
+                    var date = new Date()
+                    var day = date.getDate();
+                    var monthIndex = date.getMonth();
+                    var year = date.getFullYear();
+                    var date_container = element.closest('tr').find('.date');
+                    date_container.html(day + ' ' + monthNames[monthIndex] + ' ' + year);
+                    date_container.attr('title', "Updated just now");
+                },
+                error:function(){
+                    element.css('border-color', 'red');
+                },
+                complete:function(){}
+            });
+        }
+
+        function delete_script(element, id){
+
+            $.ajax({
+                type:   "POST",
+                url:    "{% url 'psu:delete_script' %}",
+                data:   {
+                    id: id, csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                beforeSend:function(){
+                    element.after(getAjaxLoadImage());
+                },
+                success:function(data){
+                    element.closest('tr').remove();
+                },
+                error:function(){
+                    element.addClass('ajax-error');
+                },
+                complete:function(){}
+            });
+        }
+    </script>
+
+    {% endblock %}
+</body>
+</html>

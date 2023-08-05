@@ -1,0 +1,38 @@
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portland State University</title>
+    <link rel="shortcut icon" href="{%static_content_url%}/images/favicon.ico" type="image/x-icon">
+    {%jquery%}
+    {%bootstrap%}
+    {%font_awesome version='4'%}
+
+    {% wdt_stylesheet "legacy.css" %}
+    {% wdt_stylesheet "main.css" %}
+    {% wdt_stylesheet "ajax.css" %}
+    {% wdt_javascript "ajax.js" %}
+
+    {% block scripts %}
+    {% endblock %}
+</head>
+<body>
+    {% include 'template_components/header.html' %}
+    {% include 'template_components/message_container.html' %}
+
+    {% block pagecontent %}
+
+    <br />
+    ...<br />
+    <br />
+
+    {% endblock %}
+
+    {% include 'template_components/footer.html' %}
+
+    {## Run AdminScripts if enabled ##}
+    {%admin_script%}
+</body>
+</html>

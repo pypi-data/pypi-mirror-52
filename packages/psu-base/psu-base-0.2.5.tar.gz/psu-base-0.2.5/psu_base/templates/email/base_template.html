@@ -1,0 +1,25 @@
+{% load base_taglib %}
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{{subject|default:"Message from Portland State University"}}</title>
+    </head>
+    <body>
+
+        <div style="background-color: White;padding: 10px;color: Black;">
+            <div style="float:left;">
+                <img src="http://www.pdx.edu/sites/www.pdx.edu.syndication/files/psulogo_horiz_std.gif" alt="Portland State University" style="margin-bottom:5px;color:#6A7F10;font-size:16pt;font-weight:bold;" />
+            </div>
+            <div style="float:right;font-size:16pt;font-weight:bold;font-variant:small-caps;color: #6A7F10;padding-top:5px;">
+                {%app_name%}
+            </div>
+            <hr style="clear:both;" />
+            <div style="padding: 20px;">
+                <p>{{content}}</p>
+                <br />
+                <br style="clear:both;" />
+            </div>
+            <br />
+        </div>
+    </body>
+</html>

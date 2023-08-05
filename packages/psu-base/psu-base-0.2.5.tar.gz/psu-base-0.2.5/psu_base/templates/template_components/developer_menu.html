@@ -1,0 +1,152 @@
+{% load base_taglib %}
+
+{# The following only displays for developers #}
+{% if_has_authority developer %}
+    <!-- <span class="fa fa-cog xlg" title="Developer Menu" id="psu_developer-button" onclick="show_developer_menu();"></span>
+    <div id="psu_developer-menu" class="hidden" onmouseenter="preserve_developer_menu()" onmouseleave="timeout_developer_menu()">
+        <div class="psu_developer-item" style="text-align:center;padding:3px 5px;">
+            <b>{%app_name%}</b>
+            <span class="float-right"><a href="{%url 'psu:versions'%}">{%app_version%}</a></span>
+            <br style="clear:both" />
+        </div>
+        <div class="psu_developer-item">
+           <a href="{%url 'psu:test'%}">
+                <span class="fa fa-medkit" aria-hidden="true"></span>
+                Status Page
+           </a>
+        </div>
+        <div class="psu_developer-item">
+           <a href="{%url 'psu:session'%}">
+                <span class="fa fa-microchip" aria-hidden="true"></span>
+                Session Contents
+           </a>
+        </div>
+        <div class="psu_developer-item">
+           <a href="{%url 'psu:finti'%}">
+                <span class="fa fa-laptop" aria-hidden="true"></span>
+                Finti Interface
+           </a>
+        </div>
+
+        <div class="psu_developer-item">
+           <a href="{%url 'psu:features'%}">
+                <span class="fa fa-plug" aria-hidden="true"></span>
+                Feature Toggles
+           </a>
+        </div>
+        {%if_feature_enabled admin_script%}
+        <div class="psu_developer-item">
+           <a href="{%url 'psu:scripts'%}">
+                <span class="fa fa-code" aria-hidden="true"></span>
+                Admin Scripts
+           </a>
+        </div>
+        {%end_if_feature_enabled%}
+
+        <div class="psu_developer-item">
+           <a href="{%url 'psu:audit'%}">
+                <span class="fa fa-id-card-o" aria-hidden="true"></span>
+                Audit Events
+           </a>
+        </div>
+
+        {# ToDo: Find a way to include items from supplemental plugins to this menu #}
+    </div> -->
+    <div class="headermenu dropdown">
+        <button class="headermenu dropbtn">
+            <span class="fa fa-cog xlg dev-icon" title="Developer Menu" id="psu_developer-button"></span>
+            <span style="line-height:40px;" class="menuname">Dev menu</span>&nbsp;
+            <i class="fa fa-caret-down" style="line-height:40px;" title="Expand" aria-hidden="true"></i>
+        </button>
+        <div id="dev-menu" class="dropdown-content">
+            <div class="menu-top">
+                App name: <b>{%app_name%}</b>
+            </div>
+
+            <a class="menu-item psu_developer-item" href="{%url 'psu:versions'%}">Version: {%app_version%}</a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:test'%}">
+                <span class="fa fa-medkit" aria-hidden="true"></span>
+                Status Page
+            </a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:session'%}">
+                <span class="fa fa-microchip" aria-hidden="true"></span>
+                Session Contents
+            </a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:finti'%}">
+                <span class="fa fa-laptop" aria-hidden="true"></span>
+                Finti Interface
+            </a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:features'%}">
+                <span class="fa fa-plug" aria-hidden="true"></span>
+                Feature Toggles
+            </a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:emails'%}">
+                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                Email Log
+            </a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:email'%}">
+                <span class="fa fa-paper-plane-o" aria-hidden="true"></span>
+                Send Test Email
+            </a>
+            <a class="menu-item psu_developer-item" href="{%url 'psu:audit'%}">
+                <span class="fa fa-id-card-o" aria-hidden="true"></span>
+                Audit Events
+            </a>
+        </div>
+    </div>
+
+    <style>
+        #psu_developer-button{
+            /* margin-top: 10px; */
+            margin-right: 10px;
+            /* color: #8C9F32; */
+        }
+        #psu_developer-menu{
+            position: absolute;
+            display: none;
+            top: 25px;
+            min-width: 200px;
+            background-color: #7B8F21;
+            padding: 5px 1px;
+            white-space: nowrap;
+            font-size: .8em;
+        }
+        .psu_developer-item {
+            border-top: 1px dotted #6A7F10;
+            /* padding: 12px 16px; */
+        }
+        .psu_developer-item a{
+            padding: 0 7px;
+        }
+        .psu_developer-item .fa {
+            width: 30px;
+            text-align: center;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        function show_developer_menu(){
+            $('#psu_developer-menu').removeClass('hidden');
+        }
+        function hide_developer_menu(){
+            $('#psu_developer-menu').addClass('hidden');
+        }
+        var developer_menu_hide_event;
+        function preserve_developer_menu(){
+            try{
+                clearTimeout(developer_menu_hide_event);
+            }
+            catch(ee){}
+        }
+        function timeout_developer_menu(seconds){
+            if(typeof seconds === 'undefined'){
+                seconds = .5
+            }
+            preserve_developer_menu()
+            developer_menu_hide_event = setTimeout(function(){ hide_developer_menu(); }, seconds*1000);
+
+        }
+    </script>
+
+{% end_if_has_authority %}

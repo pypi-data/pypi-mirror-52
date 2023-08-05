@@ -1,0 +1,60 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block pagecontent %}
+
+    <h1>Email Test Page</h1>
+
+    <h2>Default Recipient</h2>
+    <div class="indent">
+        The default recipient will receive any non-production emails intended for recipients who are not allowed
+        to receive them.  The default recipient will always be the CAS-authenticated user (not the user they are
+        impersonating).  When the user is not authenticated, the app should offer-up a way for them to supply the
+        email address where they would like to receive the test emails (see "Dual Credit Application" as example).<br />
+        <br />
+        The current default recipient is: &nbsp; <b class="code">{{default_recipient}}</b>
+    </div>
+    <br />
+    <br />
+
+    <h2>Testing Groups</h2>
+    Non-prod recipients are defined in GTVSDAX.  There used to be an interface to edit the lists in the
+    "IS Change Control" (Banweb) by clicking the "Email Console" link.<br />
+    <br />
+    <div class="indent code small">
+        {%for aa in testers%}
+            {{aa}},
+        {%endfor%}
+    </div>
+    <br />
+    <br />
+
+    <h2>Send a Test Email</h2>
+    <form method="post" class="indent">
+        {%csrf_token%}
+        <label>
+            To:
+            <input type="email" name="to_recipient" placeholder="Recipient" />
+        </label>
+        <button type="submit" class="btn btn-info">
+            {%fa fa-envelope-o%} Send Test Email
+        </button><br />
+        {% if_non_production %}
+            <br />
+            <span class="text-muted">
+                The address you enter will be screened for allowed non-prod send-ability
+            </span>
+        {% end_if_non_production %}
+    </form>
+
+
+    {% endblock %}
+</body>
+</html>

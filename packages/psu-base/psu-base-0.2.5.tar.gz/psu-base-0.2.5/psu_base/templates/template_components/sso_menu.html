@@ -1,0 +1,400 @@
+{% load base_taglib %}
+
+{%set_auth_object%}
+{%set_current_user%}
+{# AUTHENTICATED USER (LOGGED IN) #}
+{% if_logged_in %}
+    <div class="headermenu dropdown">
+        <button class="headermenu dropbtn">
+            <span class="" id="psu_developer-button">
+                {%id_photo user=current_user class="id_photo-navbar" onmouseout="timeout_sso_menu(5);" %}
+                {%if_proxying%}
+                    {%id_photo user=auth_object.proxied_user class="id_photo-navbar-proxy"%}
+                {%end_if_proxying%}
+            </span>
+            <span style="line-height:40px;" class="menuname">{{current_user.display_name}}</span>&nbsp;
+            <i class="fa fa-caret-down" style="line-height:40px;" title="Expand" aria-hidden="true"></i>
+        </button>
+        <div id="sso-menu" class="dropdown-content">
+            <div class="menu-top">
+                Logged in as: <b class="menu-item dropdown-user">{{ current_user.display_name }}</b>
+            </div>
+
+            {## IMPERSONATION FORM ########################################}
+            {% if_can_impersonate %}
+
+                {# Link to Remove Current Impersonation ########}
+                {% if_impersonating %}
+                    <a class="sso_menu-item" href="{% url 'psu:stop_impersonating' %}" onclick="showAuthSpinner();">
+                        <span class="fa fa-undo" aria-hidden="true"></span>
+                        Be Yourself
+                    </a>
+                {% end_if_impersonating %}
+
+                {# Link for impersonation selection form #######}
+                <a class="sso_menu-item" onclick="showAuthForm('impersonate');">
+                    <span class="fa fa-user-circle-o" aria-hidden="true"></span>
+                    Impersonate {%if_impersonating%}Else{%end_if_impersonating%}
+                </a>
+                <div id="sso_impersonation-form-container" class="sso_menu-item sso_menu-form hidden">
+                    <form action="{% url 'psu:start_impersonating' %}" method="post" id="sso_impersonation-form" onsubmit="showAuthSpinner();">
+                        {%csrf_token%}
+                        <label class="sr-only">Username or PSU ID</label>
+                        <input type="text"
+                                id="sso_impersonation-form-input"
+                                name="impersonation_data"
+                                placeholder="Username or PSU ID"
+                                onfocus="preserve_sso_menu();"
+                                onkeypress="preserve_sso_menu();"
+                                size="50"
+                        />
+                        <input type="submit" id="sso_impersonation-submit" value="Go" class="sr-only" /><br />
+                        <br />
+                    </form>
+                </div>
+            {% end_if_can_impersonate %}
+            <a class="sso_menu-item" href="{% url 'psu:stop_impersonating' %}" onclick="showAuthSpinner();">
+                <span class="fa fa-undo" aria-hidden="true"></span>
+                Be Yourself
+            </a>
+
+            {## PROXY FORM ################################################}
+            {%if_has_authority proxy%}
+                {# Link to Remove Current Proxy ############}
+                {%if_proxying%}
+                    <a class="sso_menu-item" href="{% url 'psu:stop_proxying' %}" onclick="showAuthSpinner();">
+                        <span class="fa fa-undo" aria-hidden="true"></span>
+                        Remove Proxy
+                    </a>
+                {%end_if_proxying%}
+
+                <a class="sso_menu-item" onclick="showAuthForm('proxy');">
+                    <span class="fa fa-users" aria-hidden="true"></span>
+
+                    Select
+                    {%if_not_proxying%}a{%end_if_not_proxying%}
+                    {%if_proxying%}Another{%end_if_proxying%}
+                    Proxy
+                </a>
+
+                {# Impersonation Selection Form ################}
+                <div id="proxy-form-container" class="sso_menu-item sso_menu-form hidden">
+                    <form action="{% url 'psu:start_proxying' %}" method="post" id="proxy-form" onsubmit="showAuthSpinner();">
+                        {%csrf_token%}
+                        <label class="sr-only">Username or PSU ID</label>
+                        <input type="text"
+                                id="proxy-form-input"
+                                name="proxy_data"
+                                placeholder="Username or PSU ID"
+                                onfocus="preserve_sso_menu();"
+                                onkeypress="preserve_sso_menu();"
+                        />
+                        <input type="submit" id="proxy-submit" value="Go" class="sr-only" /><br />
+                        <br />
+                    </form>
+                </div>
+            {%end_if_has_authority%}
+            <a class="sso_menu-item" href="{% url 'cas:logout' %}">
+                <span class="fa fa-sign-out" aria-hidden="true"></span>
+                Log Out
+            </a>
+        </div>
+        <div id="sso-auth-smokescreen" class="hidden"></div>
+        <div id="sso-auth-loading" class="hidden">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i><br />
+            Refreshing Authentication Data
+        </div>
+    </div>
+{%end_if_logged_in%}
+
+{# NON-AUTHENTICATED USER (LOGGED OUT) #}
+{% if_not_logged_in %}
+    <div>
+        <a href="{% url 'cas:login' %}">
+            <!-- {%id_photo user=None class="id_photo-navbar"%} -->
+            <i class="fa fa-sign-in" title="login" aria-hidden="true"></i>
+            Log In
+        </a>
+    </div>
+{% end_if_not_logged_in %}
+<!-- <div class="sso_menu-container">
+
+
+    {# AUTHENTICATED USER (LOGGED IN) #}
+    {% if_logged_in %}
+        <div class="float-right" onclick="show_sso_menu();">
+            {%id_photo user=current_user class="id_photo-navbar" onmouseout="timeout_sso_menu(5);" %}
+            {%if_proxying%}
+                {%id_photo user=auth_object.proxied_user class="id_photo-navbar-proxy"%}
+            {%end_if_proxying%}
+        </div>
+        <div class="sso_menu hidden" onmouseenter="preserve_sso_menu();" onmouseleave="timeout_sso_menu();">
+            <div class="sso_menu-items">
+
+                {## DISPLAY NAME ##############################################}
+                <div style="font-weight:bold;">
+                    {{current_user.display_name}}
+                </div>
+
+                {## IMPERSONATION FORM ########################################}
+                {%if_can_impersonate%}
+
+                    {# Link to Remove Current Impersonation ########}
+                    {%if_impersonating%}
+                        <div class="sso_menu-item">
+                            <a href="{% url 'psu:stop_impersonating' %}" onclick="showAuthSpinner();">
+                                <span class="fa fa-undo" aria-hidden="true"></span>
+                                Be Yourself
+                            </a>
+                        </div>
+                    {%end_if_impersonating%}
+
+                    {# Link for impersonation selection form #######}
+                    <div class="sso_menu-item">
+                        <a onclick="showAuthForm('impersonate');">
+                            <span class="fa fa-user-circle-o" aria-hidden="true"></span>
+                            Impersonate Someone {%if_impersonating%}Else{%end_if_impersonating%}
+                        </a>
+                    </div>
+
+                    {# Impersonation Selection Form ################}
+                    <div id="sso_impersonation-form-container" class="sso_menu-item sso_menu-form hidden">
+                        <form action="{% url 'psu:start_impersonating' %}" method="post" id="sso_impersonation-form" onsubmit="showAuthSpinner();">
+                            {%csrf_token%}
+                            <label class="sr-only">Username or PSU ID</label>
+                            <input type="text"
+                                   id="sso_impersonation-form-input"
+                                   name="impersonation_data"
+                                   placeholder="Username or PSU ID"
+                                   onfocus="preserve_sso_menu();"
+                                   onkeypress="preserve_sso_menu();"
+                            />
+                            <input type="submit" id="sso_impersonation-submit" value="Go" class="sr-only" /><br />
+                            <br />
+                        </form>
+                    </div>
+                {%end_if_can_impersonate%}
+
+
+                {## PROXY FORM ################################################}
+                {%if_has_authority proxy%}
+
+                    {# Link to Remove Current Proxy ############}
+                    {%if_proxying%}
+                        <div class="sso_menu-item">
+                            <a href="{% url 'psu:stop_proxying' %}" onclick="showAuthSpinner();">
+                                <span class="fa fa-undo" aria-hidden="true"></span>
+                                Remove Proxy
+                            </a>
+                        </div>
+                    {%end_if_proxying%}
+
+                    {# Link to display proxy selection form ####}
+                    <div class="sso_menu-item">
+                        <a onclick="showAuthForm('proxy');">
+                            <span class="fa fa-users" aria-hidden="true"></span>
+
+                            Select
+                            {%if_not_proxying%}a{%end_if_not_proxying%}
+                            {%if_proxying%}Another{%end_if_proxying%}
+                            Proxy
+                        </a>
+                    </div>
+
+                    {# Proxy Selection Form ########################}
+                    <div id="proxy-form-container" class="sso_menu-item sso_menu-form hidden">
+                        <form action="{% url 'psu:start_proxying' %}" method="post" id="proxy-form" onsubmit="showAuthSpinner();">
+                            {%csrf_token%}
+                            <label class="sr-only">Username or PSU ID</label>
+                            <input type="text"
+                                   id="proxy-form-input"
+                                   name="proxy_data"
+                                   placeholder="Username or PSU ID"
+                                   onfocus="preserve_sso_menu();"
+                                   onkeypress="preserve_sso_menu();"
+                            />
+                            <input type="submit" id="proxy-submit" value="Go" class="sr-only" /><br />
+                            <br />
+                        </form>
+                    </div>
+                {%end_if_has_authority%}
+
+                {## LOG OUT ###################################################}
+                <div class="sso_menu-item">
+                    <a href="{% url 'cas:logout' %}">
+                        <span class="fa fa-sign-out" aria-hidden="true"></span>
+                        Log Out
+                    </a>
+                </div>
+            </div>
+        </div>  {# end sso-menu #}
+
+        <div id="sso-auth-smokescreen" class="hidden"></div>
+            <div id="sso-auth-loading" class="hidden">
+                <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i><br />
+                Refreshing Authentication Data
+            </div>
+
+
+    {%end_if_logged_in%}
+
+    {# NON-AUTHENTICATED USER (LOGGED OUT) #}
+    {% if_not_logged_in %}
+        <a href="{% url 'cas:login' %}">
+            {%id_photo user=None class="id_photo-navbar"%}
+            <div class="float-right" style="padding: 15px 5px;">
+                <i class="fa fa-sign-in" title="login" aria-hidden="true"></i>
+                Log In
+            </div>
+        </a>
+    {% end_if_not_logged_in %}
+</div> -->
+
+<script type="text/javascript">
+    /** SSO Menu Display Functions  ***********************/
+    function show_sso_menu(){
+        $('.sso_menu').removeClass('hidden');
+    }
+    function hide_sso_menu(){
+        $('.sso_menu').addClass('hidden');
+        $('#sso_impersonation-form-container').addClass('hidden');
+    }
+    var sso_menu_hide_event;
+    function preserve_sso_menu(){
+        try{
+            clearTimeout(sso_menu_hide_event);
+        }
+        catch(ee){}
+    }
+    function timeout_sso_menu(seconds){
+        if(typeof seconds === 'undefined'){
+            seconds = .5
+        }
+        if(!$('#sso_impersonation-form-input').is(":focus")){
+            preserve_sso_menu();
+            sso_menu_hide_event = setTimeout(function(){ hide_sso_menu(); }, seconds*1000);
+        }
+    }
+
+    /** Proxy Functions *******************************/
+    //Add key-press event to input
+    $('#sso_impersonation-form-input').keydown(function(e){
+        if(e.keyCode === 9){
+            $('#sso_impersonation-form').submit();
+        }
+    });
+    $('#proxy-form-input').keydown(function(e){
+        if(e.keyCode === 9){
+            $('#proxy-form').submit();
+        }
+    });
+
+    function showAuthForm(proxy_type){
+        if(proxy_type === 'impersonate'){
+            if ($('#sso_impersonation-form-container').is(':visible')) {
+                $('#sso_impersonation-form-container').addClass('hidden');
+            } else {
+                $('#sso_impersonation-form-container').removeClass('hidden');
+                $('#sso_impersonation-form-input').focus();
+                try{
+                    $('#proxy-form-container').addClass('hidden');
+                }
+                catch(ee){}
+            }
+        }
+        else{
+            if ($('#proxy-form-container').is(':visible')) {
+                $('#proxy-form-container').addClass('hidden');
+            } else {
+                $('#proxy-form-container').removeClass('hidden');
+                $('#proxy-form-input').focus();
+                try{
+                    $('#sso_impersonation-form-container').addClass('hidden');
+                }
+                catch(ee){}
+            }
+        }
+    }
+
+    function showAuthSpinner(){
+        $("#sso-auth-loading").removeClass('hidden');
+        $("#sso-auth-smokescreen").removeClass('hidden');
+    }
+</script>
+
+<style>
+    /** Menu of SSO actions (proxy, logout) **/
+
+    .sso_menu-container{
+        justify-self: end;
+        grid-column: -1;
+        grid-column-end: -1;
+        font-size: 0.8em;
+    }
+    .sso_menu{
+        position: absolute;
+        top: 47px;
+        background-color: #7B8F21;
+        padding: 5px 1px;
+        white-space: nowrap;
+        font-size: .8em;
+    }
+    .sso_menu-item {
+        border-top: 1px dotted #6A7F10;
+        padding: 5px 0;
+    }
+    .sso_menu-item a{
+        padding: 0 7px;
+    }
+    .sso_menu-item .fa {
+        width: 30px;
+        text-align: center;
+    }
+    .sso_menu-form{
+        margin: 0 20px;
+    }
+    #sso_impersonation-form-input, #proxy-form-input{
+        width: 160px;
+        line-height: 15px;
+        padding: 3px;
+
+    }
+
+    .id_photo-navbar-proxy{
+        position: relative;
+        left: -20px;
+        top: 5px;
+        max-width: 30px;
+        border: 1px solid #000;
+        border-radius: 20px;
+    }
+
+    #sso-auth-smokescreen{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #989898;
+        opacity: 0.5;
+        z-index: 2147483638;
+    }
+    #sso-auth-loading{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+        width: 200px;
+        background-color: #CDD99D;
+        opacity: 1;
+        color: #6a7f10;
+        border: 1px solid #6a7f10;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        z-index: 2147483638;
+
+        transform: translate(-50%, -50%);
+    }
+</style>

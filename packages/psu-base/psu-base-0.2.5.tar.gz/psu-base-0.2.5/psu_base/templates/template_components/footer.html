@@ -1,0 +1,26 @@
+{% load base_taglib %}
+
+<div class="psu-footer">
+    <div style="float: left;">(c) Copyright 2019</div>
+    <div style="float: left;"> &nbsp; &nbsp; &nbsp; &nbsp; {{request.path}}</div>
+    <div style="float:right;">
+        <span title="Base features v.{% psu_version %}">{% app_version %}</span>
+    </div>
+</div>
+<style>
+.psu-footer{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background-color: #6A7F10;
+    color: whitesmoke;
+    align-items: center;
+    font-size: .7em;
+    height: 20px;
+    padding: 0 10px;
+}
+.psu-footer a{
+    color: whitesmoke;
+}
+</style>

@@ -1,0 +1,64 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy Search Page</title>
+</head>
+<body>
+    {% block pagecontent %}
+    <h1>Find a User to Proxy</h1>
+
+    <form action="{%url 'psu:proxy_search'%}" method="post" id="proxy_search_form">
+        {%csrf_token%}
+        <div style="max-width: 500px;margin:auto;padding: 20px;text-align:center;">
+            <input type="text" name="search_info" class="form-control" /><br />
+            <button type="submit" class="btn btn-primary">Search</button><br />
+
+
+
+            {%if found%}
+                <div class="search-result" style="text-align:center;margin-top: 50px;">
+                    <input type="hidden" name="info" id="info-input" class="form-control" value="{{found.username}}" />
+
+                    {# ID Card of the resulting user #}
+                    {%id_card found%}<br />
+
+                    {# Option to proxy the selected user #}
+                    <br />
+
+                    {%if_can_impersonate%}
+                        <button type="button" class="btn btn-danger" onclick="impersonate();">Impersonate {{found.first_name}}</button>
+                    {%end_if_can_impersonate%}
+
+                    {%if_has_authority 'proxy'%}
+                    <button type="button" class="btn btn-info"  onclick="proxy();">Proxy {{found.first_name}}</button>
+                    {%end_if_has_authority%}
+                </div>
+            {%endif%}
+        </div>
+    </form>
+
+
+
+    <script type="text/javascript">
+        function impersonate(){
+
+            form = $('#proxy_search_form');
+            form.attr('action', '{%url 'psu:start_impersonating'%}');
+            form.find('#info-input').attr('name', 'impersonation_data');
+            form.submit();
+        }
+        function proxy(){
+            form = $('#proxy_search_form');
+            form.attr('action', '{%url 'psu:start_proxying'%}');
+            form.find('#info-input').attr('name', 'proxy_data');
+            form.submit();
+        }
+    </script>
+
+    {% endblock %}
+</body>
+</html>

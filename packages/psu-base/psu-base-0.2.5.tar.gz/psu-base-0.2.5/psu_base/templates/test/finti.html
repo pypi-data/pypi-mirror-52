@@ -1,0 +1,121 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+{% block scripts %}
+<script>
+    $(document).ready(function() {
+        console.log("ready.");
+        $('#payload_input').hide();
+        $('#api_warning').hide();
+
+        // onMethodChange($('#http_method'));
+        $('#http_method').on('change', function() {
+            var selected = $('select[name=http_method]').val();
+
+            if (selected === 'POST' || selected === 'PUT') {
+                $('#payload_input').show();
+            }
+            else {
+                $('#payload_input').hide();
+            }
+
+            if (selected !== 'GET') {
+                $('#api_warning').show();
+            }
+            else {
+                $('#api_warning').hide();
+            }
+        })
+    });
+
+</script>
+<style>
+    form {
+        width: 100%;
+        /* padding: 20px; */
+    }
+    input[type=text] {
+        /* width: 73%; */
+        min-width: 270px;
+    }
+    textarea {
+        width: 90%;
+    }
+</style>
+{% endblock %}
+
+{% block pagecontent %}
+<div style="padding: 25px;">
+    {% if messages %}
+    <!-- <ul class="messages"> -->
+        {% for message in messages %}
+        <!-- <li{% if message.tags %} class="{{ message.tags }}"{% endif %}> -->
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <div class="alert alert-danger alert-dismissable fade show">
+                    ALAS! {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% else %}
+                <div class="alert alert-info alert-dismissable fade show">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+        <!-- </li> -->
+        {% endfor %}
+    <!-- </ul> -->
+    {% endif %}
+    <!-- {% if authorized %} -->
+        <form action="#">
+            <label for="url">Endpoint:</label><br/>
+            <span class="text-muted">{{ base_url }}/</span>
+            <input id="url" name="api_url" type="text" size="65"  value="{{api_path}}" />
+
+            <!-- <div class="dropdown"> -->
+                <select id="http_method" name="http_method" >
+                    <option value="GET" selected>GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELETE">DELETE</option>
+                </select>
+            <!-- </div> -->
+            <button class='btn btn-primary' type="submit">Call API <span id="http_method"></span></button>
+            <span class="text-danger" id="api_warning">WARNING: PUT/POST/DELETE calls will change the database content</span>
+            <br/>
+            <p>
+                <label for="metadata">Include metadata:&nbsp;</label>
+                <input id="metadata" name="metadata" type="checkbox" checked/>
+            </p>
+            <p>
+                <label for="token">Token: (if different than this application's token)</label><br/>
+                <input
+                        id="token" name="token"
+                        type="text" size="50"
+                        placeholder="Token from local_settings"
+                        {%if metadata%}checked{%endif%}
+                />
+            </p>
+            <p id="payload_input">
+                <label for="payload">Payload: (JSON format - You are responsible for the correctness of the payload data.)</label><br/>
+                <textarea type="textarea" id="payload" name="payload" cols="50" rows="3"></textarea>
+            </p>
+        </form>
+        </div>
+
+        <div style="padding: 25px;">
+            <h2>Result:</h2>
+            <textarea cols="100" rows="10">{{ content }}</textarea>
+            <br/>
+            <br/>
+            <h3>Keys:</h3>
+            <ul>
+                {% for key, value in content.items %}
+                <li>{{ key }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    <!-- {% endif %} -->
+{% endblock %}

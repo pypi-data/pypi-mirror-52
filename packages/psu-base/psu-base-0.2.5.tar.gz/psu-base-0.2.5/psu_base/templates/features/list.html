@@ -1,0 +1,230 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block pagecontent %}
+    <h1>Features for {%app_name%}</h1>
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th scope="col">Level</th>
+            <th scope="col">Feature Code</th>
+            <th scope="col">Feature Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+            <th scope="col">Activity Date</th>
+            <th scope="col"><span class="fa fa-trash-o" aria-hidden="true"></span></th>
+        </tr>
+
+        {### GLOBAL OVERRIDES ###}
+        {% for ff in global_overrides%}
+        <tr class="text-danger">
+            <td>
+                <span class="fa fa-exclamation-triangle" aria-hidden="true"></span>
+                Override
+            </td>
+            <td class="code">{{ff.feature_code}}</td>
+            <td>
+                {%if is_global_admin%}
+                    <input type="text" id="title-{{ff.id}}" value="{{ff.feature_title}}" onchange="update_feature($(this));" />
+                {%else%}
+                    {{ff.feature_title}}
+                {%endif%}
+            </td>
+            <td>
+                {%if is_global_admin%}
+                    <input type="text" id="description-{{ff.id}}" value="{{ff.feature_description}}" onchange="update_feature($(this));" />
+                {%else%}
+                    {{ff.feature_description}}
+                {%endif%}
+            </td>
+            <td>
+                {%if is_global_admin%}
+                    {%select_menu id=ff.id value=ff.status options=status_options onchange="update_feature($(this));" %}
+                {%else%}
+                    {{ff.get_status_description}}
+                {%endif%}
+
+            </td>
+            <td class="date"><span title="{{ff.last_updated|date:'g:i A'}}">{{ff.last_updated|date:"d-M-Y"|upper}}</span></td>
+            <td class="date"><span class="fa fa-trash-o" title="Delete this feature" onclick="delete_feature($(this), {{ff.id}});"></span></td>
+        </tr>
+        {% endfor %}
+
+        {### APPLICATION FEATURES ###}
+        {% for ff in app_features%}
+        <tr>
+            <td>{%app_name%}</td>
+            <td>{{ff.feature_code}}</td>
+            <td class="code">
+                <input type="text" id="title-{{ff.id}}" value="{{ff.feature_title}}" onchange="update_feature($(this));" />
+            </td>
+            <td>
+                <input type="text" id="description-{{ff.id}}" value="{{ff.feature_description}}" onchange="update_feature($(this));" />
+            </td>
+            <td>
+                {%select_menu id=ff.id value=ff.status options=status_options onchange="update_feature($(this));" %}
+            </td>
+            <td class="date"><span title="{{ff.last_updated|date:'g:i A'}}">{{ff.last_updated|date:"d-M-Y"|upper}}</span></td>
+            <td class="date"><span class="fa fa-trash-o" title="Delete this feature" onclick="delete_feature($(this), {{ff.id}});"></span></td>
+        </tr>
+        {% endfor %}
+
+
+        {### GLOBAL DEFAULTS ###}
+        {% for ff in global_defaults%}
+        <tr class="text-muted">
+            <td>
+                <span class="fa fa-globe" title="Global"></span>
+                Default
+            </td>
+            <td class="code">{{ff.feature_code}}</td>
+            <td>
+                {%if is_global_admin%}
+                    <input type="text" id="title-{{ff.id}}" value="{{ff.feature_title}}" onchange="update_feature($(this));" />
+                {%else%}
+                    {{ff.feature_title}}
+                {%endif%}
+            </td>
+            <td>
+                {%if is_global_admin%}
+                    <input type="text" id="description-{{ff.id}}" value="{{ff.feature_description}}" onchange="update_feature($(this));" />
+                {%else%}
+                    {{ff.feature_description}}
+                {%endif%}
+            </td>
+            <td>
+                {%if is_global_admin%}
+                    {%select_menu id=ff.id value=ff.status options=status_options onchange="update_feature($(this));" %}
+                {%else%}
+                    {{ff.get_status_description}}
+                {%endif%}
+
+            </td>
+            <td class="date"><span title="{{ff.last_updated|date:'g:i A'}}">{{ff.last_updated|date:"d-M-Y"|upper}}</span></td>
+            <td class="date"><span class="fa fa-trash-o" title="Delete this feature" onclick="delete_feature($(this), {{ff.id}});"></span></td>
+        </tr>
+        {% endfor %}
+
+        <form action="{% url 'psu:add_feature' %}" method="post" id="feature-form">
+            {%csrf_token%}
+            <tr>
+                <td>
+                    <select name="app_code">
+                        <option id="{%app_code%}">{%app_name%}</option>
+                        {%if is_global_admin%}
+                            <option value="global_default">Global Default</option>
+                            <option value="global_override">Global Override</option>
+                        {%endif%}
+                    </select>
+                </td>
+                <td><input type="text" name="feature_code" /></td>
+                <td><input type="text" name="feature_title" /></td>
+                <td><input type="text" name="feature_description" /></td>
+                <td>
+                    {%select_menu id="new" value="L" options=status_options %}
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-success btn-sm">
+                        <span class="fa fa-plus" aria-hidden="true"></span>
+                        Add
+                    </button>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </form>
+    </table>
+
+
+    <style>
+        .text-muted input, .text-muted select{
+            color: #777;
+        }
+        .text-danger input, .text-danger select{
+            color: red;
+        }
+        .date{
+            font-size: .75em;
+            cursor: default;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+
+        function update_feature(element){
+            var html_id = element.attr('id');
+            if(element.is('select')){
+                var prop = "status";
+                var id = element.attr('id');
+                var value = element.val();
+            }
+            else{
+                var pieces = html_id.split('-');
+                var prop = pieces[0];
+                var id = pieces[1];
+                var value = element.val();
+            }
+
+            $.ajax({
+                type:   "POST",
+                url:    "{% url 'psu:modify_feature' %}",
+                data:   {
+                    id: id, prop: prop, value: value,
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                beforeSend:function(){
+                    element.css('border-color', 'orange');
+                },
+                success:function(data){
+                    element.css('border-color', 'green');
+                    element.val(data)
+                    //Update the activity date in the view
+                    var monthNames = [
+                        "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+                    ];
+                    var date = new Date()
+                    var day = date.getDate();
+                    var monthIndex = date.getMonth();
+                    var year = date.getFullYear();
+                    var date_container = element.closest('tr').find('.date');
+                    date_container.html(day + ' ' + monthNames[monthIndex] + ' ' + year);
+                    date_container.attr('title', "Updated just now");
+                },
+                error:function(){
+                    element.css('border-color', 'red');
+                },
+                complete:function(){}
+            });
+        }
+
+        function delete_feature(element, id){
+
+            $.ajax({
+                type:   "POST",
+                url:    "{% url 'psu:delete_feature' %}",
+                data:   {
+                    id: id, csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                beforeSend:function(){
+                    element.after(getAjaxLoadImage());
+                },
+                success:function(data){
+                    element.closest('tr').remove();
+                },
+                error:function(){
+                    element.addClass('ajax-error');
+                },
+                complete:function(){}
+            });
+        }
+    </script>
+
+    {% endblock %}
+</body>
+</html>

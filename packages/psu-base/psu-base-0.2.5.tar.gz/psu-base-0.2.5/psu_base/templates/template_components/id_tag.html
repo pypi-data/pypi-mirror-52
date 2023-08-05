@@ -1,0 +1,51 @@
+{% load base_taglib %}
+
+<div class="id_tag">
+    <div class="id_tag-photo">
+        {% id_photo user=user_instance %}
+    </div>
+    <div class="id_tag-text">
+        <b>{{user_instance.display_name}}</b><br />
+        {{user_instance.email_address|default:"No Email Address"}}<br />
+        {%if user_instance.psu_id%}{{user_instance.psu_id}}{%endif%}
+        {%if_has_authority developer%}
+            {%if user_instance.psu_id and user_instance.pidm%} / {%endif%}
+            {%if user_instance.pidm%}{{user_instance.pidm}}{%endif%}
+        {%end_if_has_authority%}<br />
+    </div>
+</div>
+
+
+<style>
+.id_tag{
+    padding-right: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: left;
+    display: inline-grid;
+    grid-template-columns: [photo] 60px [text] 1fr;
+    grid-column-gap: 5px;
+    overflow: hidden;
+}
+.id_tag-photo{
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+.id_tag-photo .id_photo{
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+.id_tag-text{
+    font-size: .8em;
+}
+</style>

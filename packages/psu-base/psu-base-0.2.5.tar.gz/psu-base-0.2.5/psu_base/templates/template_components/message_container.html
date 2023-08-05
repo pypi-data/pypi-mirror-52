@@ -1,0 +1,112 @@
+<div id="message-container" style="display: block; position: absolute; position: fixed; right: 0;">
+  {% include 'template_components/messages.html' %}
+</div>
+
+<script type="text/javascript">
+  var flashSeq = 0;
+  prependMessageIcons();
+  hideMessages();
+
+  $(document).ajaxComplete(function(e, xhr, settings){
+    if (!settings.bypassGlobalComplete){
+      flash_messages();
+    }
+  });
+
+  /** flash_messages()
+   *
+   *  Gets messages (error, warning, debug, success) from the session and
+   *  posts them as alerts in the message console
+   */
+  function flash_messages(){
+    $.ajax({
+        bypassGlobalComplete: true,
+        type:   "GET",
+        url:    "{% url 'psu:messages' %}",
+        data:   { ts: new Date().getTime() },
+        beforeSend:function(){
+        },
+        success:function(data){
+            $("#message-container").append(data);
+            prependMessageIcons();
+            hideMessages();
+        },
+        error:function(){
+        },
+        complete:function(){
+        }
+    });
+   };
+
+  function prependMessageIcons(){
+      //Prepend fa icons for visual effect
+      $("#message-container").find(".alert").each(function() {
+
+          //If no icons are already present
+          if ($(this).find('.fa').add($(this).find('.glyphicon')).length == 0) {
+              var fa = '<span class="fa fa-';
+              if ($(this).hasClass('alert-danger') || $(this).hasClass('alert-error')) {
+                  fa += 'exclamation-triangle';
+              }
+              else if ($(this).hasClass('alert-warning')) {
+                  fa += 'bell-o';
+              }
+              else if ($(this).hasClass('alert-info')) {
+                  fa += 'info-circle';
+              }
+              else if ($(this).hasClass('alert-success')) {
+                  fa += 'smile-o';
+              }
+              fa += '"></span>&nbsp;';
+              $(this).prepend(fa);
+          }
+      });
+  }
+
+  /** hideMessages()
+   *
+   * Hide messages (messages fixed at top of screen)
+   */
+  function hideMessages(){
+      var msgContainer = $("#message-container");
+      var numSeconds = 0;
+      var offset = 1;
+      var offset_warn = 0;
+      var offset_info = 0;
+
+      msgContainer.find(".alert").each(function(){
+
+          //If a timeout was already set, ignore this message
+          if($(this).attr('timeout-set')){
+              return true;
+          }
+
+          //Do not auto-hide errors
+          if($(this).hasClass('alert-danger') || $(this).hasClass('alert-error')){
+              return true;
+          }
+
+          //Warnings auto-hide after 20 seconds
+          if($(this).hasClass('alert-warning')){
+              numSeconds = 20 + offset_warn;
+              offset_warn += offset;
+          }
+          //Hide info/success after 10 seconds
+          else{
+              numSeconds = 10 + offset_info;
+              offset_info += offset;
+          }
+
+          var identifier = $(this).attr('id');
+          if(typeof identifier === 'undefined' || identifier == 'undefined'){
+              identifier = 'flashMsg-' + flashSeq;
+              $(this).attr('id', identifier);
+          }
+
+          setTimeout((function() { $("#"+identifier).fadeOut(400); }), (numSeconds*1000));
+          $(this).attr('timeout-set', true);
+
+          flashSeq++;
+      });
+  }
+</script>

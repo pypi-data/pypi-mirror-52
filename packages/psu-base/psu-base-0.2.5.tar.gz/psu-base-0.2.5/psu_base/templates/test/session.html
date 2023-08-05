@@ -1,0 +1,42 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block pagecontent %}
+    <h1>Session Debug Page</h1>
+    <div class="alert alert-info">
+        <b>{%fa fa-clock-o%}SESSION_COOKIE_AGE:</b> {{expiry_seconds}} seconds<br />
+        <div class="text-muted" style="text-align: center;font-style: italic;">
+            {%fa fa-hourglass-start%} That's {{expiry_description}} of inactivity
+        </div>
+    </div>
+    <table class="table table-condensed table-striped">
+        {%for kk, vv in contents.items%}
+            <tr>
+            <th align="right" scope="row">{{kk}}:</th>
+            <td>
+                {%if vv|stringformat:"s"|length > 80%}
+                    <textarea style="width: 100%;">{{vv}}</textarea>
+                {%else%}
+                    {{ vv }}
+                {%endif%}
+
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+    <form method="post">
+        {%csrf_token%}
+        <input type="hidden" name="clear_session" value="Y" />
+        <input type="submit" value="Clear" class="btn btn-danger" />
+    </form>
+
+    {% endblock %}
+</body>
+</html>

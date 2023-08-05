@@ -1,0 +1,6 @@
+=== 0.2.4 ===
+- Function to get attrs and body from a custom tag.
+- Added PyPi deployment instructions to the readme
+
+=== 0.2.3 ===
+- Initial Release

@@ -1,0 +1,133 @@
+{% extends 'psu_base.html' %}
+{% load base_taglib %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block pagecontent %}
+
+    <h1>Emails</h1>
+    <table class="table table-condensed table-striped sm">
+        <tr>
+            <th scope="col">{%fa fa-envelope-o title="Message status"%}</th>
+            <th scope="col">Date</th>
+            <th scope="col">Initiator</th>
+            <th scope="col">Subject</th>
+            <th scope="col">To</th>
+            <th scope="col">CC</th>
+            <th scope="col">BCC</th>
+            <th scope="col">URL</th>
+        </tr>
+
+        {% for aa in app_emails%}
+        <tr>
+            <td onclick="getEmail({{aa.id}});">
+                {%if aa.status == 'S'%}
+                    {%fa fa-envelope class="text-success" title="Message was successfully sent"%}
+                {%else%}
+                    {%fa fa-envelope class="text-danger" title="Message was not sent"%}
+                {%endif%}
+            </td>
+            <td>
+                {{aa.date_created|date:'d-M-Y'|upper}}<br />
+                {{aa.date_created|date:'g:i A'|lower}}
+            </td>
+            <td>{{aa.initiator}}</td>
+            <td>{{aa.subject}}</td>
+            <td>{%for ii in aa.get_to_list%}{{ii}}<br />{%endfor%}</td>
+            <td>{%for ii in aa.get_cc_list%}{{ii}}<br />{%endfor%}</td>
+            <td>{%for ii in aa.get_bcc_list%}{{ii}}<br />{%endfor%}</td>
+            <td>{{aa.url}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div id="email-container" class="hidden">
+        {%fa fa-window-close-o class="float-right" onclick="$('#email-container').addClass('hidden');"%}
+        <br style="clear:both;" />
+        <div id="email-content"></div>
+        <br />
+        <div style="text-align:center;" id="email-action-container">
+            <span id="email-action-resend">
+                <button type="button" class="btn btn-primary" onclick="resendEmail()">Resend Email</button>
+            </span>
+            <span id="email-action-resent" onclick="$('#email-container').addClass('hidden');" class="hidden">
+                <span class="text-success">{%fa fa-check-square-o%} Email Resent</span>
+            </span>
+            <span id="email-action-failed" onclick="$('#email-container').addClass('hidden');" class="hidden">
+                <span class="text-danger">{%fa fa-exclamation-triangle%} Failed to Resend</span>
+            </span>
+        </div>
+
+    </div>
+
+    {%pagination app_emails%}
+
+    <style>
+        #email-container{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 95%;
+            max-width: 1024px;
+            height: 95%;
+            margin: auto;
+            background-color: whitesmoke;
+            border: 1px solid #333;
+            border-radius: 3px;
+            padding: 15px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function getEmail(id){
+            $.ajax({
+                type:   "GET",
+                url:    '{%url 'psu:display_email' %}',
+                data:   { id: id, ts: new Date().getTime() },
+                beforeSend:function(){setAjaxLoadDiv();},
+                success:function(content){
+                   var container = $('#email-container');
+                   var email = $('#email-content');
+                   email.html(content);
+                   container.removeClass('hidden');                                 //Show the email
+                   container.find('#email-action-resend').removeClass('hidden');    //Show the resend button
+                   container.find('#email-action-resent').addClass('hidden');       //Hide previous resent indicator
+                   container.find('#email-action-failed').addClass('hidden');       //Hide previous failure indicator
+                },
+                error:function(ee){},
+                complete:function(){clearAjaxLoadDiv();}
+            });
+        }
+
+        function resendEmail(){
+            var id = $('#email-container').find('input[name=email-instance-id]').val();
+            $.ajax({
+                type:   "POST",
+                url:    '{%url 'psu:resend_email' %}',
+                data:   { id: id, csrfmiddlewaretoken: '{{ csrf_token }}' },
+                beforeSend:function(){setAjaxLoadDiv();},
+                success:function(content){
+                   var container = $('#email-container');
+                   container.find('#email-action-resend').addClass('hidden');       //Hide the resend button
+                   container.find('#email-action-resent').removeClass('hidden');    //Show resent indicator
+                },
+                error:function(ee){
+                   var container = $('#email-container');
+                   container.find('#email-action-resend').addClass('hidden');       //Hide the resend button
+                   container.find('#email-action-resent').addClass('hidden');       //Hide the resent indicator
+                   container.find('#email-action-failed').removeClass('hidden');    //Show failure indicator
+                },
+                complete:function(){clearAjaxLoadDiv();}
+            });
+        }
+    </script>
+    {% endblock %}
+</body>
+</html>
