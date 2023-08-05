@@ -1,0 +1,32 @@
+RADinitio 1.1.1 - 2018 Sep 12
+-----------------------------
+    Other: Updated compatibility with updated version of `msprime` and `tskit`
+
+RADinitio 1.1.0 - 2019 Aug 06
+-----------------------------
+    Feature: Added pipeline substage functions (`make-population`, `make-library-seq`, `tally-rad-loci`)
+    Feature: Added log of dropped alleles when inserting variants.
+    Bug Fix: Fixed report of insert sizes in various logs
+    Bug Fix: Fixed error in `NlaIII` enzyme
+    Other: msprime model generation now added as a function in `__init__`
+    Other: Changed default value for template/read ratio in PCR model
+    Other: Added `--version` flag in main wrapper. Also reported in other intermediary files.
+    Other: General formatting updates to logs.
+
+RADinitio 1.0.3 - 2019 May 16
+-----------------------------
+    Fixed bug when reporting number of loci in log
+    Changed the requierements of the output directory - it now MUST exist
+
+RADinitio 1.0.2 - 2019 May 13
+-----------------------------
+    Updated contents of package distribution build.
+
+RADinitio 1.0.1 - 2019 May 13
+-----------------------------
+    FASTA parser now handles empty lines and comments.
+    Program reports when non-canonical characters are present in the genome.
+
+RADinitio 1.0.0 - 2019 May 08
+-----------------------------
+    First public release of RADinitio.
