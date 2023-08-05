@@ -1,0 +1,14 @@
+genomix/__init__.py,sha256=1tWcZWM3DfPKmQ60ejf3WYghV_NCDVbLaw6zWDc8bFo,23
+genomix/apps.py,sha256=XbwHBbNSKMm8q8KQurD8K30AJyVGRYRHXZifXdpT8As,109
+genomix/fields.py,sha256=cmpEDGn_hv_Hjv1HMxjBDsEXmIF0gaaONpydqjrJ9jY,3413
+genomix/filters.py,sha256=R-viJb-Hz2GOgCDp5YROuBAa7KQs-fyXp02t0f86zvY,801
+genomix/models.py,sha256=F_Ne16KBg-TwhRn6z3kqnEUxMjzFC0tIsHhwmHuvavQ,713
+genomix/routers.py,sha256=HbMnquR2OucnQNciJbAsTz9Cv1B0NBmKIH4wJzZe9fU,431
+genomix/test.py,sha256=23KdiW9AbWrDvuyCdK_nd-lSgGCZmQqpvg_j5COAMdw,877
+genomix/utils.py,sha256=QgR3j_giy6lt6T2ZEb9LbAave4eh-OM3c4_BiTe4C1U,1178
+django_genomix-0.6.10.dist-info/AUTHORS.rst,sha256=dwZ5vY555VVbNYlVrJJsaSg56Ya_v3iUg6DUol-3I7c,170
+django_genomix-0.6.10.dist-info/LICENSE,sha256=SzFzS2ZkJTYxQgMeYFqe4at4k03wq9CIf0ne_Mtff-Q,1082
+django_genomix-0.6.10.dist-info/METADATA,sha256=zLcEEqPDBLi2WVH7_joCe5SctBntIYLIVrOstqDZ2EA,7333
+django_genomix-0.6.10.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+django_genomix-0.6.10.dist-info/top_level.txt,sha256=xNjcW97tuk5jrkYKcmbmxc8XGyZ560lW2nYq1xuXDwk,8
+django_genomix-0.6.10.dist-info/RECORD,,
