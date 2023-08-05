@@ -1,0 +1,15 @@
+robotframework >= 3.1.0
+docutils
+
+flex
+GenSON
+jsonpath-ng
+pygments
+requests
+
+jsonschema
+rfc3987
+strict-rfc3339
+
+pytz
+tzlocal
