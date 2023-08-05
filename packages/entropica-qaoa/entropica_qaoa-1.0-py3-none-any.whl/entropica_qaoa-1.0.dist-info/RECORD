@@ -1,0 +1,14 @@
+entropica_qaoa/__init__.py,sha256=oMqnZ-Ek62npSGMk9B_EgmbELu6EgBiA_7nbxXV_teg,24
+entropica_qaoa/utilities.py,sha256=fcPSmV6RBIQhEm6vCURjeUmU1DBaPlueGLJVqUixFrg,18512
+entropica_qaoa/qaoa/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+entropica_qaoa/qaoa/_parameter_conversions.py,sha256=gW7nkxG1kLi9q1pymJilxaFyZs0z7AS6xRv1e5qJzKc,8849
+entropica_qaoa/qaoa/cost_function.py,sha256=BZU1Br4xYKS-n1YRHOM-xj03VM7I3p_L7LqJ_umpFUA,12912
+entropica_qaoa/qaoa/parameters.py,sha256=ZCDx-eGWwvrYNipk3Jb_gMaTAXAlB-Hou_iUllY_1jI,62682
+entropica_qaoa/vqe/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+entropica_qaoa/vqe/cost_function.py,sha256=ApZb-xEJ-bmRIprOCVyfdNae0TT--srFvhiNP6vz7Lw,15627
+entropica_qaoa/vqe/measurelib.py,sha256=klUWLcUi2b_pEV8QA42xUX9w-HwhkF8_AcbQ5QHlymc,6686
+entropica_qaoa-1.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+entropica_qaoa-1.0.dist-info/METADATA,sha256=sKBOmLbTBVokczSm-hgqPSktynFANpnGsrq8OXFZ0q4,3229
+entropica_qaoa-1.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+entropica_qaoa-1.0.dist-info/top_level.txt,sha256=ZUh5vSD_rHc_rtRE56HOpWosVdKu2V_oSKBPoJR7iBY,15
+entropica_qaoa-1.0.dist-info/RECORD,,
