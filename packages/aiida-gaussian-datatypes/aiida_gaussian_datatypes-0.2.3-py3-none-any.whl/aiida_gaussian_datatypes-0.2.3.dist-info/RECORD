@@ -1,0 +1,17 @@
+aiida_gaussian_datatypes/__init__.py,sha256=FjK3_PvM8Xf-XblEiebdGMXrbIMyw_Mw0gsuSfVmldc,180
+aiida_gaussian_datatypes/utils.py,sha256=N1OKg9QEqE2JSsgAVBZX_GHlZSFBaX5HOfZ2y_C3C5g,2565
+aiida_gaussian_datatypes/basisset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiida_gaussian_datatypes/basisset/cli.py,sha256=__qG1DeL6h_SbWEazwmAiIu4xAGh3W6XqLLSdnNuDRc,6995
+aiida_gaussian_datatypes/basisset/data.py,sha256=hruxgEl3Eej37ktleVlMI_1KyIlHjztbXG5iymcqUWQ,8421
+aiida_gaussian_datatypes/basisset/utils.py,sha256=fUyeo-6_ThLEDkMVRVYqFOhNh4-xcjEsiRgm8EoMJQg,4902
+aiida_gaussian_datatypes/pseudopotential/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiida_gaussian_datatypes/pseudopotential/cli.py,sha256=tfjRnufoma9oyHFwZdxW0LBd8enqhRg81X7BqY_THeM,7447
+aiida_gaussian_datatypes/pseudopotential/data.py,sha256=in3ZNtc4mKTOT84jZHZ87087KIxEELHbISw5pFf9W84,8998
+aiida_gaussian_datatypes/pseudopotential/utils.py,sha256=trFwzV7beqt6ZtEGLemOpNXk6QCNnPhBa_9JA-sUwkM,5964
+aiida_gaussian_datatypes-0.2.3.dist-info/AUTHORS.txt,sha256=gAL39nf4akKKZQomxjzcwDLZqRGYBdpsTFO3KA5TTzY,82
+aiida_gaussian_datatypes-0.2.3.dist-info/LICENSE,sha256=z010R3BBaf8CCQzhdO1v_yyMhEV1o4A7uMi7eHj0c8k,1072
+aiida_gaussian_datatypes-0.2.3.dist-info/METADATA,sha256=p_OLp0-t5bd9zzxHR_d8wyWXlzAIrDgd-AQV6vRaWPI,7676
+aiida_gaussian_datatypes-0.2.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+aiida_gaussian_datatypes-0.2.3.dist-info/entry_points.txt,sha256=KZlkLR4U3k7XnoZUG5KOBIKH_-dHMaIEgcT0jYyOB1M,313
+aiida_gaussian_datatypes-0.2.3.dist-info/top_level.txt,sha256=HsUBuY28cnjzC0t1S6RHdQ9ILohhNzHmOMbJYYo81zs,25
+aiida_gaussian_datatypes-0.2.3.dist-info/RECORD,,
