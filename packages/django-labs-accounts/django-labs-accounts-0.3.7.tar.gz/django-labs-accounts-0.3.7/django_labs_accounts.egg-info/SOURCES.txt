@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+accounts/__init__.py
+accounts/admin.py
+accounts/apps.py
+accounts/backends.py
+accounts/settings.py
+accounts/urls.py
+accounts/views.py
+django_labs_accounts.egg-info/PKG-INFO
+django_labs_accounts.egg-info/SOURCES.txt
+django_labs_accounts.egg-info/dependency_links.txt
+django_labs_accounts.egg-info/not-zip-safe
+django_labs_accounts.egg-info/requires.txt
+django_labs_accounts.egg-info/top_level.txt
