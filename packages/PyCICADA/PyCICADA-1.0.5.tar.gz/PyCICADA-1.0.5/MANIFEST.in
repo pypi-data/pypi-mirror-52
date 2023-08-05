@@ -1,0 +1,11 @@
+# Include the README
+include *.rst
+
+# Include the license file
+include LICENSE.txt
+include versioneer.py
+include src/cicada/_version.py
+include src/cicada/gui/icons/rc/*
+include src/cicada/gui/icons/svg/*
+include src/cicada/config/*
+include src/cicada/gui/cicada_qdarkstyle.css
