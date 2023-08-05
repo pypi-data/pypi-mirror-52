@@ -1,0 +1,8 @@
+*.py[cod]
+CodeComb_Outputs/
+CodeComb_Data/
+__pycache__
+build/
+dist/
+CodeComb.egg-info/
+history.txt
