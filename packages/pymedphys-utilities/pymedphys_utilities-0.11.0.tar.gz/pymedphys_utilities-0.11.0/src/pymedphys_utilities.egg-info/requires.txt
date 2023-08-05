@@ -1,0 +1,5 @@
+numpy>=1.12
+scipy
+
+[test]
+pytest
