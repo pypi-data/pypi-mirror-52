@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: django-blog-home
+Version: 0.2
+Summary: A simple Django app to conduct Web-based Blog Home.
+Home-page: https://www.quadzal.pythonanywhere.com/
+Author: Your Name
+Author-email: esat3515@gmail.com
+License: MIT License
+Description: =====
+        Home
+        =====
+        
+        Home is a simple Django app to conduct Web-based Blog Home. For each
+        question, visitors can choose between a fixed number of answers.
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "polls" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'home',
+            ]
+        
+        2. Include the polls URLconf in your project urls.py like this::
+            path('', include('home.urls')),
+        
+        3. Run `python manage.py migrate` to create the home models.
+        
+        4. Visit http://127.0.0.1:8000/ to participate in the poll.
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
