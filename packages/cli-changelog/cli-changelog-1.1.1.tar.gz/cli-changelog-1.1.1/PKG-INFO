@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: cli-changelog
+Version: 1.1.1
+Summary: A changelog update cli tool
+Home-page: https://github.com/mathieu/changelog-cli
+Author: Mathieu MARACHE
+Author-email: mathieu@marache.com
+License: UNKNOWN
+Description: # changelog-cli
+        
+        This tool is aiming at reducing conflicts in trunk-based or feature-based git developement.
+        
+        ## Install
+        
+        ```shell
+        > pip install cli_changelog
+        ```
+        
+        ## Usage
+        
+        ```text
+        usage: changelog [-h] [-c message] [-r version] [-f FILENAME]
+        
+        Changelog administration tool.
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -c message, --create message
+                                creates an entry with this actual message to be added
+                                to the changelog
+          -r version, --release version
+                                releases the changelog byt gathering all entries
+          -f FILENAME, --filename FILENAME
+                                the filename to put the message in if you don't want
+                                to use the branch name
+          -t, --commit          commit the created/deleted/modified files by this
+                                command
+        ```
+        
+        ## Flow example 
+        
+        ```shell
+        > changelog -c "Initial import" -f init
+        > changelog -c "Added readme content" -f readme
+        ```
+        
+        will give this layout
+        
+        ```text
+        ├── CHANGELOG.md
+        ├── README.md
+        ├── changelog.py
+        └── changelogs/
+        │  └──── unreleased/
+        │     ├──── init.md
+        │     └──── readme.md
+        └── requirements.txt
+        ```
+        
+        And now releasing version 1.0.0 like this
+        
+        ```shell
+        > changelog -r 1.0.0
+        ```
+        
+        will give this layout
+        
+        ```text
+        ├── CHANGELOG.md
+        ├── README.md
+        ├── changelog.py
+        └── requirements.txt
+        ```
+        
+        ## Requirements
+        
+        * tested with python3
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
