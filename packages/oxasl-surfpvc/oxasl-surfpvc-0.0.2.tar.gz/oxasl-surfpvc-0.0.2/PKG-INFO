@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: oxasl-surfpvc
+Version: 0.0.2
+Summary: OXASL plugin for surface-based partial volume correction
+Home-page: https://oxasl.readthedocs.io/
+Author: Tom Kirk
+Author-email: thomas.kirk@eng.ox.ac.uk
+License: License granted by University of Oxford for use by academics carrying out research and not for use by consumers or commercial businesses. See LICENSE file for more details
+Description: # OXASL_SURFPVC
+        
+        Plugin for the OXASL pipeline to provide surface-based partial volume correction
+        
+        ## Citation
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: Free for non-commercial use
+Description-Content-Type: text/markdown
