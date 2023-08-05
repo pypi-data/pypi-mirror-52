@@ -1,0 +1,11 @@
+README.md
+setup.py
+pymalscraper/__init__.py
+pymalscraper/model.py
+pymalscraper/scraper.py
+pymalscraper.egg-info/PKG-INFO
+pymalscraper.egg-info/SOURCES.txt
+pymalscraper.egg-info/dependency_links.txt
+pymalscraper.egg-info/not-zip-safe
+pymalscraper.egg-info/requires.txt
+pymalscraper.egg-info/top_level.txt
