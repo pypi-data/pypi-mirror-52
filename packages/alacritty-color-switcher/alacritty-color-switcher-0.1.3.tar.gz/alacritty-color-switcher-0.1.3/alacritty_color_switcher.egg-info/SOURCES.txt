@@ -1,0 +1,12 @@
+README.md
+setup.py
+alacritty_color_switcher/__init__.py
+alacritty_color_switcher/cli.py
+alacritty_color_switcher.egg-info/PKG-INFO
+alacritty_color_switcher.egg-info/SOURCES.txt
+alacritty_color_switcher.egg-info/dependency_links.txt
+alacritty_color_switcher.egg-info/entry_points.txt
+alacritty_color_switcher.egg-info/requires.txt
+alacritty_color_switcher.egg-info/top_level.txt
+alacritty_color_switcher/templates/__init__.py
+alacritty_color_switcher/templates/default.yaml
