@@ -1,0 +1,3 @@
+[console_scripts]
+ubscrape = ubscrape.command_line:main
+

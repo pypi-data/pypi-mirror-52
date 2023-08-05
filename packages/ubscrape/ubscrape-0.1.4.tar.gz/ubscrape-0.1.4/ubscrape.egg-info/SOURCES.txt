@@ -1,0 +1,16 @@
+README.md
+ubscrape/__init__.py
+ubscrape/__main__.py
+ubscrape/command_line.py
+ubscrape/constants.py
+ubscrape/db.py
+ubscrape/definitions.py
+ubscrape/jsonwriter.py
+ubscrape/setup.py
+ubscrape/words.py
+ubscrape.egg-info/PKG-INFO
+ubscrape.egg-info/SOURCES.txt
+ubscrape.egg-info/dependency_links.txt
+ubscrape.egg-info/entry_points.txt
+ubscrape.egg-info/requires.txt
+ubscrape.egg-info/top_level.txt
