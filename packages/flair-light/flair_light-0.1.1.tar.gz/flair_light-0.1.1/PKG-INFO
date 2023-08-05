@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: flair_light
+Version: 0.1.1
+Summary: A very simple framework for state-of-the-art NLP ready for production
+Home-page: https://github.com/zalandoresearch/flair
+License: MIT
+Description: # This is a lightweight version of Flair
+        
+        Please check out the original project: https://github.com/zalandoresearch/flair
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
