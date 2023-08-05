@@ -1,0 +1,14 @@
+eflowcalc/__init__.py,sha256=5sbBD3ndNID4uHoMFZPcVi9uwe3xFh0I1ZvCNJG2TXo,3113
+eflowcalc/eflowcalc.py,sha256=SPk1W1GE22tZQDq0FIDWhLWORYApePMYr8Enp5YGAkM,6782
+eflowcalc/flow_duration.py,sha256=DRxjrRJpunizEsgAY0MdsniHKzSSMEB58Y712mzZEIQ,28466
+eflowcalc/flow_frequency.py,sha256=Xut_ffr8BXAn93j6NWLyjNFNGM6rP-cxdM9Rkd4rt5g,8323
+eflowcalc/flow_magnitude.py,sha256=Yp5pExCum0u8YW6AyjHSS6fOqNtwNn9Ao_hsZjGYoas,37877
+eflowcalc/flow_rate_change.py,sha256=9Xoy5NwQzP075wDmB19tDJo0pfj4AWpZH5kinmonJ5I,4393
+eflowcalc/flow_timing.py,sha256=lnkyy7SRChWc533veu4nnO1PaFsr1aF5TYlZe1RV3no,11097
+eflowcalc/tools.py,sha256=QtO8Y2H2z4fM48lAkhvcwWmlrOhjY4lNtErYAUMlYaE,3417
+eflowcalc/version.py,sha256=F3OYDIeKr-e1EHQ1eCZ6iXijkHeccWw4W140pJPrI_8,892
+eflowcalc-0.0.3.dist-info/LICENCE.md,sha256=SVi1QFFRwHotPEn1lTheC5eCUASEBCp0uj1R0VvLS9o,34706
+eflowcalc-0.0.3.dist-info/METADATA,sha256=LEEClKmMB1H3JPNG8YYxrAC6PM7LJpvL04nZLf6JmRQ,4981
+eflowcalc-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+eflowcalc-0.0.3.dist-info/top_level.txt,sha256=Kl_ad6R-B0n2j4wv6lpmjFMeDPdEhY8pRu0Sun2Eitg,10
+eflowcalc-0.0.3.dist-info/RECORD,,
