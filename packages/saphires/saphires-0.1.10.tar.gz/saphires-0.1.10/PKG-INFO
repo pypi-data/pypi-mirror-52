@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: saphires
+Version: 0.1.10
+Summary: Stellar Analysis in Python for HIgh-REsolution Spectroscopy
+Home-page: https://github.com/tofflemire/saphires
+Author: Ben Tofflemire
+Author-email: tofflemire@utexas.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires: numpy
+Requires: astropy
+Requires: scipy
+Requires: matplotlib
+Requires: pickle
+Requires: PyQt5
+Requires: pdyl
