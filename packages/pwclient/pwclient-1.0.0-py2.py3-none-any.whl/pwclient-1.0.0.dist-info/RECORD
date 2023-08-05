@@ -1,0 +1,17 @@
+pwclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pwclient/checks.py,sha256=4RqApXqdKTYpFpTrtLFSLN0RC5T5qu_AmU7lyYZ3GWU,1173
+pwclient/parser.py,sha256=t2M_Wkmvp46fHddjR9Nt6Q6_4_SS2WIT1GDYPmsYqiY,6447
+pwclient/patches.py,sha256=VFNZIMejb9bMMfOpWYyKNKSmFXwwB2PZh0W4Nys3YwA,7314
+pwclient/people.py,sha256=SsVx1gRoTh2IMZzWdCc8mBG41RSIvjQhzc9XepYbum4,437
+pwclient/projects.py,sha256=tNNAj3MKIe0b6WYyzJJhHPBNoBsQ52v7n9Mv9X_8u8U,861
+pwclient/shell.py,sha256=KOneW9KDh_nQRAuvO0on78DYdA0eHH4NsiJYQ2l99dk,7659
+pwclient/states.py,sha256=P8mcNI0U1363g3Tv9BFYd5H8P889C5MrnYrny7ziEa8,703
+pwclient/utils.py,sha256=sOuwie-T6X8n9KY5_Jbosr2tPwqoV0a7730DesPFXlQ,2119
+pwclient/xmlrpc.py,sha256=_LhNNkUW9ij1auByR8_4Q-UYvupj1BDHmPOLcWzLaAQ,2279
+pwclient-1.0.0.dist-info/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+pwclient-1.0.0.dist-info/METADATA,sha256=hHhaXA7mBlhzHYrdqRCkbOypJdK_v893_HQB6p5oOOQ,3145
+pwclient-1.0.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+pwclient-1.0.0.dist-info/entry_points.txt,sha256=WGADYgQM6kaUDKJ_N4nc_uGR9YnmkWIXZU3PgVP8Iuo,50
+pwclient-1.0.0.dist-info/pbr.json,sha256=Ndw5ek9TtwQe663RpggPrAKtiBYLjOoZVZapRbXUi0k,46
+pwclient-1.0.0.dist-info/top_level.txt,sha256=RYoCTrivZz6djMggAJ17bq0FL9SeKGh0WcwTaG-0_PU,9
+pwclient-1.0.0.dist-info/RECORD,,
