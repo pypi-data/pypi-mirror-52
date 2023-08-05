@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: AIPipeline
+Version: 2019.9.12.18.55.27
+Summary: description
+Home-page: https://github.com/Jie-Yuan/AIPipeline
+Author: JieYuan
+Author-email: 313303303@qq.com
+Maintainer: JieYuan
+Maintainer-email: 313303303@qq.com
+License: MIT
+Keywords: tool wheel,yuanjie,utils
+Platform: all
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Cloud ML
+- /fds目录会自动同步到fds服务器的
+
