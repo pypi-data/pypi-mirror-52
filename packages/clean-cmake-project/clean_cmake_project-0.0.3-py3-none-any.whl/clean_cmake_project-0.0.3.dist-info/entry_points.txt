@@ -1,0 +1,3 @@
+[console_scripts]
+cmake-python-project = clean_cmake_project.ProjectSkeleton:main
+
