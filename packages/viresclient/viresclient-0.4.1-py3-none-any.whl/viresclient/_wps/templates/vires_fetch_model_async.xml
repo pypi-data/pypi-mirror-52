@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<wps:Execute xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" version="1.0.0" service="WPS">
+  <ows:Identifier>eval_model</ows:Identifier>
+  <wps:DataInputs>
+    <wps:Input>
+      <ows:Identifier>model</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ model_id }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>begin_time</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ begin_time|d2s }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>end_time</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ end_time|d2s }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>elevation</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ elevation }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>variable</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ variable }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>coeff_min</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ coeff_min }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>coeff_max</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ coeff_max }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>width</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ width }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>height</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ height }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>style</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ style }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>range_min</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ range_min }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>range_max</ows:Identifier>
+      <wps:Data>
+        <wps:LiteralData>{{ range_max }}</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+
+  </wps:DataInputs>
+   <wps:ResponseForm>
+    <wps:RawDataOutput mimeType="image/png" encoding="base64">
+      <ows:Identifier>output</ows:Identifier>
+    </wps:RawDataOutput>
+  </wps:ResponseForm>
+</wps:Execute>
