@@ -1,0 +1,3 @@
+[console_scripts]
+packt-cli = packtPublishingFreeEbook:packt_cli
+
