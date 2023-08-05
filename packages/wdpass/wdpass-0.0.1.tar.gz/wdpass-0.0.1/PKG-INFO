@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: wdpass
+Version: 0.0.1
+Summary: Wester Digital My Passport Utility
+Home-page: http://github.com/7aman/wdpass
+Author: Zaman
+Author-email: 7amaaan@gmail.com
+License: MIT
+Project-URL: source, http://github.com/7aman/wdpass
+Description: # wdpass
+Keywords: HDD WD MyPassport Unlocker WesternDigital
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
