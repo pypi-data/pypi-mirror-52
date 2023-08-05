@@ -1,0 +1,3 @@
+[console_scripts]
+elegooMarsUtility = elegooMarsUtility.main:cli
+
