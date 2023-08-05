@@ -1,0 +1,13 @@
+==========================
+Django 2.2.6 release notes
+==========================
+
+*Expected October 1, 2019*
+
+Django 2.2.6 fixes several bugs in 2.2.5.
+
+Bugfixes
+========
+
+* Fixed migrations crash on SQLite when altering a model containing partial
+  indexes (:ticket:`30754`).
