@@ -1,0 +1,10 @@
+README.md
+setup.py
+DeepTricks.egg-info/PKG-INFO
+DeepTricks.egg-info/SOURCES.txt
+DeepTricks.egg-info/dependency_links.txt
+DeepTricks.egg-info/entry_points.txt
+DeepTricks.egg-info/requires.txt
+DeepTricks.egg-info/top_level.txt
+deeptricks/__init__.py
+deeptricks/demo.py
