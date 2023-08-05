@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: libp2p
+Version: 0.1.1
+Summary: libp2p implementation written in python
+Home-page: UNKNOWN
+License: MIT/APACHE2.0
+Description: UNKNOWN
+Platform: unix
+Platform: linux
+Platform: osx
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: lint
