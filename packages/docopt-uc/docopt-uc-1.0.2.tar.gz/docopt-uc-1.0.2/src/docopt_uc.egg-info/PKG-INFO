@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: docopt-uc
+Version: 1.0.2
+Summary: A docopt library suitable for microcontrollers.
+Home-page: UNKNOWN
+Author: Andrew Dodd
+Author-email: andrew.john.dodd@gmail.com
+Maintainer: Andrew Dodd
+Maintainer-email: andrew.john.dodd@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: docopt,microcontroller,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

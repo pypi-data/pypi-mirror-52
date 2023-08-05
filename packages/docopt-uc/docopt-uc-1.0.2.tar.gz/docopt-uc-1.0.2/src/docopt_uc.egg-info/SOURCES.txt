@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/docopt_uc/__init__.py
+src/docopt_uc/docopt_uc.py
+src/docopt_uc.egg-info/PKG-INFO
+src/docopt_uc.egg-info/SOURCES.txt
+src/docopt_uc.egg-info/dependency_links.txt
+src/docopt_uc.egg-info/entry_points.txt
+src/docopt_uc.egg-info/not-zip-safe
+src/docopt_uc.egg-info/requires.txt
+src/docopt_uc.egg-info/top_level.txt
+src/docopt_uc/templates/CLI_TEMPLATE_autogen.c
+src/docopt_uc/templates/CLI_TEMPLATE_autogen.h
+src/docopt_uc/templates/docopt_args.h

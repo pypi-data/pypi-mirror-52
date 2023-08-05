@@ -1,0 +1,3 @@
+[console_scripts]
+docopt-uc = docopt_uc.docopt_uc:main
+
