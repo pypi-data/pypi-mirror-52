@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: zumidashboard
+Version: 1.23
+Summary: zumidashboard server with Flask
+Home-page: UNKNOWN
+Author: robolink
+Author-email: admin@robolink.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.3
+Requires-Dist: zumi (>=0.8)
+
+UNKNOWN
+
+
