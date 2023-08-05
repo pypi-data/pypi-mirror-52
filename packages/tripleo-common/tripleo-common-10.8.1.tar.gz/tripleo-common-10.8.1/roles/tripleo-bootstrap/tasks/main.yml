@@ -1,0 +1,42 @@
+---
+
+- name: Deploy required packages to bootstrap TripleO
+  package:
+    name: "{{ packages_bootstrap }}"
+  become: true
+  ignore_errors: true
+
+- name: Check required packages are installed
+  command:
+    rpm -q {{ item }}
+  with_items: "{{ packages_bootstrap }}"
+
+
+- name: Create /var/lib/heat-config/tripleo-config-download directory for deployment data
+  file:
+    path: /var/lib/heat-config/tripleo-config-download
+    state: directory
+  become: true
+
+# We are using 'network' service provided by 'network-scripts' which is
+# deprecated in RHEL8/CentOS8/Fedora28 but os-net-config doesn't support yet
+# NetworkManager. Until it happens, we need to ensure that network is started
+# at boot, as it'll take care of restarting the network interfaces managed by
+# OVS. Note that OVS unit service is already configure to start before
+# network.service.
+# Note that we don't try to start the service since this is a one shot script
+# which can fail if someone tries to starts it a second time.
+# See https://bugzilla.redhat.com/show_bug.cgi?id=1701866 for context.
+- name: Deploy and enable network service
+  when: ansible_distribution_major_version == '8'
+  block:
+    - name: Deploy network-scripts required for deprecated network service
+      package:
+        name: network-scripts
+      become: true
+      ignore_errors: true
+    - name: Ensure network service is enabled
+      service:
+        name: network
+        enabled: yes
+      become: true

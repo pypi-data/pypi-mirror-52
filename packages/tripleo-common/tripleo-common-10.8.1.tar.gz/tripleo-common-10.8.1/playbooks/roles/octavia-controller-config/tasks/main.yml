@@ -1,0 +1,22 @@
+---
+  - name: gathering controller host name
+    command: "hostname -f"
+    register: hostname
+    changed_when: False
+  - set_fact:
+      node_hostname: "{{ hostname.stdout }}"
+  - include_tasks: certificate.yml
+    when:
+      - private_key_content|length > 0
+      - ca_cert_content|length > 0
+      - service_pem_content|length > 0
+  - include_tasks: netport.yml
+  - include_tasks: netinterface.yml
+  - name: making sure octavia common configuration directory exists
+    file:
+      path: "{{ octavia_confd_prefix }}/etc/octavia/conf.d/common"
+      state: directory
+      selevel: s0
+      setype: svirt_sandbox_file_t
+    become: true
+  - include_tasks: octavia.yml
