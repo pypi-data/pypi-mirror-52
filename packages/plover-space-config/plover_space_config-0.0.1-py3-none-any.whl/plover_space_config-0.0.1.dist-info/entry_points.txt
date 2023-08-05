@@ -1,0 +1,5 @@
+[plover.command]
+after = plover_space_config:after
+before = plover_space_config:before
+toggle = plover_space_config:toggle
+
