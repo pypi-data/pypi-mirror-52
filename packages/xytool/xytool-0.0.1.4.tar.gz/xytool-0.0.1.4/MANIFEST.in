@@ -1,0 +1,6 @@
+include MANIFEST.in
+include *.py
+include README.rst
+include bin/xytool
+include xytool/config.ini
+exclude tests/*
