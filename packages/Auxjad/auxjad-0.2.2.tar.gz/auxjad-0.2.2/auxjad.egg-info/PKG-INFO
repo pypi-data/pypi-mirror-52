@@ -1,0 +1,36 @@
+Metadata-Version: 1.2
+Name: auxjad
+Version: 0.2.2
+Summary: Auxiliary functions and classes for Abjad 3.0.
+Home-page: https://github.com/gilbertohasnofb/auxjad
+Author: Gilberto Agostinho
+Author-email: gilbertohasnofb@gmail.com
+License: MIT
+Description: auxjad
+        ======
+        
+        Auxiliary functions and classes for Abjad 3.0. All classes and functions have a
+        `__doc__` attribute with usage instructions.
+        
+        Documentation is available at https://gilbertohasnofb.github.io/auxjad-docs/.
+        A pdf version of the documentation is also available in the `docs` directory.
+        
+        Bugs can be reported to https://github.com/gilbertohasnofb/auxjad/issues.
+        
+        This library is published under the MIT License.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6

@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+auxjad/__init__.py
+auxjad.egg-info/PKG-INFO
+auxjad.egg-info/SOURCES.txt
+auxjad.egg-info/dependency_links.txt
+auxjad.egg-info/requires.txt
+auxjad.egg-info/top_level.txt
+auxjad/tools/LeafDynMaker.py
+auxjad/tools/__init__.py
+auxjad/tools/container_comparator.py
+tests/__init__.py
+tests/test_LeafDynMaker.py
+tests/test_container_comparator.py
