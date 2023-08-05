@@ -1,0 +1,17 @@
+AUTHORS
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+django_website_coverpage.egg-info/PKG-INFO
+django_website_coverpage.egg-info/SOURCES.txt
+django_website_coverpage.egg-info/dependency_links.txt
+django_website_coverpage.egg-info/not-zip-safe
+django_website_coverpage.egg-info/top_level.txt
+websitecoverpage/__init__.py
+websitecoverpage/admin.py
+websitecoverpage/context_processor.py
+websitecoverpage/models.py
+websitecoverpage/migrations/0001_initial.py
+websitecoverpage/migrations/__init__.py
+websitecoverpage/templates/coverpage/coverpage.html

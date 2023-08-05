@@ -1,0 +1,48 @@
+<style>{% spaceless %}{{ websitecoverpage.style|safe }}{% endspaceless %}</style>
+<div id="websitecoverpage">{{ websitecoverpage.html|safe }}</div>
+<script>
+var websiteCoverPage = {
+  cache: {},
+
+  close: function() {
+    this.remove(this.get('#websitecoverpage'));
+    this.set(false);
+    document.cookie = '{{ websitecoverpage.cookie_name }}=1; path=/';
+    this.cache = {};
+  },
+
+  get: function(s) {
+    return document.querySelectorAll(s)[0];
+  },
+
+  init: function() {
+    this.set(true);
+  },
+
+  remove: function(el) {
+    el.parentNode.removeChild(el);
+  },
+
+  set: function(active) {
+    this.setStyle('html', active);
+    this.setStyle('body', active);
+  },
+
+  setStyle: function(tagName, active) {
+    var s = this.get(tagName);
+    if (active) {
+      this.cache[tagName + '_maxHeight'] = s.style.maxHeight;
+      this.cache[tagName + '_minHeight'] = s.style.minHeight;
+      this.cache[tagName + '_overflow'] = s.style.overflow;
+      s.style.maxHeight = '100%';
+      s.style.minHeight = '100%';
+      s.style.overflow = 'hidden';
+    } else {
+      s.style.maxHeight = this.cache[tagName + '_maxHeight'];
+      s.style.minHeight = this.cache[tagName + '_minHeight'];
+      s.style.overflow = this.cache[tagName + '_overflow'];
+    }
+  }
+}
+websiteCoverPage.init();
+</script>
