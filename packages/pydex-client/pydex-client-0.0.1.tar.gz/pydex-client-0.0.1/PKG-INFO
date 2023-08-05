@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: pydex-client
+Version: 0.0.1
+Summary: Python client for the Data Exchange Server REST service (DEX) provided by ADAMS.
+Home-page: https://github.com/waikato-datamining/pydex
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT
+Description: Python client for interfacing with the Data Exchange Server REST service (DEX)
+        provided by ADAMS.
+        
+        Changelog
+        =========
+        
+        0.0.1 (2019-09-11)
+        ------------------
+        
+        - Initial release
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3

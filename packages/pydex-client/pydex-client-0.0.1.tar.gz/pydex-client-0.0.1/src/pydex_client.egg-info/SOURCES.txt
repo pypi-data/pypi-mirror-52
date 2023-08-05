@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/pydex/__init__.py
+src/pydex/_client.py
+src/pydex_client.egg-info/PKG-INFO
+src/pydex_client.egg-info/SOURCES.txt
+src/pydex_client.egg-info/dependency_links.txt
+src/pydex_client.egg-info/requires.txt
+src/pydex_client.egg-info/top_level.txt
