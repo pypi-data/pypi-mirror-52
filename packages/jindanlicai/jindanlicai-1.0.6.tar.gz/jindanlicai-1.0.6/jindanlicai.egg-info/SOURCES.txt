@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+jindanlicai/__init__.py
+jindanlicai/base_setting.py
+jindanlicai/basic.py
+jindanlicai/getValue.py
+jindanlicai/htmlTestReportCN.py
+jindanlicai/jindanlicai.py
+jindanlicai/log.py
+jindanlicai.egg-info/PKG-INFO
+jindanlicai.egg-info/SOURCES.txt
+jindanlicai.egg-info/dependency_links.txt
+jindanlicai.egg-info/top_level.txt
+jindanlicai.egg-info/zip-safe
