@@ -1,0 +1,21 @@
+{% extends '_layouts/_navbar.html' %}
+
+
+{% block meta %}
+    <meta name="description" content="Home">
+{% endblock meta %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    {% for post in posts %}
+        <ul>
+            <li>
+                <a href="article/{{ post.slug }}">{{ post.title }}</a>
+                <a href="/author/{{ post.author }}">{{ post.author }}</a>
+                <img src="/media/{{ post.image }}" width="32px" height="32px" >
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock content %}
+
