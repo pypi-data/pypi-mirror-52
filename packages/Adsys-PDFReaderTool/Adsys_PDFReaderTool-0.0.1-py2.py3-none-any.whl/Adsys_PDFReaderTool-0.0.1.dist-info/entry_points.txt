@@ -1,0 +1,3 @@
+[console_scripts]
+term_frequency = term_frequency.cli:main
+

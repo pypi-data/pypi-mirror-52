@@ -1,0 +1,16 @@
+term_frequency/PdfReader.py,sha256=oUKr_s5jNgVdCPXFMFelSCafzGckTzJ84eoD-j5zOY4,6337
+term_frequency/__init__.py,sha256=YHNIEvbxwD_b-cE6eHR9BZZX0t0_j-ihBoeWm4HZhMc,172
+term_frequency/cli.py,sha256=r1RO5urTWUzop65Xh3NZZmiGVernVKxyhdGuiDUDhA4,434
+term_frequency/config.py,sha256=xoORl2wvM-pUk_k20UDdb1rbnar9PP-jOby4H82NWHc,159
+term_frequency/db.py,sha256=zIzOjVunhh-aC27fY-nZjiuDlpvyUhrk0ilk9E9Euoc,597
+term_frequency/extract.py,sha256=SiKo2IeuNdjd4F67X6ejFHpNR46t346Yfsmf5f749m0,1951
+term_frequency/term_frequency.py,sha256=VYoI-gwqwBKPx84cA0KnYDRofrgIXs8xtASD2nu5fE0,44
+term_frequency/tf_idf.py,sha256=DUEYu2GxSXptxLMBUjLlFoIlTsVD9DtGsWBNrWtmo1Q,4752
+term_frequency/tfidf.py,sha256=l05qV2bWty7jZ71FA33-huTvfL04cl_ngRkT7KJbED0,4088
+Adsys_PDFReaderTool-0.0.1.dist-info/AUTHORS.rst,sha256=tjsGcZlL59FPd_gVeHoBXo9Of51W1Jgm9vTVQpoAa0I,157
+Adsys_PDFReaderTool-0.0.1.dist-info/LICENSE,sha256=g1byOmzSu_0FVntFHW68tnFLcFmbWJo7vJwgxm-scC0,1070
+Adsys_PDFReaderTool-0.0.1.dist-info/METADATA,sha256=H4uMbvrt9uh0w69veviknram29g3-lfNYF1drehzCOc,1940
+Adsys_PDFReaderTool-0.0.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+Adsys_PDFReaderTool-0.0.1.dist-info/entry_points.txt,sha256=VyAFjsEwjCSGmc47onk1otRvu0hAC_DbS3_yGPQLdkA,60
+Adsys_PDFReaderTool-0.0.1.dist-info/top_level.txt,sha256=F7ZyrrgZqUGncGEqM9mjAWQpB0kG5F9a2nsY0RlfThg,15
+Adsys_PDFReaderTool-0.0.1.dist-info/RECORD,,
