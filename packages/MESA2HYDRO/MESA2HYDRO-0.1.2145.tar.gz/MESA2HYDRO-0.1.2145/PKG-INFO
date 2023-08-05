@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: MESA2HYDRO
+Version: 0.1.2145
+Summary: Convert 1D stellar structure models to 3D particle distributions using the HEALPix spherical tessellation algorithm
+Home-page: https://github.com/mjoyceGR/MESA2HYDRO
+Author: Meridith Joyce
+Author-email: Meridith.Joyce@anu.edu.au
+License: UNKNOWN
+Download-URL: https://github.com/mjoyceGR/MESA2HYDRO/archive/0.1.0.tar.gz
+Description: Convert 1D stellar structure models to 3D particle distributions using the HEALPix spherical tessellation algorithm      
+              see academic paper https://iopscience.iop.org/article/10.3847/1538-4357/ab3405/meta      
+              and User's Guide      
+              https://github.com/mjoyceGR/MESA2HYDRO/blob/master/DOCUMENTATION/MESA2HYDRO_users_guide.pdf
+              for more information
+Keywords: MESA,stellar evolution,stellar structure,astronomy,stellar modeling,hydrodynamical ICs,HEALPix
+Platform: UNKNOWN
