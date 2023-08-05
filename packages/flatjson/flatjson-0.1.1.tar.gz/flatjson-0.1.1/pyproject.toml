@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "flatjson"
+version = "0.1.1"
+description = "Flatten json."
+authors = ["Jiuli Gao <gaojiuli@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/gaojiuli/flatjson"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
