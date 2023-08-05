@@ -1,0 +1,17 @@
+sba_cpp.so,sha256=PqLAK5p-iu_g7PKsRVpggk_JpqwC1fjaEdjjQOrjZcI,359512
+sparse_bundle_adjustment-0.9.1.dist-info/METADATA,sha256=7WSvatqsOb3Oukh02Rt6iFewwrwS0FhoQDZVLQb2CAc,188
+sparse_bundle_adjustment-0.9.1.dist-info/top_level.txt,sha256=DO_o12Mcjrmfp3-A_5wBrCdVkn2iEb53bN-1IejFIe8,8
+sparse_bundle_adjustment-0.9.1.dist-info/WHEEL,sha256=eGX-MHK0v1h-Bc_uVrnvtszZoafGXw5wtwguJWqXPuc,113
+sparse_bundle_adjustment-0.9.1.dist-info/RECORD,,
+.libssba_cpp/libf77blas-75a5c7e0.so.3.0,sha256=TNqxulUBQOrSPv17DEu7_Lw4aHXBTeP7mARDDQ_J_RQ,152344
+.libssba_cpp/libcolamd-207aaf5b.so.2.7.1,sha256=2xhFff7MNbq_aFUAi1UDYgafPntyRLc-qnagGyK65SY,29248
+.libssba_cpp/liblapack-7aef6c42.so.3.0,sha256=6jYs9gr2bjXgHihERbJCpdVO-rktKJpE_ZW0VrFevyk,5402024
+.libssba_cpp/libccolamd-9bb665d8.so.2.7.1,sha256=kobdms06LouTq9oyTr7Cyuovzo-ChJwuYJMFO6hLD5Y,41776
+.libssba_cpp/libopenblas-r0-da994f36.3.3.so,sha256=e9enNBkSZi21oh0G32rYRoFXkM14wKk8fSG175Wykog,33489408
+.libssba_cpp/libamd-ce2eacaf.so.2.2.0,sha256=ZsUczNlD-BwY3t5TQrX7-G9_Wvh1h9ltzQFYZhbM1IE,37624
+.libssba_cpp/libcamd-f66a0357.so.2.2.0,sha256=3AIy5F7xtaoFOrrGN_CnCYTD3hCPybliNPBiACPGFY8,37664
+.libssba_cpp/libcxsparse-25130d1e.so.2.2.3,sha256=rbt90hXGaM3A0YnKGIVPF2f0lqTuarfcnk_QlJSmOqw,190216
+.libssba_cpp/libcholmod-bb75026f.so.1.7.1,sha256=GFwymPZg-zGmjbH9iKoZ3DZJmbHFszPBGFFqivlc0lo,948104
+.libssba_cpp/libcblas-70dd3697.so.3.0,sha256=pGr4dNFBEsOf6f-aEnQP1e7dPU4aaT5RYTVGrtQshUo,143112
+.libssba_cpp/libatlas-b6fb69b0.so.3.0,sha256=ZYJFPf0ECl2puH3ZSaj2nvQQlmWBWhD9BeDe82hUDkE,4667936
+.libssba_cpp/libgfortran-139be63a.so.3.0.0,sha256=gqiLNN_ddehEXXYQ3n0bPVxM4Oy3_2w_4zWIEH-rdWA,1023952
