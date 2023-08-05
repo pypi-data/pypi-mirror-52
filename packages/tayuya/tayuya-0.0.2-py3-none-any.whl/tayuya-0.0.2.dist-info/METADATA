@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: tayuya
+Version: 0.0.2
+Summary: MIDI to guitar tabs generator
+Home-page: https://github.com/vipul-sharma20/tayuya
+Author: Vipul Sharma
+Author-email: vipul.sharma20@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mido
+Requires-Dist: music21
+
+### Tayuya
+
+A tool to convert MIDI files to guitar tabs
+
+### Installation
+
+`pip install tayuya`
+
+### Usage
+
+```[python]
+In [1]: from tayuya import MIDIParser
+
+In [2]: mid = MIDIParser('sample.mid', channel=0)
+
+In [3]: mid.render_tabs()
+```
+
+### The name
+
+[Tayuya](https://naruto.fandom.com/wiki/Tayuya) (たゆや)
+
+
