@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: html2md
+Version: 0.1.7
+Summary: HTML to Markdown converter.
+Home-page: https://github.com/davidcavazos/html2md
+Author: David Cavazos
+Author-email: dcavazosw@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Compilers
+Description-Content-Type: text/markdown
+Requires-Dist: pyquery
+
+# html2md
+
+HTML to Markdown converter
+
+## Installation
+
+```sh
+pip install -U html2md
+```
+
+## Usage
+
+As a command line tool:
+
+```sh
+# To convert a file.
+html2md examples/hello.html
+
+# To convert from stdin.
+cat examples/hello.html | html2md
+```
+
+From a Python script:
+
+```py
+import html2md
+
+html = '''
+<h1>Header</h1>
+<b><i>Hello</i></b> from <code>html2md</code>
+<pre class="py"><code>
+print('Hello')
+</code></pre>
+'''
+
+md = html2md.convert(html)
+print(md)
+```
+
+## Contributing
+
+Contributions are welcome! For instructions on how to contribute,
+please check the [Contribution guide](CONTRIBUTING.md).
+
+
