@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: pythonGUI
+Version: 0.0.2
+Summary: a big lib with many usefull tools and it are not only os and sys tools...
+Home-page: https://stranica.nl/
+Author: Matthijs labots
+Author-email: py.libs@gmail.com
+License: GNU General Public License
+Project-URL: server documentation, https://www.stranica.nl/docs
+Project-URL: blog, https://stranica.nl/wordpress/wordpress/
+Project-URL: all files, https://github.com/Matthijs990/os_sys
+Project-URL: Downloads, https://stranica.nl/downloads.html
+Project-URL: download all files, https://github.com/Matthijs990/os_sys.git
+Project-URL: want to help, https://github.com/Matthijs990/os_sys/tree/master/do%20you%20want%20to%20help
+Project-URL: startpage, https://pypi.org/project/os-sys/
+Project-URL: made possible by, https://pypi.org
+Project-URL: help, https://github.com/Matthijs990/os_sys/issues
+Project-URL: github wiki(under development), https://github.com/Matthijs990/os_sys/wiki
+Project-URL: just a chat to talk about python, https://github.com/Matthijs990/chat/issues/1
+Project-URL: github, https://github.com/Matthijs990/os_sys
+Project-URL: os_sys online, https://stranica.nl/os_sys/
+Project-URL: gitlab, https://gitlab.com/Matthijs990/os_sys
+Project-URL: read the docs, https://os-sys-wiki-page.readthedocs.io/en/latest/index.html
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: IDLE
+Classifier: Natural Language :: Dutch
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: os-sys
+
+ï»¿pygui
+===========================
+The python Gui module to make live easier
+it will include handy guis in one
+
+
+
