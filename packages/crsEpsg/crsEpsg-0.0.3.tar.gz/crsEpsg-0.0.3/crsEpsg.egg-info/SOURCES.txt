@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+crsEpsg/__init__.py
+crsEpsg/crsEpsg.py
+crsEpsg.egg-info/PKG-INFO
+crsEpsg.egg-info/SOURCES.txt
+crsEpsg.egg-info/dependency_links.txt
+crsEpsg.egg-info/requires.txt
+crsEpsg.egg-info/top_level.txt
