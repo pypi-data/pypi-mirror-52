@@ -1,0 +1,16 @@
+bankroll/analysis/__init__.py,sha256=2nJseZ6F0z8s-ciu44jKZssupCV5-KqqoIZ_6WVNlIE,1185
+bankroll/analysis/analysis.py,sha256=wzRN75ScSe4C_-zTVy_iP9a4ngXddXqD5Vrj5JqO6Rc,9418
+bankroll/analysis/portfolio.py,sha256=pmcjSW8LID_TkkIS91MxFRGukTOhV-v7Lk_aoFovoZQ,8866
+bankroll/analysis/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bankroll/interface/__init__.py,sha256=ynDsyPsPqQk2pu3Z1LrtLUTUsV8wpiRx56XxCb7o89M,179
+bankroll/interface/__main__.py,sha256=eV2vVibapMKAMW2AHrZpa5B4kV9fL6NtcbMjwoQJX9w,6664
+bankroll/interface/bankroll.default.ini,sha256=KD9Ow8_cXYiF1jit-fFE3RDrgQXAPLK_u5EzMJ4F4QE,2035
+bankroll/interface/brokers.py,sha256=k4OkSddf5Fw4hrxAeDkj5afKeBiGrstT-oqOIgeqi80,444
+bankroll/interface/configuration.py,sha256=sdxDuWlDLFOHphcCEJZOJz0E9PamjNCvkxR5YcJwCF4,942
+bankroll/interface/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bankroll-0.4.1.dist-info/LICENSE,sha256=c348Ut9y7l3uPucimipJK2tPTUcMyHg-wNbgHBEtXqc,1124
+bankroll-0.4.1.dist-info/METADATA,sha256=0BHio63vqjOVavp_PB8xKTbKbASCl3uvMaK4C1pFQHo,12443
+bankroll-0.4.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+bankroll-0.4.1.dist-info/entry_points.txt,sha256=TQsu3G60EMCJbSXUFzniiCbEvHKGVIZSzKHE7zDc-AY,63
+bankroll-0.4.1.dist-info/top_level.txt,sha256=rMDAvIGDwxswDDlVMpB-qJJrZlx1nYiAj8mYJu3pypo,9
+bankroll-0.4.1.dist-info/RECORD,,
