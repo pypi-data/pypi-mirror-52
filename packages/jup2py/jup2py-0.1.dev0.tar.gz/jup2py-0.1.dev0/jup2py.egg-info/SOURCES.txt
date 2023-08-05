@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+jup2py/__init__.py
+jup2py/jup2pylib.py
+jup2py.egg-info/PKG-INFO
+jup2py.egg-info/SOURCES.txt
+jup2py.egg-info/dependency_links.txt
+jup2py.egg-info/entry_points.txt
+jup2py.egg-info/not-zip-safe
+jup2py.egg-info/requires.txt
+jup2py.egg-info/top_level.txt
