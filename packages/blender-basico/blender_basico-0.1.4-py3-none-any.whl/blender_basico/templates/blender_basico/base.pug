@@ -1,0 +1,102 @@
+!!! 5
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+		title blender.org
+		meta(name='description', content='Home of the Blender project - Free and Open 3D Creation Software')
+		meta(name='keywords', content='')
+		meta(name='author', content='Blender Foundation')
+		meta(name='theme-color', content='#ed8f31')
+
+		meta(property='og:site_name', content='')
+		meta(property='og:title', content='blender.org')
+		meta(property='og:description', content='Home of the Blender project - Free and Open 3D Creation Software')
+		meta(property='og:url', content='')
+		meta(property='og:image', content='')
+		meta(name='twitter:card', content='')
+		meta(name='twitter:site', content='')
+		meta(name='twitter:title', content='blender.org')
+		meta(name='twitter:description', content='Home of the Blender project - Free and Open 3D Creation Software')
+		meta(name='twitter:image', content='')
+
+		| {% load pipeline %}
+		| {% load static %}
+
+		link(rel="shortcut icon", href="{% static 'assets_shared/images/favicon.ico' %}")
+
+		| {% stylesheet 'main' %}
+		| {% block extra_head %}
+		| {% endblock extra_head %}
+
+	body(class="{% block body_classes %}{% endblock %}")
+		| {% if messages %}
+		| {% for message in messages %}
+		.container.alert.alert-dismissible.show.my-2.fixed-top.text-center(
+			role='alert',
+			class="{% if message.tags %}alert-{{ message.tags }}{% endif %}")
+			| {{ message }} esa
+			button.close(type='button', data-dismiss='alert', aria-label='Close')
+				span(aria-hidden='true')
+					| x
+		| {% endfor %}
+		| {% endif %}
+
+		| {% block body %}
+
+		| {% block navbar %}
+		| {% include 'blender_basico/_navbar.pug' %}
+		| {% endblock navbar %}
+
+		| {% block header %}
+		.featured
+			.container
+				.featured-content
+					h1 Blender Basico
+			.featured-overlay
+
+		nav.navbar.navbar-default.navbar-secondary(role='navigation')
+			.container
+				ul.nav.navbar-nav.mr-auto
+					| {% block navbar_secondary %}
+					li.active
+						a(href='/') Home
+					li
+						a(href='/') About
+					| {% endblock navbar_secondary %}
+		| {% endblock header %}
+
+		main.container-main(role='main')
+			| {% block content %}
+			.container.py-3
+				.row.flex
+					.col-md-6
+						.box.p-3
+							h2.mx-0 Awesome in Space
+
+							.lead
+								| You forgot me on:
+								ul
+									li Earth
+									li Oude Kerk
+
+					.col-md-6
+						.box.p-3
+			| {% endblock content %}
+
+			| {% block site_footer %}
+			| {% endblock site_footer %}
+		| {% endblock body %}
+
+		| {% block extra_body %}
+		| {% endblock %}
+
+		| {% include 'blender_basico/_footer.pug' %}
+
+		| {% javascript 'vendor' %}
+		| {% javascript 'tutti' %}
+
+		| {% block javascript-extra %}
+		| {% endblock javascript-extra %}
+
