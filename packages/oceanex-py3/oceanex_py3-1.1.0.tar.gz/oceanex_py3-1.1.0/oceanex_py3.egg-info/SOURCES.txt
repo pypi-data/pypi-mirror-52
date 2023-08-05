@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+oceanex_py3/__init__.py
+oceanex_py3/personal.py
+oceanex_py3/public.py
+oceanex_py3.egg-info/PKG-INFO
+oceanex_py3.egg-info/SOURCES.txt
+oceanex_py3.egg-info/dependency_links.txt
+oceanex_py3.egg-info/not-zip-safe
+oceanex_py3.egg-info/requires.txt
+oceanex_py3.egg-info/top_level.txt
+test/test_personal.py
+test/test_public_.py
