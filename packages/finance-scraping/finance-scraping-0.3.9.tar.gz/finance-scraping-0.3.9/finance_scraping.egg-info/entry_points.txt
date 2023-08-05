@@ -1,0 +1,3 @@
+[console_scripts]
+finance-scraper-etl = finance_scraping.main:main
+
