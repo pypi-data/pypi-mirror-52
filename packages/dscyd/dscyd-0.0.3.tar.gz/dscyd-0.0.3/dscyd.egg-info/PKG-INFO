@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dscyd
+Version: 0.0.3
+Summary: Some utils for web development
+Home-page: https://github.com/dushanchen/dsc.git
+Author: dushanchen
+Author-email: 575678405@qq.com
+License: UNKNOWN
+Description: # dsc
+        Some utils for web development
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

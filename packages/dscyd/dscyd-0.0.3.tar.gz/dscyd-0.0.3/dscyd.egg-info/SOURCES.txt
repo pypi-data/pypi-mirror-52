@@ -1,0 +1,9 @@
+README.md
+setup.py
+dscyd/__init__.py
+dscyd/django.py
+dscyd/utils.py
+dscyd.egg-info/PKG-INFO
+dscyd.egg-info/SOURCES.txt
+dscyd.egg-info/dependency_links.txt
+dscyd.egg-info/top_level.txt
