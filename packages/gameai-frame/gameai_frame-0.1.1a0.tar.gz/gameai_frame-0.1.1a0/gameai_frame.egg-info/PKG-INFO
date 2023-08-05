@@ -1,0 +1,33 @@
+Metadata-Version: 1.2
+Name: gameai-frame
+Version: 0.1.1a0
+Summary: maybe a generitic game ai frame :)
+Home-page: https://github.com/Iyrian/GameAI-Frame-
+Author: Ehekatl
+Author-email: 2072498313@qq.com
+Maintainer: Ehekatl
+Maintainer-email: 2072498313@qq.com
+License: MIT License
+Description: ﻿GameAI-Frame?
+        -----------------
+        	基于神经网络和遗传算法的游戏AI框架，可以用于多种游戏(大概)  
+        
+        	示例:https://github.com/Iyrian/GameAI-Frame-  
+        
+        内容说明
+        ---------
+        	GameRole.py : 声明了运用该AI框架的游戏所必须提供的数据和重载的函数  
+        
+        	Matrix.py, NeuroNetwork.py, Population.py : 神经网络 + 遗传算法的实现。如果不是要改进算法，可以不用管它们  
+        
+        	global_vars.py : 提供了神经网络和遗传算法的参数，将算法绑定到特定游戏时要适当修改这些参数  
+        
+        如何将AI框架绑定到特定游戏
+        -----------------------------
+        	示例中展示了如何将贪吃蛇游戏绑定到框架  
+        
+        	当然绑定不一定要知道游戏内部数据，只要有方法在GameRole.look()中获得神经网络的输入(vision)  
+        
+        
+        
+Platform: all
