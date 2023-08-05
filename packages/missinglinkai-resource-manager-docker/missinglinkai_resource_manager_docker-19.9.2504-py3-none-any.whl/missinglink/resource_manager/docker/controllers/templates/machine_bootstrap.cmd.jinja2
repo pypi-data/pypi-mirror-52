@@ -1,0 +1,34 @@
+@echo off
+
+{%- macro run_command(cmd) %}
+    {%- if cmd %}
+        {%- if debug %}
+            echo "##+ML## {{ cmd }}"
+        {%- endif %}
+        {{ cmd }}
+        {%- if debug %}
+            echo "###ML## {{ cmd }}"
+        {%-endif %}
+    {%- endif %}
+{%- endmacro %}
+
+{%- set requirements_txt = requirements_txt_path or 'requirements.txt' %}
+
+IF EXIST {{ requirements_txt }} (
+    md C:\logs
+    echo Install requirements from {{ requirements_txt }}
+    pip install -r {{ requirements_txt }} -U -q --log C:\logs\pip_install.log | cd .
+)
+IF "%ML_CACHE_FOLDER%" == "" (
+    SET ML_CACHE_FOLDER=c:\cache\ml
+)
+IF "%XDG_CACHE_HOME%" == "" (
+    SET XDG_CACHE_HOME=c:\cache\xdg
+)
+md %ML_CACHE_FOLDER%
+md %XDG_CACHE_HOME%
+
+{{ run_command(command) }}
+{%- for command in (commands or []) %}
+    {{ run_command(command) }}
+{%- endfor %}
