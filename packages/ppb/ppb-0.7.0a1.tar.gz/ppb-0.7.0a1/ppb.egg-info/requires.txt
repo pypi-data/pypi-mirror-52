@@ -1,0 +1,6 @@
+pygame<2
+ppb-vector~=1.0
+
+[:python_version < "3.7"]
+dataclasses
+importlib_resources
