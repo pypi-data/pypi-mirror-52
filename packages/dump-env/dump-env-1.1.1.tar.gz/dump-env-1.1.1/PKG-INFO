@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: dump-env
+Version: 1.1.1
+Summary: A utility tool to create .env files
+Home-page: https://dump-env.readthedocs.io
+Author: Nikita Sobolev
+Author-email: mail@sobolevn.me
+Keywords: dotenv,.env,tempaltes,secrets,CI/CD
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Project-URL: Repository, https://github.com/sobolevn/dump-env
