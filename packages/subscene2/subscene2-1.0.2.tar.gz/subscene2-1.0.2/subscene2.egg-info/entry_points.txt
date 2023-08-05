@@ -1,0 +1,3 @@
+[console_scripts]
+subscene2 = subscene2.cli:main
+
