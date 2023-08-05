@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: e-autumn
+Version: 0.0.25
+Summary: A executor framework
+Home-page: https://coding.net/u/Alecyrus/p/Autumn
+Author: Druggle
+Author-email: iamdrug@qq.com
+License: UNKNOWN
+Description: #Autumn
+        
+        ## lib
+        主要框架代码
+        
+        ## utils
+        工具函数代码
+        
+        ## tests
+        框架测试代码
+        
+Keywords: executor
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
