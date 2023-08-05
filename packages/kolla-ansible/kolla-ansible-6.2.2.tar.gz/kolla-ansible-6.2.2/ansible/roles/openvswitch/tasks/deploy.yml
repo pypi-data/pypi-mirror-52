@@ -1,0 +1,10 @@
+---
+# enforce ironic usage only with openvswitch
+- include: ironic-check.yml
+
+- include: config.yml
+
+- name: Flush Handlers
+  meta: flush_handlers
+
+- include: ensure-ovs-bridge.yml
