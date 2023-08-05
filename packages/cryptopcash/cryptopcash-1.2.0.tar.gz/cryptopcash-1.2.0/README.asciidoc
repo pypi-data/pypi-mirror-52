@@ -1,0 +1,84 @@
+cryptopcash
+===========
+
+image:https://travis-ci.org/rpesche/cryptopcash.svg?branch=master["Build Status", link="https://travis-ci.org/rpesche/cryptopcash"]
+image:https://codecov.io/github/rpesche/cryptopcash/coverage.svg?branch=master["coverage badge",link="https://codecov.io/github/rpesche/cryptopcash?branch=master"]
+
+cryptopcash is a cli cryptocurrency portifolio
+
+image:images/cryptopcash.png[front page]
+
+Installation
+------------
+
+
+----
+#  sudo pip install cryptopcash
+----
+
+
+Usage
+-----
+
+----
+# cryptopcash
+----
+
+
+Key bindings
+------------
+
+* 'a' - add currency to the portfolio
+
+
+Config
+------
+
+The available parameters are :
+
+* `currency` : the conversion currency. Default to `EUR` for EURO ('USD' for us dollar)
+
+
+Colors:
+------
+
+image:images/colors.png[colors sample]
+
+The colors are defined in the config file `~/.config/cryptopcash/config.ini`.
+They are 3 parameters :
+
+* `text` for the text color
+* `banner_text` for the banner text color
+* `banner` for the background color of banner text
+
+The available colors are :
+
+    * black
+    * yellow
+    * white
+    * dark red
+    * light red
+    * dark green
+    * light green
+    * brown
+    * dark blue
+    * light blue
+    * dark magenta
+    * light magenta
+    * dark cyan
+    * light cyan
+    * dark gray
+    * light gray
+
+
+
+Use cryptop config and data file
+--------------------------------
+
+The `cryptop` config and data files are compatible with `cryptopcash`
+You juste need to copy it into the `cryptopcash` directory:
+
+----
+# cp ~/.cryptop/config.ini ~/.config/cryptopcash/
+# cp ~/.cryptop/wallet.json ~/.local/share/cryptopcash/wallet.json
+----
