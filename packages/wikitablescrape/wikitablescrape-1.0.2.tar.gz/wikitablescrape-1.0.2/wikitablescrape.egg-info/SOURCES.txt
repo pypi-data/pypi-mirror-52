@@ -1,0 +1,13 @@
+README.md
+setup.py
+scripts/wikitablescrape
+wikitablescrape/__init__.py
+wikitablescrape/__main__.py
+wikitablescrape/cli.py
+wikitablescrape/parse.py
+wikitablescrape/test_parse.py
+wikitablescrape.egg-info/PKG-INFO
+wikitablescrape.egg-info/SOURCES.txt
+wikitablescrape.egg-info/dependency_links.txt
+wikitablescrape.egg-info/requires.txt
+wikitablescrape.egg-info/top_level.txt
