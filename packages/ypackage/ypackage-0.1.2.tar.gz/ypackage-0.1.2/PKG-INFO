@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: ypackage
+Version: 0.1.2
+Summary: Sık kullanılan python işlemleri için hazır paket
+Home-page: https://github.com/yedhrab/YPackage
+Author: Yunus Emre Ak
+Author-email: yedhrab@gmail.com
+License: MIT
+Download-URL: https://github.com/yedhrab/YPackage/archive/v0.1.2.tar.gz
+Description: # YPackage
+        
+        Kişisel python paketlerim 📦
+        
+Keywords: ypackage,yedhrab,yemreak
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
