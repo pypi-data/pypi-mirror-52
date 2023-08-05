@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: opsmodelviewer
+Version: 1.0.0
+Summary: A viewer for 2D OpenSees models.
+Home-page: https://github.com/otaithleigh/opsmodelviewer
+Author: Peter Talley
+Author-email: ptalley2@vols.utk.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: bokeh
+Requires-Dist: pandas
+
+opsmodelviewer
+++++++++++++++
+
+This tool provides a means to inspect your (2-dimensional) OpenSees models.
+
+
+Installation
+============
+
+opsmodelviewer requires `Bokeh <https://bokeh.pydata.org>`_, which may require
+additional dependencies depending on your setup. These dependencies are most
+easily handled using conda::
+
+    conda install -c otaithleigh opsmodelviewer
+
+If you don't use conda, it is also available through pip::
+
+    pip install opsmodelviewer
+
+
