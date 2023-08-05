@@ -1,0 +1,17 @@
+biggerquery/__init__.py,sha256=w9jYQgRDjjpXGXwKXP8emE0o7BIJIZu7r4M_Lnw8exI,834
+biggerquery/beam_manager.py,sha256=41NKfzpJj_wAZURHvZYI7pAZE5bQNxlzl682u2GSn70,7657
+biggerquery/configuration.py,sha256=J2xvmuYks_Iy5Giux58CtspbUM0LqKcaptLyXxoHWKs,5074
+biggerquery/dataset_manager.py,sha256=bZTSqcKlZ_t0t3QkWXMtiOrHEmSpdGKD0nDrZSLC2tI,10079
+biggerquery/deployment.py,sha256=4xts-1j0HELsOHM0_6Liwbu3LxysJjMylgSk_YMd0Ds,4313
+biggerquery/gcp_defaults.py,sha256=XNYvFXGhqCYhC61abLipkwTx0zbPa7vTaJhsr0tTXck,94
+biggerquery/interactive.py,sha256=caVvCYPLWjeCdG8FaDfGOk9Q-88C2RFOjf3OAopXamw,9267
+biggerquery/job.py,sha256=eHiAJT_ay-551BXtjDknMEK95Qv94EZ9LPCWTueHMmI,7660
+biggerquery/test_utils.py,sha256=yzHgqlF41DVXK4ikhES32iIfRrnbqbDY4TB_iB0oeFY,1627
+biggerquery/utils.py,sha256=WBRdexCBw0AAxVIol0MdYWNGQKShTSEGYBHUlHBDhxM,2441
+biggerquery/workflow.py,sha256=317rX89CUFsjrxp9cZ9a9N3o-TLN5bmVTfuzVQFuMHE,951
+biggerquery-0.3.dev3.dist-info/LICENSE,sha256=vMvwRWs0RZemnFaSLr4-CEz5aZFQRea4VtMVIlQyquE,11896
+biggerquery-0.3.dev3.dist-info/METADATA,sha256=BQ86kmkm5sH3P-mwI6SJgIPdfVvQJE66yCSeNvvbY3Q,23532
+biggerquery-0.3.dev3.dist-info/NOTICE,sha256=e-oPV6MF9HLVCDWmT3k4eJZ8tEnlficEQ7i--PgsiMM,585
+biggerquery-0.3.dev3.dist-info/WHEEL,sha256=g3LQva5oS9Ma-DPFwX8R7Ke-NO25KWW489RoZdNxJXc,92
+biggerquery-0.3.dev3.dist-info/top_level.txt,sha256=ry1KUpLmsr35oCQQBFrJYBSXhDAqQzjJaHU1Tul-rRk,12
+biggerquery-0.3.dev3.dist-info/RECORD,,
