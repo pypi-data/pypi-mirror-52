@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mailhandler
+Version: 0.0.5
+Summary: Python adapter for MailHandler.ru API
+Home-page: https://mailhandler.ru
+Author: MailHandler.ru
+Author-email: hello@mailhandler.ru
+License: Apache License
+Keywords: mailhandler email
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: requests (>=2.11.1)
+
+Python adapter for MailHandler.ru API. Includes bindings for transactional mailing and tracking features
+
+

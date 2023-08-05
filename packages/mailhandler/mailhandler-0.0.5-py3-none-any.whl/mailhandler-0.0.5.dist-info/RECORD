@@ -1,0 +1,15 @@
+mailhandler/__init__.py,sha256=I8CQXDuWhYtyhfZwO3HKUIIh8Vuo5O8G7H-nyQkfBqc,40
+mailhandler/adapters.py,sha256=3VuBIaGW_YyUov12hWiziDt_RXJcaAyO7beSdDox8x8,910
+mailhandler/core.py,sha256=n3LufuP10jVrBnsMJlip4gBgyK_stHmSlfMbAI7k2oY,615
+mailhandler/exceptions.py,sha256=DAHhmRxt1vjjqMrwdozE7sMDtP40dOf6J3uPNt04dnE,113
+mailhandler/bulk/__init__.py,sha256=Hc0g8HMsO3WRghOQdRyaLC9zjc2pRrVAB24uYcIfmH0,16
+mailhandler/bulk/adapters.py,sha256=tw0zbFGpLHDDP-crKNNj6S81ZdjtcuW2kZCAt2pPw0k,164
+mailhandler/tracking/__init__.py,sha256=Hc0g8HMsO3WRghOQdRyaLC9zjc2pRrVAB24uYcIfmH0,16
+mailhandler/tracking/adapters.py,sha256=GJfkG46k2CQyU5onoiWYzcvmb5MuwYX7xZmVgTeA2nM,335
+mailhandler/transactional/__init__.py,sha256=Hc0g8HMsO3WRghOQdRyaLC9zjc2pRrVAB24uYcIfmH0,16
+mailhandler/transactional/adapters.py,sha256=12V8aFPeYDqk3MXkjjUCx3sn5YF-6v2V8diuaNGYP60,1270
+mailhandler-0.0.5.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+mailhandler-0.0.5.dist-info/METADATA,sha256=yzmideW2qzFm737Yt_9G8rUW-gyLNw27h1-UM0Nev1I,628
+mailhandler-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mailhandler-0.0.5.dist-info/top_level.txt,sha256=LufMvi14yJVmYIek5GmGmMC4inYVz5BiU74vCW5vF6M,12
+mailhandler-0.0.5.dist-info/RECORD,,
