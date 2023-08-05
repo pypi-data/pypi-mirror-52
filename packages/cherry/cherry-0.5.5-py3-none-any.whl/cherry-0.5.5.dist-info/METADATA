@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: cherry
+Version: 0.5.5
+Summary: easy text classification using machine learning
+Home-page: https://github.com/Windsooon/cherry
+Author: Windson Yang
+Author-email: wiwindson@outlook.com
+License: MIT
+Keywords: data classify content filter
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: scikit-learn (>=0.21.3)
+Requires-Dist: matplotlib (>=2.2.2)
+Requires-Dist: jieba (>=0.39)
+Requires-Dist: pytest (>=5.1.2)
+
+cherry
+=======================
+.. image:: https://travis-ci.org/Windsooon/cherry.svg?branch=master
+    :target: https://travis-ci.org/Windsooon/cherry
+
+.. image:: https://img.shields.io/pypi/v/cherry.svg
+    :target: https://pypi.python.org/pypi/cherry
+
+.. image:: https://img.shields.io/pypi/l/cherry.svg
+    :target: https://pypi.python.org/pypi/cherry
+
+.. image:: https://img.shields.io/pypi/pyversions/cherry.svg
+    :target: https://pypi.python.org/pypi/cherry
+
+
+:Version: 0.4
+:Download: https://pypi.python.org/pypi/cherry/
+:Source: https://github.com/Windsooon/cherry
+:Support: >=Python3.3
+:Keywords: native, bayes, classify
+
+
