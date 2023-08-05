@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: git-remote-aws
+Version: 0.5.3
+Summary: git remote helper for fetching aws data
+Home-page: https://gitlab.com/autofitcloud/git-remote-aws
+Author: Shadi Akiki, AutofitCloud
+Author-email: shadi@autofitcloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: cachecontrol
+Requires-Dist: pandas
+Requires-Dist: pyyaml (==5.1.1)
+Requires-Dist: jmespath (==0.9.4)
+Requires-Dist: tqdm (==4.32.2)
+
+Check https://gitlab.com/autofitcloud/git-remote-aws
+
+
