@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/pdf2images
+pdf2images/__init__.py
+pdf2images/packdet.py
+pdf2images/pdf2images.py
+pdf2images.egg-info/PKG-INFO
+pdf2images.egg-info/SOURCES.txt
+pdf2images.egg-info/dependency_links.txt
+pdf2images.egg-info/requires.txt
+pdf2images.egg-info/top_level.txt
