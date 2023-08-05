@@ -1,0 +1,15 @@
+larq_zoo/__init__.py,sha256=iGsClv_CgVkhFpZ4kDBTt3640wnBxuLsAtKKkhsCZts,631
+larq_zoo/binarynet.py,sha256=AU6XTgCFFRdecv7u3pQB9v3i9dyS55IEQ_QrbFFdct8,5040
+larq_zoo/birealnet.py,sha256=GVaT9uEbBZJxqX8CB4FktmW4uByCI6oj6XCoQ5qhArA,5704
+larq_zoo/data.py,sha256=zfJGFR8HOwpO-52CNPHc7CuCJWnlqUumsgLXnpGBxP8,8629
+larq_zoo/densenet.py,sha256=p_h-QcjdtiPTF9qNqD0bvERmEfUrOOn8wsyad3J9BnM,14126
+larq_zoo/resnet_e.py,sha256=Zhve83v74wRb2qnjoQQJ6JdPuth6GdkHknd50W_vXQ0,6310
+larq_zoo/train.py,sha256=9DkZ_8YTobtX8A0T8onXixYU2U_XBfDS1H9BMsQGALE,2480
+larq_zoo/utils.py,sha256=lJRPBMEHXGF8jwiLJAoGSS3caViN7EQzaoCZy69SdpM,3562
+larq_zoo/xnornet.py,sha256=BhS_ZuuB_lZDJHyYe-SLj_AxJh_VTIhCwGPGAXzcX28,7498
+larq_zoo-0.4.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+larq_zoo-0.4.1.dist-info/METADATA,sha256=Gl7seWaJIVv1Nu82w_ryj0vSubQnEZyc6lfz5EMzuHE,2866
+larq_zoo-0.4.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+larq_zoo-0.4.1.dist-info/entry_points.txt,sha256=Ki6yC-YXtad3-MJ0y0IXjN0Kr_tchCgDApNOG_Vm7UA,62
+larq_zoo-0.4.1.dist-info/top_level.txt,sha256=YVfSwVCad0zH624WWge8XBpg0kpX9NRz1LnHFu6tDmU,9
+larq_zoo-0.4.1.dist-info/RECORD,,
