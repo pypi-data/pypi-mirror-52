@@ -1,0 +1,6 @@
+
+		[pygments.styles]
+			mmtdefault = mmtpygments.mmt_style:MMTDefaultStyle
+		[pygments.lexers]
+			mmt = mmtpygments.mmt_lexer:MMTLexer
+	
