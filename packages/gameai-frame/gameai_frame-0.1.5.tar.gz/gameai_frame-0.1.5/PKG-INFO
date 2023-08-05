@@ -1,0 +1,49 @@
+Metadata-Version: 1.2
+Name: gameai_frame
+Version: 0.1.5
+Summary: :)
+Home-page: https://github.com/Iyrian/GameAI-Frame-
+Author: Ehekatl
+Author-email: 2072498313@qq.com
+Maintainer: Ehekatl
+Maintainer-email: 2072498313@qq.com
+License: MIT License
+Description: ﻿GameAI-Frame?
+        -----------------
+        	基于神经网络和遗传算法的游戏AI框架，可以用于多种游戏(大概)  
+        
+        	示例: https://github.com/Iyrian/GameAI-Frame-  
+        
+        	依赖: numpy, tkinter  
+        
+        	Python版本: Python 3.6  
+        
+        	#. 内容说明
+        		GameRole.py : 声明了运用该AI框架的游戏所必须提供的数据和重载的函数  
+        
+        		Matrix.py, NeuroNetwork.py, Population.py : 神经网络 + 遗传算法的实现。如果不是要改进算法，可以不用管它们  
+        
+        		global_vars.py : 提供了神经网络和遗传算法的参数，将算法绑定到特定游戏时要适当修改这些参数  
+        
+        	#. 如何将AI框架绑定到特定游戏
+        		示例中展示了如何将贪吃蛇游戏绑定到框架  
+        
+        		当然绑定不一定要知道游戏内部数据，只要有方法在GameRole.look()中获得神经网络的输入就可  
+        
+        		#. 设定GameRole.look()的几种方法
+        			#. 动作类游戏
+        				及从游戏画面获取信息，操作游戏角色做动作的游戏，gameai_frame也是基于这种游戏构建的。对于这种游戏，可以用角色的视野作为神经网络的输入。比如对于贪吃蛇来言，可以用从蛇头射出的八方向的射线扫描游戏场景，获得蛇的视野数组。而神经网络的输出，可以传到一个或者几个分类器(比如if...else...)从而获得游戏角色操作的输入  
+        
+        				神经网络输入的元素顺序以及对输出值的处理是随意的，因为神经网络会被训练，最终总能得到适应的结果  
+        
+        				GameRole.calculate_fitness()计算当前个体的适应度，是决定神经网络训练效果效率的重要因素。绑定游戏时，一定要选择适当的适应性函数。在选择适应性函数时，将希望出现的游戏角色表现设定较大的适应性，比如对于贪吃蛇来言，适应性与蛇吃到的食物数正相关；对于PyMario来言，适应性与Mario的得分以及Mario向右移动的距离正相关。当然，除此之外，适应性还需要一些次要因素修饰，比如个体存活时间之类
+        
+        			#. 棋牌策略类游戏
+        				这类游戏的规则比动作类复杂，很多时候，出于对全局的考虑，同样的情况下出牌可能不同。这时，神经网络的输入就不能只有从游戏场景获取的信息，还要增加自身的状态。神经网络输出还是由分类器转换为游戏操作输入  
+        
+        
+        
+        
+Platform: all
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
