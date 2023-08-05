@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mandarina
+Version: 0.0.4
+Summary: Personal data science library
+Home-page: https://github.com/sunpip/Mandarina
+Author: Alen Frey
+Author-email: mailtoalenf@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Mandarina
+======
+**Mandarina** is a friendly personal Data Science library for Python
+
+## Functionality
+
+At the moment, Mandarina provides the follwing modules:
+- Csv file functions
+- Random data generators 
+- Function benchmarking tools
+- Tools to work with files and directories
+
+## License 
+* Check the [LICENSE](https://github.com/sunpip/Mandarina/blob/master/LICENSE) file
+
+## Authors
+
+- Alen Frey
+
+## Version 
+* Version 0.0.3
+
+## How to install
+```shell script
+pip install mandarina
+```
+
+

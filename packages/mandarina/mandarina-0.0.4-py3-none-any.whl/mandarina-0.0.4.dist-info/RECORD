@@ -1,0 +1,15 @@
+mandarina/__init__.py,sha256=BLqqepR7xHXxLR7WBrCQ7Fw9LUW_EYLNqIzdckP5k0Y,19
+mandarina/benchmark.py,sha256=qjLkZXlgznlfyL_p-aQa-PTZz5UkJoYo-wjvjv_6ifg,1714
+mandarina/csv.py,sha256=33Yb3eClqjbJMRd4cMKIhPWIRg_fAKDo0lLM7EnKHWU,3519
+mandarina/file.py,sha256=XlW6gApaH5pVbKjLhl4Bg_AdVlxLUCui4AF3GrqE0xc,1422
+mandarina/randomdata.py,sha256=WISmrxSgX8c0if0IdIvojN7Ve-r2-qFax83xu_a-U7Q,1126
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_benchmark.py,sha256=Rio5TJ-q7vsyWSArdEZsDp45e2lLNCkM6rgXrF9JuCM,419
+test/test_csv.py,sha256=2nIBwHwmsuvsLKrcwc_t_qizgEKhK20WIWxuY7u7AAE,1526
+test/test_file.py,sha256=zD3ThhI-DRZXu3VKq5jXaGIBI1ZpR6u3ZRJCf0F0xt8,314
+test/test_randomdata.py,sha256=33Jeveof9Kmt9na0bcT8O16221Z7HIFEURV7M4sZCmQ,822
+mandarina-0.0.4.dist-info/LICENSE,sha256=rX37A102AZxneBmHb97mIvtL8Gyjy0mfweA4zqASw-8,1065
+mandarina-0.0.4.dist-info/METADATA,sha256=X83rFwgnsWe_2hmHKDjpSBwZw6fRtRCnMICzFipF-lM,910
+mandarina-0.0.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mandarina-0.0.4.dist-info/top_level.txt,sha256=sQdcfAgl4NzFm7EWicsZx8qOAW3-m20C6dpjTOqZMoo,15
+mandarina-0.0.4.dist-info/RECORD,,
