@@ -1,0 +1,9 @@
+numpy>=1.14.2
+corner
+pymultinest
+astropy
+matplotlib>=2.2.2
+scipy
+msgpack
+deepdish
+pandas
