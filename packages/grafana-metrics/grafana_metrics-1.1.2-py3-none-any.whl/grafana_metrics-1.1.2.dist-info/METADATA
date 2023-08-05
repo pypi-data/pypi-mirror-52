@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: grafana-metrics
+Version: 1.1.2
+Summary: UNKNOWN
+Home-page: https://github.com/falgore88/grafana-metrics
+Author: Evgeniy Titov
+Author-email: falgore88@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: influxdb (==4.1.1)
+Requires-Dist: psutil (==5.2.2)
+
+UNKNOWN
+
+
