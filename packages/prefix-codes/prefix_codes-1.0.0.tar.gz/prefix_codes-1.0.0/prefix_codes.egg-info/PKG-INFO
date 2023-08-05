@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: prefix-codes
+Version: 1.0.0
+Summary: Python package implementing a number of prefix codes alongside their utilities.
+Home-page: https://github.com/LucaCappelletti94/prefix_codes
+Author: Luca Cappelletti
+Author-email: cappelletti.luca94@gmail.com
+License: MIT
+Description: prefix_codes
+        =========================================================================================
+        |travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+        
+        Python package implementing a number of prefix codes as strings for educational purposes alongside some utilities.
+        
+        How do I install this package?
+        ----------------------------------------------
+        As usual, just download it using pip:
+        
+        .. code:: shell
+        
+            pip install prefix_codes
+        
+        Tests Coverage
+        ----------------------------------------------
+        Since some software handling coverages sometime get slightly different results, here's three of them:
+        
+        |coveralls| |sonar_coverage| |code_climate_coverage|
+        
+        Available codes
+        ----------------------------------------------
+        The following codes are available as submodules (they are also installable by themselves) or imported.
+        
+        It should be noted that some of the following codes are not prefix codes, but are still important codes.
+        
+        - `Unary coding <https://github.com/LucaCappelletti94/unary_coding>`_.
+        - `Reduced binary encoding <https://github.com/LucaCappelletti94/reduced_binary_coding>`_.
+        - `Minimal binary encoding <https://github.com/LucaCappelletti94/minimal_binary_coding>`_.
+        - `Gamma coding <https://github.com/LucaCappelletti94/gamma_coding>`_.
+        - `Delta coding <https://github.com/LucaCappelletti94/delta_coding>`_.
+        - `Omega coding <https://github.com/LucaCappelletti94/omega_coding>`_.
+        - `Interpolative coding <https://github.com/LucaCappelletti94/interpolative_coding>`_.
+        - `Nibble e Byte coding <https://github.com/LucaCappelletti94/nibble_coding>`_.
+        - `Truncated binary encoding <https://github.com/LucaCappelletti94/truncated_binary_encoding>`_.
+        - `Golomb coding <https://github.com/LucaCappelletti94/golomb_coding>`_.
+        - `Levenshtein coding <https://github.com/LucaCappelletti94/levenshtein_coding>`_.
+        
+        Usage examples
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        The following codes are available and readily importable into your project:
+        
+        .. code:: python
+        
+            from prefix_codes import unary, inverted_unary
+            from prefix_codes import gamma_coding
+            from prefix_codes import delta_coding
+            from prefix_codes import omega_coding, decode_omega_coding
+            from prefix_codes import levenshtein_coding, decode_levenshtein_coding
+            from prefix_codes import truncated_binary_encoding
+            from prefix_codes import reduced_binary_coding
+            from prefix_codes import minimal_binary_coding
+            from prefix_codes import interpolative_coding
+            from prefix_codes import nibble_coding, byte_coding
+            from prefix_codes import golomb_coding, optimal_golomb_coding, bernoulli_golomb_coding
+        
+        
+        Available utilities
+        ----------------------------------------------
+        Two utilities are available, one to determine if a given code is a prefix code and a second one, based on the `Kraft-McMillan inequality <https://en.wikipedia.org/wiki/Kraft%E2%80%93McMillan_inequality>`_, to determine if a given code is complete.
+        
+        It should be noted that the second utility fails when the code's words are quite long for float errors.
+        
+        Usage examples
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        .. code:: python
+        
+            from prefix_codes import is_prefix_code, is_complete_prefix_code
+            from prefix_codes import unary, interpolative_coding
+        
+            numbers = list(range(100))
+            unary_code = unary(numbers)
+            interpolative_code = interpolative_coding(numbers, 0, 100)
+            is_prefix_code(unary_code) # True
+            is_prefix_code(interpolative_code) # False
+            is_complete_prefix_code(unary_code) # True
+            is_complete_prefix_code(interpolative_code) # False
+        
+        
+        Elias-Fano semi-succint data structure
+        ----------------------------------------------
+        An educational version of `Elias-Fano semi-succint data structure <https://github.com/LucaCappelletti94/elias_fano>`_ implemented using the codes above is also available.
+        
+        
+        .. |travis| image:: https://travis-ci.org/LucaCappelletti94/prefix_codes.png
+           :target: https://travis-ci.org/LucaCappelletti94/prefix_codes
+           :alt: Travis CI build
+        
+        .. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_prefix_codes&metric=alert_status
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_prefix_codes
+            :alt: SonarCloud Quality
+        
+        .. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_prefix_codes&metric=sqale_rating
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_prefix_codes
+            :alt: SonarCloud Maintainability
+        
+        .. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_prefix_codes&metric=coverage
+            :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_prefix_codes
+            :alt: SonarCloud Coverage
+        
+        .. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/prefix_codes/badge.svg?branch=master
+            :target: https://coveralls.io/github/LucaCappelletti94/prefix_codes?branch=master
+            :alt: Coveralls Coverage
+        
+        .. |pip| image:: https://badge.fury.io/py/prefix-codes.svg
+            :target: https://badge.fury.io/py/prefix-codes
+            :alt: Pypi project
+        
+        .. |downloads| image:: https://pepy.tech/badge/prefix-codes
+            :target: https://pepy.tech/badge/prefix-codes
+            :alt: Pypi total project downloads 
+        
+        .. |codacy|  image:: https://api.codacy.com/project/badge/Grade/9d55d604f31e4f50b5b79b6c96b66541
+            :target: https://www.codacy.com/manual/LucaCappelletti94/prefix_codes?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/prefix_codes&amp;utm_campaign=Badge_Grade
+            :alt: Codacy Maintainability
+        
+        .. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/e53f3df9110281278219/maintainability
+            :target: https://codeclimate.com/github/LucaCappelletti94/prefix_codes/maintainability
+            :alt: Maintainability
+        
+        .. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/e53f3df9110281278219/test_coverage
+            :target: https://codeclimate.com/github/LucaCappelletti94/prefix_codes/test_coverage
+            :alt: Code Climate Coverate
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: test

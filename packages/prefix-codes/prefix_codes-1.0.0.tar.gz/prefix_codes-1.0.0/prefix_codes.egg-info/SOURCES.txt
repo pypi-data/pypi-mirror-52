@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+prefix_codes/__init__.py
+prefix_codes/__version__.py
+prefix_codes/prefix_codes.py
+prefix_codes.egg-info/PKG-INFO
+prefix_codes.egg-info/SOURCES.txt
+prefix_codes.egg-info/dependency_links.txt
+prefix_codes.egg-info/requires.txt
+prefix_codes.egg-info/top_level.txt
