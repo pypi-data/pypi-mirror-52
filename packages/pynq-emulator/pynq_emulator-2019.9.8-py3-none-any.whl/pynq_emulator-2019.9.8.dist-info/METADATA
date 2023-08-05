@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pynq-emulator
+Version: 2019.9.8
+Summary: An emulator for TUNI students' PYNQ exercises
+Home-page: https://github.com/Riku-S/led-matrix
+Author: Riku Salminen
+Author-email: riku.salminen@tuni.fi
+License: UNKNOWN
+Download-URL: https://github.com/Riku-S/led-matrix/archive/master.tar.gz
+Keywords: pynq emulator
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+# led-matrix-emulator
+Python library made for PYNQ emulations
+Emulator made by Riku Salminen. I don't own the library I am trying to simulate.
+I can't promise full accuracy in the simulations, but I hope this is helpful for
+at least testing purposes! Read documentation for more!
+
+
