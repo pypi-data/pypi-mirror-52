@@ -1,0 +1,15 @@
+README.md
+README.rst
+setup.cfg
+setup.py
+bin/firm
+bin/firm-convertminer
+firm/__init__.py
+firm/firm.py
+firm/miRvestigator.py
+firm/pssm.py
+isb_firm.egg-info/PKG-INFO
+isb_firm.egg-info/SOURCES.txt
+isb_firm.egg-info/dependency_links.txt
+isb_firm.egg-info/not-zip-safe
+isb_firm.egg-info/top_level.txt
