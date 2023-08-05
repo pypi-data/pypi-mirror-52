@@ -1,0 +1,17 @@
+pyintergraph/Graph.py,sha256=VN5CRdvefGxaLZV5D6B2EZIYnBThmSetM_VK92JglTk,9563
+pyintergraph/__init__.py,sha256=no4bDZwmsATIvERbdZnh02unLroy4gP2_T2EOBaSB0I,52
+pyintergraph/funcs.py,sha256=JvYZPyXbrOrOPBtaGYi6MAfqYT2pLcJ1ZG6mW6iY7QQ,677
+pyintergraph/infer.py,sha256=ZFCMsvxIOcnfueURHPQhNx_JZa-CIt56srOKSCIzNQA,1202
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_funcs.py,sha256=C9XjcN42GBAURxAlidO2gxS5AWxGtrZF4ynsWswOmSg,6942
+tests/test_raises.py,sha256=s4MHK6-8jAtdPmP0O9k9-TjhUOxpob9mICPHZsUWrsE,867
+tests/test_type_inferring.py,sha256=8Mu5KCEv3o264npJiexdYo5EHMyuZIlPbRopDZi_-bo,610
+tests/testdata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/testdata/gtdata.py,sha256=Vwn01srD0xmgEkhafc7u689j7idDBbTREv9bnxMftuY,1112
+tests/testdata/igraphdata.py,sha256=I9PSws9rPBcZnwsT_lm3SiTlGfzHQyIMzzg5JI5mAAA,420
+tests/testdata/networkxdata.py,sha256=ofesldjCLvC8GZlkU1sCdkwf4Lr7a3XWUiPN_07n9KA,1413
+pyintergraph-1.1.dist-info/LICENSE,sha256=bnWoq7Akx0sb3vMyon_cscLZ2hwt4954Bt8iG3yN1W0,1098
+pyintergraph-1.1.dist-info/METADATA,sha256=o0rdQ1fcU_g70_qSOfSIe0COMz5XN1ILeh1OPaAI6uw,2889
+pyintergraph-1.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+pyintergraph-1.1.dist-info/top_level.txt,sha256=g8nwDL_kHn5n4wLNiulvAoOZJQ0bU4F0tnbgjEXuL7o,19
+pyintergraph-1.1.dist-info/RECORD,,
