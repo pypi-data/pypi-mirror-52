@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyraceview
+Version: 0.0.2
+Summary: Parse messages from NASCAR RaceView to extract race data
+Home-page: https://github.com/jdamiani27/pyraceview
+Author: Jason Damiani
+Author-email: me@jasondamiani.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+Requires-Dist: numpy
+
+UNKNOWN
+
+
