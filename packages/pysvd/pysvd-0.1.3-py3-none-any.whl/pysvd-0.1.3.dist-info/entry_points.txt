@@ -1,0 +1,3 @@
+[console_scripts]
+svd2rst = scripts.svd2rst:main
+
