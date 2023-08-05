@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: django-autocode-tools
+Version: 0.0.4
+Summary: Automatic Generation Interface and Database Operation tool based on django
+Home-page: https://github.com/Mr-yun/django_autocode_tools
+Author: yunshao
+Author-email: yunshao1992@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Django (>=1.8)
+Requires-Dist: jinja2
+Requires-Dist: djangorestframework
+
+UNKNOWN
+
+
