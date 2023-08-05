@@ -1,0 +1,15 @@
+shopee/__init__.py,sha256=8olHxd_oq8xRUCH9nH-oo51qZhLJo1WD5aM5THviZmM,50
+shopee/base.py,sha256=z3Vpj0cfhLHewpScZMhyhPM9FjbHkxMNKLj0grosiNQ,187
+shopee/category.py,sha256=mE1ISGqnuZCrX6Z-hYjDyZjbik4r-G0gRZjM4nfIZZc,597
+shopee/client.py,sha256=rYRPe1A_g94G0ZJGb7cyjRLh8bU9JKh50hywA-czd7A,3408
+shopee/item.py,sha256=okRcm5N9uXgQhjSg70JlHDRhvRg1J6QOzW4LxfCKgg8,2640
+shopee/logistic.py,sha256=sxUrRd4x0LdvFUZbtNGZ45IyJFxo1rmFMN1UpCIqfZY,3642
+shopee/order.py,sha256=PBltlCzU6Gs_kYaNlMdzyGXe6ckQOvUzxhf4rADLzx8,2675
+shopee/product.py,sha256=dR8SIgTvvgZxiGYdHGQyqris20Mh5UeUvaceAGuT3lM,2643
+shopee/rma.py,sha256=yhSCKVbEVo3p-hwHgXv5vQdr7eDXPeQIxQ9g_Cv0DNM,766
+shopee/setting.py,sha256=ShUIJ70tAF0AodfOAvSL4LJh0IMHuhgRe-ZOhhM1a7E,85
+shopee/variation.py,sha256=kY5sydbNp23rGfEEIN4ZA6Dn21tj7HIWhfn0wChQjyA,1073
+shopee_api-1.0.3.dist-info/METADATA,sha256=mIyOUFxnHk7VAw4bRYQNzlZXLCjQERmA2kFHfrRRwWo,319
+shopee_api-1.0.3.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+shopee_api-1.0.3.dist-info/top_level.txt,sha256=FkzbTpI76bJaqZOuczV46XbJ8NpDouP8ttlTZ2Sqn1Y,7
+shopee_api-1.0.3.dist-info/RECORD,,
