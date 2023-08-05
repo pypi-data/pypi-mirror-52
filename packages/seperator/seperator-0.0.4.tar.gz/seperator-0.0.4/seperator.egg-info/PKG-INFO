@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: seperator
+Version: 0.0.4
+Summary: eye catching and informative seperator utilities for long shell client outputs
+Home-page: https://github.com/eaybek/seperator
+Author: Erdem Aybek
+Author-email: eaybek@gmail.com
+License: UNKNOWN
+Description: # Seperator  
+        ### Usage Samples:  
+          
+        ```python3  
+        from seperator.lines import line  
+          
+        line()  
+        line("Hello World")  
+        line("Hello World",width=80)  
+        line("Hello World",char='*')  
+        line("Hello World",color='red')  
+        line("Hello World",align=5)  
+        line("Hello World",align=-5)  
+        line("Hello World",margin=(5,5))  
+        ```  
+        ```
+        --------------------------------------------------------------------------------
+        - Hello World ------------------------------------------------------------------
+        - Hello World ------------------------------------                         
+        * Hello World ******************************************************************  
+        - Hello World ------------------------------------------------------------------
+        ----- Hello World --------------------------------------------------------------
+        -------------------------------------------------------------- Hello World -----
+        -     Hello World     ----------------------------------------------------------
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
