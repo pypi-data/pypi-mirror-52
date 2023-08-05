@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pypldl
+Version: 2.0.0
+Summary: A crawler with parallel downloading
+Home-page: UNKNOWN
+Author: Benoît Ryder
+Author-email: benoit@ryder.fr
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
