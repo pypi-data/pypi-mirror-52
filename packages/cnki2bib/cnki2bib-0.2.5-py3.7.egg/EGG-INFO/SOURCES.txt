@@ -1,0 +1,16 @@
+README.md
+setup.py
+cnki2bib.egg-info/PKG-INFO
+cnki2bib.egg-info/SOURCES.txt
+cnki2bib.egg-info/dependency_links.txt
+cnki2bib.egg-info/entry_points.txt
+cnki2bib.egg-info/requires.txt
+cnki2bib.egg-info/top_level.txt
+cnki2bibtex/BibTexEntries.py
+cnki2bibtex/__init__.py
+cnki2bibtex/cnki2bib.py
+cnki2bibtex/cnkiNetEntries.py
+cnki2bibtex/misc/Configure.py
+cnki2bibtex/misc/EntryCore.py
+cnki2bibtex/misc/EntryInformationCheck.py
+cnki2bibtex/misc/__init__.py
