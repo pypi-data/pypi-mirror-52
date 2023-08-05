@@ -1,0 +1,5 @@
+thriftpy2/protocol/cybin.cpython-37m-x86_64-linux-gnu.so
+thriftpy2/transport/cybase.cpython-37m-x86_64-linux-gnu.so
+thriftpy2/transport/buffered/cybuffered.cpython-37m-x86_64-linux-gnu.so
+thriftpy2/transport/framed/cyframed.cpython-37m-x86_64-linux-gnu.so
+thriftpy2/transport/memory/cymemory.cpython-37m-x86_64-linux-gnu.so
