@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gu-python-client
+Version: 0.2.1
+Summary: Golem unlimited low level hub API
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Golem unlimited low level hub API
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: six (>=1.10)
+Requires-Dist: urllib3 (>=1.15)
+
+API description in Markdown.  # noqa: E501
+
+
