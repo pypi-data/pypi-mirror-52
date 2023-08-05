@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+slalom/__init__.py
+slalom/dataops/__init__.py
+slalom/dataops/logs.py
+slalom/dataops/sparkutils.py
+slalom_dataops.egg-info/PKG-INFO
+slalom_dataops.egg-info/SOURCES.txt
+slalom_dataops.egg-info/dependency_links.txt
+slalom_dataops.egg-info/requires.txt
+slalom_dataops.egg-info/top_level.txt
