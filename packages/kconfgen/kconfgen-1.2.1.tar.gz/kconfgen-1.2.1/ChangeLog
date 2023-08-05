@@ -1,0 +1,57 @@
+ChangeLog
+=========
+
+
+1.2.1 (2019-09-12)
+------------------
+
+*Bugfix:*
+
+    - Honour ``core.fragments_dir`` in ``profiles.toml``.
+
+
+1.2.0 (2019-09-12)
+------------------
+
+*New:*
+
+    - Add ``--include`` option to ``kconfgen assemble``: allows inclusion of
+      extra sections to the generated defconfig.
+
+*Bugfix:*
+
+    - Don't create empty output files when the processing fails.
+
+
+1.1.1 (2019-08-10)
+------------------
+
+*New:*
+
+    - Add ``version`` (show version number) and ``help`` (display full help)
+      subcommands.
+
+
+1.1.0 (2019-08-09)
+------------------
+
+*New:*
+
+    - Simplify ``profiles.toml`` structure.
+
+
+1.0.1 (2019-08-06)
+------------------
+
+*Bugfix:*
+
+    * Fix packaging
+
+
+1.0.0 (2019-08-05)
+------------------
+
+Initial release
+
+
+.. vim:et:ts=4:sw=4:tw=79:ft=rst:
