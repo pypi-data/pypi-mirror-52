@@ -1,0 +1,3 @@
+conda activate minixes2
+
+python -m minixs.gui.qtcalibrator

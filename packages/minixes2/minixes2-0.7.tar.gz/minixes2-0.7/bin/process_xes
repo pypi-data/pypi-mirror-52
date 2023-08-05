@@ -1,0 +1,127 @@
+#!/usr/bin/env python
+
+#
+# Configurable things that aren't yet command line options
+#
+
+# the blue detector pool pilatus has a few columns that have a lot of bad pixels, so we skip them entirely (the high filter should be able to catch most), so this can probably be left empty
+skip_columns = []
+#skip_columns = [220, 221, 233, 234]
+
+import minixs as mx
+import numpy as np
+import sys, os
+from optparse import OptionParser
+
+usage = "Usage: %prog [options] <calibration_file> <exposure_file(s)>"
+parser = OptionParser(usage=usage)
+
+parser.add_option("-o", "--output", dest='output', default=sys.stdout,
+                  help="filename to save output to (*.xes)")
+parser.add_option("-e", "--energy", dest='energy', default=0,
+                  type=float, help="incident energy")
+parser.add_option("-i", "--i0", dest='i0', default=1,
+                  type=float, help="incident flux")
+parser.add_option("-d", "--dataset", dest='dataset', default='',
+                  help="dataset name")
+parser.add_option("-l", "--bplist", dest='bad_pixels', default='',
+                  help="list of bad pixels (e.g. 15,30;120,52)")
+parser.add_option("-b", "--badpixels", dest='bad_pixels_file', default='',
+                  help="file containing bad pixels (2 columns w. x and y coords)")
+parser.add_option("-H", "--high_filter", dest='high_filter', default=10000,
+                  type=int, help="Remove any pixels with more counts than HIGH_FILTER ")
+parser.add_option("-s", "--stepsize", dest='stepsize', default=.1,
+                  type=float, help="emission energy step size")
+parser.add_option("-a", "--angle", dest='solid_angle_map', default='',
+                  help="solid angle correction map")
+parser.add_option("-B", "--binned", dest='binned', action='store_true',
+                  default=False,
+                  help="Use straight binning of pixels instead of an interpolated-average.")
+
+(options, args) = parser.parse_args()
+
+if len(args) < 2:
+  parser.print_help()
+  exit()
+
+# split up positional args
+calibration_file = args[0]
+exposure_files = args[1:]
+
+bad_pixels = []
+
+# parse bad pixel list
+if options.bad_pixels:
+  bad_pixels = [[int(i) for i in pt.split(',')] for pt in options.bad_pixels.split(';')]
+
+  # check that list is valid
+  invalid = False
+  for bp in bad_pixels:
+    if len(bp) != 2:
+      invalid = True
+  if invalid:
+    sys.stderr.write("Error: Bad Pixel list: '%s' is invalid.\nIt should be a semicolon separated list of points whose x and y coordinates are separated by a comma. E.g. '15,30;120,52'\n" % options.bad_pixels)
+    exit(1)
+
+if options.bad_pixels_file:
+  try:
+    bad_pixels = [[x,y] for x,y in np.loadtxt(options.bad_pixels_file)]
+  except Exception as e:
+    sys.stderr.write("Error: unable to load bad pixel file\n")
+    sys.stderr.write(str(e) + '\n')
+    exit(1)
+
+# setup bad pixel filter if needed
+filters = []
+
+calib = mx.calibrate.load(calibration_file)
+if bad_pixels:
+  fltr = mx.filter.BadPixelFilter()
+  if calib.dispersive_direction in [mx.UP, mx.DOWN]:
+    mode = fltr.MODE_INTERP_V
+  else:
+    mode = fltr.MODE_INTERP_H
+  mode = fltr.MODE_ZERO_OUT
+  fltr.set_val((mode, bad_pixels))
+  filters.append(fltr)
+
+# set up high filter
+if options.high_filter is not None:
+  fltr = mx.filter.HighFilter()
+  fltr.set_val(options.high_filter)
+  filters.append(fltr)
+
+# don't overwrite files willy nilly
+if (options.output != sys.stdout and os.path.exists(options.output)):
+  sys.stdout.write("Do you want to overwrite '%s'? (y/n): " % options.output)
+  response = sys.stdin.readline().strip().lower()
+  if response[0] != 'y':
+    exit()
+
+# generate xes files
+sys.stderr.write("Processing...\n")
+xes = mx.emission.EmissionSpectrum()
+xes.dataset = options.dataset
+xes.calibration_file = os.path.abspath(calibration_file)
+xes.incident_energy = options.energy
+xes.exposure_files = [os.path.abspath(f) for f in exposure_files]
+if options.solid_angle_map:
+  xes.load_solid_angle_map(options.solid_angle_map)
+xes.I0 = options.i0
+xes.filters = filters
+
+E1,E2 = calib.energy_range()
+if options.binned:
+  xes.process_binned(E1,E2,options.stepsize)
+else:
+  grid = np.arange(round(E1),round(E2),options.stepsize)
+  xes.process(grid, skip_columns=skip_columns)
+
+if options.output == sys.stdout:
+  sys.stderr.write("Saving to stdout\n")
+else:
+  sys.stderr.write("Saving '%s'...\n" % options.output)
+
+xes.save(options.output)
+sys.stderr.write("Done\n")
+
