@@ -1,0 +1,13 @@
+web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web/cli.py,sha256=aUq5jko2Eg3dF7HdInM28AjhnnaKaHgzQ2YDtbyRNC8,206
+web/constants.py,sha256=fNo05HIqw35ARaW-DAFklKNOqcCTAKakNeEzbaSU0D8,71
+web/core.py,sha256=vqSId89k1WgHI8J24MBHQ1OOK8qlRt9sz8OR_AjzjQI,280
+web/routes.py,sha256=B6hxcTux_v5WDlp_6SzD0Lcj3YBrcbNQzQCtaAs2X9g,204
+web/views.py,sha256=Vb9Iw0Le3tcRZuOJtoEGgjYzzK4MJzIwBkKDMEo3mFI,103
+web/templates/index.html,sha256=f43i-2gr6tQoKDz3q_nn7FR_umMickp3IQ9PwhoXagk,168
+1bead.org-0.0.5.dist-info/LICENSE,sha256=c4-HL_t3NM8SYNSznII6iYgojrXTo_7jPBo7hWfr-XA,1066
+1bead.org-0.0.5.dist-info/METADATA,sha256=Rx4l2E0AIRyN4ph2T1Th_-UADffhyPR154LDV068VJE,890
+1bead.org-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+1bead.org-0.0.5.dist-info/entry_points.txt,sha256=2el2Klliqfn-IMhORevFWnqe7ZYY-BHtworlqqpIuw4,42
+1bead.org-0.0.5.dist-info/top_level.txt,sha256=Lu-7p0YFAOxsYZuWWnQTjLA5J-bwCZk_8mQFGTR0qhQ,11
+1bead.org-0.0.5.dist-info/RECORD,,
