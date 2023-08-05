@@ -1,0 +1,11 @@
+winsign/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+winsign/asn1.py,sha256=0JUeMqAsNahAtFkKKvGSluGyrP_64IhVYCTN5yFjNlo,7289
+winsign/crypto.py,sha256=kFxBj6NHDIP379ZhOiSSN4OG7AlX8YpInE4iFgpwEHw,1033
+winsign/pefile.py,sha256=3hxUj-HAO1U3ZVsPB6nXUzI8otBj7-nrvufUs96bcak,2897
+winsign/sign.py,sha256=ZIdznDtWoFfVd3J0IZ0vaTFC3uJX1EUxPoeeunBHKhE,13710
+winsign/timestamp.py,sha256=jbNcsV1n2PIM5J06MFsoPsI7-ed1J_O8kSZffPXj10o,5441
+winsign-1.2.0.dist-info/METADATA,sha256=0CXz04qFbvWhKOlc27s7BacfAWNZd5KxSlwQ-WwEvVI,1576
+winsign-1.2.0.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+winsign-1.2.0.dist-info/entry_points.txt,sha256=ZS3md0MMn7SFr9cr9vWXQMd0IbpwvGBltWZenfibEM4,47
+winsign-1.2.0.dist-info/top_level.txt,sha256=p6Yg9jsesJ-taqs3kIoB-5b6tFd0RgS2iWivk-_FX7I,8
+winsign-1.2.0.dist-info/RECORD,,

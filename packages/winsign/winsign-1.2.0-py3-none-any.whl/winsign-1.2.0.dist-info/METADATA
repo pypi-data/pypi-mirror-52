@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: winsign
+Version: 1.2.0
+Summary: Utilities to support code signing Windows executable files
+Home-page: https://github.com/catlee/winsign
+Author: Chris AtLee
+Author-email: catlee@mozilla.com
+License: MPL2.0
+Keywords: winsign
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: construct
+Requires-Dist: cryptography
+Requires-Dist: pyasn1
+Requires-Dist: pyasn1-modules
+Requires-Dist: requests
+Requires-Dist: requests-hawk
+
+=======
+winsign
+=======
+
+.. image:: https://img.shields.io/pypi/v/winsign.svg
+        :target: https://pypi.python.org/pypi/winsign
+
+.. image:: https://pyup.io/repos/github/mozilla-releng/winsign/shield.svg
+     :target: https://pyup.io/repos/github/mozilla-releng/winsign/
+     :alt: Updates
+
+
+Utilities to support code signing Windows executable files
+
+* Free software: MPL2
+* Documentation: https://winsign.readthedocs.io.
+* Requires osslsigncode to operate from e.g. https://github.com/theuni/osslsigncode
+
+Credits
+-------
+
+* Chris AtLee <catlee@mozilla.com>
+
+
+=======
+History
+=======
+
+1.1.0 (2019-09-05)
+------------------
+
+* Added is_signed method to check if files are signed
+
+
+1.0.0 (2019-08-30)
+------------------
+
+* First release
+
+
