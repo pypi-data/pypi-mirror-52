@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cmlkit
+Version: 2.0.0a17
+Summary: Machine learning tools for computational chemistry and condensed matter physics
+Home-page: https://github.com/sirmarcel/cmlkit
+Author: Marcel Langer
+Author-email: dev@sirmarcel.com
+Keywords: machine learning,physics,optimization,chemistry
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: PyYAML (>=5.1,<6.0)
+Requires-Dist: ase (>=3.18)
+Requires-Dist: dill (>=0.2,<0.3)
+Requires-Dist: hyperopt (>=0.1.2,<0.2.0)
+Requires-Dist: joblib (>=0.13,<0.14)
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: pebble (>=4.3,<5.0)
+Requires-Dist: son (>=0.2.1,<0.3.0)
+Project-URL: Repository, https://github.com/sirmarcel/cmlkit
