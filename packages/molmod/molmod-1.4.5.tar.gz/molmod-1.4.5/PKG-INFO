@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: molmod
+Version: 1.4.5
+Summary: MolMod is a collection of molecular modelling tools for python.
+Home-page: https://github.com/molmod/molmod
+Author: Toon Verstraelen
+Author-email: Toon.Verstraelen@UGent.be
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Intended Audience :: Science/Research
