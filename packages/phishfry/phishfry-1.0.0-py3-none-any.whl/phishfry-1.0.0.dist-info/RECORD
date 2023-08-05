@@ -1,0 +1,14 @@
+phishfry/__init__.py,sha256=7DQqIx77cOSOEHLn-u6kDp6rw-SI5PqD0smCoO2GdRg,65
+phishfry/account.py,sha256=kzmTjSyWjdEd30Xpy8ucDu8CZiYO0XS0nc6c_Ydv7do,4417
+phishfry/errors.py,sha256=xC0Ysgtv8r0dDcR6_DIl42jtMFVO8fBEGb437dzUVbY,920
+phishfry/folder.py,sha256=aK__iueo85Ls7ibQs5hDeabuVSkhN0OWSZm3KwjdOw0,2951
+phishfry/mailbox.py,sha256=okVSUbsj_tj1rCK9FJc3kVwzkoLxE14Wxe2JrUZLlJ0,8861
+phishfry/message.py,sha256=PU4OkmwD2msr7JjoytSeLykWvhsgF4VylHBJXfl3K1E,692
+phishfry/namespaces.py,sha256=sWC_SBw1ecfTqfJbkpczuaBrKHb8PkSyVQtVP_26qnE,320
+phishfry/remediation_result.py,sha256=mR9VXrC1_JThkqq2YzdKlPJH51shJtueZc3YByzfZAE,593
+phishfry/restriction.py,sha256=gRGr6H62lb5_OREzCSuofkDG03GAHZeLluChjsO42kk,1247
+phishfry-1.0.0.dist-info/LICENSE,sha256=TCVq6y357KfLYyzBSvkGLqbxD9h_Sf9qqNS-etmDDfA,553
+phishfry-1.0.0.dist-info/METADATA,sha256=wxEdKdLDH8hKZ4qHxe_dg-3ZwcHtul8Y7OGvgYvhFt8,2199
+phishfry-1.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+phishfry-1.0.0.dist-info/top_level.txt,sha256=gZNEpCj7987NhLAyfE8JLr0y0Ui6UnnFxROyjuWOuqQ,9
+phishfry-1.0.0.dist-info/RECORD,,
