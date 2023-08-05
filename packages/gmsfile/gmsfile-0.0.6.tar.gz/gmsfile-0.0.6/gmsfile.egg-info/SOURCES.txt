@@ -1,0 +1,13 @@
+README.md
+setup.py
+gmsfile/__init__.py
+gmsfile/__main__.py
+gmsfile/_basisset.py
+gmsfile/_method.py
+gmsfile/_output.py
+gmsfile/_purpose.py
+gmsfile/irc.py
+gmsfile.egg-info/PKG-INFO
+gmsfile.egg-info/SOURCES.txt
+gmsfile.egg-info/dependency_links.txt
+gmsfile.egg-info/top_level.txt
