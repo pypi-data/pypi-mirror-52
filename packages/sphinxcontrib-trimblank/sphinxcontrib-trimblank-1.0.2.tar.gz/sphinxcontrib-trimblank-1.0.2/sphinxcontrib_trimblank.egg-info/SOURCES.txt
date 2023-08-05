@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+sphinxcontrib/__init__.py
+sphinxcontrib/trimblank.py
+sphinxcontrib_trimblank.egg-info/PKG-INFO
+sphinxcontrib_trimblank.egg-info/SOURCES.txt
+sphinxcontrib_trimblank.egg-info/dependency_links.txt
+sphinxcontrib_trimblank.egg-info/namespace_packages.txt
+sphinxcontrib_trimblank.egg-info/requires.txt
+sphinxcontrib_trimblank.egg-info/top_level.txt
