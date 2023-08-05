@@ -1,0 +1,16 @@
+CHANGES.txt
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+housenumparser/__init__.py
+housenumparser/element.py
+housenumparser/merger.py
+housenumparser/reader.py
+housenumparser.egg-info/PKG-INFO
+housenumparser.egg-info/SOURCES.txt
+housenumparser.egg-info/dependency_links.txt
+housenumparser.egg-info/not-zip-safe
+housenumparser.egg-info/requires.txt
+housenumparser.egg-info/top_level.txt

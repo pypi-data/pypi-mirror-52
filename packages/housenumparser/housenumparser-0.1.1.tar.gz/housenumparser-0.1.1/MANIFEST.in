@@ -1,0 +1,3 @@
+include *.txt *.ini *.cfg *.rst LICENSE
+exclude requirements-dev.txt tox.ini
+prune tests
