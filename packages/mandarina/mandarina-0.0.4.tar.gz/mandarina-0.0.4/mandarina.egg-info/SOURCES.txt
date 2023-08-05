@@ -1,0 +1,16 @@
+README.md
+setup.py
+mandarina/__init__.py
+mandarina/benchmark.py
+mandarina/csv.py
+mandarina/file.py
+mandarina/randomdata.py
+mandarina.egg-info/PKG-INFO
+mandarina.egg-info/SOURCES.txt
+mandarina.egg-info/dependency_links.txt
+mandarina.egg-info/top_level.txt
+test/__init__.py
+test/test_benchmark.py
+test/test_csv.py
+test/test_file.py
+test/test_randomdata.py
