@@ -1,0 +1,9 @@
+README.md
+setup.py
+sedas_pyapi/__init__.py
+sedas_pyapi/bulk_download.py
+sedas_pyapi/sedas_api.py
+sedas_pyapi.egg-info/PKG-INFO
+sedas_pyapi.egg-info/SOURCES.txt
+sedas_pyapi.egg-info/dependency_links.txt
+sedas_pyapi.egg-info/top_level.txt
