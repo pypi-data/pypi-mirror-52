@@ -1,0 +1,3 @@
+[console_scripts]
+merge-ngs-lanes = mdu_pytools.merge_ngs_lanes:main
+
