@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pyedgeon
+Version: v0.3.1
+Summary: Create optical illusion buttons
+Home-page: https://github.com/abehmiel/pyedgeon
+Author: Abraham Hmiel
+Author-email: abehmiel@gmail.com
+License: MIT
+Download-URL: https://github.com/abehmiel/pyedgeon/archive/v0.3.1.tar.gz
+Description: UNKNOWN
+Keywords: Optical Illusion,PIL,Graphics,Text
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
