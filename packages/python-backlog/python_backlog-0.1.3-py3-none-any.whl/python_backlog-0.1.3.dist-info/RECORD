@@ -1,0 +1,14 @@
+backlog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backlog/attachment.py,sha256=Dbid8q5ig3Dk9tRkQlnIj1ndkm2mNAoVh-_p074jN3o,772
+backlog/base.py,sha256=5LHf3TsrzPtgGALL0Ohmy33b7qR3D2efD-CrTna6hvQ,5264
+backlog/git.py,sha256=mazfvwn1Ekga0eeigk22Xf3vhXEo-P5Irfyq6r_QbaA,3056
+backlog/issue.py,sha256=m6P_iHd-gTUlFHEfe8VgoCYX3kuJUewWXAcWtaqR4bs,5880
+backlog/project.py,sha256=crBHvyfhvrtO3ogwcIh7y2XGRlJu7R6UhZ9rhXK_hg0,7267
+backlog/user.py,sha256=Yfkg9nyiLLCxT5xVU6vHbvlcbVhK2jHxrchxfnEkWqE,2792
+backlog/util.py,sha256=ZKwu50L9KXT1RrFHcrr8rg4C61zbc0IV_sBRJcwboYg,329
+backlog/wiki.py,sha256=SKlt-wagLfQomgtZJ94dNZly3Cz6tMBEz7U6TuBPWCY,5438
+python_backlog-0.1.3.dist-info/LICENSE,sha256=1teWq4411yGkUz_9lD1V74mcHFRix2IqOAoFaghKYwo,1073
+python_backlog-0.1.3.dist-info/METADATA,sha256=eGLABwHz_W_pse4LggKxP4ShQNf7yzGRTP5bbxuXiDM,2350
+python_backlog-0.1.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+python_backlog-0.1.3.dist-info/top_level.txt,sha256=qzHRU2P6F24ntkXGiIBl4Qf_AlV0BRebSc5tuLlcOIE,8
+python_backlog-0.1.3.dist-info/RECORD,,
