@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: plantlabeller
+Version: 0.2.9
+Summary: label plants
+Home-page: http://css.wsu.edu/people/research-associates/yang-hu/
+Author: yangh
+Author-email: yang.hu@wsu.edu
+License: MIT Licence
+Keywords: pip3,GridFree,droneimage,yanghu
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: sklearn
+Requires-Dist: scikit-image
+
+# A pixel-level label tools for plant pictures taken by drones.
+## Implement Python version >= 3.6.5, QGIS version >=3.4
+#### RUN ```pip3 install plantlabeller``` to install from terminal
+#### ***Need to modify matplotlibrc file (if crashed)***  ADD: ```backend: TkAgg```
+#### ***GDAL instllation instruction:***
+1. RUN ```pip3 install GDAL==2.4.2```
+   - if failed with error: > gdal-config not found
+   - go to step 2.
+2. RUN ```brew install gdal```, go to step 1
+   - if failed with "gcc" go to step 3
+3. RUN ```brew reinstall gcc```, go to step 1
+
+
+
+
