@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: SleetBot
+Version: 1.0a1
+Summary: A Telegram Bot
+Home-page: https://github.com/HSleet/AsyncIO-Bot-TG
+Author: HSleet
+License: MIT
+Project-URL: Source, https://github.com/HSleet/AsyncIO-Bot-TG
+Description: # SleetBot Telegram
+         A simple Telegram bot
+        
+Keywords: Telegram Bot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
