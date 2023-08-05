@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: vars_pickle
+Version: 0.3.4
+Summary: Save your variable as Rstudio
+Home-page: https://github.com/pypa/sampleproject
+Author: karond
+Author-email: dingyaohui.g@outlook.com
+License: UNKNOWN
+Description: # Save your variable as Rstudio!!
+        Tools for Data science
+        ## to_HDF5
+        Save your Data to HDF5
+        ## from_HDF5
+        Load your Data from HDF5
+        ## dumps()
+        Dump your variable
+        ## loads()
+        Load your variable
+        ## type_list
+        The type of variable that needs to be saved
+        ## drop_list
+        Variables that you don't want to save(for jupyter)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
