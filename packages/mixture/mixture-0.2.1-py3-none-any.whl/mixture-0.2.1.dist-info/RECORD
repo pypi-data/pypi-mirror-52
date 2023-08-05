@@ -1,0 +1,14 @@
+mixture/__init__.py,sha256=gX_5qyDPNbLR3Ws84C5RCM2X53ZMnmxN5Og_olUyjlE,662
+mixture/_version.py,sha256=kM8B9tWJzEXX_FdC_0hAClVs4ogvKSGQIOPv8fS6glo,116
+mixture/core.py,sha256=Ocj4xBV0opgdWqboxB-PyVJS5iMERmOBMJFFtG4FPi8,20155
+mixture/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mixture/tests/utils.py,sha256=pmHFMMr1Pac1Hi_yOGYndtm0mpq0Ee3zkILUY6Bo5yc,280
+mixture/tests/core/__init__.py,sha256=orHSRFiNBZQ4gRpQ1w0_EZvrxa7IEOU6bUQWJIum9xs,126
+mixture/tests/core/test_core_apply.py,sha256=7p2qdeU5gkxgdjrcWIxvxYi2x8oxWa5iB2qROFqM8uo,2930
+mixture/tests/core/test_core_fields.py,sha256=y0rkfI9N7WzwOOkbDRjaGaPZyFzPPsjXtsjyksZHjpc,1655
+mixture/tests/core/test_doc.py,sha256=ZhvhgqN4vxjTUEiictATVfq4p26PTXSQKVDYkSU0NSs,1902
+mixture-0.2.1.dist-info/LICENSE,sha256=yTeWsaz_NqBZHpBx6sqlzffuH9jd2qPvaWjREK-uYwU,1514
+mixture-0.2.1.dist-info/METADATA,sha256=uiLdhO-m4arF9-U9HyVhpAz7ebpkX8xuD0oWPAdrdhk,2446
+mixture-0.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mixture-0.2.1.dist-info/top_level.txt,sha256=DeVn1p-PYiZ7Ixdb3KZEs2MaS8mV5QMBCNXvqtgOR-M,8
+mixture-0.2.1.dist-info/RECORD,,
