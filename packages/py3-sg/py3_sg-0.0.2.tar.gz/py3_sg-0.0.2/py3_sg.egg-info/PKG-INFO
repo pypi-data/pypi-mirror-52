@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: py3-sg
+Version: 0.0.2
+Summary: Python3 SCSI generic library
+Home-page: https://github.com/7aman/py3_sg
+Author: Zaman
+Author-email: 7amaaan@gmail.com
+License: GPLv3
+Description: 
+        This is a small Python3 extension which sends arbitrary commands to SCSI devices, via the Linux SCSI Generic driver, which provides the SG_IO ioctl for this purpose.
+        Basically, the module includes three methods to read and write, which
+        allow you to issue commands to SCSI devices and read and write
+        accompanying data. If an OS error occurs, the OSError exception will
+        be raised, while if a SCSI error occurs, the py3_sg.SCSIError exception
+        will be raised.
+        
+Platform: UNKNOWN
+Classifier: Topic :: System :: Hardware
