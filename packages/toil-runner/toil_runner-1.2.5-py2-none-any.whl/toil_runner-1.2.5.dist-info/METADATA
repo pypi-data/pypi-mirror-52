@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: toil-runner
+Version: 1.2.5
+Summary: This is a decorator of runner
+Home-page: UNKNOWN
+Author: LongHui.Yin
+Author-email: dragonfly.yin@genowis.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: docker
+Requires-Dist: wrapt
+Requires-Dist: sarge
+
+UNKNOWN
+
+
