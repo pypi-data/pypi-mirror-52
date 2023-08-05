@@ -1,0 +1,140 @@
+# PSU-Infotext
+
+Django add-on for PSU apps for user-editable text contents
+-  HTML tags for editable text
+-  Interface to edit text
+-  Allow HTML-escaping of text content for styling
+
+
+## Quick Start
+
+### Dependencies
+The following dependencies is REQUIRED and must be installed manually in your app:
+- [django-psu-base](https://github.com/PSU-OIT-ARC/django-psu-base/)
+
+
+### Installation
+Inside your Django app (we recommend you use a virtual environment)
+1. Set up your virtual envionment:
+   ```bash
+   cd my_django_project
+
+   # Create a virtual environment directory 'env'
+   python3 -m venv env
+   ```
+
+   Note that we are using __Python 3__ for this add-on.
+
+#### Option 1: Manual Build
+Until this package is hosted somewhere, for now you can install PSU-Infotext to your app as follows:
+
+1. Clone this repository
+
+    ```bash
+    git clone git@github.com:PSU-OIT-ARC/django-psu-infotext.git
+    ```
+
+2. Build the thing
+
+     ```sh
+    cd django-psu-infotext
+       python setup.py sdist bdist_wheel
+       ```
+
+       This will build two files under `django-psu-infotext/dist/`.
+       -  `psu-infotext-0.1.tar.gz`
+       -  `psu_infotext-0.1-py3-none-any.whl`
+        Note that `0.1` will change according to the version.
+
+3. Copy either the `.tar.gz` or `.whl` file to your app
+    ```sh
+    cp dist/psu-infotext-0.1.tar.gz path/to/your/app
+    ```
+    OR
+    ```sh
+    cp dist/psu_infotext-0.1-py3-none-any.whl path/to/your/app
+    ```
+
+4. `cd` into your app and install PSU-Infotext
+    ```sh
+    cd my_django_project
+    source env/bin/activate # make sure virtual environment is active
+    pip install psu-infotext-0.1.tar.gz
+    ```
+    OR
+    ```sh
+    pip install psu_infotext-0.1-py3-none-any.whl
+    ```
+
+You get the idea...
+#### Option 2: Using Pip (Coming soon)
+   ```bash
+   # First, activate the virtual environment
+   source env/bin/activate
+
+   # with the environment activated...
+   pip install django-psu-infotext
+   ```
+
+### Configuring Your App
+
+1. Add PSU-Infotext to your INSTALLED_APPS in `settings.py`:
+    ```python
+    INSTALLED_APPS = [
+       ...
+       'psu_infotext',
+    ]
+    ```
+2. Add path to the Infotext editor, in `urls.py`:
+    ```python
+    from django.urls import path, include
+
+    urlpatterns = [
+        ...
+        path('infotext/', include(('psu_infotext.urls', 'psu_infotext'), namespace='infotext')),
+    ]
+
+### Using PSU-Infotext in Your App
+#### Templatetags
+-  Infotext templatetag:
+
+    Format: `{% infotext '<tag_name>' '<text_content>' %}`
+    ```jinja
+    {% load infotext_taglib %}
+
+    {% block pagecontent %}
+        <h1>Hello PSU Infotext!</h1>
+
+        {% infotext 'fubar' "Lorem ipsum bacon maple donut" %}
+    {% endblock %}
+    ```
+    ![Image of template rendered with psu base header and footer](images/index1.png)
+
+    To edit the text, go to the `/infotext` endpoint.
+
+    ![Image of the infotext editor](images/infotext.png)
+
+
+    Another example:
+    ```jinja
+    {% extends 'psu_base.html' %}
+    {% load infotext_taglib %}
+
+    {% block pagecontent %}
+
+        <p>{% infotext 'fubar' "Lorem ipsum bacon maple donut 12345" %}</p>
+
+        <p><button class="btn btn-primary">{% infotext 'button1' 'This is Button' %}</button></p>
+    {% endblock %}
+    ```
+
+    Using the Infotext editor, we can turn the string "12345" into a link and bold the word "Button"
+    ![Image of the infotext editor](images/editor.png)
+
+    Before edits:
+
+    ![Image of template rendered with text "Lorem ipsum bacon maple donut <b>12345</b>](images/before.png)
+
+    After edits:
+
+    ![Image of template rendered with text "Lorem ipsum bacon maple donut <b>12345</b>](images/after.png)

@@ -1,0 +1,3 @@
+include README.md
+recursive-include psu_infotext/templates *
+recursive-include docs *
