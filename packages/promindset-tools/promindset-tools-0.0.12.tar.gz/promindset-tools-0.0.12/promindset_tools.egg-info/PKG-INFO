@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: promindset-tools
+Version: 0.0.12
+Summary: some useful tools to use here and there.
+Home-page: UNKNOWN
+Author: Asaad Najjar
+Author-email: rajjix@rajjix.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/promindset/promindset-tools/issues/
+Project-URL: Source Code, https://github.com/promindset/promindset-tools/
+Description: #prominset-tools
+        
+        ```
+        pip install promindset-tools
+        ```
+        
+        This is a simple example package created to exist.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
