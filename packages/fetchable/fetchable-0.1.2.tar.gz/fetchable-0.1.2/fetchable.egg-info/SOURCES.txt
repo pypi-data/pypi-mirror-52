@@ -1,0 +1,10 @@
+README.rst
+setup.py
+fetchable/__init__.py
+fetchable/__version__.py
+fetchable/configuration.py
+fetchable/fetchable.py
+fetchable.egg-info/PKG-INFO
+fetchable.egg-info/SOURCES.txt
+fetchable.egg-info/dependency_links.txt
+fetchable.egg-info/top_level.txt
