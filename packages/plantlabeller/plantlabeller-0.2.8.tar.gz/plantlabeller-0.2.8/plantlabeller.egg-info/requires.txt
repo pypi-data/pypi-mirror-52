@@ -1,0 +1,7 @@
+pillow
+opencv-python
+matplotlib
+scipy
+sklearn
+GDAL>=2.4.2
+scikit-image
