@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: kani_highcharts
+Version: 0.0.1
+Summary: Python Highcharts wrapper
+Home-page: https://github.com/fx-kirin/kani_highcharts
+Author: fx-kirin
+Author-email: fx-kirin@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: python,ipython,highcharts,chart,visualization,graph,javascript,html
+Platform: UNKNOWN
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
