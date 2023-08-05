@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: easydarts
+Version: 0.0.1
+Summary: Steel darts calibration and score recognition system
+Home-page: https://github.com/easydarts/easydarts
+Author: Cidevant Von Goethe
+Author-email: cidevant@mail.ru
+License: MIT
+Description: # EasyDarts
+        
+        Steel darts calibration and score recognition system
+        
+        
+        ## Install
+        
+        ```
+        pip install easydarts
+        ```
+        
+        ## Usage
+        
+        1) Calibration
+        
+        
+        ```
+        easydarts calibrate
+        ```
+        
+        
+        2) Scorer
+        
+        ```
+        easydarts scorer
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
