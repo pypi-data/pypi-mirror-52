@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mLab-WalkSpeed-Radar-Tool
+Version: 0.0.1
+Summary: mLab WalkSpeed Radar UART tool and example code
+Home-page: UNKNOWN
+Author: Alex Kuan
+Author-email: agathakuannew@gmail.com
+License: MIT
+Description: ## install
+        
+        ### Raspberry Pi
+        for **Raspberry Pi**,please install PyQt5 as following.
+        In Raspbian Stretch Lite the following worked for:
+        ```
+        $sudo apt-get update
+        $sudo apt-get install qt5-default pyqt5-dev pyqt5-dev-tools
+        $sudo python3 -m pip install mLab-WalkSpeed-Radar-Tool
+        ``` 
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
