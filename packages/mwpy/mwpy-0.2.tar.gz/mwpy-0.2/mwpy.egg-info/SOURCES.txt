@@ -1,0 +1,11 @@
+README.rst
+setup.py
+mwpy/__init__.py
+mwpy/_api.py
+mwpy/_version.py
+mwpy.egg-info/PKG-INFO
+mwpy.egg-info/SOURCES.txt
+mwpy.egg-info/dependency_links.txt
+mwpy.egg-info/requires.txt
+mwpy.egg-info/top_level.txt
+mwpy.egg-info/zip-safe
