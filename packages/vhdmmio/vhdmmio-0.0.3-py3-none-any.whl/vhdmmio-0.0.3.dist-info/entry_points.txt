@@ -1,0 +1,3 @@
+[console_scripts]
+vhdmmio = vhdmmio:run_cli
+

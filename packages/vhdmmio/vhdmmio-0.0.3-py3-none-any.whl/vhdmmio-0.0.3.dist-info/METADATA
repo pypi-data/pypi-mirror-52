@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: vhdmmio
+Version: 0.0.3
+Summary: VHDL code generator for AXI4-lite compatible memory-mapped I/O (MMIO)register files and bus infrastructure.
+Home-page: https://github.com/abs-tudelft/vhdmmio
+Author: Jeroen van Straten
+Author-email: j.vanstraten-1@tudelft.nl
+License: Apache
+Project-URL: Source, https://github.com/abs-tudelft/vhdmmio
+Keywords: vhdl mmio registers generator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: markdown2
+Requires-Dist: pyyaml
+
+
+vhdMMIO
+=======
+
+[![PyPi](https://badgen.net/pypi/v/vhdmmio)](https://pypi.org/project/vhdmmio/)
+[![Build Status](https://dev.azure.com/abs-tudelft/vhdmmio/_apis/build/status/abs-tudelft.vhdmmio?branchName=master)](https://dev.azure.com/abs-tudelft/vhdmmio/_build/latest?definitionId=4&branchName=master)
+[![codecov](https://codecov.io/gh/abs-tudelft/vhdmmio/branch/master/graph/badge.svg)](https://codecov.io/gh/abs-tudelft/vhdmmio)
+[![License](https://badgen.net/github/license/abs-tudelft/vhdmmio)](https://github.com/abs-tudelft/vhdmmio/blob/master/LICENSE)
+
+vhdMMIO will be a fully vendor-agnostic tool to build an AXI4-lite MMIO
+infrastructure with. It will generate at least VHDL files, C header files, and
+basic documentation from a single source, ensuring that these things stay in
+sync and preventing you from writing massive amounts of boilerplate code for
+every register file you need. Besides MMIO routing, it will also support
+interrupt routing natively.
+
+The project is currently very much a work in progress. But you can check out
+what we plan to support in the generated docs
+[here](https://github.com/abs-tudelft/vhdmmio/blob/master/doc/md/README.md).
+You can also find example register file descriptions
+[here](https://github.com/abs-tudelft/vhdmmio/tree/master/examples), and,
+assuming Azure Pipelines passed, you should be able to build them yourself to
+see what vhdmmio can already do.
+
+
