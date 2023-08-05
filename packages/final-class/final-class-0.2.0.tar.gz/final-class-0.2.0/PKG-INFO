@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: final-class
+Version: 0.2.0
+Summary: Final classes for Python 3
+Home-page: https://github.com/moscow-python-beer/final-class
+Author: sobolevn
+Author-email: mail@sobolevn.me
+Keywords: oop,oop-principles,final-classes,wemake.services,final,final classes,typing
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: typing_extensions (>=3.7,<4.0)
+Project-URL: Repository, https://github.com/moscow-python-beer/final-class
