@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+CombCov.egg-info/PKG-INFO
+CombCov.egg-info/SOURCES.txt
+CombCov.egg-info/dependency_links.txt
+CombCov.egg-info/requires.txt
+CombCov.egg-info/top_level.txt
+combcov/__init__.py
+combcov/combcov.py
+demo/__init__.py
+demo/mesh_tiling.py
+demo/word_set.py
+tests/__init__.py
+tests/test_comb_cov.py
+tests/test_mesh_tiling.py
+tests/test_word_set.py
