@@ -1,0 +1,15 @@
+apertium/__init__.py,sha256=Kf8drna5PGtsPTfhUmuwTo5a3rtr311kDEIuuEJmXvw,2986
+apertium/installer.py,sha256=E1kMYi_CZKX4ZWD-o3_pohP6Wh6C2tbZ-rp2UjAtl_k,7192
+apertium/iso639.py,sha256=Dxn6aKKxUeKlFTDaD19VC5d4wzODpwikI_plm3EMrCA,3199
+apertium/mode_search.py,sha256=PbaR8I4hnkAF3NY0Y6gzKhNPNA3kKY4kiCodyjWreUw,3116
+apertium/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apertium/utils.py,sha256=WR_QpWzoH0BI4AN_uF05cmYbzj7OokqDJrmqqQipeuY,7238
+apertium/analysis/__init__.py,sha256=vQTTRI42UyhaBXLb7G4Ot715ri34Ojl_B3TUJxbtNNk,2415
+apertium/generation/__init__.py,sha256=my7NVj-n9tP9JJ01QAxq3oNHl1I1asVRfSmEp3gAios,1696
+apertium/tagger/__init__.py,sha256=_zT_VJ0qrCg033_H1hz1dxOWy2tT5IgJJM9X6n5G44Q,2295
+apertium/translation/__init__.py,sha256=oMP0fTRs5rRF6pZHOc9cHUhE7ECqcEWnebQ7xXqN3OY,5931
+apertium-0.2.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+apertium-0.2.1.dist-info/METADATA,sha256=FnMZ9XRbdZsSepFHbrykU1l4gG8tX47KOdu_w25glcA,4804
+apertium-0.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+apertium-0.2.1.dist-info/top_level.txt,sha256=9WO68YNsnDcou-opG7VayMmBVd3Ahd_bhXUgNxmg6NY,9
+apertium-0.2.1.dist-info/RECORD,,
