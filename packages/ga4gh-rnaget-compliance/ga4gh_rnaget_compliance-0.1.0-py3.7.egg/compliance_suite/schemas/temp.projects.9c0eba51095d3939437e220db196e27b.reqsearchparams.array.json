@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://json-schema.org/draft-04/schema#",
+    "title": "RNAGetReqSearchParamsArray",
+    "type": "array",
+    "$ref": "temp.projects.9c0eba51095d3939437e220db196e27b.reqsearchparams.array.json#/definitions/RNAGetReqSearchParamsArray",
+
+    "definitions": {
+        "RNAGetReqSearchParamsArray": {
+            "type": "array",
+            "allOf": [
+                {
+                    "items": {
+                        "type": "object",
+                        "$ref": "temp.projects.9c0eba51095d3939437e220db196e27b.reqsearchparams.json#/definitions/RNAGetReqSearchParams"
+                    }                    
+                },
+                {
+                    "minItems": 1
+                }
+            ]
+        }
+    }
+}

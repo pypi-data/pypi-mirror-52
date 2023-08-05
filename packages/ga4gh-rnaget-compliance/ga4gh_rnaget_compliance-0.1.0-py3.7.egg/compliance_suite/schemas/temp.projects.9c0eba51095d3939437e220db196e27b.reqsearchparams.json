@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://json-schema.org/draft-04/schema#",
+  "title": "RNAGetReqSearchParams",
+  "type": "object",
+  "$ref": "temp.projects.9c0eba51095d3939437e220db196e27b.reqsearchparams.json#/definitions/RNAGetReqSearchParams",
+
+  "definitions": {
+    "RNAGetReqSearchParams": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "rnaget-project.json"
+        },
+        {
+          "properties": {
+            "name": {"type": "string", "enum": ["RNAgetTestProject0"]},"version": {"type": "string", "enum": ["1.0"]}
+          },
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    }
+  }
+}

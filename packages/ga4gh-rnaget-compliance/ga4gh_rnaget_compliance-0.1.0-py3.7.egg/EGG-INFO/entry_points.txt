@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        rnaget-compliance=compliance_suite.cli:main
+    
