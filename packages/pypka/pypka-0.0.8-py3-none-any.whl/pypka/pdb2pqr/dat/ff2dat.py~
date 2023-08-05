@@ -1,0 +1,5 @@
+with open() as f:
+    for line in f:
+        if '[ atoms ]' in line:
+            print prevline
+        prevline = line
