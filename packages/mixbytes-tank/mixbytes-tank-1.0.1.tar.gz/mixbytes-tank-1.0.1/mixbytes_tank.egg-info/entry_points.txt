@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        tank = tank.main:main
+    
