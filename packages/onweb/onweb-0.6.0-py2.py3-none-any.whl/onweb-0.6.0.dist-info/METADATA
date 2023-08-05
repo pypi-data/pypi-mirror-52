@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: onweb
+Version: 0.6.0
+Summary: Check the status of some website.
+Home-page: https://github.com/fmind/onweb
+Author: Médéric Hurier (fmind)
+Author-email: fmind@fmind.me
+License: LGPL-3.0
+Keywords: check status website
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# onweb
+
+Check the status of some website.
+
+## Installation
+
+```bash
+$ pip install onweb
+```
+
+## Documentation
+
+```bash
+$ onweb https://google.com https://www.google.com
+301     https://google.com
+200     https://www.google.com
+```
+
+__Handle redirect code (e.g. 301):__
+
+```bash
+$ onweb --redirect https://google.com https://www.google.com
+200     https://www.google.com
+200     https://www.google.com
+```
+
+
