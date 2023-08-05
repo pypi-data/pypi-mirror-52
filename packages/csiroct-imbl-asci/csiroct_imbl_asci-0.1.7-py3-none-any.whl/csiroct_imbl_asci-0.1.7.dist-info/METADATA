@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: csiroct-imbl-asci
+Version: 0.1.7
+Summary: CSIROCT IMBL ASCI library.
+Home-page: https://github.com/darrent1974/CSIROCT-IMBL-ASCI
+Author: Darren Thompson
+Author-email: darren.thompson@csiro.au
+License: GPL-3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+Requires-Dist: h5py
+
+CSIROCT_IMBL_ASCI
+
+[![Build Status](https://travis-ci.org/darrent1974/CSIROCT-IMBL-ASCI.svg?branch=master)](https://travis-ci.org/darrent1974/CSIROCT-IMBL-ASCI)
+
+
