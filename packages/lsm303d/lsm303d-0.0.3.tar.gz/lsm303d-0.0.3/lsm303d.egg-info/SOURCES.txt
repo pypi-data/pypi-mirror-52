@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+lsm303d/__init__.py
+lsm303d.egg-info/PKG-INFO
+lsm303d.egg-info/SOURCES.txt
+lsm303d.egg-info/dependency_links.txt
+lsm303d.egg-info/requires.txt
+lsm303d.egg-info/top_level.txt
