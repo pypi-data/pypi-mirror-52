@@ -1,0 +1,15 @@
+ubscrape/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ubscrape/__main__.py,sha256=W1kmq38mrVgvXY3isS7QmXJgEqqQg_tS1pjewWzGu88,39
+ubscrape/command_line.py,sha256=Qqby7TYo8cfuAStHhr3c2Kb60b6a8x2BoU3AHNRzuNs,3273
+ubscrape/constants.py,sha256=NO1CfxwNc0Xsg3aKYwvM91iqR-QtYsNzarwmNOaifoE,62
+ubscrape/db.py,sha256=hOcLnYRECOBG4r2eVspt2FVNzlZmn_o2UDziKS2wyXM,1622
+ubscrape/definitions.py,sha256=PoU6D1nGDpv-4KIDVEnEC94pf85yK9eKrsMqJdrXx2M,1528
+ubscrape/jsonwriter.py,sha256=6ITkU2fdcJ-6uivrvVCzGMsVW_ZQKg88K8JzKq0XcEI,2074
+ubscrape/setup.py,sha256=B2D6I7ALmJhFPiarMDz6DqYLpHWVOBaYPttFGJ4UcXA,513
+ubscrape/words.py,sha256=JYRCbSyoYXtIGdMFrugR1f5-Ov14tkPmTTvmM1Jjep4,2068
+ubscrape-0.1.dist-info/LICENSE.txt,sha256=DDc4bRPTFKRQXYDPzpdlhVOKtiyS4ZqE246lyQUUYZ4,1070
+ubscrape-0.1.dist-info/METADATA,sha256=Xa1o5ztEtabkQdNFEhxTYiRp2vUeUV8n9X_YEAM34uE,270
+ubscrape-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ubscrape-0.1.dist-info/entry_points.txt,sha256=1VSHJvB6j6xu8WtKAzp2dyyQKrMJAlfDDJVpRS6_YX8,57
+ubscrape-0.1.dist-info/top_level.txt,sha256=EBuxnu2Yi4_F4jd0OWbS9g3iYQI4EDZgLGovxcQyo4Q,9
+ubscrape-0.1.dist-info/RECORD,,
