@@ -1,0 +1,3 @@
+[console_scripts]
+dmriprep = dmriprep.cli.run:main
+
