@@ -1,0 +1,5 @@
+[console_scripts]
+app_local_shell = eplus.shell:shell_local
+app_remote_shell = eplus.shell:shell_remote
+appcfg_update = eplus.shell:appcfg_update
+
