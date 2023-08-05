@@ -1,0 +1,4 @@
+tfx>=0.14.0rc1
+tensorflow==1.14.0
+PyMySQL<10,>=0.9.3
+six>=1.8<2
