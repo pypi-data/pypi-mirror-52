@@ -1,0 +1,11 @@
+README.md
+setup.py
+bupt/__init__.py
+bupt/jwxt.py
+bupt/login.py
+bupt/my.py
+bupt_api.egg-info/PKG-INFO
+bupt_api.egg-info/SOURCES.txt
+bupt_api.egg-info/dependency_links.txt
+bupt_api.egg-info/requires.txt
+bupt_api.egg-info/top_level.txt
