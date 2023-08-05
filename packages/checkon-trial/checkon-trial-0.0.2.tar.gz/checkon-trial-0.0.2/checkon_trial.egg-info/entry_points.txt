@@ -1,0 +1,3 @@
+[console_scripts]
+trial = checkon_trial.checkon_trial:run
+
