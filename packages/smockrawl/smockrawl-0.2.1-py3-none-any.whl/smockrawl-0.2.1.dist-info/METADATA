@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: smockrawl
+Version: 0.2.1
+Summary: Smockeo API crawler
+Home-page: https://github.com/fedus/smockrawl
+Author: Federico Gentile
+Author-email: misc+smockrawl@dillendapp.eu
+License: UNKNOWN
+Keywords: smockeo cobject smoke fire detector api crawl crawler
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: python-dateutil
+Requires-Dist: humanfriendly
+Requires-Dist: aiohttp
+Requires-Dist: async-timeout
+
+# smockrawl
+
+Basic Smockeo API crawler.
+
+## Usage:
+
+####Initialisation:
+`mySmockeo = Smockeo(username, password, detectorId, loop, session)`
+
+Where `loop` is an asyncio event loop and `session` an aiohttp session. Have a look at the code in `__main__.py` to
+see how this can work. 
+
+####Authentication:
+`mySmockeo.authenticate()`
+
+####Poll the sensor:
+`mySmockeo.poll()`
+
+Following this, properties such as the sensor state, battery level or the last alarm can be read from the object.
+
+An info reading can be printed with:
+`mySmockeo.print_status()`
+
+
+
+
