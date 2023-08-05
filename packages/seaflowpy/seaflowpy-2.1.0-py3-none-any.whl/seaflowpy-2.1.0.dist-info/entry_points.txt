@@ -1,0 +1,3 @@
+[console_scripts]
+seaflowpy = seaflowpy.cli.cli:cli
+
