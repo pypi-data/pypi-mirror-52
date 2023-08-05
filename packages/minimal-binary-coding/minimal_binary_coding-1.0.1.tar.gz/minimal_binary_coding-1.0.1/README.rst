@@ -1,0 +1,97 @@
+minimal_binary_coding
+=========================================================================================
+|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+
+Python package implementing minimal binary coding.
+
+How do I install this package?
+----------------------------------------------
+As usual, just download it using pip:
+
+.. code:: shell
+
+    pip install minimal_binary_coding
+
+Tests Coverage
+----------------------------------------------
+Since some software handling coverages sometime get slightly different results, here's three of them:
+
+|coveralls| |sonar_coverage| |code_climate_coverage|
+
+
+Usage examples
+----------------------------------------------
+
+.. code:: python
+
+    from minimal_binary_coding import minimal_binary_coding
+
+    minimal_binary_coding(0, 1) # ε
+    minimal_binary_coding(0, 2) # 0
+    minimal_binary_coding(1, 2) # 1
+    minimal_binary_coding(0, 3) # 0
+    minimal_binary_coding(1, 3) # 10
+    minimal_binary_coding(2, 3) # 11
+    minimal_binary_coding(0, 4) # 00
+    minimal_binary_coding(1, 4) # 01
+    minimal_binary_coding(2, 4) # 10
+    minimal_binary_coding(3, 4) # 11
+    minimal_binary_coding(0, 5) # 00
+    minimal_binary_coding(1, 5) # 01
+    minimal_binary_coding(2, 5) # 10
+    minimal_binary_coding(3, 5) # 110
+    minimal_binary_coding(4, 5) # 111
+    minimal_binary_coding(0, 6) # 00
+    minimal_binary_coding(1, 6) # 01
+    minimal_binary_coding(2, 6) # 100
+    minimal_binary_coding(3, 6) # 101
+    minimal_binary_coding(4, 6) # 110
+    minimal_binary_coding(5, 6) # 111
+    minimal_binary_coding(0, 7) # 00
+    minimal_binary_coding(1, 7) # 010
+    minimal_binary_coding(2, 7) # 011
+    minimal_binary_coding(3, 7) # 100
+    minimal_binary_coding(4, 7) # 101
+    minimal_binary_coding(5, 7) # 110
+    minimal_binary_coding(6, 7) # 111
+
+
+.. |travis| image:: https://travis-ci.org/LucaCappelletti94/minimal_binary_coding.png
+   :target: https://travis-ci.org/LucaCappelletti94/minimal_binary_coding
+   :alt: Travis CI build
+
+.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_minimal_binary_coding&metric=alert_status
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_minimal_binary_coding
+    :alt: SonarCloud Quality
+
+.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_minimal_binary_coding&metric=sqale_rating
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_minimal_binary_coding
+    :alt: SonarCloud Maintainability
+
+.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_minimal_binary_coding&metric=coverage
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_minimal_binary_coding
+    :alt: SonarCloud Coverage
+
+.. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/minimal_binary_coding/badge.svg?branch=master
+    :target: https://coveralls.io/github/LucaCappelletti94/minimal_binary_coding?branch=master
+    :alt: Coveralls Coverage
+
+.. |pip| image:: https://badge.fury.io/py/minimal-binary-coding.svg
+    :target: https://badge.fury.io/py/minimal-binary-coding
+    :alt: Pypi project
+
+.. |downloads| image:: https://pepy.tech/badge/minimal-binary-coding
+    :target: https://pepy.tech/badge/minimal-binary-coding
+    :alt: Pypi total project downloads 
+
+.. |codacy|  image:: https://api.codacy.com/project/badge/Grade/3b0a49e5d0994a51815d39a678f925a9
+    :target: https://www.codacy.com/manual/LucaCappelletti94/minimal_binary_coding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/minimal_binary_coding&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Maintainability
+
+.. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/9bf7f9487e413b7eee7a/maintainability
+    :target: https://codeclimate.com/github/LucaCappelletti94/minimal_binary_coding/maintainability
+    :alt: Maintainability
+
+.. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/9bf7f9487e413b7eee7a/test_coverage
+    :target: https://codeclimate.com/github/LucaCappelletti94/minimal_binary_coding/test_coverage
+    :alt: Code Climate Coverate
