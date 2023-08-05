@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: jk_git
+Version: 0.2019.9.11
+Summary: This python module is a wrapper around git (= the git binary file). It is ment to provide an simple interface to git. (With currently quite limited capabilities.)
+Home-page: https://github.com/jkpubsrc/python-module-jk-git
+Author: Jürgen Knauth
+Author-email: pubsrc@binary-overflow.de
+License: Apache 2.0
+Download-URL: https://github.com/jkpubsrc/python-module-jk-git/tarball/0.2019.9.11
+Description: jk_git
+        ==========
+        
+        Introduction
+        ------------
+        
+        This python module ...
+        
+        Information about this module can be found here:
+        
+        * [github.org](https://github.com/jkpubsrc/....)
+        * [pypi.python.org](https://pypi.python.org/pypi/jk_git)
+        
+        Why this module?
+        ----------------
+        
+        ...
+        
+        Limitations of this module
+        --------------------------
+        
+        ...
+        
+        How to use this module
+        ----------------------
+        
+        ### Import this module
+        
+        Please include this module into your application using the following code:
+        
+        ```python
+        impoert jk_git
+        ```
+        
+        ...
+        
+        Contact Information
+        -------------------
+        
+        This is Open Source code. That not only gives you the possibility of freely using this code it also
+        allows you to contribute. Feel free to contact the author(s) of this software listed below, either
+        for comments, collaboration requests, suggestions for improvement or reporting bugs:
+        
+        * Jürgen Knauth: jknauth@uni-goettingen.de, pubsrc@binary-overflow.de
+        
+        License
+        -------
+        
+        This software is provided under the following license:
+        
+        * Apache Software License 2.0
+        
+        
+        
+        
+Keywords: git
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
