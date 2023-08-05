@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: sekigae
+Version: 0.0.2
+Summary: sekigae program
+Home-page: https://github.com/kamuiroeru/sekigae.git
+Author: kamuiroeru
+Author-email: e1371@ob.akashi.ac.jp
+Maintainer: kamuiroeru
+Maintainer-email: e1371@ob.akashi.ac.jp
+License: MIT
+Description: # Sekigae Program
+        For Sekigae Program
+        
+        ## Install
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.4
