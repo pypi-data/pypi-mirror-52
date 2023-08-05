@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: python-idzip
+Version: 0.3.6
+Summary: DictZip - Random Access gzip files
+Home-page: https://github.com/bauman/python-idzip
+Author: Rik Faith
+Maintainer: Dan Bauman
+Maintainer-email: dan@bauman.space
+License: MIT
+Download-URL: https://github.com/bauman/python-idzip/archive/0.3.6.tar.gz
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+
