@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: daquiri
+Version: 0.0.1
+Summary: DAQuiri = DAQ + UI Generation + Reactivity + Instruments: A simple scientific DAQ framework.
+Home-page: https://daquiri.readthedocs.org
+Author: Conrad Stansbury
+Author-email: chstansbury@gmail.com
+License: UNKNOWN
+Description: =========
+         DAQuiri
+        =========
+        
+        daquiri := DAQ + UI generation + Reactivity + Instruments
+        
+        You should be spending your time designing and running experiments,
+        not your DAQ software.
+        
+        DAQuiri is a nuts and bolts included framework for scientific data acquisition (DAQ),
+        designed for rapid prototyping and the challenging DAQ environment of angle resolved
+        photoemission spectroscopy. If you specify how to sequence motions and data collection,
+        daquiri can manage the user interface, talking to and managing instruments,
+        plotting interim data, data collation, and IO for you.
+        
+        DAQuiri also has logging and notification support built in and can let you know
+        over email or Slack when your experiment finishes (successfully or not!).
+        
+        If DAQuiri doesn't do exactly what you need, get in contact with us or
+        check out the examples. There's a good chance that if it isn't built in,
+        DAQuiri is flexible enough to support your use case.
+        
+        
+        Requirements
+        ============
+        
+        * Python 3.7 over
+        * NoArch
+        
+        Features
+        ========
+        
+        Automated DAQ
+        -------------
+        
+        DAQuiri wraps instruments and data sources in a uniform interface, if you specify how
+        to sequence motion and acquisition, DAQuiri handles async collection, IO, and visualizing
+        your data as it is acquired.
+        
+        UI Generation
+        -------------
+        
+        DAQuiri using PyQt and Qt5 to generate UIs for your experiments. It also
+        provides simple bindings (daquiri.ui) that make making managing the day to day
+        of working on PyQt simpler, if you need to do UI scripting of your own.
+        
+        It also ships with a window manager that you can register your windows against,
+        making it seamless to add extra functionality to your experiments.
+        
+        The DAQuiri UI bindings are wrapped to publish as RxPY observables, making it easier
+        to integrate your PyQT UI into a coherent asynchronous application.
+        
+        Installation
+        ============
+        
+        ::
+        
+          $ pip install daquiri
+        
+        
+        Usage
+        =====
+        
+        For usage examples, explore the scripts in the examples folder.
+        ChangeLog
+        =========
+        
+        0.1.0 (2019-09-01)
+        ------------------
+        
+        * Initial release.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7.0
+Provides-Extra: reST
