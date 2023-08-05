@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+import pccold
+
+print('PcCold with DKZ')
+pccold.main()
