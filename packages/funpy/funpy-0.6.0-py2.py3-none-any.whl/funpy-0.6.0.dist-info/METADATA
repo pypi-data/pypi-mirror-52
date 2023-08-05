@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: funpy
+Version: 0.6.0
+Summary: Functional and Pythonic stdlib.
+Home-page: https://github.com/fmind/funpy
+Author: Médéric Hurier (fmind)
+Author-email: fmind@fmind.me
+License: LGPL-3.0
+Keywords: operator function iterator parallel io
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# funpy
+
+
