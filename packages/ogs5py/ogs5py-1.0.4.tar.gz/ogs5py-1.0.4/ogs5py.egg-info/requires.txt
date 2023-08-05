@@ -1,0 +1,17 @@
+numpy>=1.13.0
+whichcraft
+pandas>=0.23.0
+meshio
+lxml
+vtk
+pexpect
+
+[all]
+pygmsh
+mayavi
+
+[gmsh]
+pygmsh
+
+[show]
+mayavi
