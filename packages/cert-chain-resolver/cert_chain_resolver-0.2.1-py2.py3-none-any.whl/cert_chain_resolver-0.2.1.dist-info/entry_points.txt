@@ -1,0 +1,3 @@
+[console_scripts]
+cert-chain-resolver = cli:cli
+
