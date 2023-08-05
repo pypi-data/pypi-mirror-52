@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+CP2K_Parser.egg-info/PKG-INFO
+CP2K_Parser.egg-info/SOURCES.txt
+CP2K_Parser.egg-info/dependency_links.txt
+CP2K_Parser.egg-info/not-zip-safe
+CP2K_Parser.egg-info/requires.txt
+CP2K_Parser.egg-info/top_level.txt
+cp2kparser/__init__.py
+cp2kparser/__version__.py
+cp2kparser/parser.py
