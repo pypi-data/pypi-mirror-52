@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: geophotos
+Version: 0.10
+Summary: A package to pull, plot, and analyze coordinates from phots.
+Home-page: https://github.com/jakebrehm/geophotos
+Author: Jake Brehm
+Author-email: code@jakebrehm.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
