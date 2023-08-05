@@ -1,0 +1,9 @@
+botocore
+boto3>=1.9.159
+boto3_type_annotations
+cryptography
+paramiko
+portalocker
+portpicker
+pytz
+wandb
