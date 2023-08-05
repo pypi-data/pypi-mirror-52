@@ -1,0 +1,13 @@
+README.md
+setup.py
+pygui/__init__.py
+pygui/__main__.py
+pygui/window.py
+pygui/GUIs/file_editor.py
+pygui/GUIs/wheel_build.py
+pythonGUI.egg-info/PKG-INFO
+pythonGUI.egg-info/SOURCES.txt
+pythonGUI.egg-info/dependency_links.txt
+pythonGUI.egg-info/entry_points.txt
+pythonGUI.egg-info/requires.txt
+pythonGUI.egg-info/top_level.txt
