@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: overlap_save
+Version: 1.0
+Summary: Overlap-save method for fast convolution, like Scipy's fftconvolve, but memory-efficient
+Home-page: https://github.com/fasiha/overlap_save-py
+Author: Ahmed Fasih
+Author-email: ahmed@aldebrn.me
+License: Unlicense
+Description: UNKNOWN
+Keywords: overlap save add fast convolution convolve fft fftconvolve fir filter
+Platform: UNKNOWN
