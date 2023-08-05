@@ -1,0 +1,13 @@
+db_transfer/__init__.py,sha256=vc9fI-h3ZgSUWD1QSm6jjPzEjY0ZZloKurA32OofeC4,52
+db_transfer/adapter.py,sha256=lBfg0ybHCtY8ZfNFStmqmYe222Gm-fY3LcDKkWVQbbk,1159
+db_transfer/adapter_file.py,sha256=FMzAfVeQmHKJ69bsNtiARf1A8sQksRBjb_GwvyWb2Gg,3237
+db_transfer/adapter_redis.py,sha256=m7gTlP_p38iqnrdLTvaUn-eCBJpRMOZ3g61CUGfq1hM,8255
+db_transfer/adapter_yaml.py,sha256=4vbA5P_amALIc8VJjoPT_gvTfYuollKm37aDlq08NOc,442
+db_transfer/cli.py,sha256=rybwXfP1M3gM_YlaG1rK7Vb8Oc9WEMpXrR7DxJaOIoA,1977
+db_transfer/transfer.py,sha256=NgsagR6b6xrZ41uUtZdDQdK_D0nhceC573eyAl4oJuM,4196
+DB_Transfer-0.5.6.dist-info/LICENSE,sha256=gFs-f7Ta2KbluTCG0S-Vi6oY6oLWiPzkeyK7oUBr4ZQ,1066
+DB_Transfer-0.5.6.dist-info/METADATA,sha256=w_YmCGGxr3mmqA0DylmYKLZS2Jct3epwj8LzjXKDFEM,10815
+DB_Transfer-0.5.6.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+DB_Transfer-0.5.6.dist-info/entry_points.txt,sha256=YJ0ySUPL1q5NFO5buO7j3EF7TSusD-XRM2-5JnchNfU,52
+DB_Transfer-0.5.6.dist-info/top_level.txt,sha256=BF7vXTYYMD0yLxwDoOk4KmqGbnTr89KHQX060FhIh0s,12
+DB_Transfer-0.5.6.dist-info/RECORD,,
