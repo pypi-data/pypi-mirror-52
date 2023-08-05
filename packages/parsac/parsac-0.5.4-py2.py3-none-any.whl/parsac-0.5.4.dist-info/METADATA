@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: parsac
+Version: 0.5.4
+Summary: AutoCalibration tool written in Python
+Home-page: https://github.com/BoldingBruggeman/parsac
+Author: Jorn Bruggeman
+Author-email: jorn@bolding-bruggeman.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Requires-Dist: netCDF4
+
+# Parallel Sensitivity Analysis and Calibration
+
+Python-based tool for sensitvity analysis and auto-calibration in Parallel.
+This tool is designed for analysis of models that take significant time to run.
+For that reason, it focuses on storing and exploiting every single model result,
+and performing model runs in parallel on either a single machine or
+on computer clusters. It works with models that are run by calling one binary,
+that use text-based configuration files based on YAML or Fortran namelists,
+and that write their output to NetCDF.
+
+### To install
+
+pip install <--upgrade> --user parsac
+
+Remove --user to install in the system's shared Python directory.
+Some systems have multiple versions of pip, e.g., pip for Python 2, pip3 for Python 3.
+Make sure you use the command that corresponds to the Python version you want to install into.
+
+### To work with a wheel in edit mode
+
+pip install -e . --user --upgrade
+
+
