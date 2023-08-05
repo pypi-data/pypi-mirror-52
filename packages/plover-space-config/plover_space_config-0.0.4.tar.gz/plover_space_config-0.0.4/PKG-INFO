@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: plover_space_config
+Version: 0.0.4
+Summary: Plover command plugin for switching before/after spacing.
+Home-page: https://github.com/pea/plover_space_config
+Author: Ashlynn Anderson
+Author-email: ashlynn.anderson@tutanota.com
+License: GNU General Public License v3 or later (GPLv3+)
+Description: # plover_space_config
+        ---
+        
+        Pretty nifty little plugin for switching the spacing style in Plover.
+Keywords: plover plover_plugin
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
