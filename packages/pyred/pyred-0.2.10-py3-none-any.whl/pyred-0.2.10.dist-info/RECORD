@@ -1,0 +1,14 @@
+pyred/__init__.py,sha256=tA6T9AIGKG_ISlDX-eEJtfSxuPjOpSIj5BaxdadKskc,169
+pyred/create.py,sha256=3Xk9eT-9km6_cV3DQSjzCHTdwCu6MGkzswZghrrbwUM,8042
+pyred/execute.py,sha256=o1YPqINEbtYAXq2cTa35BL0l5tH8Pi9xi-UNCTv8VMI,1375
+pyred/redshift_credentials.py,sha256=XXyQGokiIK-vGdO5KUdC-6sIbYMZGna8gUlcav2Gm_c,374
+pyred/send.py,sha256=RTDa4rKCvkxfI5DHdq3lbw6PZvpBVYRNclOQnwL7F-8,4898
+pyred/tunnel.py,sha256=lAYzD4ZXvpSIvfndRQ5-zDDzEweWFWWKFN-H8vTFKTQ,1281
+pyred/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyred/tools/print_colors.py,sha256=d4K3XFal0eUn2rJO23XOmwb1ka1qn5CxeRhOdCQ_oao,196
+pyred-0.2.10.dist-info/DESCRIPTION.rst,sha256=WMHmUwoVWK0S6RlBHaOUmwGG5yR1FsU2Al4eqrg6JOU,9
+pyred-0.2.10.dist-info/METADATA,sha256=A2sqvTTLj_T4e7tf73JpTAmnUpkACRAZzgMmOaIJo4g,584
+pyred-0.2.10.dist-info/RECORD,,
+pyred-0.2.10.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pyred-0.2.10.dist-info/metadata.json,sha256=5crpHNXHWdI-u3BJovwGbcSUMYtEGoza3mRAKumFD2w,770
+pyred-0.2.10.dist-info/top_level.txt,sha256=zxL5uFpXronAHX06fTv1mZCgbNGE4pn_GzAkJoUkbSY,6
