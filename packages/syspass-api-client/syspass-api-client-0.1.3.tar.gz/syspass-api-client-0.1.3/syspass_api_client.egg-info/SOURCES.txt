@@ -1,0 +1,17 @@
+README.md
+setup.py
+syspass_api_client/__init__.py
+syspass_api_client/__version__.py
+syspass_api_client/account.py
+syspass_api_client/api.py
+syspass_api_client/category.py
+syspass_api_client/client.py
+syspass_api_client/config.py
+syspass_api_client/tag.py
+syspass_api_client/user_group.py
+syspass_api_client.egg-info/PKG-INFO
+syspass_api_client.egg-info/SOURCES.txt
+syspass_api_client.egg-info/dependency_links.txt
+syspass_api_client.egg-info/not-zip-safe
+syspass_api_client.egg-info/requires.txt
+syspass_api_client.egg-info/top_level.txt
