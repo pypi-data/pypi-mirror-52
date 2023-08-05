@@ -1,0 +1,14 @@
+sqlbucket/__init__.py,sha256=cWP8NG-iU-LmsU7EZv4FVj5LrTnirL3U6ljaIP3rUnA,102
+sqlbucket/cli.py,sha256=H_8VDYLP1__Cic00WIKtdffPZmo7DIpEHRM3bf_f8xM,2296
+sqlbucket/core.py,sha256=1kEyOkZWTKIFqFmg6X_egjxp9ieLm-iUMS-2sXKdDcU,2576
+sqlbucket/exceptions.py,sha256=L4FzH5TvVa7XVGHobx7HenFMz7CmLGjAZ33AUOdy8As,184
+sqlbucket/integrity.py,sha256=vQXXQskoPhlgXL78txaA9R5oQ1wU98GcsfmOrPVjggU,1726
+sqlbucket/project.py,sha256=sqYHAu3NNloQ8vTBKPc17C-V2H_sATlHSGmqjUs5Gzg,5428
+sqlbucket/runners.py,sha256=ujttlaoox7QI8TZtS23tV8WtNPbPG7JdCkBdgz4eExc,3163
+sqlbucket/utils.py,sha256=HrpShGg-opH9z28KdZCloamajUrD3LThz0aMhNKxsE4,574
+sqlbucket-0.1.1.dist-info/DESCRIPTION.rst,sha256=v7Qqx1EQwz9ONXwLF1ISH5oxw6fdJnsBduVFmbF-lCY,45
+sqlbucket-0.1.1.dist-info/METADATA,sha256=AM6tnN5bwIwTYEtthRVVxNMu0BWEKtmincLjHZ5fqZ0,1120
+sqlbucket-0.1.1.dist-info/RECORD,,
+sqlbucket-0.1.1.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+sqlbucket-0.1.1.dist-info/metadata.json,sha256=iXoVwbF4wn4wfMyzOFwOGYfvy9Y0pBRjzIbpscfHSMM,1130
+sqlbucket-0.1.1.dist-info/top_level.txt,sha256=I9Y647gnRUsZg61gGj1fzPiO-byp53ZTN6WbG2-jU1Q,10
