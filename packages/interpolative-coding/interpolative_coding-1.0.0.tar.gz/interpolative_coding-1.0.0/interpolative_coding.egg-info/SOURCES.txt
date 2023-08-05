@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+interpolative_coding/__init__.py
+interpolative_coding/__version__.py
+interpolative_coding/interpolative_coding.py
+interpolative_coding.egg-info/PKG-INFO
+interpolative_coding.egg-info/SOURCES.txt
+interpolative_coding.egg-info/dependency_links.txt
+interpolative_coding.egg-info/requires.txt
+interpolative_coding.egg-info/top_level.txt
