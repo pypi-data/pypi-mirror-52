@@ -1,0 +1,12 @@
+grpcio
+protobuf
+enum34
+six
+
+[dev]
+grpcio-tools
+googleapis-common-protos
+pylint
+twine
+setuptools
+wheel
