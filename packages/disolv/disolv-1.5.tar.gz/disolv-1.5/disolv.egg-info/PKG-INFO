@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: disolv
+Version: 1.5
+Summary: Modelling dilution tests
+Home-page: https://github.com/sarcol-bgs/disolv/
+Author: Sarah Collins
+Author-email: sarcol@bgs.ac.uk
+License: GNU LGPLv3
+Download-URL: https://github.com/sarcol-bgs/disolv/archive/v1.5.tar.gz
+Description: 
+        # Disolv
+        
+        > Modelling dilution tests.
+        
+        See [https://github.com/sarcol-bgs/disolv/](https://github.com/sarcol-bgs/disolv/) for details.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
