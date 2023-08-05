@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: d3dfm
+Version: 0.0.1
+Summary: Support reading Delft3DFM Output
+Home-page: https://github.com/pypa/sampleproject
+Author: D. Quang Duong
+Author-email: dinhquanght@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Delft3DFM Postprocessing Support
+
+## HIS.NC
+
+## MAP.NC
+
