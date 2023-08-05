@@ -1,0 +1,43 @@
+import json
+
+from decouple import config
+from etcd3_wrapper.etcd3_wrapper import PsuedoEtcdEntry
+from uuid import uuid4
+from .helpers import SpecificEtcdEntryBase
+from os.path import join
+
+
+class RequestType:
+    CreateVM = "CreateVM"
+    ScheduleVM = "ScheduleVM"
+    StartVM = "StartVM"
+    StopVM = "StopVM"
+    InitVMMigration = "InitVMMigration"
+    TransferVM = "TransferVM"
+    DeleteVM = "DeleteVM"
+
+
+class RequestEntry(SpecificEtcdEntryBase):
+    _type = None  # type: str
+    migration = None  # type: bool
+    destination = None  # type: str
+    uuid = None  # type: str
+    hostname = None  # type: str
+
+    @classmethod
+    def from_scratch(cls, **kwargs):
+        e = PsuedoEtcdEntry(join(config("REQUEST_PREFIX"), uuid4().hex), value=json.dumps(kwargs).encode("utf-8"),
+                            value_in_json=True)
+        return cls(e)
+
+
+class RequestPool:
+    def __init__(self, etcd_client, request_prefix):
+        self.client = etcd_client
+        self.prefix = request_prefix
+
+    def put(self, obj: RequestEntry):
+        if not obj.key.startswith(self.prefix):
+            obj.key = join(self.prefix, obj.key)
+
+        self.client.put(obj.key, obj.value, value_in_json=True)
