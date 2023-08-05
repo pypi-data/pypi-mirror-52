@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "quare"
+version = "0.2.3"
+description = "quare is a CLI client for Quip."
+readme = "README.md"
+license="LGPL-3.0+"
+repository="https://github.com/jstvz/quare"
+authors = ["James Estevez <j@jstvz.org>"]
+classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+]
+
+[tool.poetry.scripts]
+quare = "quare.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Click = "^7.0"
+colorama = "^0.4.1"
+dateparser = "^0.7.1"
+keyring = "^18.0"
+terminaltables = "^3.1"
+websocket-client = "^0.56.0 "
+
+[tool.poetry.dev-dependencies]
+autoflake = "^1.2"
+bandit = "^1.6"
+black = {version = "^18.3-alpha.0",allows-prereleases = true}
+bumpversion = "^0.5.3"
+coverage = "^4.5"
+flake8 = "^3.7"
+ipdb = "^0.11.0"
+ipython = "^7.2"
+pre-commit = "^1.14"
+pytest = "^3.0"
+pytest-cov = "^2.7"
+pytest-flake8 = "^1.0"
+pytest-isort = "^0.2.1"
+pytest-runner = "^4.2"
+seed-isort-config = "^1.5"
+Sphinx = "^1.8"
+tox = "^3.7"
+twine = "^1.12"
+bump2version = "^0.5.11"
+
+[tool.isort.settings]
+known_first_party = "quip,quare"
+known_third_party = "click,pytest,setuptools,terminaltables,keyring,yaml"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
