@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+pyExoplaneteu.egg-info/PKG-INFO
+pyExoplaneteu.egg-info/SOURCES.txt
+pyExoplaneteu.egg-info/dependency_links.txt
+pyExoplaneteu.egg-info/top_level.txt
+pyexoplaneteu/__init__.py
+pyexoplaneteu/config.py
+pyexoplaneteu/pyexoplaneteu.py
+pyexoplaneteu/utils.py
