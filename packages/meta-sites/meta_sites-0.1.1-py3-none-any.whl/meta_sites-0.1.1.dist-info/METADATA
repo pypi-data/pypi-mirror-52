@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: meta-sites
+Version: 0.1.1
+Summary: meta sites
+Home-page: https://github.com/meta-trial/meta-sites
+Author: Erik van Widenfelt
+Author-email: ew2789@gmail.com
+License: GPL license, see LICENSE
+Keywords: django META sites
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: edc-sites
+
+|pypi| |travis| |codecov| |downloads|
+
+meta-sites
+----------
+
+
+Trial sites / recruiting centers
+
+.. |pypi| image:: https://img.shields.io/pypi/v/meta-sites.svg
+    :target: https://pypi.python.org/pypi/meta-sites
+
+.. |travis| image:: https://travis-ci.com/meta-trial/meta-sites.svg?branch=develop
+    :target: https://travis-ci.org/meta-trial/meta-sites
+
+.. |codecov| image:: https://codecov.io/gh/meta-trial/meta-sites/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/meta-trial/meta-sites
+
+.. |downloads| image:: https://pepy.tech/badge/meta-sites
+   :target: https://pepy.tech/project/meta-sites
+
+
+
