@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: http_import
+Version: 0.1.1
+Summary: The import module uses HTTP from the Internet 
+Home-page: https://github.com/cn-kali-team/http_import
+Author: Kali-Team
+Author-email: root@kali-team.cn
+License: MIT
+Description: 
+        # http_import
+        
+        > pip install http_import
+        
+        - 远程内存加载Python模块
+        
+        ```python
+        import sys
+        import http_import
+        
+        sys.path.append('http://localhost:8000')
+        http_import.install_path_hook()
+        import requests
+        print(dir(requests))
+        ```
+        
+        - 开启http服务，`python3 -m http.server`
+        
+        ![demo](README.assets/demo.png)
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
