@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: the-pet
+Version: 0.1.1
+Summary: 
+Author: James Maxwell
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pandas (>=0.25.1,<0.26.0)
