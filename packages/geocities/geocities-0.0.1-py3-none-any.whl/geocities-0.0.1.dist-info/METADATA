@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: geocities
+Version: 0.0.1
+Summary: Search Cities and Countries by name, address, lat/long point or geonames_id. Returns polygons geojson.
+Home-page: https://github.com/udartsev/geocities.git
+Author: Vladimir Udartsev
+Author-email: v.udartsev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: geopy
+Requires-Dist: json
+Requires-Dist: urllib3
+Requires-Dist: transliterate
+Requires-Dist: langdetect
+
+UNKNOWN
+
+
