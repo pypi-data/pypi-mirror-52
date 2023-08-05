@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: awsibox
+Version: 0.0.2
+Summary: AWS Infrastructure in a Box
+Home-page: https://github.com/mello7tre/AwsIBox
+Author: Mello
+Author-email: mello+python@ankot.org
+License: UNKNOWN
+Description: # AwsIBox
+        AwsIBox
+        
+        Work in progres...
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=2.7

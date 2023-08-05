@@ -1,0 +1,4 @@
+res-iam-user-01:
+  StackType: res
+  StackName: iam-u-01
+  IAMUser: {}
