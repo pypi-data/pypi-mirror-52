@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: clidog
+Version: 2019.9.9.17.6.11
+Summary: description
+Home-page: https://github.com/Jie-Yuan/tql-CLI
+Author: JieYuan
+Author-email: 313303303@qq.com
+Maintainer: JieYuan
+Maintainer-email: 313303303@qq.com
+License: MIT
+Keywords: tool wheel,yuanjie,utils
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: fire
+Requires-Dist: yagmail[all]
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
