@@ -1,0 +1,3 @@
+[sentry.plugins]
+message = message.plugin:MessagePlugin
+

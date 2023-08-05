@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: sentry-message-plugin
+Version: 2.3
+Summary: A Sentry extension which send errors stats.
+Home-page: https://github.com/a847621843/sentry-message-plugin
+Author: zhen.huang
+Author-email: huangzhen@xinchanedu.com
+License: MIT
+Keywords: sentry message plugin
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: sentry (>=9.0.0)
+Requires-Dist: requests
+Requires-Dist: pytz
+Requires-Dist: django
+
+# Sentry-Message-Plugin
+
+> Sentry报警插件
+
+## 安装
+
+`pip install sentry-message-plugin`
+
+
