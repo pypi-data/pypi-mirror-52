@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+omega_coding/__init__.py
+omega_coding/__version__.py
+omega_coding/omega_coding.py
+omega_coding.egg-info/PKG-INFO
+omega_coding.egg-info/SOURCES.txt
+omega_coding.egg-info/dependency_links.txt
+omega_coding.egg-info/requires.txt
+omega_coding.egg-info/top_level.txt
