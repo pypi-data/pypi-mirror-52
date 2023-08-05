@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: motorframework
+Version: 0.1.15
+Summary: Robot Framework Library
+Home-page: https://github.com/super-mario-x/motorframework
+Author: super-mario-x
+Author-email: xmario@hotmail.com
+License: MIT
+Download-URL: https://github.com/super-mario-x/motorframework/archive/v0.1.15.tar.gz
+Description: UNKNOWN
+Keywords: motor,motorframework,soap,rest,selenium
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
