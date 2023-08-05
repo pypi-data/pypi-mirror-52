@@ -1,0 +1,9 @@
+certifi
+flask
+presalytics_doc_converter
+presalytics_ooxml_automation
+python-dateutil
+python-keycloak
+requests
+six>=1.10
+urllib3>=1.15
