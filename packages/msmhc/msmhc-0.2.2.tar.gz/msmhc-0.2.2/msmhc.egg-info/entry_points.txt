@@ -1,0 +1,4 @@
+[console_scripts]
+msmhc-fdr = msmhc.fdr_cli:run
+msmhc-generate = msmhc.generate_cli:run
+

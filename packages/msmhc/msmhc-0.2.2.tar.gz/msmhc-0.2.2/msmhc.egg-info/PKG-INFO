@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: msmhc
+Version: 0.2.2
+Summary: Looking for dark matter of the MHC ligandome in mass spectra
+Home-page: https://github.com/iskandr/msmhc
+Author: Alex Rubinsteyn
+Author-email: alex.rubinsteyn@gmail.com
+License: http://www.apache.org/licenses/LICENSE-2.0.html
+Description: # msmhc
+        Looking for "dark matter" of the MHC ligandome in mass specta
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
