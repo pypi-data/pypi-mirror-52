@@ -1,0 +1,8 @@
+setup.py
+preserves/__init__.py
+preserves/preserves.py
+preserves/test_preserves.py
+preserves.egg-info/PKG-INFO
+preserves.egg-info/SOURCES.txt
+preserves.egg-info/dependency_links.txt
+preserves.egg-info/top_level.txt
