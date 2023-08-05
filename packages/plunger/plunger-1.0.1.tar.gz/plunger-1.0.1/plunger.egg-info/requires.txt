@@ -1,0 +1,10 @@
+sentry-sdk
+requests
+pyjwt
+cryptography
+texttable
+
+[test]
+pytest
+pytest-cov
+responses

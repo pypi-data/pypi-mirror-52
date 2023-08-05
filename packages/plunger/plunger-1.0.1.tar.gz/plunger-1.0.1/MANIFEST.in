@@ -1,0 +1,9 @@
+graft plunger
+graft tests
+include *.py
+include *.txt
+include *.rst
+include *.md
+include *.yml
+include Makefile
+global-exclude *.pyc *.swp
