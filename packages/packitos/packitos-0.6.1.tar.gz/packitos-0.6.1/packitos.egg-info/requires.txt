@@ -1,0 +1,17 @@
+GitPython
+PyGithub
+click
+PyYAML
+jsonschema
+ogr>=0.6.0
+rebasehelper
+munch
+tabulate
+packaging
+requests
+copr
+python-gnupg
+cccolutils
+
+[testing]
+pytest
