@@ -1,0 +1,5 @@
+pandas>=0.21
+numpy
+scipy
+cython
+hpfrec>=0.2.2.11
