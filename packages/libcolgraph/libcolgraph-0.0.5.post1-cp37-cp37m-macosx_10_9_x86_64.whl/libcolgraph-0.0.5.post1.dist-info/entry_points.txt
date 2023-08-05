@@ -1,0 +1,4 @@
+[console_scripts]
+colgraphplot = libcolgraph.__main__:plotfromfile
+colgraphweb = libcolgraph.colgraphweb.__main__:main
+
