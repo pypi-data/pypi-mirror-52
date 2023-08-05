@@ -1,0 +1,460 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{angle()}\spxextra{microstructpy.geometry.Rectangle property}, \hyperpage{117}
+  \item \spxentry{angle()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{angle\_deg()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{111}
+  \item \spxentry{angle\_deg()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{angle\_deg()}\spxextra{microstructpy.geometry.Rectangle property}, 
+		\hyperpage{117}
+  \item \spxentry{angle\_deg()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{angle\_rad()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{111}
+  \item \spxentry{angle\_rad()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{angle\_rad()}\spxextra{microstructpy.geometry.Rectangle property}, 
+		\hyperpage{117}
+  \item \spxentry{angle\_rad()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{append()}\spxextra{microstructpy.seeding.SeedList method}, \hyperpage{146}
+  \item \spxentry{append()}\spxextra{microstructpy.seeding.seedlist.SeedList method}, 
+		\hyperpage{150}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.Ellipse method}, \hyperpage{109}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.ellipse.Ellipse method}, 
+		\hyperpage{121}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.Ellipsoid method}, \hyperpage{113}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid method}, 
+		\hyperpage{125}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.n\_sphere.NSphere method}, 
+		\hyperpage{129}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.Rectangle method}, \hyperpage{116}
+  \item \spxentry{approximate()}\spxextra{microstructpy.geometry.rectangle.Rectangle method}, 
+		\hyperpage{131}
+  \item \spxentry{area()}\spxextra{microstructpy.geometry.Circle property}, \hyperpage{109}
+  \item \spxentry{area()}\spxextra{microstructpy.geometry.circle.Circle property}, \hyperpage{120}
+  \item \spxentry{area()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{111}
+  \item \spxentry{area()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{area()}\spxextra{microstructpy.geometry.Rectangle property}, \hyperpage{117}
+  \item \spxentry{area()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.Circle class method}, 
+		\hyperpage{108}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.circle.Circle class method}, 
+		\hyperpage{120}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.Ellipse class method}, 
+		\hyperpage{110}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.ellipse.Ellipse class method}, 
+		\hyperpage{121}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.Rectangle class method}, 
+		\hyperpage{116}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.rectangle.Rectangle class method}, 
+		\hyperpage{131}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.rectangle.Square class method}, 
+		\hyperpage{132}
+  \item \spxentry{area\_expectation()}\spxextra{microstructpy.geometry.Square class method}, 
+		\hyperpage{117}
+  \item \spxentry{aspect\_ratio()}\spxextra{microstructpy.geometry.Ellipse property}, 
+		\hyperpage{111}
+  \item \spxentry{aspect\_ratio()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{axes()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{111}
+  \item \spxentry{axes()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{axes()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{114}
+  \item \spxentry{axes()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{126}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.Ellipse method}, \hyperpage{110}
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.ellipse.Ellipse method}, 
+		\hyperpage{122}
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.Ellipsoid method}, \hyperpage{113}
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid method}, 
+		\hyperpage{125}
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.n\_sphere.NSphere class method}, 
+		\hyperpage{129}
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.Rectangle method}, \hyperpage{116}
+  \item \spxentry{best\_fit()}\spxextra{microstructpy.geometry.rectangle.Rectangle method}, 
+		\hyperpage{131}
+  \item \spxentry{bound\_max()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{111}
+  \item \spxentry{bound\_max()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{bound\_max()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{114}
+  \item \spxentry{bound\_max()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{126}
+  \item \spxentry{bound\_max()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{130}
+  \item \spxentry{bound\_min()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{111}
+  \item \spxentry{bound\_min()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{bound\_min()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{115}
+  \item \spxentry{bound\_min()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{126}
+  \item \spxentry{bound\_min()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{130}
+  \item \spxentry{bounds()}\spxextra{microstructpy.geometry.n\_box.NBox property}, \hyperpage{128}
+  \item \spxentry{Box}\spxextra{class in microstructpy.geometry}, \hyperpage{107}
+  \item \spxentry{Box}\spxextra{class in microstructpy.geometry.box}, \hyperpage{118}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{Circle}\spxextra{class in microstructpy.geometry}, \hyperpage{108}
+  \item \spxentry{Circle}\spxextra{class in microstructpy.geometry.circle}, \hyperpage{119}
+  \item \spxentry{coefficients()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{115}
+  \item \spxentry{coefficients()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{126}
+  \item \spxentry{corner()}\spxextra{microstructpy.geometry.n\_box.NBox property}, \hyperpage{129}
+  \item \spxentry{Cube}\spxextra{class in microstructpy.geometry}, \hyperpage{107}
+  \item \spxentry{Cube}\spxextra{class in microstructpy.geometry.box}, \hyperpage{119}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{d()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, \hyperpage{130}
+  \item \spxentry{diameter()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{130}
+  \item \spxentry{dict\_convert()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{Ellipse}\spxextra{class in microstructpy.geometry}, \hyperpage{109}
+  \item \spxentry{Ellipse}\spxextra{class in microstructpy.geometry.ellipse}, \hyperpage{121}
+  \item \spxentry{Ellipsoid}\spxextra{class in microstructpy.geometry}, \hyperpage{112}
+  \item \spxentry{Ellipsoid}\spxextra{class in microstructpy.geometry.ellipsoid}, \hyperpage{124}
+  \item \spxentry{error\_stats()}\spxextra{in module microstructpy.verification}, \hyperpage{156}
+  \item \spxentry{extend()}\spxextra{microstructpy.seeding.SeedList method}, \hyperpage{146}
+  \item \spxentry{extend()}\spxextra{microstructpy.seeding.seedlist.SeedList method}, 
+		\hyperpage{150}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{factory()}\spxextra{microstructpy.seeding.Seed class method}, \hyperpage{144}
+  \item \spxentry{factory()}\spxextra{microstructpy.seeding.seed.Seed class method}, 
+		\hyperpage{149}
+  \item \spxentry{from\_file()}\spxextra{microstructpy.meshing.PolyMesh class method}, 
+		\hyperpage{134}
+  \item \spxentry{from\_file()}\spxextra{microstructpy.meshing.polymesh.PolyMesh class method}, 
+		\hyperpage{139}
+  \item \spxentry{from\_file()}\spxextra{microstructpy.meshing.TriMesh class method}, 
+		\hyperpage{137}
+  \item \spxentry{from\_file()}\spxextra{microstructpy.meshing.trimesh.TriMesh class method}, 
+		\hyperpage{142}
+  \item \spxentry{from\_file()}\spxextra{microstructpy.seeding.SeedList class method}, 
+		\hyperpage{146}
+  \item \spxentry{from\_file()}\spxextra{microstructpy.seeding.seedlist.SeedList class method}, 
+		\hyperpage{151}
+  \item \spxentry{from\_info()}\spxextra{microstructpy.seeding.SeedList class method}, 
+		\hyperpage{146}
+  \item \spxentry{from\_info()}\spxextra{microstructpy.seeding.seedlist.SeedList class method}, 
+		\hyperpage{151}
+  \item \spxentry{from\_polymesh()}\spxextra{microstructpy.meshing.TriMesh class method}, 
+		\hyperpage{137}
+  \item \spxentry{from\_polymesh()}\spxextra{microstructpy.meshing.trimesh.TriMesh class method}, 
+		\hyperpage{142}
+  \item \spxentry{from\_seeds()}\spxextra{microstructpy.meshing.PolyMesh class method}, 
+		\hyperpage{134}
+  \item \spxentry{from\_seeds()}\spxextra{microstructpy.meshing.polymesh.PolyMesh class method}, 
+		\hyperpage{139}
+  \item \spxentry{from\_str()}\spxextra{microstructpy.seeding.Seed class method}, \hyperpage{145}
+  \item \spxentry{from\_str()}\spxextra{microstructpy.seeding.seed.Seed class method}, 
+		\hyperpage{149}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{length()}\spxextra{microstructpy.geometry.Rectangle property}, \hyperpage{117}
+  \item \spxentry{length()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{limits()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{112}
+  \item \spxentry{limits()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{limits()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{limits()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{limits()}\spxextra{microstructpy.geometry.n\_box.NBox property}, \hyperpage{129}
+  \item \spxentry{limits()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{130}
+  \item \spxentry{limits()}\spxextra{microstructpy.seeding.Seed property}, \hyperpage{145}
+  \item \spxentry{limits()}\spxextra{microstructpy.seeding.seed.Seed property}, \hyperpage{150}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{main()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+  \item \spxentry{matrix()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{112}
+  \item \spxentry{matrix()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{123}
+  \item \spxentry{matrix()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{matrix()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{matrix\_quadeq()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{115}
+  \item \spxentry{matrix\_quadeq()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{matrix\_quadform()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{115}
+  \item \spxentry{matrix\_quadform()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{microstructpy}\spxextra{module}, \hyperpage{107}
+  \item \spxentry{microstructpy.cli}\spxextra{module}, \hyperpage{153}
+  \item \spxentry{microstructpy.geometry}\spxextra{module}, \hyperpage{107}
+  \item \spxentry{microstructpy.geometry.box}\spxextra{module}, \hyperpage{118}
+  \item \spxentry{microstructpy.geometry.circle}\spxextra{module}, \hyperpage{119}
+  \item \spxentry{microstructpy.geometry.ellipse}\spxextra{module}, \hyperpage{121}
+  \item \spxentry{microstructpy.geometry.ellipsoid}\spxextra{module}, \hyperpage{124}
+  \item \spxentry{microstructpy.geometry.n\_box}\spxextra{module}, \hyperpage{128}
+  \item \spxentry{microstructpy.geometry.n\_sphere}\spxextra{module}, \hyperpage{129}
+  \item \spxentry{microstructpy.geometry.rectangle}\spxextra{module}, \hyperpage{131}
+  \item \spxentry{microstructpy.geometry.sphere}\spxextra{module}, \hyperpage{132}
+  \item \spxentry{microstructpy.meshing}\spxextra{module}, \hyperpage{133}
+  \item \spxentry{microstructpy.meshing.polymesh}\spxextra{module}, \hyperpage{139}
+  \item \spxentry{microstructpy.meshing.trimesh}\spxextra{module}, \hyperpage{142}
+  \item \spxentry{microstructpy.seeding}\spxextra{module}, \hyperpage{144}
+  \item \spxentry{microstructpy.seeding.seed}\spxextra{module}, \hyperpage{148}
+  \item \spxentry{microstructpy.seeding.seedlist}\spxextra{module}, \hyperpage{150}
+  \item \spxentry{microstructpy.verification}\spxextra{module}, \hyperpage{156}
+  \item \spxentry{mle\_phases()}\spxextra{in module microstructpy.verification}, \hyperpage{156}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.Box property}, \hyperpage{107}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.box.Box property}, \hyperpage{119}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.Circle property}, \hyperpage{109}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.circle.Circle property}, 
+		\hyperpage{120}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{112}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{124}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.Rectangle property}, \hyperpage{117}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.Sphere property}, \hyperpage{118}
+  \item \spxentry{n\_dim()}\spxextra{microstructpy.geometry.sphere.Sphere property}, 
+		\hyperpage{133}
+  \item \spxentry{n\_vol()}\spxextra{microstructpy.geometry.n\_box.NBox property}, \hyperpage{129}
+  \item \spxentry{NBox}\spxextra{class in microstructpy.geometry.n\_box}, \hyperpage{128}
+  \item \spxentry{NSphere}\spxextra{class in microstructpy.geometry.n\_sphere}, \hyperpage{129}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{orientation()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{112}
+  \item \spxentry{orientation()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{124}
+  \item \spxentry{orientation()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{115}
+  \item \spxentry{orientation()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.Box method}, \hyperpage{107}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.box.Box method}, \hyperpage{119}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.Circle method}, \hyperpage{108}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.circle.Circle method}, \hyperpage{120}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.Ellipse method}, \hyperpage{111}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.ellipse.Ellipse method}, \hyperpage{122}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.Ellipsoid method}, \hyperpage{113}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid method}, 
+		\hyperpage{125}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.Rectangle method}, \hyperpage{117}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.rectangle.Rectangle method}, 
+		\hyperpage{131}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.Sphere method}, \hyperpage{118}
+  \item \spxentry{plot()}\spxextra{microstructpy.geometry.sphere.Sphere method}, \hyperpage{133}
+  \item \spxentry{plot()}\spxextra{microstructpy.meshing.PolyMesh method}, \hyperpage{135}
+  \item \spxentry{plot()}\spxextra{microstructpy.meshing.polymesh.PolyMesh method}, \hyperpage{140}
+  \item \spxentry{plot()}\spxextra{microstructpy.meshing.TriMesh method}, \hyperpage{138}
+  \item \spxentry{plot()}\spxextra{microstructpy.meshing.trimesh.TriMesh method}, \hyperpage{143}
+  \item \spxentry{plot()}\spxextra{microstructpy.seeding.Seed method}, \hyperpage{145}
+  \item \spxentry{plot()}\spxextra{microstructpy.seeding.seed.Seed method}, \hyperpage{150}
+  \item \spxentry{plot()}\spxextra{microstructpy.seeding.SeedList method}, \hyperpage{147}
+  \item \spxentry{plot()}\spxextra{microstructpy.seeding.seedlist.SeedList method}, \hyperpage{151}
+  \item \spxentry{plot\_breakdown()}\spxextra{microstructpy.seeding.Seed method}, \hyperpage{145}
+  \item \spxentry{plot\_breakdown()}\spxextra{microstructpy.seeding.seed.Seed method}, 
+		\hyperpage{150}
+  \item \spxentry{plot\_breakdown()}\spxextra{microstructpy.seeding.SeedList method}, 
+		\hyperpage{147}
+  \item \spxentry{plot\_breakdown()}\spxextra{microstructpy.seeding.seedlist.SeedList method}, 
+		\hyperpage{151}
+  \item \spxentry{plot\_distributions()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{157}
+  \item \spxentry{plot\_facets()}\spxextra{microstructpy.meshing.PolyMesh method}, \hyperpage{135}
+  \item \spxentry{plot\_facets()}\spxextra{microstructpy.meshing.polymesh.PolyMesh method}, 
+		\hyperpage{140}
+  \item \spxentry{plot\_poly()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+  \item \spxentry{plot\_seeds()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+  \item \spxentry{plot\_tri()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+  \item \spxentry{plot\_volume\_fractions()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{157}
+  \item \spxentry{PolyMesh}\spxextra{class in microstructpy.meshing}, \hyperpage{133}
+  \item \spxentry{PolyMesh}\spxextra{class in microstructpy.meshing.polymesh}, \hyperpage{139}
+  \item \spxentry{position()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{130}
+  \item \spxentry{position()}\spxextra{microstructpy.seeding.Seed property}, \hyperpage{145}
+  \item \spxentry{position()}\spxextra{microstructpy.seeding.seed.Seed property}, \hyperpage{150}
+  \item \spxentry{position()}\spxextra{microstructpy.seeding.SeedList method}, \hyperpage{147}
+  \item \spxentry{position()}\spxextra{microstructpy.seeding.seedlist.SeedList method}, 
+		\hyperpage{152}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{radius()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{130}
+  \item \spxentry{ratio\_ab()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{ratio\_ab()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{ratio\_ac()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{ratio\_ac()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{ratio\_ba()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{ratio\_ba()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{ratio\_bc()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{ratio\_bc()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{ratio\_ca()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{ratio\_ca()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{ratio\_cb()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{115}
+  \item \spxentry{ratio\_cb()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{read\_input()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+  \item \spxentry{Rectangle}\spxextra{class in microstructpy.geometry}, \hyperpage{116}
+  \item \spxentry{Rectangle}\spxextra{class in microstructpy.geometry.rectangle}, \hyperpage{131}
+  \item \spxentry{reflect()}\spxextra{microstructpy.geometry.Ellipse method}, \hyperpage{111}
+  \item \spxentry{reflect()}\spxextra{microstructpy.geometry.ellipse.Ellipse method}, 
+		\hyperpage{122}
+  \item \spxentry{reflect()}\spxextra{microstructpy.geometry.Ellipsoid method}, \hyperpage{113}
+  \item \spxentry{reflect()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid method}, 
+		\hyperpage{125}
+  \item \spxentry{reflect()}\spxextra{microstructpy.geometry.n\_sphere.NSphere method}, 
+		\hyperpage{130}
+  \item \spxentry{rot\_seq\_deg()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{116}
+  \item \spxentry{rot\_seq\_deg()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{127}
+  \item \spxentry{rot\_seq\_rad()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{116}
+  \item \spxentry{rot\_seq\_rad()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{128}
+  \item \spxentry{run()}\spxextra{in module microstructpy.cli}, \hyperpage{153}
+  \item \spxentry{run\_file()}\spxextra{in module microstructpy.cli}, \hyperpage{156}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{sample\_limits()}\spxextra{microstructpy.geometry.Ellipse property}, 
+		\hyperpage{112}
+  \item \spxentry{sample\_limits()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{124}
+  \item \spxentry{sample\_limits()}\spxextra{microstructpy.geometry.Ellipsoid property}, 
+		\hyperpage{116}
+  \item \spxentry{sample\_limits()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{128}
+  \item \spxentry{sample\_limits()}\spxextra{microstructpy.geometry.n\_box.NBox property}, 
+		\hyperpage{129}
+  \item \spxentry{sample\_limits()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{131}
+  \item \spxentry{Seed}\spxextra{class in microstructpy.seeding}, \hyperpage{144}
+  \item \spxentry{Seed}\spxextra{class in microstructpy.seeding.seed}, \hyperpage{148}
+  \item \spxentry{SeedList}\spxextra{class in microstructpy.seeding}, \hyperpage{146}
+  \item \spxentry{SeedList}\spxextra{class in microstructpy.seeding.seedlist}, \hyperpage{150}
+  \item \spxentry{seeds\_of\_best\_fit()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{157}
+  \item \spxentry{side\_length()}\spxextra{microstructpy.geometry.box.Cube property}, 
+		\hyperpage{119}
+  \item \spxentry{side\_length()}\spxextra{microstructpy.geometry.Cube property}, \hyperpage{108}
+  \item \spxentry{side\_length()}\spxextra{microstructpy.geometry.rectangle.Square property}, 
+		\hyperpage{132}
+  \item \spxentry{side\_length()}\spxextra{microstructpy.geometry.Square property}, \hyperpage{117}
+  \item \spxentry{size()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{112}
+  \item \spxentry{size()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{124}
+  \item \spxentry{size()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{116}
+  \item \spxentry{size()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{128}
+  \item \spxentry{size()}\spxextra{microstructpy.geometry.n\_sphere.NSphere property}, 
+		\hyperpage{131}
+  \item \spxentry{Sphere}\spxextra{class in microstructpy.geometry}, \hyperpage{117}
+  \item \spxentry{Sphere}\spxextra{class in microstructpy.geometry.sphere}, \hyperpage{132}
+  \item \spxentry{Square}\spxextra{class in microstructpy.geometry}, \hyperpage{117}
+  \item \spxentry{Square}\spxextra{class in microstructpy.geometry.rectangle}, \hyperpage{132}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{TriMesh}\spxextra{class in microstructpy.meshing}, \hyperpage{136}
+  \item \spxentry{TriMesh}\spxextra{class in microstructpy.meshing.trimesh}, \hyperpage{142}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{unpositioned\_seeds()}\spxextra{in module microstructpy.cli}, \hyperpage{156}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.Box property}, \hyperpage{107}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.box.Box property}, \hyperpage{119}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.Circle property}, \hyperpage{109}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.circle.Circle property}, 
+		\hyperpage{120}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.Ellipse property}, \hyperpage{112}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.ellipse.Ellipse property}, 
+		\hyperpage{124}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.Ellipsoid property}, \hyperpage{116}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid property}, 
+		\hyperpage{128}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.Sphere property}, \hyperpage{118}
+  \item \spxentry{volume()}\spxextra{microstructpy.geometry.sphere.Sphere property}, 
+		\hyperpage{133}
+  \item \spxentry{volume()}\spxextra{microstructpy.seeding.Seed property}, \hyperpage{146}
+  \item \spxentry{volume()}\spxextra{microstructpy.seeding.seed.Seed property}, \hyperpage{150}
+  \item \spxentry{volume\_expectation()}\spxextra{microstructpy.geometry.Ellipsoid class method}, 
+		\hyperpage{114}
+  \item \spxentry{volume\_expectation()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid class method}, 
+		\hyperpage{125}
+  \item \spxentry{volume\_expectation()}\spxextra{microstructpy.geometry.Sphere class method}, 
+		\hyperpage{118}
+  \item \spxentry{volume\_expectation()}\spxextra{microstructpy.geometry.sphere.Sphere class method}, 
+		\hyperpage{133}
+  \item \spxentry{volume\_fractions()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{157}
+
+  \indexspace
+  \bigletter W
+  \item \spxentry{width()}\spxextra{microstructpy.geometry.Rectangle property}, \hyperpage{117}
+  \item \spxentry{width()}\spxextra{microstructpy.geometry.rectangle.Rectangle property}, 
+		\hyperpage{132}
+  \item \spxentry{within()}\spxextra{microstructpy.geometry.Ellipse method}, \hyperpage{111}
+  \item \spxentry{within()}\spxextra{microstructpy.geometry.ellipse.Ellipse method}, 
+		\hyperpage{123}
+  \item \spxentry{within()}\spxextra{microstructpy.geometry.Ellipsoid method}, \hyperpage{114}
+  \item \spxentry{within()}\spxextra{microstructpy.geometry.ellipsoid.Ellipsoid method}, 
+		\hyperpage{126}
+  \item \spxentry{within()}\spxextra{microstructpy.geometry.n\_box.NBox method}, \hyperpage{128}
+  \item \spxentry{within()}\spxextra{microstructpy.geometry.n\_sphere.NSphere method}, 
+		\hyperpage{130}
+  \item \spxentry{write()}\spxextra{microstructpy.meshing.PolyMesh method}, \hyperpage{135}
+  \item \spxentry{write()}\spxextra{microstructpy.meshing.polymesh.PolyMesh method}, 
+		\hyperpage{140}
+  \item \spxentry{write()}\spxextra{microstructpy.meshing.TriMesh method}, \hyperpage{138}
+  \item \spxentry{write()}\spxextra{microstructpy.meshing.trimesh.TriMesh method}, \hyperpage{143}
+  \item \spxentry{write()}\spxextra{microstructpy.seeding.SeedList method}, \hyperpage{148}
+  \item \spxentry{write()}\spxextra{microstructpy.seeding.seedlist.SeedList method}, 
+		\hyperpage{153}
+  \item \spxentry{write\_error\_stats()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{158}
+  \item \spxentry{write\_mle\_phases()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{158}
+  \item \spxentry{write\_volume\_fractions()}\spxextra{in module microstructpy.verification}, 
+		\hyperpage{158}
+
+\end{sphinxtheindex}

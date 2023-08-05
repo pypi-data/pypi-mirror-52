@@ -1,0 +1,228 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Welcome}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Quick Start}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}License and Attribution}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Getting Started}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Download \& Installation}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}From Source}{5}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Running Demonstrations}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Using the Python Package}{6}{section.2.3}
+\contentsline {chapter}{\numberline {3}Examples}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Input File Introduction}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Basic Example}{9}{subsection.3.1.1}
+\contentsline {subsubsection}{XML Input File}{9}{subsubsection*.3}
+\contentsline {paragraph}{Material 1 - Matrix}{10}{paragraph*.4}
+\contentsline {paragraph}{Material 2 - Inclusions}{10}{paragraph*.5}
+\contentsline {paragraph}{Domain Geometry}{10}{paragraph*.6}
+\contentsline {paragraph}{Settings}{11}{paragraph*.7}
+\contentsline {subsubsection}{Output Files}{11}{subsubsection*.8}
+\contentsline {paragraph}{Seeding Plot}{11}{paragraph*.9}
+\contentsline {paragraph}{Polygon Mesh Plot}{12}{paragraph*.10}
+\contentsline {paragraph}{Triangular Mesh Plot}{13}{paragraph*.11}
+\contentsline {subsection}{\numberline {3.1.2}Quality Controls}{13}{subsection.3.1.2}
+\contentsline {subsubsection}{XML Input File}{13}{subsubsection*.12}
+\contentsline {paragraph}{Material 1 - Matrix}{14}{paragraph*.13}
+\contentsline {paragraph}{Material 2 - Inclusions}{14}{paragraph*.14}
+\contentsline {paragraph}{Domain Geometry}{15}{paragraph*.15}
+\contentsline {paragraph}{Settings}{15}{paragraph*.16}
+\contentsline {subsubsection}{Output Files}{15}{subsubsection*.17}
+\contentsline {paragraph}{Seeding Plot}{16}{paragraph*.18}
+\contentsline {paragraph}{Polygon Mesh Plot}{17}{paragraph*.19}
+\contentsline {paragraph}{Triangular Mesh Plot}{18}{paragraph*.20}
+\contentsline {subsection}{\numberline {3.1.3}Size \& Shape}{18}{subsection.3.1.3}
+\contentsline {subsubsection}{XML Input File}{18}{subsubsection*.21}
+\contentsline {paragraph}{Material 1 - Matrix}{19}{paragraph*.22}
+\contentsline {paragraph}{Material 2 - Inclusions}{20}{paragraph*.23}
+\contentsline {paragraph}{Domain Geometry}{20}{paragraph*.24}
+\contentsline {paragraph}{Settings}{20}{paragraph*.25}
+\contentsline {subsubsection}{Output Files}{21}{subsubsection*.26}
+\contentsline {paragraph}{Seeding Plot}{21}{paragraph*.27}
+\contentsline {paragraph}{Polygon Mesh Plot}{22}{paragraph*.28}
+\contentsline {paragraph}{Triangular Mesh Plot}{23}{paragraph*.29}
+\contentsline {subsection}{\numberline {3.1.4}Oriented Grains and Amorphous Phases}{23}{subsection.3.1.4}
+\contentsline {subsubsection}{XML Input File}{23}{subsubsection*.30}
+\contentsline {paragraph}{Material 1 - Matrix}{24}{paragraph*.31}
+\contentsline {paragraph}{Material 2 - Inclusions}{25}{paragraph*.32}
+\contentsline {paragraph}{Domain Geometry}{25}{paragraph*.33}
+\contentsline {paragraph}{Settings}{25}{paragraph*.34}
+\contentsline {subsubsection}{Output Files}{26}{subsubsection*.35}
+\contentsline {paragraph}{Seeding Plot}{26}{paragraph*.36}
+\contentsline {paragraph}{Polygon Mesh Plot}{27}{paragraph*.37}
+\contentsline {paragraph}{Triangular Mesh Plot}{28}{paragraph*.38}
+\contentsline {subsection}{\numberline {3.1.5}Plot Controls}{28}{subsection.3.1.5}
+\contentsline {subsubsection}{XML Input File}{28}{subsubsection*.39}
+\contentsline {paragraph}{Material 1 - Matrix}{29}{paragraph*.40}
+\contentsline {paragraph}{Material 2 - Inclusions}{30}{paragraph*.41}
+\contentsline {paragraph}{Domain Geometry}{30}{paragraph*.42}
+\contentsline {paragraph}{Settings}{30}{paragraph*.43}
+\contentsline {subsubsection}{Output Files}{31}{subsubsection*.44}
+\contentsline {paragraph}{Seeding Plot}{32}{paragraph*.45}
+\contentsline {paragraph}{Polygon Mesh Plot}{32}{paragraph*.46}
+\contentsline {paragraph}{Triangular Mesh Plot}{33}{paragraph*.47}
+\contentsline {subsection}{\numberline {3.1.6}Culmination}{33}{subsection.3.1.6}
+\contentsline {subsubsection}{XML Input File}{33}{subsubsection*.48}
+\contentsline {paragraph}{Material 1 - Matrix}{35}{paragraph*.49}
+\contentsline {paragraph}{Material 2 - Inclusions}{35}{paragraph*.50}
+\contentsline {paragraph}{Domain Geometry}{36}{paragraph*.51}
+\contentsline {paragraph}{Settings}{36}{paragraph*.52}
+\contentsline {subsubsection}{Output Files}{36}{subsubsection*.53}
+\contentsline {paragraph}{Seeding Plot}{37}{paragraph*.54}
+\contentsline {paragraph}{Polygon Mesh Plot}{37}{paragraph*.55}
+\contentsline {paragraph}{Triangular Mesh Plot}{38}{paragraph*.56}
+\contentsline {section}{\numberline {3.2}Examples Using the CLI}{41}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Elliptical Grains}{41}{subsection.3.2.1}
+\contentsline {subsubsection}{XML Input File}{41}{subsubsection*.57}
+\contentsline {paragraph}{Material 1 - Ellipses}{42}{paragraph*.58}
+\contentsline {paragraph}{Material 2 - Circles}{43}{paragraph*.59}
+\contentsline {paragraph}{Domain Geometry}{43}{paragraph*.60}
+\contentsline {paragraph}{Settings}{43}{paragraph*.61}
+\contentsline {subsubsection}{Output Files}{44}{subsubsection*.62}
+\contentsline {paragraph}{Seeding Plot}{44}{paragraph*.63}
+\contentsline {paragraph}{Polygon Mesh Plot}{45}{paragraph*.64}
+\contentsline {paragraph}{Triangular Mesh Plot}{45}{paragraph*.65}
+\contentsline {subsection}{\numberline {3.2.2}Minimal Example}{46}{subsection.3.2.2}
+\contentsline {subsubsection}{XML Input File}{46}{subsubsection*.66}
+\contentsline {paragraph}{Material 1}{46}{paragraph*.67}
+\contentsline {paragraph}{Domain Geometry}{46}{paragraph*.68}
+\contentsline {paragraph}{Settings}{47}{paragraph*.69}
+\contentsline {subsubsection}{Output Files}{47}{subsubsection*.70}
+\contentsline {paragraph}{Seeding Plot}{47}{paragraph*.71}
+\contentsline {paragraph}{Polygon Mesh Plot}{48}{paragraph*.72}
+\contentsline {paragraph}{Triangular Mesh Plot}{48}{paragraph*.73}
+\contentsline {subsection}{\numberline {3.2.3}Picritic Basalt}{49}{subsection.3.2.3}
+\contentsline {subsubsection}{XML Input File}{49}{subsubsection*.74}
+\contentsline {paragraph}{Material 1 - Plagioclase}{52}{paragraph*.75}
+\contentsline {paragraph}{Material 2 - Olivine}{52}{paragraph*.76}
+\contentsline {paragraph}{Materials 3-8}{52}{paragraph*.77}
+\contentsline {paragraph}{Domain Geometry}{54}{paragraph*.78}
+\contentsline {paragraph}{Settings}{54}{paragraph*.79}
+\contentsline {subsubsection}{Output Files}{55}{subsubsection*.80}
+\contentsline {paragraph}{Seeding Plot}{55}{paragraph*.81}
+\contentsline {paragraph}{Polygon Mesh Plot}{56}{paragraph*.82}
+\contentsline {paragraph}{Triangular Mesh Plot}{56}{paragraph*.83}
+\contentsline {paragraph}{Crystal Size Distribution Comparison Plot}{57}{paragraph*.84}
+\contentsline {subsection}{\numberline {3.2.4}Two Phase 3D Example}{57}{subsection.3.2.4}
+\contentsline {subsubsection}{XML Input File}{57}{subsubsection*.85}
+\contentsline {paragraph}{Material 1}{58}{paragraph*.86}
+\contentsline {paragraph}{Material 2}{59}{paragraph*.87}
+\contentsline {paragraph}{Domain Geometry}{59}{paragraph*.88}
+\contentsline {paragraph}{Settings}{59}{paragraph*.89}
+\contentsline {subsubsection}{Output Files}{60}{subsubsection*.90}
+\contentsline {paragraph}{Seeding Plot}{60}{paragraph*.91}
+\contentsline {paragraph}{Polygon Mesh Plot}{61}{paragraph*.92}
+\contentsline {paragraph}{Triangular Mesh Plot}{61}{paragraph*.93}
+\contentsline {section}{\numberline {3.3}Examples Using the Python Package}{64}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Standard Voronoi Diagram}{64}{subsection.3.3.1}
+\contentsline {subsubsection}{Python Script}{64}{subsubsection*.94}
+\contentsline {paragraph}{Domain}{65}{paragraph*.95}
+\contentsline {paragraph}{Seeds}{65}{paragraph*.96}
+\contentsline {paragraph}{Polygon Mesh}{65}{paragraph*.97}
+\contentsline {subsubsection}{Output File}{65}{subsubsection*.98}
+\contentsline {subsection}{\numberline {3.3.2}Uniform Seeding Voronoi Diagram}{66}{subsection.3.3.2}
+\contentsline {subsubsection}{Python Script}{66}{subsubsection*.99}
+\contentsline {paragraph}{Domain}{68}{paragraph*.100}
+\contentsline {paragraph}{Seeds}{68}{paragraph*.101}
+\contentsline {paragraph}{Polygon Mesh}{68}{paragraph*.102}
+\contentsline {paragraph}{Plotting}{68}{paragraph*.103}
+\contentsline {subsubsection}{Output File}{68}{subsubsection*.104}
+\contentsline {subsection}{\numberline {3.3.3}Grain Neighborhoods}{69}{subsection.3.3.3}
+\contentsline {subsubsection}{Python Script}{69}{subsubsection*.105}
+\contentsline {paragraph}{Domain}{71}{paragraph*.106}
+\contentsline {paragraph}{Phases}{71}{paragraph*.107}
+\contentsline {paragraph}{Seeds}{71}{paragraph*.108}
+\contentsline {paragraph}{Neighborhood Replacement}{71}{paragraph*.109}
+\contentsline {paragraph}{Polygon and Triangle Meshing}{71}{paragraph*.110}
+\contentsline {paragraph}{Plotting}{72}{paragraph*.111}
+\contentsline {subsubsection}{Output File}{72}{subsubsection*.112}
+\contentsline {subsection}{\numberline {3.3.4}Microstructure from Image}{72}{subsection.3.3.4}
+\contentsline {subsubsection}{Python Script}{72}{subsubsection*.113}
+\contentsline {paragraph}{Read Image}{75}{paragraph*.114}
+\contentsline {paragraph}{Bin Pixels}{75}{paragraph*.115}
+\contentsline {paragraph}{Phases}{76}{paragraph*.116}
+\contentsline {paragraph}{Create the Polygon Mesh}{76}{paragraph*.117}
+\contentsline {paragraph}{Create the Triangle Mesh}{76}{paragraph*.118}
+\contentsline {paragraph}{Plot Triangle Mesh}{76}{paragraph*.119}
+\contentsline {paragraph}{Save Plot and Copy Input File}{76}{paragraph*.120}
+\contentsline {subsubsection}{Output File}{76}{subsubsection*.121}
+\contentsline {chapter}{\numberline {4}Command Line Guide}{81}{chapter.4}
+\contentsline {section}{\numberline {4.1}Basics}{81}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Command Line Procedure}{81}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Minimal Input File}{82}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Material Phases}{82}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Multiple Materials}{82}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Grain Size Distributions}{83}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Grain Geometries}{84}{subsection.4.2.3}
+\contentsline {subsubsection}{Circle}{85}{subsubsection*.122}
+\contentsline {subsubsection}{Ellipse}{85}{subsubsection*.123}
+\contentsline {subsubsection}{Ellipsoid}{85}{subsubsection*.124}
+\contentsline {subsubsection}{Rectangle}{86}{subsubsection*.125}
+\contentsline {subsubsection}{Sphere}{86}{subsubsection*.126}
+\contentsline {subsubsection}{Square}{86}{subsubsection*.127}
+\contentsline {subsection}{\numberline {4.2.4}Material Type}{87}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Grain Position Distribution}{88}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Other Material Settings}{89}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Domain}{89}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Box}{90}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Circle}{90}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Cube}{91}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Ellipse}{92}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Rectangle}{93}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}Square}{93}{subsection.4.3.6}
+\contentsline {section}{\numberline {4.4}Settings}{94}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}verbose}{95}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}restart}{95}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}directory}{95}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}filetypes}{95}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}rng\_seeds}{96}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}rtol}{97}{subsection.4.4.6}
+\contentsline {subsection}{\numberline {4.4.7}mesh\_max\_volume}{97}{subsection.4.4.7}
+\contentsline {subsection}{\numberline {4.4.8}mesh\_min\_angle}{98}{subsection.4.4.8}
+\contentsline {subsection}{\numberline {4.4.9}mesh\_max\_edge\_length}{98}{subsection.4.4.9}
+\contentsline {subsection}{\numberline {4.4.10}verify}{98}{subsection.4.4.10}
+\contentsline {subsection}{\numberline {4.4.11}plot\_axes}{98}{subsection.4.4.11}
+\contentsline {subsection}{\numberline {4.4.12}color\_by}{98}{subsection.4.4.12}
+\contentsline {subsection}{\numberline {4.4.13}colormap}{99}{subsection.4.4.13}
+\contentsline {subsection}{\numberline {4.4.14}seeds\_kwargs}{99}{subsection.4.4.14}
+\contentsline {subsection}{\numberline {4.4.15}poly\_kwargs}{99}{subsection.4.4.15}
+\contentsline {subsection}{\numberline {4.4.16}tri\_kwargs}{99}{subsection.4.4.16}
+\contentsline {chapter}{\numberline {5}Python Package Guide}{101}{chapter.5}
+\contentsline {section}{\numberline {5.1}0. List of Seed Geometries}{101}{section.5.1}
+\contentsline {section}{\numberline {5.2}1. Pack Geometries into Domain}{102}{section.5.2}
+\contentsline {section}{\numberline {5.3}2. Tessellate the Domain}{102}{section.5.3}
+\contentsline {section}{\numberline {5.4}3. Unstructured Meshing}{102}{section.5.4}
+\contentsline {section}{\numberline {5.5}File I/O}{102}{section.5.5}
+\contentsline {section}{\numberline {5.6}Plotting}{102}{section.5.6}
+\contentsline {section}{\numberline {5.7}Phase Dictionaries}{103}{section.5.7}
+\contentsline {chapter}{\numberline {6}Troubleshooting}{105}{chapter.6}
+\contentsline {section}{\numberline {6.1}Installation}{105}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}MeshPy fails to install}{105}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Command Line Interface}{105}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Command not found on Linux}{105}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Could not connect to display}{106}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}\IeC {\textquoteleft }tkinter\IeC {\textquoteright } not found on Linux}{106}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Program quits/segfaults while calculating Voronoi diagram}{106}{subsection.6.2.4}
+\contentsline {chapter}{\numberline {7}microstructpy package}{107}{chapter.7}
+\contentsline {section}{\numberline {7.1}Subpackages}{107}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}microstructpy.geometry package}{107}{subsection.7.1.1}
+\contentsline {subsubsection}{Submodules}{118}{subsubsection*.209}
+\contentsline {paragraph}{microstructpy.geometry.box module}{118}{paragraph*.210}
+\contentsline {paragraph}{microstructpy.geometry.circle module}{119}{paragraph*.217}
+\contentsline {paragraph}{microstructpy.geometry.ellipse module}{121}{paragraph*.224}
+\contentsline {paragraph}{microstructpy.geometry.ellipsoid module}{124}{paragraph*.246}
+\contentsline {paragraph}{microstructpy.geometry.n\_box module}{128}{paragraph*.275}
+\contentsline {paragraph}{microstructpy.geometry.n\_sphere module}{129}{paragraph*.283}
+\contentsline {paragraph}{microstructpy.geometry.rectangle module}{131}{paragraph*.298}
+\contentsline {paragraph}{microstructpy.geometry.sphere module}{132}{paragraph*.314}
+\contentsline {subsection}{\numberline {7.1.2}microstructpy.meshing package}{133}{subsection.7.1.2}
+\contentsline {subsubsection}{Submodules}{139}{subsubsection*.331}
+\contentsline {paragraph}{microstructpy.meshing.polymesh module}{139}{paragraph*.332}
+\contentsline {paragraph}{microstructpy.meshing.trimesh module}{142}{paragraph*.339}
+\contentsline {subsection}{\numberline {7.1.3}microstructpy.seeding package}{144}{subsection.7.1.3}
+\contentsline {subsubsection}{Submodules}{148}{subsubsection*.362}
+\contentsline {paragraph}{microstructpy.seeding.seed module}{148}{paragraph*.363}
+\contentsline {paragraph}{microstructpy.seeding.seedlist module}{150}{paragraph*.372}
+\contentsline {section}{\numberline {7.2}Submodules}{153}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}microstructpy.cli module}{153}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}microstructpy.verification module}{156}{subsection.7.2.2}
+\contentsline {chapter}{Python Module Index}{159}{section*.400}
+\contentsline {chapter}{Index}{161}{section*.401}
