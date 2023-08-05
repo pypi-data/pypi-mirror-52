@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nOmicron
+Version: 1.2.0
+Summary: Python Controls for Scienta Omicron Matrix
+Home-page: https://github.com/OGordon100/nOmicron
+Author: Oliver Gordon
+Author-email: oliver.gordon@nottingham.ac.uk
+License: GPL v3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+
+nOmicron package/API for automatically control of Matrix through Python
+
+
