@@ -1,0 +1,17 @@
+jax==0.1.44
+jaxlib==0.1.27
+tqdm
+
+[dev]
+ipython
+
+[doc]
+sphinx
+sphinx_rtd_theme
+
+[examples]
+matplotlib
+
+[test]
+flake8
+pytest>=4.1
