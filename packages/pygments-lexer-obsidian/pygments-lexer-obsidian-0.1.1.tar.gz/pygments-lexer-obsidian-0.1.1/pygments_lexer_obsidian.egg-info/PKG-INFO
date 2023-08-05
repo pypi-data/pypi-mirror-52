@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pygments-lexer-obsidian
+Version: 0.1.1
+Summary: Obsidian lexer for Pygments
+Home-page: https://www.obsidian-lang.com
+Author: Michael Coblenz
+Author-email: mcoblenz@cs.cmu.edu
+License: BSD
+Description: Based on https://gitlab.com/veox/pygments-lexer-solidity/ by Noel Maersk. 
+        
+Keywords: pygments lexer syntax highlight obsidian
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3

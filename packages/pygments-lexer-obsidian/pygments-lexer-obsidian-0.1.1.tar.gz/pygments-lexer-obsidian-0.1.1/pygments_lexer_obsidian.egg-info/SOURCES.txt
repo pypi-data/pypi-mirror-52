@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pygments_lexer_obsidian/__init__.py
+pygments_lexer_obsidian/lexer.py
+pygments_lexer_obsidian.egg-info/PKG-INFO
+pygments_lexer_obsidian.egg-info/SOURCES.txt
+pygments_lexer_obsidian.egg-info/dependency_links.txt
+pygments_lexer_obsidian.egg-info/entry_points.txt
+pygments_lexer_obsidian.egg-info/requires.txt
+pygments_lexer_obsidian.egg-info/top_level.txt
