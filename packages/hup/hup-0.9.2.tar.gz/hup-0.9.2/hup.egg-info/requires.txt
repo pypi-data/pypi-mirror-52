@@ -1,0 +1,5 @@
+appdirs>=1.4.1
+pyparsing>=2.2
+
+[numpy]
+numpy>=1.15
