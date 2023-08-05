@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: m5expr
+Version: 1.0.10
+Summary: A simple arithmetic expression parser and evaluator
+Home-page: https://github.com/brouhaha/m5expr
+Author: Eric Smith
+Author-email: spacewar@gmail.com
+License: UNKNOWN
+Description: # m5expr - a simple arithmetic expression parser and evaluator
+        
+        Copyright 2019 Eric Smith <spacewar@gmail.com>
+        
+        m5expr development is hosted at the
+        [m5expr Github repository](https://github.com/brouhaha/m5expr/).
+        
+        ## Introduction
+        
+        m5expr is a simple arithmetic expression parser and evaluator using
+        PyParsing. m5expr was originally written for the i89 assembler for the
+        Intel 8089 I/O processor.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Interpreters
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
