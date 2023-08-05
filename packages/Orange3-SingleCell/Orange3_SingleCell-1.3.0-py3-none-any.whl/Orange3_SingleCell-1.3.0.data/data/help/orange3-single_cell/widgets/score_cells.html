@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="cp1252" />
+    <title>Score Cells</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Dot Matrix" href="dot_matrix.html" />
+    <link rel="prev" title="Score Genes" href="score_genes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="dot_matrix.html" title="Dot Matrix"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="score_genes.html" title="Score Genes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">scOrange 0.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="score-cells">
+<h1>Score Cells</h1>
+<p>Add a cell score based on the given set of genes.</p>
+<p><strong>Inputs</strong>
+- Data: input dataset
+- Genes: dataset with gene names</p>
+<p><strong>Outputs</strong>
+- Data: dataset with a meta column reporting on cell scores</p>
+<p><strong>Score Cells</strong> scores the cells (rows) in the input data based on expression of input marker genes. Input data has to include gene names in column headers (as attribute names). The score is computed independently for each cell and is equal to the maximum expression of the marker genes. If expressions for all the marker genes are missing, the cell obtains a score of zero. If <em>Genes</em> input is provided, one of the columns must include names of genes that match those from expression data.</p>
+<p>![](images/ScoreCells-stamped.png)</p>
+<ol class="arabic simple">
+<li><p>A column name from table on genes that provides names of genes that are included in the input gene expression table.</p></li>
+<li><p>Tick to automatically process input data and send the result of scoring to the output. If left unchecked, processing must be triggered manually.</p></li>
+</ol>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>We will use [Single Cell Datasets](singlecelldatasets) widget to load <em>Bone marrow mononuclear cells with AML (sample)</em> data. Then we will pass it through <strong>k-Means</strong> and select 2 clusters from Silhouette Scores. Ok, it looks like there might be two distinct clusters here.</p>
+<p>But can we find subpopulations in these cells? Let us load <em>Bone marrow mononuclear cells with AML (markers)</em> with [Single Cell Datasets](singlecelldatasets). Now, pass the marker genes to <strong>Data Table</strong> and select, for example, natural killer cells from the list (NKG7).</p>
+<p>Pass the markers and k-Means results to <strong>Score Cells</strong> widget and select <em>geneName</em> to match markers with genes. Finally, add [t-SNE](tsne) to visualize the results.</p>
+<p>In [t-SNE](tsne), use <em>Scores</em> attribute to color the points and set their size. We see that killer cells are nicely clustered together and that t-SNE indeed found subpopulations.</p>
+<p>![](images/tSNE-Example.png)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="dot_matrix.html" title="Dot Matrix"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="score_genes.html" title="Score Genes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">scOrange 0.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Biolab.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="cp1252" />
+    <title>Filter</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Single Cell Preprocess" href="single_cell_preprocess.html" />
+    <link rel="prev" title="Single Cell Datasets" href="single_cell_datasets.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="single_cell_preprocess.html" title="Single Cell Preprocess"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="single_cell_datasets.html" title="Single Cell Datasets"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">scOrange 0.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="filter">
+<h1>Filter</h1>
+<p>Filter cells/genes.</p>
+<p><strong>Inputs</strong>
+- Data: input dataset</p>
+<p><strong>Outputs</strong>
+- Data: filtered dataset</p>
+<p>The <strong>Filter</strong> widget filters cells or genes by the number of positive measurements. One can select genes in visualization to remove the unfrequent and overly frequent cells/genes.</p>
+<p>![](images/Filter-stamped.png)</p>
+<ol class="arabic simple">
+<li><p>Information on the input and output.</p></li>
+<li><p>Filter by cells (rows), genes (columns) or data (remove zero measurments).</p></li>
+<li><p>If the box is ticked, data points are displayed.</p></li>
+<li><p>Filter by lower and upper threshold.</p></li>
+<li><p>Apply changes. If <em>Commit automatically</em> is ticked, changes will be communicated automatically. Alternatively, click <em>Commit</em>.</p></li>
+<li><p>Access help.</p></li>
+</ol>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>The <strong>Filter</strong> widget is used for filtering uninteresting cells, genes or data. By uninteresting we mean too frequent, too unfrequent or where data is zero (no expression). This allows us to have leaner data sets, which speeds up computation and enables easier analysis of results.</p>
+<p>We have used [ingle Cell Datasets](singlecelldatasets) to load <em>Cell cycle in mESC (Fluidigm)</em> data set. Then we used <strong>Filter</strong> widget to narrow down the selection of genes from 38,293 to 11,932. The width of our data table (number of columns) has descreased significantly. We have set the selection here manually (20 for lower and 170 for upper threshold), but you can also set the selection in the visualization by dragging the green field up or down.</p>
+<p>![](images/Filter-Example.png)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="single_cell_preprocess.html" title="Single Cell Preprocess"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="single_cell_datasets.html" title="Single Cell Datasets"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">scOrange 0.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Biolab.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>
