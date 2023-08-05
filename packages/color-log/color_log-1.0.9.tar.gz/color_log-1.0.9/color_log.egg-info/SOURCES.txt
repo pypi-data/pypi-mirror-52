@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+color_log/__init__.py
+color_log/logger.py
+color_log.egg-info/PKG-INFO
+color_log.egg-info/SOURCES.txt
+color_log.egg-info/dependency_links.txt
+color_log.egg-info/requires.txt
+color_log.egg-info/top_level.txt
