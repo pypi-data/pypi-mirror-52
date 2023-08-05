@@ -1,0 +1,12 @@
+ignis/__init__.py,sha256=3CinSwg5fckB10RF9zEn0Iuusaz-hDSG7dh92IdxMQ8,58
+ignis/agents.py,sha256=oWmHjLY2h0wkdFcwtcDeMLlpIgbOXu3yFaIf-76Sjs8,6092
+ignis/callbacks.py,sha256=oc0K-AnAckF_Rxqc82-EvebTwNSPbRWOnze7Q16JZlE,2299
+ignis/datasets.py,sha256=TDXPyZmilFYFzz-T7KHxESFu2Y8k7q1Ygztrym3UNT0,877
+ignis/loaders.py,sha256=lVHWSKmGjD0giMFNeopMEwDLbErYBCn9CIyZbfuPwb8,809
+ignis/memories.py,sha256=QHUjziUdWVHu_Kyso0vHM18lHxgvCNC-X08GZB90Nd8,1837
+ignis/supervised.py,sha256=xkhKihIZKY_2IiRL8rkxGXKc2QYJMWayIPDsnmhaLNw,3196
+ignis-0.0.8.dist-info/LICENSE,sha256=SYJzsEJyJ9yI45c871RiUzi1SY4KyRgnhSFLqAsWijw,1080
+ignis-0.0.8.dist-info/METADATA,sha256=zOzFFQ6s5ZmdwPD_SRd6hMID95WbrNiYeRopS77h3pk,1918
+ignis-0.0.8.dist-info/WHEEL,sha256=_6KLEkynAsMirRwaUJATK1lcUuc3usHkC0nDi_Yl22I,92
+ignis-0.0.8.dist-info/top_level.txt,sha256=SBPe7nD_FDTjLqLst0_aQbZRhD1ErVWXzEV7_d3B9Rs,6
+ignis-0.0.8.dist-info/RECORD,,
