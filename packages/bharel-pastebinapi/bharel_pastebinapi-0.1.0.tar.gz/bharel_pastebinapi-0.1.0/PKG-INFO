@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bharel_pastebinapi
+Version: 0.1.0
+Summary: An API for pastebin
+Home-page: https://github.com/bharel/pastebinapi
+Author: Bar Harel
+Author-email: bzvi7919+pastebinapi@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/bharel/pastebinapi/archive/0.1.0.tar.gz
+Description: # pastebinapi
+        An API for pastebin, currently made as a prototype
+        Keep in mind this is an unofficial api client, not endorsed and without any connection to Pastebin's development team.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
