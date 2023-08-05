@@ -1,0 +1,16 @@
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+canonicalwebteam/__init__.py
+canonicalwebteam.templatefinder.egg-info/PKG-INFO
+canonicalwebteam.templatefinder.egg-info/SOURCES.txt
+canonicalwebteam.templatefinder.egg-info/dependency_links.txt
+canonicalwebteam.templatefinder.egg-info/requires.txt
+canonicalwebteam.templatefinder.egg-info/top_level.txt
+canonicalwebteam/templatefinder/__init__.py
+canonicalwebteam/templatefinder/templatefinder.py
+tests/__init__.py
+tests/test_templatefinder.py
