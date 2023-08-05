@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: cping
+Version: 0.0.11
+Summary: Concurrent multi-host ping (ICMP and TCP)
+Home-page: https://github.com/hSaria/cPing
+Author: hSaria
+Author-email: ping@heysaria.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+cPing concurrently checks if hosts are responding using ICMP echo or TCP SYN.
+
+> Plenty of other solutions out there; this is just a quick and short one.
+
+![alt text](https://github.com/hSaria/cPing/raw/master/.github/example_1.png "Example output")
+
+# Installation
+
+    pip3 install cping
+
+# Usage
+
+    cping host1 host2
+
+# Help
+
+See the available arguments to adjust the behavior of cPing.
+
+    cping -h
+
+
