@@ -1,0 +1,26 @@
+language: python
+matrix:
+  include:
+  - python: 3.6
+    dist: bionic
+    sudo: false
+  - python: 3.7
+    dist: bionic
+    sudo: true
+services:
+  - mysql
+before_install:
+  - mysql -u root --password="" < tests/travis.sql
+
+install: pip install tox-travis
+script: tox
+deploy:
+  provider: pypi
+  skip_existing: true
+  user: happyworker
+  password:
+    secure: pVBlXcsmbmHxMzIOl9mKyybVcYZuV5BQPK08zwiTHuElM66Z/0bw09XYQGvkkyPG8caWlMG46kOAtFH8vPh0DZO4YrEjeeKMrXcwZOpgNzVqgNXJ/zQSwLtvmP1uA5AtOG2AbuBpuwRLvJIU5mzdpo/hX8ZYZhpvD1RcvijDnOGowFpgQgK6Y8EQwa6A422Usi4TbB6h4g0geVhdYRQ4sJhgqkbNtuNIAo451DU+Z0GMxekbNBjuBVa/aH5ce4XoEbA/5FnCQlDQua1uqZ6et4zIrT45jMdm2FIbQVB/N2kR69XtxF4NBwQ3Wqtk/WMNKvXnFXdNiwGv+P1cI/sPAMRhn1Y1auq7ctkoyBF+Imw8gdtSC5sAnGz+jd97lmO7RtPBhE58umDcwRhxXQokzoe2gZzBhIEkWJr0+TJG7ISN0gyDe8+jHMBGojmiVZzhbQVpdJNxFgAdczG3hcqcjqk6GO7Mdcr56SUnKIM88syK5r7qj1Ymeau0E9sa0E8MYNnMj4zd2TOprdKDgRpjtW6d9eHxVt+TtfSLLe1aXYYMf3TfkgeQjKGHBXIPqc59dMgd66OOM04eEaEx4YFxYxkxmo6nRPT4lTtgYaBC/0FawGdyRizDy16MVsD8WNzjjEY6sTAg6FjB5QAoUj8dD+/Kfj0qEWEM2rgaPDwMw1w=
+  on:
+    tags: true
+    distributions: sdist
+    repo: hungrybirder/dbpool-python
