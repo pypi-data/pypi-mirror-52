@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>cocos.scenes.sequences module &#8212; cocos v0.6.7 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cocos.scenes.transitions module" href="cocos.scenes.transitions.html" />
+    <link rel="prev" title="cocos.scenes.pause module" href="cocos.scenes.pause.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.transitions.html" title="cocos.scenes.transitions module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.pause.html" title="cocos.scenes.pause module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cocos.html" >cocos package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cocos.scenes.html" accesskey="U">cocos.scenes package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cocos.scenes.sequences">
+<span id="cocos-scenes-sequences-module"></span><h1>cocos.scenes.sequences module<a class="headerlink" href="#module-cocos.scenes.sequences" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cocos.scenes.sequences.SequenceScene">
+<em class="property">class </em><code class="sig-name descname">SequenceScene</code><span class="sig-paren">(</span><em class="sig-param">*scenes</em><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.sequences.SequenceScene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cocos.scene.html#cocos.scene.Scene" title="cocos.scene.Scene"><code class="xref py py-class docutils literal notranslate"><span class="pre">cocos.scene.Scene</span></code></a></p>
+<p>A Scene used to play a sequence of scenes one after another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>*scenes</strong> (<a class="reference internal" href="cocos.scene.html#cocos.scene.Scene" title="cocos.scene.Scene"><em>Scene</em></a>) – argument list with the scenes to play.</p>
+</dd>
+</dl>
+<p>The playing goes from first arg to last arg.</p>
+<p>For each scene, scene.on_enter is not called until it becomes active.</p>
+<p>Use director.pop to advance to the next scene.</p>
+<p>director.pop when the last scene is playing removes that scene and the
+SequenceScene from the scene stack.</p>
+<p>Example use case: running a intro scene before the main menu scene:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">director</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">SequenceScene</span><span class="p">(</span><span class="n">intro</span><span class="p">(),</span> <span class="n">menuGame</span><span class="p">()))</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="cocos.scenes.sequences.SequenceScene.on_enter">
+<code class="sig-name descname">on_enter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.sequences.SequenceScene.on_enter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called every time the Scene enters the stage.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cocos.scenes.pause.html"
+                        title="previous chapter">cocos.scenes.pause module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cocos.scenes.transitions.html"
+                        title="next chapter">cocos.scenes.transitions module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/cocos.scenes.sequences.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.transitions.html" title="cocos.scenes.transitions module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.pause.html" title="cocos.scenes.pause module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cocos.html" >cocos package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cocos.scenes.html" >cocos.scenes package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2008-2019, cocos&#39;s team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>cocos.audio.SDL package &#8212; cocos v0.6.7 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cocos.audio.SDL.array module" href="cocos.audio.SDL.array.html" />
+    <link rel="prev" title="cocos.audio package" href="cocos.audio.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cocos.audio.SDL.array.html" title="cocos.audio.SDL.array module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cocos.audio.html" title="cocos.audio package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cocos.html" >cocos package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cocos.audio.html" accesskey="U">cocos.audio package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cocos-audio-sdl-package">
+<h1>cocos.audio.SDL package<a class="headerlink" href="#cocos-audio-sdl-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.array.html">cocos.audio.SDL.array module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.audio.html">cocos.audio.SDL.audio module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.constants.html">cocos.audio.SDL.constants module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.darwin.html">cocos.audio.SDL.darwin module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.dll.html">cocos.audio.SDL.dll module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.endian.html">cocos.audio.SDL.endian module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.error.html">cocos.audio.SDL.error module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.mixer.html">cocos.audio.SDL.mixer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.rwops.html">cocos.audio.SDL.rwops module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.sound.html">cocos.audio.SDL.sound module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.timer.html">cocos.audio.SDL.timer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cocos.audio.SDL.version.html">cocos.audio.SDL.version module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-cocos.audio.SDL">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cocos.audio.SDL" title="Permalink to this headline">¶</a></h2>
+<p>Main module for importing SDL-ctypes.</p>
+<dl class="simple">
+<dt>This module defines the intialization and cleanup functions:</dt><dd><ul class="simple">
+<li><p><cite>SDL_Init</cite></p></li>
+<li><p><cite>SDL_InitSubSystem</cite></p></li>
+<li><p><cite>SDL_WasInit</cite></p></li>
+<li><p><cite>SDL_QuitSubSystem</cite></p></li>
+<li><p><cite>SDL_Quit</cite></p></li>
+</ul>
+</dd>
+</dl>
+<p>It also imports all functions, constants and classes from the package
+submodules.  Typical usage, then, is to just import this module directly
+into your namespace:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">SDL</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>This gives you access to all SDL names exactly as they appear in the C
+header files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">group Non-core modules</dt>
+<dd class="field-odd"><p>ttf, mixer, image, sound</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="cocos.audio.SDL.SDL_Init">
+<code class="sig-name descname">SDL_Init</code><span class="sig-paren">(</span><em class="sig-param">flags</em><span class="sig-paren">)</span><a class="headerlink" href="#cocos.audio.SDL.SDL_Init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialise the SDL library.</p>
+<p>This function loads the SDL dynamically linked library and initializes
+the subsystems specified by <cite>flags</cite> (and those satisfying dependencies)
+Unless the <cite>SDL_INIT_NOPARACHUTE</cite> flag is set, it will install cleanup
+signal handlers for some commonly ignored fatal signals (like SIGSEGV).</p>
+<p>The following flags are recognised:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>SDL_INIT_TIMER</cite></p></li>
+<li><p><cite>SDL_INIT_AUDIO</cite></p></li>
+<li><p><cite>SDL_INIT_VIDEO</cite></p></li>
+<li><p><cite>SDL_INIT_CDROM</cite></p></li>
+<li><p><cite>SDL_INIT_JOYSTICK</cite></p></li>
+<li><p><cite>SDL_INIT_NOPARACHUTE</cite></p></li>
+<li><p><cite>SDL_INIT_EVENTTHREAD</cite></p></li>
+<li><p><cite>SDL_INIT_EVERYTHING</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><cite>flags</cite>: int</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>undocumented (FIXME)</p>
+</dd>
+<dt class="field-even">See</dt>
+<dd class="field-even"><p><cite>SDL_Quit</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="cocos.audio.SDL.SDL_InitSubSystem">
+<code class="sig-name descname">SDL_InitSubSystem</code><span class="sig-paren">(</span><em class="sig-param">flags</em><span class="sig-paren">)</span><a class="headerlink" href="#cocos.audio.SDL.SDL_InitSubSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize specific SDL subsystems.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><cite>flags</cite>: int</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>undocumented (FIXME)</p>
+</dd>
+<dt class="field-even">See</dt>
+<dd class="field-even"><p><cite>SDL_Init</cite>, <cite>SDL_QuitSubSystem</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">cocos.audio.SDL package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-cocos.audio.SDL">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cocos.audio.html"
+                        title="previous chapter">cocos.audio package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cocos.audio.SDL.array.html"
+                        title="next chapter">cocos.audio.SDL.array module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/cocos.audio.SDL.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cocos.audio.SDL.array.html" title="cocos.audio.SDL.array module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cocos.audio.html" title="cocos.audio package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cocos.html" >cocos package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cocos.audio.html" >cocos.audio package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2008-2019, cocos&#39;s team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>

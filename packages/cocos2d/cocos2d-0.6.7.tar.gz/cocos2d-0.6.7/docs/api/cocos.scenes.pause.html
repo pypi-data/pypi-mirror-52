@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>cocos.scenes.pause module &#8212; cocos v0.6.7 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cocos.scenes.sequences module" href="cocos.scenes.sequences.html" />
+    <link rel="prev" title="cocos.scenes package" href="cocos.scenes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.sequences.html" title="cocos.scenes.sequences module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.html" title="cocos.scenes package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cocos.html" >cocos package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cocos.scenes.html" accesskey="U">cocos.scenes package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cocos.scenes.pause">
+<span id="cocos-scenes-pause-module"></span><h1>cocos.scenes.pause module<a class="headerlink" href="#module-cocos.scenes.pause" title="Permalink to this headline">¶</a></h1>
+<p>Pause scene</p>
+<dl class="class">
+<dt id="cocos.scenes.pause.PauseLayer">
+<em class="property">class </em><code class="sig-name descname">PauseLayer</code><a class="headerlink" href="#cocos.scenes.pause.PauseLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cocos.layer.base_layers.html#cocos.layer.base_layers.Layer" title="cocos.layer.base_layers.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">cocos.layer.base_layers.Layer</span></code></a></p>
+<p>Layer that shows the text ‘PAUSED’</p>
+<dl class="method">
+<dt id="cocos.scenes.pause.PauseLayer.draw">
+<code class="sig-name descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.PauseLayer.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the function you will have to override if you want your
+subclassed <code class="xref py py-class docutils literal notranslate"><span class="pre">CocosNode</span></code> to draw something on screen.</p>
+<p>You <em>must</em> respect the position, scale, rotation and anchor attributes.
+If you want OpenGL to do the scaling for you, you can:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+    <span class="c1"># ... draw ..</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="cocos.scenes.pause.PauseLayer.on_key_press">
+<code class="sig-name descname">on_key_press</code><span class="sig-paren">(</span><em class="sig-param">k</em>, <em class="sig-param">m</em><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.PauseLayer.on_key_press" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="cocos.scenes.pause.PauseLayer.is_event_handler">
+<code class="sig-name descname">is_event_handler</code><em class="property"> = True</em><a class="headerlink" href="#cocos.scenes.pause.PauseLayer.is_event_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>enable pyglet’s events</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cocos.scenes.pause.PauseScene">
+<em class="property">class </em><code class="sig-name descname">PauseScene</code><span class="sig-paren">(</span><em class="sig-param">background</em>, <em class="sig-param">*layers</em><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.PauseScene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="cocos.scene.html#cocos.scene.Scene" title="cocos.scene.Scene"><code class="xref py py-class docutils literal notranslate"><span class="pre">cocos.scene.Scene</span></code></a></p>
+<p>Pause Scene</p>
+<dl class="method">
+<dt id="cocos.scenes.pause.PauseScene.draw">
+<code class="sig-name descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.PauseScene.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the function you will have to override if you want your
+subclassed <code class="xref py py-class docutils literal notranslate"><span class="pre">CocosNode</span></code> to draw something on screen.</p>
+<p>You <em>must</em> respect the position, scale, rotation and anchor attributes.
+If you want OpenGL to do the scaling for you, you can:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">glPushMatrix</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+    <span class="c1"># ... draw ..</span>
+    <span class="n">glPopMatrix</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cocos.scenes.pause.default_pause_scene">
+<code class="sig-name descname">default_pause_scene</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.default_pause_scene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cocos.scenes.pause.get_pause_scene">
+<code class="sig-name descname">get_pause_scene</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.get_pause_scene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cocos.scenes.pause.set_pause_scene_generator">
+<code class="sig-name descname">set_pause_scene_generator</code><span class="sig-paren">(</span><em class="sig-param">generator</em><span class="sig-paren">)</span><a class="headerlink" href="#cocos.scenes.pause.set_pause_scene_generator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cocos.scenes.html"
+                        title="previous chapter">cocos.scenes package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cocos.scenes.sequences.html"
+                        title="next chapter">cocos.scenes.sequences module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/cocos.scenes.pause.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.sequences.html" title="cocos.scenes.sequences module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cocos.scenes.html" title="cocos.scenes package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cocos.html" >cocos package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cocos.scenes.html" >cocos.scenes package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2008-2019, cocos&#39;s team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>

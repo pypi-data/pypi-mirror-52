@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Built-in Python Interpreter &#8212; cocos v0.6.7 documentation</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Default Handlers" href="default_handlers.html" />
+    <link rel="prev" title="CocosNodes" href="cocosnodes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="default_handlers.html" title="Default Handlers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cocosnodes.html" title="CocosNodes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">cocos2d Programming Guide</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="built-in-python-interpreter">
+<h1>Built-in Python Interpreter<a class="headerlink" href="#built-in-python-interpreter" title="Permalink to this headline">¶</a></h1>
+<p>A python interpreter can be activated by pressing
+the keys CTRL + i in Windows and Linux and by
+using COMMAND + i in OS/X.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">locals()</span></code> of the python interpreter are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cocos</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">director</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>The interpreter also has some attributes that
+can be changed in runtime, like:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">opacity</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cfg['code.font_size']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cfg['code.font_name']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cfg['code.font_color']</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 0 means, no opacity</span>
+<span class="c1"># 255 means,  full opacity</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">opacity</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># changing layer color to a reddish one</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">204</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span> <span class="p">)</span>
+
+<span class="c1"># changing the font color to white</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;code.font_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+
+<span class="c1"># changing the font size</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;code.font_size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">24</span>
+
+<span class="c1"># changing the font name</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;code.font_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Courier New&#39;</span>
+
+<span class="c1"># obtaining the current scene:</span>
+<span class="n">current_scene</span> <span class="o">=</span> <span class="n">director</span><span class="o">.</span><span class="n">scene</span>
+</pre></div>
+</div>
+<p>Once the interpreter was activated, it will remain in memory.
+From now on, you can hide it and show it by pressing
+(again) the CTRL+i (or COMMAND+i) keys.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cocosnodes.html"
+                        title="previous chapter">CocosNodes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="default_handlers.html"
+                        title="next chapter">Default Handlers</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/programming_guide/interpreter.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="default_handlers.html" title="Default Handlers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cocosnodes.html" title="CocosNodes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">cocos</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >cocos2d Programming Guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2008-2019, cocos&#39;s team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>
