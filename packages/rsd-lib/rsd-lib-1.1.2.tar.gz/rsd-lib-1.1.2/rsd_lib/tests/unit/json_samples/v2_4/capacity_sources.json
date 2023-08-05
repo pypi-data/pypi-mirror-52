@@ -1,0 +1,34 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Capacity.CapacitySource",
+    "@odata.id": "/redfish/v1/StorageServices/1/Volumes/1/CapacitySources/1",
+    "@odata.type": "#Capacity.v1_1_0.CapacitySource",
+    "Description": "Volume capacity source",
+    "Id": "1",
+    "Name": "CapacitySource",
+    "ProvidingPools": [
+        {
+            "@odata.id": "/redfish/v1/StorageServices/1/Volumes/1/CapacitySources/1/ProvidingPools"
+        }
+    ],
+    "ProvidingVolumes": [
+        {
+            "@odata.id": "/redfish/v1/StorageServices/1/Volumes/1/CapacitySources/1/ProvidingVolumes"
+        }
+    ],
+    "ProvidingDrives": [
+        {
+            "@odata.id": "/redfish/v1/StorageServices/1/Volumes/1/CapacitySources/1/ProvidingDrives"
+        }
+    ],
+    "ProvidedCapacity": {
+        "Data": {
+            "AllocatedBytes": 3071983104
+        }
+    },
+    "Oem": {},
+    "Status": {
+        "Health": "OK",
+        "HealthRollup": "OK",
+        "State": "Enabled"
+    }
+}
