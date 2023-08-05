@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: imstream
+Version: 0.1.0
+Summary: The most exciting and powerful "video /  webcam" streamer for python it is built on top of OpenCV and threading module. It provides ultra fast *FPS 400+ when streamed.
+Home-page: https://github.com/imneonizer/imstream
+Author: Nitin Rai
+Author-email: mneonizer@gmail.com
+License: MIT
+Download-URL: https://github.com/imneonizer/imstream/archive/v0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: Ultra Fast FPS,Webcam Streaming,Multi threading
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
