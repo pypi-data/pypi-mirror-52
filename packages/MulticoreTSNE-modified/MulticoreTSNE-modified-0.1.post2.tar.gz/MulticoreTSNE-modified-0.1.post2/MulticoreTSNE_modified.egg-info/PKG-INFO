@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: MulticoreTSNE-modified
+Version: 0.1.post2
+Summary: Forked from MulticoreTSNE (https://github.com/DmitryUlyanov/Multicore-TSNE). Fix a randomness error in tsne.cpp.
+Home-page: https://github.com/lilab-bcb/Multicore-TSNE
+Author: Dmitry Ulyanov (based on L. Van der Maaten's code); Bo Li
+Author-email: bli28@mgh.harvard.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test

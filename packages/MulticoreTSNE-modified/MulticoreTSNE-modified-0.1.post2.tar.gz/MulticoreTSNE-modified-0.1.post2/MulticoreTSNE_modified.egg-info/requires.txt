@@ -1,0 +1,7 @@
+numpy
+cffi
+cmake
+
+[test]
+scikit-learn
+scipy
