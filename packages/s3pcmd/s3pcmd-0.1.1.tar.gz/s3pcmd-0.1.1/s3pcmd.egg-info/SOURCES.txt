@@ -1,0 +1,13 @@
+README.md
+s3pcmd.py
+setup.cfg
+setup.py
+s3pcmd.egg-info/PKG-INFO
+s3pcmd.egg-info/SOURCES.txt
+s3pcmd.egg-info/dependency_links.txt
+s3pcmd.egg-info/entry_points.txt
+s3pcmd.egg-info/requires.txt
+s3pcmd.egg-info/top_level.txt
+test/test_s3_boto_client.py
+test/test_s3_path.py
+test/test_s3_resources.py
