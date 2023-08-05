@@ -1,0 +1,8 @@
+[console_scripts]
+cloudSat_object_creator = cloudsat_object_manipulation.cldObj_creation:main
+cloudType = cloud_type_identification.cloudTypeExe:main
+lsmCreate = land_sea_mask.landSeaMaskCreate:main
+precipMatch = precipitation_manipulation.precipitationMatch:main
+rhMatch = rh_match.__main__:main
+tcwvMatch = tcwv_match.__main__:main
+
