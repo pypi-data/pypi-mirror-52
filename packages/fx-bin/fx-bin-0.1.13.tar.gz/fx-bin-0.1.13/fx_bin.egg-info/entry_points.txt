@@ -1,0 +1,4 @@
+[console_scripts]
+ff = fx_bin.find_files:main
+size = fx_bin.size:main
+
