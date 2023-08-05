@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: auto-all
+Version: 1.0.0
+Summary: Automatically manage __all__ variable in Python packages.
+Home-page: https://github.com/jongracecox/auto-all
+Author: Jon Grace-Cox
+Author-email: jongracecox@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
