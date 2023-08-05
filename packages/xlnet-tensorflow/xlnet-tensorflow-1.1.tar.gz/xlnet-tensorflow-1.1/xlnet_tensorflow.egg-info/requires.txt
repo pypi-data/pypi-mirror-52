@@ -1,0 +1,13 @@
+six
+
+[absl-py]
+absl-py>=0.7.0
+
+[numpy]
+numpy>=1.15.0
+
+[sentencepiece]
+sentencepiece>=0.1.83
+
+[tensorflow]
+tensorflow>=1.13.1
