@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/pylog/__init__.py
+src/pylog/control_structures.py
+src/pylog/logic_variables.py
+src/pylog.egg-info/PKG-INFO
+src/pylog.egg-info/SOURCES.txt
+src/pylog.egg-info/dependency_links.txt
+src/pylog.egg-info/not-zip-safe
+src/pylog.egg-info/top_level.txt
+src/pylog/sequence_options/__init__.py
+src/pylog/sequence_options/linked_list.py
+src/pylog/sequence_options/sequences.py
+src/pylog/sequence_options/super_sequence.py
