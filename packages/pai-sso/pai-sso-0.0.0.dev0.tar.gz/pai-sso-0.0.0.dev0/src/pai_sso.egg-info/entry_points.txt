@@ -1,0 +1,3 @@
+[console_scripts]
+pai-sso = pai_sso.skeleton:run
+
