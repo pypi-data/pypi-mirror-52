@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Automated-cartography
+Version: 0.0.2
+Summary: This is a package for Excel Chart Standard Production Library
+Home-page: https://github.com/NocoldBob/Automated_cartography
+Author: fastbiubiu
+Author-email: fastbiubiu@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+本包是专为处理Excel 表格作图
+get_best_sell_index
+传入参数 排行榜,销售量，返回真销售量和评价量，爆款指数
+
+drow_chart
+传入参数date,filename ,无返回，自动写文件.
+date结构为
+[['2019/08/05', '2019/08/06', '2019/08/07', '2019/08/08', '2019/08/09', '2019/08/10'], [8, 8, 8, 8, 8, 8], [376, 376, 376, 376, 376, 376], [5.0, 5.0, 5.0, 5.0, 5.0, 5.0], ['https:……', 'https:……', 'https:……', 'https:……', 'https:……','https:……'], [10.0, 10.0, 10.0, 10.0, 10.0, 10.02], [5.58659217877095, 6.756756756756757, 6.666666666666667, 9.345794392523365, 250.0, 200.0]]
+filename 为即将存结果数据的表名
+
