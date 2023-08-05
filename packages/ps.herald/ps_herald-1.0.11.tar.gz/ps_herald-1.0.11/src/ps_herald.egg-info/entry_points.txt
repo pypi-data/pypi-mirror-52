@@ -1,0 +1,5 @@
+[console_scripts]
+ps_bridge = ps_herald.ps_bridge:main
+ps_herald = ps_herald.ps_herald:main
+ps_neelix = ps_herald.ps_neelix:main
+
