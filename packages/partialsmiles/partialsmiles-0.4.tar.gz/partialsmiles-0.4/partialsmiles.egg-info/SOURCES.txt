@@ -1,0 +1,12 @@
+README.rst
+setup.py
+partialsmiles/__init__.py
+partialsmiles/elements.py
+partialsmiles/exceptions.py
+partialsmiles/kekulize.py
+partialsmiles/smiparser.py
+partialsmiles/valence.py
+partialsmiles.egg-info/PKG-INFO
+partialsmiles.egg-info/SOURCES.txt
+partialsmiles.egg-info/dependency_links.txt
+partialsmiles.egg-info/top_level.txt
