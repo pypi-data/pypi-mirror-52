@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: autodoc-traits
+Version: 0.1.0.dev0
+Summary: Sphinx extension to autodoc traitlets
+Home-page: https://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: UNKNOWN
+Description: # autodoc-traits
+        
+        Sphinx extension to autodocument configuration files using the [traitlets](https://github.com/ipython/traitlets) library
+        
+        ## Install
+        
+        ```bash
+        python3 -m pip install autodoc-traits
+        ```
+        
+        ## Usage
+        
+        Add `autodoc_traits` to the `extensions` list in
+        a Sphinx `conf.py` file:
+        
+        ```python
+        extensions = [
+            'sphinx.ext.autodoc',
+            'sphinx.ext.intersphinx',
+            'sphinx.ext.napoleon',
+            'autodoc_traits',
+            'sphinx_copybutton',
+        ]
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
