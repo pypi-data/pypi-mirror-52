@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: pychelper
+Version: 0.1.1
+Summary: Python project compilation helper that compile python files and copy resource files
+Home-page: http://theorozier.fr
+Author: Théo Rozier
+Author-email: contact@theorozier.fr
+License: UNKNOWN
+Description: # Python Compile Helper
+        Python project compilation helper that compile python files and copy resource files.
+        Run using `python -m pychelper`
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
