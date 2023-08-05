@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+slate/__init__.py
+slate/__main__.py
+slate/annotate.py
+slate/config.py
+slate/data.py
+slate/view.py
+slate_nlp.egg-info/PKG-INFO
+slate_nlp.egg-info/SOURCES.txt
+slate_nlp.egg-info/dependency_links.txt
+slate_nlp.egg-info/entry_points.txt
+slate_nlp.egg-info/top_level.txt
