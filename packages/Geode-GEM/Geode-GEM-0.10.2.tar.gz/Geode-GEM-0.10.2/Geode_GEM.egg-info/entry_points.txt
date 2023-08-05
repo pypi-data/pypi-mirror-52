@@ -1,0 +1,3 @@
+[console_scripts]
+gem-ui = geode_gem.__main__:main
+
