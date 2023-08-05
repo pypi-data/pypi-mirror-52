@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jogodavelhagenetico
+Version: 0.1.0
+Summary: Genetic Algorithm to play tic tac toe
+Home-page: https://github.com/duducosmos/jogodavelhagenetico
+Author: Eduardo S. Pereira
+Author-email: pereira.somoza@gmail.com
+License: Apache License 2.0
+Description: # Genetic Tic Tac Toe (Jogo da Velha Genético)
+        
+        Inteligência artificial baseada em algoritmo genético.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

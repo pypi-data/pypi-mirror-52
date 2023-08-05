@@ -1,0 +1,3 @@
+[console_scripts]
+jogodavelha = velhaapp.__main__:main
+
