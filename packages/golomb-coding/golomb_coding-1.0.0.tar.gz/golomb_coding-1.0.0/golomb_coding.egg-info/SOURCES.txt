@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+golomb_coding/__init__.py
+golomb_coding/__version__.py
+golomb_coding/golomb_coding.py
+golomb_coding.egg-info/PKG-INFO
+golomb_coding.egg-info/SOURCES.txt
+golomb_coding.egg-info/dependency_links.txt
+golomb_coding.egg-info/requires.txt
+golomb_coding.egg-info/top_level.txt
