@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: ossaudit
+Version: 0.5.0
+Summary: Audit python packages for known vulnerabilities
+Home-page: https://github.com/dyntopia/ossaudit
+Author: Hans Jerry Illikainen
+Author-email: hji@dyntopia.com
+License: BSD-2-Clause
+Description: See https://github.com/dyntopia/ossaudit
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
