@@ -1,0 +1,11 @@
+cortex-python>=1.0.1
+cuid<1,>=0.3
+dill>=0.2.8.2
+pyjwt<2,>=1.6.1
+jinja2
+docker>=3.7.2
+tenacity>=5.0.2
+more_itertools<5,>=4.3.0
+
+[:python_version == "3.6"]
+dataclasses>=0.6
