@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: fancy-nlp
+Version: 0.0.2
+Summary: NLP for humans
+Home-page: https://github.com/boat-group/fancy-nlp
+Author: boat-group
+Author-email: e.shijia@foxmail.com
+License: UNKNOWN
+Description: 
+        fancy-nlp is a fast and easy-to-use natural language processing (NLP) toolkit,
+        satisfying your imagination about NLP.
+        
+        fancy-nlp is compatible with Python 3.6
+        and is distributed under the GPLv3 license.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
