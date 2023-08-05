@@ -1,0 +1,3 @@
+[console_scripts]
+prestools = prestools.cli:main
+
