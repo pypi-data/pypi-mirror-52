@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: m5pre
+Version: 1.0.2
+Summary: A simple macro preprocessor
+Home-page: https://github.com/brouhaha/m5pre
+Author: Eric Smith
+Author-email: spacewar@gmail.com
+License: UNKNOWN
+Description: # m5pre - a simple macro preprocessor
+        
+        Copyright 2019 Eric Smith <spacewar@gmail.com>
+        
+        m5pre development is hosted at the
+        [m5pre Github repository](https://github.com/brouhaha/m5pre/).
+        
+        ## Introduction
+        
+        m5pre is a simple macro preprocessor intended to provide a subset of the
+        capabilities of the traditional C preprocessor.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Interpreters
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
