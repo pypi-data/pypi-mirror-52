@@ -1,0 +1,11 @@
+README.md
+setup.py
+cubetranslate/__init__.py
+cubetranslate/constants.py
+cubetranslate/translate_pack.py
+cubetranslate/translate_service.py
+cubetranslate.egg-info/PKG-INFO
+cubetranslate.egg-info/SOURCES.txt
+cubetranslate.egg-info/dependency_links.txt
+cubetranslate.egg-info/requires.txt
+cubetranslate.egg-info/top_level.txt
