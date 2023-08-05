@@ -1,0 +1,3 @@
+[console_scripts]
+imread_benchmark = imread_benchmark.benchmark:main
+
