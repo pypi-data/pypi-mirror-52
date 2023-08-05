@@ -1,0 +1,8 @@
+[build-system]
+# This list is duplicated in setup.py
+# Keep the two lists in sync
+requires = [
+    "cmake",
+    "ninja",
+    "scikit-build",
+    ]
