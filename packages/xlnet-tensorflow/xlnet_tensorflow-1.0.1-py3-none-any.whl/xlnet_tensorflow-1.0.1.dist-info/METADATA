@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: xlnet-tensorflow
+Version: 1.0.1
+Summary: XLNet fork of https://github.com/zihangdai/xlnet with package configuration
+Home-page: https://github.com/zihangdai/xlnet
+Author: sebisebi
+Author-email: gpirtoaca@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown
+Requires-Dist: six
+Provides-Extra: absl-py
+Requires-Dist: absl-py (>=0.7.0) ; extra == 'absl-py'
+Provides-Extra: numpy
+Requires-Dist: numpy (>=1.15.0) ; extra == 'numpy'
+Provides-Extra: sentencepiece
+Requires-Dist: sentencepiece (>=0.1.83) ; extra == 'sentencepiece'
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow (>=1.13.1) ; extra == 'tensorflow'
+
+# XLNet for TensorFlow
+
+This is a fork of the original [XLNet repository](https://github.com/zihangdai/xlnet)
+that adds package configuration so that it can be easily installed and used.
+The purpose is to remove the need of cloning the repository and modifying it
+locally which can be quite dirty for common tasks (e.g. training a new classifier).
+A lot of code can be shared (e.g. `modeling.py`, `classifier_utils.py`) and this
+fork is exactly for that.
+
+All the credit goes to [zihangdai/xlnet](https://github.com/zihangdai/xlnet).
+
+Please refer to the official repository for details on how to use the modules
+contained in this package. Useful information can also be found
+in the [XLNet paper](https://arxiv.org/abs/1906.08237).
+
+
+# Release Notes
+
+* September 5, 2019: Initial version (1.0.1)
+
+
