@@ -1,0 +1,8 @@
+msrestazure<1,>=0.4.14
+azure-batch<9,>=8.0
+azure-mgmt-batch<8,>=7.0
+azure-storage-blob<2,>=1.1.0
+azure-mgmt-storage<3,>=2.0
+
+[:python_version<'3.4']
+pathlib>=1.0.1
