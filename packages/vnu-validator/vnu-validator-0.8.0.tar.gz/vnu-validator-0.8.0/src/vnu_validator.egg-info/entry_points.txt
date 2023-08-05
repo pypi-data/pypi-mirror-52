@@ -1,0 +1,3 @@
+[console_scripts]
+vnu-validator = vnu_validator.cli:main
+

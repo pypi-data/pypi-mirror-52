@@ -1,0 +1,132 @@
+Metadata-Version: 1.1
+Name: vnu-validator
+Version: 0.8.0
+Summary: Python Wrapper for the v.Nu HTML Validator
+Home-page: https://github.com/shlomif/python-vnu_validator
+Author: Shlomi Fish
+Author-email: shlomif@cpan.org
+License: MIT license
+Description: ========
+        Overview
+        ========
+        
+        
+        
+        Python Wrapper for the v.Nu HTML Validator. It allows one to recursively test
+        a directory
+        of XHTML5 or HTML5 files for HTML validity (see
+        https://www.shlomifish.org/philosophy/computers/web/validate-your-html/ and
+        https://github.com/validator/validator/ ). It provides a caching feature for
+        speedup of subsequent runs.
+        
+        See:
+        
+        ::
+           pydoc vnu-validator
+        
+        * Free software: MIT license
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install vnu-validator
+        
+        Documentation
+        =============
+        
+        
+        https://python-vnu_validator.readthedocs.io/
+        
+        
+        Development
+        ===========
+        
+        To run the all tests run::
+        
+            tox
+        
+        Note, to combine the coverage data from all the tox environments run:
+        
+        .. list-table::
+            :widths: 10 90
+            :stub-columns: 1
+        
+            - - Windows
+              - ::
+        
+                    set PYTEST_ADDOPTS=--cov-append
+                    tox
+        
+            - - Other
+              - ::
+        
+                    PYTEST_ADDOPTS=--cov-append tox
+        
+        
+        Changelog
+        =========
+        
+        0.8.0 (2019-09-06)
+        ------------------
+        
+        * Add support for the VNU_DONT_DELETE_TEMP .
+        
+        0.6.0 (2019-06-25)
+        ------------------
+        
+        * Add VnuSingleFileValidate . ( https://github.com/shlomif/python-vnu_validator/issues/4 )
+        
+        0.4.3 (2019-05-30)
+        ------------------
+        
+        * Python 2.7.x compatibility. ( https://github.com/shlomif/python-vnu_validator/issues/2 )
+        
+        0.4.2 (2018-11-06)
+        ------------------
+        
+        * Enhance the README to explain what it is all about.
+        
+        0.4.1 (2018-11-05)
+        ------------------
+        
+        * Fix a regression when cache_path is not specified.
+        
+        0.4.0 (2018-11-05)
+        ------------------
+        
+        * Add the cache_path feature for speedup.
+        
+        0.2.1 (2018-10-08)
+        ------------------
+        
+        * Add links to examples.
+        
+        0.2.0 (2018-10-08)
+        ------------------
+        
+        * Add some RST docstrings.
+        
+        0.1.0 (2018-10-07)
+        ------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
