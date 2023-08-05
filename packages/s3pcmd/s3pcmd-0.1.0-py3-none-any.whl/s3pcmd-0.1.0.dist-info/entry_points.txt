@@ -1,0 +1,3 @@
+[console_scripts]
+s3pcmd = s3pcmd:main
+

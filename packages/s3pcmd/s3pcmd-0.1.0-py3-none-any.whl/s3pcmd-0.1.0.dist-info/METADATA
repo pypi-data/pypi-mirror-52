@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: s3pcmd
+Version: 0.1.0
+Summary: S3P command line tool
+Home-page: https://github.com/felixgao/S3PCmd.git
+Author: Felix Gao
+License: http://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (>=1.3.1)
+Requires-Dist: pytz (>=2016.4)
+Requires-Dist: loguru (>=0.3.0)
+Requires-Dist: boto3-type-annotations (>=0.3.1)
+
+# S3P Command
+
+
