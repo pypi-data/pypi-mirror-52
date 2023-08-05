@@ -1,0 +1,10 @@
+README.rst
+setup.py
+src/s3simplebackup/__init__.py
+src/s3simplebackup/cli.py
+src/s3simplebackup.egg-info/PKG-INFO
+src/s3simplebackup.egg-info/SOURCES.txt
+src/s3simplebackup.egg-info/dependency_links.txt
+src/s3simplebackup.egg-info/entry_points.txt
+src/s3simplebackup.egg-info/requires.txt
+src/s3simplebackup.egg-info/top_level.txt
