@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+unary_coding/__init__.py
+unary_coding/__version__.py
+unary_coding/unary_coding.py
+unary_coding.egg-info/PKG-INFO
+unary_coding.egg-info/SOURCES.txt
+unary_coding.egg-info/dependency_links.txt
+unary_coding.egg-info/requires.txt
+unary_coding.egg-info/top_level.txt
