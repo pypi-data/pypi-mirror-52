@@ -1,0 +1,3 @@
+[console_scripts]
+syns = syns.syns:main
+
