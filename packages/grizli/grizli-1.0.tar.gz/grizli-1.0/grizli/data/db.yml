@@ -1,0 +1,6 @@
+# Grizli AWS database connection information
+hostname: grizdbinstance.c3prl6czsxrm.us-east-1.rds.amazonaws.com
+username: grizlisu
+password: 's16#pr1Q!Rghx$'
+database: grizlifields
+port: 5432
