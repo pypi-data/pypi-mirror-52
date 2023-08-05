@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+jupyter_nbgallery/__init__.py
+jupyter_nbgallery.egg-info/PKG-INFO
+jupyter_nbgallery.egg-info/SOURCES.txt
+jupyter_nbgallery.egg-info/dependency_links.txt
+jupyter_nbgallery.egg-info/top_level.txt
