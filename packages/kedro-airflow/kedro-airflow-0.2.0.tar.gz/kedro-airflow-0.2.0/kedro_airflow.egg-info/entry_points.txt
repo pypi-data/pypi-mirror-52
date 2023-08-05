@@ -1,0 +1,3 @@
+[kedro.project_commands]
+airflow = kedro_airflow.plugin:commands
+
