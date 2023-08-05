@@ -1,0 +1,414 @@
+---
+- name: Starting first MariaDB container
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "start_container"
+    common_options: "{{ docker_common_options }}"
+    environment:
+      KOLLA_CONFIG_STRATEGY: "{{ config_strategy }}"
+      BOOTSTRAP_ARGS: "--wsrep-new-cluster"
+    image: "{{ service.image }}"
+    labels:
+      BOOTSTRAP:
+    name: "{{ service.container_name }}"
+    restart_policy: "never"
+    volumes: "{{ service.volumes }}"
+    dimensions: "{{ service.dimensions }}"
+  when:
+    - bootstrap_host is defined
+    - bootstrap_host == inventory_hostname
+  listen: Bootstrap MariaDB cluster
+  notify:
+    - restart mariadb
+
+# TODO(jeffrey4l), remove the task check when the wait_for bug is fixed
+# https://github.com/ansible/ansible-modules-core/issues/2788
+- name: wait first mariadb container
+  wait_for:
+    host: "{{ api_interface_address }}"
+    port: "{{ mariadb_port }}"
+    connect_timeout: 1
+    timeout: 60
+    search_regex: "MariaDB"
+  register: check_mariadb_port
+  until: check_mariadb_port is success
+  retries: 10
+  delay: 6
+  when:
+    - bootstrap_host is defined
+    - bootstrap_host == inventory_hostname
+  listen: Bootstrap MariaDB cluster
+
+- name: Wait for MariaDB to become operational
+  become: true
+  command: >-
+    docker exec {{ mariadb_service.container_name }}
+    mysql -uroot -p{{ database_password }}
+    --silent --skip-column-names
+    -e 'SHOW STATUS LIKE "wsrep_evs_state"'
+  changed_when: false
+  register: result
+  until: '"OPERATIONAL" in result.stdout'
+  retries: 10
+  delay: 6
+  no_log: true
+  when:
+    - bootstrap_host is defined
+    - bootstrap_host == inventory_hostname
+  listen: Bootstrap MariaDB cluster
+
+# NOTE(mgoddard): In Rocky the MariaDB image had an issue where it would not
+# stop on demand, and would result in Docker forcibly killing the container.
+# This could lead to a failed upgrade if the new image is unable to recover
+# from the crash. See https://bugs.launchpad.net/kolla-ansible/+bug/1820325.
+# We need to remove the restart policy from the MariaDB container to ensure
+# that it does not start back up after being shut down.
+# TODO(mgoddard): Remove this task in Train.
+
+- name: check if slave mariadb is running
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_container_facts:
+    name:
+      - "{{ service.container_name }}"
+  register: initial_mariadb_container_facts
+  when:
+    - kolla_action != "config"
+    - has_cluster | bool
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+- name: remove restart policy from slave mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  command: "docker update --restart no {{ service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - has_cluster | bool
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+    - service.container_name in initial_mariadb_container_facts
+  listen: restart mariadb
+
+- name: shutdown slave mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "start_container"
+    command: >-
+      bash -c '
+      sudo -E kolla_set_configs &&
+      mysqladmin shutdown --host={{ api_interface_address }} --user=root --password={{ database_password }}
+      '
+    common_options: "{{ docker_common_options }}"
+    detach: False
+    name: "mariadb_shutdown"
+    image: "{{ service.image }}"
+    volumes: "{{ service.volumes }}"
+    dimensions: "{{ service.dimensions }}"
+    labels:
+      UPGRADE:
+    restart_policy: "never"
+  no_log: true
+  when:
+    - kolla_action != "config"
+    - has_cluster | bool
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+    - service.container_name in initial_mariadb_container_facts
+  listen: restart mariadb
+
+- name: wait for slave mariadb shutdown
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_container_facts:
+    name:
+      - "{{ service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - has_cluster | bool
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+    - service.container_name in initial_mariadb_container_facts
+  listen: restart mariadb
+  register: mariadb_container_facts
+  # Don't fail if the container is still up - we will stop it in the next task.
+  failed_when: false
+  until: service.container_name not in mariadb_container_facts
+  retries: 30
+  delay: 2
+
+# Sometimes the mariadb service can get into a partially shutdown
+# state following a 'mysqladmin shutdown'. Stop the container.
+- name: stop mariadb slave
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "stop_container"
+    common_options: "{{ docker_common_options }}"
+    name: "{{ mariadb_service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - service.container_name in mariadb_container_facts
+    - has_cluster | bool
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+    - service.container_name in initial_mariadb_container_facts
+  listen: restart mariadb
+
+- name: replace restart policy on slave mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+    restart_policy: "{{ docker_restart_policy }}{% if docker_restart_policy == 'on-failure' %}{{ docker_restart_policy_retry }}{% endif %}"
+  become: true
+  command: "docker update --restart {{ restart_policy }} {{ service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - has_cluster | bool
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+    - service.container_name in initial_mariadb_container_facts
+  listen: restart mariadb
+
+- name: restart slave mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "recreate_or_restart_container"
+    common_options: "{{ docker_common_options }}"
+    name: "{{ service.container_name }}"
+    image: "{{ service.image }}"
+    volumes: "{{ service.volumes }}"
+    dimensions: "{{ service.dimensions }}"
+  when:
+    - kolla_action != "config"
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+# TODO(jeffrey4l), remove the task check when the wait_for bug is fixed
+# https://github.com/ansible/ansible-modules-core/issues/2788
+- name: wait for slave mariadb
+  wait_for:
+    host: "{{ api_interface_address }}"
+    port: "{{ mariadb_port }}"
+    connect_timeout: 1
+    timeout: 60
+    search_regex: "MariaDB"
+  register: check_mariadb_port
+  until: check_mariadb_port is success
+  retries: 10
+  delay: 6
+  when:
+    - kolla_action != "config"
+    - inventory_hostname != master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+- name: run upgrade on slave
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "start_container"
+    common_options: "{{ docker_common_options }}"
+    detach: False
+    dimensions: "{{ service.dimensions }}"
+    environment:
+      KOLLA_UPGRADE:
+      KOLLA_CONFIG_STRATEGY: "{{ config_strategy }}"
+      DB_HOST: "{{ api_interface_address }}"
+      DB_PORT: "{{ mariadb_port }}"
+      DB_ROOT_PASSWORD: "{{ database_password }}"
+    image: "{{ service.image }}"
+    labels:
+      UPGRADE:
+    name: "upgrade_mariadb"
+    restart_policy: "never"
+    volumes: "{{ service.volumes }}"
+  no_log: true
+  when:
+    - kolla_action == "upgrade"
+    - inventory_hostname != master_host
+  listen: restart mariadb
+
+# NOTE(mgoddard): In Rocky the MariaDB image had an issue where it would not
+# stop on demand, and would result in Docker forcibly killing the container.
+# This could lead to a failed upgrade if the new image is unable to recover
+# from the crash. See https://bugs.launchpad.net/kolla-ansible/+bug/1820325.
+# We need to remove the restart policy from the MariaDB container to ensure
+# that it does not start back up after being shut down.
+# TODO(mgoddard): Remove this task in Train.
+
+- name: remove restart policy from master mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  command: "docker update --restart no {{ service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+- name: shutdown master mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "start_container"
+    command: >-
+      bash -c '
+      sudo -E kolla_set_configs &&
+      mysqladmin shutdown --host={{ api_interface_address }} --user=root --password={{ database_password }}
+      '
+    common_options: "{{ docker_common_options }}"
+    detach: False
+    name: "mariadb_shutdown"
+    image: "{{ service.image }}"
+    volumes: "{{ service.volumes }}"
+    dimensions: "{{ service.dimensions }}"
+    labels:
+      UPGRADE:
+    restart_policy: "never"
+  no_log: true
+  when:
+    - kolla_action != "config"
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+- name: wait for master mariadb shutdown
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_container_facts:
+    name:
+      - "{{ service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+  register: mariadb_container_facts
+  # Don't fail if the container is still up - we will stop it in the next task.
+  failed_when: false
+  until: service.container_name not in mariadb_container_facts
+  retries: 30
+  delay: 2
+
+# Sometimes the mariadb service can get into a partially shutdown
+# state following a 'mysqladmin shutdown'. Stop the container.
+- name: stop mariadb master
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "stop_container"
+    common_options: "{{ docker_common_options }}"
+    name: "{{ mariadb_service.container_name }}"
+  listen: restart mariadb
+  when:
+    - service.container_name in mariadb_container_facts
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+
+- name: replace restart policy on master mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+    restart_policy: "{{ docker_restart_policy }}{% if docker_restart_policy == 'on-failure' %}{{ docker_restart_policy_retry }}{% endif %}"
+  become: true
+  command: "docker update --restart {{ restart_policy }} {{ service.container_name }}"
+  when:
+    - kolla_action != "config"
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+- name: restart master mariadb
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "recreate_or_restart_container"
+    common_options: "{{ docker_common_options }}"
+    name: "{{ service.container_name }}"
+    image: "{{ service.image }}"
+    volumes: "{{ service.volumes }}"
+    dimensions: "{{ service.dimensions }}"
+  when:
+    - kolla_action != "config"
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+# TODO(jeffrey4l), remove the task check when the wait_for bug is fixed
+# https://github.com/ansible/ansible-modules-core/issues/2788
+- name: Waiting for master mariadb
+  wait_for:
+    host: "{{ api_interface_address }}"
+    port: "{{ mariadb_port }}"
+    connect_timeout: 1
+    timeout: 60
+    search_regex: "MariaDB"
+  register: check_mariadb_port
+  until: check_mariadb_port is success
+  retries: 10
+  delay: 6
+  when:
+    - kolla_action != "config"
+    - inventory_hostname == master_host
+    - not mariadb_recover | default(false)
+  listen: restart mariadb
+
+- name: run upgrade on master
+  vars:
+    service_name: "mariadb"
+    service: "{{ mariadb_services[service_name] }}"
+  become: true
+  kolla_docker:
+    action: "start_container"
+    common_options: "{{ docker_common_options }}"
+    detach: False
+    dimensions: "{{ service.dimensions }}"
+    environment:
+      KOLLA_UPGRADE:
+      KOLLA_CONFIG_STRATEGY: "{{ config_strategy }}"
+      DB_HOST: "{{ api_interface_address }}"
+      DB_PORT: "{{ mariadb_port }}"
+      DB_ROOT_PASSWORD: "{{ database_password }}"
+    image: "{{ service.image }}"
+    labels:
+      UPGRADE:
+    name: "upgrade_mariadb"
+    restart_policy: "never"
+    volumes: "{{ service.volumes }}"
+  no_log: true
+  when:
+    - kolla_action == "upgrade"
+    - inventory_hostname == master_host
+  listen: restart mariadb
