@@ -1,0 +1,3 @@
+[console_scripts]
+sccloud = sccloud.__main__:main
+
