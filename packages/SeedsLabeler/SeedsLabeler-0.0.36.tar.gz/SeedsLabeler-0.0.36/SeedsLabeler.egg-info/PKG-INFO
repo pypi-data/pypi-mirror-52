@@ -1,0 +1,31 @@
+Metadata-Version: 1.2
+Name: SeedsLabeler
+Version: 0.0.36
+Summary: Seeds annotation tool
+Home-page: https://github.com/meryusha/seeds_labeler/
+Author: Merey Ramazanova, Silvio Giancola
+Author-email: merey.ramazanova@kaust.edu.sa
+License: MIT license
+Description: # Seeds Labeler
+        
+        install with `pip install SeedsLabeler`
+        
+        # Update pip:
+        
+        `python setup.py upload`
+        
+        
+        
+Keywords: TCPClient
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.0.0
