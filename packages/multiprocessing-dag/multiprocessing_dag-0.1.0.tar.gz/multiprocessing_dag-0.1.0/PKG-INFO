@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: multiprocessing_dag
+Version: 0.1.0
+Summary: Use Python's multiprocessing module to execute a DAG of functions in separate processes.
+Home-page: https://www.github.com/ecdavis/multiprocessing_dag
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
