@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: ekmmeters
+Version: 0.2.5
+Summary: Python API for V3 and V4 EKM Omnimeters
+Home-page: https://github.com/ekmmetering/ekmmeters
+Author: EKM Metering
+Author-email: info@ekmmetering.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
