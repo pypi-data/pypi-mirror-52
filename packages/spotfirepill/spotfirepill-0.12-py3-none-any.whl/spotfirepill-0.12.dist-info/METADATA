@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: spotfirepill
+Version: 0.12
+Summary: This will use spotfire REST API end points to login & execute the jobs
+Home-page: https://github.com/tagnev/spotfirepill
+Author: Vengat
+Author-email: tagnev.vengat@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+using this package, we can execute the existing the  Spofire Automation jobs and check the status
+
+
