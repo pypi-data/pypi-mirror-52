@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dtool_overlay/__init__.py
+dtool_overlay/cli.py
+dtool_overlay/utils.py
+dtool_overlay.egg-info/PKG-INFO
+dtool_overlay.egg-info/SOURCES.txt
+dtool_overlay.egg-info/dependency_links.txt
+dtool_overlay.egg-info/entry_points.txt
+dtool_overlay.egg-info/requires.txt
+dtool_overlay.egg-info/top_level.txt
