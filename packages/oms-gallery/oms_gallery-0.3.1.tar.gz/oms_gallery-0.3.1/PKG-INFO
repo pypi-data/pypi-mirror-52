@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: oms_gallery
+Version: 0.3.1
+Summary: Image management for Django.
+Home-page: https://github.com/DJWOMS/oms-gallery
+Author: Omelchenko Michael - DJWOMS
+Author-email: djwoms@gmail.com
+License: UNKNOWN
+Description: OMS-GALLERY
+        =================
+        
+        A image management and gallery application for the Django web framework. Upload photos, upload photos zip-achieve, group them into galleries.
+        
+        Install
+        --------
+        ::
+        
+            pip install oms_gallery
+        
+            INSTALLED_APPS = [
+            
+                'oms-gallery',
+            ]
+            
+            python manage.py migrate
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
