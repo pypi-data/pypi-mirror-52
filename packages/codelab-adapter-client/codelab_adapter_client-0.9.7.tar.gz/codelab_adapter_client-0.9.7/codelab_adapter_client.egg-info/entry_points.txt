@@ -1,0 +1,4 @@
+[console_scripts]
+codelab-message-monitor = codelab_adapter_client.tools.monitor:monitor
+codelab-message-trigger = codelab_adapter_client.tools.trigger:trigger
+
