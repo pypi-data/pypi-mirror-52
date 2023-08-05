@@ -1,0 +1,11 @@
+pytest
+scipy
+numpy
+pandas
+dask[complete]
+ta-lib
+loguru
+spaceman
+prometheus-client
+requests-futures
+influxdb
