@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+src/birdclient/__init__.py
+src/birdclient.egg-info/PKG-INFO
+src/birdclient.egg-info/SOURCES.txt
+src/birdclient.egg-info/dependency_links.txt
+src/birdclient.egg-info/top_level.txt
