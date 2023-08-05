@@ -1,0 +1,13 @@
+README.md
+setup.py
+gameai_frame/GameRole.py
+gameai_frame/Matrix.py
+gameai_frame/NeuroNetwork.py
+gameai_frame/Population.py
+gameai_frame/__init__.py
+gameai_frame/global_vars.py
+gameai_frame.egg-info/PKG-INFO
+gameai_frame.egg-info/SOURCES.txt
+gameai_frame.egg-info/dependency_links.txt
+gameai_frame.egg-info/requires.txt
+gameai_frame.egg-info/top_level.txt
