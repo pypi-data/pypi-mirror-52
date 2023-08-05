@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: vertices
+Version: 0.0.4
+Summary: Convert an obj with n vertices into one with p vertices
+Home-page: https://github.com/yaledhlab/vertices
+Author: Douglas Duhaime
+Author-email: douglas.duhaime@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: geometry,2d,3d,mesh,obj,wavefront,d3,webgl
+Platform: UNKNOWN
