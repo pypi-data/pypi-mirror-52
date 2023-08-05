@@ -1,0 +1,3 @@
+[console_scripts]
+monicacrm = monicacrm.cli:main
+
