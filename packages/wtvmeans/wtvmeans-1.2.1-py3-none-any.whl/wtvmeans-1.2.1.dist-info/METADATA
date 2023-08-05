@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wtvmeans
+Version: 1.2.1
+Summary: A library implementing k-means wrappers
+Home-page: UNKNOWN
+Author: Alban Siffer
+Author-email: alban.siffer@irisa.fr
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: unidip
+Requires-Dist: hftu
+
+UNKNOWN
+
+
