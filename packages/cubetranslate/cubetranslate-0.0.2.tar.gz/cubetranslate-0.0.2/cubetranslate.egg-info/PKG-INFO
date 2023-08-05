@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cubetranslate
+Version: 0.0.2
+Summary: try how to upload pip package
+Home-page: http://www.renren.com/u/1f4a7323
+Author: xuzl71
+Author-email: xuzlfight@qq.com
+License: MIT
+Description: - cubetranslate
+        - test
+Platform: UNKNOWN
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
