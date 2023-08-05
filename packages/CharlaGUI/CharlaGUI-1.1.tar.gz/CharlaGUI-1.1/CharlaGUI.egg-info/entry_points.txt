@@ -1,0 +1,3 @@
+[console_scripts]
+charlagui = charlagui.__main__:start
+
