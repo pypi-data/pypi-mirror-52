@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: leaderelection
+Version: 0.0.1
+Summary: Kubernetes leader election
+Home-page: https://github.com/jdamata
+Author: Joel Damata
+Author-email: joel.damata94@gmail.com
+License: GPL3
+Download-URL: https://github.com/jdamata/k8s-leader-election-py/archive/0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: Kubernetes,Controller,Leader,Election
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
