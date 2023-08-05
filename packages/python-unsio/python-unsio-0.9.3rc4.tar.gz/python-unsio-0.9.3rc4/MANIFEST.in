@@ -1,0 +1,3 @@
+include py/unsio/numpy.i py/unsio/py_unsio.i
+include src/uns.h src/snapshotinterface.h src/componentrange.h src/userselection.h src/snapshotinterface.h src/ctools.h src/version.h
+exclude py/unsio/py_unsio.py py/unsio/version.py
