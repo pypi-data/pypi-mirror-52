@@ -1,0 +1,3 @@
+[console_scripts]
+simiotics_s3 = simiotics_s3.cli:main
+
