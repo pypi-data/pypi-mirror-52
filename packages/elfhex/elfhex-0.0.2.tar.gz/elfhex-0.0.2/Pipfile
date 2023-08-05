@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+rope = "*"
+autopep8 = "*"
+setuptools = "*"
+wheel = "*"
+pbr = "*"
+pytest = "<=5.0.1"
+pytest-mock = "*"
+pytest-cov = "*"
+coverage = "*"
+
+[packages]
+lark-parser = "*"
+
+[requires]
+python_version = "3.6"
