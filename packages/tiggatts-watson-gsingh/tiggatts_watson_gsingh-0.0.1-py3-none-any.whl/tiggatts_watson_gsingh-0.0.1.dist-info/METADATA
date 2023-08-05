@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tiggatts-watson-gsingh
+Version: 0.0.1
+Summary: Watson TTS Implementation
+Home-page: https://github.com/Gamandeep-Singh/TiggaTTS
+Author: Gamandeep Singh
+Author-email: gamandeep.singh@tiggamail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# TiggaTTS
+
+This Module is designed to convert Text to Speech format. 
+It will generate Wav file for any Text-String passed to the module.
+
