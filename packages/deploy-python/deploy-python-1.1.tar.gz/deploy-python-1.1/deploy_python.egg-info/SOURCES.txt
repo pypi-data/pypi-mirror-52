@@ -1,0 +1,10 @@
+README.rst
+setup.py
+deploy_python/__init__.py
+deploy_python/commands.py
+deploy_python/tests.py
+deploy_python.egg-info/PKG-INFO
+deploy_python.egg-info/SOURCES.txt
+deploy_python.egg-info/dependency_links.txt
+deploy_python.egg-info/requires.txt
+deploy_python.egg-info/top_level.txt
