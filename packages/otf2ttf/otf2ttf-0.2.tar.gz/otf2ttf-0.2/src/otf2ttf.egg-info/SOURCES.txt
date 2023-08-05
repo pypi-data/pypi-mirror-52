@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/otf2ttf/__init__.py
+src/otf2ttf/cli.py
+src/otf2ttf.egg-info/PKG-INFO
+src/otf2ttf.egg-info/SOURCES.txt
+src/otf2ttf.egg-info/dependency_links.txt
+src/otf2ttf.egg-info/entry_points.txt
+src/otf2ttf.egg-info/requires.txt
+src/otf2ttf.egg-info/top_level.txt
