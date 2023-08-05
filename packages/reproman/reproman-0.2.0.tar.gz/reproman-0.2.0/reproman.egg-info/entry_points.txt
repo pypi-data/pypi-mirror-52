@@ -1,0 +1,3 @@
+[console_scripts]
+reproman = reproman.cmdline.main:main
+

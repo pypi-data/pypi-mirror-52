@@ -1,0 +1,28 @@
+{#
+  FIXME: How to handle spaces in file names?
+#}
+
+Universe     = vanilla
+Executable   = {{ meta_directory }}/runscript
+environment  = ""
+
+Output  = {{ meta_directory }}/stdout.$(Process)
+Error   = {{ meta_directory }}/stderr.$(Process)
+Log     = {{ meta_directory }}/log.$(Process)
+
+{#
+  TODO: Need to check spec form compatibility between different batch
+  systems.
+#}
+
+{% if memory is defined %}
+request_memory = {{ memory }}
+{% endif %}
+
+{% if num_processes is defined %}
+request_cpus = {{ num_processes }}
+{% endif %}
+
+getenv = True
+arguments = "$(Process)"
+queue {{ num_subjobs }}
