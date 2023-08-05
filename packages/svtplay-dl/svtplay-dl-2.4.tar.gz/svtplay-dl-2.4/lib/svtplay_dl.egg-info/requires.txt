@@ -1,0 +1,5 @@
+requests>=2.0.0
+PySocks
+cryptography
+pyyaml
+python-dateutil
