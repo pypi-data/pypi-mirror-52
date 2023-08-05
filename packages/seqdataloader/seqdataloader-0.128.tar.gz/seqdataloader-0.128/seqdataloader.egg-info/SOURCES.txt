@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+./README.md
+./docs/README.md
+./examples/bigwig_files_from_encode_for_label_comparison/README.md
+docs/README.md
+examples/genomewide_labels_examples.py
+examples/genomewide_labels_examples.sh
+examples/hg38.chrom.sizes
+examples/bigwig_files_from_encode_for_label_comparison/download_bigwigs.sh
+seqdataloader.egg-info/PKG-INFO
+seqdataloader.egg-info/SOURCES.txt
+seqdataloader.egg-info/dependency_links.txt
+seqdataloader.egg-info/entry_points.txt
+seqdataloader.egg-info/requires.txt
+seqdataloader.egg-info/top_level.txt
