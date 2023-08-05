@@ -1,0 +1,3 @@
+[console_scripts]
+screentime = screentime.screentime:main
+
