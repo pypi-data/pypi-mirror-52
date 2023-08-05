@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: arbytmap
+Version: 1.0.3
+Summary: A texture manipulation module for python 3.
+Home-page: http://bitbucket.org/Moses_of_Egypt/arbytmap
+Author: Devin Bobadilla
+Author-email: MosesBobadilla@gmail.com
+License: MIT
+Description: Since PyPI refuses to let me upload due to my readme being Markdown, I wont be using a readme.
+Keywords: arbytmap,texture,bitmap,converter,image,editing
+Platform: POSIX
+Platform: Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Provides: arbytmap
