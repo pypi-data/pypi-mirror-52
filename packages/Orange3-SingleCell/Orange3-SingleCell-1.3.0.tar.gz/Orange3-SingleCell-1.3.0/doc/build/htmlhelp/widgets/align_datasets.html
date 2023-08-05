@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="cp1252" />
+    <title>Align Datasets</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Score Genes" href="score_genes.html" />
+    <link rel="prev" title="Batch Effect Removal" href="batch_effect_removal.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="score_genes.html" title="Score Genes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="batch_effect_removal.html" title="Batch Effect Removal"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">scOrange 0.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="align-datasets">
+<h1>Align Datasets</h1>
+<p>Alignment of multiple datasets with a diagram of correlation visualization.</p>
+<p><strong>Inputs</strong>
+- Data: single cell dataset</p>
+<p><strong>Outputs</strong>
+- Transformed Data: aligned data
+- Genes per n. Components</p>
+<p>![](images/Align_Datasets-stamped.png)</p>
+<ol class="arabic simple">
+<li><p>Data source indicator</p></li>
+<li><p>Number of components for canonical correlation analysis.</p></li>
+<li><p>Number of shared genes and the scoring method for alignment. Scoring can be done with [Pearson](<a class="reference external" href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient" target="_blank">https://en.wikipedia.org/wiki/Pearson_correlation_coefficient</a>), [Spearman](<a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient" target="_blank">https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient</a>) and [Biweights midcorrelation](<a class="reference external" href="https://en.wikipedia.org/wiki/Biweight_midcorrelation" target="_blank">https://en.wikipedia.org/wiki/Biweight_midcorrelation</a>).</p></li>
+<li><p>Tick the box to use the percent of quantile normalization and dynamic time warping.</p></li>
+<li><p>If <em>Apply automatically</em> is ticked, the results will be communicated automatically. Alternatively, press <em>Apply</em>.</p></li>
+</ol>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="score_genes.html" title="Score Genes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="batch_effect_removal.html" title="Batch Effect Removal"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">scOrange 0.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Biolab.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>
