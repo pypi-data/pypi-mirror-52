@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: tayuya
+Version: 0.0.1
+Summary: MIDI to guitar tabs generator
+Home-page: https://github.com/vipul-sharma20/tayuya
+Author: Vipul Sharma
+Author-email: vipul.sharma20@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mido
+Requires-Dist: music21
+
+Tayuya
+======
+
+A tool to convert MIDI files to tablatures of stringed instruments
+
+---
+> :construction: __NOTE:__ This is a work in progress :construction_worker_man: :construction_worker_woman:
+---
+
+### The name
+
+[Tayuya](https://naruto.fandom.com/wiki/Tayuya) (たゆや)
+
+
