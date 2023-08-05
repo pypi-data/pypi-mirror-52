@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: geoai-GDAL
+Version: 2.3.9
+Summary: GDAL: Geospatial Data Abstraction Library
+Home-page: http://www.gdal.org
+Author: Frank Warmerdam
+Author-email: warmerdam@pobox.com
+Maintainer: Howard Butler
+Maintainer-email: hobu.inc@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+
+UNKNOWN
+
+
