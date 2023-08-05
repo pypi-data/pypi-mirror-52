@@ -1,0 +1,3 @@
+[console_scripts]
+AwesomeBuild = AwesomeBuild.__main__:main
+
