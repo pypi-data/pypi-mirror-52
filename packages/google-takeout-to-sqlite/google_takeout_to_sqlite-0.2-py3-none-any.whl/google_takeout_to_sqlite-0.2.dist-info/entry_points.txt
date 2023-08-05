@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        google-takeout-to-sqlite=google_takeout_to_sqlite.cli:cli
+    
