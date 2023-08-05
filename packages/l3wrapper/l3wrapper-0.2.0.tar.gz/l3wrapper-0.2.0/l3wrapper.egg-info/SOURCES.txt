@@ -1,0 +1,10 @@
+README.rst
+setup.py
+l3wrapper/__init__.py
+l3wrapper/classification.py
+l3wrapper/dictionary.py
+l3wrapper.egg-info/PKG-INFO
+l3wrapper.egg-info/SOURCES.txt
+l3wrapper.egg-info/dependency_links.txt
+l3wrapper.egg-info/requires.txt
+l3wrapper.egg-info/top_level.txt
