@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: instru
+Version: 0.1.0
+Summary: 
+Author: James Maxwell
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: qcodes (>=0.5.2,<0.6.0)
