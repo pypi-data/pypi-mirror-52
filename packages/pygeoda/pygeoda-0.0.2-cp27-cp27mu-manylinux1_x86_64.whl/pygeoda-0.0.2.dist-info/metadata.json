@@ -1,0 +1,1 @@
+{"extensions": {"python.details": {"contacts": [{"email": "lixun910@gmail.com", "name": "Xun Li", "role": "author"}], "document_names": {"description": "DESCRIPTION.rst"}, "project_urls": {"Home": "https://github.com/lixun910/libgeoda"}}}, "generator": "bdist_wheel (0.30.0)", "metadata_version": "2.0", "name": "pygeoda", "summary": "Python wrapper for GeoDa", "version": "0.0.2"}
