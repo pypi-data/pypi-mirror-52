@@ -1,0 +1,7 @@
+matplotlib
+numpy>=1.12
+scipy
+shapely
+
+[test]
+pytest
