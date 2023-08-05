@@ -1,0 +1,7 @@
+tgs
+tgs/exporters
+tgs/objects
+tgs/parsers
+tgs/parsers/sif
+tgs/parsers/svg
+tgs/utils
