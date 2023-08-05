@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: sideeye
+Version: 1.0.0a11
+Summary: Library for analyzing eye-tracking-while-reading data
+Home-page: https://github.com/amnda-d/sideeye
+Author: Amanda Doucette
+Author-email: sideeye@amnda.me
+License: MIT
+Project-URL: Documentation, https://sideeye.readthedocs.io/en/latest/
+Keywords: eyetracking eye-tracking da1 psycholinguistics linguistics psychology eyetrack
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: typing
+Requires-Dist: mypy
+Requires-Dist: mypy-extensions
+Provides-Extra: dev
+Requires-Dist: nose2 ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: nose2 ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+
+========
+SideEye
+========
+|circleci| |docs|
+
+SideEye is still in beta! New features are in development, but if you find any bugs or have suggestions, `Open a GitHub issue <https://github.com/zediski/sideeye/issues/new/choose>`_ or email `sideeye@amnda.me <sideeye@amnda.me>`_.
+
+SideEye is a Python package for processing eye tracking data that interfaces with EyeTrack and Experiment Builder.
+
+It is meant to parse eye-tracking-while-reading data and calculate useful experimental measures. Currently, SideEye can only parse the .DA1 file format and some .ASC formats, but other formats will be added later. The goal is to parse all eye-tracking-while-reading data into a common format, and provide a consistent and accurate method for processing the data.
+
+Documentation (currently incomplete, but more detail than provided here) can be found at `sideeye.readthedocs.io <http://sideeye.readthedocs.io/en/latest/index.html#>`_.
+
+Refer to `examples/sample.py <examples/sample.py>`_ for an up-to-date sample script.
+
+Installation
+------------------
+
+SideEye requires Python >= 3.6.
+
+::
+
+  pip install sideeye
+
+
+.. |docs| image:: https://readthedocs.org/projects/sideeye/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: https://sideeye.readthedocs.io/en/latest/?badge=latest
+
+.. |circleci| image:: https://circleci.com/gh/amnda-d/sideeye/tree/master.svg?style=shield
+    :alt: Build Status
+    :scale: 100%
+    :target: https://circleci.com/gh/amnda-d/sideeye/tree/master
+
+
