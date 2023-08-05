@@ -1,0 +1,13 @@
+README.md
+setup.py
+urltrigger.py
+gsselect/__init__.py
+gsselect/gemcats.py
+gsselect/gsselect.py
+gsselect/inpoly.py
+gsselect/parangle.py
+gsselect.egg-info/PKG-INFO
+gsselect.egg-info/SOURCES.txt
+gsselect.egg-info/dependency_links.txt
+gsselect.egg-info/requires.txt
+gsselect.egg-info/top_level.txt
