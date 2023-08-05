@@ -1,0 +1,16 @@
+contentful_orm/__init__.py,sha256=7lcA1gpR7Ynhq6xw2sUmvm_bVomn0o1r-t4DSgo6-SM,66
+contentful_orm/errors.py,sha256=fGC0pFNsBPAcJwF6bJIQW70zVZPWD9prR13WAnzycCs,44
+contentful_orm/locales.py,sha256=IJvTEwwrAewJdS3BqmnrefdP6eYykuIsct50yeyE3oo,358
+contentful_orm/models.py,sha256=o2te6PrFBBIahTXT29acjvDtd0S7Q5lEIGMazwOTJPM,5189
+contentful_orm/operators.py,sha256=nnOS8cgTPUFd1eu9KetaJVw7I_PxeIQi8WaSiZ9r-BQ,1926
+contentful_orm/orm_content_type_entries_proxy.py,sha256=9rFGnerFSdhSp85k8HfmmeOZkrH5jC1rzMRHubDiSx0,2039
+contentful_orm/orm_environment.py,sha256=WpJNfrNxUhThmBYwVife8AexOC-xWaBZdXtwFy-Xjro,694
+contentful_orm/serializers.py,sha256=WiW2cfqjXXuCQlMXLaCeTwH3nY4vZHYSxPyCmgvMvh0,1479
+contentful_orm/utils.py,sha256=IPn2K1uEFiOP75brxaDS_QiNsZbhX62MkvUso1bfHow,2311
+contentful_orm/fields/__init__.py,sha256=M1Xwt5OKpUdACnEEobBAdLBMMYDaitNK3s8ukockVWM,22
+contentful_orm/fields/fields.py,sha256=TYr_NGZpSFj0nDmHpl33k1iKqWtOahuMMy-CEZQAH60,3299
+contentful_orm/fields/validations.py,sha256=VFISD8EJjpKLItcXzf3I6S5G4xr4lhXV6UfnHW4Ok4I,3759
+contentful_orm-0.1.0.dist-info/METADATA,sha256=bLImMI4gsE81UVCE1GxrUq6Jm5vmM7V3P1NSw_oN5po,7139
+contentful_orm-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+contentful_orm-0.1.0.dist-info/top_level.txt,sha256=b4U4272sEuyth6Lu1OSZ0JQEwtUeV1NavGl-e-ayY64,15
+contentful_orm-0.1.0.dist-info/RECORD,,
