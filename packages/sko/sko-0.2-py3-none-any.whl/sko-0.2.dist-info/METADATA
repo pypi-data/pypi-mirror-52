@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sko
+Version: 0.2
+Summary: Genetic Algorithm, Particle Swarm Optimization, Simulated Annealing, Ant Colony Algorithm in Python
+Home-page: https://github.com/guofei9987/scikit-opt
+Author: Guofei
+Author-email: guofei9987@foxmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+UNKNOWN
+
+
