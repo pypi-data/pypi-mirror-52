@@ -1,0 +1,8 @@
+aws_cdk/aws_guardduty/__init__.py,sha256=To87Ujmxhu56iB2dMisgML4NsdYYrmG8ptHhAsaB3hY,49340
+aws_cdk/aws_guardduty/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_guardduty/_jsii/__init__.py,sha256=HYe19HfCWrirGkrqrUGvtl106_J-W58jjF_KCBu5J0w,200
+aws_cdk/aws_guardduty/_jsii/aws-guardduty@1.8.0.jsii.tgz,sha256=GyxNZbZN8ZPAz78ePJr3aMUu8ZQufeBxhc5e402U7GM,26738
+aws_cdk.aws_guardduty-1.8.0.dist-info/METADATA,sha256=dhDFUBeskcjLXKo_Y_5dLaMWvKJnqr55L6zALTb5g5Y,1179
+aws_cdk.aws_guardduty-1.8.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+aws_cdk.aws_guardduty-1.8.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_guardduty-1.8.0.dist-info/RECORD,,
