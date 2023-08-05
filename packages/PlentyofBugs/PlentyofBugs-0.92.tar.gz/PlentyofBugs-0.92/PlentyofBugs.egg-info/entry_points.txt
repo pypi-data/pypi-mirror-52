@@ -1,0 +1,4 @@
+[console_scripts]
+get_n_genomes = pob.get_n_genomes:main
+plentyofbugs = pob.plentyofbugs:main
+

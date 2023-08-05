@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+PlentyofBugs.egg-info/PKG-INFO
+PlentyofBugs.egg-info/SOURCES.txt
+PlentyofBugs.egg-info/dependency_links.txt
+PlentyofBugs.egg-info/entry_points.txt
+PlentyofBugs.egg-info/top_level.txt
+pob/__init__.py
+pob/_version.py
+pob/get_n_genomes.py
+pob/plentyofbugs.py
+pob/test_plentyofbugs.py
