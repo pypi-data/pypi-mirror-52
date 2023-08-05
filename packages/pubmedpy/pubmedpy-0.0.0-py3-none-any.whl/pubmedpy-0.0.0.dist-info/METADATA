@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pubmedpy
+Version: 0.0.0
+Summary: Utilities for interacting with NCBI EUtilities relating to PubMed
+Home-page: https://github.com/dhimmel/pubmedpy
+Author: Daniel Himmelstein
+Author-email: daniel.himmelstein@gmail.com
+License: BlueOak-1.0.0
+Project-URL: Source, https://github.com/dhimmel/pubmedpy
+Project-URL: Tracker, https://github.com/dhimmel/pubmedpy/issues
+Keywords: pubmed eutilities bibliometrics
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Provides-Extra: all
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: flake8 ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+
+# Utilities for interacting with NCBI EUtilities relating to PubMed
+
+
