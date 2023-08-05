@@ -1,0 +1,10 @@
+jsonschema<3.0.0
+flasgger==0.9.3
+Flask
+Flask-Caching
+Flask-Compress
+future
+itsdangerous
+pandas
+scipy
+six
