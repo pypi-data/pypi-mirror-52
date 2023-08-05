@@ -1,0 +1,12 @@
+README.md
+setup.py
+pdf_wizard.egg-info/PKG-INFO
+pdf_wizard.egg-info/SOURCES.txt
+pdf_wizard.egg-info/dependency_links.txt
+pdf_wizard.egg-info/not-zip-safe
+pdf_wizard.egg-info/requires.txt
+pdf_wizard.egg-info/top_level.txt
+pdfwizard/__init__.py
+pdfwizard/pdfwizard
+pdfwizard/models/__init__.py
+pdfwizard/models/book.py

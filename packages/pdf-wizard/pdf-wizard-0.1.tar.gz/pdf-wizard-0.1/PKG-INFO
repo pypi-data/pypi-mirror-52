@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pdf-wizard
+Version: 0.1
+Summary: A command line tool to list and tidy up pdf files
+Home-page: https://gitlab.com/saavedra29/pdf-wizard
+Author: Aristeidis Tomaras
+Author-email: arisgold29@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: pdf command
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities

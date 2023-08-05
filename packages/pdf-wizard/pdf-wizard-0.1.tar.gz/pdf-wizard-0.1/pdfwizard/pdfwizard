@@ -1,0 +1,191 @@
+#!/usr/bin/env python
+
+import argparse
+import logging
+import os
+import magic
+import sys
+import shutil
+from PyPDF4 import PdfFileReader
+from PyPDF4.utils import PdfReadError
+from pdfwizard.models.book import Book
+
+FIELDS = ["title", "author", "subject", "pages", "size", "filepath"]
+
+
+def walkingError(e):
+    print("Problem scanning directory: {}".format(str(e)))
+    print("Please correct the problem")
+    print("Scanning continues..")
+
+def rmEmptyDirs(path):
+    for dirpath, _, _ in os.walk(path, topdown=False):  # Listing the files
+        if dirpath == path:
+            break
+        try:
+            os.rmdir(dirpath)
+        except OSError as ex:
+            pass
+
+def getFilesPaths(homedir):
+    pdfFiles = []
+    nonPdfFiles = []
+    full_path_homedir = os.path.abspath(homedir)
+    for dirname, dirnames, filenames in os.walk(full_path_homedir, onerror=walkingError):
+            # for subdirname in dirnames:
+            #     print(os.path.join(dirname, subdirname))
+        for filename in filenames:
+            fullfilepath = os.path.join(dirname, filename)
+            try:
+                mimetype = magic.from_file(fullfilepath, mime=True)
+            except PermissionError as e:
+                print("Could not move the '{}' file".format(fullfilepath))
+                print("Continueing..")
+                continue
+            if mimetype == "application/pdf":
+                pdfFiles.append(fullfilepath)
+            else:
+                nonPdfFiles.append(fullfilepath)
+    return pdfFiles, nonPdfFiles
+
+
+
+def fillLibraryFromPaths(filepaths):
+    library = []
+    for filepath in filepaths:
+            fileSize = os.path.getsize(filepath)
+            with open(filepath, 'rb') as f:
+                try:
+                    pdf = PdfFileReader(f)
+                    information = pdf.getDocumentInfo()
+                    pagenum = pdf.getNumPages()
+                except (ValueError, PdfReadError):
+                    pass
+            book = Book(
+                information.title if information.title else "",
+                information.author if information.author else "",
+                information.subject if information.subject else "",
+                pagenum if pagenum else 0,
+                fileSize,
+                filepath
+            )
+            library.append(book)
+    return library
+
+
+def create(args):
+    pass
+
+
+def listFiles(args):
+    # Check if fields is valid
+    splitedFields = args.fields.split(",")
+    for field in splitedFields:
+        if field not in FIELDS:
+            sys.exit("Invalid --field arguments: {}".format(args.fields))
+
+    # Scan the homedir folder for pdf files, create Book objects and put them in a Library
+    filepaths, _ = getFilesPaths(args.homedir)
+    library = fillLibraryFromPaths(filepaths)
+
+    # If --search is specified filter out the entries that don't contain it
+    if args.search:
+        library = [book for book in library if book.contains(args.search)]
+
+    # Change the order according to the --order-by flag and check for ascending or descending
+    library.sort(key=lambda x: getattr(x, args.order_by), reverse=(True if args.desc else False))
+
+    # Tell the printer what fields to show
+    text = "-----------------------------------------\n"
+    for field in args.fields.split(","):
+        if field == "title":
+            text += "Title:         {0}\n"
+        elif field == "author":
+            text += "Author:        {1}\n"
+        elif field == "subject":
+            text += "Subject:       {2}\n"
+        elif field == "pages":
+            text += "Pages:         {3}\n"
+        elif field == "size":
+            text += "Size:          {4} Bytes\n"
+        elif field == "filepath":
+            text += "Filepath:      {5}\n"
+    setattr(Book, "infoText", text)
+    
+    # Truncate the output according to the --first entries
+    library = library[:args.first]
+
+    for book in library:
+        book.printInfo()
+
+
+def clean(args):
+    try:
+        os.mkdir(args.clean_path)
+    except OSError as e:
+        print("Could not create a new directory for non pdf files becouse of {}".format(e))
+        print("Continueing..")
+    
+    full_path_homedir = os.path.abspath(args.homedir)
+    full_path_clean = os.path.abspath(args.clean_path)
+    _, nonPdfFiles = getFilesPaths(full_path_homedir)
+    targetPdfPaths = []
+    for path in nonPdfFiles:
+        newpath = path.replace(full_path_homedir, full_path_clean)
+        targetPdfPaths.append((path, newpath))
+    for path in targetPdfPaths:
+        try:
+            directory = os.path.dirname(path[1])
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+            shutil.move(path[0], path[1])
+        except OSError as e:
+            print("Could not move file {} because of {}".format(path[0], str(e)))
+    rmEmptyDirs(full_path_homedir)
+
+
+def main():
+
+    # Configure logging
+    rootlogger = logging.getLogger()
+    fhandler = logging.FileHandler("pdfwizard.log")
+    formatter = logging.Formatter(fmt='%(asctime)s|%(levelname)s|%(name)s|=> %(message)s', datefmt="%Y-%m-%d %H:%M:%S")
+    fhandler.setFormatter(formatter)
+    rootlogger.addHandler(fhandler)
+
+    parser = argparse.ArgumentParser(prog="pdfwizard")
+    parser.add_argument("--homedir", default="./", help="The path where the PDF files are located (default './')")
+    parser.add_argument("--log-level", help="Console output logging level: DEBUG, INFO, WARNING, ERROR or CRITICAL",
+        choices=["debug", "info", "warning", "error", "critical"], default="debug")
+
+    # Subparser's creation for the various commands
+    subparsers = parser.add_subparsers()
+
+    create_cmd = subparsers.add_parser("create", help="Create new tidy library")
+    create_cmd.add_argument("--new-path", default="~/librarian_new", help="Path where to create the new library (default '~/librarian_new')")
+    create_cmd.set_defaults(func=create)
+
+    list_cmd = subparsers.add_parser("list", help="List all the files in the directory")
+    list_cmd.add_argument("--fields", help="Fields to show separated by commas (NO SPACES): title, "
+        "author, subject, pages, size, filepath (default 'title,author,subject,pages,size')",
+        default="title,author,subject,pages,size")
+    list_cmd.add_argument("--order-by", choices=FIELDS, help="Select the order by which to show the results (default 'title')", default="title")
+    list_cmd.add_argument("--search", help="Get only results that contain the <SEARCH> string")
+    list_cmd.add_argument("--desc", action="store_true", help="Show the results in descending order")
+    list_cmd.add_argument("--first", type=int, help="Print only the first <FIRST> results")
+    list_cmd.set_defaults(func=listFiles)
+
+    clean_cmd = subparsers.add_parser("clean", help="Moves the non PDF files to external folder")
+    clean_cmd.add_argument("--clean-path", default="../pdfwizard_clean", help="Path of folder where to put non pdf files")
+    clean_cmd.set_defaults(func=clean)
+
+    args = parser.parse_args()
+
+    logMappings = {"debug": 10, "info": 20, "warning": 30, "error": 40, "critical": 50}
+    rootlogger.setLevel(logMappings[args.log_level])
+    try:
+        args.func(args)
+    except AttributeError:
+        print('You haven\'t entered any subcommand or argument')
+
+main()
