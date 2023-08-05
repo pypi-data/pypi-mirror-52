@@ -1,0 +1,10 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=f_Ukf3HA5X10GYqFr41FDQ_-L3NFntq9Sc7wR2TTxuk,829
+tests/test_vectorizers.py,sha256=w-HKFQkNOZf7iVWhhDrCJuFWvw9MQnpkjhPcJACvUu0,3351
+textvec/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textvec/vectorizers.py,sha256=wPVIKUPkzO8zssI-ZyF_DQWdKAOmvTT0782fuuc4lAE,20986
+textvec-2.0.dist-info/LICENSE,sha256=gqs95XelK5rUjT2iFMutb1FVYnfpgtiAVPRErlC2LyU,1072
+textvec-2.0.dist-info/METADATA,sha256=VW3UAxUg7bl4KTh2uzkADs3NvXHKbNKyVAPmAkEBc3o,818
+textvec-2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+textvec-2.0.dist-info/top_level.txt,sha256=PYsVPrWtJli63ZgMWjEMLF1E4kkhXVJbbddGOKQkuN8,14
+textvec-2.0.dist-info/RECORD,,
