@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doraemon Locust</title>
+    <link rel="stylesheet" type="text/css" href="./static/style.css?v={{ version }}" media="screen">
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon"/>
+</head>
+<body class="{{state}}">
+    <div class="top">
+        <div class="top-content container">
+            <img src="./static/img/logo.png?v={{ version }}" class="logo" />
+            <div class="boxes">
+                <div class="top_box box_url">
+                    <div class="label">HOST</div>
+                    <div class="value" id="host_url">
+                        {{host}}
+                    </div>
+                </div>
+                <div class="top_box box_status">
+                    <div class="label">STATUS</div>
+                    <div class="value" id="status_text">
+                        {{state}}
+                    </div>
+                    <div class="user_count" style="font-weight: bold">
+                            Users: <span id="userCount">{{user_count}}</span>
+                    </div>
+                    <a href="#" class="new_test" id="new_test">New</a>
+                    <a href="#" class="edit_test">Edit</a>
+                </div>
+                {% if is_distributed %}
+                    <div class="top_box box_slaves" id="box_slaves">
+                        <div class="label">SLAVES</div>
+                        <div class="value" id="slaveCount">0</div>
+                    </div>
+                {% endif %}
+                <div class="top_box box_rps box_running" id="box_rps">
+                    <div class="label">RPS</div>
+                    <div class="value" id="total_rps">0</div>
+                </div>
+                <div class="top_box box_fail box_running" id="box_fail">
+                    <div class="label">FAILURES</div>
+                    <div class="value"><span id="fail_ratio"></span>%</div>
+                </div>
+                <div class="top_box box_stop box_running" id="box_stop">
+                    <a href="./stop" class="stop-button"><i></i>STOP</a>
+                    <a href="./stats/reset" class="reset-button">Reset<br>Stats</a>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="start" id="start">
+            <div style="position:relative;">
+                <a href="#" class="close_link">关闭</a>
+            </div>
+            <div class="padder">
+                <h2>New Doraemon Locust</h2>
+                <form action="./swarm" method="POST" id="swarm_form">
+                    <label for="locust_count">虚拟并发用户数</label>
+                    <input type="text" name="locust_count" id="locust_count" class="val" /><br>
+                    <label for="hatch_rate">用户增长速度 <span style="color:#8a8a8a;">(用户数/秒)</span></label>
+                    <input type="text" name="hatch_rate" id="hatch_rate" class="val" /><br>
+                    <label for="test_time">压测时长 (秒) <span style="color:#8a8a8a;"> 默认不限制</span></label>
+                    <input type="text" name="test_time" id="test_time" class="val" /><br>
+                    <button type="submit">开始</button>
+                </form>
+                <div style="clear:right;"></div>
+            </div>
+        </div>
+
+        <div class="edit" id="edit">
+            <div style="position:relative;">
+                <a href="#" class="close_link">关闭</a>
+            </div>
+            <div class="padder">
+                <h2>Edit Doraemon Locust</h2>
+                <form action="./swarm" method="POST" id="edit_form">
+                    <label for="locust_count">虚拟并发用户数</label>
+                    <input type="text" name="locust_count" id="new_locust_count" class="val" /><br>
+                    <label for="hatch_rate">用户增长速度 <span style="color:#8a8a8a;">(用户数/秒)</span></label>
+                    <input type="text" name="hatch_rate" id="new_hatch_rate" class="val" /><br>
+                    <button type="submit">开始</button>
+                </form>
+                <div style="clear:right;"></div>
+            </div>
+        </div>
+
+        <div class="status" id="status">
+            <div style="display: inline-block;width: 100%;background: #212531">
+            <nav class="menu">
+                <ul class="tabs tab_container">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="chart-tab-link">Charts</a></li>
+                    <li><a href="#">Fails</a></li>
+                    <li><a href="#">Errors</a></li>
+                    <!-- <li><a href="#">Download</a></li> -->
+                    {% if is_distributed %}
+                    <li><a href="#">Slaves</a></li>
+                    {% endif %}
+                </ul>
+                
+            </nav>
+            <span style="float: right;height: 44px;line-height: 44px">
+                <a target='_blank' href="https://graf.souche-inc.com/d/9DWBz0bik/zhu-ji-jian-kong-mo-ren-da-pan?orgId=3&var-szone=souche&var-app=tangex&var-instanceId=i-bp11p5e96ps9jgv0mv3e&var-instanceId=i-bp11p5e96ps9jgv0mv3i&refresh=5s&from=now-15m&to=now" style="margin-right: 10px">监控服务器</a>
+                <a target='_blank' href="https://graf.souche-inc.com/d/kib1zBWC9/ying-yong-quan-xi-gai-lan-da-pan?orgId=3&var-szone=souche&var-app=tangex&var-node=i-bp11p5e96ps9jgv0mv3e&var-type=http-server&from=now-15m&to=now&refresh=5s" style="margin-right: 10px">监控应用全息</a>
+                <a href="./stats/report/xlsx" style="margin-right: 20px">下载报告单</a>
+            </span>
+            </div>
+            <div class="panes container">
+                <div style="display:none;">
+                    <table id="stats" class="stats">
+                        <thead>
+                            <tr>
+                                <th href="#" data-sortkey="method">Type</th>
+                                <th href="#" data-sortkey="name">Name</th>
+                                <th class="numeric" href="#" data-sortkey="num_requests" title="Number of successful requests"># Requests</th>
+                                <th class="numeric" href="#" data-sortkey="num_failures" title="Number of failures"># Fails</th>
+                                <!-- <th class="numeric" href="#" data-sortkey="median_response_time" title="Median response time">Median (ms)</th> -->
+                                <th class="numeric" href="#" data-sortkey="avg_response_time" title="Average response time">Avg (ms)</th>
+                                <th class="numeric" href="#" data-sortkey="min_response_time" title="Min response time">Min (ms)</th>
+                                <th class="numeric" href="#" data-sortkey="max_response_time" title="Max response time">Max (ms)</th>
+                                <th class="numeric" href="#" data-sortkey="avg_content_length" title="Average response size">Avg size (bytes)</th>
+                                <th class="numeric" href="#" data-sortkey="current_rps" title="Current number of requests per second">Current RPS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="charts" style="display:none;">
+                    <div class="charts-container"></div>
+                    <p class="note">注意: 图表数据没有持久化，如果你刷新页面，会创建新的图表</p>
+                </div>
+                <div style="display:none;">
+                    <table id="errors" class="stats">
+                        <thead>
+                            <th class="error_count" data-sortkey="1"># fails</th>
+                            <th href="#" data-sortkey="method">Method</th>
+                            <th href="#" data-sortkey="name">Name</th>
+                            <th class="error_type" data-sortkey="0">Type</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="display:none;">
+                    <table id="exceptions" class="stats">
+                        <thead>
+                            <th class="exception_occurrences" data-sortkey="1"># occurrences</th>
+                            <th class="exception_traceback" data-sortkey="0">Traceback</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div style="display:none;">
+                    <div style="margin-top:20px;">
+                        <a href="./stats/report/xlsx">下载报告单</a>
+                        <a href="./stats/requests/csv">Download statistics CSV</a><br>
+                        <a href="./stats/distribution/csv">Download response time distribution CSV</a><br>
+                        <a href="./stats/failures/csv">Download failures CSV</a><br>
+                        <a href="./exceptions/csv">Download exceptions CSV</a>
+                    </div>
+                </div> -->
+                <div style="display:none;">
+                    <table id="slaves">
+                        <thead>
+                            <tr>
+                                <th href="#" data-sortkey="id">Slave</th>
+                                <th href="#" data-sortkey="state">State</th>
+                                <th class="numeric" href="#" data-sortkey="user_count" title="Number of users on this slave"># users</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="about" style="display:none;">
+            <div style="position:relative;">
+                <a href="#" class="close_link">关闭</a>
+            </div>
+            <div class="padder">
+                <h2>关于</h2>
+                <p>
+                    DMLocust是哆啦A梦的一个压测插件，fork自Locust。
+                </p>
+                <br>
+                <h2>
+                    名词解释：
+                </h2>
+                <p>
+                    RPS: 等同于QPS。
+                </p>
+                <p>
+                    Avg: 平均响应时间。
+                </p>
+                <p>
+                    Median（50%）: 在该时间会通过50%的请求。
+                </p>
+                
+                <!-- <p>
+                    The original idea for Locust was Carl Byström's who made a first proof of concept in June 2010.
+                    Jonatan Heyman picked up Locust in January 2011, implemented the current concept of Locust classes
+                    and made it work distributed across multiple machines.
+                </p>
+                <p>
+                    Jonatan, Carl and Joakim Hamrén has continued the development of Locust at their job,
+                    ESN Social Software, who have adopted Locust as an inhouse Open Source project.
+                </p> -->
+
+                <!-- <h1>Authors and Copyright</h1>
+                <a href="http://cgbystrom.com/">Carl Byström</a> (<a href="https://twitter.com/cgbystrom/">@cgbystrom</a>)<br>
+                <a href="http://heyman.info/">Jonatan Heyman</a> (<a href="https://twitter.com/jonatanheyman/">@jonatanheyman</a>)<br>
+                Joakim Hamrén (<a href="https://twitter.com/Jahaaja/">@jahaaja</a>)<br>
+                <a href="http://esn.me/">ESN Social Software</a> (<a href="https://twitter.com/uprise_ea/">@uprise_ea</a>)<br>
+                Hugo Heyman (<a href="https://twitter.com/hugoheyman/">@hugoheyman</a>) -->
+
+
+                <!-- <h1>License</h1>
+                Open source licensed under the MIT license. -->
+                <br>
+                <h3>Version <a target='_blank' href="https://git.souche-inc.com/PMS/QA/dmlocust/tags/{{version}}">{{version}}</a></h3>
+                <p>
+                    <a target='_blank' href="https://souche.yuque.com/wcarg7/rf/xh1ch8">查看使用文档</a>
+                </p>
+                <!-- <br> -->
+                <!-- <a href="https://locust.io/">https://locust.io</a> -->
+            </div>
+        </div>
+    </div>
+    <nav class="footer">
+        <div class="label" style="float: left;margin-left: 20px;color: #ccc">
+            <a href="#" onclick="$('.about').fadeIn();">关于</a>
+        </div>
+
+        <div class="container">
+            <span style="margin-right: 20px;font-size: 16px;font-weight: bold">
+                <span id="time">
+                    {{time}}
+                </span> 秒
+            </span>
+            (定时 <span id="setting_time">N/A</span> 秒)
+        </div>
+    </nav>
+
+
+    <script type="text/javascript" src="./static/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./static/jquery.jqote2.min.js"></script>
+    <script type="text/javascript" src="./static/jquery.tools.min.js"></script>
+    <!-- echarts from https://github.com/ecomfe/echarts -->
+    <script type="text/javascript" src="./static/echarts.common.min.js"></script>
+    <!-- vintage theme of echarts -->
+    <script type="text/javascript" src="./static/vintage.js"></script>
+    <script type="text/x-jqote-template" id="stats-template">
+        <![CDATA[
+        <tr class="<%=(alternate ? "dark" : "")%> <%=(this.name == "Total" ? "total" : "")%>">
+            <td><%= (this.method ? this.method : "") %></td>
+            <td class="name" title="<%= this.name %>"><%= this.name %></td>
+            <td class="numeric"><%= this.num_requests %></td>
+            <td class="numeric"><%= this.num_failures %></td>
+            <!-- <td class="numeric"><%= Math.round(this.median_response_time) %></td> -->
+            <td class="numeric"><%= Math.round(this.avg_response_time) %></td>
+            <td class="numeric"><%= this.min_response_time %></td>
+            <td class="numeric"><%= this.max_response_time %></td>
+            <td class="numeric"><%= Math.round(this.avg_content_length) %></td>
+            <td class="numeric"><%= Math.round(this.current_rps*100)/100 %></td>
+        </tr>
+        <% alternate = !alternate; %>
+        ]]>
+    </script>
+    <script type="text/x-jqote-template" id="errors-template">
+        <![CDATA[
+        <tr class="<%=(alternate ? "dark" : "")%>">
+            <td><%= this.occurrences %></td>
+            <td><%= this.method %></td>
+            <td><%= this.name %></td>
+            <td><%= function(e) { return e.replace("<", "&lt;"); }(this.error) %></td>
+        </tr>
+        <% alternate = !alternate; %>
+        ]]>
+    </script>
+    <script type="text/x-jqote-template" id="exceptions-template">
+        <![CDATA[
+        <tr class="<%=(alternate ? "dark" : "")%>">
+            <td class="occurrences"><%= this.count %></td>
+            <td class="traceback" title="Occured on: <%= this.nodes %>"><%= function(e) { return e.replace("<", "&lt;"); }(this.traceback) %>
+<%= function(e) { return e.replace("<", "&lt;"); }(this.msg) %></td>
+        </tr>
+        <% alternate = !alternate; %>
+        ]]>
+    </script>
+    <script type="text/x-jqote-template" id="slave-template">
+        <![CDATA[
+        <tr class="<%=(alternate ? "dark" : "")%> <%=(this.name == "Total" ? "total" : "")%>">
+            <td><%= this.id %></td>
+            <td><%= this.state %></td>
+            <td class="numeric"><%= this.user_count %></td>
+        </tr>
+        <% alternate = !alternate; %>
+        ]]>
+    </script>
+    <script type="text/javascript" src="./static/chart.js?v={{ version }}"></script>
+    <script type="text/javascript" src="./static/locust.js?v={{ version }}"></script>
+</body>
+</html>
