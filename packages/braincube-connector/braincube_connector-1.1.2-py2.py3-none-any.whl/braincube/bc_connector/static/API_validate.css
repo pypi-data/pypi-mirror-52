@@ -1,0 +1,54 @@
+/* Sass Document */
+/* Sass Document */
+body, html {
+  margin: 0;
+  font-family: verdana;
+}
+
+body, html {
+  Width: 100%;
+  Height: 100%;
+}
+
+.PageValidateAPI {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.PageValidateAPI .LogoBraincube {
+  width: 150px;
+  height: 150px;
+  padding: 50px;
+  margin: 0 auto;
+  background: url(images/logo_braincube.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.PageValidateAPI .IconValidate {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 10px;
+  background-image: url(images/baseline-check_circle_outline-24px.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.PageValidateAPI .Titre {
+  max-width: 1000px;
+  font-size: 31px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.PageValidateAPI .Description {
+  padding: 20px;
+}
