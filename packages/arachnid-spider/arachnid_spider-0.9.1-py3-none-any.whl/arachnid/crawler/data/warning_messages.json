@@ -1,0 +1,14 @@
+[
+  {
+    "SSLError": "Unable to connect securely due to missing or unsupported cipher suites. If this is your seed URL, try again with \"HTTP\" scheme rather than \"HTTPS\""
+  },
+  {
+    "ConnectionError": "A miscellaneous connection error has occurred."
+  },
+  {
+    "ConnectTimeout": "Connection timeout. Server failed to respond after 30 seconds."
+  },
+  {
+    "HTTP414": "URL is too long. Server refused to respond. Arachnid has likely been caught in a bot trap."
+  }
+]
