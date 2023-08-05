@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: try-match
+Version: 0.1.1
+Summary: Pattern matching
+Home-page: https://github.com/zen-xu/try_match
+License: Apache-2.0
+Keywords: pattern matching,switch,exception
+Author: Zhengyu Xu
+Author-email: zen-xu@outlook.com
+Requires-Python: >=2.7,<3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Project-URL: Repository, https://github.com/zen-xu/try_match
