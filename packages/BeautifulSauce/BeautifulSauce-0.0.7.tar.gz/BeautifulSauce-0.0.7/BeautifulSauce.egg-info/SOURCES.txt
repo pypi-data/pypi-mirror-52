@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+BeautifulSauce/__init__.py
+BeautifulSauce/css_attrs.csv
+BeautifulSauce/featurizer.py
+BeautifulSauce/sauce.py
+BeautifulSauce.egg-info/PKG-INFO
+BeautifulSauce.egg-info/SOURCES.txt
+BeautifulSauce.egg-info/dependency_links.txt
+BeautifulSauce.egg-info/requires.txt
+BeautifulSauce.egg-info/top_level.txt
+tests/__init__.py
+tests/test_featurizer.py
+tests/test_sauce.py
