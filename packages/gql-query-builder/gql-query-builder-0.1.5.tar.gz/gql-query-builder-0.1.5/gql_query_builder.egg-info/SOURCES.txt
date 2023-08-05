@@ -1,0 +1,17 @@
+.gitignore
+.python-version
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+tox.ini
+.github/workflows/publish.yaml
+examples/get_country.py
+gql_query_builder/__init__.py
+gql_query_builder.egg-info/PKG-INFO
+gql_query_builder.egg-info/SOURCES.txt
+gql_query_builder.egg-info/dependency_links.txt
+gql_query_builder.egg-info/top_level.txt
+tests/test.py
