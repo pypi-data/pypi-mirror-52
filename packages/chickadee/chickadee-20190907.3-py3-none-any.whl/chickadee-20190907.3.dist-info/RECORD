@@ -1,0 +1,12 @@
+libchickadee/__init__.py,sha256=qQaWz1vDDay6hgNpy1KYEqiyowPSkNXI8ZYvIa9uhCI,152
+libchickadee/chickadee.py,sha256=7m0pfz2Gmr0TAXeygn_CIcC4Lwk9cWd4ir2Zp1DluTs,4092
+libchickadee/backends/__init__.py,sha256=vXWKeEgEB2vyL8GoZ0ucF-_xf9snTKr1w_Z3hlPm3Pg,2620
+libchickadee/backends/ipapi.py,sha256=2kP1fWpvmiJACnhXNfPCBwlCQrQDK6SYcWCSnH8T37Q,1848
+libchickadee/parsers/__init__.py,sha256=qQaWz1vDDay6hgNpy1KYEqiyowPSkNXI8ZYvIa9uhCI,152
+libchickadee/parsers/plain_text.py,sha256=WREFCGsBl0W0tCHfem5UGhysxog2jG6Ji9wXi_96JUQ,3657
+chickadee-20190907.3.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+chickadee-20190907.3.dist-info/METADATA,sha256=FJJGxEgNRaU4E21d1jMWNlsxyyomlKGFRivVH41o7LM,4908
+chickadee-20190907.3.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+chickadee-20190907.3.dist-info/entry_points.txt,sha256=GMdU7qpbaJckNoLxKHThOWslmRvqep0X37dv0llRWA8,60
+chickadee-20190907.3.dist-info/top_level.txt,sha256=0FrudGGf3GEg1oZQW8xJpREzD3WDBEwqdK4BN2w1s0U,13
+chickadee-20190907.3.dist-info/RECORD,,
