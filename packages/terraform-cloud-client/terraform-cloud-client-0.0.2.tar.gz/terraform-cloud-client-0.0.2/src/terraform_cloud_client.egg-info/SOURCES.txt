@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/terraform_cloud_client.egg-info/PKG-INFO
+src/terraform_cloud_client.egg-info/SOURCES.txt
+src/terraform_cloud_client.egg-info/dependency_links.txt
+src/terraform_cloud_client.egg-info/entry_points.txt
+src/terraform_cloud_client.egg-info/top_level.txt
+src/tfc/__init__.py
+src/tfc/__main__.py
+src/tfc/cli.py
+src/tfc/client.py
