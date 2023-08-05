@@ -1,0 +1,12 @@
+ipython>=7.1
+matplotlib>=3.0
+networkx>=2.1
+numpy>=1.15
+hup>=0.9.2
+deet>=0.1.11
+
+[gene]
+rpy2
+
+[gui]
+pyside
