@@ -1,0 +1,6 @@
+[oasys.addons]
+COMSYL = orangecontrib.comsyl
+
+[oasys.widgets]
+COMSYL = orangecontrib.comsyl.widgets.applications
+

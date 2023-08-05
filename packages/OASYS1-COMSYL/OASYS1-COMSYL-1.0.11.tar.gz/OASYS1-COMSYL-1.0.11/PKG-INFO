@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: OASYS1-COMSYL
+Version: 1.0.11
+Summary: oasys-comsyl: Oasys widgets for COMSYL
+Home-page: https://github.com/oasys-kit/oasys-comsyl
+Author: M. Sanchez del Rio, M. Glass
+Author-email: srio@esrf.eu
+License: MIT
+Download-URL: https://github.com/oasys-kit/oasys-comsyl
+Description: OASYS-COMSYL project
+        
+        
+Keywords: application,COMSYL,Oasys,Orange,comsyl
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
