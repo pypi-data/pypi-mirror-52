@@ -1,0 +1,16 @@
+codelab_adapter_client/__init__.py,sha256=aB5_xzKY_qI5Rzy2sRuKhCZpm0G5ZGTesJID2ceuH58,286
+codelab_adapter_client/base.py,sha256=edVcv9r-UuZ29pqx1xNl1Nd6L9NKS7hfh7RDIAyT2tM,13179
+codelab_adapter_client/base_aio.py,sha256=fXVeblEHIQxSkoN8EWuOIOfK_az-TmQf2lYyk6ZqB30,6709
+codelab_adapter_client/hass.py,sha256=5QpcIR_rimYHQf7tGUcE3G1nEW11OKrzzZ34PMn3Wy4,5374
+codelab_adapter_client/microbit.py,sha256=HwplipHIORUBOalRUhW4VXRjOnEyyenJWpW1bTSyVxs,1605
+codelab_adapter_client/topic.py,sha256=OV7hMNPh5mtZk7wIoAzVOhalYHxhkEolRK7Y_8Hv1ZQ,999
+codelab_adapter_client/utils.py,sha256=ulmTmBVV-wLCyi9DMMJXfuJxsBLOeo3xqrCfQLhqk9o,565
+codelab_adapter_client/tools/monitor.py,sha256=fkhed-QqXHAwHA69X62BjN2KcFikvI7a5ioqb6jfELQ,2376
+codelab_adapter_client/tools/trigger.py,sha256=b6-DHsixJzstY2z7ctIrHoxLaejddHQdur7THUDdzd0,2884
+codelab_adapter_client-0.9.8.dist-info/AUTHORS.rst,sha256=TMaLSlaeLWHuhSFwFIETWzKmD-k6y3lc45GwwZOaJLs,156
+codelab_adapter_client-0.9.8.dist-info/LICENSE,sha256=VIaUBMd7LjHk-PKeSmnYiBboJ8F_fsvFKqctTdZ7Ipc,1596
+codelab_adapter_client-0.9.8.dist-info/METADATA,sha256=bgs9hAmXuyRmGCXIhSkE0StGqKBHT4zXBqyj9ZLnOLk,2598
+codelab_adapter_client-0.9.8.dist-info/WHEEL,sha256=8T8fxefr_r-A79qbOJ9d_AaEgkpCGmEPHc-gpCq5BRg,110
+codelab_adapter_client-0.9.8.dist-info/entry_points.txt,sha256=yPNio3qV4V2tdXznbgoRpEQ1eof8Gmf9QEpCa8Hnsqg,161
+codelab_adapter_client-0.9.8.dist-info/top_level.txt,sha256=pZo_RplwO_Xu4buFo1ZQepo4gTdA070ZUYLT0tVd0_U,23
+codelab_adapter_client-0.9.8.dist-info/RECORD,,
