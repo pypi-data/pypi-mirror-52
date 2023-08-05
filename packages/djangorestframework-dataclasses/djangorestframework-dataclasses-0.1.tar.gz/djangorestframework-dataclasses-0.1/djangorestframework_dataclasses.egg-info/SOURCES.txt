@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+djangorestframework_dataclasses.egg-info/PKG-INFO
+djangorestframework_dataclasses.egg-info/SOURCES.txt
+djangorestframework_dataclasses.egg-info/dependency_links.txt
+djangorestframework_dataclasses.egg-info/requires.txt
+djangorestframework_dataclasses.egg-info/top_level.txt
+rest_framework_dataclasses/__init__.py
+rest_framework_dataclasses/field_utils.py
+rest_framework_dataclasses/serializers.py
+rest_framework_dataclasses/typing_utils.py
