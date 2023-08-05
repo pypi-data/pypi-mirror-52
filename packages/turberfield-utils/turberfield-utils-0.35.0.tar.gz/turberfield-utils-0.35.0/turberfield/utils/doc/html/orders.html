@@ -1,0 +1,92 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1. Business Rules &#8212; Turberfield utilities guide 0.35.0</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Object serialisation" href="assembly.html" />
+    <link rel="prev" title="Turberfield Utility library" href="index.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>Turberfield utilities guide 0.35.0</span></a></h1>
+        <h2 class="heading"><span>1. Business Rules</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Turberfield Utility library</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="assembly.html">2. Object serialisation</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="business-rules">
+<h1>1. Business Rules<a class="headerlink" href="#business-rules" title="Permalink to this headline">¶</a></h1>
+<p>Often in games or simulations, business rules are added incrementally as the
+application evolves.</p>
+<p>The <a class="reference internal" href="#turberfield.utils.orders.Orders" title="turberfield.utils.orders.Orders"><code class="xref py py-class docutils literal notranslate"><span class="pre">Orders</span></code></a> class enables
+you to register discrete snippets of code which you can call up in
+the order they are defined in the class declaration.</p>
+<p>This allows you to chain up callable rules without having to explicitly invoke
+them one after the other.</p>
+<p>Nothing is done behind your back. It’s just that if you create a subclass of
+<a class="reference internal" href="#turberfield.utils.orders.Orders" title="turberfield.utils.orders.Orders"><code class="xref py py-class docutils literal notranslate"><span class="pre">Orders</span></code></a>, whichever methods
+you register will be lined up sequentially for you to call them in the order
+you wrote them.</p>
+<dl class="class">
+<dt id="turberfield.utils.orders.Orders">
+<em class="property">class </em><code class="descclassname">turberfield.utils.orders.</code><code class="descname">Orders</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#turberfield.utils.orders.Orders" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="turberfield.utils.orders.Orders.register">
+<em class="property">classmethod </em><code class="descname">register</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turberfield.utils.orders.Orders.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this decorator to register a function for ordered execution.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="turberfield.utils.orders.Orders.methods">
+<code class="descname">methods</code><a class="headerlink" href="#turberfield.utils.orders.Orders.methods" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a sequence of 2-tuples; (name, method).</p>
+<p>This property gives you all the object’s registered methods in the order
+they were defined.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Turberfield Utility library</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="assembly.html">2. Object serialisation</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, D Haynes.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.
+    </div>
+  </body>
+</html>
