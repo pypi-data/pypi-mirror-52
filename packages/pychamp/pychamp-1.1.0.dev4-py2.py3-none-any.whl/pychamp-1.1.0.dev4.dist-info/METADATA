@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pychamp
+Version: 1.1.0.dev4
+Summary: Data Science Tools
+Home-page: https://github.com/paudelsagar/pychamp
+Author: Sagar Paudel
+Author-email: sagar.paudel18@gmail.com
+License: UNKNOWN
+Keywords: data science tools
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.7
+Description-Content-Type: text/markdown
+Requires-Dist: wordcloud
+Requires-Dist: seaborn
+Requires-Dist: SQLAlchemy
+Requires-Dist: statsmodels
+Requires-Dist: graphviz
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: imbalanced-learn
+Requires-Dist: matplotlib
+Requires-Dist: pydotplus
+Requires-Dist: ipython
+Requires-Dist: imblearn
+Requires-Dist: scikit-learn
+
+# Data Science Tools (pychamp)
+
+`pychamp` is a data science tool intended to ease data science practices.
+
+<h4>Modules</h4>
+
+- configparser : It can be used for parsing configuration file format `json` and `ini`.
+- connection : It can be used for creating `connection URL`, `connection engine` and for `executing` any type of sql `queries`.
+- features_selection : It can be used for selecting features using `Backward Elimination`, `VIF` and `Features Importance`.
+- sampling : It can be used for different types of sampling operations such as `SMOTE`, `SMOTENC` and `ADASYN` for both categorical and numerical features.
+- stats : It can be used for `Confidence and Prediction Interval`, `IQR outlier removal` and `Summary Statistics`.
+- viz : It can be used for visualization.
+- net : It can be used for sending mail currently.
+- model : Different types of regression, classification and clustering models can be used.
+- eda : It handles data types and missing values.
+
+

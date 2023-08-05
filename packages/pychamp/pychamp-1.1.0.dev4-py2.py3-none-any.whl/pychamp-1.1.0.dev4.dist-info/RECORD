@@ -1,0 +1,15 @@
+pychamp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pychamp/configparser.py,sha256=cbBp2zEEAo05WX6tghw21U5ah57QorpzRa_ii09g_28,1196
+pychamp/connection.py,sha256=kpZPtUJsX8q3-1BmDQ55kcY2LFEUx5L29ePh3g7sWio,1970
+pychamp/eda.py,sha256=8uPzRbbjx4mj8NffO1cGAxOb43glSLup5djs6sVIq60,8177
+pychamp/features_selection.py,sha256=Dyuk7zRPiAKDNdb9PgVnsSNSrf0pGRHLcIBRXdIbR3Q,4010
+pychamp/model.py,sha256=rxnevUsUIeuN_8Em76f4JpNgsOGbkCCgoFV3WqRgUf8,17541
+pychamp/net.py,sha256=xjuNAQu2TdyFx-TiWR5EOtw3h4rrvSP_kTy7bkL3h-0,9008
+pychamp/sampling.py,sha256=n73yW8U-JZVRQn1FMFQypwrLkc-zeW6UAlBYWug74co,2907
+pychamp/stats.py,sha256=H8HmCdBYC5ioC20LT87oDUqVzlhuN9_Qg9ctZZl41IA,4084
+pychamp/viz.py,sha256=LnHPUINmSDK_BH4qVpb_6f1suVIYrlndzxdU2wT9fIc,22112
+pychamp-1.1.0.dev4.dist-info/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+pychamp-1.1.0.dev4.dist-info/METADATA,sha256=trrm5PK2B9UoxX1KrVBBW589bdFlmzbFvlJGFwA6jt0,1789
+pychamp-1.1.0.dev4.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+pychamp-1.1.0.dev4.dist-info/top_level.txt,sha256=oSmsFEGWZ__nh89tclwg30nATxtLZuIix6VIa5DtXjc,8
+pychamp-1.1.0.dev4.dist-info/RECORD,,
