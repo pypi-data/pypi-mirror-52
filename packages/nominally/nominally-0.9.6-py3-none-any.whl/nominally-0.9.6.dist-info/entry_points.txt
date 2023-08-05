@@ -1,0 +1,3 @@
+[console_scripts]
+nominally = nominally:cli_parse
+
