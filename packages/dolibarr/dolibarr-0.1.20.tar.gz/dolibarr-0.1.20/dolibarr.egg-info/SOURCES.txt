@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+dolibarr/Dolibarr.py
+dolibarr/__init__.py
+dolibarr.egg-info/PKG-INFO
+dolibarr.egg-info/SOURCES.txt
+dolibarr.egg-info/dependency_links.txt
+dolibarr.egg-info/top_level.txt
