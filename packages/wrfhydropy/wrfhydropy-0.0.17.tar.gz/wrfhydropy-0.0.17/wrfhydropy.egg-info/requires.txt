@@ -1,0 +1,14 @@
+pandas
+f90nml
+netCDF4
+deepdiff==3.3.0
+pathlib
+xarray
+datetime
+pytest
+pytest-html
+pytest-datadir-ng
+boltons
+bs4
+requests
+dask[bag]
