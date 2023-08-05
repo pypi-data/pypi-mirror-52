@@ -1,0 +1,7 @@
+xcffib
+click
+cffi
+xpybutil
+marshmallow<3.0,>=2.0
+pyyaml>=5.1
+i3ipc>=2.1.1
