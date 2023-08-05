@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: LeetCode.VIP
+Version: 0.1
+Summary: This is a simple shell tool about algorithms problem         information of LeetCode. This tool support linux and Mac OX.
+Home-page: https://github.com/daidai21/LeetCode.VIP
+Author: DaiDai
+Author-email: daidai4269@aliyun.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: lxml
+Requires-Dist: bs4
+
+UNKNOWN
+
+
