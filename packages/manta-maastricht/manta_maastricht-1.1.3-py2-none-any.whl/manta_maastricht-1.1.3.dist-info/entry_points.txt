@@ -1,0 +1,3 @@
+[console_scripts]
+manta = manta_maastricht.__main__:main
+
