@@ -1,0 +1,9 @@
+README.md
+setup.py
+weather/__init__.py
+weather/observations.py
+weather/place.py
+weather_au.egg-info/PKG-INFO
+weather_au.egg-info/SOURCES.txt
+weather_au.egg-info/dependency_links.txt
+weather_au.egg-info/top_level.txt
