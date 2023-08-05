@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="cs.behavior.footerhtmlcode">
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:viewlet
+     name="custom-html-code-viewlet"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     layer="cs.behavior.footerhtmlcode.interfaces.ICsBehaviorFooterhtmlcodeLayer"
+     class=".custom_html_code_viewlet.CustomHTMLCodeViewlet"
+     template="custom-html-code-viewlet.pt"
+     permission="zope2.View"
+     />
+
+
+</configure>
