@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+src/bst_plugins_container/__init__.py
+src/bst_plugins_container.egg-info/PKG-INFO
+src/bst_plugins_container.egg-info/SOURCES.txt
+src/bst_plugins_container.egg-info/dependency_links.txt
+src/bst_plugins_container.egg-info/entry_points.txt
+src/bst_plugins_container.egg-info/not-zip-safe
+src/bst_plugins_container.egg-info/requires.txt
+src/bst_plugins_container.egg-info/top_level.txt
+src/bst_plugins_container/elements/__init__.py
+src/bst_plugins_container/elements/docker_image.py
+src/bst_plugins_container/elements/docker_image.yaml
+src/bst_plugins_container/sources/__init__.py
+src/bst_plugins_container/sources/docker.py

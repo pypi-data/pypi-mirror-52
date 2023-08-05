@@ -1,0 +1,7 @@
+requests
+
+[test]
+pytest-datafiles
+pytest-env
+pytest-xdist
+pytest>=3.1.0
