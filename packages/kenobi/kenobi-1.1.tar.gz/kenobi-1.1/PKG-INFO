@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: kenobi
+Version: 1.1
+Summary: A simple database using pickle.
+Home-page: http://patx.github.com/kenobi
+Author: Harrison Erd
+Author-email: erdh@mail.broward.edu
+License: three-clause BSD
+Description: 
+        
+        kenobiDB is simple document based database
+        ==========================================
+        
+        
+            >>> from kenobi import KenobiDB
+        
+            >>> db = KenobiDB('database.json', auto_save=False)
+        
+            >>> db.insert({'name': 'user1', 'groups': ['user']})
+            >>> db.insert({'name': 'user2', 'groups': ['admin', 'user']})
+            >>> db.insert({'name': 'user3', 'groups': ['sudo', 'user']})
+        
+            >>> db.search('name', 'user1')
+            [{'name': 'user1', 'groups': ['user']}]
+        
+            >>> db.find_any('groups', ['admin', 'sudo'])
+            [{'name': 'user2', 'groups': ['admin', 'user']},
+             {'name': 'user3', 'groups': ['sudo', 'user']}]
+        
+            >>> db.find_all('groups', ['admin', 'user'])
+            [{'name': 'user2', 'groups': ['admin', 'user']}]
+        
+            >>>> db.save_db()
+            True
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
