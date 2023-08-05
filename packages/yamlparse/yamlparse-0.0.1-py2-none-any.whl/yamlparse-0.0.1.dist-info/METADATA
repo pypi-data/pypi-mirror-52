@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: yamlparse
+Version: 0.0.1
+Summary: 命令解析yaml文件并替换键值 工具
+Home-page: https://github.com/yhkl-dev/yamlpars
+Author: yhkl
+Author-email: kaiyang939325@gmail.com
+License: MIT
+Keywords: yaml parse
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Dist: argparse
+Requires-Dist: pyyaml
+
+##### Yaml 命令行解析替换工具
+
+
+
