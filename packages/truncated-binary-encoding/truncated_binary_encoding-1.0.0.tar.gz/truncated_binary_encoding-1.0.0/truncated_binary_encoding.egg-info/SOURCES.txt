@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+truncated_binary_encoding/__init__.py
+truncated_binary_encoding/__version__.py
+truncated_binary_encoding/truncated_binary_encoding.py
+truncated_binary_encoding.egg-info/PKG-INFO
+truncated_binary_encoding.egg-info/SOURCES.txt
+truncated_binary_encoding.egg-info/dependency_links.txt
+truncated_binary_encoding.egg-info/requires.txt
+truncated_binary_encoding.egg-info/top_level.txt
