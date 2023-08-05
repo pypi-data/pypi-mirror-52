@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/Flest.egg-info/PKG-INFO
+src/Flest.egg-info/SOURCES.txt
+src/Flest.egg-info/dependency_links.txt
+src/Flest.egg-info/entry_points.txt
+src/Flest.egg-info/requires.txt
+src/Flest.egg-info/top_level.txt
+src/flest/__init__.py
+src/flest/_self.py
+src/flest/_utils.py
+src/flest/config.py
+src/flest/decorators.py

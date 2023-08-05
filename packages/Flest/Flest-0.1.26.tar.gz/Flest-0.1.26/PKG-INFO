@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Flest
+Version: 0.1.26
+Summary: Flest - small contribution to Flask world.
+Home-page: http://tbd
+Author: Jihwan Song
+Author-email: jihwan2@gmail.com
+License: MIT
+Description: flest
+        ~~~~~
+        
+        Flest - small contribution to Flask world.
+        The goal is to help spend less time typing and coding to do more.
+        Explicit is better than implicit -- not always.
+        Convention saves a lot of time.
+        I truely believe that REST is a stupid idea.
+        /rsc/?id=3 makes much more sense than /rsc/3.
+        There is nothing wrong or heretic about POST /rsc/update?id=6.
+        If you think PUT /rsc/6 is more standard way, you may be an i(6 or 3)t.
+        
+        :copyright: 2019 Jihwan Song
+        :license: MIT License
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
