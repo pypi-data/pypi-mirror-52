@@ -1,0 +1,16 @@
+tkdocviewer/__init__.py,sha256=chCRbSZNySCo3vDbHB4EP8znLgVkzODSVwxLFD_J7Wc,576
+tkdocviewer/__main__.py,sha256=zgTkx2MV7oP4Mqn4tJtly8epL1i2r9stHPZwDACFMZs,4275
+tkdocviewer/rendering.py,sha256=BjSLHxyOUwyJlEzYYFJgH7sR2y49Oyrvq9Jh2FsK0H8,6687
+tkdocviewer/test.py,sha256=F9Scvax8ipTEl48YDT8d5Jcj-vBayM5ePcnawJPpAgs,6058
+tkdocviewer/widget.py,sha256=Z3XnHkgjXE1kyV-8SsaiFKzxdeXDWEb9HpS6ZxsVixg,26621
+tkdocviewer/backends/__init__.py,sha256=UQdM-ZTJGRx4VjnoxepTtsBfGIjRwXR5HcLqxs0AcAw,2095
+tkdocviewer/backends/ghostscript.py,sha256=ls_uTT7wwnsZCGZ6n7h9QyXdQa1oi9fIf8bGs59xY3k,12618
+tkdocviewer/backends/ghostxps.py,sha256=nXZQMixZMD5jcmkATziDLt125reZUACwSrKnIB9FTT0,3601
+tkdocviewer/backends/pil_multiframe.py,sha256=7OrLxUjPkzZ8ZdQYfPTQZYA6_z6-yFcURtQz23ztAVg,1793
+tkdocviewer/backends/shared.py,sha256=vb4Z8I8rpbq8dOi1XD83cmOQxZOkwHblogZONBTudZk,3212
+tkdocviewer/backends/util.py,sha256=d4YaOB5BEQDJXJJpNJU6iwfHLD_25hwMMvMizlTum7U,1572
+tkDocViewer-2.0.0.dist-info/LICENSE,sha256=oo_pDwtWg55-jFMSZZ1rjMtvX7PlHpD1ccubBSa8XV0,1078
+tkDocViewer-2.0.0.dist-info/METADATA,sha256=YaLoKyyrrrqsqdCq3DBxVtJ5Z9EXBZOiS5Z7dMv0x-Q,2519
+tkDocViewer-2.0.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+tkDocViewer-2.0.0.dist-info/top_level.txt,sha256=JqV7WLzbeg5DPQeXKE91ju5SG17-lUpJFp6r6FBkASM,12
+tkDocViewer-2.0.0.dist-info/RECORD,,

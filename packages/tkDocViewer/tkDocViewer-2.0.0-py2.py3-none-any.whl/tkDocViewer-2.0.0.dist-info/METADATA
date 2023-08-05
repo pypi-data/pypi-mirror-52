@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: tkDocViewer
+Version: 2.0.0
+Summary: Document viewer widget for Tkinter
+Home-page: https://github.com/bmjcode/tkDocViewer
+Author: Benjamin Johnson
+Author-email: bmjcode@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+**tkDocViewer** is an inefficient, yet practical, Tkinter widget for displaying file previews.
+
+It supports a variety of document and image formats; see below for the complete list. Support for new formats can be added through a modular backend system.
+
+Both Python 2 and 3 are supported, on Windows and Unix platforms.
+
+
+## Usage
+
+tkDocViewer consists of a single module, `tkdocviewer` (note the module name is lowercase), which exports a single class, `DocViewer`.
+
+A brief example program:
+
+```python
+#!/usr/bin/env python3
+
+from tkinter import *
+from tkdocviewer import *
+
+# Create a root window
+root = Tk()
+
+# Create a DocViewer widget
+v = DocViewer(root)
+v.pack(side="top", expand=1, fill="both")
+
+# Display some document
+v.display_file("example.pdf")
+
+# Start Tk's event loop
+root.mainloop()
+```
+
+For detailed documentation, try `python3 -m pydoc tkdocviewer`.
+
+
+## Supported Formats
+
+**Note**: Most file formats require third-party modules or external applications to be present at runtime. tkDocViewer will still work without them, but file format support will be limited by what's available on your system.
+
+### Document Formats
+Format | Extensions | Requirements | Notes
+------ | ---------- | ------------ | -----
+PDF | `.pdf` | [Ghostscript](https://ghostscript.com/) |
+Plain text | `.txt` | none |
+Postscript | `.ps` | Ghostscript |
+XPS | `.xps` | Ghostscript, [GhostXPS](https://www.ghostscript.com/download/gxpsdnld.html) | OpenXPS has not been tested.
+
+### Image Formats
+Format | Extensions | Requirements | Notes
+------ | ---------- | ------------ | -----
+Bitmap image | `.bmp`, `.pcx` | [Pillow](https://python-pillow.org/) |
+GIF | `.gif` | Pillow | Animations are displayed as individual frames.
+JPEG | `.jpe`, `.jpg`, `.jpeg` | Pillow |
+PNG | `.png` | Pillow |
+Netpbm | `.pbm`, `.pgm`, `.pnm`, `.ppm` | Pillow |
+Targa | `.tga` | Pillow |
+TIFF | `.tif`, `.tiff` | Pillow | Supports multi-page documents.
+Windows icon | `.ico` | Pillow |
+X bitmap | `.xbm` | Pillow |
+
+
