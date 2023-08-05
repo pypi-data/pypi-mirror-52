@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+gamma_coding/__init__.py
+gamma_coding/__version__.py
+gamma_coding/gamma_coding.py
+gamma_coding.egg-info/PKG-INFO
+gamma_coding.egg-info/SOURCES.txt
+gamma_coding.egg-info/dependency_links.txt
+gamma_coding.egg-info/requires.txt
+gamma_coding.egg-info/top_level.txt

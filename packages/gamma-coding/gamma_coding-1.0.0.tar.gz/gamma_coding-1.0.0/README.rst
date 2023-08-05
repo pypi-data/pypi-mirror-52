@@ -1,0 +1,75 @@
+gamma_coding
+=========================================================================================
+|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+
+Python package implementing gamma coding.
+
+How do I install this package?
+----------------------------------------------
+As usual, just download it using pip:
+
+.. code:: shell
+
+    pip install gamma_coding
+
+Tests Coverage
+----------------------------------------------
+Since some software handling coverages sometime get slightly different results, here's three of them:
+
+|coveralls| |sonar_coverage| |code_climate_coverage|
+
+Usage example
+----------------------------------------------
+
+.. code:: python
+
+    from gamma_coding import gamma_coding
+
+    gamma_coding(0)# 1
+    gamma_coding(1)# 010
+    gamma_coding(2)# 011
+    gamma_coding(3)# 00100
+    gamma_coding(4)# 00101
+    gamma_coding(5)# 00110
+    gamma_coding(6)# 00111
+    gamma_coding(7)# 0001000
+
+.. |travis| image:: https://travis-ci.org/LucaCappelletti94/gamma_coding.png
+   :target: https://travis-ci.org/LucaCappelletti94/gamma_coding
+   :alt: Travis CI build
+
+.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_gamma_coding&metric=alert_status
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_gamma_coding
+    :alt: SonarCloud Quality
+
+.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_gamma_coding&metric=sqale_rating
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_gamma_coding
+    :alt: SonarCloud Maintainability
+
+.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_gamma_coding&metric=coverage
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_gamma_coding
+    :alt: SonarCloud Coverage
+
+.. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/gamma_coding/badge.svg?branch=master
+    :target: https://coveralls.io/github/LucaCappelletti94/gamma_coding?branch=master
+    :alt: Coveralls Coverage
+
+.. |pip| image:: https://badge.fury.io/py/gamma-coding.svg
+    :target: https://badge.fury.io/py/gamma-coding
+    :alt: Pypi project
+
+.. |downloads| image:: https://pepy.tech/badge/gamma-coding
+    :target: https://pepy.tech/badge/gamma-coding
+    :alt: Pypi total project downloads 
+
+.. |codacy|  image:: https://api.codacy.com/project/badge/Grade/c6020951b9814eeeb1920e2a4baf47c3
+    :target: https://www.codacy.com/manual/LucaCappelletti94/gamma_coding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/gamma_coding&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Maintainability
+
+.. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/a79dde452b6e1a7f7539/maintainability
+    :target: https://codeclimate.com/github/LucaCappelletti94/gamma_coding/maintainability
+    :alt: Maintainability
+
+.. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/a79dde452b6e1a7f7539/test_coverage
+    :target: https://codeclimate.com/github/LucaCappelletti94/gamma_coding/test_coverage
+    :alt: Code Climate Coverate
