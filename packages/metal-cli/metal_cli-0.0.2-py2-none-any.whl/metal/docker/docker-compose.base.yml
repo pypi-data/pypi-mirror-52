@@ -1,0 +1,47 @@
+version: '3.2'
+services:
+  mongo:
+    image: mongo
+    command: mongod
+    ports:
+      - '27017:27017'
+    volumes:
+      - '[HOME_PATH]/mongo/db:/data/db'
+  mysql:
+    build: '[INSTALLATION_PATH]/docker/mysql'
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    command: mysqld
+    ports:
+      - '3306:3306'
+    volumes:
+      - '[HOME_PATH]/mysql/db:/var/lib/mysql'
+  neo4j:
+    image: neo4j
+    command: neo4j
+    environment:
+      - NEO4J_AUTH=neo4j/secret
+    ports:
+      - '7474:7474'
+      - '7687:7687'
+    volumes:
+      - '[HOME_PATH]/neo4j/data:/data'
+      - '[HOME_PATH]/neo4j/logs:/logs'
+      - '[HOME_PATH]/neo4j/import:/var/lib/neo4j/import'
+      - '[HOME_PATH]/neo4j/plugins:/plugins'
+  selenium:
+    image: selenium/standalone-chrome
+  nginx:
+    image: nginx:alpine
+    ports:
+      - '80:80'
+    volumes:
+      - '[HOME_PATH]/nginx/sites:/etc/nginx/conf.d'
+    networks:
+      default:
+        aliases:
+          [ALIASES]
+  rails:
+    build: '[INSTALLATION_PATH]/docker/rails'
+  laravel:
+    build: '[INSTALLATION_PATH]/docker/laravel'
