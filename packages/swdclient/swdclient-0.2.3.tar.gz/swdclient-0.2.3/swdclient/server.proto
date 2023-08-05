@@ -1,0 +1,155 @@
+syntax = "proto3";
+package server;
+
+message Vector3D {
+
+  float x = 1;
+  float y = 2;
+  float z = 3;
+
+}
+message Rotation3D {
+
+  float yaw = 1;
+  float pitch = 2;
+  float roll = 3;
+
+}
+message Transform {
+
+  Vector3D location = 1;
+  Rotation3D rotation = 2;
+
+}
+
+message Motionstatus{
+
+  Vector3D velocity = 1;
+  Vector3D accelerity = 2;
+  float forward_speed =3;
+  Vector3D angular_velocity =4;
+  float steer = 5;
+  fixed32 status = 6;
+
+}
+message BoundingBox {
+
+  Vector3D min = 1;
+  Vector3D max = 2;
+}
+
+//=========================================================================
+
+//Objects -----------------------------------------------------------------
+
+// ========================================================================
+
+message Pedestrian {
+
+  float forward_speed = 2;
+  Vector3D velocity = 3;
+  Vector3D accelerity = 4;
+}
+
+message Vehicle {
+  float forward_speed = 2;
+  Vector3D velocity = 3;
+  Vector3D accelerity = 4;
+}
+
+message TrafficLight {
+  enum State {
+    UNKNOWN = 0;
+    RED = 1;
+    YELLOW = 2;
+    GREEN = 3;
+  }
+  State state = 1;
+  fixed32 light_time = 2;
+}
+
+
+message SpeedLimitSign {
+  float limit_speed = 1;
+}
+
+
+message Object {
+
+  fixed32 id = 1;
+  Transform transform = 2;
+  oneof object {
+    Pedestrian pedestrian = 4;
+    Vehicle vehicle = 3;
+    TrafficLight traffic_light = 5;
+    SpeedLimitSign speed_limit_sign = 6;
+  }
+  BoundingBox bounding_box = 7;
+
+}
+
+
+//=========================================================================
+
+// -- Agent Server Messages -----------------------------------------------
+
+// ========================================================================
+
+//=========================================================================
+
+// -- Task Messages for fixed point-----------------------------------------------
+message Control {
+
+  float throttle = 1;
+  float steer = 2;
+  float brake = 3;
+  bool hand_brake = 4;
+  bool reverse = 5;
+  float speed = 6;
+
+}
+// ========================================================================
+message Task {
+  fixed32 id = 1;
+  Vector3D start_point = 2;
+  Vector3D end_point = 3;
+}
+
+//=========================================================================
+
+// -- flag Messages for test-----------------------------------------------
+
+// ========================================================================
+message Run_Status {
+  enum State {
+    RUN = 0;
+    STOP = 1;
+    MOVE = 2;
+  }
+  State state = 1;
+}
+
+message Measurements {
+
+  fixed64 time_stamp =3;
+
+  Run_Status run_status = 6;
+
+  Transform transform = 1;
+
+  Motionstatus motionstatus = 2 ;
+
+  //BoundingBox bounding_box = 12;
+
+  //float forward_speed = 4;
+
+  Control control = 10;
+
+  repeated Object objects = 4;
+
+  Task task = 5;
+
+}
+
+
+  
