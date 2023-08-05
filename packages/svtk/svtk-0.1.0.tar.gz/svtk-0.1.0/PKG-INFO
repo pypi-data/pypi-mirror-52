@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: svtk
+Version: 0.1.0
+Summary: Streaming Visualization Toolkit
+Author: SimLeek
+Author-email: simulator.leek@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

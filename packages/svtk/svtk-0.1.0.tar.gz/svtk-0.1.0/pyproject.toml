@@ -1,0 +1,41 @@
+[build-system]
+requires = [
+    "vtk",
+    "numpy",
+    "poetry>=0.12",
+]
+build-backend = 'poetry.masonry.api'
+
+[tool.black]
+line-length = 120
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/'''
+
+[tool.poetry]
+name = "svtk"
+version = "0.1.0"
+description = "Streaming Visualization Toolkit"
+authors = ["SimLeek <simulator.leek@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+requires = [
+    "black"
+]
