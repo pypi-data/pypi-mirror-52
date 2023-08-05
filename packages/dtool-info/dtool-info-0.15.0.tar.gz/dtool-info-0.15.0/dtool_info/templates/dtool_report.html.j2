@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script>
+function toggleContent(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<style>
+body {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+h3.datasets {
+  padding-top: 0.5em;
+}
+ul.datasets {
+  margin: 0;
+  padding: 0;
+}
+li.datasets {
+  list-style-type: none;
+  background-color: #E8EAF6;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 2px solid #9FA8DA;
+}
+
+th.datasets, td.datasets {
+  padding: 0.3em;
+  white-space: nowrap;
+}
+
+td.datasets:last-child {
+  width: 100%;
+  white-space: normal;
+}
+
+th.summary, td.summary {
+  padding: 0.5em;
+}
+
+th.summary {
+  text-align: right;
+}
+
+td.summary {
+  text-align: left;
+}
+
+button {
+  margin-top: 1em;
+}
+
+a {
+  color: black;
+}
+
+pre.readme {
+  border: 2px solid #9FA8DA;
+  padding: 0.3em;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+</style>
+
+<title>Dtool Report</title>
+</head>
+
+<body>
+<h1>Dtool Report</h1>
+
+<h2>Summary</h2>
+
+<table class="summary">
+  <tr>
+    <th class="summary">Number of datasets</th>
+    <td class="summary">{{ num_datasets }}</td>
+  </tr>
+  <tr>
+    <th class="summary">Total number of items</th>
+    <td class="summary">{{ total_items }}</td>
+  </tr>
+  <tr>
+    <th class="summary">Total size</th>
+    <td class="summary">{{ total_size_str }}</td>
+  </tr>
+</table>
+
+<h2>Datasets</h2>
+
+<ul class="datasets">
+{% for ds in datasets %}
+<li class="datasets">
+  <h3 class="datasets">
+    {{ ds.name }}
+  </h3>
+
+  <table class="datasets">
+    <tr>
+      <th class="datasets">Size</th>
+      <th class="datasets">Creator</th>
+      <th class="datasets">Num Items</th>
+      <th class="datasets">Creation Date</th>
+      <th class="datasets">URI</th>
+    </tr>
+    <tr>
+      <td class="datasets">{{ ds.size_str }}</td>
+      <td class="datasets">{{ ds.creator }}</td>
+      <td class="datasets">{{ ds.num_items }}</td>
+      <td class="datasets">{{ ds.date }}</td>
+      <td class="datasets"><a href={{ ds.uri }}>{{ ds.uri }}</a></td>
+    </tr>
+  </table>
+  
+  <pre class="readme" id="readme.{{ ds.uuid }}" style="display: none">{{ ds.readme_content }}</pre>
+  <button onclick=toggleContent("readme.{{ ds.uuid }}")>Toggle README</button>
+
+</li>
+{% endfor %}
+</ul>
+
+</body>
+
+</html>

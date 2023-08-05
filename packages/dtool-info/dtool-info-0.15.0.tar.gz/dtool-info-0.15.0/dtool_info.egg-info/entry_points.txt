@@ -1,0 +1,13 @@
+[dtool.cli]
+diff = dtool_info.dataset:diff
+identifiers = dtool_info.dataset:identifiers
+inventory = dtool_info.inventory:inventory
+item = dtool_info.dataset:item
+ls = dtool_info.dataset:ls
+overlay = dtool_info.overlay:overlay
+status = dtool_info.dataset:status
+summary = dtool_info.dataset:summary
+uri = dtool_info.dataset:uri
+uuid = dtool_info.dataset:uuid
+verify = dtool_info.dataset:verify
+
