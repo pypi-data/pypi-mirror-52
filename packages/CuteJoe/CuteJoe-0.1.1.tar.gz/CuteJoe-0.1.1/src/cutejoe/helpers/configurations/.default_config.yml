@@ -1,0 +1,53 @@
+# CuteJoe 1.0 Configuration file
+#
+# Check https://github.com/MatheusBrochi/CuteJoe for more details
+#
+version: 1
+changelog:
+  default_title: ':memo: Uncategorized'
+  folder: changelogs
+  start: master
+  end: HEAD
+  kinds:
+    add:
+      labels:
+      - add
+      - added
+      title: ':heavy_plus_sign: Added'
+      version: minor
+    break:
+      labels:
+      - break
+      - breaking
+      title: ':boom: Breaking Changes!'
+      version: major
+    change:
+      labels:
+      - change
+      - changed
+      title: ':wrench: Changed'
+      version: minor
+    deprecate:
+      labels:
+      - deprecate
+      - deprecated
+      title: ':no_entry_sign: Deprecated'
+      version: minor
+    fix:
+      labels:
+      - fix
+      - fixed
+      title: ':bug: Fixed'
+      version: patch
+    remove:
+      labels:
+      - remove
+      - removed
+      title: ':heavy_minus_sign: Removed'
+      version: minor
+    security:
+      labels:
+      - security
+      title: ':lock: Security'
+      version: minor
+  
