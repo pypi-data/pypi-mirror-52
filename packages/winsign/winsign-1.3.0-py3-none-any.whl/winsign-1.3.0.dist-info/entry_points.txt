@@ -1,0 +1,3 @@
+[console_scripts]
+winsign = winsign.sign:main
+
