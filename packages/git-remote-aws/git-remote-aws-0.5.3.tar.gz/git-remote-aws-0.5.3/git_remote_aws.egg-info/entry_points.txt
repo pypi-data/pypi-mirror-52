@@ -1,0 +1,7 @@
+
+        [console_scripts]
+        git-remote-aws+ec2=gitRemoteAws.cli_ec2:cli
+        git-remote-aws+cw=gitRemoteAws.cli_cw:cli
+        git-remote-aws+sns=gitRemoteAws.cli_sns:cli
+        git-remote-aws+cloudtrail=gitRemoteAws.cli_cloudtrail:cli
+    
