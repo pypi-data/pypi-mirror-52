@@ -1,0 +1,11 @@
+README.rst
+setup.py
+django_modals/__init__.py
+django_modals.egg-info/PKG-INFO
+django_modals.egg-info/SOURCES.txt
+django_modals.egg-info/dependency_links.txt
+django_modals.egg-info/not-zip-safe
+django_modals.egg-info/requires.txt
+django_modals.egg-info/top_level.txt
+django_modals/templatetags/__init__.py
+django_modals/templatetags/django_modals.py

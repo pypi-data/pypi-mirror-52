@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: django-modals
+Version: 0.0.1
+Summary: bootstrap alert/confirm dialogs you can customize via django template
+Home-page: https://github.com/elapouya/django-modals
+Author: Eric Lapouyade
+Author-email: elapouya@gmail.com
+License: LGPL 2.1
+Description: 
+        =============================
+        django-modals
+        =============================
+        
+        alert/confirm/error/etc... modal dialogs you can customize via django template
+        
+        News
+        ====
+        
+        
+Keywords: Bootstrap alert confirm dialog
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: tests
+Provides-Extra: docs

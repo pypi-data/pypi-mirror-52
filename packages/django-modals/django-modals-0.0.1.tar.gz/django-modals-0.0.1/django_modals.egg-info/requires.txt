@@ -1,0 +1,7 @@
+django>=2
+
+[docs]
+Sphinx
+sphinxcontrib-napoleon
+
+[tests]
