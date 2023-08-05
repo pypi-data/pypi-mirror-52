@@ -1,0 +1,3 @@
+[console_scripts]
+dist_exe = dist_exe:main
+
