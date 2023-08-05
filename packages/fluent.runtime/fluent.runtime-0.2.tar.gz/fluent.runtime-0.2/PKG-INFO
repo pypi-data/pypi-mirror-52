@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: fluent.runtime
+Version: 0.2
+Summary: Localization library for expressive translations.
+Home-page: https://github.com/projectfluent/python-fluent
+Author: Luke Plant
+Author-email: L.Plant.98@cantab.net
+License: APL 2
+Description: See https://github.com/projectfluent/python-fluent/ for more info.
+Keywords: fluent,localization,l10n
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
