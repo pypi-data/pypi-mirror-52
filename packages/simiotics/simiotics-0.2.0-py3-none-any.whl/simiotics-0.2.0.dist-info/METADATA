@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: simiotics
+Version: 0.2.0
+Summary: Simiotics Python SDK
+Home-page: UNKNOWN
+Author: Neeraj Kashyap
+Author-email: neeraj@simiotics.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: grpcio
+Requires-Dist: protobuf
+
+UNKNOWN
+
+
