@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+type_classifier/__init__.py
+type_classifier/model_trained.sav
+type_classifier/predict.py
+type_classifier.egg-info/PKG-INFO
+type_classifier.egg-info/SOURCES.txt
+type_classifier.egg-info/dependency_links.txt
+type_classifier.egg-info/top_level.txt
