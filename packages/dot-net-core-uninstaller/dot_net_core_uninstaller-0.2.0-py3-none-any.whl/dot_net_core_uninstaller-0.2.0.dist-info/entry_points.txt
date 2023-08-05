@@ -1,0 +1,3 @@
+[console_scripts]
+dotnetcore = dot_net_core_uninstaller.cli:cli
+
