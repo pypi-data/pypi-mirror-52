@@ -1,0 +1,3 @@
+[console_scripts]
+regulus = regulus.command_line:main
+
