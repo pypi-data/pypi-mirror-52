@@ -1,0 +1,10 @@
+README.md
+setup.py
+dfuse.egg-info/PKG-INFO
+dfuse.egg-info/SOURCES.txt
+dfuse.egg-info/dependency_links.txt
+dfuse.egg-info/requires.txt
+dfuse.egg-info/top_level.txt
+dfuse/ws/__init__.py
+dfuse/ws/example.py
+dfuse/ws/ws.py
