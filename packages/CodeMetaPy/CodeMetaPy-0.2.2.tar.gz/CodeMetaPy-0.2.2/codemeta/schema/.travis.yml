@@ -1,0 +1,14 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: R
+sudo: true
+cache: packages
+apt_packages:
+    - libv8-dev
+
+before_install:
+  - cd tests
+
+script:
+  - R -e "devtools::install()"
+  - R -f test.R
