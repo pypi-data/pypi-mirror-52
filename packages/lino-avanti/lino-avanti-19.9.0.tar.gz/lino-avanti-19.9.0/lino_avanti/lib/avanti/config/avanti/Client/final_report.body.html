@@ -1,0 +1,120 @@
+{# `this` is the Excerpt, `obj` is the `owner`, i.e. the client #}
+{# % extends "excerpts/base.body.html" % #}
+
+{% block title %}
+<h1>Abschließende Sozialbilanz</h1>
+{% endblock %}
+
+{% block body %}
+
+<h2>Angaben zur Person und Kontakte</h2>
+Name: <b>{{obj.last_name}}</b>
+<br>Vorname: <b>{{obj.first_name}}</b>
+<br>Adresse: <b>{{', '.join(
+  obj.get_primary_address().address_location_lines())}}</b>
+<br>Geburtsdatum: <b>{{obj.birth_date}}</b>
+<br>Sozialarbeiterin bei Info-Integration: <b>{{obj.user}}</b>
+
+<br>Eingeschrieben beim Arbeitsamt:
+<b>{{bool2text(obj.has_contact_work_office)}}</b>
+{% set x = rt.models.clients.KnownContactTypes.work_consultant.get_contact(obj) %}
+{% if x %}
+<br>Arbeitsberater: <b>{{x.contact_person or "..."}} ({{x.company}}</b>)
+{% endif %}
+
+<br>Betreut vom ÖSHZ:
+<b>{{bool2text(obj.has_contact_pcsw)}}</b>
+
+{% set x = rt.models.clients.KnownContactTypes.general_assistant.get_contact(obj) %}
+{% if x %}
+<br>Sozialarbeiter ASD: <b>{{x.contact_person or "..."}} ({{x.company}}</b>)
+{% endif %}
+
+{% set x = rt.models.clients.KnownContactTypes.integ_assistant.get_contact(obj) %}
+{% if x %}
+<br>Sozialarbeiter DSBE: <b>{{x.contact_person or "..."}} ({{x.company}}</b>)
+{% endif %}
+
+<h2>Sprachenkenntnisse und Schulbildung</h2>
+
+{{ar.show(rt.models.cv.LanguageKnowledgesByPerson, obj, nosummary=True)}}
+
+<p>Zusammenfassung:
+<br>Muttersprache: <b>{{obj.mother_tongues}}</b>
+<br>Erreichtes Niveau in Deutsch: <b>{{obj.cef_level_de}}</b>
+<br>Erreichtes Niveau in Französisch: <b>{{obj.cef_level_fr}}</b>
+
+<br>Kenntnisse in anderen Sprachen:
+
+<br>Dauer der Schulbildung im Herkunftsland:
+
+<br>Abgeschlossenes Niveau:
+<br>Anerkennung des Diploms in Belgien: ja nein  Niveau:
+</p>
+
+<h2>Kompetenzen und Ausbildungen</h2>
+<br>Ausbildungen im Ausland:
+<br>Ausbildungen in Belgien:
+
+<div>
+{{ar.show(rt.models.cv.StudiesByPerson, obj)}}
+</div>
+
+<br>Kenntnisse in Informatik:
+<br>Andere Kompetenzen:
+<br>Integrationskurs abgeschlossen: ja nein
+
+<h2>Einschreibungen in Kursen</h2>
+<div>
+{{ar.show(rt.models.courses.EnrolmentsByPupil,
+  obj, nosummary=True,
+  column_names="request_date:8 course state:10 remark missing_rate")}}
+</div>
+
+
+{% for response in rt.models.polls.ResponsesByPartner.request(obj) %}
+{% if response.poll.ref and response.poll.ref.startswith("") %}
+<h2>{{response.poll}}</h2>
+<div>
+{{ar.show(rt.models.polls.AnswersByResponse, response)}}
+</div>
+{% endif %}
+{% endfor %}
+
+<br>Berufliche Information zu den Themen:
+
+
+
+<h2>Berufliche Situation</h2>
+
+<div>
+{{ar.show(rt.models.cv.ExperiencesByPerson, obj)}}
+</div>
+
+Berufliche Situation: <b>{{obj.professional_state}}</b>
+/ Berufserfahrung im Ausland:
+/ Berufserfahrung in Belgien:
+
+
+<h2>Professionelles Ziel</h2>
+
+Professionelles Ziel:
+
+<br>Geplante Schritte, um dieses Ziel zu erreichen:
+
+<br>1.
+<br>2.
+<br>3.
+
+<br>Arbeitserlaubnis benötigt: ja nein
+<br>Lebenslauf erstellt: ja nein
+<br>Wissen über das Bewerbungsverfahren in Belgien: ja nein
+
+<h2>Verfügbarkeit</h2>
+
+Führerschein ja nein Klasse:
+<br>Kinder unter 3 Jahren: ja nein  Kinderbetreuung vorhanden: ja nein
+<br>Kinder in der Schule: ja nein
+
+
+{% endblock %}
