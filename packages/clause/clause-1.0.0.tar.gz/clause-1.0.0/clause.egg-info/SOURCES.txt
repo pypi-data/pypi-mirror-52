@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+clause/__init__.py
+clause.egg-info/PKG-INFO
+clause.egg-info/SOURCES.txt
+clause.egg-info/dependency_links.txt
+clause.egg-info/requires.txt
+clause.egg-info/top_level.txt
+clause/gen/__init__.py
+clause/gen/clause/Serving.py
+clause/gen/clause/__init__.py
+clause/gen/clause/constants.py
+clause/gen/clause/ttypes.py
