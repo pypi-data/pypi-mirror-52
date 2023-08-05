@@ -1,0 +1,3 @@
+[console_scripts]
+znail = znail.ui.__main__:main
+
