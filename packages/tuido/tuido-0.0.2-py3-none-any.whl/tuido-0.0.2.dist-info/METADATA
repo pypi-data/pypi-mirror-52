@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: tuido
+Version: 0.0.2
+Summary: TUI todo list
+Home-page: https://github.com/bodneyc/tuido
+Author: BenJC
+Author-email: benjamin.carrington@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Description-Content-Type: text/markdown
+
+Tuido
+======
+
+Simple todo list implementation using python [curses](https://docs.python.org/3/howto/curses.html).
+
+## Description
+
+This actually turned out to be a little more comprehensive than I had originally intended; features include:
+
+ - Subtasks to any depth
+ - Marking done
+ - Marking for deletion
+ - Permanent deletion
+ - Scrolling long lists
+ - Configuration spacing, indenting etc
+ - A vim-styled command line interface
+
+## Usage
+
+All the functionality of `tuido` is provided through single character commands, these are:
+
+    Todo List: top level
+
+        a  :  Add item to current level
+        A  :  Add subtask to highlighted item
+        c  :  Edit description (^H to backspace)
+        C  :  Change description
+        d  :  Mark deleted
+        D  :  Delete (permanent)
+        h  :  Up level
+        j  :  Down
+        k  :  Up
+        l  :  Down level
+        m  :  Mark done
+        M  :  Mark done (recursive)
+        q  :  Write and quit
+        r  :  Refresh screen
+        w  :  Write
+        ?  :  Show (this) help screen
+        :  :  Enter command
+
+### Command Line
+
+The command line interface is quite simple, hit '`:`' and give a character command, followed by a description is relevant, then a sequence of numbers indicating the (sub)task to change, e.g:
+
+    : A "New Task" 1 2 4
+
+This will add a task witht he description "New Task" to subsubtask 4 of subtask 2 of task 1 of the current window/level.
+
+## Todo
+
+There still are a couple of things I'd like to add, these include:
+
+ - A searching mechanism
+ - Tags probably through the `@` symbol
+ - Configurable colors
+
+
