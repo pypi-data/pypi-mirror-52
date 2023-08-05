@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pybandwidth-v2
+Version: 0.0.1
+Summary: Bandwidth API for v2 messaging
+Home-page: https://github.com/reef-technologies/pybandwidth_v2
+Author: Reef Technologies
+Author-email: anuj.agarwal@reef.pl
+License: MIT
+Download-URL: https://github.com/reef-technologies/pybandwidth_v2/archive/v_001.tar.gz
+Project-URL: Source, https://github.com/reef-technologies/pybandwidth_v2
+Project-URL: Tracker, https://github.com/reef-technologies/pybandwidth_v2/issues
+Keywords: python,bandwidth,v2,api,client
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: requests
+
+UNKNOWN
+
+
