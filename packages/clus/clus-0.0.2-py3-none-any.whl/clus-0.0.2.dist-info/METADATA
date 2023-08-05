@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: clus
+Version: 0.0.2
+Summary: A complete fuzzy clus framework
+Home-page: https://github.com/NicolasBizzozzero/clus
+Author: BIZZOZZÉRO Nicolas
+Author-email: nicolasbizzozzero@gmail.com
+License: gpl-v3
+Keywords: cli,clus,clustering,fuzzy,fuzzy_clustering,research,upmc,sorbonne,sorbonne_universite
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Dist: click (>=7.0)
+Requires-Dist: matplotlib (>=3.1.1)
+Requires-Dist: memory-profiler (>=0.55.0)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: pandas (>=0.25.0)
+Requires-Dist: scikit-learn (>=0.21.3)
+Requires-Dist: scipy (>=1.3.0)
+Requires-Dist: tqdm (>=4.32.2)
+
+UNKNOWN
+
+

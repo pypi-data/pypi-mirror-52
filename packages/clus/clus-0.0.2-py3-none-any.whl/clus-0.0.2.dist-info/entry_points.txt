@@ -1,0 +1,6 @@
+[console_scripts]
+clus = clus.main:clus
+dclus = clus.main:dclus
+eclus = clus.main:eclus
+hclus = clus.main:hclus
+
