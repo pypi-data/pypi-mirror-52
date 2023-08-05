@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: grading-application
+Version: 0.0.7
+Summary: Short answer grading assistant with active learning support
+Home-page: https://upload.pypi.org/legacy/grading_application
+Author: Ravikiran Bhat
+Author-email: ravikiranbhat243@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Autograding assistant
+
+### Instructions
+* This software requires Python 3.x and Flask version 1.0.2 installed on the system. 
+* The web based autograding assistant needs data input to be uploaded in the form of nbgrader metadata. 
+* When using the software, select the zipped nbgrader metadata dataset for upload.
+* Upload the models answers if available in the form of a txt file.
+* Once the application is lauched, go to http://127.0.0.1:5000 to get the GUI window.
+
+
