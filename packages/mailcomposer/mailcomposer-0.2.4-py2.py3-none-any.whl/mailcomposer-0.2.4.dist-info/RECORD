@@ -1,0 +1,14 @@
+mailcomposer/__init__.py,sha256=rerT6tGMbzsJgjrNTD2IpAYQw9AwPkWG73sCmeJ-l90,3042
+mailcomposer/__main__.py,sha256=7cn1z4olKzIFTOiAHqVl3ae645CBSPuqUKgHyMxoVBc,4042
+mailcomposer/base.py,sha256=i99GcJio4Vq5Dy_in3_Uor2-h9HUG7OP4TCkdUR8-q0,7152
+mailcomposer/dummy.py,sha256=pF0CYZSsmIlSOWNR9y_2T5rLuxLcfpOHuu1CC3hjSbI,569
+mailcomposer/exceptions.py,sha256=PlNVyQeSZABcaTqgPt43dqqGU8PfkSjmGVbALp_jnx0,155
+mailcomposer/outlook.py,sha256=PEpmKkwaBEfd2xOOLBEgxaQ68d1kXphWr--tA4yZmpU,1625
+mailcomposer/thunderbird.py,sha256=qQYZYuuJPZgmfXLPh1G9c2PYQzj2JBibUVOPKFW7lRc,3119
+mailcomposer/util.py,sha256=d4YaOB5BEQDJXJJpNJU6iwfHLD_25hwMMvMizlTum7U,1572
+mailcomposer/xdg_email.py,sha256=nyEk_43f6-5Z6yzTpIhhZqYBYZyUCA7myPRbb_H0ZxY,2240
+mailcomposer-0.2.4.dist-info/LICENSE,sha256=jaNjEA232nhJCChFOfaEYKGMgAjY2W9EbPVeUNU3d04,1060
+mailcomposer-0.2.4.dist-info/METADATA,sha256=u5FP0w7Zt01krQeymdughWFCgqtPp1Tu6t3q6CaRqt8,2418
+mailcomposer-0.2.4.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+mailcomposer-0.2.4.dist-info/top_level.txt,sha256=OvU2-47PDkDmmlgFm0ryLpQ6zeZHUCuJkSJZLVHE5J8,13
+mailcomposer-0.2.4.dist-info/RECORD,,
