@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+README.rst
+setup.py
+jk_hwriter/HWriter.py
+jk_hwriter/__init__.py
+jk_hwriter.egg-info/PKG-INFO
+jk_hwriter.egg-info/SOURCES.txt
+jk_hwriter.egg-info/dependency_links.txt
+jk_hwriter.egg-info/not-zip-safe
+jk_hwriter.egg-info/top_level.txt
