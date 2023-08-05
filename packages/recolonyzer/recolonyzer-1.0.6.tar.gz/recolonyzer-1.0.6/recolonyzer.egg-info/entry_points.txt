@@ -1,0 +1,3 @@
+[console_scripts]
+recolonyzer = recolonyzer.commands.entrypoint:run
+
