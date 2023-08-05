@@ -1,0 +1,17 @@
+README.md
+setup.py
+auto_tag/__init__.py
+auto_tag/__main__.py
+auto_tag/cli.py
+auto_tag/constants.py
+auto_tag/core.py
+auto_tag/detectors.py
+auto_tag/detectors_config.py
+auto_tag/entrypoint.py
+auto_tag/exception.py
+auto_tag/git_custom_env.py
+auto_tag.egg-info/PKG-INFO
+auto_tag.egg-info/SOURCES.txt
+auto_tag.egg-info/dependency_links.txt
+auto_tag.egg-info/entry_points.txt
+auto_tag.egg-info/top_level.txt
