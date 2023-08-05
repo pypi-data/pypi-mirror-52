@@ -1,0 +1,225 @@
+Metadata-Version: 2.1
+Name: illuminatio
+Version: 1.2
+Summary: The kubernetes network policy validator.
+Home-page: https://github.com/inovex/illuminatio
+Author: inovex GmbH
+Author-email: list-ito+illuminatio@inovex.de
+License: apache
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: google-auth
+Requires-Dist: python-dateutil
+Requires-Dist: pyyaml
+Requires-Dist: oauthlib
+Requires-Dist: kubernetes
+Requires-Dist: click
+Requires-Dist: click-log
+Requires-Dist: docker
+Requires-Dist: nsenter
+Requires-Dist: attrs
+Requires-Dist: pluggy
+Requires-Dist: pytest
+Requires-Dist: urllib3
+Requires-Dist: setuptools
+
+# Illuminatio - The kubernetes network policy validator
+
+[![Build Status](https://travis-ci.org/inovex/illuminatio.svg?branch=master)](https://travis-ci.org/inovex/illuminatio)
+
+![alt text](/logo/logo_small.png)
+
+Illuminatio is a tool for automatically testing kubernetes network policies.
+Simply execute `illuminatio clean run`
+and Illuminatio will scan your kubernetes cluster for network policies, build test cases accordingly and execute them
+to determine if the policies are in effect.
+
+An overview of the concept is visualized in [the concept doc](docs/concept.md).
+
+## Getting started
+
+Follow these instructions to get Illuminatio up and running.
+
+## Prerequisites
+
+- Python 3
+- Pip 3
+
+## Installation
+
+with pip:
+
+```bash
+pip3 install illuminatio
+```
+
+or directly from the repository:
+
+```bash
+git clone https://github.com/inovex/illuminatio
+cd illuminatio
+python3 setup.py install
+cd ..
+```
+
+## Example Usage
+
+Create a Deployment to test with:
+
+```bash
+kubectl create deployment web --image=nginx
+kubectl expose deployment web --port 80 --target-port 80
+```
+
+Define and create a NetworkPolicy for your Deployment:
+
+```bash
+cat <<EOF | kubectl create -f -
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web-deny-all
+spec:
+  podSelector:
+    matchLabels:
+      app: web
+  ingress: []
+EOF
+```
+
+Test your newly created NetworkPolicy:
+
+```bash
+illuminatio clean run
+Starting cleaning resources with policies ['on-request', 'always']
+Deleting namespaces [] with cleanup policy on-request
+Deleting namespaces [] with cleanup policy always
+Deleting DSs in default with cleanup policy on-request
+Deleting pods in default with cleanup policy on-request
+Deleting svcs in default with cleanup policy on-request
+Deleting CfgMaps in default with cleanup policy on-request
+Deleting CRBs  with cleanup policy on-request globally
+Deleting SAs in default with cleanup policy on-request
+Deleting DSs in default with cleanup policy always
+Deleting pods in default with cleanup policy always
+Deleting svcs in default with cleanup policy always
+Deleting CfgMaps in default with cleanup policy always
+Deleting CRBs  with cleanup policy always globally
+Deleting SAs in default with cleanup policy always
+Finished cleanUp
+
+Starting test generation and run.
+Got cases: [NetworkTestCase(from=ClusterHost(namespace=default, podLabels={'app': 'web'}), to=ClusterHost(namespace=default, podLabels={'app': 'web'}), port=-*)]
+Generated 1 cases in 0.0701 seconds
+FROM             TO               PORT
+default:app=web  default:app=web  -*
+
+Using existing cluster role
+Creating cluster role binding
+TestResults: {'default:app=web': {'default:app=web': {'-*': {'success': True}}}}
+Finished running 1 tests in 18.7413 seconds
+FROM             TO               PORT  RESULT
+default:app=web  default:app=web  -*    success
+```
+
+The `clean` keyword assures that illuminatio clears all potentially existing resources created in past illuminatio runs to prevent potential issues, however no user generated resources are affected.
+
+*PLEASE NOTE* that currently each new run requires a clean, as the runners do not continuously look for new cases.
+
+For the case that you really want to keep the generated resources you are free to omit the `clean` keyword.
+
+If you are done testing you might want to easily delete all resources created by illuminatio:
+
+```bash
+illuminatio clean
+```
+
+To preview generated test cases without running tests use `illuminatio run`'s `--dry` option:
+
+```bash
+illuminatio run --dry
+Starting test generation and run.
+Got cases: [NetworkTestCase(from=ClusterHost(namespace=default, podLabels={'app': 'web'}), to=ClusterHost(namespace=default, podLabels={'app': 'web'}), port=-*)]
+Generated 1 cases in 0.0902 seconds
+FROM             TO               PORT
+default:app=web  default:app=web  -*
+
+Skipping test execution as --dry was set
+```
+
+All options and further information can be found using the `--help` flag on any level:
+
+```bash
+illuminatio --help
+```
+
+```Bash
+Usage: illuminatio [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
+
+Options:
+  -v, --verbosity LVL  Either CRITICAL, ERROR, WARNING, INFO or DEBUG
+  --incluster
+  --help               Show this message and exit.
+
+Commands:
+  clean
+  run
+```
+
+## Docker Usage
+
+Note: If you are using a minikube cluster make sure to use the following configuration:
+
+```bash
+minikube config set embed-certs true
+```
+
+Also make sure to pass the `--net=host` flag, otherwise your docker container will not be able to reach the VM hosting your cluster.
+
+```bash
+docker run -it --net=host -v ~/.kube:/root/.kube:ro inovex/illuminatio illuminatio clean run
+```
+
+For clusters on external machines you merely need the kubeconfig:
+
+```bash
+docker run -it -v ~/.kube:/root/.kube:ro inovex/illuminatio illuminatio clean run
+```
+
+## Compatibility
+
+illuminatio 1.1 was tested using:
+
+- python 3.5.2
+- pip 19.2.1
+
+illuminatio 1.1 is confirmed to be working properly with the following kubernetes environments:
+
+- minikube v0.34.1, kubernetes v1.13.3
+- Google Kubernetes Engine, v1.12.8-gke.10
+- kubeadm 1.15.0-00, kubernetes v1.15.2
+
+## References
+
+The logo was created by Pia Blum.
+
+Example Network Policies are inspired by
+[kubernetes-network-policy-recipes](https://github.com/ahmetb/kubernetes-network-policy-recipes)
+
+Presentation from [ContainerDays 2019](https://www.youtube.com/watch?v=eEkTvAez8HA&list=PLHhKcdBlprMdg-fwPD1b3IjBRR_Ga09H0&index=36), [slides](https://www.inovex.de/de/content-pool/vortraege/network-policies)
+
+## Contributing
+
+We are happy to read your [issues](https://github.com/inovex/illuminatio/issues) and accept your [Pull Requests.](https://github.com/inovex/illuminatio/compare)
+This project uses the [standard github flow](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).
+For more information on developing illuminatio refer to [the development docs](docs/developing.md).
+
+## License
+
+This project excluding the logo is licensed under the terms of the Apache 2.0 license.
+The logo is licensed under the terms of the CC BY-NC-ND 4.0 license.
+
+

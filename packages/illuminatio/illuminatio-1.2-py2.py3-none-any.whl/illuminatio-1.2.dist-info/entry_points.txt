@@ -1,0 +1,4 @@
+[console_scripts]
+illuminatio = illuminatio.illuminatio:cli
+illuminatio_runner = illuminatio.illuminatio_runner:cli
+
