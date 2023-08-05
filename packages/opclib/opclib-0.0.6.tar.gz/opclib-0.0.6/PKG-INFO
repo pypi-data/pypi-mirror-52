@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: opclib
+Version: 0.0.6
+Summary: A wrapper library for Open Pixel Control.
+Home-page: https://github.com/gcpreston/opclib
+Author: Graham Preston
+Author-email: graham.preston@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/gcpreston/opclib
+Description: # opclib
+        A wrapper library for the [Open Pixel Control](https://github.com/zestyping/openpixelcontrol) Python client. Uses [opc.py](https://github.com/scanlime/fadecandy/blob/master/examples/python/opc.py) from the Fadecandy repository.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
