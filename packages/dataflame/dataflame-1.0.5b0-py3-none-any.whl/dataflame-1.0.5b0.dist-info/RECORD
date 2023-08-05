@@ -1,0 +1,15 @@
+dataflame/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataflame/version.py,sha256=6fymYS8Oj6et6Cys3vBvVuqDdp90kw2Bt-mTKxD_lLw,154
+dataflame/interpolation/__init__.py,sha256=04JFfq41qeOJhB9YsR6zm2O5QWdrxHQbkYNuFZt6sDQ,45
+dataflame/interpolation/utilities.py,sha256=K_cmEoLPxDypgZqB93DRk2dKWEzGfT_qqgjrM-ErsDk,3622
+dataflame/label_based_dataframe_alteration/__init__.py,sha256=294LKBmEp4jv5FxyTR28SYL71EvrOW7SaMS4vnBHWAc,115
+dataflame/label_based_dataframe_alteration/utilities.py,sha256=aumNrjyycsEYa-eCVhF6Lj-r7YJcmOwYRJ9-MXnjA3I,17995
+dataflame/label_reformatting/__init__.py,sha256=9KJKahDcN9k4Xp-meOyMX2jYV1g3-JTbR-LV1E8RIng,49
+dataflame/label_reformatting/utilities.py,sha256=7-StZNHGkZPpDOCrxlG4cnRKpLcBGUnVZV3QGo12uns,1739
+dataflame/statistics/__init__.py,sha256=U8s3GoYjZE7ba9fH5B8j3_U-L2l5To8bHrNThsICv5g,56
+dataflame/statistics/utilities.py,sha256=4HkFvdWucjcy9Z1NtL9NgAmnmVxpVRuhh2BDuRSYdwA,2075
+dataflame-1.0.5b0.dist-info/LICENSE.txt,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+dataflame-1.0.5b0.dist-info/METADATA,sha256=mUQWs9SVMVKs12H8KUBMpmM-JGUgyLaeA7wd699Cy40,700
+dataflame-1.0.5b0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+dataflame-1.0.5b0.dist-info/top_level.txt,sha256=LzYjYZVH5mtLuffaBvXpVcITooO65Wva_GcFX-V0rzQ,10
+dataflame-1.0.5b0.dist-info/RECORD,,
