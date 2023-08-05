@@ -1,0 +1,3 @@
+[gui_scripts]
+pgcolorbar_demo = pgcolorbar.demo:main
+
