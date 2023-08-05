@@ -1,0 +1,2 @@
+include README.md
+include td_pyspark/jars/td-spark-assembly.jar
