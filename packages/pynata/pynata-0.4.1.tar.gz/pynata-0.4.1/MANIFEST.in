@@ -1,0 +1,6 @@
+include LICENSE
+
+global-exclude *.pyc
+
+graft pynata
+prune tests
