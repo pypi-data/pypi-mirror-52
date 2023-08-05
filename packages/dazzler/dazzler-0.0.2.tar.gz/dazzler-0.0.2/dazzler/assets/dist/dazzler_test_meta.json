@@ -1,0 +1,406 @@
+{
+  "src/internal/test_components/components/ComponentAsAspect.jsx": {
+    "description": "",
+    "displayName": "ComponentAsAspect",
+    "methods": [],
+    "props": {
+      "single": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": ""
+      },
+      "array": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "element"
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "shape": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "shaped": {
+              "name": "element",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/internal/test_components/components/DefaultProps.jsx": {
+    "description": "",
+    "displayName": "DefaultProps",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "string_default": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'Default string'",
+          "computed": false
+        }
+      },
+      "string_default_empty": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "number_default": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "0.2666",
+          "computed": false
+        }
+      },
+      "number_default_empty": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "array_default": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[1, 2, 3]",
+          "computed": false
+        }
+      },
+      "array_default_empty": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "object_default": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{foo: 'bar'}",
+          "computed": false
+        }
+      },
+      "object_default_empty": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/internal/test_components/components/TestComponent.jsx": {
+    "description": "Test component with all supported props by dazzler. Each prop are rendered with a selector for easy access.",
+    "displayName": "TestComponent",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in the DOM.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      "array_prop": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Array props with"
+      },
+      "bool_prop": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "func_prop": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      },
+      "number_prop": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "object_prop": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "string_prop": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "symbol_prop": {
+        "type": {
+          "name": "symbol"
+        },
+        "required": false,
+        "description": ""
+      },
+      "any_prop": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": ""
+      },
+      "string_with_default": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'Foo'",
+          "computed": false
+        }
+      },
+      "enum_prop": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'News'",
+              "computed": false
+            },
+            {
+              "value": "'Photos'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "union_prop": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "array_of_prop": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "number"
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "object_of_prop": {
+        "type": {
+          "name": "objectOf",
+          "value": {
+            "name": "number"
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "shape_prop": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "color": {
+              "name": "string",
+              "required": false
+            },
+            "fontSize": {
+              "name": "number",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "required_string": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": ""
+      },
+      "nested_prop": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "string_prop": {
+              "name": "string",
+              "required": false
+            },
+            "nested_shape": {
+              "name": "shape",
+              "value": {
+                "nested_array": {
+                  "name": "arrayOf",
+                  "value": {
+                    "name": "shape",
+                    "value": {
+                      "nested_array_string": {
+                        "name": "string",
+                        "required": false
+                      },
+                      "nested_array_shape": {
+                        "name": "shape",
+                        "value": {
+                          "prop1": {
+                            "name": "number",
+                            "required": false
+                          },
+                          "prop2": {
+                            "name": "string",
+                            "required": false
+                          }
+                        },
+                        "required": false
+                      }
+                    }
+                  },
+                  "required": false
+                },
+                "nested_shape_shape": {
+                  "name": "shape",
+                  "value": {
+                    "prop3": {
+                      "name": "number",
+                      "required": false
+                    },
+                    "prop4": {
+                      "name": "bool",
+                      "required": false
+                    }
+                  },
+                  "required": false
+                }
+              },
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "array_of_array": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "arrayOf",
+            "value": {
+              "name": "number"
+            }
+          }
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}

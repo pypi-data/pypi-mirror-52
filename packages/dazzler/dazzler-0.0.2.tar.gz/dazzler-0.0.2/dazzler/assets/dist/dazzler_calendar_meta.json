@@ -1,0 +1,258 @@
+{
+  "src/calendar/js/components/Calendar.jsx": {
+    "description": "Display a calendar based on the month of a timestamp.",
+    "displayName": "Calendar",
+    "methods": [],
+    "props": {
+      "month_timestamp": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Timestamp of the month to show. If not supplied is today."
+      },
+      "selected": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "day": {
+              "name": "number",
+              "required": false
+            },
+            "month": {
+              "name": "number",
+              "required": false
+            },
+            "year": {
+              "name": "number",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "The currently selected day as an object"
+      },
+      "month_format": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Formatting of the month label",
+        "defaultValue": {
+          "value": "'MMMM YYYY'",
+          "computed": false
+        }
+      },
+      "week_labels": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "Labels for the week, starting from sunday.",
+        "defaultValue": {
+          "value": "['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "_on_click": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "use_selected": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to set selected aspect on click/start up.\nThis will disable highlight of day in the calendar.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/calendar/js/components/DatePicker.jsx": {
+    "description": "Pick a date from a calendar.",
+    "displayName": "DatePicker",
+    "methods": [],
+    "props": {
+      "value": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "opened": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "date_format": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'DD MMM YYYY'",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/calendar/js/components/TimePicker.jsx": {
+    "description": "Time input with fallback for ie and safari.",
+    "displayName": "TimePicker",
+    "methods": [
+      {
+        "name": "setHour",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "hour",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "setMinute",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "minutes",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "setAMPM",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "am_pm",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "updateTime",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Time value formatted as HH:MM",
+        "defaultValue": {
+          "value": "'00:00'",
+          "computed": false
+        }
+      },
+      "fallback_mode": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Use a custom picker instead of browser dependant.\nAutomatically set when no time input support detected."
+      },
+      "mode": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'24h'",
+              "computed": false
+            },
+            {
+              "value": "'AM/PM'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "What to display when in fallback mode.",
+        "defaultValue": {
+          "value": "'24h'",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "src/markdown/js/components/CodeBlock.jsx": {
+    "description": "A block of code to highlight.",
+    "displayName": "CodeBlock",
+    "methods": [],
+    "props": {
+      "value": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The code to render"
+      },
+      "language": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Language to render"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      }
+    }
+  },
+  "src/markdown/js/components/Markdown.jsx": {
+    "description": "A react-markdown wrapper for dazzler.",
+    "displayName": "Markdown",
+    "methods": [],
+    "props": {
+      "source": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Markdown string to render."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the container element."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object to give to container."
+      },
+      "escape_html": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Escape html element in the source.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "skip_html": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Skip rendering of html elements."
+      },
+      "source_pos": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add data-sourcepos attributes to elements."
+      },
+      "allowed_types": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Which type of node to allow rendering, default to all."
+      },
+      "disallowed_types": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Which types of nodes should not be rendered, default to none."
+      },
+      "unwrap_disallowed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Setting to true will try to extract/unwrap the children\nof disallowed nodes. For instance, if disallowing Strong,\nthe default behaviour is to simply skip the text within the\nstrong altogether, while the behaviour some might want is to\nsimply have the text returned without the strong wrapping it."
+      },
+      "link_target": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Set the default target for link tags. (`_blank` to open a new tab)"
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  }
+}

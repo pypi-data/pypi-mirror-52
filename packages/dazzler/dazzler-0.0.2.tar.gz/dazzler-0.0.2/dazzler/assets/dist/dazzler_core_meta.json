@@ -1,0 +1,2354 @@
+{
+  "src/core/js/components/Button.jsx": {
+    "description": "A button to click on!",
+    "displayName": "Button",
+    "methods": [],
+    "props": {
+      "label": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Text or component to display."
+      },
+      "clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The number of times the button was clicked.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Class name to give the button."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object to give to the Button."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "DOM id, otherwise the identity is used."
+      },
+      "preset": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'primary'",
+              "computed": false
+            },
+            {
+              "value": "'secondary'",
+              "computed": false
+            },
+            {
+              "value": "'danger'",
+              "computed": false
+            },
+            {
+              "value": "'warning'",
+              "computed": false
+            },
+            {
+              "value": "'success'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Preset style colors to apply."
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disable the button."
+      },
+      "rounded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Round the edges."
+      },
+      "circle": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Circle button"
+      },
+      "bordered": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add a border",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'tiny'",
+              "computed": false
+            },
+            {
+              "value": "'small'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'large'",
+              "computed": false
+            },
+            {
+              "value": "'larger'",
+              "computed": false
+            },
+            {
+              "value": "'x-large'",
+              "computed": false
+            },
+            {
+              "value": "'xx-large'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The size of the button."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/CheckList.jsx": {
+    "description": "A list of labels with options, the values aspect get all selected options.",
+    "displayName": "CheckList",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "label": {
+                "name": "string",
+                "required": false
+              },
+              "value": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "string"
+                  },
+                  {
+                    "name": "number"
+                  }
+                ],
+                "required": false
+              },
+              "title": {
+                "name": "string",
+                "required": false
+              },
+              "label_class_name": {
+                "name": "string",
+                "required": false
+              },
+              "input_class_name": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": true,
+        "description": "Items in the checklist with labels, values and elements attributes."
+      },
+      "values": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "number"
+              }
+            ]
+          }
+        },
+        "required": false,
+        "description": "Checked values",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of the container."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Class name of the container."
+      },
+      "labels_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Global class name to give to labels."
+      },
+      "labels_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Global labels style objects."
+      },
+      "options_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Global options class name."
+      },
+      "options_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Global style object of options."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Html id of the component, otherwise the identity is used."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Container.jsx": {
+    "description": "Virtual div",
+    "displayName": "Container",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "draggable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "n_clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/DataList.jsx": {
+    "description": "",
+    "displayName": "DataList",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "value": {
+                "name": "any",
+                "required": false
+              },
+              "label": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": true,
+        "description": "Options of the datalist."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for the component."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Value of the text input."
+      },
+      "data_value": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The value of the selected option if found."
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Tooltip."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Dropdown.jsx": {
+    "description": "",
+    "displayName": "Dropdown",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "value": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "number"
+                  },
+                  {
+                    "name": "string"
+                  }
+                ],
+                "required": false
+              },
+              "label": {
+                "name": "node",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": true,
+        "description": ""
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Text to show when no value is selected."
+      },
+      "searchable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "multi": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Form.jsx": {
+    "description": "",
+    "displayName": "Form",
+    "methods": [],
+    "props": {
+      "fields": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "label": {
+                "name": "string",
+                "required": true
+              },
+              "name": {
+                "name": "string",
+                "required": true
+              },
+              "type": {
+                "name": "string",
+                "required": false
+              },
+              "component": {
+                "name": "node",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "Fields of the form, either provide a component or a type for the input."
+      },
+      "header": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Render on top of the form (CSS: form-header)"
+      },
+      "body": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Render in the middle of the form, after the fields. (CSS: form-body)"
+      },
+      "footer": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Render at the bottom of the form (CSS: form-footer)"
+      },
+      "action": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Url to submit the form."
+      },
+      "method": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'get'",
+              "computed": false
+            },
+            {
+              "value": "'post'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Http method to submit the form."
+      },
+      "target": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'_blank'",
+              "computed": false
+            },
+            {
+              "value": "'_self'",
+              "computed": false
+            },
+            {
+              "value": "'_parent'",
+              "computed": false
+            },
+            {
+              "value": "'_top'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "How will the response display."
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name of the form."
+      },
+      "auto_complete": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'on'",
+              "computed": false
+            },
+            {
+              "value": "'off'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specifies auto complete for the form."
+      },
+      "enctype": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'application/x-www-form-urlencoded'",
+              "computed": false
+            },
+            {
+              "value": "'multipart/form-data'",
+              "computed": false
+            },
+            {
+              "value": "'text/plain'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "How the data is encode before submit."
+      },
+      "accept_charset": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Character encoding for submission."
+      },
+      "no_validate": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify the form should be validated on submission."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the form element."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of the form element."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "errors": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Errors to show with the fields. Keys are name.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "include_submit": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Include a submit button on the form.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "submit_label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Label of the submit button.",
+        "defaultValue": {
+          "value": "'Submit'",
+          "computed": false
+        }
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Grid.jsx": {
+    "description": "Render children in a grid.",
+    "displayName": "Grid",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "node"
+          }
+        },
+        "required": true,
+        "description": "Children to render in a grid."
+      },
+      "columns": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Number of columns"
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Html.jsx": {
+    "description": "Html tag wrapper, give any props as `attributes`.\nListen to events with the readonly event aspect containing the\nlatest event fired.",
+    "displayName": "Html",
+    "methods": [
+      {
+        "name": "onEvent",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "tag": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Tag name of the component."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Children of the html tag."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Id of the element in DOM."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Class of the element."
+      },
+      "attributes": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Any other html attributes relevant to the html tag"
+      },
+      "events": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Events to subscribe."
+      },
+      "event": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Last event fired."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Image.jsx": {
+    "description": "An image.",
+    "displayName": "Image",
+    "methods": [],
+    "props": {
+      "src": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The source url of the image."
+      },
+      "alt": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Alt img attribute to show when the browser cannot display the image."
+      },
+      "height": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Height in pixel"
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Width in pixel"
+      },
+      "link": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Link to another page when the image is clicked."
+      },
+      "caption": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Text to include beneath the image."
+      },
+      "cross_origin": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'anonymous'",
+              "computed": false
+            },
+            {
+              "value": "'use-credentials'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Fetch the image with CORS."
+      },
+      "decoding": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'sync'",
+              "computed": false
+            },
+            {
+              "value": "'async'",
+              "computed": false
+            },
+            {
+              "value": "'auto'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Decoding hint for the browser"
+      },
+      "preload": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Preload the image before mount."
+      },
+      "clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Times the image was clicked on.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class to give to root element, (Scoped: dazzler-core-image)"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of the root element."
+      },
+      "bordered": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add bordered style class"
+      },
+      "rounded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add rounded style class"
+      },
+      "centered": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add centered style class for the image to\nappear in the horizontal middle"
+      },
+      "flexible": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Take up the whole size of the parent container."
+      },
+      "circle": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Image is a circle"
+      },
+      "padded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add a little padding around the image."
+      },
+      "caption_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style to give to the caption of the image."
+      },
+      "caption_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class to give to the caption of the image."
+      },
+      "figure_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class to give to figure if caption is provided."
+      },
+      "figure_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object to give to figure if caption is provided."
+      },
+      "link_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class to give to the link element."
+      },
+      "link_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object to give to the link."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Input.jsx": {
+    "description": "",
+    "displayName": "Input",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "required": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'hidden'",
+              "computed": false
+            },
+            {
+              "value": "'text'",
+              "computed": false
+            },
+            {
+              "value": "'number'",
+              "computed": false
+            },
+            {
+              "value": "'search'",
+              "computed": false
+            },
+            {
+              "value": "'tel'",
+              "computed": false
+            },
+            {
+              "value": "'password'",
+              "computed": false
+            },
+            {
+              "value": "'range'",
+              "computed": false
+            },
+            {
+              "value": "'email'",
+              "computed": false
+            },
+            {
+              "value": "'url'",
+              "computed": false
+            },
+            {
+              "value": "'submit'",
+              "computed": false
+            },
+            {
+              "value": "'checkbox'",
+              "computed": false
+            },
+            {
+              "value": "'reset'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "pattern": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "auto_complete": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "auto_focus": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "auto_save": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "auto_correct": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "n_blur": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "n_submit": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "min": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "min_length": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "max_length": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "max": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "step": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "multiple": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "checked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Interval.jsx": {
+    "description": "",
+    "displayName": "Interval",
+    "methods": [
+      {
+        "name": "startLoop",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "loop",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "timeout": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The delay between each time.",
+        "defaultValue": {
+          "value": "1000",
+          "computed": false
+        }
+      },
+      "times": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of times the interval was fired.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Enable/disable the interval loop.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Link.jsx": {
+    "description": "Link to external url or other dazzler page by name.",
+    "displayName": "Link",
+    "methods": [],
+    "props": {
+      "href": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The link destination."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Text/Component to show as link."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Id of the html element, othewise the identity is used."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the <a> element"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of root <a> element"
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Hovered description"
+      },
+      "page_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name of the page to redirect to if the href is not set."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Modal.jsx": {
+    "description": "",
+    "displayName": "Modal",
+    "methods": [],
+    "props": {
+      "body": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Main content of the modal. (css: modal-body)"
+      },
+      "header": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Appear before the body. (css: modal-header)"
+      },
+      "footer": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Appear after the body. (css: modal-footer)"
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Activate the modal."
+      },
+      "close_button": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Include a close button in the top right corner of the header.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the modal."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of outer container."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/ProgressBar.jsx": {
+    "description": "Simple progress bar support by all browsers.\n\nAvailable CSS classes (Under dazzler-core-progress-bar)\n- progress The div where the value is\n- high\n- low\n- optimum\n- striped\n- rounded",
+    "displayName": "ProgressBar",
+    "methods": [],
+    "props": {
+      "value": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The current numeric value. This must be between the minimum and maximum values (min attribute and max attribute) if they are specified. If unspecified or malformed, the value is 0. If specified, but not within the range given by the min attribute and max attribute, the value is equal to the nearest end of the range.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "minimum": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The lower numeric bound of the measured range. This must be less than the maximum value (max attribute), if specified. If unspecified, the minimum value is 0"
+      },
+      "maximum": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The upper numeric bound of the measured range. This must be greater than the minimum value (min attribute), if specified. If unspecified, the maximum value is 1."
+      },
+      "low": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (min attribute), and it also must be less than the high value and maximum value (high attribute and max attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the low value is equal to the minimum value."
+      },
+      "high": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The lower numeric bound of the high end of the measured range. This must be less than the maximum value (max attribute), and it also must be greater than the low value and minimum value (low attribute and min attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the high value is equal to the maximum value."
+      },
+      "optimum": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "This attribute indicates the optimal numeric value. It must be within the range (as defined by the min attribute and max attribute). When used with the low attribute and high attribute, it gives an indication where along the range is considered preferable. For example, if it is between the min attribute and the low attribute, then the lower range is considered preferred."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Id for this component, otherwise the identity is used."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the outer container."
+      },
+      "progress_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the inner progress container."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style of the component."
+      },
+      "progress_text": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'percent'",
+              "computed": false
+            },
+            {
+              "value": "'value'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Set to show the value on the progress bar."
+      },
+      "click": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "value": {
+              "name": "number",
+              "required": false
+            },
+            "x": {
+              "name": "number",
+              "required": false
+            },
+            "y": {
+              "name": "number",
+              "required": false
+            },
+            "timestamp": {
+              "name": "number",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Readonly click event with the value."
+      },
+      "striped": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Use striped style."
+      },
+      "rounded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Use the rounded style"
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/RadioList.jsx": {
+    "description": "A radio button list where only a single value can be selected.",
+    "displayName": "RadioList",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "label": {
+                "name": "string",
+                "required": false
+              },
+              "value": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "string"
+                  },
+                  {
+                    "name": "number"
+                  }
+                ],
+                "required": false
+              },
+              "title": {
+                "name": "string",
+                "required": false
+              },
+              "label_class_name": {
+                "name": "string",
+                "required": false
+              },
+              "input_class_name": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": true,
+        "description": "Items in the radio list with labels, values and elements attributes."
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Selected radio button."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of the container."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Class name of the container."
+      },
+      "labels_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Global class name to give to labels."
+      },
+      "labels_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Global labels style objects."
+      },
+      "options_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Global options class name."
+      },
+      "options_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Global style object of options."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Html id of the component, otherwise the identity is used."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Select.jsx": {
+    "description": "A select",
+    "displayName": "Select",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "value": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "number"
+                  },
+                  {
+                    "name": "string"
+                  }
+                ],
+                "required": false
+              },
+              "label": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": true,
+        "description": "Option of the select."
+      },
+      "multi": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Controls wether multiple options can be selected."
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "string"
+            },
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "union",
+                "value": [
+                  {
+                    "name": "number"
+                  },
+                  {
+                    "name": "string"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "required": false,
+        "description": "Value of the selected option(s)"
+      },
+      "size": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Size of the options to use instead of"
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the Select"
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Placeholder text when the input has no value."
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "name of the html input that will be created with the current value"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disable the component."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Slider.jsx": {
+    "description": "A slider with a caret contained within a min and max value.\n\nAvailable CSS classes (dazzler-core-slider scoped):\n- slider-area: The outer div of the slider.\n- slider-handle: The drag handle\n- slider-spacer: The space that is before the handle.",
+    "displayName": "Slider",
+    "methods": [
+      {
+        "name": "onDragStart",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "handleDrag",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "pageX",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "onDragEnd",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "onDragOver",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "minimum": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Minimum (leftmost) value of the slider."
+      },
+      "maximum": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "Maximum (rightmost) value of the slider."
+      },
+      "value": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Current value",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "round": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'ceil'",
+              "computed": false
+            },
+            {
+              "value": "'floor'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Round the value"
+      },
+      "debounce": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Time in milliseconds to wait before updating the value.",
+        "defaultValue": {
+          "value": "50",
+          "computed": false
+        }
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS classes to use. (Scope: dazzler-core-slider)"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of the root div."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Store.jsx": {
+    "description": "Store data in the browser memory.",
+    "displayName": "Store",
+    "methods": [],
+    "props": {
+      "data": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Stored data."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/Table.jsx": {
+    "description": "Display data in a tabular manner (Non interactive).\n\nAvailable CSS classes\n- dazzler-core-table (root)\n- table-head\n- table-heading\n- table-body\n- table-row\n- table-cell\n- table-footer",
+    "displayName": "Table",
+    "methods": [],
+    "props": {
+      "rows": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "arrayOf",
+            "value": {
+              "name": "node"
+            }
+          }
+        },
+        "required": false,
+        "description": "Rows of data or components to display."
+      },
+      "caption": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Title of the table"
+      },
+      "headers": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "node"
+          }
+        },
+        "required": false,
+        "description": "Table headings"
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class of the table."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style of the table element."
+      },
+      "footer": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Content of tfoot element (.table-footer)"
+      },
+      "include_row_number": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Each row start with the row number."
+      },
+      "row_number_start": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The start of the row number, useful if paged."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/TextArea.jsx": {
+    "description": "",
+    "displayName": "TextArea",
+    "methods": [],
+    "props": {
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Current value of the textarea"
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name of the element for forms."
+      },
+      "cols": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of columns."
+      },
+      "rows": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of rows."
+      },
+      "required": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Is it required in a form."
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Is it disabled ?"
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Hint when no value is entered."
+      },
+      "max_length": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Max length of the value."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/core/js/components/ViewPort.jsx": {
+    "description": "Activate a view with key.",
+    "displayName": "ViewPort",
+    "methods": [],
+    "props": {
+      "active": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The view that is active."
+      },
+      "views": {
+        "type": {
+          "name": "objectOf",
+          "value": {
+            "name": "node"
+          }
+        },
+        "required": true,
+        "description": "A dictionary of components to render with the active key."
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The class name of the outer div."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style object of the outer div."
+      },
+      "tabbed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Incorporate tabs before the views."
+      },
+      "tab_labels": {
+        "type": {
+          "name": "objectOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "Labels for the tabs otherwise the tab keys will be used."
+      },
+      "vertical_tabs": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Make the tabs vertical aligned."
+      },
+      "rounded_tabs": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Round tab style"
+      },
+      "bordered": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Add a border around the viewport content (CSS bordered)."
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  }
+}

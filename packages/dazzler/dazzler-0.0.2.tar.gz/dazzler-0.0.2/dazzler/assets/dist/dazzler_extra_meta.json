@@ -1,0 +1,508 @@
+{
+  "src/extra/js/components/Drawer.jsx": {
+    "description": "Draw content from the sides of the screen.",
+    "displayName": "Drawer",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "opened": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "side": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'top'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            },
+            {
+              "value": "'bottom'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Side which open.",
+        "defaultValue": {
+          "value": "'top'",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/extra/js/components/Notice.jsx": {
+    "description": "Browser notifications with permissions handling.",
+    "displayName": "Notice",
+    "methods": [
+      {
+        "name": "sendNotification",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "permission",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "onPermission",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "permission",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "permission": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'denied'",
+              "computed": false
+            },
+            {
+              "value": "'granted'",
+              "computed": false
+            },
+            {
+              "value": "'default'",
+              "computed": false
+            },
+            {
+              "value": "'unsupported'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Permission granted by the user (READONLY)"
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": ""
+      },
+      "lang": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The notification's language, as specified using a DOMString representing a BCP 47 language tag."
+      },
+      "body": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A DOMString representing the body text of the notification, which will be displayed below the title."
+      },
+      "badge": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A USVString containing the URL of the image used to represent the notification when there is not enough space to display the notification itself."
+      },
+      "tag": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A DOMString representing an identifying tag for the notification."
+      },
+      "icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A USVString containing the URL of an icon to be displayed in the notification."
+      },
+      "image": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "a USVString containing the URL of an image to be displayed in the notification."
+      },
+      "vibrate": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "number"
+              }
+            }
+          ]
+        },
+        "required": false,
+        "description": "A vibration pattern for the device's vibration hardware to emit when the notification fires."
+      },
+      "require_interaction": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically. The default value is false.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "displayed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to true to display the notification."
+      },
+      "clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "clicks_timestamp": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "-1",
+          "computed": false
+        }
+      },
+      "closes": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of times the notification was closed.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "closes_timestamp": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "-1",
+          "computed": false
+        }
+      },
+      "updateAspect": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "src/extra/js/components/Pager.jsx": {
+    "description": "Paging for dazzler apps.",
+    "displayName": "Pager",
+    "methods": [
+      {
+        "name": "onChangePage",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "page",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "total_items": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "The total items in the set."
+      },
+      "items_per_page": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The number of items a page contains.",
+        "defaultValue": {
+          "value": "10",
+          "computed": false
+        }
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "page_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style for the page numbers."
+      },
+      "page_class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class for the page numbers."
+      },
+      "pages_displayed": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The number of pages displayed by the pager.",
+        "defaultValue": {
+          "value": "10",
+          "computed": false
+        }
+      },
+      "pages": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Read only, the currently displayed pages numbers."
+      },
+      "current_page": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The current selected page.",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "total_pages": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Set by total_items / items_per_page"
+      },
+      "start_offset": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The starting index of the current page\nCan be used to slice data eg: data[start_offset: end_offset]"
+      },
+      "end_offset": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The end index of the current page."
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "src/extra/js/components/Spinner.jsx": {
+    "description": "Simple html/css spinner.",
+    "displayName": "Spinner",
+    "methods": [],
+    "props": {
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Unique id for this component"
+      },
+      "updateAspects": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Update aspects on the backend."
+      }
+    }
+  },
+  "src/extra/js/components/Sticky.jsx": {
+    "description": "A shorthand component for a sticky div.",
+    "displayName": "Sticky",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "top": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "left": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "right": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "bottom": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "class_name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "identity": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}
