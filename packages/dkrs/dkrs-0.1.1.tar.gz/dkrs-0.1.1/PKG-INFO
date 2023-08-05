@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: dkrs
+Version: 0.1.1
+Summary: A library to simplify Git/File/Network operations.
+Home-page: https://github.com/erhu/dkrs
+Author: Erhu
+Author-email: erhu.cn@gmail.com
+License: Apache Software License
+Description: Python Dkrs is a library contains some useful toolkit.
+Keywords: git network requests system
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
