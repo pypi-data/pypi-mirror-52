@@ -1,0 +1,56 @@
+#!/bin/sh
+
+poorhttp=/usr/bin/poorhttp
+pidfile=/var/run/poorhttp.pid
+config=/etc/poorhttp.ini
+
+python=python3
+args=""
+
+grep -i -E '^debug(\s*)=(\s*)[1|true|yes]' $config > /dev/null && args="-d"
+grep -i -E '^optimize(\s*)=(\s*)[1|true|yes]' $config > /dev/null && args="$args -O"
+grep -i -E '^optimize(\s*)=(\s*)2' $config > /dev/null && args="$args -OO"
+
+case "$1" in
+    start)
+        if [ -f $pidfile ]; then
+            $0 stats
+        else
+            echo -n "Starting Poor Http server ... "
+            $python $args $poorhttp --pidfile=$pidfile --config=$config start > /dev/null
+            sleep 1
+            if [ -f $pidfile ]; then
+                echo "Ok"
+            else
+                echo "Failed"
+                exit 1
+            fi
+        fi
+        ;;
+    stop)
+        if [ -f $pidfile ]; then
+            echo "Stoping Poor Http server ..."
+            $python $args $poorhttp --pidfile=$pidfile --config=$config stop > /dev/null
+        else
+            echo "Poor Http is shutdown"
+        fi
+        ;;
+    stats)
+        if [ -f $pidfile ]; then
+            pid=`cat $pidfile`
+            echo "Poor Http is running: $pid"
+        else
+            echo "Poor Http is shutdown"
+        fi
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|stats|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0
