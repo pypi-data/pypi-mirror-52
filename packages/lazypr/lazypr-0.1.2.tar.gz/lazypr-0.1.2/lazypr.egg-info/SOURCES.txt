@@ -1,0 +1,14 @@
+README.md
+setup.py
+lazypr/__init__.py
+lazypr/config.py
+lazypr/github_api.py
+lazypr/jira_api.py
+lazypr/main.py
+lazypr/utils.py
+lazypr.egg-info/PKG-INFO
+lazypr.egg-info/SOURCES.txt
+lazypr.egg-info/dependency_links.txt
+lazypr.egg-info/entry_points.txt
+lazypr.egg-info/requires.txt
+lazypr.egg-info/top_level.txt
