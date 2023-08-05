@@ -1,0 +1,14 @@
+README.md
+setup.py
+RNA_APoGee.egg-info/PKG-INFO
+RNA_APoGee.egg-info/SOURCES.txt
+RNA_APoGee.egg-info/dependency_links.txt
+RNA_APoGee.egg-info/entry_points.txt
+RNA_APoGee.egg-info/requires.txt
+RNA_APoGee.egg-info/top_level.txt
+apogee/__init__.py
+apogee/align.py
+apogee/apogee_main.py
+apogee/create_genomes.py
+apogee/seq_utils.py
+apogee/vcf_utils.py
