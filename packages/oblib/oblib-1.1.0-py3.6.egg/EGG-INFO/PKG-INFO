@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: oblib
+Version: 1.1.0
+Summary: Orange Button Python Library
+Home-page: UNKNOWN
+Author: SunSpec Alliance
+Author-email: support@sunspec.org
+License: Apache 2.0
+Description: 
+            The Orange Button Python Library, also called, pyoblib, 
+            provides functions to interact and work with the SunSpec 
+            Orange Button Taxonomy and provides capabilities that 
+            simplify working with Orange Button data.
+        
+            Documentation: https://pyoblib.readthedocs.io/en/latest/
+            
+            Source code: https://github.com/SunSpecOrangeButton/pyoblib
+            
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: all
+Provides-Extra: doc
+Provides-Extra: test
