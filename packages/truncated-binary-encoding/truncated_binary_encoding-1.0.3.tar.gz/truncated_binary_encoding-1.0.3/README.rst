@@ -1,0 +1,78 @@
+truncated_binary_encoding
+=========================================================================================
+|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+
+Python package implementing truncated binary encoding.
+
+How do I install this package?
+----------------------------------------------
+As usual, just download it using pip:
+
+.. code:: shell
+
+    pip install truncated_binary_encoding
+
+Tests Coverage
+----------------------------------------------
+Since some software handling coverages sometime get slightly different results, here's three of them:
+
+|coveralls| |sonar_coverage| |code_climate_coverage|
+
+Usage examples
+----------------------------------------------
+
+.. code:: python
+
+    from truncated_binary_encoding import truncated_binary_encoding
+    
+    truncated_binary_encoding(0, 10) # 000
+    truncated_binary_encoding(1, 10) # 001
+    truncated_binary_encoding(2, 10) # 010
+    truncated_binary_encoding(3, 10) # 011
+    truncated_binary_encoding(4, 10) # 100
+    truncated_binary_encoding(5, 10) # 101
+    truncated_binary_encoding(6, 10) # 1100
+    truncated_binary_encoding(7, 10) # 1101
+    truncated_binary_encoding(8, 10) # 1110
+    truncated_binary_encoding(9, 10) # 1111
+
+
+.. |travis| image:: https://travis-ci.org/LucaCappelletti94/truncated_binary_encoding.png
+   :target: https://travis-ci.org/LucaCappelletti94/truncated_binary_encoding
+   :alt: Travis CI build
+
+.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_truncated_binary_encoding&metric=alert_status
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_truncated_binary_encoding
+    :alt: SonarCloud Quality
+
+.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_truncated_binary_encoding&metric=sqale_rating
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_truncated_binary_encoding
+    :alt: SonarCloud Maintainability
+
+.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_truncated_binary_encoding&metric=coverage
+    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_truncated_binary_encoding
+    :alt: SonarCloud Coverage
+
+.. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/truncated_binary_encoding/badge.svg?branch=master
+    :target: https://coveralls.io/github/LucaCappelletti94/truncated_binary_encoding?branch=master
+    :alt: Coveralls Coverage
+
+.. |pip| image:: https://badge.fury.io/py/truncated-binary-encoding.svg
+    :target: https://badge.fury.io/py/truncated-binary-encoding
+    :alt: Pypi project
+
+.. |downloads| image:: https://pepy.tech/badge/truncated-binary-encoding
+    :target: https://pepy.tech/badge/truncated-binary-encoding
+    :alt: Pypi total project downloads 
+
+.. |codacy|  image:: https://api.codacy.com/project/badge/Grade/87ad3db034d24feb8fa018091826c65b
+    :target: https://www.codacy.com/manual/LucaCappelletti94/truncated_binary_encoding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/truncated_binary_encoding&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Maintainability
+
+.. |code_climate_maintainability| image:: https://api.codeclimate.com/v1/badges/24c853fe1db729241878/maintainability
+    :target: https://codeclimate.com/github/LucaCappelletti94/truncated_binary_encoding/maintainability
+    :alt: Maintainability
+
+.. |code_climate_coverage| image:: https://api.codeclimate.com/v1/badges/24c853fe1db729241878/test_coverage
+    :target: https://codeclimate.com/github/LucaCappelletti94/truncated_binary_encoding/test_coverage
+    :alt: Code Climate Coverate
