@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: ocean-events-handler
+Version: 0.1.2
+Summary: 🐳 Publisher events handler agent dealing with Keeper Contract events.
+Home-page: https://github.com/oceanprotocol/events-handler-py
+Author: leucothia
+Author-email: devops@oceanprotocol.com
+License: Apache Software License 2.0
+Keywords: ocean-events-handler
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ocean-utils (==0.1.0)
+Requires-Dist: ocean-keeper (==0.1.1)
+Requires-Dist: ocean-secret-store-client (==0.0.1)
+Requires-Dist: PyYAML (==4.2b4)
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: pkginfo ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: watchdog ; extra == 'dev'
+Requires-Dist: codacy-coverage ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: docker ; extra == 'dev'
+Requires-Dist: mccabe ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-watch ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: codacy-coverage ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: docker ; extra == 'test'
+Requires-Dist: mccabe ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-watch ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+[![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
+
+# events-handler-py
+Publisher events handler agent dealing with Keeper Contract events
+
+
+## Features
+
+
+## Prerequisites
+
+Python 3.6
+
+## Running Locally, for Dev and Test
+
+First, clone this repository:
+
+```bash
+git clone git@github.com:oceanprotocol/events-handler-py.git
+cd events-handler-py/
+```
+
+Start a keeper node and other services of the ocean network:
+
+```bash
+git clone git@github.com:oceanprotocol/barge.git
+cd barge
+bash start_ocean.sh --no-events-handler --no-pleuston --local-spree-node
+```
+
+Barge is the repository where all the Ocean Docker Compose files are located. 
+We are running the script `start_ocean.sh`: the easy way to have Ocean projects 
+up and running. We run without an events-handler instance because we will run it directly.
+
+To learn more about Barge, visit [the Barge repository](https://github.com/oceanprotocol/barge).
+
+Note that it runs an Aquarius instance and an Elasticsearch instance but Aquarius can 
+also work with BigchainDB or MongoDB.
+
+Export environment variables `PROVIDER_ADDRESS`, `PROVIDER_PASSWORD`
+and `PROVIDER_KEYFILE`. Use the values from the `tox.ini` file, or use 
+your own.
+
+The most simple way to start is:
+
+```bash
+pip install -r requirements_dev.txt
+export CONFIG_FILE=config.ini
+./scripts/wait_for_migration_and_extract_keeper_artifacts.sh
+./start_events_monitor.sh
+```
+
+#### Code style
+
+The information about code style in python is documented in this two links [python-developer-guide](https://github.com/oceanprotocol/dev-ocean/blob/master/doc/development/python-developer-guide.md)
+and [python-style-guide](https://github.com/oceanprotocol/dev-ocean/blob/master/doc/development/python-style-guide.md).
+
+#### Testing
+
+Automatic tests are setup via Travis, executing `tox`.
+Our test use pytest framework.
+
+## License
+
+```
+Copyright 2018 Ocean Protocol Foundation Ltd.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
