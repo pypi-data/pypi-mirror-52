@@ -1,0 +1,13 @@
+README.md
+setup.py
+selfish/__init__.py
+selfish/__main__.py
+selfish/_version.py
+selfish/selfish.py
+selfish_hic.egg-info/PKG-INFO
+selfish_hic.egg-info/SOURCES.txt
+selfish_hic.egg-info/dependency_links.txt
+selfish_hic.egg-info/entry_points.txt
+selfish_hic.egg-info/not-zip-safe
+selfish_hic.egg-info/requires.txt
+selfish_hic.egg-info/top_level.txt

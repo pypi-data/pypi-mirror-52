@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: selfish_hic
+Version: 1.7.1
+Summary: Hi-C Differential Analysis software created and maintained by the Ay Lab
+Home-page: http://github.com/ay-lab/selfish/
+Author: Ferhat Ay
+Author-email: ferhatay@lji.org
+License: MIT
+Description: SELFISH is a tool for finding differential chromatin interactions between two Hi-C contact maps. It uses self-similarity to model interactions in a robust way. You can read the paper for more information.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
