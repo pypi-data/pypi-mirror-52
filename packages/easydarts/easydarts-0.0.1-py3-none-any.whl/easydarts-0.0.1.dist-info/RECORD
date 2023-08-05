@@ -1,0 +1,14 @@
+easydarts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easydarts/calibration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easydarts/calibration/calibration.py,sha256=rcPgXgiYHmIQsVsUjxaJ7_oA_C6t4yiSji4j4-776Vo,37
+easydarts/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easydarts/cli/calibration.py,sha256=E5wVrZ8UIaK7F9H0ZYciAzcEhUe2CTdAVlez2EPfZ94,65
+easydarts/cli/cli.py,sha256=U9QBpMeCBIQaRtDsR-8YuzfFrGYZr5LOHCcoTGUnyb0,1024
+easydarts/scorer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easydarts/scorer/scorer.py,sha256=heQENf85XINJ2I25eTs2lhzs_SNZg7Z1Av6CC3xFVxA,32
+easydarts-0.0.1.dist-info/LICENSE,sha256=2zESKXKrv7hQPL5F8yTNt1zrojPemlc1dJlXegrR8S8,1066
+easydarts-0.0.1.dist-info/METADATA,sha256=mLaPmzkSOInMQrjuHdl4qaKGhtlhVFxfnejXVPC6lN0,694
+easydarts-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+easydarts-0.0.1.dist-info/entry_points.txt,sha256=kg-lFyKP0UFCUEwv6oWJeUT_6k6P_YNxAhRJ-jpy_pA,54
+easydarts-0.0.1.dist-info/top_level.txt,sha256=3BmSBhoARF8Bnb4MtItilsbEg_NtpB1m5XdWJzc1_ME,10
+easydarts-0.0.1.dist-info/RECORD,,
