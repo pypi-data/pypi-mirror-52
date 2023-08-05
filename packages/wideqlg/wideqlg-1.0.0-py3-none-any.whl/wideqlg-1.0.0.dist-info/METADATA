@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wideqlg
+Version: 1.0.0
+Summary: LG SmartThinQ API client
+Home-page: https://github.com/boralyl/wideqlg
+Author: boralyl
+Author-email: UNKNOWN
+License: MIT
+Platform: ALL
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+
+UNKNOWN
+
+
