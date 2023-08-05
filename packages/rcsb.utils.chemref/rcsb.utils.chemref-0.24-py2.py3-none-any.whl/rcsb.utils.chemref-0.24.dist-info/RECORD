@@ -1,0 +1,13 @@
+rcsb/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+rcsb/utils/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+rcsb/utils/chemref/AtcProvider.py,sha256=6zVvpxpXhHWXAbdRZ1SZCMbmKtbx2PzsqVFUCtnJZLI,7360
+rcsb/utils/chemref/ChemCompModelProvider.py,sha256=cZe_aRWiAj5WdfT2R1NNB84Os0VeDpYCJvNTV8A2je4,4609
+rcsb/utils/chemref/DrugBankProvider.py,sha256=dpTCQqgEypLtoUFlGw7VZDAbwemtSn3ZO7DnWy3CUow,13425
+rcsb/utils/chemref/DrugBankReader.py,sha256=6fQxRV5155G2pMkZBTkHBVItES3TBlHCJATSeX61TmM,9250
+rcsb/utils/chemref/__init__.py,sha256=efKuLPR_lb_vsADk1f-HwozlbkiizUH3iouBx8vt2Q8,154
+rcsb.utils.chemref-0.24.dist-info/LICENSE,sha256=VWLxXn8PvwE6ptB7BxQbpErZ9iyxodApO5MYZ2yZ2jk,552
+rcsb.utils.chemref-0.24.dist-info/METADATA,sha256=GmOTmji2Ui7x_A3y8xBDqNZwQrshP34CCVXpdNpZH_c,919
+rcsb.utils.chemref-0.24.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+rcsb.utils.chemref-0.24.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+rcsb.utils.chemref-0.24.dist-info/top_level.txt,sha256=o9JzKwjXZKvIt99MG_WvJuOnR1DZn6_CIPtgWgUB0E8,5
+rcsb.utils.chemref-0.24.dist-info/RECORD,,
