@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: artifax
+Version: 0.1.2
+Summary: python package for building artifacts from a computational graph
+Home-page: https://gitlab.com/brunolange/artifax
+Author: Bruno Lange
+Author-email: blangeram@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: pathos
+Requires-Dist: Jinja2
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+
+UNKNOWN
+
+
