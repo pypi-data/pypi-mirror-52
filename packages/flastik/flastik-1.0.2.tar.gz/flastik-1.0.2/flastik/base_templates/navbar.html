@@ -1,0 +1,25 @@
+<!-- Navigation -->
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="{{ url_for('static', filename='favicon.ico') }}" width="30" height="30" alt="">
+    {{ project_name }}
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Everything you want hidden at 940px or less, place within here -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% for link in navbar_links %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ link.url }}">{{ link.name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</nav>
+
+
