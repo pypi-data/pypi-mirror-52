@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: root-optimize
+Version: 0.7.2
+Summary: Perform optimizations on flat ROOT TTrees
+Home-page: https://github.com/kratsg/optimization
+Author: Giordon Stark
+Author-email: kratsg@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Python: >=3
+Requires-Dist: joblib
+Requires-Dist: numexpr
+Requires-Dist: tqdm
+Requires-Dist: formulate
+Requires-Dist: uproot
+Provides-Extra: complete
+Requires-Dist: bumpversion ; extra == 'complete'
+Requires-Dist: flake8 ; extra == 'complete'
+Requires-Dist: pytest ; extra == 'complete'
+Requires-Dist: pytest-runner ; extra == 'complete'
+Requires-Dist: rootpy ; extra == 'complete'
+Requires-Dist: black ; (python_version >= "3.6") and extra == 'complete'
+Provides-Extra: develop
+Requires-Dist: pytest ; extra == 'develop'
+Requires-Dist: pytest-runner ; extra == 'develop'
+Requires-Dist: flake8 ; extra == 'develop'
+Requires-Dist: bumpversion ; extra == 'develop'
+Requires-Dist: black ; (python_version >= "3.6") and extra == 'develop'
+Provides-Extra: plot
+Requires-Dist: rootpy ; extra == 'plot'
+
+UNKNOWN
+
+
