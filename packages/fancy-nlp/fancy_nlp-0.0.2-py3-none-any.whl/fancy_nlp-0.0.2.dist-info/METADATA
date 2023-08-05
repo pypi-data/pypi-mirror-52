@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: fancy-nlp
+Version: 0.0.2
+Summary: NLP for humans
+Home-page: https://github.com/boat-group/fancy-nlp
+Author: boat-group
+Author-email: e.shijia@foxmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: absl-py (==0.7.1)
+Requires-Dist: anago (==1.0.8)
+Requires-Dist: astor (==0.8.0)
+Requires-Dist: boto (==2.49.0)
+Requires-Dist: boto3 (==1.9.161)
+Requires-Dist: botocore (==1.12.161)
+Requires-Dist: certifi (==2019.3.9)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: gast (==0.2.2)
+Requires-Dist: gensim (==3.7.3)
+Requires-Dist: grpcio (==1.21.1)
+Requires-Dist: h5py (==2.9.0)
+Requires-Dist: idna (==2.8)
+Requires-Dist: jmespath (==0.9.4)
+Requires-Dist: joblib (==0.13.2)
+Requires-Dist: Keras (==2.2.4)
+Requires-Dist: Keras-Applications (==1.0.8)
+Requires-Dist: Keras-Preprocessing (==1.1.0)
+Requires-Dist: kiwisolver (==1.1.0)
+Requires-Dist: Markdown (==3.1.1)
+Requires-Dist: matplotlib (==3.1.0)
+Requires-Dist: numpy (==1.16.4)
+Requires-Dist: protobuf (==3.4.0)
+Requires-Dist: pyparsing (==2.4.0)
+Requires-Dist: python-dateutil (==2.8.0)
+Requires-Dist: PyYAML (==5.1)
+Requires-Dist: redis (==3.2.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: s3transfer (==0.2.1)
+Requires-Dist: scikit-learn (==0.21.2)
+Requires-Dist: scikit-plot (==0.3.7)
+Requires-Dist: scipy (==1.3.0)
+Requires-Dist: seqeval (==0.0.10)
+Requires-Dist: setuptools (==39.1.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: smart-open (==1.8.4)
+Requires-Dist: tensorboard (==1.9.0)
+Requires-Dist: tensorflow (==1.9.0)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: tqdm (==4.32.1)
+Requires-Dist: urllib3 (==1.25.3)
+Requires-Dist: Werkzeug (==0.15.4)
+Requires-Dist: jieba (==0.39)
+Requires-Dist: fasttext (==0.9.1)
+Requires-Dist: keras-bert (==0.73.0)
+
+
+fancy-nlp is a fast and easy-to-use natural language processing (NLP) toolkit,
+satisfying your imagination about NLP.
+
+fancy-nlp is compatible with Python 3.6
+and is distributed under the GPLv3 license.
+
+
