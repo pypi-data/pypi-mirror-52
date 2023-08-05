@@ -1,0 +1,14 @@
+{
+  "molssi_bse_schema": {
+    "schema_type": "metadata",
+    "schema_version": "0.1"
+  },
+  "names": [
+    "cc-pVTZ-F12"
+  ],
+  "flags": [],
+  "family": "dunning_f12",
+  "description": "VTZ for explicitly correlated F12 variants of wavefunction methods",
+  "role": "orbital",
+  "auxiliaries": {}
+}
