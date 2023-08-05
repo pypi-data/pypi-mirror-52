@@ -1,0 +1,10 @@
+setup.py
+Quiik.egg-info/PKG-INFO
+Quiik.egg-info/SOURCES.txt
+Quiik.egg-info/dependency_links.txt
+Quiik.egg-info/entry_points.txt
+Quiik.egg-info/requires.txt
+Quiik.egg-info/top_level.txt
+quiik/__init__.py
+quiik/__main__.py
+quiik/core.py
