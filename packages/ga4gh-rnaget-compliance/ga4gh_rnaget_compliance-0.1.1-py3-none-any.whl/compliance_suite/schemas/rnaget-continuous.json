@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://json-schema.org/draft-04/schema#",
+    "title": "RNAGetContinuous",
+    "type": "object",
+    "$ref": "rnaget-continuous.json#/definitions/RNAGetContinuous",
+  
+    "definitions": {
+      "RNAGetContinuous": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fileType": {
+            "type": "string"
+          },
+          "studyID": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+          
+        },
+      
+        "required": [
+          "url", "fileType"
+        ],
+        
+        "additionalProperties": true
+      }
+    }
+  }
