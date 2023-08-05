@@ -1,0 +1,9 @@
+
+[gdown]
+gdown
+
+[tf]
+tensorflow<2,>=1.13.1
+
+[tfgpu]
+tensorflow-gpu<2,>=1.13.1
