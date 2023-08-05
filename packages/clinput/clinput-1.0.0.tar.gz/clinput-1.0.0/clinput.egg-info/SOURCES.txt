@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+clinput/__init__.py
+clinput/multi.py
+clinput/single.py
+clinput.egg-info/PKG-INFO
+clinput.egg-info/SOURCES.txt
+clinput.egg-info/dependency_links.txt
+clinput.egg-info/requires.txt
+clinput.egg-info/top_level.txt
