@@ -1,0 +1,12 @@
+colorama>=0.3.4
+cryptography
+
+[dev]
+codecov>=2.0.15
+colorama>=0.3.4
+tox>=3.9.0
+tox-travis>=0.12
+pytest>=4.6.2
+pytest-cov>=2.7.1
+Pillow>=5.0.0
+psutil
