@@ -1,0 +1,24 @@
+six
+
+[dev]
+tox
+django
+pytest
+pytest-django
+djangorestframework
+
+[dev:python_version < "3"]
+mock
+
+[maintainer]
+transifex-client
+zest.releaser[recommended]
+django
+
+[test]
+pytest
+pytest-django
+pytest-cov
+
+[test:python_version < "3"]
+mock
