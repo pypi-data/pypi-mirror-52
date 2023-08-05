@@ -1,0 +1,12 @@
+README.md
+setup.py
+larrydata/__init__.py
+larrydata/mturk.py
+larrydata/s3.py
+larrydata/sagemaker.py
+larrydata/sqs.py
+larrydata/sts.py
+larrydata.egg-info/PKG-INFO
+larrydata.egg-info/SOURCES.txt
+larrydata.egg-info/dependency_links.txt
+larrydata.egg-info/top_level.txt
