@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: digit-index
+Version: 1.0
+Summary: Package for effectively finding digit on certain index in infinite number string
+Home-page: https://github.com/KonyshevArtem/digit-index
+Author: Artem Konyshev
+Author-email: konyshev.ar@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# Digit Index
+
+This package contains an effective algorithm for finding what
+digit is placed on certain 0-based or 1-based index in string
+of numbers from zero to infinity
+
+# Install
+    pip install digit-index
+
+# Usage
+
+    import digit_index
+
+    digit = digit_index.get_digit_zero_based(0)
+    print(digit) # 0
+
+    digit = digit_index.get_digit_one_based(0)
+    print(digit) # 1
+
+# License
+
+MIT
+
