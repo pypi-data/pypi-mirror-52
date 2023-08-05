@@ -1,0 +1,8 @@
+README.rst
+setup.py
+bin/timestamp
+git_stamp.egg-info/PKG-INFO
+git_stamp.egg-info/SOURCES.txt
+git_stamp.egg-info/dependency_links.txt
+git_stamp.egg-info/requires.txt
+git_stamp.egg-info/top_level.txt
