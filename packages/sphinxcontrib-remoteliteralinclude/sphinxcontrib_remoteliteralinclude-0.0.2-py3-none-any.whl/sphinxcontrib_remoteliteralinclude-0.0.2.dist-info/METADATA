@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: sphinxcontrib-remoteliteralinclude
+Version: 0.0.2
+Summary: Extending literalinclude to include remote URLs
+Home-page: https://github.com/daltz333/sphinxcontrib-remoteliteralinclude
+Author: Eli Barnett, Dalton Smith
+Author-email: daltzsmith@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+# sphinxcontrib-remoteliteralinclude
+Sphinx extension that extends the ``literalinclude`` directive to allow remote URLS
+
+## Installation
+
+``python3 -m pip install git+https://github.com/daltz333/sphinxcontrib-remoteliteralinclude``
+
+## Usage
+
+Simply just use it as you normally would a normal ``literalinclude``
+
+```
+.. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/templates/commandbased/commands/ExampleCommand.java
+   :language: java
+   :lines: 10-29
+   :linenos:
+   :lineno-start: 10
+```
+
+## Important Notes
+
+This is simply a modification of the normal literalinclude extension. Near all of the code is the exact same. Modifications are made by Eli Barnett, with pip module creation by Dalton Smith. 
+
+Using the extension to reference local files **will not** work. Use the regular ``literalinclude`` extension in that case.
+
+
