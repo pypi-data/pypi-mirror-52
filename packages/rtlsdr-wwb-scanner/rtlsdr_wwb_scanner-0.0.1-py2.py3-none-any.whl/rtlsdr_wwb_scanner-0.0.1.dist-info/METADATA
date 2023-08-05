@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: rtlsdr-wwb-scanner
+Version: 0.0.1
+Summary: RF Scanner and Exporter for use with Shure Wireless Workbench
+Home-page: https://github.com/nocarryr/rtlsdr-wwb-scanner
+Author: Matthew Reid
+Author-email: matt@nomadic-recording.com
+License: GNU General Public License v2 (GPLv2)
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: scipy
+Requires-Dist: pyrtlsdr (>=0.2.6)
+Requires-Dist: tinydb
+Requires-Dist: json-object-factory
+Requires-Dist: PySide2 (>=5.13.1)
+
+# rtlsdr-wwb-scanner
+
+RF Scanner and Exporter for use with Shure Wireless Workbench
+
+Allows wide-band RF scans to be performed by an inexpensive [RTL-SDR][osmosdr-wiki] device.
+The scan data can then be exported as a CSV file formatted for use in WWB.
+
+## Installation
+
+### librtlsdr
+
+The `librtlsdr` library is required and must be installed separately.
+Installation documentation for various platforms can be found on the [osmocom wiki][osmosdr-wiki]
+and in the [pyrtlsdr project][pyrtlsdr].
+
+### Install via pip
+
+```bash
+pip install rtlsdr-wwb-scanner
+```
+
+## Dependencies
+
+These packages are required, but should be collected and installed automatically:
+
+* Numpy: https://numpy.org
+* Scipy: https://scipy.org/scipylib/index.html
+* pyrtlsdr: https://github.com/roger-/pyrtlsdr
+* PySide2: https://pypi.org/project/PySide2/
+
+## Usage
+
+After installation, the user interface can be launched by:
+
+```bash
+wwb_scanner-ui
+```
+
+(Further usage information will be added soon)
+
+
+[osmosdr-wiki]: http://sdr.osmocom.org/trac/wiki/rtl-sdr
+[pyrtlsdr]: https://github.com/roger-/pyrtlsdr
+[scipy-install]: http://www.scipy.org/install.html
+
+
