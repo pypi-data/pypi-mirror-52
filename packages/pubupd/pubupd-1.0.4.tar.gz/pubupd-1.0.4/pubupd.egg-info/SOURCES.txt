@@ -1,0 +1,11 @@
+README.md
+setup.py
+PubUpdater/__init__.py
+PubUpdater/pubupd.py
+pubupd.egg-info/PKG-INFO
+pubupd.egg-info/SOURCES.txt
+pubupd.egg-info/dependency_links.txt
+pubupd.egg-info/entry_points.txt
+pubupd.egg-info/not-zip-safe
+pubupd.egg-info/requires.txt
+pubupd.egg-info/top_level.txt
