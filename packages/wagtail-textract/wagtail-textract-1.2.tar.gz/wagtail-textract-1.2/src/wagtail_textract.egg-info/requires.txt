@@ -1,0 +1,8 @@
+wagtail<2.6,>=2
+textract
+
+[test]
+pytest
+pytest-django
+coverage
+codecov
