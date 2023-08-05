@@ -1,0 +1,5 @@
+#!python
+
+from wikitablescrape import cli
+
+cli.main()
