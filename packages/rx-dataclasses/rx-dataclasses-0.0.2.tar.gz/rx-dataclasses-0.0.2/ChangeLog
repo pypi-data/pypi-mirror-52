@@ -1,0 +1,32 @@
+CHANGES
+=======
+
+0.0.2
+-----
+
+* add summary
+* release on tag
+* tets
+* save dist
+* test doc deployment
+* enable 37 tests
+* fix relative import
+* test
+* CI infrastructure
+* readme fix
+* add \_\_all\_\_
+* style fixes
+* remove frozen class initial asigners from builtins
+* cleanups
+* readme fix
+* extend readme
+* typo fix
+* readme
+* externale datobject observations
+* frozen dataclasses cleanup fixes
+* \_\_builtins\_\_ in dataclasses.py:\_create\_fn fixes
+* tests fixes
+* working prototype
+* dataclasses.\_apply\_field overriding
+* initial
+* Initial commit
