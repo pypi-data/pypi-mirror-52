@@ -1,0 +1,263 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>spike.plugins.tisane &#8212; spike 0.99.8-407 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.99.8-407',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for spike.plugins.tisane</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python </span>
+<span class="c1"># encoding: utf-8</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tisane : Parallelized Sane</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">spike</span> <span class="k">import</span> <span class="n">NPKError</span>
+<span class="kn">from</span> <span class="nn">spike.NPKData</span> <span class="k">import</span> <span class="n">NPKData_plugin</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy.fft</span> <span class="k">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">ifft</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">spike.Algo.sane</span> <span class="k">import</span> <span class="n">sane</span><span class="p">,</span> <span class="n">OPTK</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="c1">#from plot_bokeh import BOKEH_PLOT</span>
+<span class="kn">from</span> <span class="nn">spike.util.signal_tools</span> <span class="k">import</span> <span class="n">findnoiselevel</span>
+
+<span class="c1">########################################################################</span>
+
+<span class="c1">#bplt = BOKEH_PLOT()</span>
+
+<div class="viewcode-block" id="local_sane"><a class="viewcode-back" href="../../../spike.plugins.html#spike.plugins.tisane.local_sane">[docs]</a><span class="k">def</span> <span class="nf">local_sane</span><span class="p">(</span><span class="n">xarg</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Makes Sane on the shorted buffer</span>
+<span class="sd">    Returns a denoised short buffer and the corresponding interval</span>
+<span class="sd">    ###</span>
+<span class="sd">    buf : numpy array with signal</span>
+<span class="sd">    interv : list of the bounds</span>
+<span class="sd">    rank : rank for Sane</span>
+<span class="sd">    iterations : number of time that Tisane is applied</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">buf</span><span class="p">,</span> <span class="n">interv</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">iterations</span><span class="p">,</span> <span class="n">above_noise</span><span class="p">,</span> <span class="n">thresh_level</span> <span class="o">=</span> <span class="n">xarg</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rank is </span><span class="si">{0}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rank</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">rank</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;######## Using optimisation !!!!&#39;</span><span class="p">)</span>
+        <span class="n">optrk</span> <span class="o">=</span> <span class="n">OPTK</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">orda</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">sane_optk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">above_noise</span><span class="o">=</span><span class="n">above_noise</span><span class="p">,</span> <span class="n">thresh_level</span><span class="o">=</span><span class="n">thresh_level</span><span class="p">,</span>  <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>          <span class="c1"># instantiate the class                    </span>
+        <span class="n">rank</span> <span class="o">=</span> <span class="n">optrk</span><span class="o">.</span><span class="n">find_best_rank</span><span class="p">()</span>                                              <span class="c1"># automatic optimal rank estimation.   </span>
+        <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;optimal rank found is </span><span class="si">{0}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rank</span><span class="p">))</span>
+    <span class="c1">#rank = 10</span>
+    <span class="n">denbuf</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">sane</span><span class="p">(</span><span class="n">ifft</span><span class="p">(</span><span class="n">buf</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">rank</span><span class="p">,</span> <span class="n">iterations</span> <span class="o">=</span> <span class="n">iterations</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">denbuf</span><span class="p">,</span> <span class="n">interv</span></div>
+
+
+<div class="viewcode-block" id="find_thresh"><a class="viewcode-back" href="../../../spike.plugins.html#spike.plugins.tisane.find_thresh">[docs]</a><span class="k">def</span> <span class="nf">find_thresh</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">above_noise</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Finding a general threshold on the whole dataset.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">noiselev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">findnoiselevel</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">nbseg</span> <span class="o">=</span> <span class="mi">10</span><span class="p">))</span>                           <span class="c1"># finds noise level</span>
+    <span class="c1">###</span>
+    <span class="n">nbseg</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">less</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span><span class="o">%</span><span class="n">nbseg</span>     <span class="c1"># rest of division of length of data by nb of segment</span>
+    <span class="n">restpeaks</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="n">less</span><span class="p">:]</span>   <span class="c1"># remove the points that avoid to divide correctly the data in segment of same size.</span>
+    <span class="n">mean_level</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">restpeaks</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">noiselev</span> <span class="o">+=</span> <span class="n">mean_level</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;noiselevel found is &quot;</span><span class="p">,</span> <span class="n">noiselev</span><span class="p">)</span> 
+    <span class="n">thresh_level</span> <span class="o">=</span> <span class="n">above_noise</span><span class="o">*</span><span class="n">noiselev</span>
+    <span class="k">return</span> <span class="n">thresh_level</span></div>
+ 
+
+<div class="viewcode-block" id="tisane"><a class="viewcode-back" href="../../../spike.plugins.html#spike.plugins.tisane.tisane">[docs]</a><span class="k">def</span> <span class="nf">tisane</span><span class="p">(</span><span class="n">npkd</span><span class="p">,</span> <span class="n">rank</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">nbinterv</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">above_noise</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">slice_bounds</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>  <span class="n">nbcores</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mixing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Algorithm for an application of Sane by parts.</span>
+<span class="sd">    tisane stands for Tilded Integration for Sane</span>
+<span class="sd">    Ti-Sane denoises the spectrum on tilded truncks.. half of each denoised interval is superposed on left and right on neighbours intervals. </span>
+<span class="sd">    The algorithm uses Multiprocessing. It works on complex spectrum. </span>
+<span class="sd">    ###</span>
+<span class="sd">    npkd : NPKData object</span>
+<span class="sd">    rank :  rank for Sane, if no rank is given, it uses OPTK</span>
+<span class="sd">    nbinterv : number of intervals</span>
+<span class="sd">    above_noise : number of time the threshold is above the noise level. </span>
+<span class="sd">    threshold : if True, calculate a threshold applied to the whole dataset when processed with Sane. </span>
+<span class="sd">    slice_bounds : interval used.</span>
+<span class="sd">    nbcores : number of cores used for parallelization</span>
+<span class="sd">    mixing : used for giving a correct weight to each denoised interval</span>
+<span class="sd">    iterations = nb of times that sane is repeated inside tisane</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;############ Entering in Tisane  !!!!!&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">slice_bounds</span><span class="p">:</span>
+        <span class="n">npkd</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">slice_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">slice_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">npkd</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">()</span><span class="o">.</span><span class="n">size</span><span class="o">//</span><span class="n">nbinterv</span>        <span class="c1"># /2 only to go fast for petroleomics dataset !!!!!</span>
+
+    <span class="n">subd</span> <span class="o">=</span> <span class="n">delta</span><span class="o">//</span><span class="mi">2</span>    <span class="c1"># recovering interval (width delta), denoising made on [delta-subd, delta+subd], normally subd = delta/2</span>
+
+    <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>                                                   
+        <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;delta*nbinterv &quot;</span><span class="p">,</span> <span class="n">delta</span><span class="o">*</span><span class="n">nbinterv</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;delta  &quot;</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">npkdmax</span> <span class="o">=</span> <span class="n">npkd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  
+    <span class="n">spec</span> <span class="o">=</span> <span class="n">npkdmax</span><span class="o">.</span><span class="n">modulus</span><span class="p">()</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">()[:</span><span class="n">delta</span><span class="o">*</span><span class="n">nbinterv</span><span class="p">]</span>                 <span class="c1"># Spectrum modulus for finding the heaviest segment (mixing mode)</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;spec.size &quot;</span><span class="p">,</span> <span class="n">spec</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">lspec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">nbinterv</span><span class="p">)[</span><span class="mi">10</span><span class="p">:</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>                         <span class="c1"># list of the intervals of width delta, takes the middle intervals</span>
+    <span class="n">ll</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lspec</span><span class="p">]</span>                                          <span class="c1"># list of the integral on each interval</span>
+    <span class="n">maxinterv</span> <span class="o">=</span> <span class="n">lspec</span><span class="p">[</span><span class="n">ll</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">ll</span><span class="p">))]</span>                                   <span class="c1"># interval with maximum energy</span>
+
+    <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;maxinterv.size &quot;</span><span class="p">,</span> <span class="n">maxinterv</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lspec[100].size &quot;</span><span class="p">,</span><span class="n">lspec</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lspec[150].size &quot;</span><span class="p">,</span><span class="n">lspec</span><span class="p">[</span><span class="mi">150</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ll.index(max(ll) &quot;</span><span class="p">,</span> <span class="n">ll</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">ll</span><span class="p">)))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lspec length is &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lspec</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">iterarg</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">iterations</span><span class="p">,</span> <span class="n">above_noise</span><span class="p">,</span> <span class="n">thresh_level</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Iterator for making Sane on slices</span>
+<span class="sd">        input: </span>
+<span class="sd">            p : full spectrum</span>
+<span class="sd">            delta : width of intervals</span>
+<span class="sd">            rank : rank for Sane</span>
+<span class="sd">        output:</span>
+<span class="sd">            buf : spectrum interval as numpy array</span>
+<span class="sd">            interv : list of the interval limits</span>
+<span class="sd">            rank : Sane rank</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbinterv</span><span class="p">):</span>
+            <span class="n">limd</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">delta</span><span class="o">-</span><span class="n">subd</span><span class="p">)</span>                             <span class="c1"># interval limit inf</span>
+            <span class="n">limu</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">delta</span><span class="o">+</span><span class="n">subd</span><span class="p">,</span> <span class="p">(</span><span class="n">nbinterv</span><span class="p">)</span><span class="o">*</span><span class="n">delta</span><span class="p">)</span>          <span class="c1"># interval limit sup</span>
+            <span class="n">buf</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">()[</span><span class="n">limd</span><span class="p">:</span><span class="n">limu</span><span class="p">]</span>                         <span class="c1"># spectrum numpy array on the interval</span>
+            <span class="k">if</span> <span class="n">mixing</span><span class="p">:</span>
+                <span class="n">buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">maxinterv</span><span class="p">,</span> <span class="n">buf</span><span class="p">))</span>              <span class="c1"># mixing for normalizing the signal</span>
+            <span class="n">interv</span> <span class="o">=</span> <span class="p">[</span><span class="n">limd</span><span class="p">,</span> <span class="n">limu</span><span class="p">]</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">interv</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">iterations</span><span class="p">,</span> <span class="n">above_noise</span><span class="p">,</span> <span class="n">thresh_level</span><span class="p">)</span>
+    
+    <span class="c1">#thresh_level = None # find_thresh(spec, above_noise)</span>
+    <span class="k">if</span> <span class="n">threshold</span><span class="p">:</span>
+        <span class="n">thresh_level</span> <span class="o">=</span> <span class="n">find_thresh</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">above_noise</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#########  Threshold found is &quot;</span><span class="p">,</span> <span class="n">thresh_level</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">thresh_level</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># </span>
+    <span class="c1">#print(&quot;#########  Threshold found is &quot;, tt)</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">nbcores</span><span class="p">)</span>                                         <span class="c1"># Must be placed after the functions called !!!</span>
+    <span class="n">xarg</span> <span class="o">=</span> <span class="n">iterarg</span><span class="p">(</span><span class="n">npkd</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">iterations</span><span class="p">,</span> <span class="n">above_noise</span><span class="p">,</span> <span class="n">thresh_level</span><span class="p">)</span>      <span class="c1"># Iterator returning buffer, interval and rank</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">imap</span><span class="p">(</span><span class="n">local_sane</span><span class="p">,</span> <span class="n">xarg</span><span class="p">)</span>                               <span class="c1"># map with iterator</span>
+    <span class="n">npkdz</span> <span class="o">=</span> <span class="n">npkd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># </span>
+    <span class="n">npkdz</span><span class="o">.</span><span class="n">set_buffer</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">npkdz</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">()</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">))</span>      <span class="c1"># Makes a null vector</span>
+    <span class="n">valpercent</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">percent_step</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">res</span><span class="p">):</span>                                 <span class="c1"># Filling the zero spectrum with denoised trunks</span>
+        <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">percent</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">nbinterv</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">percent</span> <span class="o">%</span> <span class="n">percent_step</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">percent</span> <span class="o">&gt;</span> <span class="n">valpercent</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Done : </span><span class="si">{0}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">))</span>
+            <span class="n">valpercent</span> <span class="o">+=</span> <span class="n">percent_step</span>
+        <span class="n">denbuf</span><span class="p">,</span> <span class="n">interv</span> <span class="o">=</span> <span class="n">result</span>
+
+        <span class="c1">###</span>
+        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbinterv</span><span class="o">//</span><span class="mi">3</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">nbinterv</span><span class="o">//</span><span class="mi">3</span><span class="o">+</span><span class="mi">10</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i used is &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;interval is &quot;</span><span class="p">,</span> <span class="n">interv</span><span class="p">)</span>
+                <span class="n">bplt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">interv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">bplt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">interv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interv</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>  <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">denbuf</span><span class="o">.</span><span class="n">copy</span><span class="p">()))</span>
+                <span class="n">bplt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+                <span class="n">bplt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;plot_interv_</span><span class="si">{0}</span><span class="s1">-</span><span class="si">{1}</span><span class="s1">.html&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">interv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interv</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="c1">###</span>
+
+        <span class="k">if</span> <span class="n">mixing</span><span class="p">:</span>
+            <span class="n">denbuf</span> <span class="o">=</span> <span class="n">denbuf</span><span class="p">[</span><span class="n">delta</span><span class="p">:]</span>
+        <span class="n">buf</span> <span class="o">=</span> <span class="n">npkdz</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">()</span>
+        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;buf[interv[0]:interv[1]].size &quot;</span><span class="p">,</span> <span class="n">buf</span><span class="p">[</span><span class="n">interv</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">interv</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">debug</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;denbuf.size &quot;</span><span class="p">,</span> <span class="n">denbuf</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">buf</span><span class="p">[</span><span class="n">interv</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">interv</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+=</span> <span class="n">denbuf</span>                          <span class="c1"># adds the denoised interval in the full spectrum</span>
+        <span class="n">npkdz</span><span class="o">.</span><span class="n">set_buffer</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span> <span class="c1"># </span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="n">npkdz</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">()</span>
+    <span class="n">npkd</span><span class="o">.</span><span class="n">set_buffer</span><span class="p">(</span><span class="n">buf</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>                                         <span class="c1"># replace spectrum by the denoised result</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></div>
+
+<span class="n">NPKData_plugin</span><span class="p">(</span><span class="s2">&quot;tisane&quot;</span><span class="p">,</span> <span class="n">tisane</span><span class="p">)</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  <li><a href="../plugins.html">spike.plugins</a><ul>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2010-2019, IGBMC and others.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
