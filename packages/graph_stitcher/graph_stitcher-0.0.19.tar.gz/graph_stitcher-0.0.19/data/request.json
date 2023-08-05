@@ -1,0 +1,34 @@
+{
+  "directed": true, 
+  "graph": {
+    "multigraph": true
+  }, 
+  "nodes": [
+    {
+      "type": "x", 
+      "id": "k", 
+      "rank": 0
+    }, 
+    {
+      "type": "z", 
+      "id": "m", 
+      "rank": 0
+    }, 
+    {
+      "type": "y", 
+      "id": "l", 
+      "rank": 0
+    }
+  ], 
+  "links": [
+    {
+      "source": "k", 
+      "target": "l"
+    }, 
+    {
+      "source": "l", 
+      "target": "m"
+    }
+  ], 
+  "multigraph": false
+}
