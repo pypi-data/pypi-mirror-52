@@ -1,0 +1,8 @@
+asyncssh>=1.15.1
+cmd2>=0.9.15
+colorama
+sqlalchemy
+scapy
+tabulate
+pyyaml
+pysubnettree
