@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: timeself
+Version: 0.0.1
+Summary: A library which allows to
+    measure the execution time of an entire file.
+Home-page: https://github.com/Jodagito/Timeself
+Author: Dagito
+Author-email: jodagito@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# Timeself
+
+**Description**
+
+Timeself is intended to measure and print, the caller script, execution time.
+
+**Installation**
+
+`pip install timeself`
+
+**Usage example**
+
+```
+from timeself import timeself
+
+
+def is_five_divisible(num):
+	if num % 5 == 0:
+		return True
+	else:
+		return False
+
+
+print(is_five_divisible(20))
+timeself()  # Must be the last line on the script.
+
+# Output
+
+Execution time: 2.2221007384359837e-05
+```
+
+
