@@ -1,0 +1,17 @@
+{%extends 'polls/base.html'%}
+{%block content1%}
+    {%if obj%}
+        <form action="{%url 'polls:vote' obj.id%}" method="POST">
+            {% csrf_token %}
+            <h3>{{obj.question_text}}</h3>
+            <ul>
+                {%for item in obj.choice_set.all%}
+                    <li><input type="radio" value="{{item.id}}" name="choice"> {{item.choice_text}} </li>
+                {%endfor%}
+                <p><input type="submit" value="Send"></p>
+            </ul>
+        </form>
+    {%else%}
+        <h3 style="color: red">Empty question!</h3>
+    {%endif%}
+{%endblock%}
