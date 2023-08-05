@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: airflow-docker-compose
+Version: 0.1.2
+Summary: 
+Home-page: https://github.com/airflowdocker/airflow-docker-compose
+License: Apache-2.0
+Keywords: airflow,docker,docker-compose
+Author: Dan Cardin
+Author-email: ddcardin@gmail.com
+Requires-Python: >=3.5.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click
+Requires-Dist: docker
+Requires-Dist: docker-compose
+Requires-Dist: python-dotenv
+Requires-Dist: toml
+Project-URL: Repository, https://github.com/airflowdocker/airflow-docker-compose
