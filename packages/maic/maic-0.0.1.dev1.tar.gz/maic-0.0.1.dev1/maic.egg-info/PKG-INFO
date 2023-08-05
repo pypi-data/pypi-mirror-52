@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: maic
+Version: 0.0.1.dev1
+Summary: Test framework for ee-book
+Home-page: https://bitbucket.org/ee-book/maic
+Author: knarfeh
+Author-email: knarfeh@outlook.com
+License: MIT
+Description: UNKNOWN
+Keywords: E2E Test SQLAlchemy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
