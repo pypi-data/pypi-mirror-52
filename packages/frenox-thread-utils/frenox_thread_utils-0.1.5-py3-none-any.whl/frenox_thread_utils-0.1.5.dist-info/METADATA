@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: frenox-thread-utils
+Version: 0.1.5
+Summary: simple template for threading
+Home-page: https://github.com
+Author: greixs
+Author-email: greixs@frenox.win
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pytz (==2018.9)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: colorama (==0.4.1)
+Requires-Dist: termcolor (==1.1.0)
+
+UNKNOWN
+
+
