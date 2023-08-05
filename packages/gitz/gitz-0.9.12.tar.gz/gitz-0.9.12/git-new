@@ -1,0 +1,117 @@
+#!/usr/bin/env python3
+from gitz import git_functions
+from gitz import reference_branch
+from gitz.env import ENV
+from gitz.program import PROGRAM
+from gitz.program import git
+
+SUMMARY = 'Create and push new branches'
+
+HELP = """
+Create new branches from the reference branch and push them with
+--set-upstream.
+
+``git new`` does the things you really want to safely get new branches
+where you can start working and pushing immediately
+
+- Fails leaving the workspace unchanged if there are uncommitted changes
+
+- Fails if any branch already exists locally or remotely, unless -f/--force
+
+- Fetches the *reference branch* - a branch on the upstream or origin repo that
+  is the main branch for development - likely upstream/master or origin/master
+
+- Create new branches locally from that reference branch commit ID
+
+- Pushes them to the remote origin with --set-upstream
+
+gitz can guess what the reference branch and remote origin are, and for
+nearly all projects this will be correct, or this can be specified at the
+command line, per project, or through environment variables - see ``git gitz``
+for more details.
+"""
+EXAMPLES = """
+git new foo
+   Create a new branch foo from the reference branch and push to the origin
+
+git new foo --origin=remote_1
+git new foo -o remote_1
+   Create a new branch foo from the reference branch and push to remote_1
+
+git new one two three --reference-branch=some-remote/master
+git new one two three -r some-remote/master
+   Create three new branches from the remote branch some-remote/master
+"""
+
+_HELP_BRANCHES = 'Names of branches to create'
+
+
+def git_new():
+    git_functions.check_clean_workspace()
+    branches = git_functions.branches()
+    remote_branches = git_functions.remote_branches()
+    origin = _origin(remote_branches)
+
+    new_branches = set(PROGRAM.args.branches)
+
+    def check(branches, name):
+        branches = new_branches.intersection(branches)
+        if branches:
+            s = 'branch:' if len(branches) == 1 else 'branches:'
+            PROGRAM.exit('Cannot overwrite', name, s, *branches)
+
+    check(ENV.protected_branches(), 'protected')
+
+    if not PROGRAM.args.force:
+        check(branches, 'local')
+        check(remote_branches[origin], 'remote branches on origin ' + origin)
+
+    reference = '/'.join(reference_branch.reference_branch(remote_branches))
+    for new_branch in PROGRAM.args.branches:
+        if new_branch in branches:
+            original_id = git_functions.commit_id(new_branch, short=True)
+            git.checkout(new_branch, '--quiet')
+            git.reset('--hard', reference)
+        else:
+            original_id = None
+            git.checkout('-b', new_branch, reference, quiet=True)
+
+        git.push('-fu', origin, new_branch, quiet=True)
+        id = git_functions.commit_id(new_branch, short=True)
+        PROGRAM.message(
+            'New {0}..{1}  {2} -> {2}'.format(
+                original_id or id, id, new_branch
+            )
+        )
+
+
+def _origin(remote_branches):
+    origin = PROGRAM.args.origin
+    if not origin:
+        try:
+            return git_functions.upstream_branch()[0]
+        except Exception:
+            pass
+        try:
+            return next(o for o in ENV.origin() if o in remote_branches)
+        except Exception:
+            PROGRAM.exit('Cannot determine origin')
+
+    if origin not in remote_branches:
+        PROGRAM.exit('Unknown remote', origin)
+    return origin
+
+
+def add_arguments(parser):
+    add = parser.add_argument
+    add('branches', nargs='+', help=_HELP_BRANCHES)
+    add('-f', '--force', action='store_true', help=_HELP_FORCE)
+    add('-o', '--origin', default='', help=_HELP_ORIGIN)
+    reference_branch.add_arguments(parser)
+
+
+_HELP_FORCE = 'Force push over existing branches'
+_HELP_ORIGIN = 'Remote origin to push to'
+
+if __name__ == '__main__':
+    PROGRAM.start()

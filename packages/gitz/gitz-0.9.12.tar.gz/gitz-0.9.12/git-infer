@@ -1,0 +1,160 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+usage() {
+    cat <<EOF
+git infer:
+    Commit changes with an auto-generated message
+    (from https://github.com/moondewio/git-infer)
+
+USAGE:
+    git infer [-a] [-A] [-h]
+
+       -a    Include all tracked files
+       -A    Include all files, even the untracked
+       -h    See this help message
+EOF
+}
+
+while getopts ":aAh" opt; do
+  case $opt in
+    a)
+      git add -u
+      ;;
+    A)
+      git add .
+      ;;
+    h)
+      usage
+      exit
+      ;;
+  esac
+done
+
+STATUS=$(git status --porcelain | grep -v '^ ' | grep -v '^?')
+
+COMMIT_MSG=$(awk '
+BEGIN {
+  updatedCount = 0;
+  addedCount = 0;
+  deletedCount = 0;
+  renamedCount = 0;
+}
+$1 == "M" {
+  updated[updatedCount] = substr($0, 4);
+  updatedCount += 1
+}
+$1 == "A" || $1 == "??" {
+  added[addedCount] = substr($0, 4);
+  addedCount += 1
+}
+$1 == "D" {
+  deleted[deletedCount] = substr($0, 4);
+  deletedCount += 1
+}
+$1 == "R" {
+  renamed[renamedCount] = substr($0, 4);
+  renamedCount += 1
+}
+END {
+  if (updatedCount > 0) {
+    updatedMsg = "";
+    for (i = 0; i + 1 < updatedCount; i++) {
+      updatedMsg = updatedMsg updated[i] ", "
+    };
+    updatedMsg = updatedMsg updated[updatedCount - 1]
+    updatedMsg = "Update " updatedMsg
+  }
+
+  if (addedCount > 0) {
+    addedMsg = "";
+    for (i = 0; i + 1 < addedCount; i++) {
+      addedMsg = addedMsg added[i] ", "
+    };
+    addedMsg = addedMsg added[addedCount - 1]
+    addedMsg = "Add " addedMsg
+  }
+
+  if (deletedCount > 0) {
+    deletedMsg = "";
+    for (i = 0; i + 1 < deletedCount; i++) {
+      deletedMsg = deletedMsg deleted[i] ", "
+    };
+    deletedMsg = deletedMsg deleted[deletedCount - 1]
+    deletedMsg = "Delete " deletedMsg
+  }
+
+  if (renamedCount > 0) {
+    renamedMsg = "";
+    for (i = 0; i + 1 < renamedCount; i++) {
+      renamedMsg = renamedMsg renamed[i] ", "
+    };
+    renamedMsg = renamedMsg renamed[renamedCount - 1]
+    renamedMsg = "Rename " renamedMsg
+  }
+
+  changesCount = 0;
+
+  if (updatedCount > 0) {
+    changesCount += 1
+  }
+
+  if (addedCount > 0) {
+    changesCount += 1
+  }
+
+  if (deletedCount > 0) {
+    changesCount += 1
+  }
+
+  if (renamedCount > 0) {
+    changesCount += 1
+  }
+
+  if (changesCount > 1) {
+    printf "Several changes\n\n"
+
+    if (updatedCount > 0) {
+      print updatedMsg
+    }
+
+    if (addedCount > 0) {
+      print addedMsg
+    }
+
+    if (deletedCount > 0) {
+      print deletedMsg
+    }
+
+    if (renamedCount > 0) {
+      print renamedMsg
+    }
+  }
+
+  if (changesCount == 1) {
+    if (updatedCount > 0) {
+      print updatedMsg
+    }
+
+    if (addedCount > 0) {
+      print addedMsg
+    }
+
+    if (deletedCount > 0) {
+      print deletedMsg
+    }
+
+    if (renamedCount > 0) {
+      print renamedMsg
+    }
+  }
+}
+' <<< "$STATUS")
+
+if [ -z "${COMMIT_MSG}" ]
+then
+  echo "git infer: Nothing added, updated, deleted or renamed"
+  exit 1
+fi
+
+git commit -m "${COMMIT_MSG}"

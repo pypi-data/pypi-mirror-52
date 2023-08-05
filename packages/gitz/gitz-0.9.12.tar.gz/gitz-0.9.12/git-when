@@ -1,0 +1,80 @@
+#!/bin/bash
+
+usage() {
+    cat <<EOF
+git when:
+    When did each file change (date, commit, message)?
+    Nice use of color - from an unknown source.
+
+USAGE:
+    git when [-a] [directory]
+EOF
+}
+
+while getopts ":h" opt; do
+  case $opt in
+    h)
+      usage ; exit ; ;;
+  esac
+done
+
+dotfiles=0
+
+if [ "$1" = "-a" -o "$1" = "-A" ]
+then
+    shift
+    dotfiles=1
+fi
+
+if [ "$#" -ne 0 ]
+then
+    if [ ! -d "$1" ]
+    then
+        >&2 echo ""
+        exit 1
+    fi
+    cd "$1"
+fi
+
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1
+then
+    git rev-parse --is-inside-work-tree
+    exit 1
+fi
+
+Cgreen='\033[0;32m'
+Cred='\033[0;31m'
+Cgrey='\033[0;37m'
+Creset='\033[0m'
+
+if [ "$dotfiles" -eq 1 ]
+then
+    shopt -s dotglob
+fi
+
+for file in *
+do
+    if [ "$file" = ".git" ]
+    then
+        continue
+    fi
+
+    printf "%-20s\t" "$file"
+
+    status="$(git status --porcelain "$file")"
+
+    if [[ "$status" == "??"* ]]
+    then
+        echo -en "${Cred}Untracked$Creset"
+    elif [[ "$status" == "A"* ]]
+    then
+        echo -en "${Cgreen}Staged$Creset"
+    elif git check-ignore "$file" > /dev/null
+    then
+        echo -en "${Cgrey}Gitignored$Creset"
+    else
+        git log -1 --color=always --pretty=format:'%C(bold green)%<(20)%ar%C(reset)%C(bold blue)%h%C(reset)%n%C(white)%s%C(reset)' "$file" | tr "\n" "\t"
+    fi
+
+    echo ""
+done

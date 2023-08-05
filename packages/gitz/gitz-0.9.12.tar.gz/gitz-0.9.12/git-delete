@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+from gitz import delete
+from gitz import git_functions
+from gitz.env import ENV
+from gitz.program import PROGRAM
+from gitz.program import git
+from gitz.program import safe_git
+
+SUMMARY = 'Delete one or more branches locally and on all remotes'
+DANGER = 'Deletes remote branches!'
+
+HELP = """
+By default, the branches `master` and `develop` and the remote
+`upstream` are protected, which means that they are not allowed
+to be delete.
+
+Using the --all/-a flag allows protected branches and remotes
+to be deleted.
+
+It's also possible to change which branches or remotes are protected
+by setting the environment variable GITZ_PROTECTED_BRANCHES or
+GITZ_PROTECTED_REMOTES to a list separated by colons, or to an empty
+string to turn off protection entirely.
+"""
+EXAMPLES = """
+git delete foo bar
+    Delete the branches foo and bar locally and on every upstream
+    except (by default) upstream
+"""
+
+_HELP_FORCE = 'Delete all, even protected remotes or branches'
+
+
+def git_delete():
+    args = PROGRAM.args
+    branch = git_functions.branch_name()
+    branches = git_functions.branches()
+
+    remaining_branches = set(branches).difference(args.target)
+    if not remaining_branches:
+        PROGRAM.exit('This would delete all the branches')
+
+    remotes = safe_git.remote()
+    if not args.force:
+        protected = set(ENV.protected_branches()).intersection(args.target)
+        if protected:
+            PROGRAM.exit('These branches are protected:', *protected)
+        pr = ENV.protected_remotes()
+        remotes = [r for r in remotes if r not in pr]
+
+    if branch not in remaining_branches:
+        git_functions.check_clean_workspace()
+        for b in ENV.reference_branches():
+            if b in remaining_branches:
+                git.checkout(b)
+                break
+        else:
+            git.checkout(sorted(remaining_branches)[0])
+
+    deleted = delete.delete(args.target, remotes)
+    if deleted:
+        s = '' if len(deleted) == 1 else 'es'
+        print('git-delete: branch%s deleted:' % s, *deleted)
+    else:
+        PROGRAM.exit('No branches deleted')
+
+
+def add_arguments(parser):
+    parser.add_argument('target', nargs='+')
+    parser.add_argument('-f', '--force', action='store_true', help=_HELP_FORCE)
+
+
+if __name__ == '__main__':
+    PROGRAM.start()
