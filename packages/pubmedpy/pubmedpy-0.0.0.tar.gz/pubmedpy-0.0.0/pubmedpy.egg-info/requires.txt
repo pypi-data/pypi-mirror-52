@@ -1,0 +1,12 @@
+requests
+lxml
+tqdm
+pandas
+
+[all]
+pytest
+flake8
+
+[dev]
+pytest
+flake8
