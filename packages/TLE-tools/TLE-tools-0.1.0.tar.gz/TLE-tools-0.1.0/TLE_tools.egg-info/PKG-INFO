@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: TLE-tools
+Version: 0.1.0
+Summary: Library to work with two-line element set files
+Home-page: https://github.com/FedericoStra/tletools
+Author: Federico Stra
+Author-email: stra.federico@gmail.com
+License: MIT
+Project-URL: Documentation, https://
+Project-URL: Code, https://github.com/FedericoStra/tletools
+Project-URL: Issue tracker, https://github.com/FedericoStra/tletools/issues
+Description: # TLE-tools
+        
+        Library to work with two-line element set files.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Provides-Extra: units
+Provides-Extra: orbits
