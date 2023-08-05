@@ -1,0 +1,12 @@
+pathman/__init__.py,sha256=G9GuXDWTyMwT9zXsqDmV1V8IMksXVffs0ckLjvCd9oM,59
+pathman/exc.py,sha256=uAF5cvdu_qj5VN3FShhEH8X2Vn89gWBJjgAFlRMNB-I,324
+pathman/path.py,sha256=QhR7wMdUPGA7OZ9S2ylktyzkGaKPo4ff1neY_4VL480,25080
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_path.py,sha256=7Sh7VguTJ-u2B3yMOjvCl0VyUb0KEQTAZ_PJ15O3tp0,18812
+tests/output/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pathman-0.1.2.dist-info/LICENSE,sha256=00iHUJxVQKgfUTwkDphzajjNMWyx5b98FyObbglZIB0,575
+pathman-0.1.2.dist-info/METADATA,sha256=u4hKRO1TsBJAR8i2bmOLzKIxHct7TKG1USNa5jffYQY,432
+pathman-0.1.2.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+pathman-0.1.2.dist-info/top_level.txt,sha256=6BDXTze6lHPFNM_lf-pNZ-PoutyayZlqGQSYk9psFa8,14
+pathman-0.1.2.dist-info/RECORD,,
