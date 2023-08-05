@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: jixiaoye
+Version: 0.2.0
+Summary: 姬小野的pypi测试项目.
+Home-page: https://github.com/JameyWoo
+Author: Fiveplus
+Author-email: 2622075127@qq.com
+License: MIT
+Description: 
+        尝试上传一个包
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
