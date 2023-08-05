@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+        <param name="Window Styles" value="0x801227">
+        <param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="scOrange 0.5 documentation">
+    <param name="Local" value="index.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Load Data">
+    <param name="Local" value="widgets/load_data.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Single Cell Datasets">
+    <param name="Local" value="widgets/single_cell_datasets.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Filter">
+    <param name="Local" value="widgets/filter.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Example">
+    <param name="Local" value="widgets/filter.html#example">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Single Cell Preprocess">
+    <param name="Local" value="widgets/single_cell_preprocess.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Batch Effect Removal">
+    <param name="Local" value="widgets/batch_effect_removal.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Align Datasets">
+    <param name="Local" value="widgets/align_datasets.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Score Genes">
+    <param name="Local" value="widgets/score_genes.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Scoring methods">
+    <param name="Local" value="widgets/score_genes.html#scoring-methods">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Score Cells">
+    <param name="Local" value="widgets/score_cells.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Example">
+    <param name="Local" value="widgets/score_cells.html#example">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Dot Matrix">
+    <param name="Local" value="widgets/dot_matrix.html">
+</OBJECT>
+</UL></BODY></HTML>
