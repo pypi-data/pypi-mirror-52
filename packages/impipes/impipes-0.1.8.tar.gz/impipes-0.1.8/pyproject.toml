@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "impipes"
+version = "0.1.8"
+description = ""
+authors = [
+	"Rodolfo Ferro <rodolfoferroperez@gmail.com>",
+	"Lukasz Kaczmarek <lukaszk76@gmail.com>",
+	"Cristian Vargas <rodolfoferroperez@gmail.com>",
+	"Ramón Ontiveros <ramontiveros@gmail.com>"
+]
+license = "MIT"
+readme = "README.md"
+homepage = "https://impipes.rtfd.io"
+repository = "https://github.com/RodolfoFerro/impipes"
+keywords = [
+	"Image enhancement",
+	"Image pipelines",
+	"Image processing"
+]
+classifiers = [
+	"Operating System :: OS Independent"
+]
+include = [
+	"LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+opencv-python = "^4.1"
+scipy = "^1.3"
+wget = "^3.2"
+matplotlib = "^3.1"
+numpy = "^1.17"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
