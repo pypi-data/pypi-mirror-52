@@ -1,0 +1,22 @@
+zope.interface>=4.1.2
+pyhamcrest
+six
+setuptools
+transaction
+zope.component
+zope.configuration
+zope.dottedname
+zope.schema
+zope.testing
+
+[:python_version == "2.7"]
+mock
+
+[docs]
+Sphinx
+sphinx_rtd_theme
+
+[test]
+Acquisition
+zope.site
+zope.testrunner
