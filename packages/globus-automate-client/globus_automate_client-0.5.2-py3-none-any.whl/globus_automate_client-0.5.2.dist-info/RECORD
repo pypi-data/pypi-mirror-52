@@ -1,0 +1,12 @@
+globus_automate_client/__init__.py,sha256=gVvapdUNm-fHsivIosXNY-ghNGLJRKin7GarpSv-BAE,492
+globus_automate_client/action_client.py,sha256=HqkCk_yqik-nVOixZNB3hC6yeJiFxUZHVCAAGo2YmJU,1844
+globus_automate_client/flows_client.py,sha256=RMVZMO4GpAdK4Pi_Bo_kSACIOgsc7m16OaRyoLlvL30,6222
+globus_automate_client/graphviz_rendering.py,sha256=r6aN493RStvOrQtR25Z2yfObb5dMR9HUoLZ1f06zj9A,3267
+globus_automate_client/helpers.py,sha256=QKoduKR4sjlwhyCSlN8BsOhVNCG8_unZhPrOx3BGBXQ,1549
+globus_automate_client/main.py,sha256=0i51jetRxtprqKDPS2xbR2XOufUlsLsX2LEPltlizSI,14266
+globus_automate_client/sync_and_identifier.json,sha256=2_qU1NIffV91XDB_nqjLwIS3gs02Lq-0Dirat52IGFU,2742
+globus_automate_client/token_management.py,sha256=8s3JZWV1gBQLDHfFJlQz5Ks9gsO2rnbAs7lHU0tAhEg,5029
+globus_automate_client-0.5.2.dist-info/entry_points.txt,sha256=a8GavWgd8tjvXPxIVb10ZEMrZRB0WHWnVjJTZOj1iA0,68
+globus_automate_client-0.5.2.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+globus_automate_client-0.5.2.dist-info/METADATA,sha256=bnJIm5fleEdUqLDDq6VVK2DdnXhQZyf1KTIJTAFqnqw,2200
+globus_automate_client-0.5.2.dist-info/RECORD,,
