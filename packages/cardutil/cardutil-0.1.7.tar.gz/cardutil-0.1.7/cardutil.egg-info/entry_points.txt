@@ -1,0 +1,6 @@
+[console_scripts]
+mci_csv_to_ipm = cardutil.cli:mci_csv_to_ipm_cli
+mci_ipm_encode = cardutil.cli:mci_ipm_encode_cli
+mci_ipm_param_encode = cardutil.cli:mci_ipm_param_encode_cli
+mci_ipm_to_csv = cardutil.cli:mci_ipm_to_csv_cli
+
