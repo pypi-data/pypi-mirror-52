@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+pelican_micropub/__init__.py
+pelican_micropub/micropub.py
+pelican_micropub/notedown.py
+pelican_micropub/test_micropub.py
+pelican_micropub/test_notedown.py
+pelican_micropub.egg-info/PKG-INFO
+pelican_micropub.egg-info/SOURCES.txt
+pelican_micropub.egg-info/dependency_links.txt
+pelican_micropub.egg-info/requires.txt
+pelican_micropub.egg-info/top_level.txt

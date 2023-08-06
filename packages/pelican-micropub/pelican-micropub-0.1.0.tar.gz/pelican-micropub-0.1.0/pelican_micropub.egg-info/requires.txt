@@ -1,0 +1,14 @@
+Markdown
+mf2util
+pelican
+
+[dev]
+autopep8
+black
+flake8
+invoke
+jedi
+nose
+rope
+twine
+yapf
