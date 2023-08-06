@@ -1,0 +1,4 @@
+[console_scripts]
+pypirun = pypirun.cli:main
+pypirun_true = pypirun.cli:exit_ok
+
