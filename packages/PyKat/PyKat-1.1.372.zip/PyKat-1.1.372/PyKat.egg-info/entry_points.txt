@@ -1,0 +1,3 @@
+[console_scripts]
+pykat = pykat.__main__:cli
+

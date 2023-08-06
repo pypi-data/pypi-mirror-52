@@ -1,0 +1,14 @@
+name: pykatcli
+channels:
+- gwoptics
+- defaults
+dependencies:
+- numpy>=1.12
+- flask>=0.10.1
+- scipy>=0.14.0
+- six
+- h5py
+- pandas
+- matplotlib
+- finesse=2.2
+- ipython
