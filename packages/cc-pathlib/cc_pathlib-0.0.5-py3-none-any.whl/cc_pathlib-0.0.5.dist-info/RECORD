@@ -1,0 +1,12 @@
+cc_pathlib/__init__.py,sha256=K477s_LybXCCyMstTYr5ih2yzY_xmNtXiSbBBuQg6UY,284
+cc_pathlib/path.py,sha256=qvP1OKT8x23lSDgPfGCMIedCLEr3lsl6OJu9DI-YckU,5974
+cc_pathlib/proc.py,sha256=wSYBCaa28kvWGgMGooNniSUm33aVVbH-nMZ7YCXop5U,1636
+cc_pathlib/filter/__init__.py,sha256=1oLL20yLB1GL9IbFiZD8OReDqiCpFr-yetIR6x1cNkI,23
+cc_pathlib/filter/cc_json.py,sha256=iMuAcLRBGYbQgPnJUI9xA1kAD_Crcp8714eCn-xXz_8,891
+cc_pathlib/filter/cc_pickle.py,sha256=Qn3gbXJDrX6L71_3-WiAnwiJI1aKRU-FDJpZ2MbS3Kc,174
+cc_pathlib/filter/tsv.py,sha256=o7PwoZx5tNI7kJOvKA-W9tKLSuvEw1Q0p3Rq-pyzoH4,626
+cc_pathlib-0.0.5.dist-info/LICENSE,sha256=ntszyzyyOL_suFGAPJFZvWj85bhHKfSyyjaDCybodd4,780
+cc_pathlib-0.0.5.dist-info/METADATA,sha256=dusjoFdKsepjE7F4QufurZ_QMyDphdnwtEk8__Fp0Qs,2660
+cc_pathlib-0.0.5.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+cc_pathlib-0.0.5.dist-info/top_level.txt,sha256=s-v2Q32FWQVbdorqgPfd7rCNVXpQPa2Df2cmAqtDROA,11
+cc_pathlib-0.0.5.dist-info/RECORD,,
