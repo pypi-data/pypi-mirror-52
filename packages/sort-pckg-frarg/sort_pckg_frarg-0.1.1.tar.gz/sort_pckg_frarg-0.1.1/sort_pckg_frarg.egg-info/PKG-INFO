@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: sort-pckg-frarg
+Version: 0.1.1
+Summary: sorting algorithms
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Description: # title
+        Project Description
+        
+        ## subtitle
+        My first python package
+        
+        ### minor
+        
+        To install this wonderful package, created by me, that contains different sorting algorithms, please use the below
+        command:
+        
+                $ pip install sort_pckg_frarg
+                
+        
+                
+        
+Keywords: algorithm sort wonderful
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
