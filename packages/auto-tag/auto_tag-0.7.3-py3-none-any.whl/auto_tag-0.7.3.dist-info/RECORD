@@ -1,0 +1,16 @@
+auto_tag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+auto_tag/__main__.py,sha256=pqLMHQbFMJr0KmQsS54i0x-a5votbpRcXZpOdkKhW2A,230
+auto_tag/cli.py,sha256=cbAQjShwQ_b2pxA6oiAvug8a6LiTLosd5bVRNgpudQ0,1906
+auto_tag/constants.py,sha256=qTLeoMX3yi_rzGJsBi0OZZD0V09WuY_TSGCXUfg83pA,729
+auto_tag/core.py,sha256=su6EOOXynnpjjI68dWz2_l9FtCirR9lGYFS6dn7FiD8,7149
+auto_tag/detectors.py,sha256=9nnwAmCVEtAMjVEtfbJW2cZPM1BQw676krIPTPkupiQ,7917
+auto_tag/detectors_config.py,sha256=xjEZscC15EqtlHyhHOQpf0cAdW7-VatXh31KVnIolQI,2933
+auto_tag/entrypoint.py,sha256=f6-bzeMs8T100-FpcyO97lwdg7O_QeONWTLlErVYb9s,1368
+auto_tag/exception.py,sha256=j3kVeeN-QXXJOY0g-0CFFkIghRyKsFfPf5F20k3ojbk,528
+auto_tag/git_custom_env.py,sha256=L2L1UmvJQ1U1o3MQ-C5Mct5Wj7wVs9thtn5pDRoadb0,1596
+auto_tag-0.7.3.dist-info/LICENSE.md,sha256=UfTlXgLoZsP76dUyi_Y8XGLA8FDzURlzFTbk3_Cf6K4,1193
+auto_tag-0.7.3.dist-info/METADATA,sha256=lJx6mVI63tgJkB42BsyQ9ozpJgxk2JH_3DBG7zA3RZg,10573
+auto_tag-0.7.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+auto_tag-0.7.3.dist-info/entry_points.txt,sha256=HQwv4IrCQ5B2UBS60QZBWWcfmZw-Jh0Q2paL6jYDcXA,53
+auto_tag-0.7.3.dist-info/top_level.txt,sha256=rkWUZwj3YPPPJGA5bNR7p6YqYO_qhWmwrRf_AWsfk9A,9
+auto_tag-0.7.3.dist-info/RECORD,,
