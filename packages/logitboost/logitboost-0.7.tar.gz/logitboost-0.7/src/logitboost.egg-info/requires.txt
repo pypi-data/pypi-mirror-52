@@ -1,0 +1,12 @@
+numpy
+scipy
+scikit-learn
+
+[dev]
+jupyter
+matplotlib
+seaborn
+pytest
+coverage
+sphinx
+nbsphinx
