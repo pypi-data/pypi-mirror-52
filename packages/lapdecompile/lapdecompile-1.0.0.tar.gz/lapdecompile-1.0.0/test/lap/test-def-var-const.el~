@@ -1,0 +1,3 @@
+(defun test-defconst()
+  (defconst first-var t "this is a docstring")
+  (defconst second-var "init value"))
