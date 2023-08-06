@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: storm
+Version: 0.21
+Summary: Storm is an object-relational mapper (ORM) for Python developed at Canonical.
+Home-page: https://storm.canonical.com
+Author: Gustavo Niemeyer
+Author-email: gustavo@niemeyer.net
+Maintainer: Storm Developers
+Maintainer-email: storm@lists.canonical.com
+License: LGPL
+Download-URL: https://launchpad.net/storm/+download
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test
