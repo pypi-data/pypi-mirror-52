@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ossh/__init__.py
+ossh.egg-info/PKG-INFO
+ossh.egg-info/SOURCES.txt
+ossh.egg-info/dependency_links.txt
+ossh.egg-info/entry_points.txt
+ossh.egg-info/top_level.txt
