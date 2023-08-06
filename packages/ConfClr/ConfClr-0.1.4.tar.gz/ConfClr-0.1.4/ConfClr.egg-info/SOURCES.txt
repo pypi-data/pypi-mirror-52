@@ -1,0 +1,15 @@
+README.txt
+setup.py
+ConfClr/CP.py
+ConfClr/ConfClr.py
+ConfClr/ConfCred.py
+ConfClr/Distance.py
+ConfClr/NearestNeighbour.py
+ConfClr/NonConformityMeasure.py
+ConfClr/Score.py
+ConfClr/__init__.py
+ConfClr/version.py
+ConfClr.egg-info/PKG-INFO
+ConfClr.egg-info/SOURCES.txt
+ConfClr.egg-info/dependency_links.txt
+ConfClr.egg-info/top_level.txt
