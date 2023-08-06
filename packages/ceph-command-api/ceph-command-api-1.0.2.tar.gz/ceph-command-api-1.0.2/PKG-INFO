@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: ceph-command-api
+Version: 1.0.2
+Summary: Automatically generated command API. 
+Home-page: https://github.com/sebastian-philipp/ceph-command-api
+Author: Sebastian Wagner
+Author-email: sebastian.wagner@suse.com
+License: UNKNOWN
+Description: ceph-command-api
+        ================
+        
+        
+        `ceph-command-api`. An automatically generated API for accessing the Ceph CLI.
+        
+        It provides proper auto completion in your IDE, an automatically
+        [generated documentation](https://ceph-command-api.readthedocs.io/en/latest/mon_command_api.html)
+        , and static type checking. 
+        
+        
+        Usage
+        -----
+        
+        Install [`ceph-command-api`](https://pypi.org/project/ceph-command-api/) from PyPi:
+        
+        ```
+        pip install ceph-command-api
+        ```
+        
+        And then:
+        
+        ```python
+        import rados
+        from ceph_command_api import MonCommandApi
+        cluster = rados.Rados(conffile='/etc/ceph/ceph.conf')
+        cluster.connect()
+        print(MonCommandApi(cluster).version())
+        ```   
+        
+        Rebuild the API
+        ---------------
+        
+        See `./rebuild.sh`
+        
+        Reference
+        ---------
+        
+        See [cholcombe973/ceph_command_parser](https://github.com/cholcombe973/ceph_command_parser) for a 
+        similar project.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

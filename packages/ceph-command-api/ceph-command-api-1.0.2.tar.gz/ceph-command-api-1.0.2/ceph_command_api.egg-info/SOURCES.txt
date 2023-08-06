@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+ceph_command_api/__init__.py
+ceph_command_api/_generated.py
+ceph_command_api.egg-info/PKG-INFO
+ceph_command_api.egg-info/SOURCES.txt
+ceph_command_api.egg-info/dependency_links.txt
+ceph_command_api.egg-info/top_level.txt
