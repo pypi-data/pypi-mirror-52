@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: csv-wrangler
+Version: 1.1.0
+Summary: Statically-typed Python 3 CSV generation helpers
+Home-page: http://www.dabapps.com
+Author: DabApps
+Author-email: engineering@dabapps.com
+License: BSD
+Description: Statically-typed Python 3 CSV generation helpers.
+            Write nicely typed CSV handling logic, with reorderable headers!
+Platform: UNKNOWN
