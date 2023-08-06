@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+demo/__init__.py
+demo/demo.py
+pypidemo2.egg-info/PKG-INFO
+pypidemo2.egg-info/SOURCES.txt
+pypidemo2.egg-info/dependency_links.txt
+pypidemo2.egg-info/entry_points.txt
+pypidemo2.egg-info/top_level.txt
+pypidemo2.egg-info/zip-safe
