@@ -1,0 +1,28 @@
+CHANGES
+=======
+
+0.3.0
+-----
+
+* Add boxcar\_inverse
+* Add boxcar function
+
+0.2.0
+-----
+
+* Update readme
+* Change setup to pbr
+* Add 2d gaussian  function
+* Update setup.py
+* Update setup.py
+* Update \_\_init\_\_.py
+* Update misc.py
+* Create signalproc.py
+* New module "optics"
+* Update
+* Update init.py
+* Add init.py
+* Fix in airy function
+* Restructured
+* Initial commit
+* Initial commit
