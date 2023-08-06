@@ -1,0 +1,67 @@
+Metadata-Version: 1.1
+Name: arxivpy
+Version: 0.0.1
+Summary: Finds (and downloads) all journals from arXiv by given search criteria.
+Home-page: https://github.com/monzita/arXivpy
+Author: Monika Ilieva
+Author-email: hidden@hidden.com
+License: MIT
+Description: ArXiVPy
+        -----------------------
+        
+        .. image:: https://github.com/monzita/arXivPy/arxivpy.png
+        
+        .. image :: https://img.shields.io/badge/0.0.1-arXivPy-green?style=flat-square
+        
+        Find all papers from arXiv based on some query ( + option for downloading them ) .. image:: https://github.githubassets.com/images/icons/emoji/unicode/1f4f0.png
+        
+        
+        Installation
+        **********************
+        
+          >>> pip install arxivpy
+        
+        
+        Documentation
+        **********************
+        
+            Official documentation can be found `here <https://github.com/monzita/arxivpy/wiki>`_
+        
+        
+        Example usage
+        **********************
+        
+        
+            >>> from arxivpy.client import ArXivPyClient
+            >>>
+            >>> client = ArXivPyClient()
+            >>>
+            >>> quantum = client.simple(query='quantum computing', page=2, download=True,
+            >>>                         path='path', downloadonly=10)
+            >>>
+            >>>
+            >>> algorithms = client.advanced(term='algorithms',
+            >>>                              classification='computer_science', size=200)
+            >>>
+            >>>
+            >>>
+            >>> alg_ds = client.advanced(terms=[{term: 'algorithms', field: 'title'},
+            >>>                            {term: 'data structures', field: 'title'}],
+            >>>                      classification='computer_science', size=200)
+            >>>
+        
+        
+        Licence
+        **********************
+        
+          `MIT <https://github.com/monzita/arxivpy/LICENSE>`_
+Keywords: arXiv science beautifulsoup search
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
