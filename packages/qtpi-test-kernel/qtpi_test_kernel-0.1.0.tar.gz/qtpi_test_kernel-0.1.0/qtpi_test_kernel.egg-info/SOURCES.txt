@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+qtpi_test_kernel/__init__.py
+qtpi_test_kernel/__main__.py
+qtpi_test_kernel/install.py
+qtpi_test_kernel/kernel.py
+qtpi_test_kernel.egg-info/PKG-INFO
+qtpi_test_kernel.egg-info/SOURCES.txt
+qtpi_test_kernel.egg-info/dependency_links.txt
+qtpi_test_kernel.egg-info/requires.txt
+qtpi_test_kernel.egg-info/top_level.txt
