@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: samsungwsctl
+Version: 1.0.2
+Summary: A minimal alternative to samsungctl for controlling newer Samsung Smart TVs.
+Home-page: https://github.com/nickw444/samsungwsctl
+Author: Nick Whyte
+Author-email: nick@nickwhyte.com
+License: UNKNOWN
+Description: # samsungwsctl
+        
+        A minimal alternative to samsungctl for controlling newer Samsung Smart TVs.
+        
+        ## Tested Devices
+        
+        - Samsung RU8000
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
