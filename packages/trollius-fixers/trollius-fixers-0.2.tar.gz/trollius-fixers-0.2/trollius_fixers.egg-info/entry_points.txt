@@ -1,0 +1,3 @@
+[console_scripts]
+trollius2asyncio = trollius_fixers.trollius2asyncio:main
+
