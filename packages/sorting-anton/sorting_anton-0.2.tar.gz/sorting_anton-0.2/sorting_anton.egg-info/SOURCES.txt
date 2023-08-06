@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+sorting_anton/__init__.py
+sorting_anton/bubble_sort.py
+sorting_anton/insertion_sort.py
+sorting_anton/quick_sort.py
+sorting_anton/selection_sort.py
+sorting_anton.egg-info/PKG-INFO
+sorting_anton.egg-info/SOURCES.txt
+sorting_anton.egg-info/dependency_links.txt
+sorting_anton.egg-info/not-zip-safe
+sorting_anton.egg-info/top_level.txt
