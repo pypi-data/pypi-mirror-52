@@ -1,0 +1,34 @@
+#!python
+
+import os.path
+import sys
+import time
+import random
+from psnap import state_tracker
+
+if __name__ == "__main__":
+    # Can use datetime.datetime.strftime formatting for dateformat
+    # and reference your dateformat with %D.
+    #   %Y=year, %m=month, %d=day, %H=hour, %M=minute, %S=second, etc.
+    dateformat = None
+    # Can override if a daily timestamp is enough
+    #dateformat = "%Y%m%d"
+    output_directory = "snapshots/%D"
+    st = state_tracker.StateTracker(os.path.join(output_directory, "results_%D.json"), dateformat=dateformat)
+    st.set("val1", 1)
+    # $val1$
+    st.set("val2", "number 2") # $val2$
+    # Let's get a random number
+    ts = time.time()
+    st.set("timestamp", ts) # Last ran at $timestamp$
+    random.seed(ts)
+    random_val = random.random()
+    st.set("random_val", random_val) # $random_val$
+    random_val2 = random.random()
+    st.set("deep.dotted.path", random_val2) # $deep.dotted.path$
+    # Expect won't be found or expanded $missing.variable$
+    json_output = st.save()
+    print(f"Saved history to: {json_output}")
+    output = st.save_code_snap(output_directory=output_directory)
+    print(f"Saved code_snap to: {output['code_snap']}")
+    print(f"Check differences with: diff -u {sys.argv[0]} {output['code_snap']}")
