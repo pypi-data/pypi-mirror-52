@@ -1,0 +1,6 @@
+numpy
+cython
+faiss
+google-cloud-bigtable
+google-cloud-storage
+gensim
