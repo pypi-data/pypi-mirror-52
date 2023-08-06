@@ -1,0 +1,6 @@
+PyYAML
+packaging
+
+[testing]
+pytest
+pytest-mock
