@@ -1,0 +1,17 @@
+pyCoalesce/__init__.py,sha256=jjluff0Vh4zMVWgUD274TtZ3czauq3IT5AgZ3QR_ao4,441
+pyCoalesce/coalesce_request.py,sha256=U7WijRsiqkBSG_3psddCXYbLQMVYqSv2qVs_f6ORB2o,96198
+pyCoalesce/classes/__init__.py,sha256=vddR13Yi5XCQCfa6TXGttayPqM4jpv7we6IqVJfCKUA,2096
+pyCoalesce/classes/coalesce_entity.py,sha256=0tkA971c3UIftz2hSZ2ESRKLKRaFF0sjMgWfuS7lsKo,24735
+pyCoalesce/classes/coalesce_entity_template.py,sha256=R3v5uKU8btZi1J5xV1z4pcb8mv3pa_At0WCDfjPQQoM,6719
+pyCoalesce/classes/coalesce_json.py,sha256=2tOWoseTUR9wjxhZ7J1YyFeKWF_-4qtN0xnTgCPlnvQ,13940
+pyCoalesce/classes/entity.py,sha256=q-0E9Z2hffcW6FNOjRppavx23WRlAluUCY8JEX46TIg,129400
+pyCoalesce/classes/entity_utilities.py,sha256=OY_hjSmYBoNLmZfIf2za-mScGkDFUy-gb1NJRQoC5UY,16821
+pyCoalesce/utilities/API_request.py,sha256=q-yGbCCNxwyCZbrD3IiaW6lBQeYw1WNx1VB5cwlZGDo,5963
+pyCoalesce/utilities/URL_class.py,sha256=CKyUBOYU0dEqXTw2tLmOe7k0mlotJd37n9IlrZQ6bGA,967
+pyCoalesce/utilities/__init__.py,sha256=jVNsVeXRe5S1Yq0vUFP4LjsZT0X7U_-pIy2D3nzA16M,483
+pyCoalesce/utilities/logger.py,sha256=Er-JxPgWhllp70MTch29tSskTG2nhTLgQZLRm2xbWOM,786
+pyCoalesce-0.0.41.dev7.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pyCoalesce-0.0.41.dev7.dist-info/METADATA,sha256=vL5XROls9emstdsg-PGgUALCNN5TNkXzDrsLn5qt29k,2582
+pyCoalesce-0.0.41.dev7.dist-info/WHEEL,sha256=66yg5r67RIT-GjSaJ3M-GBTsHX0QfofnyZ-5OqlTUU0,97
+pyCoalesce-0.0.41.dev7.dist-info/top_level.txt,sha256=STjMmBVVsjuq7pVSaRd6xHsh2SYdonTIH_o57kQxfSw,11
+pyCoalesce-0.0.41.dev7.dist-info/RECORD,,
