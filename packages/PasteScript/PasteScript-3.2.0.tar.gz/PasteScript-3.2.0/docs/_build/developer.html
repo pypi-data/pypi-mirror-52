@@ -1,0 +1,308 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Paste Script: Development &#8212; Paste Script 1.7.5 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="license.html" />
+    <link rel="prev" title="News: Paste Script" href="news.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="paste-script-development">
+<h1><a class="toc-backref" href="#id1">Paste Script: Development</a><a class="headerlink" href="#paste-script-development" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Ian Bicking &lt;<a class="reference external" href="mailto:ianb&#37;&#52;&#48;colorstudy&#46;com">ianb<span>&#64;</span>colorstudy<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">revision:</th><td class="field-body">$Rev$</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">$LastChangedDate$</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#paste-script-development" id="id1">Paste Script: Development</a><ul>
+<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
+<li><a class="reference internal" href="#what-paste-script-can-do" id="id3">What Paste Script Can Do</a></li>
+<li><a class="reference internal" href="#how-s-the-local-thing-work" id="id4">How’s the Local Thing Work?</a></li>
+<li><a class="reference internal" href="#what-do-commands-look-like" id="id5">What Do Commands Look Like?</a></li>
+<li><a class="reference internal" href="#templates" id="id6">Templates</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This document is an introduction to how you can extend <code class="docutils literal notranslate"><span class="pre">paster</span></code> and
+Paste Script for your system – be it a framework, server setup, or
+whatever else you want to do.</p>
+</div>
+<div class="section" id="what-paste-script-can-do">
+<h2><a class="toc-backref" href="#id3">What Paste Script Can Do</a><a class="headerlink" href="#what-paste-script-can-do" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">paster</span></code> is a two-level command, where the second level (e.g.,
+<code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">help</span></code>, <code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">create</span></code>, etc) is pluggable.</p>
+<p>Commands are attached to <a class="reference external" href="http://peak.telecommunity.com/DevCenter/PythonEggs">Python Eggs</a>, i.e., to the
+package you distribute and someone installs.  The commands are
+identified using <a class="reference external" href="http://peak.telecommunity.com/DevCenter/setuptools#dynamic-discovery-of-services-and-plugins">entry points</a>.</p>
+<p>To make your command available do something like this in your
+<code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="k">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span><span class="o">...</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    [paste.paster_command]</span>
+<span class="s2">    mycommand = mypackage.mycommand:MyCommand</span>
+
+<span class="s2">    [paste.global_paster_command]</span>
+<span class="s2">    myglobal = mypackage.myglobal:MyGlobalCommand</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This means that <code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">mycommand</span></code> will run the <code class="docutils literal notranslate"><span class="pre">MyCommand</span></code>
+command located in the <code class="docutils literal notranslate"><span class="pre">mypackage.mycommand</span></code> module.  Similarly with
+<code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">myglobal</span></code>.  The distinction between these two entry points
+is that the first will only be usable when <code class="docutils literal notranslate"><span class="pre">paster</span></code> is run inside a
+project that is identified as using your project, while the second
+will be globally available as a command as soon as your package is
+installed.</p>
+</div>
+<div class="section" id="how-s-the-local-thing-work">
+<h2><a class="toc-backref" href="#id4">How’s the Local Thing Work?</a><a class="headerlink" href="#how-s-the-local-thing-work" title="Permalink to this headline">¶</a></h2>
+<p>So if you have a local command, how does it get enabled?  If the
+person is running <code class="docutils literal notranslate"><span class="pre">paster</span></code> inside their project directory,
+<code class="docutils literal notranslate"><span class="pre">paster</span></code> will look in <code class="docutils literal notranslate"><span class="pre">Project_Name.egg-info/paster_plugins.txt</span></code>
+which is a list of project names (the name of your package) whose
+commands should be made available.</p>
+<p>This is for frameworks, so frameworks can add commands to <code class="docutils literal notranslate"><span class="pre">paster</span></code>
+that only apply to projects that use that framework.</p>
+</div>
+<div class="section" id="what-do-commands-look-like">
+<h2><a class="toc-backref" href="#id5">What Do Commands Look Like?</a><a class="headerlink" href="#what-do-commands-look-like" title="Permalink to this headline">¶</a></h2>
+<p>The command objects (like <code class="docutils literal notranslate"><span class="pre">MyCommand</span></code>) are subclasses of
+<code class="docutils literal notranslate"><span class="pre">paste.script.command.Command</span></code>.  You can look at that class to get
+an idea, but a basic outline looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">paste.script</span> <span class="k">import</span> <span class="n">command</span>
+
+<span class="k">class</span> <span class="nc">MyCommand</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+    <span class="n">max_args</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">min_args</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">usage</span> <span class="o">=</span> <span class="s2">&quot;NAME&quot;</span>
+    <span class="n">summary</span> <span class="o">=</span> <span class="s2">&quot;Say hello!&quot;</span>
+    <span class="n">group_name</span> <span class="o">=</span> <span class="s2">&quot;My Package Name&quot;</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">Command</span><span class="o">.</span><span class="n">standard_parser</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;--goodbye&#39;</span><span class="p">,</span>
+                      <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+                      <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;goodbye&#39;</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Say &#39;Goodbye&#39; instead&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s2">&quot;Got name: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">goodbye</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s2">&quot;Goodbye&quot;</span><span class="p">,</span> <span class="n">name</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">max_args</span></code> and <code class="docutils literal notranslate"><span class="pre">min_args</span></code> are used to give error messages.  You
+can also raise <code class="docutils literal notranslate"><span class="pre">command.BadCommand(msg)</span></code> if the arguments are
+incorrect in some way.  (Use <code class="docutils literal notranslate"><span class="pre">None</span></code> here to give no restriction)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">usage</span></code> variable means <code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">mycommand</span> <span class="pre">-h</span></code> will give a usage
+of <code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">mycommand</span> <span class="pre">[options]</span> <span class="pre">NAME</span></code>.  <code class="docutils literal notranslate"><span class="pre">summary</span></code> is used with
+<code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">help</span></code> (describing your command in a short form).
+<code class="docutils literal notranslate"><span class="pre">group_name</span></code> is used to group commands together for <code class="docutils literal notranslate"><span class="pre">paste</span> <span class="pre">help</span></code>
+under that title.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">parser</span></code> object is an <cite>optparse
+&lt;http://python.org/doc/current/lib/module-optparse.html&gt;</cite>
+<code class="docutils literal notranslate"><span class="pre">OptionParser</span></code> object.  <code class="docutils literal notranslate"><span class="pre">Command.standard_parser</span></code> is a class
+method that creates normal options, and enables options based on these
+keyword (boolean) arguments: <code class="docutils literal notranslate"><span class="pre">verbose</span></code>, <code class="docutils literal notranslate"><span class="pre">interactive</span></code>,
+<code class="docutils literal notranslate"><span class="pre">no_interactive</span></code> (if interactive is the default), <code class="docutils literal notranslate"><span class="pre">simulate</span></code>,
+<code class="docutils literal notranslate"><span class="pre">quiet</span></code> (undoes verbose), and <code class="docutils literal notranslate"><span class="pre">overwrite</span></code>.  You can create the
+parser however you want, but using <code class="docutils literal notranslate"><span class="pre">standard_parser()</span></code> encourages a
+consistent set of shared options across commands.</p>
+<p>When your command is run, <code class="docutils literal notranslate"><span class="pre">.command()</span></code> is called.  As you can see,
+the options are in <code class="docutils literal notranslate"><span class="pre">self.options</span></code> and the positional arguments are
+in <code class="docutils literal notranslate"><span class="pre">self.args</span></code>.  Some options are turned into instance variables –
+especially <code class="docutils literal notranslate"><span class="pre">self.verbose</span></code> and <code class="docutils literal notranslate"><span class="pre">self.simulate</span></code> (even if you haven’t
+chosen to use those options, many methods expect to find some value
+there, which is why they are turned into instance variables).</p>
+<p>There are quite a few useful methods you can use in your command.  See
+the <a class="reference external" href="class-paste.script.command.Command.html">Command class</a> for a
+complete list.  Some particulars:</p>
+<p><code class="docutils literal notranslate"><span class="pre">run_command(cmd,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">...,</span> <span class="pre">cwd=os.getcwd(),</span> <span class="pre">capture_stderr=False)</span></code>:</p>
+<blockquote>
+<div>Runs the command, respecting verbosity and simulation.  Will raise
+an error if the command doesn’t exit with a 0 code.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">insert_into_file(filename,</span> <span class="pre">marker_name,</span> <span class="pre">text,</span> <span class="pre">indent=False)</span></code>:</p>
+<blockquote>
+<div>Inserts a line of text into the file, looking for a marker like
+<code class="docutils literal notranslate"><span class="pre">-*-</span> <span class="pre">marker_name</span> <span class="pre">-*-</span></code> (and inserting just after it).  If
+<code class="docutils literal notranslate"><span class="pre">indent=True</span></code>, then the line will be indented at the same level
+as the marker line.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">ensure_dir(dir,</span> <span class="pre">svn_add=True)</span></code>:</p>
+<blockquote>
+<div>Ensures that the directory exists.  If <code class="docutils literal notranslate"><span class="pre">svn_add</span></code> is true and the
+parent directory has an <code class="docutils literal notranslate"><span class="pre">.svn</span></code> directory, add the new directory
+to Subversion.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">ensure_file(filename,</span> <span class="pre">content,</span> <span class="pre">svn_add=True)</span></code>:</p>
+<blockquote>
+<div>Ensure the file exists with the given content.  Will ask the user
+before overwriting a file if <code class="docutils literal notranslate"><span class="pre">--interactive</span></code> has been given.</div></blockquote>
+</div>
+<div class="section" id="templates">
+<h2><a class="toc-backref" href="#id6">Templates</a><a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>The other pluggable part is “templates”.  These are used to create new
+projects.  Paste Script includes one template itself:
+<code class="docutils literal notranslate"><span class="pre">basic_package</span></code> which creates a new setuptools package.</p>
+<p>To enable, add to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="p">(</span><span class="o">...</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    [paste.paster_create_template]</span>
+<span class="s2">    framework = framework.templates:FrameworkTemplate</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">FrameworkTemplate</span></code> should be a subclass of
+<code class="docutils literal notranslate"><span class="pre">paste.script.templates.Template</span></code>.  An easy way to do this is simply
+with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">paste.script</span> <span class="k">import</span> <span class="n">templates</span>
+
+<span class="k">class</span> <span class="nc">FrameworkTemplate</span><span class="p">(</span><span class="n">templates</span><span class="o">.</span><span class="n">Template</span><span class="p">):</span>
+
+    <span class="n">egg_plugins</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Framework&#39;</span><span class="p">]</span>
+    <span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;Template for creating a basic Framework package&#39;</span>
+    <span class="n">required_templates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;basic_package&#39;</span><span class="p">]</span>
+    <span class="n">_template_dir</span> <span class="o">=</span> <span class="s1">&#39;template&#39;</span>
+    <span class="n">use_cheetah</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">egg_plugins</span></code> will add <code class="docutils literal notranslate"><span class="pre">Framework</span></code> to <code class="docutils literal notranslate"><span class="pre">paste_plugins.txt</span></code> in the
+package.  <code class="docutils literal notranslate"><span class="pre">required_template</span></code> means those template will be run
+before this one (so in this case you’ll have a complete package ready,
+and you can just write your framework files to it).  <code class="docutils literal notranslate"><span class="pre">_template_dir</span></code>
+is a module-relative directory to find your source files.</p>
+<p>The source files are just a directory of files that will be copied
+into place, potentially with variable substitutions.  Three variables
+are expected: <code class="docutils literal notranslate"><span class="pre">project</span></code> is the project name (e.g., <code class="docutils literal notranslate"><span class="pre">Project-Name</span></code>),
+<code class="docutils literal notranslate"><span class="pre">package</span></code> is the Python package in that project (e.g.,
+<code class="docutils literal notranslate"><span class="pre">projectname</span></code>) and <code class="docutils literal notranslate"><span class="pre">egg</span></code> is the project’s egg name as generated by
+setuptools (e.g., <code class="docutils literal notranslate"><span class="pre">Project_Name</span></code>). Users can add other variables by
+adding <code class="docutils literal notranslate"><span class="pre">foo=bar</span></code> arguments to <code class="docutils literal notranslate"><span class="pre">paster</span> <span class="pre">create</span></code>.</p>
+<p>Filenames are substituted with <code class="docutils literal notranslate"><span class="pre">+var_name+</span></code>, e.g., <code class="docutils literal notranslate"><span class="pre">+package+</span></code> is
+the package directory.</p>
+<p>If a file in the template directory ends in <code class="docutils literal notranslate"><span class="pre">_tmpl</span></code> then it will be
+substituted.  If <code class="docutils literal notranslate"><span class="pre">use_cheetah</span></code> is true, then it’s treated as a
+<a class="reference external" href="http://www.cheetahtemplate.org/">Cheetah</a> template.  Otherwise
+<a class="reference external" href="http://docs.python.org/library/string.html#template-strings">string.Template</a> is
+used, though full expressions are allowed in <code class="docutils literal notranslate"><span class="pre">${expr}</span></code> instead of
+just variables.</p>
+<p>See the <a class="reference external" href="module-paste.script.templates.html">templates module</a> for
+more.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Paste Script</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="news.html">News: Paste Script</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paste Script: Development</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="news.html" title="previous chapter">News: Paste Script</a></li>
+      <li>Next: <a href="license.html" title="next chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2011, Ian Bicking.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/developer.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
