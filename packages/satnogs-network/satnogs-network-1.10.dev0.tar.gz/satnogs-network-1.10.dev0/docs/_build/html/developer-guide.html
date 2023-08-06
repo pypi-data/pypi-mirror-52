@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Developer Guide &#8212; satnogs-network 1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maintenance" href="maintenance.html" />
+    <link rel="prev" title="VirtualEnv Installation" href="installation-virtualenv.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="maintenance.html" title="Maintenance"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation-virtualenv.html" title="VirtualEnv Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">satnogs-network 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<p>Thank you for your interest in developing SatNOGS!
+There are always bugs to file; bugs to fix in code; improvements to be made to the documentation; and more.</p>
+<p>The below instructions are for software developers who want to work on <a class="reference external" href="http://gitlab.com/librespacefoundation/satnogs/satnogs-network">satnogs-network code</a>.</p>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>When you want to start developing for SatNOGS, you should <a class="reference internal" href="installation.html"><span class="doc">follow the installation instructions</span></a>, then…</p>
+<ol class="arabic simple">
+<li>Read CONTRIBUTING.md file carefully.</li>
+<li>Fork the <a class="reference external" href="https://gitlab.com/librespacefoundation/satnogs/satnogs-network/forks/new">upstream repository</a> in GitLab.</li>
+<li>Code!</li>
+<li>Test the changes and fix any errors by running <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a>.</li>
+<li>Commit changes to the code!</li>
+<li>When you’re done, push your changes to your fork.</li>
+<li>Issue a merge request on Gitlab.</li>
+<li>Wait to hear from one of the core developers.</li>
+</ol>
+<p>If you’re asked to change your commit message or code, you can amend or rebase and then force push.</p>
+<p>If you need more Git expertise, a good resource is the <a class="reference external" href="http://git-scm.com/book">Git book</a>.</p>
+</div>
+<div class="section" id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>satnogs-network uses <a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/templates/">Django’s template engine</a> templates.</p>
+</div>
+<div class="section" id="frontend-development">
+<h2>Frontend development<a class="headerlink" href="#frontend-development" title="Permalink to this headline">¶</a></h2>
+<p>To be able to manage the required javascript libraries, install the development dependencies with npm:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ npm install
+</pre></div>
+</div>
+<p>Development tasks like the download of assets, code linting and tests are managed with gulp:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gulp
+</pre></div>
+</div>
+<p>Frontend dependencies are stored in packages.json, handled by yarn. To add a new dependency, e.g. satellite.js, call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ yarn add satellite.js
+</pre></div>
+</div>
+<p>Manually add the new required files to the list of “assets” in packages.json, then start the download with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gulp assets
+</pre></div>
+</div>
+<p>The assets are stored in the repository, thus don’t forget to create a commit after you add/update/remove dependencies.</p>
+</div>
+<div class="section" id="simulating-station-heartbeats">
+<h2>Simulating station heartbeats<a class="headerlink" href="#simulating-station-heartbeats" title="Permalink to this headline">¶</a></h2>
+<p>Only stations which have been seen by the server in the last hour (by default, can be customized by <cite>STATION_HEARTBEAT_TIME</cite>) are taken into consideration when scheduling observations.
+In order to simulate an heartbeat of the stations 7, 23 and 42, the following command can be used:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo docker-compose run web python manage.py update_station_last_seen 7 23 42
+</pre></div>
+</div>
+</div>
+<div class="section" id="coding-style">
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<p>Follow the <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> and <a class="reference external" href="http://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">PEP257</a> Style Guides.</p>
+</div>
+<div class="section" id="what-to-work-on">
+<h2>What to work on<a class="headerlink" href="#what-to-work-on" title="Permalink to this headline">¶</a></h2>
+<p>You can check <a class="reference external" href="https://gitlab.com/librespacefoundation/satnogs/satnogs-network/issues">open issues</a>.
+We regurarly open issues for tracking new features. You pick one and start coding.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Developer Guide</a><ul>
+<li><a class="reference internal" href="#workflow">Workflow</a></li>
+<li><a class="reference internal" href="#templates">Templates</a></li>
+<li><a class="reference internal" href="#frontend-development">Frontend development</a></li>
+<li><a class="reference internal" href="#simulating-station-heartbeats">Simulating station heartbeats</a></li>
+<li><a class="reference internal" href="#coding-style">Coding Style</a></li>
+<li><a class="reference internal" href="#what-to-work-on">What to work on</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="installation-virtualenv.html"
+                        title="previous chapter">VirtualEnv Installation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="maintenance.html"
+                        title="next chapter">Maintenance</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/developer-guide.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="maintenance.html" title="Maintenance"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installation-virtualenv.html" title="VirtualEnv Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">satnogs-network 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2019, Libre Space Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.
+    </div>
+  </body>
+</html>
