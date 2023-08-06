@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: chacon
+Version: 0.0a0.dev0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Jason Fan
+Author-email: jasonfan@cs.umd.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.5
+Requires-Dist: pandas
+Requires-Dist: click
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+
