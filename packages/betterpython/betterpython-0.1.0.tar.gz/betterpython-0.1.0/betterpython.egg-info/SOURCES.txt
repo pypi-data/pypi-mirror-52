@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+betterpython/__init__.py
+betterpython/decorators.py
+betterpython.egg-info/PKG-INFO
+betterpython.egg-info/SOURCES.txt
+betterpython.egg-info/dependency_links.txt
+betterpython.egg-info/not-zip-safe
+betterpython.egg-info/top_level.txt
