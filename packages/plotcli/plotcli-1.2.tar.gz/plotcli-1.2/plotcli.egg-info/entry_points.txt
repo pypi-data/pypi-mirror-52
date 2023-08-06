@@ -1,0 +1,3 @@
+[console_scripts]
+plotcli = plotcli._cli:main
+
