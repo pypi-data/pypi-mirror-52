@@ -1,0 +1,3 @@
+[console_scripts]
+cmana = cmake_analyzer.analyzer:entrypoint
+
