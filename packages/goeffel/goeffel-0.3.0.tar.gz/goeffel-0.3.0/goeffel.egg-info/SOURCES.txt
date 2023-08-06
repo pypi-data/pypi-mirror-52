@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+goeffel/__init__.py
+goeffel/__main__.py
+goeffel/analysis.py
+goeffel/goeffel.py
+goeffel.egg-info/PKG-INFO
+goeffel.egg-info/SOURCES.txt
+goeffel.egg-info/dependency_links.txt
+goeffel.egg-info/entry_points.txt
+goeffel.egg-info/requires.txt
+goeffel.egg-info/top_level.txt
+test/test_cmdline.py

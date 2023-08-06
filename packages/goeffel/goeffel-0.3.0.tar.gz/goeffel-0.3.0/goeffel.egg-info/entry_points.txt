@@ -1,0 +1,4 @@
+[console_scripts]
+goeffel = goeffel.goeffel:main
+goeffel-analysis = goeffel.analysis:main
+
