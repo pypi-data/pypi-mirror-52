@@ -1,0 +1,42 @@
+#! python
+
+import argparse
+
+from cc import Confluence
+from bb2cc import sync_to_confluence
+
+parser = argparse.ArgumentParser(
+    description=('Sync a Markdown document from a Bitbucket repo to a '
+                 'Confluence page.'))
+parser.add_argument('--host', type=str, required=False,
+                    default='https://hello.atlassian.net/wiki/',
+                    help='the base URL for the Confluence Cloud instance')
+parser.add_argument('-u', '--username', type=str, required=True,
+                    help='the username to use for API authentication')
+parser.add_argument('-p', '--password', type=str, required=True,
+                    help='the password to use for API authentication')
+parser.add_argument('-r', '--repository', type=str,
+                    help=('the full name (workspace/slug) of the Bitbucket '
+                          'repository'))
+parser.add_argument('file', type=str,
+                    help='the Markdown file to sync to Confluence')
+
+args = parser.parse_args()
+
+
+def repository_url(repository):
+    """Provide a repository URL given its full name (workspace/slug).
+
+    In case a full URL is provided instead, return it directly. (This allows
+    a repository hosted in a non-production environment to be specified.)
+    """
+    if repository.startswith('https://'):
+        return repository
+    return 'https://bitbucket.org/{}'.format(repository)
+
+client = Confluence(host=args.host, username=args.username,
+                    password=args.password)
+
+sync_to_confluence(client, args.file,
+                   repository_url=(repository_url(args.repository)
+                                   if args.repository else None))
