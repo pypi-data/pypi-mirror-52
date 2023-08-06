@@ -1,0 +1,3 @@
+[console_scripts]
+xmlrollbase-to-git = src.__main__:main
+
