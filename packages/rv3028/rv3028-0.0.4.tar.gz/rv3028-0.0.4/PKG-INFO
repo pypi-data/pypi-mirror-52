@@ -1,0 +1,70 @@
+Metadata-Version: 1.1
+Name: rv3028
+Version: 0.0.4
+Summary: Python library for the RV3028 Real Time Clock 
+Home-page: http://www.pimoroni.com
+Author: Gee Bartlett
+Author-email: gee@pimoroni.com
+License: MIT
+Project-URL: GitHub, https://www.github.com/pimoroni/rv3028-python
+Description: RV3028 Real Time Clock Breakout
+        ===============================
+        
+        |Build Status| |Coverage Status| |PyPi Package| |Python Versions|
+        
+        Installing
+        ==========
+        
+        Stable library from PyPi:
+        
+        -  Just run ``sudo pip install rv3028``
+        
+        Latest/development library from GitHub:
+        
+        -  ``git clone https://github.com/pimoroni/rv3028-python``
+        -  ``cd rv3028-python``
+        -  ``sudo ./install.sh``
+        
+        .. |Build Status| image:: https://travis-ci.com/pimoroni/rv3028-python.svg?branch=master
+           :target: https://travis-ci.com/pimoroni/rv3028-python
+        .. |Coverage Status| image:: https://coveralls.io/repos/github/pimoroni/rv3028-python/badge.svg?branch=master
+           :target: https://coveralls.io/github/pimoroni/rv3028-python?branch=master
+        .. |PyPi Package| image:: https://img.shields.io/pypi/v/rv3028.svg
+           :target: https://pypi.python.org/pypi/rv3028
+        .. |Python Versions| image:: https://img.shields.io/pypi/pyversions/rv3028.svg
+           :target: https://pypi.python.org/pypi/rv3028
+        
+        0.0.4
+        -----
+        
+        * Port to i2cdevice>=0.0.6 set/get API
+        * Cleaned up i2cdevice bindings
+        * Corrected 12-hour and am/pm bits in bindings
+        
+        0.0.3
+        -----
+        
+        * Bugfix to support days of month in the 20s
+        
+        0.0.2
+        -----
+        
+        * Major bugfix to support hours past 8PM
+        * Other minor fixes and improvements
+        
+        0.0.1
+        -----
+        
+        * Initial Release
+        
+Keywords: Raspberry Pi
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Hardware
