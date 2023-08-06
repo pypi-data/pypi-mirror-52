@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: quickjsonrpc
+Version: 0.4.0
+Summary: A library for writing asynchronous JSON-RPC servers and clients in Python, using Twisted
+Author: Daniel Gonzalez
+Author-email: gonvaled@gonvaled.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Twisted (>=19.7,<20.0)
+Requires-Dist: pyOpenSSL (>=19.0,<20.0)
