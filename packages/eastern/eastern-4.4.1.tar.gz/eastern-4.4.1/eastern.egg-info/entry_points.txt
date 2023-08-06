@@ -1,0 +1,10 @@
+[console_scripts]
+eastern = eastern.cli:cli
+
+[eastern.command]
+load! = eastern.yaml_formatter.overrides:load_strict
+load? = eastern.yaml_formatter.overrides:load
+
+[eastern.formatter]
+yaml = eastern.yaml_formatter:Formatter
+
