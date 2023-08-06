@@ -1,0 +1,5 @@
+
+    [console_scripts]
+    cython-compiler=cython_compiler.compiler:main
+    cython_compiler=cython_compiler.compiler:main
+    
