@@ -1,0 +1,17 @@
+README.rst
+setup.py
+pulumi_terraform-template/__init__.py
+pulumi_terraform-template/cloud_init_config.py
+pulumi_terraform-template/dir.py
+pulumi_terraform-template/file.py
+pulumi_terraform-template/get_cloud_init_config.py
+pulumi_terraform-template/get_file.py
+pulumi_terraform-template/provider.py
+pulumi_terraform-template/tables.py
+pulumi_terraform-template/utilities.py
+pulumi_terraform_template.egg-info/PKG-INFO
+pulumi_terraform_template.egg-info/SOURCES.txt
+pulumi_terraform_template.egg-info/dependency_links.txt
+pulumi_terraform_template.egg-info/not-zip-safe
+pulumi_terraform_template.egg-info/requires.txt
+pulumi_terraform_template.egg-info/top_level.txt
