@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ebfe
+Version: 0.0.2
+Summary: Exuberant Binary Formats Editor
+Home-page: https://gitlab.com/icostin/ebfe-py
+Author: Costin Ionescu, Dumitru Stama
+Author-email: costin.ionescu@gmail.com, dumitru.stama@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: zlx
+
+UNKNOWN
+
+
