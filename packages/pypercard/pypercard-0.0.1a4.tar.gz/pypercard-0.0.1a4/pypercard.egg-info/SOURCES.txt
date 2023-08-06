@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+pypercard/__init__.py
+pypercard/colours.py
+pypercard/core.py
+pypercard/logo.png
+pypercard.egg-info/PKG-INFO
+pypercard.egg-info/SOURCES.txt
+pypercard.egg-info/dependency_links.txt
+pypercard.egg-info/not-zip-safe
+pypercard.egg-info/requires.txt
+pypercard.egg-info/top_level.txt

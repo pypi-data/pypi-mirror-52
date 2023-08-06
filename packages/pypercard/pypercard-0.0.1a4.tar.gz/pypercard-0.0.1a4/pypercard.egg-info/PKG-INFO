@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: pypercard
+Version: 0.0.1a4
+Summary: A HyperCard inspired GUI framework for beginner developers.
+Home-page: https://github.com/ntoll/pypercard
+Author: Nicholas H.Tollervey
+Author-email: ntoll@ntoll.org
+License: MIT
+Description: # PyperCard - A Pythonic HyperCard for Beginner Programmers
+        
+        This project's documentation can be found [here](https://pypercard.rtfd.io).
+        
+        A re-implementation of
+        [Adafruit's CircuitPython PYOA](https://github.com/adafruit/Adafruit_CircuitPython_PYOA)
+        module for non-CircuitPython computing environments. This module re-uses a
+        modified version of the JSON specification used to create HyperCard like
+        "stacks" of states, between which users transition in a
+        choose-your-own-adventure style.
+        
+        ## Install via pip
+        
+        To install PyperCard via pip, type the following command into the terminal/command prompt:
+        
+        ```
+        pip install pypercard
+        ```
+        
+        ## Developer Setup
+        
+        Git clone the repository:
+        
+        ```
+        git clone https://github.com/ntoll/pypercard.git
+        ```
+        
+        (Recommended) Upgrade local pip:
+        
+        ```
+        pip install --upgrade pip
+        ```
+        
+        Make a virtualenv, then install the requirements:
+        
+        ```
+        pip install -e ".[dev]"
+        ```
+        
+        Run the test suite:
+        
+        ```
+        make check
+        ```
+        
+        Try out some of the examples in the "examples" subdirectory (see the README
+        therein for more information).
+        
+        ## ToDo
+        
+        * Packaging for mobile (Android and iOS).
+        
+        
+        # Release History
+        
+        ## 0.0.1-alpha.2
+        
+        * Fixed Windows related issues.
+        
+        ## 0.0.1-alpha.1
+        
+        Initial release.
+        
+        * CardApp and Card core classes implemented.
+        * Input enumeration defines available input form widgets.
+        * The palette function takes either English or HEX (preceeded by "0x" or "#")
+          values and returns a Kivy representation of the referenced colour.
+        * 100% unit test coverage.
+        * Example projects.
+        * Core `Makefile` functionality.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Android
+Classifier: Operating System :: iOS
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Education
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Topic :: System :: Software Distribution
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: package
+Provides-Extra: tests
