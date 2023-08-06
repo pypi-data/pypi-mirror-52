@@ -1,0 +1,17 @@
+styleclass/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+styleclass/classify.py,sha256=E3XV16_Oc5PjBR55b86ammhBXKcIaMO-T3nNDDpeeyE,3758
+styleclass/features.py,sha256=kI4oQPrbtDHWqyMs0aVc4LrJPIAQmRl0lOLlD47frRY,7680
+styleclass/settings.py,sha256=Z3ylIwhye9emKzyR0Zx3RPXiVJIumHXq4Qs3DtxPhJc,2596
+styleclass/train.py,sha256=3TRF3WE_uPznWpgcfhOyB_kDryqTnkq-hBmfcdBZsbg,1575
+styleclass/datasets/test.csv,sha256=IbV84Tjp_ln9LCSXtemI9uVFDOueiS4YEehmfSa2CZQ,19207886
+styleclass/datasets/training.csv,sha256=3vSxoztJL8kipS78bQGoLuu1B0ZLLjmM8TAl6ByjKp0,19174025
+styleclass/models/default.model,sha256=vmdGRXwqp8xiQH7BIedm_b_3RE17y4P-vQ0LLbdW5bw,1497866
+styleclass-0.0.5.data/scripts/styleclass_classify,sha256=h57_3MCXzSnT_a-nPi5WxeuHNzoil3Jb7XP2lw-aOE0,1615
+styleclass-0.0.5.data/scripts/styleclass_evaluate,sha256=USc1R8Wkhefoibwj4p9ykuzank5skO464nRlZDTnqAE,1420
+styleclass-0.0.5.data/scripts/styleclass_generate_dataset,sha256=fEIsk3m-kvtyvknSztKBYeyJ9wsdwxjyEmQr8JkkpXA,1658
+styleclass-0.0.5.data/scripts/styleclass_train_model,sha256=7XrCwuqsBMaJCJASeMJ7t5UNupo9HiYb7WzmBGfBIeU,2349
+styleclass-0.0.5.dist-info/LICENSE,sha256=YvfoZCfZXvL9dYbabGmCPp-gNlO5dyFZ1LvPhKA90Do,1065
+styleclass-0.0.5.dist-info/METADATA,sha256=JulI1yAA7kIdVCxfF2S09Bsgi999LL7VP78uq052E_8,3204
+styleclass-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+styleclass-0.0.5.dist-info/top_level.txt,sha256=-mxfh8oGQBg3cXkLYBhPNEWsWbJOjG7KRlpQ6VbCJW8,11
+styleclass-0.0.5.dist-info/RECORD,,
