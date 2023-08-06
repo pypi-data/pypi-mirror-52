@@ -1,0 +1,10 @@
+scipy
+numpy
+pillow
+pyyaml
+pytest
+wkw==0.0.7
+requests
+black
+cluster_tools==1.39
+natsort
