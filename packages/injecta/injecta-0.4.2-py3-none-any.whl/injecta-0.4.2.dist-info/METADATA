@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: injecta
+Version: 0.4.2
+Summary: Dependency Injection Container Library
+Home-page: https://github.com/DataSentics/injecta
+Author: Jiri Koutny
+Author-email: jiri.koutny@datasentics.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml (==5.*)
+Requires-Dist: python-box (==3.*)
+
+Hello world
+
+
