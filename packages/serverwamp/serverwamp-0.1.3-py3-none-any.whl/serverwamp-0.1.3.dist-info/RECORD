@@ -1,0 +1,15 @@
+serverwamp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serverwamp/helpers.py,sha256=j4ztUdQLUEOAVXqI0Eyx9JRrje284_CTXjU89aA0PaY,545
+serverwamp/protocol.py,sha256=XTYqC9r7w1h8st9yAsH-cR3L0jNBWAEpJew1u3Atr3Y,11247
+serverwamp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serverwamp/rpc.py,sha256=6NdX_uKvlgF1M3M9wZOZdJZgxYjnToe-LENTI9u8uGI,7562
+serverwamp/adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serverwamp/adapters/aiohttp.py,sha256=r8LziA0O6wkgh7JJiWMhy6WkJ8MsCi-Tnngeh02Glbk,3100
+serverwamp/adapters/asgi_asyncio.py,sha256=ZaA6o6VCOT7v_kMh_UDgag1fl6vgZxtV1_4M_uOm538,3169
+serverwamp/adapters/asgi_base.py,sha256=JFNzRM1Uj5Br-UpXRiPHPG2hrPldCKaV_WLgRsrU3ow,1413
+serverwamp/adapters/asgi_trio.py,sha256=amQt3HyxUrBI4fTglHQ_H6pCc4oiqJoOPVHGcP0gTkg,3397
+serverwamp/adapters/base.py,sha256=AFa4qbVs42Xu_f9-4FcAIXRjWve0gltpjwpnTi6AGdo,1928
+serverwamp-0.1.3.dist-info/METADATA,sha256=NPqm9zEnIg-3SxZtZx1BnaonlTu6SxMCn_BHVHVbXaQ,5298
+serverwamp-0.1.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+serverwamp-0.1.3.dist-info/top_level.txt,sha256=oMqtCEomVacFtCt62iNxzKSZDDz3rIAFywFSOZjlGkE,11
+serverwamp-0.1.3.dist-info/RECORD,,
