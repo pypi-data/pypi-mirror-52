@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dl_analytics
+Version: 0.0.3
+Summary: Client to send stats to server
+Home-page: https://github.com/theblackcat102/dl_analytics
+Author: Zhi Rui Tam
+Author-email: ray@currentsapi.services
+License: MIT
+Download-URL: https://github.com/currentsapi-dev/currentsapi-python/archive/master.zip
+Description: # Analytics collector for research purpose
+        
+        A simple analytics client for collecting stats during kfold and hyperparameter search
+        
+        Currently is still a work in progress
+        
+        
+        ```bash
+        pip install dl-analytics
+        ```
+Keywords: tools,wrapper
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
