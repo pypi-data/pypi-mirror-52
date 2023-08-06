@@ -1,0 +1,12 @@
+CHANGES.rst
+HOWTO.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+regtest/__init__.py
+regtest/regtest.py
+regtest.egg-info/PKG-INFO
+regtest.egg-info/SOURCES.txt
+regtest.egg-info/dependency_links.txt
+regtest.egg-info/top_level.txt
