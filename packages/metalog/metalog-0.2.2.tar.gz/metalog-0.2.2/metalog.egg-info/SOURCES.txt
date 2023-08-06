@@ -1,0 +1,9 @@
+README.rst
+setup.py
+metalog/__init__.py
+metalog/metalog.py
+metalog/support_func.py
+metalog.egg-info/PKG-INFO
+metalog.egg-info/SOURCES.txt
+metalog.egg-info/dependency_links.txt
+metalog.egg-info/top_level.txt
