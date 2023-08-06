@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: unicoin
+Version: 1.0.0
+Summary: A small example package
+Home-page: https://vk.com/florydev
+Author: Gennady Shutko
+Author-email: Duzive30@gmail.com
+License: UNKNOWN
+Description: Данная библиотека упростит использование API сервиса UniCoin.
+        Все примеры кода можно посмотреть здесь: https://vk.com/florydev
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
