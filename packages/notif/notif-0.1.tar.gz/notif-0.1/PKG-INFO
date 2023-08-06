@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: notif
+Version: 0.1
+Summary: A package to send notification from a python script.
+Home-page: https://notificationdoc.ca
+Author: David Beauchemin
+Author-email: david.beauchemin.5@ulaval.ca
+License: GPLv3
+Download-URL: https://github.com/davebulaval/notification/archive/v0.1.zip
+Description: # notification
+        [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+        [![Build Status](https://travis-ci.org/GRAAL-Research/poutyne.svg?branch=master)](https://travis-ci.com/davebulaval/notification)
+        
+        A easy to use package to send notification from a python script.
+        
+        Use this package to send during or at the end of a python script a
+            - Slack notification
+            - email notification.
+            
+        Read the documentation at [...](...).
+        
+        ---------
+        
+        ## Installation
+        
+        ```shell script
+        pip install notification
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
+Description-Content-Type: text/markdown
