@@ -1,0 +1,14 @@
+README.md
+setup.py
+stxldriver/__init__.py
+stxldriver/camera.py
+stxldriver/parse.py
+stxldriver.egg-info/PKG-INFO
+stxldriver.egg-info/SOURCES.txt
+stxldriver.egg-info/dependency_links.txt
+stxldriver.egg-info/entry_points.txt
+stxldriver.egg-info/requires.txt
+stxldriver.egg-info/top_level.txt
+stxldriver/scripts/__init__.py
+stxldriver/scripts/calibrate.py
+stxldriver/scripts/stress.py
