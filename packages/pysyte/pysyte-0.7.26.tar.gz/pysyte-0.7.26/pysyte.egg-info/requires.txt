@@ -1,0 +1,10 @@
+inflect
+pprintpp
+path.py==7.7.1
+six
+stackprinter
+pyyaml
+boltons
+
+[testing]
+py.test
