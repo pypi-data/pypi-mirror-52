@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: pyinduct
+Version: 0.5.0rc3
+Summary: Toolbox for control and observer design for infinite dimensional systems.
+Home-page: https://github.com/pyinduct/pyinduct/
+Author: Stefan Ecklebe, Marcus Riesmeier
+Author-email: stefan.ecklebe@tu-dresden.de, marcus.riesmeier@umit.at
+License: BSD 3-Clause License
+Download-URL: https://github.com/pyinduct/pyinduct/releases
+Project-URL: Documentation, https://pyinduct.readthedocs.or
+Project-URL: Source Code, https://github.com/pyinduct/pyinduct/
+Project-URL: Bug Tracker, https://github.com/pyinduct/pyinduct/issues
+Keywords: distributed-parameter-systems control observer simulation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy (>=1.10.2)
+Requires-Dist: scipy (>=0.16.1)
+Requires-Dist: sympy (>=1.0)
+Requires-Dist: wheel (>=0.23.0)
+Requires-Dist: pyqtgraph (>=0.9.10)
+Requires-Dist: PyOpenGL (>=3.1.0)
+Requires-Dist: matplotlib (>=1.5.0)
+Requires-Dist: PyQt5 (>=5.7.0)
+
+PyInduct
+========
+
+.. image:: https://img.shields.io/travis/pyinduct/pyinduct.svg
+    :target: https://travis-ci.org/pyinduct/pyinduct
+
+.. image:: https://readthedocs.org/projects/pyinduct/badge
+    :target: http://pyinduct.rtfd.io
+
+.. image:: https://codecov.io/gh/pyinduct/pyinduct/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/pyinduct/pyinduct
+
+.. image:: https://img.shields.io/pypi/v/pyinduct.svg
+    :target: https://pypi.python.org/pypi/pyinduct
+
+
+PyInduct is a python toolbox for control and observer design for infinite dimensional systems.
+
+* **Documentation**: https://pyinduct.readthedocs.org.
+* **Bug Reports**: https://github.com/pyinduct/pyinduct/issues
+
+PyInduct supports easy simulation of common distributed parameter systems using
+ready-to-go FEM implementations or custom modal approximations.
+With the included eigenfunctions for parabolic problems up to 2nd order or
+case-agnostic Lagrangian polynomials, automated controller and observer
+approximation routines are provided.
+The included visualization methods help verifying the controllers performance.
+
+
