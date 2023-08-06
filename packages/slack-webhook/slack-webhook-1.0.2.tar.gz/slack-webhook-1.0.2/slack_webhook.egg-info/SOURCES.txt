@@ -1,0 +1,8 @@
+README.txt
+setup.py
+slack_webhook/__init__.py
+slack_webhook/slack_webhook.py
+slack_webhook.egg-info/PKG-INFO
+slack_webhook.egg-info/SOURCES.txt
+slack_webhook.egg-info/dependency_links.txt
+slack_webhook.egg-info/top_level.txt
