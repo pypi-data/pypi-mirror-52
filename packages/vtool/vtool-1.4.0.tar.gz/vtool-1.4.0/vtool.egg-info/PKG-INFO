@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: vtool
+Version: 1.4.0
+Summary: tool kampretcode
+Home-page: https://github.com/Vaziria/vtool
+Author: kampretcode
+Author-email: manorder123@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: PDC,KAMPRETCODE,CUSTOMBUILDER,PYTHON,VAZIRIA,PACKAGE
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
