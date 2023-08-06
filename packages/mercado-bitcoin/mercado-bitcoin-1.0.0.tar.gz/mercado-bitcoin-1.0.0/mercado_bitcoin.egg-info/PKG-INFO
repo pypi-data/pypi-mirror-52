@@ -1,0 +1,167 @@
+Metadata-Version: 2.1
+Name: mercado-bitcoin
+Version: 1.0.0
+Summary: API Client in Python for Mercado Bitcoin
+Home-page: https://github.com/mbampi/mercado-bitcoin
+Author: Matheus Dussin Bampi
+Author-email: matheusbampi@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/mbampi/mercado-bitcoin/archive/v1.0.0.tar.gz
+Description: # Mercado Bitcoin API Client for Python
+        
+        API Client in Python for Mercado Bitcoin
+        
+        ## Installation
+        
+        Run the following to install:
+        ```python
+            pip install mercado-bitcoin
+        ```
+        
+        ## Usage
+        
+        ### Data API
+        ```python
+        from mercado_bitcoin import DataAPI
+        import json
+        
+        resp = DataAPI.day_summary('BTC', 2019, 9, 11).json()
+        print(json.dumps(resp, indent=2))
+        ```
+        Response:
+        ```json
+        {
+          "date": "2019-09-11",
+          "opening": 41772.12033,
+          "closing": 41496.86984,
+          "lowest": 41200,
+          "highest": 41955.55,
+          "volume": 11179626.56206287,
+          "quantity": 269.18932163,
+          "amount": 7917,
+          "avg_price": 41530.72081153
+        }
+        ```
+        
+        ### Trade API
+        ```python
+        from mercado_bitcoin import TradeAPI
+        import json
+        
+        TAPI_ID = <your_tapi_id>
+        TAPI_SECRET = <your_tapi_secret>
+        tapi = TradeAPI(TAPI_ID, TAPI_SECRET)
+        
+        info = tapi.get_account_info()
+        print(json.dumps(info, indent=2))
+        ```
+        Response
+        ```json
+        {
+          "response_data": {
+            "balance": {
+              "brl": {
+                "available": "0.00000000",
+                "total": "0.00000000"
+              },
+              "btc": {
+                "available": "0.00000000",
+                "total": "0.00000000",
+                "amount_open_orders": 0
+              },
+              "ltc": {
+                "available": "0.00000000",
+                "total": "0.00000000",
+                "amount_open_orders": 0
+              },
+              "bch": {
+                "available": "0.00000000",
+                "total": "0.00000000",
+                "amount_open_orders": 0
+              },
+              "xrp": {
+                "available": "0.00000000",
+                "total": "0.00000000",
+                "amount_open_orders": 0
+              },
+              "eth": {
+                "available": "0.00000000",
+                "total": "0.00000000",
+                "amount_open_orders": 0
+              }
+            },
+            "withdrawal_limits": {
+              "brl": {
+                "available": "20000.00",
+                "total": "20000.00"
+              },
+              "btc": {
+                "available": "10.00000000",
+                "total": "10.00000000"
+              },
+              "ltc": {
+                "available": "500.00000000",
+                "total": "500.00000000"
+              },
+              "bch": {
+                "available": "25.00000000",
+                "total": "25.00000000"
+              },
+              "xrp": {
+                "available": "20000.00000000",
+                "total": "20000.00000000"
+              },
+              "eth": {
+                "available": "70.00000000",
+                "total": "70.00000000"
+              }
+            }
+          },
+          "status_code": 100,
+          "server_unix_timestamp": "1568299534"
+        }
+        ```
+        
+        ## Data API (API de Dados)
+        
+        O acesso Ã  API de Dados Ã© pÃºblico, nÃ£o Ã© necessÃ¡rio criar uma conta tampouco autenticar.
+        
+        | Method | Description |
+        | ----- | ------------ |
+        | ticker | Retorna informaÃ§Ãµes com o resumo das Ãºltimas 24 horas de negociaÃ§Ãµes. |
+        | orderbook | Livro de ofertas Ã© composto por duas listas: (1) uma lista com as ofertas de compras ordenadas pelo maior valor; (2) uma lista com as ofertas de venda ordenadas pelo menor valor. O livro mostra atÃ© 1000 ofertas de compra e atÃ© 1000 ofertas de venda. Uma oferta Ã© constituÃ­da por uma ou mais ordens, sendo assim, a quantidade da oferta Ã© o resultado da soma das quantidades das ordens de mesmo preÃ§o unitÃ¡rio. Caso uma oferta represente mais de uma ordem, a prioridade de execuÃ§Ã£o se dÃ¡ com base na data de criaÃ§Ã£o da ordem, da mais antiga para a mais nova. |
+        | trades | HistÃ³rico de negociaÃ§Ãµes realizadas. |
+        | day-summary | Retorna resumo diÃ¡rio de negociaÃ§Ãµes realizadas. |
+        
+        ### Trade API (API de Negociacao)
+        
+        - Para utilizar a API de negociaÃ§Ãµes do Mercado Bitcoin sÃ£o necessÃ¡rios: 
+            - Criar uma conta
+            - Gerar o PIN de SeguranÃ§a
+            - Gerar uma chave da API
+            
+         - O acesso Ã  API Ã© limitado por padrÃ£o ao mÃ¡ximo de 60 requisiÃ§Ãµes a cada 60 segundos, por usuÃ¡rio e nÃ£o por chave
+        
+        | Method | Description |
+        | ----- | ------------ |
+        | list_system_messages | MÃ©todo para comunicaÃ§Ã£o de eventos do sistema relativos Ã  TAPÃŒ, entre eles bugs, correÃ§Ãµes, manutenÃ§Ã£o programada e novas funcionalidades e versÃµes. O conteÃºdo muda a medida que os eventos ocorrem. A comunicaÃ§Ã£o externa, feita via Twitter e e-mail aos usuÃ¡rios da TAPI, continuarÃ¡ ocorrendo. Entretanto, essa forma permite ao desenvolvedor tratar as informaÃ§Ãµes juntamente ao seus logs ou atÃ© mesmo automatizar comportamentos. |
+        | get_account_info | Retorna dados da conta, como saldos das moedas (Real, BCash, Bitcoin, Ethereum, Litecoin e XRP), saldos considerando retenÃ§Ã£o em ordens abertas, quantidades de ordens abertas por moeda digital, limites de saque/transferÃªncias das moedas. |
+        | get_order | Retorna os dados da ordem de acordo com o ID informado. Dentre os dados estÃ£o as informaÃ§Ãµes das OperaÃ§Ãµes executadas dessa ordem. Apenas ordens que pertencem ao proprietÃ¡rio da chave da TAPI pode ser consultadas. Erros especÃ­ficos sÃ£o retornados para os casos onde o order_id informado nÃ£o seja de uma ordem vÃ¡lida ou pertenÃ§a a outro usuÃ¡rio. |
+        | list_orders | Retorna uma lista de atÃ© 200 ordens, de acordo com os filtros informados, ordenadas pela data de Ãºltima atualizaÃ§Ã£o. As operaÃ§Ãµes executadas de cada ordem tambÃ©m sÃ£o retornadas. Apenas ordens que pertencem ao proprietÃ¡rio da chave da TAPI sÃ£o retornadas. Caso nenhuma ordem seja encontrada, Ã© retornada uma lista vazia. |
+        | list_orderbook | Retorna informaÃ§Ãµes do livro de negociaÃ§Ãµes (orderbook) do Mercado Bitcoin para o par de moedas (coin_pair) informado. Diferente do mÃ©todo orderbook pÃºblico descrito em /api-doc/#method_trade_api_orderbook, aqui sÃ£o fornecidas informaÃ§Ãµes importantes para facilitar a tomada de aÃ§Ã£o de clientes TAPI e sincronia das chamadas. Dentre elas, o nÃºmero da Ãºltima ordem contemplada (latest_order_id) e nÃºmero das ordens do livro (order_id), descritos abaixo. Importante salientar que nesse mÃ©todo ordens de mesmo preÃ§o nÃ£o sÃ£o agrupadas como feito no mÃ©todo pÃºblico. |
+        | place_buy_order | Abre uma ordem de compra (buy ou bid) do par de moedas, quantidade de moeda digital e preÃ§o unitÃ¡rio limite informados. A criaÃ§Ã£o contempla o processo de confrontamento da ordem com o livro de negociaÃ§Ãµes. Assim, a resposta pode informar se a ordem foi executada (parcialmente ou nÃ£o) imediatamente apÃ³s sua criaÃ§Ã£o e, assim, se segue ou nÃ£o aberta e ativa no livro. |
+        | place_sell_order | Abre uma ordem de venda (sell ou ask) do par de moedas, quantidade de moeda digital e preÃ§o unitÃ¡rio limite informados. A criaÃ§Ã£o contempla o processo de confrontamento da ordem com o livro de negociaÃ§Ãµes. Assim, a resposta pode informar se a ordem foi executada (parcialmente ou nÃ£o) imediatamente apÃ³s sua criaÃ§Ã£o e, assim, se segue ou nÃ£o aberta e ativa no livro. |
+        | place_market_buy_order | Abre uma ordem de compra (buy ou bid) do par de moedas com volume em reais limite informado. A criaÃ§Ã£o contempla o processo de bloqueio do saldo para execuÃ§Ã£o da ordem e confrontamento da ordem com o livro de negociaÃ§Ãµes. Assim, a resposta pode informar se a ordem foi executada (parcialmente ou nÃ£o) imediatamente apÃ³s sua criaÃ§Ã£o. Caso nÃ£o seja possÃ­vel executÃ¡-la totalmente por restriÃ§Ãµes no saldo disponÃ­vel do usuÃ¡rio, o montante nÃ£o executado Ã© cancelado.|
+        | place_market_sell_order | Abre uma ordem de venda (sell ou ask) do par de moeda com quantidade da moeda digital informado. A criaÃ§Ã£o contempla o processo de confrontamento da ordem com o livro de negociaÃ§Ãµes. Assim, a resposta pode informar se a ordem foi executada (parcialmente ou nÃ£o) imediatamente apÃ³s sua criaÃ§Ã£o. |
+        | cancel_order | Cancela uma ordem, de venda ou compra, de acordo com o ID e par de moedas informado. O retorno contempla o sucesso ou nÃ£o do cancelamento, bem como os dados e status atuais da ordem. Somente ordens pertencentes ao prÃ³prio usuÃ¡rio podem ser canceladas. |
+        | get_withdrawal | Retorna os dados de uma transferÃªncia de moeda digital ou de um saque de Real (BRL). |
+        | withdraw_coin | Requisita pedido de transferÃªncia de moeda digital ou saque de Real. Assim, caso o valor de coin seja BRL, entÃ£o realiza um saque para a conta bancÃ¡ria informada. Caso o valor seja uma criptomoeda, realiza uma transaÃ§Ã£o para o endereÃ§o de moeda digital informado. |
+Keywords: bitcoin,trade,data,finance
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
