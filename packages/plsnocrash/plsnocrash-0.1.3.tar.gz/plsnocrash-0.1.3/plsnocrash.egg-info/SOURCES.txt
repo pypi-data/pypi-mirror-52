@@ -1,0 +1,10 @@
+README.md
+setup.py
+plsnocrash/__init__.py
+plsnocrash/plsnocrash.py
+plsnocrash.egg-info/PKG-INFO
+plsnocrash.egg-info/SOURCES.txt
+plsnocrash.egg-info/dependency_links.txt
+plsnocrash.egg-info/top_level.txt
+test/test_let_me_try.py
+test/test_retry.py
