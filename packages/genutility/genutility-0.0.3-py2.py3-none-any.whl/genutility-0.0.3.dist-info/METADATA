@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: genutility
+Version: 0.0.3
+Summary: A collection of various Python utilities
+Home-page: https://github.com/Dobatymo/genutility
+Author: Dobatymo
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Provides-Extra: tls
+Provides-Extra: ALL
+Provides-Extra: pdf
+Provides-Extra: toml
+Provides-Extra: gensim
+Requires-Dist: future
+Requires-Dist: mock; python_version < "3.3"
+Requires-Dist: contextlib2; python_version < "3.3"
+Requires-Dist: pathlib; python_version < "3.4"
+Requires-Dist: typing; python_version < "3.5"
+Requires-Dist: scandir; python_version < "3.5"
+Provides-Extra: ALL
+Requires-Dist: aiohttp; extra == 'ALL'
+Requires-Dist: bencode.py; extra == 'ALL'
+Requires-Dist: ctypes-windows-sdk; extra == 'ALL'
+Requires-Dist: flask; extra == 'ALL'
+Requires-Dist: gensim; extra == 'ALL'
+Requires-Dist: netifaces; extra == 'ALL'
+Requires-Dist: nltk; extra == 'ALL'
+Requires-Dist: orderedset; extra == 'ALL'
+Requires-Dist: pycryptodome; extra == 'ALL'
+Requires-Dist: pyOpenSSL; extra == 'ALL'
+Requires-Dist: PyPDF2; extra == 'ALL'
+Requires-Dist: pypiwin32; extra == 'ALL'
+Requires-Dist: rhash; extra == 'ALL'
+Requires-Dist: toml; extra == 'ALL'
+Requires-Dist: unidecode; extra == 'ALL'
+Requires-Dist: werkzeug; extra == 'ALL'
+Requires-Dist: wmi; extra == 'ALL'
+Requires-Dist: wx; extra == 'ALL'
+Provides-Extra: gensim
+Requires-Dist: gensim (>=3.3.0); extra == 'gensim'
+Requires-Dist: numpy; extra == 'gensim'
+Provides-Extra: pdf
+Requires-Dist: PyPDF2; extra == 'pdf'
+Provides-Extra: tls
+Requires-Dist: pycryptodome; extra == 'tls'
+Requires-Dist: pyOpenSSL; extra == 'tls'
+Provides-Extra: toml
+Requires-Dist: toml; extra == 'toml'
+
+# genutility
+
+A collection of various Python utilities.
+
+
