@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: kenobi
+Version: 1.2.2
+Summary: document based database using pickle
+Home-page: http://patx.github.io/kenobi
+Author: Harrison Erd
+Author-email: erdh@mail.broward.edu
+License: three-clause BSD
+Description: 
+        KenobiDB is a stupid and small document based DB, supporting very simple
+        usage including insertion, removal and basic search. It useses pickle.
+        Written by Harrison Erd (https://patx.github.io/)
+        Website: https://patx.github.io/kenobi/
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
