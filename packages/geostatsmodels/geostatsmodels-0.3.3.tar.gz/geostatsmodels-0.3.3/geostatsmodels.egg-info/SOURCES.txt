@@ -1,0 +1,14 @@
+README.md
+setup.py
+geostatsmodels/__init__.py
+geostatsmodels/geoplot.py
+geostatsmodels/kriging.py
+geostatsmodels/model.py
+geostatsmodels/simulation.py
+geostatsmodels/utilities.py
+geostatsmodels/variograms.py
+geostatsmodels/zscoretrans.py
+geostatsmodels.egg-info/PKG-INFO
+geostatsmodels.egg-info/SOURCES.txt
+geostatsmodels.egg-info/dependency_links.txt
+geostatsmodels.egg-info/top_level.txt
