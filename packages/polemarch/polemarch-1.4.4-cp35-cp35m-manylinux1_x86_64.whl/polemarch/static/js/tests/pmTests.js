@@ -1,0 +1,10 @@
+class PmGuiTests extends GuiTests{importInventoryFromListView(path,instances_info,options){options.action='import_inventory';options.is_valid=true;options.data={name:{value:"test-imported-inventory",},raw_data:{value:"[test-imported-group]\n"+
+"test-imported-host ansible_host=10.10.10.10\n"+
+"\n"+
+"[test-imported-group:vars]\n"+
+"ansible_user=ubuntu\n"+
+"ansible_ssh_private_key_file=example-key",},};this.executeActionFromSomeView(path,instances_info,options,(assert)=>{this.saveInstanceData(instances_info,false,'imported_');});['group','host'].forEach(entity=>{this.clickAndWaitRedirect(".btn-sublink-"+entity,true,(assert)=>{assert.ok($('.item-row').length==1,'Import inventory - only one '+entity+' was added');});this.clickAndWaitRedirect(".item-row",true,(assert)=>{this.saveInstanceData(instances_info,false,'imported_');});this.clickAndWaitRedirect(".btn-sublink-variables",true,(assert)=>{let num=entity=='group'?2:1;assert.ok($('.item-row').length==num,'Import inventory - valid variables amount was added to '+entity);});if(options.remove){this.clickAndWaitRedirect(".btn-previous-page",true);this.clickAndWaitRedirect(".btn-operation-remove",true);this.testRemovePageViewInstance("/"+entity+"/{imported_"+entity+"_id}/",instances_info,true);}
+this.openPage(path+"{imported_inventory_id}/",instances_info.url_params,true);});if(options.remove){this.clickAndWaitRedirect(".btn-operation-remove",true);}}
+testProjectSyncFromPageView(path,instances_info,expectation=true){guiTests.openPage(path,instances_info.url_params,true);guiTests.click(".btn-action-sync");syncQUnit.addTest("wait project sync",function(assert){let done=assert.async();let stillWait=()=>{let url=app.application.$route.path.replace(/^\/|\/$/g,"");let data=app.application.$store.state.objects[url].cache.data;if(["NEW","SYNC","WAIT_SYNC"].includes(data.status)){return true;}
+return data.status;};let waitStatus=()=>{setTimeout(()=>{let wait=stillWait();if(typeof wait=='boolean'&&wait===true){waitStatus();}else{assert.ok((wait=='OK')===expectation,'Sync was successful');testdone(done);}},guiLocalSettings.get('page_update_interval')/2);};waitStatus();});}}
+guiTests=new PmGuiTests();
