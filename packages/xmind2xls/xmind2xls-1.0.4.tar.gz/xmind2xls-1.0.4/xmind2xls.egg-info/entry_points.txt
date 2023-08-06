@@ -1,0 +1,3 @@
+[console_scripts]
+xmind2xls = xmind2xls.cli:cli_main
+
