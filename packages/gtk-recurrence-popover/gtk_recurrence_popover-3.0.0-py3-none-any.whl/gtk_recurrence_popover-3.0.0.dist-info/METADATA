@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gtk-recurrence-popover
+Version: 3.0.0
+Summary: A Gtk Popover for todo apps that allows you to select recurrence settings
+License: GPL-3.0+
+Author: BeatLink
+Author-email: beatlink@protonmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pygobject (>=3.32.2,<4.0.0)
+Requires-Dist: task-recurrence (>=1.0.0,<2.0.0)
