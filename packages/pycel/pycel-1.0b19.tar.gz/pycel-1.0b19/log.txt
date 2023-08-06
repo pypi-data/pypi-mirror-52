@@ -1,0 +1,5 @@
+    Implement CEILING_MATH, CEILING_PRECISION, FLOOR_MATH & FLOOR_PRECISION
+    Implement FACT & FACTDOUBLE
+    Fix evaluation with unbounded range
+    Implement AVERAGEIF, MAXIFS, MINIFS & fix bugs w/ single cells for xIFS
+    Implement ODD, EVEN, ISODD, ISEVEN, SIGN
