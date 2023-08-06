@@ -1,0 +1,3 @@
+[console_scripts]
+agviz = auto_graph_visualizer.core:main
+
