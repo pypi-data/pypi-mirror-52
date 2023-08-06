@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+update_repo/__init__.py
+update_repo/update_repo.py
+update_repo.egg-info/PKG-INFO
+update_repo.egg-info/SOURCES.txt
+update_repo.egg-info/dependency_links.txt
+update_repo.egg-info/top_level.txt
