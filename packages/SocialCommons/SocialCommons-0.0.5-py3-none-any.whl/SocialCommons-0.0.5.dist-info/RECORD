@@ -1,0 +1,16 @@
+socialcommons/__init__.py,sha256=zNiMGaIqDWsEdsDEw_gVolxuhfieeYG_nf7khBQY-pQ,286
+socialcommons/browser.py,sha256=K7QoCO-s37jSQ1ydKg_OJZLkQ9MUq2N2vhUjAOsG42A,8244
+socialcommons/clarifai_util.py,sha256=SuHVO5pv8g6uT9rqrsxeHHpBwCw2AjFoSPcnFIDZ_Dk,9075
+socialcommons/database_engine.py,sha256=zfpoMVhNUOe3bXvSq3W4LQkMy48dhFvQa4qUXSt3sQM,4887
+socialcommons/exceptions.py,sha256=79Dqy9XlxmyV_cyofaC9aVE4zN8Kp2UBB9yRXz3kgYc,110
+socialcommons/file_manager.py,sha256=2Yv2q-ipmZ4unj4VmI0S3prE_wo9wkyYL_28uHYFM5g,7833
+socialcommons/print_log_writer.py,sha256=qFGsD4AgIVfUPM9HdGRLi6wE2JBhZpyV96z4kzC_30E,6411
+socialcommons/quota_supervisor.py,sha256=xB1e1OCRz94IZMjJhbL6LmIohtXNJsQI_qm1aIeahv0,14380
+socialcommons/text_analytics.py,sha256=V3gW3Dh0YVttGvBWLI3P1DOpsSauNhVN-weBXJ5hMi0,20038
+socialcommons/time_util.py,sha256=iAHtvqVvcbB_Zg7kf2oLbXEOtvoR7oO8TtiRRmHsMA8,1535
+socialcommons/util.py,sha256=IwH9cCQtE7q5wzL4wYya3JqqwDtIYq2OXwC4G3Xs6p4,71774
+SocialCommons-0.0.5.dist-info/LICENSE.txt,sha256=9eXAg794OwBKiRz5NRt52VU26HT8jeJEE9MuxXgmm9g,35119
+SocialCommons-0.0.5.dist-info/METADATA,sha256=AFICY7T_h67UhuDR27ruTTkxbDmOStP06VKq2ZewrYI,3602
+SocialCommons-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+SocialCommons-0.0.5.dist-info/top_level.txt,sha256=gaekAMZX3Yt2vMkVypKQap6Orys1PXUgSQha8hU6VHY,14
+SocialCommons-0.0.5.dist-info/RECORD,,
