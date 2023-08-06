@@ -1,0 +1,11 @@
+setup.py
+artfullylondon/ingestschema/__init__.py
+artfullylondon/ingestschema/basic-types.json
+artfullylondon/ingestschema/feed-error.json
+artfullylondon/ingestschema/feed-event.json
+artfullylondon/ingestschema/feed-venue.json
+artfullylondon_ingestschema.egg-info/PKG-INFO
+artfullylondon_ingestschema.egg-info/SOURCES.txt
+artfullylondon_ingestschema.egg-info/dependency_links.txt
+artfullylondon_ingestschema.egg-info/not-zip-safe
+artfullylondon_ingestschema.egg-info/top_level.txt
