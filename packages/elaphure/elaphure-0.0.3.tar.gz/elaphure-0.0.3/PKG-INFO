@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: elaphure
+Version: 0.0.3
+Summary: a static site generator
+Home-page: https://github.com/bhuztez/elaphure
+Author: bhuztez
+Author-email: bhuztez@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3 :: Only
+Provides-Extra: gh-pages
+Provides-Extra: markdown

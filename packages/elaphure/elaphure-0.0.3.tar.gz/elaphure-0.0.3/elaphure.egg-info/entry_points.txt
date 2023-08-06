@@ -1,0 +1,11 @@
+[elaphure_readers]
+markdown = elaphure.readers.markdown:MarkdownReader
+
+[elaphure_sources]
+fs = elaphure.sources.fs:FileSystemSource
+
+[elaphure_writers]
+dry-run = elaphure.writers.dry_run:DryRunWriter
+fs = elaphure.writers.fs:FileSystemWriter
+gh-pages = elaphure.writers.gh_pages:GitHubPagesWriter
+
