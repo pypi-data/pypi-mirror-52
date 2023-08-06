@@ -1,0 +1,11 @@
+# Single files or matchable globs
+include requirements.txt
+include entrypoints.txt
+include LICENSE
+include vsh/vendored/*.rst
+
+# Folders
+graft vsh
+graft requirements
+
+global-exclude *.py[co]
