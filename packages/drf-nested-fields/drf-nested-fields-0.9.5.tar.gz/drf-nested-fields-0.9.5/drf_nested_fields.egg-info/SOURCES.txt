@@ -1,0 +1,11 @@
+README.md
+setup.py
+drf_nested_fields/__init__.py
+drf_nested_fields/serializers.py
+drf_nested_fields/views.py
+drf_nested_fields.egg-info/PKG-INFO
+drf_nested_fields.egg-info/SOURCES.txt
+drf_nested_fields.egg-info/dependency_links.txt
+drf_nested_fields.egg-info/not-zip-safe
+drf_nested_fields.egg-info/requires.txt
+drf_nested_fields.egg-info/top_level.txt
