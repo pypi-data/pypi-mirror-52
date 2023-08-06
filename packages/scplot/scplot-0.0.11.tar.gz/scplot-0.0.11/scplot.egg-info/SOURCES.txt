@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+scplot/__init__.py
+scplot/plot.py
+scplot.egg-info/PKG-INFO
+scplot.egg-info/SOURCES.txt
+scplot.egg-info/dependency_links.txt
+scplot.egg-info/not-zip-safe
+scplot.egg-info/requires.txt
+scplot.egg-info/top_level.txt
