@@ -1,0 +1,10 @@
+vcfparser/__init__.py,sha256=Yl_skgUuFiGc7fv1sXoNQbOtOzGbOjtY8jzhiAtaMVU,85
+vcfparser/meta_header_parser.py,sha256=6rRZVeC75-x3Z5ReJuin3moUb6HAR1dp-rG0Ihn5M4w,4508
+vcfparser/record_parser.py,sha256=QDW5IrRejw1FdxvlzgcXLEvgBk7z_o0qRE08JnHKBnQ,15829
+vcfparser/vcf_parser.py,sha256=qFgG3XQHsoPGXIbl8plUMmeBpDl3HC_bGkhiR8j6hPM,2400
+vcfparser/vcf_writer.py,sha256=vWV7EQOQ2bv3iCDOpkSfiQY-X2_S30fxhaAG5RhWHpE,1684
+vcfparser-0.1.7.dist-info/LICENSE,sha256=2PxtnOT8P-m68necp0VwlRGl3v6Ri3fG8jF09frzCZY,1072
+vcfparser-0.1.7.dist-info/METADATA,sha256=QW3N6liaxtb4KO4WZMGvVBl7G4Z_MyQRjoU0d-uLpHQ,4570
+vcfparser-0.1.7.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+vcfparser-0.1.7.dist-info/top_level.txt,sha256=miswT_B9flbwSgKnoYKiyDFVEz3fVYp-YFTBJ0tPI8Y,10
+vcfparser-0.1.7.dist-info/RECORD,,
