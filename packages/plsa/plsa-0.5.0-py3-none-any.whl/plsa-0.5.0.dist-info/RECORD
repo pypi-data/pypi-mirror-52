@@ -1,0 +1,15 @@
+plsa/__init__.py,sha256=bHn1mY1_pWZDVK7hDFfLROouD-NpunKIp1O_8riyock,676
+plsa/corpus.py,sha256=M32ZZd1J3Bl9Jj55ekQkouri6X5SEHIV4wcY6T23ogI,10579
+plsa/pipeline.py,sha256=RMIy2WvEAvKBBpjblLm6Q6ItFDpB-8iEzmaVDSVOQKQ,2838
+plsa/preprocessors.py,sha256=U_GKBqB8zVw5yOMoXtNrQbwbevKdVObrtG07U-J_1VI,12131
+plsa/visualize.py,sha256=5f0FjWBxOkj1wRQmUZ4ZB2k1c8v4RwpARmoGQJktWJI,5746
+plsa/algorithms/__init__.py,sha256=ZWX-ZnuUqka_BRbYT5UEwttjW6iR_XYkblhOz9I6KIw,100
+plsa/algorithms/base.py,sha256=375tlNB6pVCmrNu6M4ANqtaj9lR9u3St1I7opfLkgfs,7181
+plsa/algorithms/conditional_plsa.py,sha256=obzTlsiP1GBQI78zi57y5eZIechj3tl5Dyb4_bEedkQ,2915
+plsa/algorithms/plsa.py,sha256=pj7ynoxkVZeEfgo5Vg-Tm3yXM9ir3oGx6C0EIkHJuiA,2859
+plsa/algorithms/result.py,sha256=QNizVP7LXy98YOXa9ptzcYIHi-SKYYhhHp4AOz8kpIE,6388
+plsa-0.5.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+plsa-0.5.0.dist-info/METADATA,sha256=7EzDBJsukc4x5OQOnJLRVZJyFOjweRJfRVuN_ksV1wU,5307
+plsa-0.5.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+plsa-0.5.0.dist-info/top_level.txt,sha256=M5KzWDVAhU7W0WPPni2i-TcUplimujc5r2BePleIs8A,5
+plsa-0.5.0.dist-info/RECORD,,
