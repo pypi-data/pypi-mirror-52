@@ -1,0 +1,34 @@
+language: python
+sudo: required
+addons:
+  apt:
+    sources:
+      - deadsnakes
+    packages:
+      - python3.5
+services:
+- docker
+python:
+- 3.6
+- 3.5
+- 3.4
+- 2.7
+install:
+- pip install pipenv
+- pipenv install --dev
+- make api
+script:
+- pipenv run pytest --cov=api
+- pipenv run coveralls
+after_success:
+- make deploy_pypi
+deploy:
+  provider: releases
+  api_key:
+    secure: BrAbLum+kWmvgOG7s7A4l7qpzt0CoVhsWT6peciMGt9nuzA1qQAxrv8v1vgeKNJT1owkTg8kKz8suSnmUX1LgqZeAemsC+1Lb+4/GoyUcQqxYQQqkYyajIkYny+NbF+nw5KbZUTAxvOC+ndnH1+djZzCHl9BKgR6v7Dc5Ak4bemDtStXWD8cGXZqYoXItXM28c/6fOJqaU1QRKM+giDA3V2hpLrFBmLk9Y7mUH9fugwgF23+VZKoDixyslCYddoSKgK23XunsHLXM8Bvwg/oZqie3hfpRl9k6QZuJ6QFUH919BgFXFX5+to0LEiAaQXU4Kfv0828b4kzHNwskVJJD0XgNIVBIFmKdWYcafSVcqErgjBvxSBt2QB+RGnjppD05aF2+5Hdry/q+Hwa67M5eOaSUqCTt7lYhMsKQSLRm8Ykkqq9t/7rscBaY5HoGzUUeFDh/GebjJ3XFOi5pgvv176GQ3+bM/Au8b/wZFxOkhnaI1YaCxSUduWjKTso+71xl4IZUYxU1PbNAa44Cw1R1FbXele4HDlc2qGs8nPouHfreaUa5pWwt021+1XNpHrggegHLuGemsJZVar1f7iNZbF7D3QEk3cKUP+K58o3/0lBVKmRa6lNu7BwoJwl/TaGC177DNnSV0RPUGlSm5PGCmhI3WTerLbpZAhJoVLreiI=
+  file_glob: true
+  file:
+    - dist/*
+  on:
+    repo: rienafairefr/pyynab
+    tags: true
