@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: useful-decoration
+Version: 1.0.6
+Summary: 测试发布包功能
+Home-page: https://github.com/changyubiao
+Author: frank
+Author-email: frank.chang@lexisnexis.com
+License: Apache License 2.0
+Description: ## useful-decoration 
+        
+        ### 标题 
+        
+        > 这是一个测试包发布的流程，里面写了一个类装饰器 . 
+Platform: UNKNOWN
+Requires-Python: >=3.6
