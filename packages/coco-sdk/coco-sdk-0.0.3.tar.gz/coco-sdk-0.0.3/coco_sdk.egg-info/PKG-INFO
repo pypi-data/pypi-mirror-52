@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: coco-sdk
+Version: 0.0.3
+Summary: CoCo(Conversational Components) SDK for building modular chatbots
+Home-page: https://github.com/conversationalcomponents/coco-sdk-py
+Author: Chen Buskilla
+Author-email: chen@buskilla.com
+License: MIT
+Description: # CoCo (Conversational Components) SDK
+        
+        https://www.conversationalcomponents.com
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
