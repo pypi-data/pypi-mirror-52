@@ -1,0 +1,19 @@
+[
+    {
+        "model": "coopstarter_data.mentor",
+        "pk": 1,
+        "fields": {
+            "phone": "06355156464",
+            "headline": "Lead Developer and partner",
+            "biography": "Sofware engineer aiming to implement the web we want !",
+            "skills": "Design patterns, JavaScript and a few different languages.",
+            "linkedin": "https://www.linkedin.com/in/benoitalessandroni/",
+            "twitter": "https://twitter.com/balessan",
+            "organisation": 3,
+            "user": 1,
+            "languages": [
+                1
+            ]
+        }
+    }
+]
