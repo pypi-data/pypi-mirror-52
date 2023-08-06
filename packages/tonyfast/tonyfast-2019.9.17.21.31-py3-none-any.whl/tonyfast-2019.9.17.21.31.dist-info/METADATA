@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: tonyfast
+Version: 2019.9.17.21.31
+Summary: UNKNOWN
+Home-page: https://github.com/tonyfast/gists
+Author: tonyfast
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Requires-Dist: wheel
+Requires-Dist: importnb
+Requires-Dist: notebook
+Requires-Dist: networkx
+Requires-Dist: rdflib
+Requires-Dist: requests
+Requires-Dist: nbconvert
+Requires-Dist: pandas
+Requires-Dist: jsonpointer
+Requires-Dist: nbval
+Requires-Dist: requests-cache
+Requires-Dist: pytest
+Requires-Dist: rdflib-jsonld
+Requires-Dist: nbsphinx
+Requires-Dist: matplotlib
+Requires-Dist: rfc3986
+Requires-Dist: isort
+Requires-Dist: nest-asyncio
+Requires-Dist: idna
+Requires-Dist: pyld
+Requires-Dist: rfc3987
+Requires-Dist: hvplot
+Requires-Dist: webcolors
+Requires-Dist: strict-rfc3339
+Requires-Dist: jsonschema
+Requires-Dist: pyyaml
+Requires-Dist: toolz
+Requires-Dist: black
+
+UNKNOWN
+
+
