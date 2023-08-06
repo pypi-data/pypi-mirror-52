@@ -1,0 +1,5 @@
+[console_scripts]
+balto=balto.cli:main
+balto-curses=balto.interfaces.curses:main
+balto-server=balto.new_server:main
+
