@@ -1,0 +1,11 @@
+arangopipe/__init__.py,sha256=WtsSjLdrd2WG_JCWmsNZx2MbgZFZ4YauEOwV8S-qaB8,74
+arangopipe/arangopipe_admin_api.py,sha256=Hxa8dD5cXS7pwwNrv3fR2Kq_NbW5NEgzdr-rx46Eihs,12378
+arangopipe/arangopipe_api.py,sha256=a0_ZihRkuMcAL5tt39PJcP5W1UzZsRU9mOG8qFYSIg4,16034
+arangopipe/arangopipe_config.py,sha256=W2Y_X-WrTA1z8EbLCTKor1pir8Q5M_jxnRj_3pSjxoM,1284
+arangopipe/arangopipe_config.yaml,sha256=w5GWmgfwOo84roMnXQFZP035hJIMLhma0e3n6OEfqJc,247
+arangopipe/dataset_shift_detector.py,sha256=SArft_lOumT5u6Y3OSXY4iFmmXcN0wxx-_UZ3SHFj8Y,308
+arangopipe/rf_dataset_shift_detector.py,sha256=Rq6ioPnEFabhfwkyrRb38JeCVrMMWPczL_6_ZiYMcRo,1035
+arangopipe-0.0.40.dist-info/METADATA,sha256=3pThDEXc_8EXXddfxObH3I-Uoo1nikjo-WQwcRp3ZOU,11664
+arangopipe-0.0.40.dist-info/RECORD,,
+arangopipe-0.0.40.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+arangopipe-0.0.40.dist-info/top_level.txt,sha256=SCwqGJytU-i0adn7nDEt7IYpw0ic_dsAzywAsGUV3Pg,11
