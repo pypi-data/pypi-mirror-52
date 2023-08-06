@@ -1,0 +1,9 @@
+MANIFEST.in
+README-Pypi.md
+README.md
+setup.py
+accessibility_toolbar/__init__.py
+accessibility_toolbar.egg-info/PKG-INFO
+accessibility_toolbar.egg-info/SOURCES.txt
+accessibility_toolbar.egg-info/dependency_links.txt
+accessibility_toolbar.egg-info/top_level.txt
