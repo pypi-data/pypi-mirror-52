@@ -1,0 +1,12 @@
+README.md
+setup.py
+brainduck/__init__.py
+brainduck/brainduck.py
+brainduck.egg-info/PKG-INFO
+brainduck.egg-info/SOURCES.txt
+brainduck.egg-info/dependency_links.txt
+brainduck.egg-info/top_level.txt
+sample/__init__.py
+sample/sample.py
+test/__init__.py
+test/brainduck.py
