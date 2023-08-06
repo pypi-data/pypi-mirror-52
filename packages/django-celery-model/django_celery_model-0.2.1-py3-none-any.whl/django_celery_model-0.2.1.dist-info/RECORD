@@ -1,0 +1,13 @@
+djcelery_model/__init__.py,sha256=hXCVZuicSCtTTkOu8m2Ya6Ze7DXIz9QuhQLO2VQ_WBI,821
+djcelery_model/models.py,sha256=Bvd1nXyhAw7TUf8Fl0HEQnf2AfFeHJvUIAogUL94fHE,8197
+djcelery_model/migrations/0001_initial.py,sha256=_1LKiVS7Tx4IkXfiQoHtMJNXlX5syC7lm49LX4rLSJ4,951
+djcelery_model/migrations/0002_auto_20190125_1008.py,sha256=MeKuMqbL-sAjqsZ8P8_S9qALLQ-juMRPJjeoIMtkfWU,979
+djcelery_model/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djcelery_model/south_migrations/0001_initial.py,sha256=X8MLJ0tEPhME-VWFj4wmB1iOmuuxy2RQLc5pJsn-nEs,2026
+djcelery_model/south_migrations/0002_auto__add_field_modeltaskmeta_state.py,sha256=--27Dwdb6mb1ALlsyUpsmUykmRAqBwizZbXnFtDn02Y,1807
+djcelery_model/south_migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_celery_model-0.2.1.dist-info/COPYING,sha256=jR3kAWKk_8tuEB1bqSFTViLT4VGzPlkrWlCqblUwXtg,1086
+django_celery_model-0.2.1.dist-info/METADATA,sha256=Nd1JbZdJpdCPeit8K8lMw5tjnCtug2LKd8cGEA96y68,3569
+django_celery_model-0.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+django_celery_model-0.2.1.dist-info/top_level.txt,sha256=wgHzvnpUbuTFurtvGgOBdJkNG5FQ-CsMAGRutwY9drA,15
+django_celery_model-0.2.1.dist-info/RECORD,,
