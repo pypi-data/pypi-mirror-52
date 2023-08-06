@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Qahirah
+Version: 1.0
+Summary: language bindings for the Cairo graphics library, for Python 3.3 or later
+Home-page: https://github.com/ldo/qahirah
+Author: Lawrence D'Oliveiro
+Author-email: ldo@geek-central.gen.nz
+License: UNKNOWN
+Platform: Linux
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Multimedia :: Graphics
+
+UNKNOWN
+
+
