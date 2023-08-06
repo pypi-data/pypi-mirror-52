@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ShellyPy/__init__.py
+ShellyPy/error.py
+ShellyPy/wrapper.py
+ShellyPy.egg-info/PKG-INFO
+ShellyPy.egg-info/SOURCES.txt
+ShellyPy.egg-info/dependency_links.txt
+ShellyPy.egg-info/requires.txt
+ShellyPy.egg-info/top_level.txt
