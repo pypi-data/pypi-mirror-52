@@ -1,0 +1,683 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schemas.artfully.london/v1/feed-event.json",
+    "type": "object",
+    "definitions": {
+        "age": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 99
+        },
+        "date": {
+            "type": "string",
+            "pattern": "^[012]\\d\\d\\d-[01]\\d-[0123]\\d$"
+        },
+        "time": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0123]):[012345]\\d$"
+        },
+        "money": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999
+        },
+        "day": {
+            "type": "string",
+            "enum": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ]
+        },
+        "datePreset": {
+            "type": "string",
+            "enum": [
+                "ChristmasEve"
+            ]
+        },
+        "openingOrClosureRuleType": {
+            "type": "string",
+            "enum": [
+                "Day",
+                "Date",
+                "Preset"
+            ]
+        }
+    },
+    "properties": {
+        "entity": {
+            "title": "Entity",
+            "description": "Event entity type",
+            "const": "event"
+        },
+        "venueId": {
+            "title": "Venue ID",
+            "description": "ID of the venue",
+            "type": "string",
+            "minLength": 1
+        },
+        "venueEntityId": {
+            "title": "Venue Entity ID",
+            "description": "Venue-unique ID of the entity",
+            "type": "string",
+            "minLength": 1
+        },
+        "eventType": {
+            "title": "Event Type",
+            "description": "Type of the event",
+            "type": "string",
+            "enum": [
+                "Exhibition",
+                "Performance"
+            ]
+        },
+        "url": {
+            "title": "URL",
+            "type": "string",
+            "format": "uri",
+            "description": "URL of the entity"
+        },
+        "title": {
+            "title": "Title",
+            "description": "Title of the event",
+            "type": "string",
+            "minLength": 1
+        },
+        "summary": {
+            "title": "Summary",
+            "description": "Summary text of the event",
+            "type": "string",
+            "minLength": 1
+        },
+        "ageDetails": {
+            "type": "object",
+            "properties": {
+                "minAge": {
+                    "title": "Minimum Age",
+                    "description": "Minimum recommended age for the event",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/age"
+                        }
+                    ]
+                },
+                "maxAge": {
+                    "title": "Maximum Age",
+                    "description": "Maximum recommended age for the event (excluding guardians)",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/age"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "minAge",
+                "maxAge"
+            ]
+        },
+        "costDetails": {
+            "type": "object",
+            "oneOf": [
+                {
+                    "properties": {
+                        "type": {
+                            "title": "Cost Type",
+                            "description": "Cost type of the event",
+                            "const": "Free"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "type": {
+                            "title": "Cost Type",
+                            "description": "Cost type of the event",
+                            "const": "Unknown"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "type": {
+                            "title": "Cost Type",
+                            "description": "Cost type of the event",
+                            "const": "Paid"
+                        },
+                        "minCost": {
+                            "title": "Minimum Cost",
+                            "description": "Minimum cost for the event",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/money"
+                                }
+                            ]
+                        },
+                        "maxCost": {
+                            "title": "Maximum Cost",
+                            "description": "Maximum cost for the event",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/money"
+                                }
+                            ]
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            ],
+            "required": [
+                "type"
+            ]
+        },
+        "bookingDetails": {
+            "type": "object",
+            "oneOf": [
+                {
+                    "properties": {
+                        "type": {
+                            "title": "Booking Type",
+                            "description": "Booking type of the event",
+                            "type": "string",
+                            "enum": [
+                                "NotRequired",
+                                "Unknown"
+                            ]
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "type"
+                    ]
+                },
+                {
+                    "properties": {
+                        "type": {
+                            "title": "Booking Type",
+                            "description": "Booking type of the event",
+                            "const": "Required"
+                        },
+                        "dateBookingOpens": {
+                            "title": "Date Booking Opens",
+                            "description": "Date that booking opens for the event",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/date"
+                                }
+                            ]
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "type"
+                    ]
+                }
+            ]
+        },
+        "performanceDetails": {
+            "type": "object",
+            "properties": {
+                "isWorkshop": {
+                    "title": "Is Workshop",
+                    "description": "If the event is a workshop",
+                    "type": "boolean"
+                },
+                "performances": {
+                    "title": "Performances",
+                    "description": "Performances of the event",
+                    "type": "array",
+                    "items": {
+                        "title": "Performance",
+                        "description": "Performance of the event",
+                        "type": "object",
+                        "properties": {
+                            "date": {
+                                "title": "Performance Date",
+                                "description": "Date of the performance",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/date"
+                                    }
+                                ]
+                            },
+                            "time": {
+                                "title": "Performance Time",
+                                "description": "Time of the performance",
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/time"
+                                    }
+                                ]
+                            },
+                            "isSoldOut": {
+                                "title": "Is Performance Sold Out",
+                                "description": "If the performance is sold out",
+                                "type": "boolean"
+                            },
+                            "isCancelled": {
+                                "title": "Is Performance Cancelled",
+                                "description": "If the performance is cancelled",
+                                "type": "boolean"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "date",
+                            "time",
+                            "isSoldOut",
+                            "isCancelled"
+                        ]
+                    },
+                    "minItems": 1
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "isWorkshop"
+            ]
+        },
+        "exhibitionDetails": {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "dateFrom": {
+                            "title": "Date From",
+                            "description": "Date the exhibition starts (inclusive)",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/date"
+                                }
+                            ]
+                        },
+                        "dateTo": {
+                            "title": "Date To",
+                            "description": "Date the exhibition ends (inclusive)",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/date"
+                                }
+                            ]
+                        },
+                        "useVenueOpeningTimes": {
+                            "title": "Use Venue Opening Times",
+                            "description": "If the exhibition uses the venue's opening times",
+                            "const": true
+                        },
+                        "hasTimedEntry": {
+                            "title": "Has Timed Entry",
+                            "description": "If the exhibition has timed entry",
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                        "dateFrom",
+                        "dateTo",
+                        "useVenueOpeningTimes",
+                        "hasTimedEntry"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "dateFrom": {
+                            "title": "Date From",
+                            "description": "Date the exhibition starts (inclusive)",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/date"
+                                }
+                            ]
+                        },
+                        "dateTo": {
+                            "title": "Date To",
+                            "description": "Date the exhibition ends (inclusive)",
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/date"
+                                }
+                            ]
+                        },
+                        "useVenueOpeningTimes": {
+                            "title": "Use Venue Opening Times",
+                            "description": "If the exhibition uses the venue's opening times",
+                            "const": false
+                        },
+                        "hasTimedEntry": {
+                            "title": "Has Timed Entry",
+                            "description": "If the exhibition has timed entry",
+                            "type": "boolean"
+                        },
+                        "openingRules": {
+                            "title": "Opening Rules",
+                            "type": "array",
+                            "items": {
+                                "title": "Opening Rule",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "title": "Rule Type",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/definitions/openingOrClosureRuleType"
+                                            }
+                                        ]
+                                    },
+                                    "dateForType": {
+                                        "title": "Date Value for Rule Type"
+                                    },
+                                    "timeFrom": {
+                                        "title": "Time From",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/definitions/time"
+                                            }
+                                        ]
+                                    },
+                                    "timeTo": {
+                                        "title": "Time To",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/definitions/time"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "allOf": [
+                                    {
+                                        "if": {
+                                            "properties": {
+                                                "type": {
+                                                    "const": "Day"
+                                                }
+                                            }
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "dateForType": {
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/definitions/day"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "if": {
+                                            "properties": {
+                                                "type": {
+                                                    "const": "Date"
+                                                }
+                                            }
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "dateForType": {
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/definitions/date"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "if": {
+                                            "properties": {
+                                                "type": {
+                                                    "const": "Preset"
+                                                }
+                                            }
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "dateForType": {
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/definitions/datePreset"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "required": [
+                                    "type",
+                                    "dateForType",
+                                    "timeFrom",
+                                    "timeTo"
+                                ],
+                                "additionalProperties": false
+                            },
+                            "minItems": 1
+                        },
+                        "closureRules": {
+                            "title": "Closure Rules",
+                            "type": "array",
+                            "items": {
+                                "title": "Closure Rule",
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "title": "Rule Type",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/definitions/openingOrClosureRuleType"
+                                            }
+                                        ]
+                                    },
+                                    "dateForType": {
+                                        "title": "Date Value for Rule Type"
+                                    },
+                                    "timeFrom": {
+                                        "title": "Time From",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/definitions/time"
+                                            }
+                                        ]
+                                    },
+                                    "timeTo": {
+                                        "title": "Time To",
+                                        "allOf": [
+                                            {
+                                                "$ref": "#/definitions/time"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "allOf": [
+                                    {
+                                        "if": {
+                                            "properties": {
+                                                "type": {
+                                                    "const": "Day"
+                                                }
+                                            }
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "dateForType": {
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/definitions/day"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "if": {
+                                            "properties": {
+                                                "type": {
+                                                    "const": "Date"
+                                                }
+                                            }
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "dateForType": {
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/definitions/date"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "if": {
+                                            "properties": {
+                                                "type": {
+                                                    "const": "Preset"
+                                                }
+                                            }
+                                        },
+                                        "then": {
+                                            "properties": {
+                                                "dateForType": {
+                                                    "allOf": [
+                                                        {
+                                                            "$ref": "#/definitions/datePreset"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "required": [
+                                    "type",
+                                    "dateForType"
+                                ],
+                                "additionalProperties": false
+                            }
+                        }
+                    },
+                    "additionalItems": false,
+                    "required": [
+                        "dateFrom",
+                        "dateTo",
+                        "useVenueOpeningTimes",
+                        "hasTimedEntry",
+                        "openingRules",
+                        "closureRules"
+                    ]
+                }
+            ]
+        },
+        "images": {
+            "title": "Image URLs",
+            "description": "URLs of the event images",
+            "type": "array",
+            "items": {
+                "title": "URL",
+                "description": "URL of the image",
+                "type": "string",
+                "format": "uri"
+            },
+            "minItems": 1
+        },
+        "tags": {
+            "title": "Tags",
+            "description": "Tags for the event",
+            "type": "array",
+            "items": {
+                "title": "Tag",
+                "description": "Tag for the event",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "description": "ID of the tag",
+                        "type": "string",
+                        "pattern": "^(audience|medium|style|geo)/.+"
+                    },
+                    "label": {
+                        "title": "Label",
+                        "description": "Label of the tag",
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "id",
+                    "label"
+                ]
+            },
+            "minItems": 1
+        },
+        "rawContent": {
+            "title": "Raw Content",
+            "description": "The information to monitor for changes",
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "additionalProperties": false,
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "eventType": {
+                        "const": "Performance"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "entity",
+                    "venueId",
+                    "venueEntityId",
+                    "eventType",
+                    "url",
+                    "title",
+                    "ageDetails",
+                    "costDetails",
+                    "bookingDetails",
+                    "performanceDetails",
+                    "rawContent"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "eventType": {
+                        "const": "Exhibition"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "entity",
+                    "venueId",
+                    "venueEntityId",
+                    "eventType",
+                    "url",
+                    "title",
+                    "ageDetails",
+                    "costDetails",
+                    "bookingDetails",
+                    "exhibitionDetails",
+                    "rawContent"
+                ]
+            }
+        }
+    ]
+}
