@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+docker stack rm $@
+
+DEPLOYMENT_NAMESPACE=$1
+
+WAIT_LIMIT=${WAIT_LIMIT:-15}
+
+# see https://github.com/moby/moby/issues/30942#issue-207070098
+
+limit=${WAIT_SERVICE_RM_LIMIT:-$WAIT_LIMIT}
+until [ -z "$(docker service ls --filter label=com.docker.stack.namespace=$DEPLOYMENT_NAMESPACE -q)" ] || [ "$limit" -lt 0 ]; do
+  sleep 2
+  limit="$((limit-1))"
+done
+
+limit=${WAIT_NETWORK_RM_LIMIT:-$WAIT_LIMIT}
+until [ -z "$(docker network ls --filter label=com.docker.stack.namespace=$DEPLOYMENT_NAMESPACE -q)" ] || [ "$limit" -lt 0 ]; do
+  sleep 2;
+  limit="$((limit-1))";
+done
