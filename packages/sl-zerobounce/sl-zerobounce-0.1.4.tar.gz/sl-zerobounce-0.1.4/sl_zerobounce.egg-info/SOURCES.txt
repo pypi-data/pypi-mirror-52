@@ -1,0 +1,14 @@
+README.md
+setup.py
+sl_zerobounce.egg-info/PKG-INFO
+sl_zerobounce.egg-info/SOURCES.txt
+sl_zerobounce.egg-info/dependency_links.txt
+sl_zerobounce.egg-info/requires.txt
+sl_zerobounce.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_get_credits.py
+tests/test_validate.py
+zerobounce/__init__.py
+zerobounce/helper.py
+zerobounce/mini_attr_dict.py
