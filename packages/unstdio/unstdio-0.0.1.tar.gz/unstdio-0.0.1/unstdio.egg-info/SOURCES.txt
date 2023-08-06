@@ -1,0 +1,12 @@
+README.md
+setup.py
+sample/__init__.py
+sample/sample.py
+test/__init__.py
+test/unstdio.py
+unstdio/__init__.py
+unstdio/unstdio.py
+unstdio.egg-info/PKG-INFO
+unstdio.egg-info/SOURCES.txt
+unstdio.egg-info/dependency_links.txt
+unstdio.egg-info/top_level.txt
