@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: openImageDatasetSDK
+Version: 1.0.4
+Summary: Python SDK for the Open Image Dataset.
+Home-page: https://dev.azure.com/zhenwan/zhenwan_default/_git/AMLProjects
+Author: zhenwan,t-zhiwan,t-tozho
+Author-email: zhenwan@microsoft.com,t-zhiwan@microsoft.com,t-tozho@microsoft.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
