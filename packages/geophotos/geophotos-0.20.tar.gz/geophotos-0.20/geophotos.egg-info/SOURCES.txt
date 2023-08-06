@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+geophotos/__init__.py
+geophotos/analyze.py
+geophotos/geophotos.py
+geophotos.egg-info/PKG-INFO
+geophotos.egg-info/SOURCES.txt
+geophotos.egg-info/dependency_links.txt
+geophotos.egg-info/requires.txt
+geophotos.egg-info/top_level.txt
+geophotos/data/world_borders.dbf
+geophotos/data/world_borders.prj
+geophotos/data/world_borders.shp
+geophotos/data/world_borders.shx
+geophotos/data/world_borders.zip
