@@ -1,0 +1,6 @@
+import os
+
+ZABBIX_UI_URL = os.getenv('ZABBIX_UI_URL')
+ZABBIX_API_URL = os.getenv('ZABBIX_API_URL')
+ZABBIX_API_USER = os.getenv('ZABBIX_API_USER')
+ZABBIX_API_PASSWORD = os.getenv('ZABBIX_API_PASSWORD')
