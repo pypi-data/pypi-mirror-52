@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: quetzal-openapi-client
+Version: 0.3.1
+Summary: Quetzal API auto-generated client
+Home-page: http://github.com/quet.zal/quetzal-openapi-client
+Author: David Ojeda
+Author-email: support@quetz.al
+License: BSD-3-Clause
+Project-URL: Documentation, https://quetzal-openapi-client.readthedocs.io/en/stable/
+Project-URL: Code, https://github.com/quetz-al/quetzal-openapi-client
+Project-URL: Issue tracker, https://github.com/quetz-al/quetzal-openapi-client/issues
+Description: quetzal-openapi-client
+        ======================
+        This is an auto-generated package using
+        [openapi-generator](https://github.com/OpenAPITools/openapi-generator)
+        from an OpenAPI specification of the Quetzal API.
+        An improvement layer on this client exists in the quetzal-client package.
+        
+        Quetzal is an API to manage data files and their associated metadata.
+        See more at [quetz.al](https://quetz.al) and its
+        [readthedocs documentation](https://quetzal-api.readthedocs.io).
+        
+            
+Keywords: OpenAPI,OpenAPI-Generator,Quetzal API
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: System :: Archiving
+Description-Content-Type: text/markdown
