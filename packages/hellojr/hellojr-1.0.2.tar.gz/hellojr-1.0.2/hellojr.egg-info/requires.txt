@@ -1,0 +1,12 @@
+click
+flask
+
+[dev]
+babel
+nose
+flake8
+coverage
+sphinx
+recommonmark
+twine
+wheel
