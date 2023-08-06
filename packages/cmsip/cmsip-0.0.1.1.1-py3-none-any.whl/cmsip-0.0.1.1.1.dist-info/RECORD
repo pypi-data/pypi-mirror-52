@@ -1,0 +1,14 @@
+cmsip/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmsip/cmsip.py,sha256=8KfIMZa0TLL4DWe3DqBbDgHTSc9b15NzQCImUna2-4U,24102
+cmsip/R/chisq.R,sha256=gNGYPi8nNJGlYFdih2eRxcaVMPchPUDpLPk6FDSAbuo,1342
+cmsip/R/gtest.R,sha256=l65CemoiVAbzDDYq5NiDgGCCmGX9x_yhtaVfuVodFzw,1410
+cmsip/R/nbtest.R,sha256=Iusiagk4CRG2PzhX2OupeN0nzMf0FfWYD1RJqyCemR8,1373
+cmsip/R/p.adj.R,sha256=fcWXteE4j4Yi_wdnlskNHzAm4riz__Ag0iBTsv0Scxg,702
+cmsip/R/ttest.R,sha256=qcP8IWAwid1Y0Y20787VeUpnp2vlxiX9s0UYCVt2CoI,1514
+cmsip/perl/removeCommonRead.pl,sha256=RA-XkJh4C0QswBZfut8j46P_rXbTWluvHGXSVVBcjNw,1036
+cmsip-0.0.1.1.1.dist-info/LICENSE,sha256=v9Yo3YW-_mvhD1gjgIpRVL18r0yO89QKrWqYdS3LAFw,1057
+cmsip-0.0.1.1.1.dist-info/METADATA,sha256=XaKsbJCjznSd2gRR5ZvtjKjnA10J0D2nOf7CgqnQ2EI,3759
+cmsip-0.0.1.1.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+cmsip-0.0.1.1.1.dist-info/entry_points.txt,sha256=X6ApN0geCyNRI2Ku8oSoiLQ8Nc7r-_ZQsGMuUlnbh9c,44
+cmsip-0.0.1.1.1.dist-info/top_level.txt,sha256=GZgFecE-1ayqulGXqCI7Zv02cKO-qohDv574_4nl01o,6
+cmsip-0.0.1.1.1.dist-info/RECORD,,
