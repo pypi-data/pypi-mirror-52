@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+django_emoji_picker.egg-info/PKG-INFO
+django_emoji_picker.egg-info/SOURCES.txt
+django_emoji_picker.egg-info/dependency_links.txt
+django_emoji_picker.egg-info/requires.txt
+django_emoji_picker.egg-info/top_level.txt
+emoji_picker/__init__.py
+emoji_picker/apps.py
+emoji_picker/widgets.py
