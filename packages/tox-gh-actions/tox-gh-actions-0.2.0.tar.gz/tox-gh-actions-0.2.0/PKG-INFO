@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: tox-gh-actions
+Version: 0.2.0
+Summary: Seamless integration of tox into GitHub Actions
+Home-page: https://github.com/ymyzk/tox-gh-actions
+Author: Yusuke Miyazaki
+Author-email: miyazaki.dev@gmail.com
+Maintainer: Yusuke Miyazaki
+Maintainer-email: miyazaki.dev@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/ymyzk/tox-gh-actions
+Project-URL: Tracker, https://github.com/ymyzk/tox-gh-actions/issues
+Description: # tox-gh-actions
+        [![PyPI version](https://badge.fury.io/py/tox-gh-actions.svg)](https://badge.fury.io/py/tox-gh-actions)
+        
+        **tox-gh-actions** is a tox plugin which helps running tox on GitHub Actions
+        with multiple different Python versions.  This project is inspired by
+        [tox-travis](https://github.com/tox-dev/tox-travis).
+        
+        ## Usage
+        The following configuration will create 4 jobs when running the worlflow on GitHub Actions.
+        - On Python 2.7 job, tox runs `py27` environment
+        - On Python 3.5 job, tox runs `py34` environment
+        - On Python 3.6 job, tox runs `py35` environment
+        - On Python 3.7 job, tox runs `py37` and `mypy` environments
+        
+        `tox.ini`:
+        ```ini
+        [tox]
+        envlist = py27, py35, py36, py37, mypy
+        
+        [gh-actions]
+        python =
+            2.7: py27
+            3.5: py35
+            3.6: py36
+            3.7: py37, mypy
+        
+        [testenv]
+        ...
+        ```
+        
+        `.github/workflows/<workflow>.yml`:
+        ```yaml
+        name: Python package
+        
+        on: [push]
+        
+        jobs:
+          build:
+            runs-on: ubuntu-latest
+            strategy:
+              max-parallel: 4
+              matrix:
+                python-version: [2.7, 3.5, 3.6, 3.7]
+        
+            steps:
+            - uses: actions/checkout@v1
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v1
+              with:
+                python-version: ${{ matrix.python-version }}
+            - name: Install dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install tox tox-gh-actions
+            - name: Test with tox
+              run: tox
+        ```
+        
+        ## Advanced Usage
+        The following configuration will create 2 jobs when running the worlflow on GitHub Actions.
+        - On Python 2.7 job, tox runs `py27-django111` environment
+        - On Python 3.7 job, tox runs `py37-django111` and `py37-django20` environments
+        
+        `tox.ini`:
+        ```ini
+        [tox]
+        envlist = py27-django{111}, py37-django{111,20}
+        
+        [gh-actions]
+        python =
+            2.7: py27
+            3.7: py37
+        
+        [testenv]
+        ...
+        ```
+        
+Keywords: virtual,environments,isolated,testing
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: tox
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/markdown
+Provides-Extra: testing
