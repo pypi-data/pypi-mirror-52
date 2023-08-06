@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+bin/markb
+markb/__init__.py
+markb/_version.py
+markb/markb.py
+markb/test_markb.py
+markb.egg-info/PKG-INFO
+markb.egg-info/SOURCES.txt
+markb.egg-info/dependency_links.txt
+markb.egg-info/requires.txt
+markb.egg-info/top_level.txt

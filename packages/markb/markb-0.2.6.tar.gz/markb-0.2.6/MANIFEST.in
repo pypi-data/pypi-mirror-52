@@ -1,0 +1,2 @@
+include versioneer.py
+include markb/_version.py
