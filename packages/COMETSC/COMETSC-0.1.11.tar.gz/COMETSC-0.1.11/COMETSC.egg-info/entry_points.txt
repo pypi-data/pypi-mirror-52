@@ -1,0 +1,3 @@
+[console_scripts]
+Comet = Comet.__main__:main
+
