@@ -1,0 +1,11 @@
+---
+# vars required for managing ML2 networks
+segmentation_id: null
+segmentation_name: null
+
+# vars optional for managing trunk ports
+vlans: null
+
+# vars required for managing ML2 ports
+port_name: null
+port_description: null
