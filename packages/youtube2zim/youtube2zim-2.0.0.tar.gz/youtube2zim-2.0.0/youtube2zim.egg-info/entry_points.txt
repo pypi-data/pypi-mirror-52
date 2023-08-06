@@ -1,0 +1,3 @@
+[console_scripts]
+youtube2zim = youtube2zim.__main__:main
+
