@@ -1,0 +1,4 @@
+invoke
+requests
+ftdi_serial
+pyqt5==5.12
