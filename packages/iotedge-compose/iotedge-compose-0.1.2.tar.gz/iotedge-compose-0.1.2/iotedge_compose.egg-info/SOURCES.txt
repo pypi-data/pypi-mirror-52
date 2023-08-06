@@ -1,0 +1,10 @@
+README.md
+setup.py
+convertor/__init__.py
+convertor/convertor.py
+iotedge_compose.egg-info/PKG-INFO
+iotedge_compose.egg-info/SOURCES.txt
+iotedge_compose.egg-info/dependency_links.txt
+iotedge_compose.egg-info/entry_points.txt
+iotedge_compose.egg-info/requires.txt
+iotedge_compose.egg-info/top_level.txt
