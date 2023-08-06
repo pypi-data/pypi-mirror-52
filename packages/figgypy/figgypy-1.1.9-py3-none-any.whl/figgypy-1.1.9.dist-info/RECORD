@@ -1,0 +1,14 @@
+figgypy/__init__.py,sha256=IyW1Vhzi13EPfZNgDX8a5I8QRDZ_iFA5H1cAnuFWEK4,2162
+figgypy/config.py,sha256=osK5IQV86DmCq-eGZIQ2brUeNdFnj4rPgYTY4FOxXyk,8356
+figgypy/decrypt.py,sha256=1b73tc6J7pJT4MDWvfprijq9WprhIi4gXl2YLTOx1ho,9148
+figgypy/exceptions.py,sha256=li2LO_4UTDyuLN7EMOJHyb7lMhXQNtB11lcA7lcYzZA,94
+figgypy/util.py,sha256=gjsmnfney1xk-LoN0NcTNoLaUu8aREkq7M4c2MWGGWk,2046
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/config_test.py,sha256=NI9HEdqaqq2LXMozaUn1gobWpBY5zvAOli-g_8_mABs,2151
+tests/decrypt_test.py,sha256=IyExWNMD44XuNlMce6UBHjlsDi7utKyW173KuqNty9w,272
+tests/util_test.py,sha256=7HIU1pBGYiRBaT_FLzEmUW_6sIjOvAHPO-Hi03AfcYg,889
+figgypy-1.1.9.dist-info/LICENSE,sha256=2Z1wGP4ykBbYpNWEtyebpUEoARR3APUTAhDeRPBjwL8,1086
+figgypy-1.1.9.dist-info/METADATA,sha256=S18_-saQuU5wLqa6xIhjwnQNL_NfCqklXZDbK4cKpFY,8182
+figgypy-1.1.9.dist-info/WHEEL,sha256=_OfpK4bWOib5kHbXgC6xhPw-kdAw9Ks7_xlOUIiTiwQ,92
+figgypy-1.1.9.dist-info/top_level.txt,sha256=M-IiJURJlsVA7iZb9M7cUq6la_ZU8jQOnBvXUlXn57o,14
+figgypy-1.1.9.dist-info/RECORD,,
