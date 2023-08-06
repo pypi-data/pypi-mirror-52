@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: say-hello-toto
+Version: 0.0.1
+Summary: A Sample SayHello Python project
+Home-page: https://github.com/LDJWJ/totofriend
+Author: Tester
+Author-email: tester@gmail.com
+License: MIT
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Requires-Dist: requests
+
+SayHello DESC
+
+
