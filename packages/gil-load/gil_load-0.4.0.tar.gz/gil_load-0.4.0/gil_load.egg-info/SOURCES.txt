@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+example.py
+setup.py
+gil_load/__init__.py
+gil_load/__main__.py
+gil_load/__version__.py
+gil_load/gil_load.c
+gil_load/gil_load.pyx
+gil_load/preload.c
+gil_load/preload.h
+gil_load.egg-info/PKG-INFO
+gil_load.egg-info/SOURCES.txt
+gil_load.egg-info/dependency_links.txt
+gil_load.egg-info/top_level.txt

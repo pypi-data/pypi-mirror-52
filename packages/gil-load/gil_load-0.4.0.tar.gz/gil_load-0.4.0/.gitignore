@@ -1,0 +1,11 @@
+dist/
+build/
+MANIFEST
+gil_load/__version__.py
+gil_load/__pycache__/
+test.py
+gil_load/gil_load.c
+*.pyc
+*.bak
+*.so
+*.html

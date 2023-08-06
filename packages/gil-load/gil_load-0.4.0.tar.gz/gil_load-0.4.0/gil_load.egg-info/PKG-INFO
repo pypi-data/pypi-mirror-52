@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: gil-load
+Version: 0.4.0
+Summary: Utility for measuring the fraction of time the GIL is held in a program
+Home-page: https://github.com/chrisjbillington/gil_load
+Author: Chris Billington
+Author-email: chrisjbillington@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
