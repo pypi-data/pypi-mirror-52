@@ -1,0 +1,9 @@
+README.md
+setup.py
+drf_optional_fields/__init__.py
+drf_optional_fields/serializers.py
+drf_optional_fields/views.py
+drf_optional_fields.egg-info/PKG-INFO
+drf_optional_fields.egg-info/SOURCES.txt
+drf_optional_fields.egg-info/dependency_links.txt
+drf_optional_fields.egg-info/top_level.txt
