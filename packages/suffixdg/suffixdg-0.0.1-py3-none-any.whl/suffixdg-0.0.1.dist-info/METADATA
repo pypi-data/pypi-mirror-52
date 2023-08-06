@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: suffixdg
+Version: 0.0.1
+Summary: 1.本程序由高端设计编写，需要引用及任何改进意见请联系邮箱1481407566qq.com。2.DNA功能域是隐藏在DNA序列中具有特定功能的重要区域，通过多条DNA序列比对容易发现。3.DNA序列比对需要耗费大量的计算机算力，本程序依托分支界定的suffix算法，和个人精心设计的程序代码，意图提供有竞争力的运算速度解决DNA比对问题。
+Home-page: UNKNOWN
+Author: DUAN GAO
+Author-email: 1481407566@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# 本程序由高端设计编写，需要引用及任何改进意见请联系邮箱1481407566@qq.com。
+# DNA功能域是隐藏在DNA序列中具有特定功能的重要区域，通过多条DNA序列比对容易发现。
+# DNA序列比对需要耗费大量的计算机算力，本程序依托分支界定的suffix算法，和个人精心设计的程序代码，意图提供有竞争力的运算速度解决DNA比对问题。
+
+
