@@ -1,0 +1,4 @@
+protobuf>=3.6
+requests>=2.16.0
+setuptools
+websocket-client<=0.48.0
