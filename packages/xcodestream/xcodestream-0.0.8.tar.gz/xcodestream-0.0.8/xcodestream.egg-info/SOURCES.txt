@@ -1,0 +1,13 @@
+setup.py
+tests/__init__.py
+tests/test_api_url_builder.py
+tests/test_client.py
+tests/test_connection.py
+xcodestream/__init__.py
+xcodestream/client.py
+xcodestream/connection.py
+xcodestream/url_api_builder.py
+xcodestream.egg-info/PKG-INFO
+xcodestream.egg-info/SOURCES.txt
+xcodestream.egg-info/dependency_links.txt
+xcodestream.egg-info/top_level.txt

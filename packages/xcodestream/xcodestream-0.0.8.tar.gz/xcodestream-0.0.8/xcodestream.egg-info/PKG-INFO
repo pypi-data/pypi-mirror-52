@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: xcodestream
+Version: 0.0.8
+Summary: Xtream code api python scraper
+Home-page: https://github.com/fazzani/minds_epg
+Author: Heni Fazzani
+Author-email: heni.fazzani@gmail.com
+License: UNKNOWN
+Description: # XCode Stream
+        
+        [![pipeline status](https://gitlab.com/fazzani/xtreamcode/badges/master/pipeline.svg)](https://gitlab.com/fazzani/xcodestream/commits/master)
+        
+        Python XCode stream api loader
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
