@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: django-psycopg2-extension
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://github.com/druids/django-psycopg2-extension
+Author: Lubos Matl
+Author-email: matllubos@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
