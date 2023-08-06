@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: package-index
+Version: 1.0.0rc0
+Summary: Dataclasses API for PyPI and other warehouses.
+Home-page: https://github.com/mdrachuk/package-index
+Author: mdrachuk
+Author-email: misha@drach.uk
+License: MIT
+Project-URL: Pipelines, https://dev.azure.com/misha-drachuk/package-index
+Project-URL: Source, https://github.com/mdrachuk/package-index/
+Project-URL: Issues, https://github.com/mdrachuk/package-index/issues
+Keywords: python packaging pypi warehouse
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: serious (==1.0.0.dev20)
+
+# package-index
+[![PyPI](https://img.shields.io/pypi/v/package-index)][pypi]
+[![Build Status](https://img.shields.io/azure-devops/build/misha-drachuk/package-index/12)](https://dev.azure.com/misha-drachuk/package-index/_build/latest?definitionId=12&branchName=master)
+[![Test Coverage](https://img.shields.io/coveralls/github/mdrachuk/package-index/master)](https://coveralls.io/github/mdrachuk/package-index)
+[![Supported Python](https://img.shields.io/pypi/pyversions/package-index)][pypi]
+
+Dataclasses API for PyPI and other warehouses. 
+
+## Installation
+Available from [PyPI][pypi]:
+```shell
+pip install package-index
+```
+
+## Usage
+
+```python
+>>> from package_index import fetch_package
+
+>>> package = fetch_package('package-index')
+
+>>> print(package.info)
+PackageInfo(name='package-index', author='mdrachuk', author_email='misha@drach.uk', bugtrack_url=None, classifiers=['De...
+
+>>> print(package.versions)
+{'1.0.0b0', '1.0.0b1'}
+```
+
+[pypi]: https://pypi.org/project/package-index/
+
