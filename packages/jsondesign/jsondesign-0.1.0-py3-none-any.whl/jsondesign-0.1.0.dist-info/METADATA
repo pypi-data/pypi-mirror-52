@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: jsondesign
+Version: 0.1.0
+Summary: A Python 3 library handling JSON schema for mimicking entities design in an OO-fashions
+Home-page: https://github.com/lasircc/jsondesign
+Author: LAS Team
+Author-email: las@ircc.it
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (==19.1.0)
+Requires-Dist: jsonref (==0.2)
+Requires-Dist: jsonschema (==3.0.2)
+Requires-Dist: pyrsistent (==0.15.4)
+Requires-Dist: six (==1.12.0)
+
+# jsondesign
+[![Build Status](https://travis-ci.com/lasircc/jsondesign.svg?branch=master)](https://travis-ci.com/lasircc/jsondesign) [![Coverage Status](https://coveralls.io/repos/github/lasircc/jsondesign/badge.svg?branch=master&service=github)](https://coveralls.io/github/lasircc/jsondesign?branch=master) ![A LAS-ecosystem package (https://github.com/lasircc/las)](https://img.shields.io/badge/LAS%20%F0%9F%9A%80-jsondesign-blue) ![GitHub repo size](https://img.shields.io/github/repo-size/lasircc/jsondesign)
+
+A Python 3 library handling JSON schema for mimicking entities design in an OO-fashion (read more [here](https://github.com/json-schema-org/json-schema-spec/issues/348#issuecomment-322940347)). :pencil2: :straight_ruler: :triangular_ruler:
+
+## Get started
+TODO
+
+## Dev jsondesign
+To start dev., `cd` into the project folder and then: 
+
+```bash
+$ pipenv install --dev
+```
+
+
