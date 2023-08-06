@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lescan
+Version: 0.3.0
+Summary: Minimalistic Bluetooth LE scanning utility
+Home-page: https://github.com/themadinventor/lescan
+Author: Fredrik Ahlberg
+Author-email: fredrik@z80.se
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: gatt
+
+UNKNOWN
+
+
