@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: vcert
+Version: 0.6.5
+Summary: Python bindings for Venafi TPP/Venfi Cloud API.
+Home-page: https://github.com/Venafi/vcert-python
+Author: Denis Subbotin
+Author-email: denis.subbotin@venafi.com
+License: ASL
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: requests
+Requires-Dist: python-dateutil (>=2.6.1)
+Requires-Dist: certvalidator
+Requires-Dist: six
+Requires-Dist: cryptography
+Requires-Dist: ipaddress ; python_version < "3.3"
+Requires-Dist: enum34 ; python_version < "3.4"
+
+UNKNOWN
+
+
