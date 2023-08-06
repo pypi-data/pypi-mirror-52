@@ -1,0 +1,12 @@
+README.md
+setup.py
+database-manager/DatabaseConnector.py
+database-manager/DatabaseDataManager.py
+database-manager/DatabaseEntity.py
+database-manager/FileDataManager.py
+database-manager/__init__.py
+database-manager/database.py
+database_manager.egg-info/PKG-INFO
+database_manager.egg-info/SOURCES.txt
+database_manager.egg-info/dependency_links.txt
+database_manager.egg-info/top_level.txt
