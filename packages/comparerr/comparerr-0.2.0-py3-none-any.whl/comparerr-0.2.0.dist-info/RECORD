@@ -1,0 +1,14 @@
+comparerr/__init__.py,sha256=bdyJu6wMAB5WP9WtFmXb2wPZvXIUNu-uuVnCaDUWBF8,78
+comparerr/comparerr_pylint_message.py,sha256=O34Wo5fAtiIJC6EZgeyI-FZChhdZBiZm5wFL6adeyds,345
+comparerr/comparerr_pylint_reporter.py,sha256=vi5ubtqgtVeeBvjR2EVm8fKbmQ21DVq1a_pwZGlkuRo,226
+comparerr/report_generator.py,sha256=CLlN0jDSvqFivTihxziVKkXz97XD1RY2N-htaYQp2JI,5288
+comparerr/utils/__init__.py,sha256=M8UwxZ8wGNGbMqTaW6-Tl0ASavtXNT5cZUOgxN06CIc,178
+comparerr/utils/comparerr_pylint_message.py,sha256=iYQsVbcs8Ue3RscWyslOi1E7caqPWLTR7XxMMe-_EN0,589
+comparerr/utils/comparerr_pylint_reporter.py,sha256=UjYai2irZL4jxhc13cIdCX38AoyqFc6yP7jzYOAcwak,480
+comparerr-0.2.0.data/scripts/comparerr,sha256=GB80zIrDAxKf-qNqQmg2vULHqvEHmrQyDTTmCdxXm1w,1783
+comparerr-0.2.0.data/scripts/pylint2comparerr,sha256=1ueYi-IHeozsQuhoFrmRhlEmOFmNTqY_jBOBa3s7gHs,1495
+comparerr-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+comparerr-0.2.0.dist-info/METADATA,sha256=lULYn5oFvWucQLNahEvDCSoQQ71hWQYI4JKlA6pK9nU,2707
+comparerr-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+comparerr-0.2.0.dist-info/top_level.txt,sha256=46c33R0hPdKattJS6SnT6rG2KeRyF4wHAB4Ghl_ov_A,10
+comparerr-0.2.0.dist-info/RECORD,,

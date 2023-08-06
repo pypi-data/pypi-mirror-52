@@ -1,0 +1,51 @@
+#!python
+import os
+import sys
+import argparse
+
+from comparerr import ReportGenerator
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="Compare 2 versions of python "
+                                                 "software versioned with git")
+    parser.add_argument("location",
+                        type=str,
+                        help="Location of git repository path/url. Must end with '.git'")
+    parser.add_argument("first_reference",
+                        help="Git reference to the first version of code",
+                        type=str)
+    parser.add_argument("second_reference",
+                        type=str,
+                        help="Git reference to the second version of code")
+    parser.add_argument("-t",
+                        "--targets",
+                        help="Files or folders to analyze with pylint",
+                        nargs="+",
+                        required=True)
+    parser.add_argument("--error-only",
+                        action="store_true",
+                        default=False,
+                        help="Pay attention only to errors from pylint (no refactor hints etc.)")
+
+    args = parser.parse_args()
+
+    path = os.path.abspath(args.location)
+    rprtr = ReportGenerator(path, args.targets, only_errors=args.error_only)
+    fixed_errors, created_errors = rprtr.compare_versions(args.first_reference,
+                                                          args.second_reference)
+
+    exit_code = 0
+
+    if fixed_errors:
+        print("Fixed errors:")
+    for err in fixed_errors:
+        err.display_message()
+
+    if created_errors:
+        print("Added errors:")
+        exit_code = 1
+    for err in created_errors:
+        err.display_message()
+
+    sys.exit(exit_code)
