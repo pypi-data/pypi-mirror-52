@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cullinan
+Version: 0.2.9
+Summary: cullinan
+Home-page: https://www.fnep-tech.com/
+Author: fnep_tech
+Author-email: hansion@fnep-tech.com
+License: http://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Requires-Dist: tornado
+Requires-Dist: python-dotenv
+Requires-Dist: sqlalchemy
+Requires-Dist: pymysql
+
+UNKNOWN
+
+
