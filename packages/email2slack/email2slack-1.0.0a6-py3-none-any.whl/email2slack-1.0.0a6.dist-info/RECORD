@@ -1,0 +1,11 @@
+email2slack/__init__.py,sha256=TFcDrjYYatBJIvnG8nAU2lE41TUsJ6S7BQqlce4TSQY,1044
+email2slack/__main__.py,sha256=rfmXcIHz8uF_V8Pd6nRLpPTTSzrcxTASNlnlVL6A01g,93
+email2slack/compat.py,sha256=oMfcx1TuzEyPmpoe9SuJDygD3BYZZmao327RJkqFDjo,255
+email2slack/parser.py,sha256=Mkqwhe5Nc3qrc33KVjuMvBbZIb2i5o-HU1J4AM1R664,7135
+email2slack/slack.py,sha256=RmgZjkJvT0v8fbBvGUoMOBvRmeCSRFa2FD9D3gunzNk,8801
+email2slack-1.0.0a6.dist-info/LICENSE,sha256=-Q1NO_Cf6L0kMC4mtCZJl6D0mr4h3vQg9_FckZzMsDA,1082
+email2slack-1.0.0a6.dist-info/METADATA,sha256=t2obpxwXavGridl-222zZuWImNCJ1KPbnRUghWjiHso,5009
+email2slack-1.0.0a6.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+email2slack-1.0.0a6.dist-info/entry_points.txt,sha256=O2Dmrzq_W2HebwBMIW7VoWe62VqQjcLeHRPytF0cRWA,50
+email2slack-1.0.0a6.dist-info/top_level.txt,sha256=_SYoLCg65gMwvIgMKptH1LOIXLfxj7A82VVXXu6gi-8,12
+email2slack-1.0.0a6.dist-info/RECORD,,
