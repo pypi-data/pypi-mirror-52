@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+CloudRepoAnalytics.egg-info/PKG-INFO
+CloudRepoAnalytics.egg-info/SOURCES.txt
+CloudRepoAnalytics.egg-info/dependency_links.txt
+CloudRepoAnalytics.egg-info/not-zip-safe
+CloudRepoAnalytics.egg-info/requires.txt
+CloudRepoAnalytics.egg-info/top_level.txt
+flaskr/__init__.py
+flaskr/static/chartcore.min.js
+flaskr/static/dash.css
+flaskr/static/piechart.min.js
+flaskr/templates/stats.html
