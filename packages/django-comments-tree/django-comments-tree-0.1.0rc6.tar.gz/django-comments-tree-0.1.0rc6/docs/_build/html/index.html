@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>django-comments-tree &mdash; django-comments-tree 2.4.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quick start guide" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> django-comments-tree
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Demo projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logic.html">Control logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webapi.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">JavaScript plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templatetags.html">Filters and template tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrating.html">Migrating to django-comments-tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Customizing django-comments-tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templates.html">Templates</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">django-comments-tree</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>django-comments-tree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-django_comments_tree">
+<span id="django-comments-tree"></span><h1>django-comments-tree<a class="headerlink" href="#module-django_comments_tree" title="Permalink to this headline">¶</a></h1>
+<p>A Django pluggable application that adds comments to your project. It extends the once official <a class="reference external" href="https://pypi.python.org/pypi/django-contrib-comments">Django Comments Framework</a> with the following features:</p>
+<ol class="arabic simple" id="index-0">
+<li><p>Comments model based on <a class="reference external" href="https://pypi.python.org/pypi/django-treebeard">django-treebeard</a> to provide a robust and fast threaded and nested comment structure.</p></li>
+<li><p>Efficiently associate a comment tree with any model through a link table which avoids populating each comment with extra link data.</p></li>
+<li><p>Customizable maximum thread level, either for all models or on a per app.model basis.</p></li>
+<li><p>Optional notifications on follow-up comments via email.</p></li>
+<li><p>Mute links to allow cancellation of follow-up notifications.</p></li>
+<li><p>Comment confirmation via email when users are not authenticated.</p></li>
+<li><p>Comments hit the database only after they have been confirmed.</p></li>
+<li><p>Registered users can like/dislike comments and can suggest comments removal.</p></li>
+<li><p>Template tags to list/render the last N comments posted to any given list of app.model pairs.</p></li>
+<li><p>Emails sent through threads (can be disable to allow other solutions, like a Celery app).</p></li>
+<li><p>Fully functional JavaScript plugin using ReactJS, jQuery, Bootstrap, Remarkable and MD5.</p></li>
+</ol>
+<img alt="_images/cover.png" src="_images/cover.png" />
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick start guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Demo projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logic.html">Control logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webapi.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">JavaScript plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templatetags.html">Filters and template tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrating.html">Migrating to django-comments-tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Customizing django-comments-tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internationalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templates.html">Templates</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Quick start guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Daniel Rus Morales
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: django-comments-tree
+Version: 0.1.0rc6
+Summary: Django Comments Framework extension app with django-treebeard support, follow up notifications and email confirmations, as well as real-time comments using Firebase for notifications.
+Home-page: https://github.com/sharpertool/django-comments-tree
+Author: Ed Henderson
+Author-email: ed@sharpertool.com
+Maintainer: Ed Henderson
+Maintainer-email: ed@sharpertool.com
+License: MIT
+Project-URL: Documentation, https://django-comments-tree.readthedocs.io/en/latest/
+Project-URL: Github, https://github.com/sharpertool/django-comments-tree
+Project-URL: Original Package, https://github.com/danirus/django-comments-xtd
+Description: A reusable Django app that uses django-treebeard to create a threadedcomments Framework, following up notifications and comments that only hits the database after users confirm them by email.Real-time comment updates are also available using Django channels as a notification mechanism of comment updates. Clients can connect to channels for updates, and then query the backend for the actual changes, so that all data is located in the backend database.
+Keywords: django comments treebeard threaded django-channels websockets
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Django
+Classifier: Natural Language :: English
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary
+Requires-Python: >=3.6
