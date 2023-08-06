@@ -1,0 +1,3 @@
+[console_scripts]
+xmlibto-git = src.__main__:main
+
