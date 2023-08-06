@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: neon-py
+Version: 0.1.4
+Summary: NEON parser for Python
+Home-page: https://github.com/paveldedik/neon-py
+Author: Pavel Dedik
+Author-email: dedikx@gmail.com
+License: BSD
+Description: NEON for Python
+        ===============
+        
+        ![https://travis-ci.org/paveldedik/neon-py](https://travis-ci.org/paveldedik/neon-py.png?branch=master)
+        
+        NEON is very similar to YAML. The main difference is that the NEON supports
+        "entities"(so can be used e.g.to parse phpDoc annotations) and tab characters
+        for indentation. NEON syntax is a little simpler.
+        
+        Example of Neon code:
+        
+        ```yaml
+        # neon example
+        
+        name: Homer
+        
+        address:
+        
+            street: 742 Evergreen Terrace
+            city: Springfield
+        
+        children:
+        
+            + Bart
+            + Lisa
+            + Maggie
+        
+        entity: Column(type=integer)
+        ```
+        
+        Installation
+        ------------
+        
+        To install NEON parser for Python, simply run:
+        
+        ```bash
+        pip install neon-py
+        ```
+        
+        Quick start
+        -----------
+        
+        Decoding NEON config files is super easy:
+        
+        ```python
+        import neon
+        
+        with open('/path/to/config.neon', 'r') as fd:
+            config = neon.decode(fd.read())
+        ```
+        
+        Links
+        -----
+        
+        * [Neon sandbox](http://ne-on.org)
+        * [Neon for PHP](https://github.com/nette/neon)
+        * [Neon for Javascript](https://github.com/matej21/neon-js)
+        
+        
+Keywords: neon,parser,config file
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
