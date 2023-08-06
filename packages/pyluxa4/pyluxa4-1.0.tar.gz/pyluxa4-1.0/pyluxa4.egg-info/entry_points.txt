@@ -1,0 +1,4 @@
+[console_scripts]
+pyluxa4 = pyluxa4.cli:main
+pyluxa43.7 = pyluxa4.cli:main
+
