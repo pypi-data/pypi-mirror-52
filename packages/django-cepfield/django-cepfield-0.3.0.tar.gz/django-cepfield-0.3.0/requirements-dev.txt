@@ -1,0 +1,6 @@
+-r requirements.txt
+Django>=1.11 ; python_version == '2.7'
+Django>=2 ; python_version >= '3.4'
+mock
+pytest
+pytest-cov
