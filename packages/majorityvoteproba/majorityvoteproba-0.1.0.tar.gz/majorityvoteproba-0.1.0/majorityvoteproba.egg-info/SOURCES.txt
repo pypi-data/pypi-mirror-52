@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+majorityvoteproba/__init__.py
+majorityvoteproba/majority_vote_proba_fn.py
+majorityvoteproba.egg-info/PKG-INFO
+majorityvoteproba.egg-info/SOURCES.txt
+majorityvoteproba.egg-info/dependency_links.txt
+majorityvoteproba.egg-info/not-zip-safe
+majorityvoteproba.egg-info/requires.txt
+majorityvoteproba.egg-info/top_level.txt
+test/__init__.py
+test/test_vote.py
