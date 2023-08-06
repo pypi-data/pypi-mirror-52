@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: rlsa_python
+Version: 0.1
+Summary: Implementation of the Run Length Smoothing Algorithm (RLSA) in python
+Home-page: https://github.com/Lufeva123/rlsa_python
+Author: Luiz Fernando Lemos do Valle
+Author-email: lld2131@columbia.edu
+License: MIT
+Download-URL: https://github.com/Lufeva123/rlsa_python/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: computer vision,image processing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
