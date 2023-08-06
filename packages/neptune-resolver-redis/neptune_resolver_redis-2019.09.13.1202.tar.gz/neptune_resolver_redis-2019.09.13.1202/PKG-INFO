@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: neptune_resolver_redis
+Version: 2019.09.13.1202
+Summary: REDIS based resolver for NEPTUNE DNS SERVER
+Home-page: https://git.best-service.online/yurzs/neptune-resolver-redis
+Author: Yury (Yurzs)
+Author-email: dev@best-service.online
+License: MIT
+Description: # Neptune Resolver Rest
+        This module is made as a resolving middleware for Neptune DNS server
+        ## Installation
+        ```pip3 install neptune_resolver_redis```
+        ## Connect to server
+        In config.py edit RESOLVERS variable. Add ```'neptune_resolver_redis'```
+        It will look like this
+        ```RESOLVERS = ['neptune_resolver_redis']```
+        Then you need to set settings for this resolver. Those settings are set by creating variable in config.py with capitalized module name like
+        ```NEPTUNE_RESOLVER_REST = {'host':'localhost', 'database': 1}```
+Keywords: NEPTUNE,REDIS,RESOLVER
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
