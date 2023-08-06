@@ -1,0 +1,3 @@
+[console_scripts]
+airduct=airduct.cli.run:cli
+
