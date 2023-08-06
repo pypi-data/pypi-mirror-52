@@ -1,0 +1,7 @@
+todoist-python>=8.0
+pyyaml
+pytz
+python-dateutil
+dateparser
+parsedatetime
+click
