@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: django-restricted-paths
+Version: 1.3.0
+Summary: Restricts access to specific urls to staff only by responding with a specific view or raising a 404
+Home-page: https://www.alexseitsinger.com/packages/python/django-restricted-paths
+Author: Alex Seitsinger
+Author-email: software@alexseitsinger.com
+License: BSD 2-Clause License
+Project-URL: Documentation, https://www.alexseitsinger.com/packages/python/django-restricted-paths
+Project-URL: Source, https://github.com/alexseitsinger/django-restricted-paths
+Project-URL: Tracker, https://github.com/alexseitsinger/django-restricted-paths/issues
+Description: # Django Restricted Paths
+        
+        ## Description
+        
+        Restricts access to specific urls to staff only by responding with a specific view or raising a 404.
+        
+        ## Installation
+        
+        ```python
+        pip install django-restricted-paths
+        ```
+        
+        ## Usage
+        
+        in settings.py:
+        
+        ```python
+        RESTRICTED_PATHS = {
+          "ENABLED": not DEBUG,
+          "PATHS": ("/admin",),
+          "VIEW": "path.to.view.class.ViewClass",
+        }
+        
+        MIDDLEWARE = (
+            ...
+            "restricted_paths.middleware.RestrictedPathsMiddleware"
+        )
+        ```
+        
+Keywords: django,urls
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Description-Content-Type: text/markdown
