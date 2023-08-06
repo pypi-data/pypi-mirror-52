@@ -1,0 +1,12 @@
+CHANGELOG.md
+README.md
+setup.py
+randombag/__data__.py
+randombag/__init__.py
+randombag/random_bag.py
+randombag/roller.py
+randombag.egg-info/PKG-INFO
+randombag.egg-info/SOURCES.txt
+randombag.egg-info/dependency_links.txt
+randombag.egg-info/requires.txt
+randombag.egg-info/top_level.txt
