@@ -1,0 +1,15 @@
+examples/__init__.py,sha256=pK7s8gSkNWZNggges4PsuCApSy3UFzkHHZuRQmqryJA,583
+examples/sync_reports.py,sha256=gg2mm_S1wqOc2EPp7yeY-Ekbw-9-CUhvhbPMGe8ZnZo,1001
+gsuite_exporter/__init__.py,sha256=pK7s8gSkNWZNggges4PsuCApSy3UFzkHHZuRQmqryJA,583
+gsuite_exporter/auth.py,sha256=mDqqDLTUmK2H02dQuYJ0eGPvzSi3Af1fyJq9kHmH3LM,3188
+gsuite_exporter/cli.py,sha256=9WdkQkDfLzObKx-j_zZFd2SMTny_iaoNB8eX2G_67WU,4776
+gsuite_exporter/collectors/__init__.py,sha256=pK7s8gSkNWZNggges4PsuCApSy3UFzkHHZuRQmqryJA,583
+gsuite_exporter/collectors/reports.py,sha256=6IeaD6UjcTGuUuQD7RVy1LIwSjZwkqMSES45ZIedS8s,2782
+gsuite_exporter/exporters/__init__.py,sha256=pK7s8gSkNWZNggges4PsuCApSy3UFzkHHZuRQmqryJA,583
+gsuite_exporter/exporters/base.py,sha256=OMaHUHIr1rvJoryJSFGv3II29g3b1wFCwlJcRd10ssM,2059
+gsuite_exporter/exporters/stackdriver_exporter.py,sha256=yPHODnxY_AJyd-wQDosLlqr9W5BGe9DXCV7sLo4aBv8,5250
+gsuite_exporter-0.0.3.dist-info/METADATA,sha256=yMSildE0Ya4QARxs0RksMXDaMghpLi14eKOzRS21m8U,4426
+gsuite_exporter-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gsuite_exporter-0.0.3.dist-info/entry_points.txt,sha256=W-_Z_blQXWBmz31nAa5ikyiKn9QXzPy3Qbhv8Lpf6ms,62
+gsuite_exporter-0.0.3.dist-info/top_level.txt,sha256=XpHjb68vvQ13SMzWWIVKcad7z31QkTDEkk8MCCRdJ_4,25
+gsuite_exporter-0.0.3.dist-info/RECORD,,
