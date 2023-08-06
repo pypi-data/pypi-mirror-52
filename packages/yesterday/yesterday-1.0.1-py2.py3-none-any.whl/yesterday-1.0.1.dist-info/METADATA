@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: yesterday
+Version: 1.0.1
+Summary: A minimal jounaling system.
+Home-page: https://gitlab.com/raiyanyahya/yesterday
+Author: Raiyan Yahya
+Author-email: raiyanyahyadeveloper@gmail.com
+License: GPL3
+Requires-Dist: click
+Requires-Dist: pyAesCrypt
+Requires-Dist: PyInquirer
+Requires-Dist: pyfiglet
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+"# today" 
+
+
