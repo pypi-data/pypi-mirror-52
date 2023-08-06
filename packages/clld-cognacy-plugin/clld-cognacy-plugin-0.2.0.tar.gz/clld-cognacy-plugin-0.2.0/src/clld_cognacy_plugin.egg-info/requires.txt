@@ -1,0 +1,16 @@
+clld>=3.3.3
+sqlalchemy
+zope.interface
+
+[dev]
+flake8
+wheel
+twine
+
+[test]
+pytest>=3.6
+pytest-mock
+mock
+coverage>=4.2
+pytest-cov
+webtest
