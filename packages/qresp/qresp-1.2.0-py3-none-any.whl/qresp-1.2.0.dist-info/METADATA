@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: qresp
+Version: 1.2.0
+Summary: Qresp "Curation and Exploration of Reproducible Scientific Papers" is a Python application that facilitates the organization, annotation and exploration of data presented in scientific papers. 
+Home-page: http://qresp.org/
+Author: Aditya Tanikanti, Marco Govoni
+Author-email: datadev@lists.uchicago.edu
+License: GNU
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: flask-api
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: paramiko
+Requires-Dist: pymongo
+Requires-Dist: cffi
+Requires-Dist: flask-mongoengine
+Requires-Dist: Flask-Session
+Requires-Dist: Flask-WTF
+Requires-Dist: mongoengine
+Requires-Dist: cryptography
+Requires-Dist: jinja2
+Requires-Dist: jsonschema (==2.6.0)
+Requires-Dist: pyOpenSSL
+Requires-Dist: werkzeug
+Requires-Dist: itsdangerous
+Requires-Dist: python-dateutil
+Requires-Dist: expiringdict
+Requires-Dist: schedule
+Requires-Dist: wtforms
+Requires-Dist: flask-sitemap
+Requires-Dist: requests-oauthlib
+Requires-Dist: mongomock
+Requires-Dist: connexion[swagger-ui]
+Requires-Dist: coverage
+Requires-Dist: nose2
+Requires-Dist: lxml
+Requires-Dist: gunicorn
+
+UNKNOWN
+
+
