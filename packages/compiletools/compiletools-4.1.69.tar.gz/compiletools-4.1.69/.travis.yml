@@ -1,0 +1,22 @@
+language: python
+python:
+    - "3.4"
+    - "3.5"
+    - "3.6"
+    - "3.7"
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-6
+            - gcc-6
+
+# command to install dependencies      
+install:
+    - pip install -r requirements.txt 
+    - export CXX="g++-6" CC="gcc-6"
+
+# command to run tests
+script:
+    - nosetests

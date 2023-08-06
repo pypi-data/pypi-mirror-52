@@ -1,0 +1,82 @@
+A variety of installation methods are possible.  
+
+1) git clone from github and run from repository
+2) pip install (as either user, root or virtualenv)
+3) build an RPM
+4) build a deb (currently unimplemented)
+5) Fedora 26 with pypy3 from copr in a virtualenv
+
+1) clone the github repository
+
+Use your system tools (yum, dnf, apt-get, pip) to install the python dependencies: psutil, appdirs, configargparse.
+For example, on recent Fedora use: sudo dnf install python2-setuptools python2-configargparse python2-appdirs python2-psutil
+
+git clone git://github.com/Zomojo/compiletools
+
+Add the compiletools directory to your PATH
+export PATH=$PATH:path_to_compiletools_repo
+
+
+2a) pip install as user
+On Ubuntu 16.04
+
+pip install --user compiletools
+
+will install into "~/.local/"  so you need to have "~/.local/bin" in your path to pick up the executables.
+
+
+On Ubuntu 17.04:
+
+pip install compiletools
+
+will install into "~/.local/"  so you need to have "~/.local/bin" in your path to pick up the executables.
+
+
+2b) pip install as root
+On Ubuntu 16.04
+
+sudo pip install compiletools
+
+will install into /usr/local.  By default /usr/local/bin is in your path so no extra work is required.
+
+
+On Ubuntu 17.04:
+
+sudo -H pip install compiletools
+
+will install into /usr/local.  By default /usr/local/bin is in your path so no extra work is required.
+
+
+3) Build an RPM (these instructions were tested on Fedora 26)
+Make sure you have the building tools installed
+
+sudo dnf install rpm-build python2-setuptools python2-docutils python2-configargparse python2-appdirs python2-psutil python2-devel
+
+Then download a tarball and turn it into the RPM
+
+rpmhome=$(rpm --eval %_topdir)
+pushd "$rpmhome"
+tag="v4.1.43"
+tarball=${tag}.tar.gz
+curl -L "https://github.com/Zomojo/compiletools/archive/${tarball}" -o "SOURCES/${tarball}"
+rpmbuild -tb "SOURCES/${tarball}"
+popd
+dnf install ${rpmhome}/RPMS/noarch/python-compiletools-4.1.43-1.fc26.noarch.rpm
+
+
+5) Fedora 26 with pypy3 from copr in a virtual env
+
+# Get a python 3.5 version of pypy 
+# compiletools doesn't work with the default python 3.3 version of pypy
+sudo dnf copr enable @python/pypy35
+sudo dnf install pypy3 pypy3-devel
+
+# Create the virtual env
+WORKON_HOME=${HOME}/venvs
+pypy3 -m venv ${WORKON_HOME}/compiletools-pypy
+source ${WORKON_HOME}/compiletools-pypy/bin/activate
+
+# If you are going to work from the git repo then just install the dependencies
+# pip install configargparse appdirs psutil
+# otherwise you can 
+pip install compiletools
