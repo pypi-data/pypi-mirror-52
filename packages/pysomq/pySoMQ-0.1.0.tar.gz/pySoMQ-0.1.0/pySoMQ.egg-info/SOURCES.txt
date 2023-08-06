@@ -1,0 +1,11 @@
+README.md
+setup.py
+pySoMQ.egg-info/PKG-INFO
+pySoMQ.egg-info/SOURCES.txt
+pySoMQ.egg-info/dependency_links.txt
+pySoMQ.egg-info/requires.txt
+pySoMQ.egg-info/top_level.txt
+pysomq/__init__.py
+pysomq/serial_client.py
+pysomq/serial_server.py
+pysomq/utility.py
