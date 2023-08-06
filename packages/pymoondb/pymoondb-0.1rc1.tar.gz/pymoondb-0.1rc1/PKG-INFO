@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: pymoondb
+Version: 0.1rc1
+Summary: A python module to access the MoonDB, the geochemical and petrological lunar sample database
+Home-page: https://www.ict.inaf.it/gitlab/alessandro.frigeri/pymoondb
+Author: Alessandro Frigeri
+Author-email: Alessandro.Frigeri@inaf.it
+License: MIT
+Description: 
+        ---
+        pymoondb: The python interface to the MoonDB geochemical and petrological lunar sample database
+        ---
+        
+        
+        ![Apollo 12 NASA image AS12-47-6932](https://www.ict.inaf.it/gitlab/alessandro.frigeri/pymoondb/raw/master/docs/source/images/AS12-47-6932.jpg)
+        
+        MoonDB is a NASA-funded quality-controlled data system that will preserve, digitize and curate lunar geochemical and petrological data and their associated sample metadata and analytical metadata.
+        
+        __Pymoondb__ is a python module which creates an interface to the Application Program Interface made available by the MoonDB project.
+        
+        The python module is being developed at [IAPS/INAF](http://www.iaps.inaf.it) in Rome, Italy.  The MoonDB database is being developed and maintaned by the Lamont-Doherty Earth Observatory's Geoinformatics Research Group of Columbia University, New York.
+        
+        # Installation
+        
+        Step 1: clone the repository:
+        
+        ```
+        git clone https://www.ict.inaf.it/gitlab/alessandro.frigeri/pymoondb.git
+        ```
+        
+        Step 2: install the software; within the directory where setup.py is placed, type:
+        
+        ```
+        pip install -e .
+        ```
+        
+        To use moondb module, fire up your python interpreter and simply do:
+        
+            >>> import moondb
+            >>> s_12023 = moondb.get_specimens(sc=['12023'])[0]
+            >>> print( type(s_12023) )
+            <class 'moondb.core.Specimen'>
+            >>> ", ".join( (s_12023.mission,s_12023.landmark,s_12023.specimenType) )
+            'Apollo 12, SHARP CRATER, ROCK/Unclassified'
+        
+        # How to cite MoonDB and pymoondb
+        
+        Here you are the references to documents describing MoooDB and the python interface.
+        
+        #### pymoondb
+        
+        Frigeri, A., Lehnert, K. A., Ji, P.  [The Python interface to the MoonDB geochemical and petrological database](https://meetingorganizer.copernicus.org/EPSC-DPS2019/EPSC-DPS2019-1729.pdf) European Planetary Science Congress, Geneve - Switzerland, September,  2019
+        
+        #### MoonDB
+        
+        Lehnert, K. A., Markey, K., Ji, P., Cai, Y., Hodges, K., Mercer, C., Walker, J. D., Ash, J., Evans, C. and Zeigler, R.  [MoonDB: 50 Years of Lunar Sample Data Ready for the Data Revolution](http://www.hou.usra.edu/meetings/lpsc2019/pdf/2996.pdf) Lunar and Planetary Science Conference 2019, pp. 2996
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
