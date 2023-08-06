@@ -1,0 +1,13 @@
+Pillow
+numpy
+opencv-python
+Cython
+pycocotools
+bottle
+scikit-image
+terminaltables
+lxml
+tqdm
+addict
+xmljson
+yacs

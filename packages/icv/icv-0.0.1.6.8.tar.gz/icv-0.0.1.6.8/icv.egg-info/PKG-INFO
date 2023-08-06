@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: icv
+Version: 0.0.1.6.8
+Summary: some common code and tools for computing version
+Home-page: https://github.com/dmxj/icv
+Author: rensike
+Author-email: rensike@baidu.com
+License: MIT
+Description: 
+        # icv
+        
+        ## 包含的功能
+        + 数据、预处理、增广、格式转换、制作tfrecord
+        + 模型预测（多进程、切图）、评估
+        + 工具：合并图片、切图、制作html展示图片、NMS、IOU
+        + .....
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
