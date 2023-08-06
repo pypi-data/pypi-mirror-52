@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: tapy
+Version: 0.0.0b0
+Summary: Technical Indicators for the Pandas' Dataframes
+Home-page: https://github.com/dmitriiweb/tapy
+Author: Dmitrii Kurlov
+Author-email: winston.smith.spb@gmail.com
+License: MIT
+Description: tapy
+        ====
+        
+        Technical Indicators for the Pandas' Dataframes
+        
+        Documentation: https://tapy.readthedocs.io
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install -U tapy
+        
+        Available Indicators
+        --------------------
+        
+        1. None
+        
+        
+Keywords: technical analyse indicators pandas forex stocks
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Provides-Extra: dev-lint
+Provides-Extra: dev-test
+Provides-Extra: dev
+Provides-Extra: dev-docs
