@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: biocertainty
+Version: 1.0.6
+Summary: Python package that provides the certainty about biomedical statements.
+Home-page: https://github.com/Guindillator/BioCertainty
+Author: Mario Prieto
+Author-email: mario.prieto@upm.es
+License: Wilkinson Laboratory
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
