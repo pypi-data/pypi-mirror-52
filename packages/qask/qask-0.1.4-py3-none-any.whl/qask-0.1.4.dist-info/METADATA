@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: qask
+Version: 0.1.4
+Summary: Create default skeleton app for new qa project
+Home-page: https://github.com/irinabucse/qask.git
+Author: Irina Bucse
+Author-email: irina.bucse@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+
+# qask
+
+Create default skeleton app for new qa project
+
+
