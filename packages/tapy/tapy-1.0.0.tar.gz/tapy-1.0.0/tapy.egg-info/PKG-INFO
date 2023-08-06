@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: tapy
+Version: 1.0.0
+Summary: Technical Indicators for the Pandas' Dataframes
+Home-page: https://github.com/dmitriiweb/tapy
+Author: Dmitrii Kurlov
+Author-email: winston.smith.spb@gmail.com
+License: MIT
+Description: tapy
+        ====
+        
+        Technical Indicators for the Pandas' Dataframes
+        
+        Documentation: https://pandastechindicators.readthedocs.io/en/latest/
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install -U tapy
+        
+        Available Indicators
+        --------------------
+        
+        1. SMA (Simple Moving Average)
+        
+        
+Keywords: technical analyse indicators pandas forex stocks
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Provides-Extra: dev
+Provides-Extra: dev-test
+Provides-Extra: dev-lint
+Provides-Extra: dev-docs
