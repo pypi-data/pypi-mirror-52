@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cloudgarden"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [
+#    { include = "Gardener.py", from = "lib" }
+	{ include = "cloudgarden.py" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+boto3 = "^1.9.232"
+marshmallow = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.1.2"
+pytest-asyncio = "^0.10.0"
+
+[build-system]
+requires = ["poetry>=1.0.0b1"]
+build-backend = "poetry.masonry.api"
