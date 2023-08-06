@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: sna
+Version: 0.0.6
+Summary: Search N Act
+Home-page: https://github.com/eaybek/sna
+Author: Erdem Aybek
+Author-email: eaybek@gmail.com
+License: UNKNOWN
+Description: # Search N Act
+        
+        [github](https://github.com/eaybek/sna/) 
+        [PyPi](https://pypi.org/project/sna/)  
+        
+        you can do:  
+            search and replace  
+            search and create  
+            search and open  
+            search and anything...  
+          
+        ## Sample Usage
+        you can see the code samples
+        
+        ```
+        sample.txt
+        ```
+        ```
+        hello, world!
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+        no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        
+        ```
+        ```
+        sample.py
+        ```
+        
+        ```python3
+        from sna.search import Sna
+        
+        sna = Sna()
+        
+        
+        @sna("(.*d.*r.*)")
+        class DR_word(object):
+            def __init__(self, match):
+                self.content = match.group(1)
+        
+            def read(self):
+                print(self.content)
+        
+        
+        @sna("(.*e.*t.*)")
+        class ET_word(object):
+            def __init__(self, match):
+                self.content = match.group(1)
+        
+            def read(self):
+                print(self.content)
+        
+        
+        # find all patterns
+        sna.search().through.words().on(
+            filepath="sample.txt"
+        ).read()
+        
+        print(80 * "-")
+        # Or be specific
+        sna.search("ET_word").through.words().on(
+            filepath="sample.txt"
+        ).read()
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
