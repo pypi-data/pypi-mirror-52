@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: aioli-guestbook
+Version: 0.3.2
+Summary: Comprehensive RESTful HTTP API built on top of the Aioli Framework
+Home-page: https://github.com/aioli-framework/aioli-guestbook-example
+License: MIT
+Keywords: aioli_package
+Author: Robert Wikman
+Author-email: rbw@vault13.org
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: aioli (>=0.5.0,<0.6.0)
+Requires-Dist: aioli-rdbms (>=0.3.1,<0.4.0)
+Requires-Dist: maxminddb-geolite2 (>=2018.703,<2019.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Description-Content-Type: text/markdown
+
+aioli-guestbook: RESTful HTTP API Package Example
+===
+
+The idea with this example is to show how a CRUD-type RESTful HTTP API package can be built with the Aioli Framework.
+
+
+Documentation
+---
+
+Check out the [Package Documentation](https://aioli-guestbook-example.readthedocs.io) for usage and info about the
+HTTP and Service APIs.
+
+Examples
+---
+
+Every guestbook needs a guesthouse, right?
+
+Check out the [example directory](/example) to see how [aioli-guestbook](/aioli_guestbook) can be incorporated into an example Guesthouse Application.
+
+
+Author
+---
+Robert Wikman \<rbw@vault13.org\>
+
+
