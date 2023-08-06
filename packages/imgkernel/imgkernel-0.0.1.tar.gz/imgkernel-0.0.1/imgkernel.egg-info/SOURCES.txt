@@ -1,0 +1,9 @@
+README.md
+setup.py
+imgkernel/__init__.py
+imgkernel/imgconv.py
+imgkernel/kernels.py
+imgkernel.egg-info/PKG-INFO
+imgkernel.egg-info/SOURCES.txt
+imgkernel.egg-info/dependency_links.txt
+imgkernel.egg-info/top_level.txt
