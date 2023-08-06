@@ -1,0 +1,10 @@
+setup.py
+tasdistributions/Binomialdistribution.py
+tasdistributions/Gaussiandistribution.py
+tasdistributions/Generaldistribution.py
+tasdistributions/__init__.py
+tasdistributions.egg-info/PKG-INFO
+tasdistributions.egg-info/SOURCES.txt
+tasdistributions.egg-info/dependency_links.txt
+tasdistributions.egg-info/not-zip-safe
+tasdistributions.egg-info/top_level.txt
