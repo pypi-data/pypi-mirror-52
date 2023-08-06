@@ -1,0 +1,61 @@
+{
+  "name": "jupyterlab-downloadfolder",
+  "version": "0.1.1",
+  "description": "Allow to export a folder as an archive file.",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/fcollonval/jupyterlab-download-folder",
+  "bugs": {
+    "url": "https://github.com/fcollonval/jupyterlab-download-folder/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Frederic Collonval",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fcollonval/jupyterlab-download-folder.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "prepare": "npm run clean && npm run build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^1.0.0",
+    "@jupyterlab/apputils": "^1.1.2",
+    "@jupyterlab/coreutils": "^3.1.0",
+    "@jupyterlab/filebrowser": "^1.1.2",
+    "@jupyterlab/services": "^4.1.1"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~3.5.2"
+  },
+  "sideEffects": [
+    "style/*.css"
+  ],
+  "jupyterlab": {
+    "extension": true,
+    "discovery": {
+      "server": {
+        "managers": [
+          "pip"
+        ],
+        "base": {
+          "name": "jupyterlab-downloadfolder"
+        }
+      }
+    }
+
+  }
+}
