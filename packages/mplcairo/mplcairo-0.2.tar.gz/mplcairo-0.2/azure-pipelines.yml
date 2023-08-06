@@ -1,0 +1,100 @@
+# Notes:
+# The macOS build does not install inkscape as building it from source is a bit
+# silly.
+
+strategy:
+  matrix:
+    Linux_py35:
+      vmImage: 'ubuntu-16.04'
+      pythonVersion: '3.5'
+    Linux_py36:
+      vmImage: 'ubuntu-16.04'
+      pythonVersion: '3.6'
+    Linux_py37:
+      vmImage: 'ubuntu-16.04'
+      pythonVersion: '3.7'
+    macOS_py35:
+      vmImage: 'macOS-10.14'
+      pythonVersion: '3.5'
+    macOS_py36:
+      vmImage: 'macOS-10.14'
+      pythonVersion: '3.6'
+    macOS_py37:
+      vmImage: 'macOS-10.14'
+      pythonVersion: '3.7'
+    Windows_py36:
+      vmImage: 'windows-2019'
+      pythonVersion: '3.6'
+    Windows_py37:
+      vmImage: 'windows-2019'
+      pythonVersion: '3.7'
+
+pool:
+  vmImage: '$(vmImage)'
+
+steps:
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(pythonVersion)'
+    architecture: 'x64'
+
+- bash: |
+
+    pip install --upgrade pip setuptools
+
+    case "$(python -c 'import sys; print(sys.platform)')" in
+    linux)
+      sudo PY_VERS="$PYTHONVERSION" tools/build-manylinux-wheel.sh &&
+      sudo apt update &&
+      sudo apt install ghostscript inkscape
+      ;;
+    darwin)
+      brew update >/dev/null &&
+      brew install cairo pkg-config &&
+      PKG_CONFIG_PATH=/usr/local/opt/libffi/lib/pkgconfig tools/build-macos-wheel.sh &&
+      brew install ghostscript
+      ;;
+    win32)
+      git clone --depth 1 https://github.com/anntzer/cairocffi-windows-wheels &&
+      python -mpip install --find-links cairocffi-windows-wheels --prefer-binary cairocffi &&
+      python tools/build-windows-wheel.py &&
+      choco install ghostscript inkscape
+      ;;
+    *)
+      exit 1
+      ;;
+    esac
+
+    python -mpip install dist/*.whl &&
+    python tools/ensure-mpl-test-data.py &&
+    # pytest<3.8 needed before matplotlib#12154 (matplotlib<3.1).
+    pip install 'pytest<3.8' &&
+    # numpy!=1.17.0 needed before matplotlib#14901 (matplotlib<3.1.2).
+    pip install 'numpy!=1.17.0'
+
+  displayName: 'Build & install'
+
+- bash: |
+    export PYTHONFAULTHANDLER=1 &&
+    ./run-mpl-test-suite.py --tolerance=50 --junitxml=junit/test-results.xml &&
+    PYTHONIOENCODING=utf-8 ./run-examples.py
+  displayName: 'Test'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/test-results.xml'
+    testRunTitle: 'Python $(pythonVersion) / $(vmImage)'
+  condition: succeededOrFailed()
+
+- bash: |
+    cp dist/*.whl "$BUILD_ARTIFACTSTAGINGDIRECTORY"
+  displayName: 'Copy files'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: 'wheels'
+
+- task: DownloadBuildArtifacts@0
+  inputs:
+    artifactName: 'wheels'
