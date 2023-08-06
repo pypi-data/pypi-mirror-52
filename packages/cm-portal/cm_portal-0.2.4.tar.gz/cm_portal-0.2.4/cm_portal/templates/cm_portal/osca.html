@@ -1,0 +1,28 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| OSCA Numbers{% endblock %}
+
+{% block page_title %}| OSCA Numbers{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="jumbotron"><button type="button" class="btn btn-outline-info btn-sm">Get printable version</button>
+<p></p>
+   {% for building in building_list %}
+   <table class="table table-sm table-hover">
+     <thead><h4>{{ building }}</h4></thead>
+     <tr>
+       <th scope="col">Resident</th>
+       <th scope="col">OSCA #</th>
+     </tr>
+     {% for resident in building.resident_set.all %}     
+     <tr>
+	    <td>{{ resident }}</td>
+	    <td>{{ resident.osca_id }}</td>
+	  </tr>
+     {% endfor %}
+   </table>
+   {% endfor %}
+</div>	
+{% endblock %}

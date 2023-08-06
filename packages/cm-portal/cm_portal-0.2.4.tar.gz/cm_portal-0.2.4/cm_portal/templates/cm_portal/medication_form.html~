@@ -1,0 +1,35 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| Add Medication{% endblock %}
+
+{% block page_title %}| Add Medication{% endblock %}
+
+{% block content %}  
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+    </div>
+  </div>
+</div>
+
+<!-- Create book button -->
+<button class="create-drug btn btn-primary" type="button" name="button">Create Drug</button>
+{{ resident }}
+  <div class="jumbotron">
+	  <form method="post" novalidate>
+		  {% csrf_token %}
+		  {% include 'includes/bs4_form.html' with form=form %}
+		  <input class="btn btn-success" type="submit" value="Submit" />
+	  </form>
+  </div>    
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $(".create-drug").modalForm({
+        formURL: "{% url 'drug-modal-create' resident.id %}"
+    });
+
+});
+</script>
+{% endblock %}

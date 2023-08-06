@@ -1,0 +1,39 @@
+{% extends "cm_portal/csu_index.html" %}
+
+{% block title %}| List of Medical Supplies{% endblock %}
+
+{% block page_title %}| List of Medical Supplies{% endblock %}
+
+{% load static %}
+
+<!-- {% block search_form %}
+  <form class="navbar-form navbar-right" id="search-form" action="{% url 'search-drugs' %}" method="get">
+    {{ form.as_p }}            
+  </form>        
+{% endblock %} -->
+
+{% block sidebar %}
+  <p></p>
+  {% if user.is_authenticated %}
+    {% include 'includes/user.html' %}
+  {% endif %}  
+  <li class="nav-item"><a class="nav-link" href="{% url 'items' %}">All items</a></li>  
+  <li class="nav-item"><a class="nav-link active" href="{% url 'medical-supplies' %}">All medical supplies</a></li>  
+  <li class="nav-item"><a class="nav-link" href="{% url 'medical-equipment' %}">All medical equipment</a></li>    
+  <li class="nav-item"><a class="nav-link" href="{% url 'charges' %}">All charges</a></li>
+{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+  <div class="table-responsive">
+  {% load django_tables2 %}
+  {% render_table table %}
+  </div>    
+  <br> 
+  {% if perms.cm_portal.add_medicalsupply %}
+    <a class="btn btn-primary" href="{% url 'medicalsupply-create' %}" role="button">Add a medical supply</a>
+  {% else %} 
+    <a class="btn btn-primary disabled" href="{% url 'medicalsupply-create' %}" role="button">Add a medical supply</a>
+  {% endif %}
+  </div>
+{% endblock %}

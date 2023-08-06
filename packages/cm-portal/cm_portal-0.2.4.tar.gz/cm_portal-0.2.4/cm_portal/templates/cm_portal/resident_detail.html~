@@ -1,0 +1,113 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| Resident Detail{% endblock %}
+
+{% block page_title %}| Resident Detail{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="jumbotron"> 
+  {% if resident.vital_status != 'LI' %}
+  <h2><strong class="{% if resident.vital_status == 'DE' %}text-danger{% elif resident.vital_status == 'DC' %}text-warning{% endif %}">
+  {{ resident.get_vital_status_display|upper }}  
+  </strong></h2>
+  {% else %}
+  <h2><strong class="text-success">{{ resident.residence }}</strong></h2>
+  {% endif %}
+  <h2>Name: {{ resident.first_name }} 
+    {% if resident.middle_name %}
+      {{ resident.middle_name|first }}.            
+    {% endif %} {{ resident.last_name }}</h2>
+  
+  <div class="container">
+    <div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+      {% if resident.photo %}
+      <img src="{{ resident.photo.url }}" class="img-thumbnail" alt="Responsive image" width="300" height="199">
+      {% else %}
+      <img src="{% static 'images/avatar.png' %}" class="img-thumbnail" alt="">
+      {% endif %}
+    </div>
+  </div>
+  
+	<br>
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#home"><i class="fas fa-pen"></i> Resident Profile</a>
+		</li>
+		
+		{% if resident.medication_set.all %}
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#medications"><i class="fas fa-file-prescription"></i> Current Medications</a>
+			</li>
+		{% else %}
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#"><i class="fas fa-file-prescription"></i> Current Medications</a>
+			</li>
+		{% endif %}
+		  
+		{% if resident.medicalabstract.get_absolute_url %}
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#abstract"><i class="fas fa-file-medical"></i> Medical Abstract</a>
+			</li>
+		{% else %}
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#"><i class="fas fa-file-medical"></i> Medical Abstract</a>
+			</li>
+		{% endif %}
+		  
+		<li class="nav-item dropdown">
+		   <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content"></div>
+           </div>
+         </div>
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Actions</a>
+			<div class="dropdown-menu">
+			  {% if perms.cm_portal.add_medication %}			    			  
+			    <a class="dropdown-item" href="{% url 'medication-create' resident.id %}"><i class="fas fa-plus"></i> Add new medication</a>
+			  {% else %}
+			    <a class="dropdown-item disabled" href="#"><i class="fas fa-plus"></i> Add new medication</a>
+			  {% endif %}			  	
+			  {% if resident.medicalabstract %}
+			    <a class="dropdown-item disabled" href="#"><i class="fas fa-plus"></i> Create a medical abstract</a>			    
+			  {% else %}
+			    <a class="dropdown-item" href="{% url 'medicalabstract-create' resident.id %}"><i class="fas fa-plus"></i> Create a medical abstract</a> 
+			  {% endif %}		
+			</div>
+		</li>		 
+	</ul>  
+	  
+	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane fade active show" id="home">
+			{% include 'includes/resident_profile.html' %}
+		</div>
+		<div class="tab-pane fade" id="medications">
+			{% include 'includes/resident_medications.html' %}
+		</div> 
+		<div class="tab-pane fade" id="abstract">
+			{% include 'includes/resident_medical_abstract.html' %}
+		</div>
+	</div>
+	
+  <script type="text/javascript">
+  $(function () {
+    // Update medication buttons
+    $(".update-medication").each(function () {
+      $(this).modalForm({formURL: $(this).data('id')});
+    });
+
+    // Read medication buttons
+    $(".read-medication").each(function () {
+      $(this).modalForm({formURL: $(this).data('id')});
+    });
+
+    // Delete medication buttons
+    $(".delete-medication").each(function () {
+      $(this).modalForm({formURL: $(this).data('id')});
+    });
+
+  });
+</script>
+</div>
+{% endblock %}

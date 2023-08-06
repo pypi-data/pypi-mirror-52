@@ -1,0 +1,30 @@
+{% extends "cm_portal/hris_index.html" %}
+
+{% block title %}| List of Employees{% endblock %}
+
+{% block page_title %}| List of Employees{% endblock %}
+
+{% load static %}
+
+{% block search_form %}
+  <form class="navbar-form navbar-right" id="search-form" action="{% url 'search-employees' %}" method="get">
+    {{ form.as_p }}            
+  </form>        
+{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">  
+  {% if table.data|length > 0 %}
+  {% load django_tables2 %}  
+  {% render_table table %}
+  {% else %}
+  <p>The are no employees in the portal.</p>
+  {% endif %}  
+  <br>
+  {% if perms.cm_portal.add_employee %}  
+    <a class="btn btn-primary" href="{% url 'employee-create' %}" role="button">Add an employee</a>
+  {% else %}
+    <a class="btn btn-primary disabled" href="{% url 'employee-create' %}" role="button">Add an employee</a>
+  {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| List of Buildings{% endblock %}
+
+{% block page_title %}| List of Buildings{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+  {% if building_list %}    
+    <div class="list-group">
+      {% for building in building_list %}
+        {% include 'includes/building_list_item.html' %}
+      {% endfor %}
+    </div>    
+    {% else %}
+      <p>There are no buildings in the portal.</p>  
+  {% endif %} 
+  <br>
+  {% if is_paginated %}
+    {% include 'includes/pagination.html' %}
+  {% endif %}
+  {% if perms.cm_portal.add_building %}
+    <a class="btn btn-primary" href="{% url 'building-create' %}" role="button">Add a building</a>
+  {% else %} 
+    <a class="btn btn-primary disabled" href="{% url 'building-create' %}" role="button">Add a building</a>
+  {% endif %} 
+  </div>
+{% endblock %}

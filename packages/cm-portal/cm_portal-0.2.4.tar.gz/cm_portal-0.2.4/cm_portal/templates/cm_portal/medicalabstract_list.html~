@@ -1,0 +1,33 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| List of Medical Abstracts{% endblock %}
+
+{% block page_title %}| List of Medical Abstracts{% endblock %}
+
+{% load static %}
+
+{% block content %}  
+  {% if medicalabstract_list %}    
+    <div class="list-group">
+      {% for medicalabstract in medicalabstract_list %}   
+      <a href="{{ medicalabstract.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ medicalabstract }}</h5>      
+      </div>  
+      {% if medicalabstract.resident.residence %}<small class="text-muted">{{ medicalabstract.resident.residence }}</small>{% endif %}  	        
+      </a>                               
+      {% endfor %}
+    </div>
+  {% else %}
+      <p>There are no medical abstracts in the portal.</p>  
+  {% endif %}
+  <br> 
+  {% if is_paginated %}
+    {% include 'includes/pagination.html' %}
+  {% endif %} 
+  {% if perms.cm_portal.add_medicalabstract %}
+    <a class="btn btn-primary" href="{% url 'medicalabstract-create' %}" role="button">Add a medical abstract</a>
+  {% else %}
+    <a class="btn btn-primary disabled" href="{% url 'medicalabstract-create' %}" role="button">Add a medical abstract</a>
+  {% endif %}  
+{% endblock %}
