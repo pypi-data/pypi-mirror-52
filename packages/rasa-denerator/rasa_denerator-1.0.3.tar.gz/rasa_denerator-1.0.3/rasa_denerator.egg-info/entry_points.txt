@@ -1,0 +1,3 @@
+[console_scripts]
+rasa_denerator = rasa_denerator.__main__:main
+
