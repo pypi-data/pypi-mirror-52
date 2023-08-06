@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ceryx
+Version: 0.2.0
+Summary: Python client for Ceryx
+Home-page: https://github.com/sourcelair/seryx-py
+Author: Paris Kasidiaris
+Author-email: paris@sourcelair.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+UNKNOWN
+
+
