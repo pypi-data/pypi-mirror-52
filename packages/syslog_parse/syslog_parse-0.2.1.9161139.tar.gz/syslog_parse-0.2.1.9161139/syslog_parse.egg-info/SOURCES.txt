@@ -1,0 +1,17 @@
+LICENSE
+MAINTAINERS
+MANIFEST.in
+README.md
+README.rst
+requirements.txt
+setup.py
+syslog_parse/__init__.py
+syslog_parse/compat.py
+syslog_parse/facility.py
+syslog_parse/message.py
+syslog_parse/parser.py
+syslog_parse/severity.py
+syslog_parse.egg-info/PKG-INFO
+syslog_parse.egg-info/SOURCES.txt
+syslog_parse.egg-info/dependency_links.txt
+syslog_parse.egg-info/top_level.txt
