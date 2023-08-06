@@ -1,0 +1,15 @@
+README.md
+setup.py
+nameko_cli/__init__.py
+nameko_cli/__main__.py
+nameko_cli/run.py
+nameko_cli/utils.py
+nameko_cli.egg-info/PKG-INFO
+nameko_cli.egg-info/SOURCES.txt
+nameko_cli.egg-info/dependency_links.txt
+nameko_cli.egg-info/entry_points.txt
+nameko_cli.egg-info/requires.txt
+nameko_cli.egg-info/top_level.txt
+nameko_cli/commands/__init__.py
+nameko_cli/commands/deploy.py
+nameko_cli/commands/project.py
