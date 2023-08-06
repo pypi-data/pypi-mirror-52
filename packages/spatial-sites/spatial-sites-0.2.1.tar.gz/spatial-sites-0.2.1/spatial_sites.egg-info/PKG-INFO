@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: spatial-sites
+Version: 0.2.1
+Summary: A package to represent labelled, spatial coordinates.
+Home-page: UNKNOWN
+Author: Adam J. Plowman
+License: UNKNOWN
+Project-URL: Github, https://github.com/aplowman/spatial-sites
+Description: [![PyPI version](https://badge.fury.io/py/spatial-sites.svg)](https://badge.fury.io/py/spatial-sites)
+        
+        # [WIP] spatial-sites
+        A simple Python package for representing and manipulating sets of N-dimensional spatial coordinates.
+        
+        This is a work-in-progress.
+        
+        ## Installation
+        
+        `pip install spatial-sites`
+        
+        ## Examples
+        
+        ```python
+        from spatial_sites import Sites
+        
+        atoms = Sites(...)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Description-Content-Type: text/markdown
