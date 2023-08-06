@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+irsensors/__init__.py
+irsensors/irsensor.py
+irsensors/irsensorset.py
+irsensors.egg-info/PKG-INFO
+irsensors.egg-info/SOURCES.txt
+irsensors.egg-info/dependency_links.txt
+irsensors.egg-info/requires.txt
+irsensors.egg-info/top_level.txt
+irsensors/__pycache__/__init__.cpython-37.pyc
+irsensors/__pycache__/irsensor.cpython-37.pyc
+irsensors/__pycache__/irsensorset.cpython-37.pyc
+irsensors/basic_program/base.py
+irsensors/unittests/test_irsensor.py
+irsensors/unittests/test_irsensorset.py
