@@ -1,0 +1,16 @@
+- project:
+    templates:
+      - check-requirements
+      - tempest-plugin-jobs
+    check:
+      jobs:
+        - keystone-dsvm-functional
+        - keystone-dsvm-py3-functional
+        - keystone-dsvm-functional-federation:
+            voting: false
+        - keystone-dsvm-py35-functional-federation:
+            voting: false
+    gate:
+      jobs:
+        - keystone-dsvm-functional
+        - keystone-dsvm-py3-functional
