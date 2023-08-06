@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_editor_components/PythonEditor.py
+dash_editor_components/__init__.py
+dash_editor_components/_imports_.py
+dash_editor_components/dash_editor_components.min.js
+dash_editor_components/dash_editor_components.min.js.map
+dash_editor_components/metadata.json
+dash_editor_components/package-info.json
+dash_editor_components.egg-info/PKG-INFO
+dash_editor_components.egg-info/SOURCES.txt
+dash_editor_components.egg-info/dependency_links.txt
+dash_editor_components.egg-info/top_level.txt
