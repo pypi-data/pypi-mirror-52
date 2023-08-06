@@ -1,0 +1,15 @@
+from pyramid.events import ContextFound
+from pyramid.tweens import INGRESS
+
+from .pyramidhook import wrap_request
+
+
+def includeme(config):
+    """Include the zipkin definitions"""
+
+    # Attach the subscriber a couple of times, this allow to start logging as
+    # early as possible. Later calls on the same request will enhance the more
+    # we proceed through the stack (after authentication, after router, ...)
+    config.add_tween('zipkin.binding.pyramid.pyramidhook.tween_factory',
+                     under=INGRESS)
+    config.add_subscriber(wrap_request(config.registry), ContextFound)
