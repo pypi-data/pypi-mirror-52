@@ -1,0 +1,23 @@
+{% load materialize_nav %}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{# Load CSS and JavaScript #}
+{% material_icons_url %}
+{% materialize_css_url %}
+{% materialize_nav_css_url %}
+
+<style>
+{% if SHOW_SIDENAV and FIXED_SIDENAV %}
+  header, main, footer {
+    padding-left: 300px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
+{% endif %}
+</style>

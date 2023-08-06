@@ -1,0 +1,21 @@
+{% extends 'materialize_nav/base.html' %}
+{% load materialize_nav %}
+
+{% block contents %}
+    {% if user.is_authenticated %}
+        <div style="margin-top: 10px;">
+            {% render_user_image user %}
+            <h6>{{ user.get_full_name }} is currently logged in.</h6>
+        </div>
+    {% endif %}
+
+    <h2>Login</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if not hidden_input %}
+        <input type="submit" class="btn btn-primary" value="Login">
+        {% endif %}
+    </form>
+{% endblock %}
