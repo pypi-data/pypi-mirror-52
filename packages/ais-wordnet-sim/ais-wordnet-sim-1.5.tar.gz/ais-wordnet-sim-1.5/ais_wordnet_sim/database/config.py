@@ -1,0 +1,4 @@
+CONNECTION_STRING = 'xxx'
+DATABASE_NAME = 'xxx'
+USERNAME = 'xxx'
+PASSWORD = 'xxx'
