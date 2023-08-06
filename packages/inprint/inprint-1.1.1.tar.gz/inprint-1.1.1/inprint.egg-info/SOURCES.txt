@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+inprint/__init__.py
+inprint/colours.py
+inprint/functions.py
+inprint.egg-info/PKG-INFO
+inprint.egg-info/SOURCES.txt
+inprint.egg-info/dependency_links.txt
+inprint.egg-info/top_level.txt
