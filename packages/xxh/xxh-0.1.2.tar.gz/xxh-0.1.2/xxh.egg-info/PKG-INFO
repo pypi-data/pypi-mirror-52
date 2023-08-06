@@ -1,0 +1,69 @@
+Metadata-Version: 1.1
+Name: xxh
+Version: 0.1.2
+Summary: Python bindings for xxhash non-cryptographic hash algorithm
+Home-page: https://github.com/lebedov/xxh
+Author: Lev E. Givon
+Author-email: lev@columbia.edu
+License: BSD
+Description: Package Description
+        -------------------
+        This package provides a Python interface to the xxHash fast non-cryptographic
+        hash algorithm. Inspired by `existing Python wrappers for xxHash
+        <https://github.com/ewencp/pyhashxx/>`_, this package exposes both the 32 and
+        64-bit versions of the algorithm and leverages `Cython <https://cython.org>`_ to
+        provide better support for incremental updating of a hash using data
+        encapsulated in a range of Python container classes. The package is compatible
+        with Python 2.7 and later.
+        
+        .. image:: https://img.shields.io/pypi/v/xxh.svg
+            :target: https://pypi.python.org/pypi/xxh
+            :alt: Latest Version
+        .. image:: https://img.shields.io/pypi/dm/xxh.svg
+            :target: https://pypi.python.org/pypi/xxh
+            :alt: Downloads
+        
+        Quick Start
+        -----------
+        Make sure you have `pip <http://pip.pypa.io>`_ and `Cython 
+        <https://cython.org>`_ installed; once you do, install
+        the package as follows: ::
+        
+          pip install xxh
+        
+        Development
+        -----------
+        The latest source code can be obtained from the project website at
+        `GitHub <https://github.com/lebedov/xxh>`_.
+        
+        Authors & Acknowledgements
+        --------------------------
+        See the included `AUTHORS.rst
+        <https://github.com/lebedov/xxh/blob/master/AUTHORS.rst>`_ file for 
+        more information.
+        
+        License
+        -------
+        This software is licensed under the `BSD License
+        <http://www.opensource.org/licenses/bsd-license>`_.
+        See the included `LICENSE.rst
+        <https://github.com/lebedov/xxh/blob/master/LICENSE.rst>`_ file for
+        more information.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development

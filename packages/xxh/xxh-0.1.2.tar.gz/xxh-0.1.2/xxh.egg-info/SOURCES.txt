@@ -1,0 +1,13 @@
+AUTHORS.rst
+LICENSE.rst
+README.rst
+setup.py
+src/xxh.pyx
+tests/test_xxh.py
+xxh.egg-info/PKG-INFO
+xxh.egg-info/SOURCES.txt
+xxh.egg-info/dependency_links.txt
+xxh.egg-info/top_level.txt
+xxhash/xxh3.h
+xxhash/xxhash.c
+xxhash/xxhash.h
