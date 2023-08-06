@@ -1,0 +1,7 @@
+boto3==1.9.230
+click==7.0
+docker==4.0.2
+gitpython>=2.1.12
+python-dotenv>=0.10.3
+python-hosts==0.4.6
+requests==2.22.0
