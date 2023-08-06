@@ -1,0 +1,14 @@
+fast_arrow_auth/__init__.py,sha256=0NMkk0ba0-_K4qrJUQizWr9FqwNjgbl-zx0IJmhCyhc,291
+fast_arrow_auth/client.py,sha256=FuON_acTUWwI8UPWQ4gLU6R2XApLZcH9Qn3TapVjwQY,8529
+fast_arrow_auth/exceptions.py,sha256=je1HYAf4ThCqEhJ4X4PQGLkRLy3vl4KzMjETzYASbJ0,445
+fast_arrow_auth/util.py,sha256=-D_XQYHi5cADCGzznq0Jdq0Fkx9F9v14MWc9gcJeNIA,988
+fast_arrow_auth/version.py,sha256=_AMCRx0HPnXtG7NMWq5H0EWKj6knJPeJdG7gXs-3sBI,18
+fast_arrow_auth/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_arrow_auth/resources/account.py,sha256=bO0EW7ddV_iQFTZeC1oUgVNE648SF-RJPvTMiKi3IhU,498
+fast_arrow_auth/resources/user.py,sha256=b7sn37f8LbGf8kxifEdBEvICBl4ozTmj-do4xfnPtJU,163
+fast_arrow_auth/ssl_certs/certs.pem,sha256=ICOee5Lzzm5jOnhpHMEW51VItU7o5e_75aA6OhEgtUQ,263003
+fast_arrow_auth-0.0.4.dist-info/LICENSE,sha256=mS5zWhw6cTPXNiLSIdev1tTA4pk53nuRJp4s7xFrg14,1054
+fast_arrow_auth-0.0.4.dist-info/METADATA,sha256=MepIdQVlmNgzwxqhBdYqCK0OVEZog5njAqsEDuNe80Q,2394
+fast_arrow_auth-0.0.4.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+fast_arrow_auth-0.0.4.dist-info/top_level.txt,sha256=gFsViILdAWEQQflLH8Xy2YKb1AxGKzb206nhp4t2H-o,16
+fast_arrow_auth-0.0.4.dist-info/RECORD,,
