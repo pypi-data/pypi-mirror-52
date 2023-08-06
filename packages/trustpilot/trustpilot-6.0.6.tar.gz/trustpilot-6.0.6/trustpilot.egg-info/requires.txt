@@ -1,0 +1,16 @@
+Click==6.7
+requests>=2.20.0
+
+[async]
+aiohttp==2.3.9
+Click==6.7
+requests>=2.20.0
+
+[test]
+responses==0.6
+mock
+pytest==3.2.0
+pytest-readme==1.0.0
+Click==6.7
+requests>=2.20.0
+aioresponses==0.3.1

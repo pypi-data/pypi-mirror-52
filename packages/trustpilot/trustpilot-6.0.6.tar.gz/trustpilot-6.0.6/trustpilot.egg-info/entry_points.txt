@@ -1,0 +1,3 @@
+[console_scripts]
+trustpilot_api_client = trustpilot.cli:cli
+
