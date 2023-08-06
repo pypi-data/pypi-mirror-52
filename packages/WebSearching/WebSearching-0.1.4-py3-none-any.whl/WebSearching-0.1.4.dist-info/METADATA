@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: WebSearching
+Version: 0.1.4
+Summary: WebSearcher 0.1.4
+Home-page: http://github.com/gitronald/WebSearcher
+Author: Ronald E. Robertson
+Author-email: rer@ccs.neu.edu
+License: BSD-3-Clause
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: bs4
+Requires-Dist: brotli
+Requires-Dist: tldextract
+Requires-Dist: emoji
+Requires-Dist: pandas
+
+UNKNOWN
+
+
