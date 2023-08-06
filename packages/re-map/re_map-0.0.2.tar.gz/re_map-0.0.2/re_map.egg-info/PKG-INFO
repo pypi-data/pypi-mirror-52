@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: re-map
+Version: 0.0.2
+Summary: Apply multiple regex patterns and keep change index map.
+Home-page: https://github.com/aleksas/re-map
+Author: ReMap
+Author-email: ant.kampo@gmail.com
+License: UNKNOWN
+Description: [![Build Status](https://travis-ci.org/aleksas/re-map.svg?branch=master)](https://travis-ci.org/aleksas/re-map)
+        
+        # remap
+        Apply multiple regex patterns and keep change index map.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
