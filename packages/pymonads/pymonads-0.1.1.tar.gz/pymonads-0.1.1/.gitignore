@@ -1,0 +1,5 @@
+.*
+!.gitignore
+pymonads.egg-info/
+build/
+dist/
