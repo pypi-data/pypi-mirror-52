@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: datadog-a7
+Version: 0.0.8
+Summary: The Datadog Checks Shared Tools
+Home-page: https://github.com/DataDog/datadog-checks-shared
+Author: Datadog
+Author-email: packages@datadoghq.com
+License: BSD
+Keywords: datadog agent checks shared tools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
+Requires-Dist: pylint
+Requires-Dist: six
+
+# datadog_checks_shared
+
+
