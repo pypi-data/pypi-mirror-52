@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mixtape
+Version: 0.1.0
+Summary: Gstreamer python application mini-framework
+Home-page: https://github.com/ashwoods/mixtape
+Author: Ashley Camba Garrido
+Author-email: ashwoods@gmail.com
+License: MIT
+Description: WIP
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test
