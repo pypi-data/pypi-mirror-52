@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dynaml-lib-ddehueck
+Version: 0.0.1
+Summary: A research toolkit for understanding how misinformation flows through a social network through dynamic system simulation and graph neural networks
+Home-page: https://github.com/ddehueck/dynaml-lib
+Author: Cole Morgan, Devin de Hueck, Henry Creamer, Jonathon Cai
+Author-email: d.dehueck@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# dynaml-lib
+Python library for DynaML toolkit
+
+
