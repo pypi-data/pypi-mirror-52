@@ -1,0 +1,86 @@
+#!python
+
+"""
+Process a saved json state file and corresponding Python script
+to produce an output Python script with keywords expanded.
+
+To run:
+    psnap filename.json
+
+Inputs/outputs:
+    filename.json specifies input Python code ("code_src") and
+    output with keyword expansion ("code_snap").
+"""
+
+import json
+import re
+import sys
+from psnap import state_tracker
+
+__var_expand_str = r'(?P<pre>.*[$])(?P<var>[a-zA-Z_][a-zA-Z_0-9.]*)(?P<col>:?:?)(?P<curval>.*)(?P<post>[$].*)'
+
+__var_expand_re = re.compile(__var_expand_str, re.S)
+
+__meta_key = state_tracker.StateTracker._meta_key
+__data_key = None
+
+def _lookup_var(str, data):
+    # Or, see dotty dict
+    pieces = str.split(".", 2)
+
+    if len(pieces) >= 1 and len(pieces) <= 2:
+        if pieces[0] in data[__data_key]:
+            if len(pieces) == 1:
+                return data[__data_key][pieces[0]]
+            elif len(pieces) == 2:
+                return data[__data_key][pieces[0]][pieces[1]]
+
+    return None
+
+def _expand_vars(line, data):
+    # Try to return quickly if see nothing to expand
+    if not "$" in line:
+        return line
+
+    # Search is for match anywhere on line
+    # but we are matching to full line.
+    #match = __var_expand_re.search(line)
+    match = __var_expand_re.match(line)
+
+    if match is not None:
+        d = match.groupdict()
+        val = _lookup_var(d['var'], data)
+        if val is not None:
+            coltype = d['col']
+            if len(coltype) == 0:
+                coltype = ":"
+            line = f"{d['pre']}{d['var']}{coltype} {val} {d['post']}"
+
+    return line
+
+def _psnap_main():
+    if len(sys.argv) != 2:
+        print(f"Usage: {sys.argv[0]} infile.json")
+        return
+
+    with open(sys.argv[1], encoding="utf-8") as f:
+        data = json.load(f)
+
+    global __data_key
+    __data_key = data[__meta_key]["data_key"]
+
+    infile = data[__meta_key]['code_src']
+    outfile = data[__meta_key]['code_snap']
+    print(f"INFILE: {infile}")
+    print(f"OUTFILE: {outfile}")
+
+    with open(outfile, "w", encoding="utf-8") as fout:
+        with open(infile, encoding="utf-8") as fin:
+            for line in fin:
+                line = _expand_vars(line, data)
+                fout.write(line)
+
+    print(f"WROTE: {outfile}")
+
+if __name__ == "__main__":
+    _psnap_main()

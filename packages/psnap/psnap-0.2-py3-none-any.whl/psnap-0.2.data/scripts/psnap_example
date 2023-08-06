@@ -1,0 +1,19 @@
+#!python
+
+from psnap import state_tracker
+
+if __name__ == "__main__":
+    # Can use datetime.datetime.strftime formatting for dateformat
+    # and reference your dateformat with %D.
+    #   %Y=year, %m=month, %d=day, %H=hour, %M=minute, %S=second, etc.
+    dateformat = None
+    # Can override if a daily timestamp is enough
+    #dateformat = "%Y%m%d"
+    st = state_tracker.StateTracker("results_%D.json", dateformat=dateformat)
+    st.set("val1", 1)
+    # $val1$
+    st.set("val2", "number 2") # $val2$
+    output = st.save()
+    print(f"Saved history to: {output}")
+    print(f"Generate {st.code_snap} with:")
+    print(f"  psnap {output}")
