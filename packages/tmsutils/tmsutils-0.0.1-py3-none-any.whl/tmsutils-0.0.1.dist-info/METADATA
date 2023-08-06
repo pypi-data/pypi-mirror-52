@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tmsutils
+Version: 0.0.1
+Summary: Handy tools out of the box
+Home-page: https://github.com/TheMrinalSinha/tmsutils
+Author: Mrinal Sinha
+Author-email: mail@themrinalsinha.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: linear-tsv (==1.1.0)
+
+# tmsutils
+
+
