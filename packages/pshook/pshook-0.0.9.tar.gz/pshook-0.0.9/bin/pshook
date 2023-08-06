@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+
+import pshook.wrapper
+import sys
+
+
+if __name__ == '__main__':
+    sys.exit(pshook.wrapper.execute_command(sys.argv[1:]))
