@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyLINQ
+Version: 0.0.1
+Summary: Adds the LINQ functionality to Python.
+Home-page: https://github.com/jmfernandes/robin_stocks
+Author: Josh Fernandes
+Author-email: joshfernandes@mac.com
+License: MIT
+Description: README
+        
+Keywords: LINQ
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
