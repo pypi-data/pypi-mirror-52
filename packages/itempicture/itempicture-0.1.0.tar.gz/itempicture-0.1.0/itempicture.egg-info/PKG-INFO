@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: itempicture
+Version: 0.1.0
+Summary: Application for generate images in same style with titles
+Home-page: https://github.com/machineandme/itempicture
+Author: Machine & Me
+Author-email: ceo@machineand.me
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/machineandme/itempicture/issues
+Project-URL: Funding, https://www.patreon.com/machineandme
+Project-URL: Source, https://github.com/machineandme/itempicture
+Description: # Itempicture
+        
+        [![Build Status](https://travis-ci.org/machineandme/itempicture.svg?branch=master)](https://travis-ci.org/machineandme/itempicture)
+        
+        Application for generate images in same style with titles
+        
+        ## Usage
+        
+        `pip install itempicture`
+        
+        `itempicture --help`
+        
+        `itempicture examples/leaf.svg --colors_count=2 --text=Py`
+        
+        ## Exapmle
+        ![Result](https://github.com/machineandme/itempicture/raw/master/examples/demo_png/r1.png)
+        ![Result](https://github.com/machineandme/itempicture/raw/master/examples/demo_png/r2.png)
+        ![Result](https://github.com/machineandme/itempicture/raw/master/examples/demo_png/r3.png)
+        
+Keywords: generate design images with same style and custom name
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
