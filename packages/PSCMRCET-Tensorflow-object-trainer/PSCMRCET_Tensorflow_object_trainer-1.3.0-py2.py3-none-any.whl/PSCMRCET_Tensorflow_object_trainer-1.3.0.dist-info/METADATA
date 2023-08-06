@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: PSCMRCET-Tensorflow-object-trainer
+Version: 1.3.0
+Summary: Custom Object training system can be done by using single command line
+Home-page: UNKNOWN
+Author: Dedeepya Kara, Aparna Marrivada, Mudili Devi Chakradhar
+Author-email: mudili.chakri1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Requires-Dist: Tensorflow
+Requires-Dist: google-images-download
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+UNKNOWN
+
+
