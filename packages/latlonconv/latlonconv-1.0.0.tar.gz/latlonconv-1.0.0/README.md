@@ -1,0 +1,38 @@
+# latlonconv
+
+A copy of the LatLon package that actually works (and does not depend on `pyproj`),
+but has reduced functionality focusing on format conversion only:
+
+## Example
+
+```python
+import latlonconv as ll
+
+coord1 = ll.LatLon(32.30642, 122.61458)
+coord2 = ll.string2latlon("""32.30642° N""", """122.61458° W""", """D%° %H""")
+conv1 = coord1.to_string("""d%° %m%' %S%" %H""")
+conv2 = coord2.to_string("""d%° %m%' %S%" %H""")
+
+print(conv1)
+print(conv2)
+```
+
+## Format string syntax
+
+latlonconv.string2latlon and latlonconv.LatLon.to_string both take a formatter string which is loosely modeled on the format keyword used in datetime’s strftime function. Indicator characters (e.g. H or D) are placed between a specific separator character (%) to specify the way in which a coordinate string is formatted. Possible values are as follows:
+
+> H is a hemisphere identifier (e.g. N, S, E or W)
+>
+> D is a coordinate in decimal degrees notation (e.g. 5.833)
+>
+> d is a coordinate in degrees notation (e.g. 5)
+>
+> M is a coordinate in decimal minutes notation (e.g. 54.35)
+>
+> m is a coordinate in minutes notation (e.g. 54)
+>
+> S is a coordinate in seconds notation (e.g. 28.93)
+>
+> Any other characters (e.g. ‘ ‘ or ‘, ‘) will be treated as a separator between the above components.
+>
+> All components should be separated by the % character. For example, if the coord_str is ‘5, 52, 59.88_N’, the format_str would be ‘d%, %m%, %S%_%H’
