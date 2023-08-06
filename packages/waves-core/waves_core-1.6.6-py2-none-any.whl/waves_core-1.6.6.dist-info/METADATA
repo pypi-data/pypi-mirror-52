@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: waves-core
+Version: 1.6.6
+Summary: WAVES - core package
+Home-page: http://waves.atgc-montpellier.fr
+Author: Marc Chakiachvili
+Author-email: marc.chakiachvili@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Operating System :: Unix
+Provides: waves
+Requires-Dist: Django (~=1.11)
+Requires-Dist: coreapi (==2.3.3)
+Requires-Dist: daemons (==1.3.0)
+Requires-Dist: django-admin-sortable2 (==0.6.19)
+Requires-Dist: django-cors-headers (==2.2.0)
+Requires-Dist: django-crispy-forms (==1.7.2)
+Requires-Dist: django-crontab (==0.7.1)
+Requires-Dist: django-polymorphic (==2.0.2)
+Requires-Dist: djangorestframework (>=3.9.1)
+Requires-Dist: backports.ssl-match-hostname
+Requires-Dist: inflection (==0.3.1)
+Requires-Dist: psutil (==5.4.5)
+Requires-Dist: cryptography (==2.5)
+Requires-Dist: python-magic (==0.4.15)
+Requires-Dist: saga-python (==0.60.1)
+Requires-Dist: setproctitle (==1.1.10)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: swapper (==1.1.0)
+Requires-Dist: celery (==4.3.0)
+
+UNKNOWN
+
+
