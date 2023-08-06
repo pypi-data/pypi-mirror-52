@@ -1,0 +1,17 @@
+README.md
+setup.py
+pycomposer/__init__.py
+pycomposer/annotation.py
+pycomposer/composer.py
+pycomposer/dag.py
+pycomposer/split_types.py
+pycomposer/unevaluated.py
+pycomposer/vm/__init__.py
+pycomposer/vm/driver.py
+pycomposer/vm/instruction.py
+pycomposer/vm/program.py
+pycomposer/vm/vm.py
+sa.egg-info/PKG-INFO
+sa.egg-info/SOURCES.txt
+sa.egg-info/dependency_links.txt
+sa.egg-info/top_level.txt
