@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: cullinan
+Version: 0.2.10
+Summary: cullinan
+Home-page: https://www.fnep-tech.com/
+Author: fnep_tech
+Author-email: hansion@fnep-tech.com
+License: http://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: tornado
+Requires-Dist: python-dotenv
+Requires-Dist: sqlalchemy
+Requires-Dist: pymysql
+
+# Cullinan
+
+Cullinan基于Tornado、SQLAlchemy编写，用于帮助项目快速搭建WEB服务
+
+## 使用方法
+
+#### 安装
+
+将dist下whl文件放入项目目录下，并在项目目录下使用下方命令安装
+
+    pip install cullinan
+
+## Wiki
+
+Wiki 和其他相关资料参考 https://github.com/fnep/Cullinan/wiki
+
+## 维护人员
+
+[<img src="https://avatars0.githubusercontent.com/u/48331167?s=460&v=4" width = "40" height = "40"/>](https://github.com/hansiondesu) &nbsp;
+[<img src="https://avatars0.githubusercontent.com/u/39507461?s=460&v=4" width = "40" height = "40"/>](https://github.com/FakeFox)
+
