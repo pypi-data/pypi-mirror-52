@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: qvibe-recorder
+Version: 0.1.4
+Summary: Bridges data to/from a mpu6050 to a tcp socket
+Home-page: http://github.com/3ll3d00d/qvibe-recorder
+Author: Matt Khan
+Author-email: mattkhan+qvibe-recorder@gmail.com
+License: MIT
+Description: # qvibe-recorder
+        
+        [![Build Status](https://travis-ci.com/3ll3d00d/qvibe-recorder.svg?branch=master)](https://travis-ci.com/3ll3d00d/qvibe-recorder)
+        
+        [![Code Coverage](https://codecov.io/gh/3ll3d00d/qvibe-recorder/branch/master/graph/badge.svg)]( https://codecov.io/gh/3ll3d00d/qvibe-recorder)
+        
+        An vibration measurement app for the RPI.
+        
+        Install from pypi as
+        
+            $ pip install qvibe-recorder
+        
+        Designed to be used with [qvibe-analyser](https://github.com/3ll3d00d/qvibe-analyser/)
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
