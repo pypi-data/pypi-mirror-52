@@ -1,0 +1,3 @@
+[console_scripts]
+tptp = tptp.frontend.bin.__main__:main
+
