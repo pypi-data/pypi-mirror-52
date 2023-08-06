@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: redash-query-download
+Version: 0.0.9
+Summary: redash query download client
+Home-page: https://github.com/shigemk2/redash_query_download
+Author: Michihito Shigemura
+Author-email: i.am.shige@gmail.com
+License: UNKNOWN
+Description: # redash_query_download(rqd)
+        
+        This package provides a unified command line interface to download results in Redash.
+        
+        ## Requirements
+        
+        Python 3.x
+        
+        ## Installation
+        
+        ```sh
+        $ pip install redash_query_download
+        ```
+        
+        And set up your `~/.rqdrc`.
+        
+        ```sh
+        [redash]
+        endpoint=https://HOSTNAME
+        apikey=APIKEY
+        encoding=UTF-8
+        ```
+        
+        ## Commands
+        
+        ```sh
+        Usage: rqd [OPTIONS]
+        
+        Options:
+          -q, --query_id INTEGER          [required]
+          -p, --parameters <TEXT TEXT>...
+          -o, --output TEXT               [required]
+          -c, --config TEXT
+          --help                          Show this message and exit.
+        ```
+        
+        ## Examples
+        
+        ```sh
+        # query without query parameters
+        $ rqd --query_id 1 -o test.csv
+        # query without query parameters
+        $ rqd --query_id 1 --parameters start_date 2000-01-01  --parameters end_date 2009-12-31 -o test.csv
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
