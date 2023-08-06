@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: make-help
+Version: 0.1.1
+Summary: 
+Author: Sam Bishop
+Author-email: sam@techdragon.io
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: click-log (>=0.3.2,<0.4.0)
+Requires-Dist: click-pathlib (>=2019.6.13,<2020.0.0)
+Requires-Dist: colorama (>=0.4.1,<0.5.0)
