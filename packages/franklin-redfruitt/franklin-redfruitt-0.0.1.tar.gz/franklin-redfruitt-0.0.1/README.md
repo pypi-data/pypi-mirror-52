@@ -1,0 +1,2 @@
+[![pipeline status](https://gitlab.com/redfruitt/Franklin/badges/master/pipeline.svg)](https://gitlab.com/redfruitt/Franklin/commits/master)
+[![coverage report](https://gitlab.com/redfruitt/Franklin/badges/master/.coverage)](https://gitlab.com/redfruitt/Franklin/commits/master)
