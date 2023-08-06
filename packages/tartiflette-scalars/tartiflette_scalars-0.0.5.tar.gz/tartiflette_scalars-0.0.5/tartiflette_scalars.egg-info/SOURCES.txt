@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+tartiflette_scalars/__init__.py
+tartiflette_scalars/logger.py
+tartiflette_scalars.egg-info/PKG-INFO
+tartiflette_scalars.egg-info/SOURCES.txt
+tartiflette_scalars.egg-info/dependency_links.txt
+tartiflette_scalars.egg-info/requires.txt
+tartiflette_scalars.egg-info/top_level.txt

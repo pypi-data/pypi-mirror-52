@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: tartiflette_scalars
+Version: 0.0.5
+Summary: tartiflette_scalars
+Home-page: https://github.com/remorses/tartiflette_scalars
+Author: Tommaso De Rossi
+Author-email: daer.tommy@gmail.com
+License: Apache Software License 2.0
+Description: # some useful scalars
+        
+        ## Usage
+        
+        ```
+        from tartiflette import Scalar
+        from tartiflette_scalars import Json, ObjectId, AnyScalar
+        
+        Scalar("Json")(Json) # gets anything
+        
+        Scalar("AnyScalar")(AnyScalar) # infer the type, "2" becomes 2, "true" becomes True, etc.
+        
+        Scalar("ObjectId")(ObjectId) # transform a 16 characters string into a bson.ObjectId
+        
+        ```
+        
+Keywords: TODO
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
