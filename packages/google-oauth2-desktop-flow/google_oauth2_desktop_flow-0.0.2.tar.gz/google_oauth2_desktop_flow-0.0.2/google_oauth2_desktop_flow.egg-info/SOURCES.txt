@@ -1,0 +1,11 @@
+setup.py
+google_oauth2_desktop_flow/__init__.py
+google_oauth2_desktop_flow/cli.py
+google_oauth2_desktop_flow/tokens.py
+google_oauth2_desktop_flow/utils.py
+google_oauth2_desktop_flow.egg-info/PKG-INFO
+google_oauth2_desktop_flow.egg-info/SOURCES.txt
+google_oauth2_desktop_flow.egg-info/dependency_links.txt
+google_oauth2_desktop_flow.egg-info/entry_points.txt
+google_oauth2_desktop_flow.egg-info/requires.txt
+google_oauth2_desktop_flow.egg-info/top_level.txt
