@@ -1,0 +1,46 @@
+
+mobypy |build| |issues| |coverage| |codesize| |reposize| |license|
+==================================================================
+.. |build| image:: https://img.shields.io/badge/build-passing-success
+.. |issues| image:: https://img.shields.io/github/issues/blainemccarthy/mobypy
+.. |license| image:: https://img.shields.io/github/license/blainemccarthy/mobypy
+.. |coverage| image:: https://img.shields.io/badge/coverage-100%25-success
+.. |codesize| image:: https://img.shields.io/github/languages/code-size/blainemccarthy/mobypy
+.. |reposize| image:: https://img.shields.io/github/repo-size/blainemccarthy/mobypy
+
+Python module for searching the Moby Thesaurus created by Grady Ward
+
+To Install mobypy:
+------------------
+
+>>> pip install mobypy
+
+To Use mobypy:
+--------------
+
+>>> import mobypy
+
+>>> synonyms = mobypy.synonyms("abbreviated")
+>>> print(synonyms)
+['Spartan', 'abridged', 'abstracted', 'aposiopestic', 'bobbed', 'brief', 'brusque', 'capsule', 'capsulized', 'clipped', 'close', 'compact', 'compendious', 'compressed', 'concise', 'condensed', 'contracted', 'crisp', 'cropped', 'curt', 'curtailed', 'cut', 'cut short', 'digested', 'docked', 'elided', 'elliptic', 'epigrammatic', 'gnomic', 'laconic', 'mowed', 'mown', 'nipped', 'pithy', 'pointed', 'pollard', 'polled', 'pruned', 'reaped', 'reserved', 'sententious', 'shaved', 'sheared', 'short', 'short and sweet', 'short-cut', 'shortened', 'snub', 'snubbed', 'succinct', 'summary', 'synopsized', 'taciturn', 'terse', 'tight', 'to the point', 'trimmed', 'truncated']
+
+>>> short_synonyms = mobypy.short_synonyms("abbreviated")
+>>> print(short_synonyms)
+['brief', 'close', 'crisp', 'curt', 'cut', 'mowed', 'mown', 'pithy', 'short', 'snub', 'terse', 'tight']
+
+>>> long_synonyms = mobypy.long_synonyms("abbreviated")
+>>> print(long_synonyms)
+['Spartan', 'abridged', 'abstracted', 'aposiopestic', 'bobbed', 'brusque', 'capsule', 'capsulized', 'clipped', 'compact', 'compendious', 'compressed', 'concise', 'condensed', 'contracted', 'cropped', 'curtailed', 'cut short', 'digested', 'docked', 'elided', 'elliptic', 'epigrammatic', 'gnomic', 'laconic', 'nipped', 'pointed', 'pollard', 'polled', 'pruned', 'reaped', 'reserved', 'sententious', 'shaved', 'sheared', 'short and sweet', 'short-cut', 'shortened', 'snubbed', 'succinct', 'summary', 'synopsized', 'taciturn', 'to the point', 'trimmed', 'truncated']
+
+>>> rev_search = mobypy.reverse_search("abbreviate")
+>>> print(rev_search)
+['compact', 'cut short', 'cut', 'short', 'snub']
+
+If no results are found, an empty list is returned
+
+>>> bad_search = mobypy.synonyms("asdasdasdasd")
+>>> bad_search = mobypy.long_synonyms("asdasdasdasd")
+>>> bad_search = mobypy.short_synonyms("asdasdasdasd")
+>>> bad_search = mobypy.reverse_search("asdasdasdasd")
+>>> print(bad_search)
+[]
