@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: agstream
+Version: 0.0.10
+Summary: Agriscope python library to access data
+Home-page: https://github.com/agriscope/agstream/
+Author: Agriscope
+Author-email: team@agriscope.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Database :: Database Engines/Servers
+Description-Content-Type: text/markdown
+
+AgspStream
+==============
+
+Agriscope data interface for python
+
+This module allows to get data from yours Agribases programmatically
+Data are retreived as an Pandas Datagrams
+
+The development map will introduce data computing capabilities, to enhance
+data analysis comming from agricultural field.
+
+
+What's New
+===========
+- (2019/09) v0.0.10 : solve some display problems
+- (2019/08) Porting to python 3
+- (2018/05) Add functionnal information on Agribases (type, sampling)
+- (2018/05) Solve bug on from, to date 
+- (2018/02) First version 
+
+Dependencies
+=============
+
+Agstream is written to be use with python 2.7 and python 3.6
+It requires Pandas  (>= 0.12.0)::
+
+    pip install pandas
+
+Installations
+=============
+
+    pip install agstream
+
+
+Uses cases
+==========
+	from agstream.session import AgspSession
+	session = AgspSession()
+	session.login(u"masnumeriqueAgStream", u"1AgStream", updateAgribaseInfo=True)
+	session.describe()
+	for abs in session.agribases :
+	    print (u"****************************************")
+	    print (abs)
+	    df = session.getAgribaseDataframe(abs)
+	    print (df.tail())
+    print(u"Fin du programme")
+
+
+
