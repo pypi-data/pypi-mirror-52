@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: sramongo
+Version: 1.2.0
+Summary: A package to download metadata from SRA/Biosample/Geo and dump into a mongo database.
+Home-page: https://github.com/jfear/sramongo
+Author: Justin M Fear
+Author-email: justin.m.fear@gmail.com
+License: MIT license
+Description: UNKNOWN
+Platform: UNKNOWN
