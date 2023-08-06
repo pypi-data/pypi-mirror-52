@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: hadrian-proxy
+Version: 0.9.0
+Summary: Hadrian authenticated proxy.
+Home-page: https://bitbucket.org/disinformationindex/hadrian/src
+License: UNKNOWN
+Author: schen
+Author-email: shu@disinformationindex.org
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tornado >=6.0.3
