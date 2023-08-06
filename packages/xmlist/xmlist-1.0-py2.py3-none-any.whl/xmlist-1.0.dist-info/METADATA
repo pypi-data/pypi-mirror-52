@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: xmlist
+Version: 1.0
+Summary: Functions for generating XML/HTML
+Home-page: https://github.com/j0057/xmlist
+License: UNKNOWN
+Author: Joost Molenaar
+Author-email: j.j.molenaar@gmail.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-flakes; extra == "test"
+Provides-Extra: dev
+Provides-Extra: test
+
+# xmlist
+
+`xmlist` is a module for generating XML, which it represents by lists and tuples.
+
+## using xmlist
+
+    xml = xmlist.serialize(['html',
+        ('xmlns', 'http://www.w3.org/1999/xhtml'),
+        ['head', ['title', 'Hello, world!']],
+        ['body',
+            ['h1', 'Hello, world!'],
+            ['p', 'xmlist is a module for generating XML']]])
+
+## hacking on xmlist
+
+[assuming the setup\_requires and test\_requires are already installed with `pip --user`]
+
+    virtualenv --python=python2.7 --system-site-packages env27 ;
+    env27/bin/pip2 install --editable .
+
+## testing xmlist
+
+    env27/bin/python -B setup.py -q test
+
