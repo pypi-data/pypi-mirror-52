@@ -1,0 +1,9 @@
+setup.py
+my_good_jokes.egg-info/PKG-INFO
+my_good_jokes.egg-info/SOURCES.txt
+my_good_jokes.egg-info/dependency_links.txt
+my_good_jokes.egg-info/not-zip-safe
+my_good_jokes.egg-info/top_level.txt
+my_joke/__init__.py
+my_joke/first_joke.py
+my_joke/second_joke.py
