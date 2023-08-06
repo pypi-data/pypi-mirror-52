@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+src/pupil_pthreads_win/__init__.py
+src/pupil_pthreads_win.egg-info/PKG-INFO
+src/pupil_pthreads_win.egg-info/SOURCES.txt
+src/pupil_pthreads_win.egg-info/dependency_links.txt
+src/pupil_pthreads_win.egg-info/top_level.txt
+src/pupil_pthreads_win/data/COPYING
+src/pupil_pthreads_win/data/COPYING.LIB
+src/pupil_pthreads_win/data/include/pthread.h
+src/pupil_pthreads_win/data/include/sched.h
+src/pupil_pthreads_win/data/include/semaphore.h
+src/pupil_pthreads_win/data/lib/x64/pthreadVC2.dll
+src/pupil_pthreads_win/data/lib/x64/pthreadVC2.lib
