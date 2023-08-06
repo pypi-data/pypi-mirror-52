@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pockethernet
+Version: 0.1.0
+Summary: Library and command line client for the Pockethernet network tester
+Home-page: https://gitlab.com/MartijnBraam/pockethernet-protocol
+Author: Martijn Braam
+Author-email: martijn@brixit.nl
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: cobs
+Requires-Dist: crc16
+
+UNKNOWN
+
+
