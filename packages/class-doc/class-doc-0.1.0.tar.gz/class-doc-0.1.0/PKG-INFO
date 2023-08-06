@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: class-doc
+Version: 0.1.0
+Summary: Extract attributes docstrings defined in various ways
+License: MIT
+Author: Daniel Daniels
+Author-email: danields761@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: more-itertools (>=7.2,<8.0)
