@@ -1,0 +1,15 @@
+blackgate/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+blackgate/cli.py,sha256=xT_3La8q09YSbruWkJjvNSlgJbLPSB-iitkJ2hhNrnw,2635
+blackgate/component.py,sha256=YcHjusWbz28HpTc7ncLTF61sfGBqbNXiv_kJ2tGu1nc,548
+blackgate/config.py,sha256=cAt0LaFiJonM0TgoFXaf14HQGddyMfQHhmi1913NiYg,1332
+blackgate/daemon.py,sha256=iDN-CKaYGVX-YeMrD2S2SV3P0OpRnWk668FQ5haInhI,6746
+blackgate/errors.py,sha256=PKBcYoTjZTbuXGgivBCaEXHfb_7zuRvI_6zTKQ6UsH4,66
+blackgate/http_client.py,sha256=XFefFfOneiMy556H3z8IqgVgC8ir_UWXN894V_stuZU,2121
+blackgate/http_proxy.py,sha256=ZNXUHeAqbVPzuyZsxj9ZwW3p94qdVq6w3W0IfsGZRrU,2554
+blackgate/server.py,sha256=cUlx_fFPQLTQKibdN7C1yaCvHAymh01kg6DUKS7XmAE,521
+blackgate-0.3.0.dist-info/LICENSE,sha256=QXj55y2GZ7RCO1mnduI04q5UjjX_qAnPqLOXyqhoGpk,1091
+blackgate-0.3.0.dist-info/METADATA,sha256=fHtPLMk_gZmOjbXI2Lv1_S29jrYO7GyYJACCGPOLo7o,2175
+blackgate-0.3.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+blackgate-0.3.0.dist-info/entry_points.txt,sha256=Og6WZQhuLeoNmYcGFS2HlIqNXCtOnV_-sNjwHWogD-s,50
+blackgate-0.3.0.dist-info/top_level.txt,sha256=cLcRdEy4g3tcuM-NgnRjt3LmCCz6Hr3tJy3X2XT-DeI,10
+blackgate-0.3.0.dist-info/RECORD,,

@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: blackgate
+Version: 0.3.0
+Summary: Blackgate is an API gateway application.
+Home-page: https://github.com/soasme/blackgate
+Author: Ju Lin
+Author-email: soasme@gmail.com
+License: MIT
+Keywords: microservices,api,gateway,server,production,
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: tornado (<6.0)
+Requires-Dist: PyYAML (>=5.1.2)
+Requires-Dist: click (>=5.0)
+Requires-Dist: raven (>=6.10)
+
+Blackgate
+=========
+
+Blackgate is an API gateway application.  It's stateless and extendable.
+
+.. image:: https://travis-ci.org/soasme/blackgate.svg?branch=master
+.. image:: https://images.microbadger.com/badges/image/soasme/blackgate.svg
+  :target: https://microbadger.com/images/soasme/blackgate
+
+Install via pip
+---------------
+
+Run::
+
+    $ pip install blackgate
+
+Or::
+
+    $ git clone git@github.com:soasme/blackgate.git
+    $ cd blackgate
+    $ python setup.py install
+
+Install via docker
+-------------------
+
+Run::
+
+    $ docker pull soasme/blackgate
+
+
+Example
+--------
+
+Configure Upstream
+```````````````````
+
+A minimal Blackgate config looks something like this::
+
+    ---
+    proxies:
+      - name: github
+        upstream_url: 'https://api.github.com'
+        request_path_regex: /github/(.*)
+        request_path_sub: /\1
+
+Just save it as `blackgate.yml`.
+
+Run Application
+```````````````````
+
+Run application::
+
+    $ blackgate -c ./blackgate.yml --no-daemon start
+
+    # or run as a daemon
+    $ blackgate -c ./blackgate.yml --pidfile=/tmp/blackgate.pid start
+
+    # or run via docker
+    $ docker run -it --rm --name blackgate \
+        -p 9654:9654 \
+        -v blackgate.yml:/etc/blackgate.yml blackgate:latest
+
+Test Blackgate
+```````````````````
+
+Using `curl` to test functionality::
+
+    $ curl http://127.0.0.1:9654/github/repos/soasme/blackgate
+    {"id":59739087,"name":"blackgate","full_name":"soasme/blackgate", ...
+
+
+
+

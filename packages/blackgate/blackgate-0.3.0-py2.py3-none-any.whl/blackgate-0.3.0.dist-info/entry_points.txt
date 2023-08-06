@@ -1,0 +1,3 @@
+[console_scripts]
+blackgate = blackgate.cli:main
+
