@@ -1,0 +1,10 @@
+pandoc-latex-extensions 0.2.0 (2019-09-18)
+
+    * Fixed lettrine plugin bug (Issue #1).
+    * Fixed broken links (PRs #1 and 2).
+
+
+pandoc-latex-extensions 0.1.0 (2019-09-10)
+
+    * Initial release.
+
