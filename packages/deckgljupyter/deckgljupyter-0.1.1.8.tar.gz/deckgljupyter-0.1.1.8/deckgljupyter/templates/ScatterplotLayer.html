@@ -1,0 +1,35 @@
+{
+    'type': ScatterplotLayer,
+
+    // ScatterplotLayer Added.
+    'radiusScale': {{ radiusScale }},
+    'lineWidthUnits': {{ lineWidthUnits }},
+    'lineWdithScale': {{ lineWdithScale }},
+    'stroked': {{ stroked }},
+    'filled': {{ filled }},
+    'radiusMinPixels': {{ radiusMinPixels }},
+    'radiusMaxPixels': {{ radiusMaxPixels }},
+    'lineWidthMinPixels': {{ lineWidthMinPixels }},
+    'lineWidthMaxPixels': {{ lineWidthMaxPixels }},
+    'getPosition': {{ getPosition }},
+    'getRadius': {{ getRadius }},
+    'getColor': {{ getColor }},
+    'getFillColor': {{ getFillColor }},
+    'getLineColor': {{ getLineColor }},
+    'getLineWidth': {{ getLineWidth }},
+
+    // BaseLayer (inherited)
+    'data' : {{ data }},
+    'id' : {{ id }},
+    'visible' : {{ visible }},
+    'opacity' : {{ opacity }},
+    'pickable' : {{ pickable }},
+    'onHover': info => setTooltip(info.object, info.x, info.y, {{ tooltip }}),
+    'onClick' : {{ onClick }},
+    'onDragStart' : {{ onDragStart }},
+    'onDrag' : {{ onDrag }},
+    'onDragEnd' : {{ onDragEnd }},
+    'highlightColor' : {{ highlightColor }}, 
+    'highlightedObjectIndex' : {{ highlightedObjectIndex }},
+    'autoHighlight' : {{ autoHighlight }}
+}
