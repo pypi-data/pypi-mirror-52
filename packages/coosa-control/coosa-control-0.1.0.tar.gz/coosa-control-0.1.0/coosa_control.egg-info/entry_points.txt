@@ -1,0 +1,3 @@
+[console_scripts]
+coosa-control = coosa_control:main
+
