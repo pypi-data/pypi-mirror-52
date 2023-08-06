@@ -1,0 +1,9 @@
+services:
+    server_start_command:
+        class: phoopy.http.http_bundle.source.command.ServerStartCommand
+        kwargs:
+            logger: '@logger'
+            container: '@container'
+            flask_config: '@flask.config'
+        tag:
+            - command
