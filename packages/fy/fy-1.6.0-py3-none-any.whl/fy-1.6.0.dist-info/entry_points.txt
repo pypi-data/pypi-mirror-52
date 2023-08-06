@@ -1,0 +1,3 @@
+[console_scripts]
+fy = fy:command_line_runner
+
