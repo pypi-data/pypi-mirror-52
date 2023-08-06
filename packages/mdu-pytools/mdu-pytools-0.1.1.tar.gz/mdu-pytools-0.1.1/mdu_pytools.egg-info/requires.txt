@@ -1,0 +1,14 @@
+pandas
+loguru
+click
+tqdm
+
+[dev]
+pre-commit
+pipenv
+bumpversion
+invoke
+
+[test]
+pytest
+pytest-cov
