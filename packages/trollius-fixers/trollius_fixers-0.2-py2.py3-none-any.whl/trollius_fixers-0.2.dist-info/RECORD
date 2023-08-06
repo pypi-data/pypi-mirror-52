@@ -1,0 +1,13 @@
+trollius_fixers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trollius_fixers/fix_decorator.py,sha256=rMfUY2a61ItmDo2aduKP7YyfGVGGVeu1Po0svFlznaQ,1824
+trollius_fixers/fix_import_from_return.py,sha256=ui4SVnveOspEsiDj2EXtwR-ySqoOSocvUVUOnbAFu-Y,2564
+trollius_fixers/fix_imports.py,sha256=Pa1e-aZjmEjIdZsyU2FurvGdcVs2UdLXjTgAZgAs7t4,1427
+trollius_fixers/fix_raise_return.py,sha256=42N_O_yEBMfbzlIF9GW5ZZ7BihFcMpDgTEAgSyF3Ils,1677
+trollius_fixers/fix_yield_from.py,sha256=PPc0d8YNwLWB4C-FhYUtecWPdXysc-xoqX43QDeLCe0,2011
+trollius_fixers/trollius2asyncio.py,sha256=7-zb8qG_TrPcoCFp_Z6K0RsrDbGic9mUbPUxOxH6vrg,1203
+trollius_fixers-0.2.dist-info/LICENSE.txt,sha256=91QOotND_s3LSptIYYuVF82pRFB85-YL-UfUL6FXLbk,1068
+trollius_fixers-0.2.dist-info/METADATA,sha256=eLkbth2su4svHSrmqIjazfQyCccW1Xfswm7X15CnUtY,2347
+trollius_fixers-0.2.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+trollius_fixers-0.2.dist-info/entry_points.txt,sha256=pqJCEePTTuTYeemFFZxy1-vYxAf5qZ4RRL2RFvvpnto,76
+trollius_fixers-0.2.dist-info/top_level.txt,sha256=Db_4wtX0hVCtXY2MPvy-4Q54jvpSKAW5sVi9Q9FKGHQ,16
+trollius_fixers-0.2.dist-info/RECORD,,
