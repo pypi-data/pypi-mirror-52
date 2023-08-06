@@ -1,0 +1,8 @@
+social-auth-core
+social-auth-app-django
+
+[dev]
+ipython
+
+[test]
+pytest

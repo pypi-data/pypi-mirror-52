@@ -1,0 +1,308 @@
+html, body {
+  margin: 0;
+}
+
+nav.global {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+  text-size-adjust: 100%;
+}
+
+#global-header {
+  background: transparent;
+  border-bottom: 1px solid hsla(0,0%,70.6%,.35);
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  text-size-adjust: 100%;
+}
+
+#header-contents {
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 16px;
+  text-align: left;
+  text-size-adjust: 100%;
+}
+
+#header-contents #global-branding {
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  left: 50%;
+  line-height: 24px;
+  padding-bottom: 5px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#header-contents #global-branding a {
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+
+  -webkit-transition: none;
+          transition: none;
+}
+
+#header-contents #global-branding a .bt-icon--politico {
+  box-sizing: border-box;
+  color: #dc0228;
+  /* font-size: 1.62rem; */
+
+  -webkit-font-smoothing: antialiased;
+}
+
+#header-contents #global-branding a .bt-icon--politico::before {
+  box-sizing: border-box;
+}
+
+@media (min-width: 350px) {
+  #header-contents #global-branding a .bt-icon--politico {
+    font-size: 26.88px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  #header-contents #global-branding a .bt-icon--politico {
+    font-size: 44.8px;
+    margin: 5px 0 15px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 650px) {
+  #header-contents #global-branding a .bt-icon--politico {
+    font-size: 28.8px;
+    margin: 5px 0 15px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #header-contents #global-branding a .bt-icon--politico {
+    font-size: 49.6px;
+    margin: 5px 0 15px;
+    padding: 0;
+  }
+}
+
+#header-contents #nav-micro {
+  display: block;
+}
+
+#header-contents #nav-micro .header-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 68px;
+  width: 100%;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-align: center;
+}
+
+@media (min-width: 350px) {
+  #header-contents #nav-micro .header-content {
+    height: 68px;
+  }
+}
+
+@media (min-width: 576px) {
+  #header-contents #nav-micro .header-content {
+    height: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  #header-contents #nav-micro .header-content {
+    height: 108.8px;
+  }
+}
+
+#header-contents #nav-micro .header-content .header-left {
+  box-sizing: border-box;
+  height: 24px;
+}
+
+#header-contents #nav-micro .header-content .header-left a {
+  box-sizing: border-box;
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  text-size-adjust: 100%;
+}
+
+#header-contents #nav-micro .header-content .header-left a svg {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4px;
+}
+
+#header-contents #nav-micro .header-content .header-right ul {
+  align-items: center;
+  display: flex;
+  font-family: "DIN 2014", "din-2014","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-variant-ligatures: none;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  list-style: none;
+  list-style-image: none;
+  margin-bottom: 16px;
+  margin-top: 10px;
+  padding-inline-start: 40px;
+  text-transform: uppercase;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-align-items: center;
+}
+
+#header-contents #nav-micro .header-content .header-right ul li {
+  box-sizing: border-box;
+  display: block !important;
+  left: auto;
+  position: relative;
+  top: auto;
+}
+
+#header-contents #nav-micro .header-content .header-right ul li a {
+  background: transparent;
+  color: #000;
+  display: block;
+  padding: 2.4px 12px;
+  text-decoration: none;
+}
+
+#header-contents #nav-micro .header-content .header-right ul li a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+#header-contents #nav-micro .header-content .header-right .d-none .d-sm-none {
+  display: none;
+}
+
+.logo {
+  margin: 27px auto 28px;
+  width: 214px;
+}
+
+.wrap {
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.hed {
+  color: #000000;
+  font-family: "DIN 2014", "din-2014","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 46px;
+  line-height: 48.3px;
+  margin: 0;
+  margin-block-end: 0;
+  margin-block-start: 8px;
+  text-align: left;
+
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+
+  -ms-overflow-style: scrollbar;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+p.dek {
+  box-sizing: border-box;
+  color: #696d70;
+  font-family: Georgia,Times,"Times New Roman",serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  margin-block-end: 8px;
+  margin-block-start: 8px;
+  text-align: left;
+
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+
+  -ms-overflow-style: scrollbar;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footer {
+  background-color: rgb(18, 21, 34);
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.footer .footer-left {
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 32;
+  padding: 0;
+}
+
+.footer .footer-right {
+  color: #FFFFFF;
+  display: flex;
+  font-family: "DIN 2014", "din-2014","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  height: 32px;
+}
+
+.footer .footer-right ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer-right ul li {
+  line-height: 14px;
+  list-style: none outside none;
+  margin: 9px 0;
+  padding: 0 8px;
+}
+
+.footer .footer-right ul li + li {
+  border-left: 1px solid #6e7381;
+  margin: 9px -1px;
+}
+
+.footer .footer-right ul li a {
+  color: hsla(0,0%,100%,.8);
+  text-decoration: none;
+}
+.footer .footer-right ul li a:hover {
+  color: #0e9af3;
+  text-decoration: underline;
+}
+
+.footer .footer-right p {
+  line-height: 32px;
+  margin: 0 0 0 17px;
+}
