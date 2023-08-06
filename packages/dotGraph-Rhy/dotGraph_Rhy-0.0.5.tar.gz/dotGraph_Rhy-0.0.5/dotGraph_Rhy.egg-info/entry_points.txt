@@ -1,0 +1,3 @@
+[console_scripts]
+dotGraph = dotGraph.main:main
+
