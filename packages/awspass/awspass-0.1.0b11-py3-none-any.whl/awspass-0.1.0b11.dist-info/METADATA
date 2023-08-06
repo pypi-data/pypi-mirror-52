@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: awspass
+Version: 0.1.0b11
+Summary: Access keys management for AWS
+Home-page: https://texxas.io/tag/awspass/
+Author: Michał Zaborowski
+Author-email: michal@zaborowski.info.pl
+License: UNKNOWN
+Keywords: aws pass credentials access-key
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (==1.9.225)
+Requires-Dist: passpy (==1.0rc2)
+Requires-Dist: colorama (==0.3.9)
+
+# awspass
+Access keys management for AWS. 
+
+I had issue while dealing with different access credentials, for some accounts.
+So I've putted things like:
+* switching
+* rolling
+* listing
+* security
+into small Python script. 
+
+# how it works?
+In short - pass tool is used to have data encrypted, and ~/.aws/credenitals has current data.
+
+Pass gives security, and having credentials in file, instead of variable in environment means same settings everywhere.
+
+
