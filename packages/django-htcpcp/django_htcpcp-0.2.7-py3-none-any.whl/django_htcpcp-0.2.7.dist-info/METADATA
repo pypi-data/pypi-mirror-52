@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-htcpcp
+Version: 0.2.7
+Summary: Django HyperText Coffee Pot Protocol Middleware (HTCPCP)
+Home-page: https://github.com/dashdanw/django-htcpcp
+Author: Dash Winterson
+Author-email: dashdanw@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/dashdanw/django-htcpcp/archive/0.2.7.tar.gz
+Keywords: htcpcp,django,middleware,RFC 2324,coffee
+Platform: UNKNOWN
+Requires-Dist: setuptools
+Requires-Dist: Django (>=1.8)
+
+UNKNOWN
+
+
