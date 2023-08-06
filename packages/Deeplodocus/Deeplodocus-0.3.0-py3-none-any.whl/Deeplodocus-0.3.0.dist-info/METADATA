@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: Deeplodocus
+Version: 0.3.0
+Summary: The  Deep Learning framework keeping your head above water
+Home-page: https://www.deeplodocus.org/
+Author: Alix Leroy and Samuel Westlake
+Author-email: deeplodocus@gmail.com
+License: MIT
+Project-URL: Documentation, https://www.deeplodocus.org/
+Project-URL: Source, https://github.com/Deeplodocus/deeplodocus/
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5.3
+Requires-Dist: numpy (>=1.15.1)
+Requires-Dist: pyyaml (>=3.13)
+Requires-Dist: pandas (>=0.23.1)
+Requires-Dist: matplotlib (>=2.2.2)
+Requires-Dist: aiohttp (>=3.4.0)
+Requires-Dist: aiohttp-jinja2 (>=1.1.0)
+Requires-Dist: psutil (>=5-4.8)
+Requires-Dist: graphviz
+Requires-Dist: pydot
+Requires-Dist: opencv-python (>=3.4.1)
+
+Deeplodocus is a high-level Python framework for Deep Learning that encourages rapid neural networks  trainings.
+
+

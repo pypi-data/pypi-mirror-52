@@ -1,0 +1,3 @@
+[console_scripts]
+deeplodocus = deeplodocus.core.management:execute_from_command_line
+
