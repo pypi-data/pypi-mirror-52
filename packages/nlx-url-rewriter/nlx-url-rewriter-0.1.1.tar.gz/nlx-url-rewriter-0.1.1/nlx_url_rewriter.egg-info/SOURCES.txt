@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+nlx_url_rewriter/__init__.py
+nlx_url_rewriter/admin.py
+nlx_url_rewriter/apps.py
+nlx_url_rewriter/models.py
+nlx_url_rewriter/rewriter.py
+nlx_url_rewriter.egg-info/PKG-INFO
+nlx_url_rewriter.egg-info/SOURCES.txt
+nlx_url_rewriter.egg-info/dependency_links.txt
+nlx_url_rewriter.egg-info/not-zip-safe
+nlx_url_rewriter.egg-info/requires.txt
+nlx_url_rewriter.egg-info/top_level.txt
