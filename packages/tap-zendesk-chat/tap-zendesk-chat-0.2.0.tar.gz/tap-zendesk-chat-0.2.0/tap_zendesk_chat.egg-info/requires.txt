@@ -1,0 +1,4 @@
+python-dateutil==2.6.0
+pendulum==1.2.0
+singer-python==5.0.3
+requests==2.20.0
