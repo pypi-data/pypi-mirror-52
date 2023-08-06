@@ -1,0 +1,19 @@
+language: python
+python:
+- 3.7
+- 3.6
+- 3.5
+- 2.7
+install: pip install -U tox-travis
+script: tox
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: SpiralOutDoEu
+  server: https://testpypi.python.org/pypi
+  password:
+    secure: kk7rT15hRPxcGEMLzDLWjDgRw90NsGeX3SQds8Ikm/9mK51/U8sD2g8wI2wzeIWu1VaOBmD8MbhhwJSTDgRLfT0JJsKJCRFQGHcpdV1caagh0rBrk50d3xfhOexBrzmT9FumL5PgnlWCGP4JWMtVSALTjbbmzJlWRCZUiyOMBDWJdhscCVMJ2uO9NKMaR4cChl9m4itZH29cum/Z6zfQfIwifMHJZ5iKSycdjoAUXkm+vxaZABhchhhekBvsYD+NR/0EdHe4ufJJsh0ssCfAiUP0YGdM8v459G9175NDBpsJlgkYQRNoWRidymmeP7VhMvaIGimXyfQ+drMYFfpmhuehrl3Lt32y68ju388qH4cqm3qKv8+WJ02hIkyjOt2QYzZFRJfKY3/oOaocAPYfbLvf/1TK2ooFuLsb54YT4c06xH2nRcchW/E5TWyBNtyGa+SiOMWl+osABMb7lLoBnsro7ixlS8OVFzFS0SfaF2CToTSKMpqUdA4Ulp5mT1sBEGxhoITHu3MRSFKoBn5mETbyhlUFELLijOFLVLtTZ9Ub6okZnt0YxfDOCTDDc6l7GwXCxKWhw5ujZcFNbBorA5xvA9IWLQMJ9Kf4ZhC9rT7ZlQNuwU+sxb1X3SIhJeJneDM3ZgsDfaRxbfLTELRdZUoQloKUTB/idVkpFiYN5Hg=
+  on:
+    tags: true
+    repo: SpiralOutDoEu/cookiepy
+    python: 3.7
