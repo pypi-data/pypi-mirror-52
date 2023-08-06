@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+dmaudit/__init__.py
+dmaudit/cli.py
+dmaudit/utils.py
+dmaudit.egg-info/PKG-INFO
+dmaudit.egg-info/SOURCES.txt
+dmaudit.egg-info/dependency_links.txt
+dmaudit.egg-info/entry_points.txt
+dmaudit.egg-info/requires.txt
+dmaudit.egg-info/top_level.txt
