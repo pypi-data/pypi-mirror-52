@@ -1,0 +1,3 @@
+[console_scripts]
+freeotp-extractor = freeotp_extractor:main
+
