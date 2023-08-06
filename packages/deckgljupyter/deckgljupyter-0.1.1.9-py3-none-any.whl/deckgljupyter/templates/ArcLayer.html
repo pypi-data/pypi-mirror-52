@@ -1,0 +1,32 @@
+{
+    'type': ArcLayer,
+    
+    // ArcLayer Added.
+    'widthUnits': {{ widthUnits }},
+    'widthScale': {{ widthScale }},
+    'widthMinPixels': {{ widthMinPixels }},
+    'widthMaxPixels': {{ widthMaxPixels }},
+    'getSourcePosition': {{ getSourcePosition }},
+    'getTargetPosition': {{ getTargetPosition }},
+    'getSourceColor': {{ getSourceColor }},
+    'getTargetColor': {{ getTargetColor }},
+    'getWidth': {{ getWidth }},
+    'getHeight': {{ getHeight }},
+    'getTilt': {{ getTilt }},
+    
+    // BaseLayer (inherited)
+    'data' : {{ data }},
+    'id' : {{ id }},
+    'visible' : {{ visible }},
+    'opacity' : {{ opacity }},
+    'pickable' : {{ pickable }},
+    'onHover': info => setTooltip(info.object, info.x, info.y, {{ tooltip }}),
+    //'onClick' : {{ onClick }},
+    //'onDragStart' : {{ onDragStart }},
+    //'onDrag' : {{ onDrag }},
+    //'onDragEnd' : {{ onDragEnd }},
+    'highlightColor' : {{ highlightColor }}, 
+    'highlightedObjectIndex' : {{ highlightedObjectIndex }},
+    'autoHighlight' : {{ autoHighlight }}
+}
+
