@@ -1,0 +1,9 @@
+blacklisted_tests:
+    - 'test_.*blacklisted'
+
+whitelisted_tests:
+    - 'cfme/tests/v2v'
+
+docstrings:
+    required_fields:
+        - assignee
