@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: pyEMA
+Version: 0.21
+Summary: Experimental and operational modal analysis.
+Home-page: https://github.com/ladisk/pyEMA
+Author: Klemen Zaletelj, Tomaž Bregar, Domen Gorjup, Janko Slavič
+Author-email: janko.slavic@fs.uni-lj.si, ladisk@gmail.com
+License: UNKNOWN
+Description: Experimental and operational modal analysis
+        ===========================================
+        This module supports experimental and operational modal analysis. 
+        
+        For the showcase see: `https://github.com/ladisk/pyEMA/ <https://github.com/ladisk/pyEMA/blob/master/pyEMA%20Showcase.ipynb>`_
+        
+        Documentation is located here: `https://pyema.readthedocs.io/ <https://pyema.readthedocs.io/en/latest/>`_
+        
+Platform: UNKNOWN
