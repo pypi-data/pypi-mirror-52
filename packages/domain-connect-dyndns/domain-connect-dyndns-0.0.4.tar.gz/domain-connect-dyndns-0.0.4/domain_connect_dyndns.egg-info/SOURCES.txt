@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+domain_connect_dyndns.egg-info/PKG-INFO
+domain_connect_dyndns.egg-info/SOURCES.txt
+domain_connect_dyndns.egg-info/dependency_links.txt
+domain_connect_dyndns.egg-info/entry_points.txt
+domain_connect_dyndns.egg-info/requires.txt
+domain_connect_dyndns.egg-info/top_level.txt
+dyndns/__init__.py
+dyndns/command_line.py
+dyndns/domain_setup.py
+dyndns/domain_status.py
+dyndns/domain_update.py
