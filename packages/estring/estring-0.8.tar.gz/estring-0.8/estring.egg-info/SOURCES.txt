@@ -1,0 +1,17 @@
+README.md
+setup.py
+estring/__init__.py
+estring/estring.py
+estring.egg-info/PKG-INFO
+estring.egg-info/SOURCES.txt
+estring.egg-info/dependency_links.txt
+estring.egg-info/entry_points.txt
+estring.egg-info/top_level.txt
+estring/BINS/__init__.py
+estring/BINS/camel2dash.py
+estring/BINS/camel2lod.py
+estring/BINS/capinit.py
+estring/BINS/dash2camel.py
+estring/BINS/dash2lod.py
+estring/BINS/lod2camel.py
+estring/BINS/lod2dash.py
