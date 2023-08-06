@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='utf-8' />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <title>Interactive time series</title>
+
+  <link rel="stylesheet" href="https://aperiosoftware.github.io/timeseries.js/resources/aas.css">
+  <link rel="stylesheet" href="https://aperiosoftware.github.io/timeseries.js/resources/style.css">
+  <link rel="stylesheet" href="https://aperiosoftware.github.io/timeseries.js/resources/timeseries.css">
+  <script language="javascript" type="text/javascript" src="https://aperiosoftware.github.io/timeseries.js/resources/big.min.js"></script>
+  <script language="javascript" type="text/javascript" src="https://aperiosoftware.github.io/timeseries.js/resources/stuquery.js"></script>
+  <script language="javascript" type="text/javascript" src="https://aperiosoftware.github.io/timeseries.js/resources/graph.js"></script>
+  <script language="javascript" type="text/javascript" src="https://aperiosoftware.github.io/timeseries.js/resources/timeseries.js"></script>
+
+  <style type="text/css">
+  body {
+      overflow:hidden;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="msg"></div>
+
+  <div class="row">
+    <div class="example">
+      <figure>
+        <div id="main_figure">
+        </div>
+      </figure>
+
+      <script>
+      var figure;
+      var figure_ready = false;
+
+      S(document).ready(function(){
+        figure = TimeSeries.create("figure.json");
+        figure.initialize(document.getElementById('main_figure'), on_ready);
+      });
+
+      function on_ready() {
+        figure_ready = true;
+      }
+
+      </script>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v4.json",
+  "_extend": {
+    "scales": [
+      {
+        "input": "iso",
+        "name": "xscale",
+        "output": "auto"
+      }
+    ]
+  },
+  "autosize": {
+    "resize": false,
+    "type": "fit"
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "scale": "xscale",
+      "title": "Time"
+    },
+    {
+      "orient": "left",
+      "scale": "yscale",
+      "title": ""
+    }
+  ],
+  "data": [
+    {
+      "format": {
+        "parse": {
+          "error": "number",
+          "flux": "number",
+          "time": "date"
+        },
+        "type": "csv"
+      },
+      "name": "daea58ba-4c73-4942-8d87-78e7d340bbcd",
+      "url": "data_daea58ba-4c73-4942-8d87-78e7d340bbcd.csv"
+    }
+  ],
+  "height": 400,
+  "marks": [
+    {
+      "clip": true,
+      "description": "Markers",
+      "encode": {
+        "enter": {
+          "shape": {
+            "value": "circle"
+          },
+          "x": {
+            "field": "time",
+            "scale": "xscale"
+          },
+          "y": {
+            "field": "flux",
+            "scale": "yscale"
+          }
+        },
+        "hover": {
+          "size": {
+            "value": 80
+          },
+          "tooltip": {
+            "signal": "{'time': datum.time, 'flux': datum.flux}"
+          }
+        },
+        "update": {
+          "fill": {
+            "value": "#000000"
+          },
+          "fillOpacity": {
+            "value": 1
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "value": 20
+          },
+          "stroke": {
+            "value": "#000000"
+          },
+          "strokeOpacity": {
+            "value": 0.2
+          },
+          "strokeWidth": {
+            "value": 0
+          }
+        }
+      },
+      "from": {
+        "data": "daea58ba-4c73-4942-8d87-78e7d340bbcd"
+      },
+      "name": "452ec40a-3193-4a54-ae89-71105e503a67",
+      "type": "symbol"
+    }
+  ],
+  "padding": 0,
+  "scales": [
+    {
+      "domain": [
+        {
+          "signal": "datetime(2016, 2, 22, 12, 30, 31)"
+        },
+        {
+          "signal": "datetime(2016, 2, 22, 12, 30, 43)"
+        }
+      ],
+      "name": "xscale",
+      "padding": 36,
+      "range": "width",
+      "type": "time",
+      "zero": false
+    },
+    {
+      "domain": [
+        1.0,
+        5.0
+      ],
+      "name": "yscale",
+      "padding": 36,
+      "range": "height",
+      "type": "linear",
+      "zero": false
+    }
+  ],
+  "title": "Default",
+  "width": 600
+}
