@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: altair-recipes
+Version: 0.6.2
+Summary: A collection of ready-made statistical graphics for vega
+Author: Antonio Piccolboni
+Author-email: antonio@piccolboni.info
+Requires-Python: >=3.6.0,<4.0.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: altair (>=3.2.0)
+Requires-Dist: autosig (>=0.7.0)
+Requires-Dist: boltons (>=19.1.0)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: pandas (>=0.25.0)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: toolz (>=0.10.0)
+Project-URL: Documentation, https://altair_recipes.readthedocs.io/en/latest/
