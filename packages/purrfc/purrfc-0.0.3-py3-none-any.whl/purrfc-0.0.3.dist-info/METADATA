@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: purrfc
+Version: 0.0.3
+Summary: Wrapper for SAP RFC connector PyRFC
+Home-page: https://github.com/jduncan8142/saprfc
+Author: Jason Duncan
+Author-email: jason.matthew.duncan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: readconfig
+Requires-Dist: redis
+Requires-Dist: pandas
+Requires-Dist: pyrfc
+
+# saprfc
+
+
