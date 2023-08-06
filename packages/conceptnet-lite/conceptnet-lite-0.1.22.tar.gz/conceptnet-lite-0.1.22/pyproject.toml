@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "conceptnet-lite"
+version = "0.1.22"
+description = "Python library to work with ConceptNet offline without the need of PostgreSQL"
+authors = ["Roman Inflianskas <infroma@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ldtoolkit/conceptnet-lite"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+lmdb = "^0.97.0"
+peewee = "^3.10"
+tqdm = "^4.35"
+pysmartdl = "^1.3"
+
+[tool.poetry.dev-dependencies]
+sphinx = "^2.2"
+sphinx-rtd-theme = "^0.4.3"
+sphinx-autodoc-typehints = "^1.7"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
