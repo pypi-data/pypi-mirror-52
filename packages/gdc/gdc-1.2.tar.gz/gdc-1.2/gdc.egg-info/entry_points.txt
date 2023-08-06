@@ -1,0 +1,3 @@
+[console_scripts]
+gdc = gdc.__main__:main
+
