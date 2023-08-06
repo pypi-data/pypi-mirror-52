@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: rest2cmd_stream
+Version: 0.0.7
+Summary: Simple http rest api to cmd line interface.
+Home-page: https://github.com/colask8/rest2cmd_stream.git
+Author: Stojan Veljkovic
+Author-email: cola14@gmail.com
+License: MIT License (c) Bojan Radojevic (techstreets)
+Download-URL: https://github.com/colask8/rest2cmd_stream/tarball/0.0.7
+Description: # rest2cmd
+        Executing cmd tools via HTTP REST interface.
+        
+        Added Streaming to previous version.
+        
+        # How to:
+        When sending request, following *Headers* need to be present
+        STREAM_URL - WebSocket API endpoint
+        STREAM_ROOM - Room to publish
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

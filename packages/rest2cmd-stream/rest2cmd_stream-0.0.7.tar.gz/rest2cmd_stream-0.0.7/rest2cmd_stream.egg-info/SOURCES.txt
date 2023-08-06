@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+rest2cmd_stream/__init__.py
+rest2cmd_stream/rest2cmd.py
+rest2cmd_stream.egg-info/PKG-INFO
+rest2cmd_stream.egg-info/SOURCES.txt
+rest2cmd_stream.egg-info/dependency_links.txt
+rest2cmd_stream.egg-info/requires.txt
+rest2cmd_stream.egg-info/top_level.txt
