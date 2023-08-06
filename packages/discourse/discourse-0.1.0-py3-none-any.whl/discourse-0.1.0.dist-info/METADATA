@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: discourse
+Version: 0.1.0
+Summary: A Python wrapper of the Discourse API
+Home-page: https://github.com/samamorgan/discourse
+Author: Sam Morgan
+Author-email: sama4mail@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# discourse
+A Python wrapper of the Discourse API
+
+There is nothing here, because documentation has not been created yet.
+
+This package was created because I'm just not happy with the other Discourse API
+implementations out there.
+
+Issues and collaborators welcome!
+
+
