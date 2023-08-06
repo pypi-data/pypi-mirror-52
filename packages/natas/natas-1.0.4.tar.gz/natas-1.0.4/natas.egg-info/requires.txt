@@ -1,0 +1,7 @@
+configargparse
+distance
+torch==1.0.0
+torchtext>=0.4.0@https://mikakalevi.com/downloads/text-master.zip#egg=torchtext-0.4.0
+spacy>=2.1.4
+mikatools>=0.0.6
+OpenNMT-py>=0.8.2@https://github.com/OpenNMT/OpenNMT-py/archive/0.8.2.zip#egg=OpenNMT-py-0.8.2
