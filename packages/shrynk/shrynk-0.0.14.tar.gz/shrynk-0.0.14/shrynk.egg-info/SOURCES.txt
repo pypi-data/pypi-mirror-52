@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+data/__init__.py
+data/shrynk/__init__.py
+data/shrynk/default.jsonl.gzip
+shrynk/__init__.py
+shrynk/compressor.py
+shrynk/pandas.py
+shrynk/predictor.py
+shrynk/utils.py
+shrynk.egg-info/PKG-INFO
+shrynk.egg-info/SOURCES.txt
+shrynk.egg-info/dependency_links.txt
+shrynk.egg-info/not-zip-safe
+shrynk.egg-info/requires.txt
+shrynk.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+pandas
+pyarrow
+fastparquet
+sklearn
+preconvert
+preconvert_numpy
+dill
+wrapt_timeout_decorator
+
+[all]
+fastparquet[brotli,lz4,lzo,snappy,zstandard]
+
+[noc]
+fastparquet[brotli,lz4,snappy]
