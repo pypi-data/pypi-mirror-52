@@ -1,0 +1,11 @@
+argcomplete
+chardet
+cryptography<2
+dateparser
+pyasn1
+pyOpenSSL<17.5.0
+pyxdg
+PyYAML
+Scrapy
+sphinx-argparse
+termcolor
