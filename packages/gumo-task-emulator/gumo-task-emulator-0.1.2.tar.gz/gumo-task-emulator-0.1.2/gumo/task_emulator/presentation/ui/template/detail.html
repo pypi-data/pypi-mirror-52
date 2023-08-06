@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Gumo Task Emulator UI: {{queue_name}}</h3>
+
+<a href="/task_emulator/dashboard">Back to dashboard</a>
+
+<table border="1" style="font-size: small;">
+    <tr>
+        <th>Key Name</th>
+        <th>State</th>
+        <th>Relative URI</th>
+        <th>Scheduled At</th>
+        <th>Attempts</th>
+        <th>Run at</th>
+        <th>Action</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td rowspan="{% if task.histories %}3{% else %}2{% endif %}">{{task.key.name()}}</td>
+        <td>{{task.state.value}}</td>
+        <td>{{task.method}} {{task.relative_uri}}</td>
+        <td>{{task.schedule_time}}</td>
+        <td>{{task.attempts}}</td>
+        <td>{{task.run_at}}</td>
+        <td>
+            <a href="/api/tasks/{{task.key.key_path()}}" target="_blank">Detail</a>
+            <a href="/api/task_emulator/tasks/{{task.key.key_path()}}/execute" target="_blank">Retry</a>
+            <a href="/api/task_emulator/tasks/{{task.key.key_path()}}/remove" target="_blank">Mark As Failed</a>
+        </td>
+    </tr>
+    <tr>
+        <th>Payload</th>
+        <td colspan="5">
+           {{task.payload}}
+        </td>
+    </tr>
+    {% if task.histories %}
+    <tr>
+        <td colspan="6">
+            <table border="1">
+                <tr>
+                    <th>Process Started At</th>
+                    <th>Status Code</th>
+                    <th>Response Body</th>
+                    <th>Error Message</th>
+                </tr>
+                {% for history in task.histories %}
+                <tr>
+                    <td>{{history.started_at}}</td>
+                    <td>{{history.status_code}}</td>
+                    <td>{{history.response_body}}</td>
+                    <td>{{history.error_message}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,2 @@
+recursive-include gumo/task_emulator/apidoc *
+recursive-include gumo/task_emulator/presentation/ui/template *
