@@ -1,0 +1,120 @@
+[{
+    "model":"coopstarter_data.resource",
+    "pk":1,
+    "fields":{
+       "name":"Value proposition design",
+       "publication_year":2000,
+       "language":1,
+       "country":"FR",
+       "uri":"https://www.strategyzer.com/books/value-proposition-design",
+       "author":"Alex Osterwalder",
+       "skills":"Is vulputate. Aliquam mollis consectetur enim, et aliquet lorem. Fusce quis placerat urna. Vestibulum pharetra rhoncus felis at mollis. Mauris purus diam, iaculis at massa vel, lacinia sollicitudin mauris. Nullam ultricies, ligula quis varius aliquam, eros mi ultric",
+       "description":"Pellentesque urna neque, posuere ac vulputate et, rhoncus ut nisi. Etiam at ligula eget orci viverra fermentum id pellentesque ante.",
+       "iframe_link":"",
+       "preview_image":"",
+       "target":"public",
+       "type":1,
+       "sharing":"public",
+       "format":[
+          2
+       ],
+       "submitter":1,
+       "fields":[
+          7
+       ],
+       "steps":[
+          4
+       ]
+    }
+ },
+ {
+    "model":"coopstarter_data.resource",
+    "pk":2,
+    "fields":{
+       "name":"Business Plan Spreadsheet",
+       "publication_year":2018,
+       "language":1,
+       "country":"FR",
+       "uri":"https://docs.google.com/spreadsheets/d/1VYNmqo7lm07q5JyKNw5NFf6QMhmhH9osIPjFwjaMipM/",
+       "author":"Blaise Balaise",
+       "skills":"Etiam a hendrerit leo. In fermentum quis libero quis vulputate. Aliquam mollis consectetur enim, et aliquet lorem. Fusce quis placerat urna. Vestibulum pharetra rhoncus",
+       "description":"Mauris malesuada lacus non arcu interdum tincidunt. Etiam consequat, purus id interdum blandit, odio ex interdum felis, ut aliquet metus turpis id tellus.",
+       "iframe_link":"",
+       "preview_image":"",
+       "target":"public",
+       "type":1,
+       "sharing":"public",
+       "format":[
+          3
+       ],
+       "submitter":1,
+       "fields":[
+          7
+       ],
+       "steps":[
+          4
+       ]
+    }
+ },
+ {
+   "model":"coopstarter_data.resource",
+   "pk":3,
+   "fields":{
+      "name":"First steps to be a mentor",
+      "publication_year":2009,
+      "language":2,
+      "country":"EN",
+      "uri":"https://docs.google.com/spreadsheets/d/1VYNmqo7lm07q5JyKNw5NFf6QMhmhH9osIPjFwjaMipM/",
+      "author":"Benito Blaise",
+      "skills":"Etiam a hendrerit leo. In fermentum quis libero quis vulputate. Aliquam mollis consectetur enim, et aliquet lorem. Fusce quis placerat urna. Vestibulum pharetra rhoncus",
+      "description":"Mauris malesuada lacus non arcu interdum tincidunt. Etiam consequat, purus id interdum blandit, odio ex interdum felis, ut aliquet metus turpis id tellus.",
+      "iframe_link":"",
+      "preview_image":"",
+      "target":"public",
+      "type":2,
+      "sharing":"public",
+      "format":[
+         3
+      ],
+      "submitter":2,
+      "fields":[
+         7,
+         5
+      ],
+      "steps":[
+         1,
+         2
+      ]
+   }
+ },
+ {
+   "model":"coopstarter_data.resource",
+   "pk":4,
+   "fields":{
+      "name":"Cooperative statuses in France",
+      "publication_year":2003,
+      "language":2,
+      "country":"EN",
+      "uri":"https://docs.google.com/spreadsheets/d/1VYNmqo7lm07q5JyKNw5NFf6QMhmhH9osIPjFwjaMipM/",
+      "author":"Balzor Troto",
+      "skills":"Etiam a hendrerit leo. In fermentum quis libero quis vulputate. Aliquam mollis consectetur enim, et aliquet lorem. Fusce quis placerat urna. Vestibulum pharetra rhoncus",
+      "description":"Mauris malesuada lacus non arcu interdum tincidunt. Etiam consequat, purus id interdum blandit, odio ex interdum felis, ut aliquet metus turpis id tellus.",
+      "iframe_link":"",
+      "preview_image":"",
+      "target":"public",
+      "type":2,
+      "sharing":"public",
+      "format":[
+         4
+      ],
+      "submitter":2,
+      "fields":[
+         7,
+         3
+      ],
+      "steps":[
+         3,
+         2
+      ]
+   }
+ }]
