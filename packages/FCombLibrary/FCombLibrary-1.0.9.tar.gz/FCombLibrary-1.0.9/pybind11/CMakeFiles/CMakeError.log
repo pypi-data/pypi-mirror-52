@@ -1,0 +1,13 @@
+Performing C++ SOURCE FILE Test HAS_FLTO failed with the following output:
+Change Dir: /Users/marco/Documents/Dev/FCombLibrary/pybind11/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9b1f5/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_9b1f5.dir/build.make CMakeFiles/cmTC_9b1f5.dir/build
+Building CXX object CMakeFiles/cmTC_9b1f5.dir/src.cxx.o
+/Applications/mesasdk/bin/c++    -DHAS_FLTO   -flto -fno-fat-lto-objects -o CMakeFiles/cmTC_9b1f5.dir/src.cxx.o -c /Users/marco/Documents/Dev/FCombLibrary/pybind11/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: error: -fno-fat-lto-objects are supported only with linker plugin
+make[1]: *** [CMakeFiles/cmTC_9b1f5.dir/src.cxx.o] Error 1
+make: *** [cmTC_9b1f5/fast] Error 2
+
+Source file was:
+int main() { return 0; }

@@ -1,0 +1,1 @@
+/Applications/mesasdk/bin/c++ -Os -DNDEBUG -bundle -Wl,-headerpad_max_install_names -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -o cross_module_gil_utils.cpython-37m-darwin.so CMakeFiles/cross_module_gil_utils.dir/cross_module_gil_utils.cpp.o -undefined dynamic_lookup 
