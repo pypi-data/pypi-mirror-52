@@ -1,0 +1,4 @@
+odin-ai==1.1.1
+seaborn>=0.9
+pandas
+scanpy==1.4.4
