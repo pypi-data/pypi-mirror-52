@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: py-pbay
+Version: 0.0.1
+Summary: A python driver for PBay board
+Home-page: https://github.com/tomek-l/py-pbay
+Author: Tomasz Lewicki
+Author-email: t.w.lewicki@gmail.com
+License: UNKNOWN
+Description: # py-pbay
+        A python driver for SPEC Sensors PBay board
+        
+        # Getting started::
+        1. Install pyserial
+        ```pip install pyserial```
+        2. Connect Board & check the board's devpath - e.g. ```/dev/ttyUSB0```.
+        3. Run example:
+        ```python3 example.py /dev/ttyUSB0```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
