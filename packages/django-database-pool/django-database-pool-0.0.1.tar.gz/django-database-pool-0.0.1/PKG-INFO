@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: django-database-pool
+Version: 0.0.1
+Summary: 通过DBUtils库实现Django数据库连接池，目前支持mysql、postgresql 数据库.
+Home-page: https://github.com/binwen/django-db-pool
+Author: binwen
+Author-email: cwb201314@qq.com
+License: MIT License
+Description: README.md
+Platform: UNKNOWN
+Classifier: Topic :: Database
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
