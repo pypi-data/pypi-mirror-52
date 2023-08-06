@@ -1,0 +1,8 @@
+[console_scripts]
+deep-oc = deep_oc_client.shell:main
+
+[deep_oc.cli]
+module_list = deep_oc_client.cmd.modules:ModuleList
+module_ls = deep_oc_client.cmd.modules:ModuleList
+module_show = deep_oc_client.cmd.modules:ModuleShow
+

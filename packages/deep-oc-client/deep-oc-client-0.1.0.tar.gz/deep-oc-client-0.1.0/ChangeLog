@@ -1,0 +1,12 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* Update README
+* Add banner to shell and a more descriptive message in help
+* Add command to show information about a module
+* Implement simple caching
+* Initial simple version, listing modules
+* Intial commit
