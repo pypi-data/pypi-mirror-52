@@ -1,0 +1,5 @@
+pygame==1.9.6
+opencv-python
+scipy
+gym
+absl-py
