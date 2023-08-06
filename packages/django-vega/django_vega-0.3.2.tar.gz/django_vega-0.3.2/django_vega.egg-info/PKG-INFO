@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: django-vega
+Version: 0.3.2
+Summary: Work with Vega in your Django project.
+Home-page: https://github.com/jacoduplessis/django-vega
+Author: Jaco du Plessis
+Author-email: jaco@jacoduplessis.co.za
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: django vega altair
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
