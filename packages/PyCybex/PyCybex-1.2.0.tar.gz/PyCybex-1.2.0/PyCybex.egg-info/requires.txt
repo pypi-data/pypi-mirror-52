@@ -1,0 +1,5 @@
+bitshares==0.1.13
+graphenelib==0.6.1
+requests>=2.19.0
+coincurve==11.0.0
+websockets==6.0
