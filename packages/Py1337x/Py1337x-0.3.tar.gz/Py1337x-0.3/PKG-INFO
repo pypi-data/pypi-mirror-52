@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: Py1337x
+Version: 0.3
+Summary: Py1337x is a library which allows you to access and search 1337x.to. It also help you to sort the torrents by time, size, seeders and leechers and there are a lot more. 
+Home-page: https://github.com/harshanas
+Author: Harshana
+Author-email: harshanamails@gmail.com
+License: MIT
+Download-URL: https://github.com/harshanas/Py1337x/archive/0.2.tar.gz
+Description: UNKNOWN
+Keywords: 1337x.to,torrent,torrent-search,torrent-sort,torrents
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
