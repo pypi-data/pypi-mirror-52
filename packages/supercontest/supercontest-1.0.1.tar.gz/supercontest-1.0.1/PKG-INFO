@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: supercontest
+Version: 1.0.1
+Summary: Client for fetching supercontest data
+Home-page: https://github.com/brianmahlstedt/supercontest
+Author: Brian Mahlstedt
+Author-email: brian.mahlstedt@gmail.com
+License: MIT
+Description: # Supercontest Client
+        
+        I have chosen to enable GraphiQL on [southbaysupercontest](https://southbaysupercontest.com) because it is protected
+        by auth and CSRF. It's a valuable tool for users. [You may explore the data here](https://southbaysupercontest.com/graphql).
+        
+        There is a Python client to fetch your data programmatically, similar to gql. Simply
+        `pip install supercontest` and then run a query like the following example:
+        
+        ```python
+        import supercontest
+        
+        query = """
+        {
+          users (filters: {email_confirmed_at_lt: "2019-10-01T00:00:00"}) {
+            edges {
+              node {
+                email
+                first_name
+              }
+            }
+          }
+        }
+        """
+        
+        data = supercontest.query(email='myemail@domain.com',
+                                  password='mypassword',  # your pw is encrypted over https
+                                  query=query)
+        ```
+        
+        Other heavy-handed solutions like Selenium also work. The endpoint simply requires
+        auth and a CSRF token.
+        
+Keywords: supercontest,football,nfl
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
