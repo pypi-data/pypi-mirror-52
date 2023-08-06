@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: edtf-validate
+Version: 1.1.0
+Summary: Extended Date Time Format Validation
+Home-page: https://github.com/unt-libraries/edtf-validate
+Author: Mark Phillips
+Author-email: mark.phillips@unt.edu
+License: BSD
+Keywords: edtf,extended,datetime,validate
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyparsing
+Requires-Dist: argparse
+Requires-Dist: datetime
+
+See the home page for more information.
+
+
