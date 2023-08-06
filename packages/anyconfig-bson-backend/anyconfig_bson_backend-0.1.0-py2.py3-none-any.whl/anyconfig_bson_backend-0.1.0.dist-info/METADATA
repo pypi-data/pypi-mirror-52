@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: anyconfig-bson-backend
+Version: 0.1.0
+Summary: Backend module for python-anyconfig to load and dump CBOR data
+Home-page: https://github.com/ssato/python-anyconfig-bson-backend
+Author: Satoru SATOH
+Author-email: satoru.satoh@gmail.com
+Maintainer: Satoru SATOH
+Maintainer-email: satoru.satoh@gmail.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: anyconfig
+Requires-Dist: pymongo
+
+
+This is a parser backend module for python-anyconfig to load and dump BSON
+files using pymongo.
+
+NOTE: bson from pymongo package may work with this package but bson
+(https://pypi.python.org/pypi/bson/) does not.
+
+SEE ALSO:
+
+- python-anyconfig: https://pypi.python.org/pypi/anyconfig
+- pymongo: https://pypi.org/project/pymongo/
+- BSON spec: http://bsonspec.org
+- Download:
+
+- PyPI: https://pypi.python.org/pypi/anyconfig-bson-backend
+- Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/
+
