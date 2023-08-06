@@ -1,0 +1,6 @@
+opencv-python
+numpy>=1.10
+rasterio>=1.0.0
+
+[tests]
+pytest

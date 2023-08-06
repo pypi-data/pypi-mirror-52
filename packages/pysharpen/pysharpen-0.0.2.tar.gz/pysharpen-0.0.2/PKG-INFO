@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pysharpen
+Version: 0.0.2
+Summary: Remote sensing image pansharpening and enhancement.
+Home-page: https://github.com/AlexeyTrekin/pansharpen
+Author: Alexey Trekin
+Author-email: alexey.trekin@gmail.com
+License: MIT
+Description: 
+        # A library for remote sensing image pansharpening and enhancement
+        
+        ## The goal is to assemble all the known good methods within one useful python library
+        The data processing is based on rasterio bindings to GDAL binaries.
+        Big files are supported via windowed IO.
+        
+        ## Methods:
+        1. IHS
+        2. Brovey
+        3. Generalized IHS for any number of channels
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.4.0
+Description-Content-Type: text/markdown
+Provides-Extra: tests
