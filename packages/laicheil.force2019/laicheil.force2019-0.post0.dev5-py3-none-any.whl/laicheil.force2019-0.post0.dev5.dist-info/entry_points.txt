@@ -1,0 +1,3 @@
+[console_scripts]
+laicheil.force2019.cli = laicheil.force2019.cli:main
+
