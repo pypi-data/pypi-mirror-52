@@ -1,0 +1,9 @@
+README.md
+setup.py
+python_zilore.egg-info/PKG-INFO
+python_zilore.egg-info/SOURCES.txt
+python_zilore.egg-info/dependency_links.txt
+python_zilore.egg-info/requires.txt
+python_zilore.egg-info/top_level.txt
+ziloreapi/__init__.py
+ziloreapi/api.py
