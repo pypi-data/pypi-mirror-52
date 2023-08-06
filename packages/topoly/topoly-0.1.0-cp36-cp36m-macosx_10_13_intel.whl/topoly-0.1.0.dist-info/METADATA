@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: topoly
+Version: 0.1.0
+Summary: This package provides a set of tools for modeling protein knots, lassos and other.
+Home-page: https://topoly.cent.uw.edu.pl/
+Author: INTERDISCIPLINARY LABORATORY of BIOLOGICAL SYSTEMS MODELLING, University of Warsaw, Warsaw, Poland
+Author-email: jsulkowska@cent.uw.edu.pl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Requires-Dist: argparse
+
+## Requirements
+- cmake 3.8 or later**
+- make
+- CUDA toolkit - nvidia-toolkit (nvcc CUDA compiler)
+- gcc 4.8 or later
+- boost 1.50-1.65
+- Python 3 (3.4 or later)
+- Cython 0.26 or later - use "pip3 install Cython" to install
+- Xcode 9.4 or OLDER (on Mac OS X - Nvidia does not support newer Xcode)
+
+** You can download binary distributions of cmake from: https://cmake.org/download/
+Just unzip and add the cmake-XXX/bin to the PATH, for example:
+
+`export PATH=~/cmake-3.13.0-Linux-x86_64/bin:$PATH`
+
+## Build and test C++ code
+1. Setup the build directory:
+
+``mkdir build && cd build && cmake ..``
+2. Build the binaries:
+``make``
+3. Run the tests*
+``make test``
+
+* The build may be done on a computer without a CUDA supported GPU provided that the nvidia-toolkit is installed.
+The knotnet tests, however, will require a CUDA supported GPU to pass.
+
+* if tests fail you can look into `build/Testing/Temporary` for details.
+
+## Generate distribution
+After building in the `build` directory run:
+
+``make package``
+
+This will produce 3 distribution packages:
+- ZIP package
+- DEB package for Debian and Ubuntu
+- RPM package for RedHat, Scientific Linux and CentOS
+
+## Generate Python Package for PIP
+
+1. In the main folder run:
+
+``python3 setup.py bdist_wheel``
+2. The output should be a wheel (whl) package located in:
+``dist``
+3. If you want to clean and rebuild the package delete the directory
+``rm -rf _skbuild``
+
+## Documentation:
+
+See ``topoly\graph.py`` and ``topoly\doc_example.py``
+
+Generate API documentation as HTML:
+
+1. ``sudo apt install doxygen graphviz``
+2. ``cd topoly``
+3. ``doxygen topoly.doc.cfg`` or run ``doxygen.sh``
+4. The API documentation will be generated to ``topoly-web\api``
+
+
+## Readme for the end user is located in docs/README.md 
+
+## Install C++ support (plugin) for Apache Netbeans 9.0:
+
+Tools->Plugins->Settings->Add
+
+http://updates.netbeans.org/netbeans/updates/8.2/uc/final/distribution/catalog.xml.gz
+
+Based on:
+
+https://stackoverflow.com/questions/51493882/netbeans-9-c-support
+
+---
+
+
