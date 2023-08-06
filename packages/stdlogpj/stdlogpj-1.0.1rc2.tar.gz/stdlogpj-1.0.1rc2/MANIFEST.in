@@ -1,0 +1,4 @@
+include README.md
+include versioneer.py
+include src/stdlogpj/_version.py
+include src/stdlogpj/LICENSE.txt

@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: stdlogpj
+Version: 1.0.1rc2
+Summary: python logging done my way
+Home-page: https://github.com/prjemian/stdlogpj
+Author: Pete R. Jemian
+Author-email: prjemian@gmail.com
+License: Creative Commons Attribution 4.0 International Public License (see LICENSE file)
+Description: # stdlogpj
+        python logging done my way
+        
+        home: https://github.com/prjemian/stdlogpj
+        
+        INSTALL
+        
+            pip install stdlogpj
+        
+        USAGE:
+        
+            import stdlogpj
+            logger = stdlogpj.standard_logging_setup("demo")
+            logger.info("hello")
+        
+        DEMO:
+        
+        ```python
+        #!/usr/bin/env python
+        
+        import stdlogpj
+        
+        logger = stdlogpj.standard_logging_setup("stdlogpj-demo")
+        
+        
+        def thing1(i):
+            logger.info(f"something #{i+1}")
+        
+        
+        def main():
+            logger.info("hello")
+            for i in range(5):
+                logger.debug("calling thing1()")
+                thing1(i)
+            logger.critical("complete")
+        
+        
+        if __name__ == "__main__":
+            logger.warning("before main()")
+            main()
+            logger.error("after main(): no error, really")
+        ```
+        
+Keywords: python,logging
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Freely Distributable
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
