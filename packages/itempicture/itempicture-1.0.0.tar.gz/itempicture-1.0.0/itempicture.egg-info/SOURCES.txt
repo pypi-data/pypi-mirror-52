@@ -1,0 +1,13 @@
+README.md
+setup.py
+itempicture/__init__.py
+itempicture/cli.py
+itempicture/processor.py
+itempicture/svg.py
+itempicture/utils.py
+itempicture.egg-info/PKG-INFO
+itempicture.egg-info/SOURCES.txt
+itempicture.egg-info/dependency_links.txt
+itempicture.egg-info/entry_points.txt
+itempicture.egg-info/requires.txt
+itempicture.egg-info/top_level.txt
