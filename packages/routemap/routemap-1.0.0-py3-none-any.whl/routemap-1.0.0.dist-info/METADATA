@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: routemap
+Version: 1.0.0
+Summary: Generate route maps from various sources.
+Home-page: https://gitlab.com/vascowhite/routemap
+Author: Paul White
+Author-email: routemap@vascowhite.co.uk
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: Pillow
+Requires-Dist: requests
+Requires-Dist: vincenty
+Requires-Dist: geographiclib
+
+Routemap
+========
+
+.. image:: https://gitlab.com/vascowhite/routemap/badges/master/pipeline.svg
+
+Generates a nice looking map of a route from various sources. Here is an 
+example.
+
+.. image:: https://gitlab.com/vascowhite/routemap/raw/master/docs/example.png
+
+Requires python >= 3.5
+
+Requires libgeos and tkinter to be installed. On Debian::
+
+    sudo apt install libgeos-dev python3-tk
+
+If running headless on a server, then python3-tk is not needed.
+
+Also requires Basemap to be installed manually.::
+
+    pip3 install numpy git+https://github.com/matplotlib/basemap.git#egg=basemap
+
+Finally install routemap.::
+
+    pip3 install routemap
+
