@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schemas.artfully.london/v1/feed-error.json",
+    "type": "object",
+    "definitions": {},
+    "properties": {
+        "entity": {
+            "title": "Entity",
+            "description": "Type of the entity that has an error",
+            "type": "string",
+            "enum": [
+                "event",
+                "venue"
+            ]
+        },
+        "venueId": {
+            "title": "Venue ID",
+            "description": "ID of the venue",
+            "type": "string"
+        },
+        "venueEntityId": {
+            "title": "Venue Entity ID",
+            "description": "Venue-unique ID of the entity",
+            "type": "string"
+        },
+        "url": {
+            "title": "URL",
+            "type": "string",
+            "format": "uri",
+            "description": "URL of the entity"
+        },
+        "error": {
+            "title": "Error",
+            "description": "The error message",
+            "type": "string"
+        },
+        "stacktrace": {
+            "title": "Stacktrace",
+            "description": "The error stacktrace",
+            "type": "string"
+        }
+    },
+    "required": [
+        "entity",
+        "venueId",
+        "venueEntityId",
+        "error",
+        "stacktrace"
+    ]
+}
