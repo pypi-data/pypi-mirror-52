@@ -1,0 +1,12 @@
+README.md
+setup.py
+aiohubot/__init__.py
+aiohubot/__main__.py
+aiohubot/core.py
+aiohubot/plugins.py
+aiohubot/robot.py
+aiohubot.egg-info/PKG-INFO
+aiohubot.egg-info/SOURCES.txt
+aiohubot.egg-info/dependency_links.txt
+aiohubot.egg-info/requires.txt
+aiohubot.egg-info/top_level.txt
