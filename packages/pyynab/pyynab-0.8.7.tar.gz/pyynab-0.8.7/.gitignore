@@ -1,0 +1,6 @@
+.idea/
+openapi.yaml
+api/
+Pipfile.lock
+dist/
+*.egg-info

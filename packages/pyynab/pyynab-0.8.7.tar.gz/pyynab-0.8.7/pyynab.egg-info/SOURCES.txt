@@ -1,0 +1,14 @@
+.gitignore
+.travis.yml
+Makefile
+Pipfile
+README.md
+patch_openapi.py
+swagger.json
+.github/workflows/python-package.yml
+.github/workflows/python-publish.yml
+pyynab.egg-info/PKG-INFO
+pyynab.egg-info/SOURCES.txt
+pyynab.egg-info/dependency_links.txt
+pyynab.egg-info/requires.txt
+pyynab.egg-info/top_level.txt
