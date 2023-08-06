@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: nemo-asr
+Version: 0.8
+Summary: Collection of Neural Modules for Speech Recognition
+Home-page: https://github.com/nvidia/nemo
+Author: NVIDIA
+Author-email: nemo-toolkit@nvidia.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+Requires-Dist: nemo-toolkit
+Requires-Dist: librosa
+Requires-Dist: num2words
+Requires-Dist: inflect
+Requires-Dist: torch-stft
+Requires-Dist: soundfile
+Requires-Dist: marshmallow
+Requires-Dist: ruamel.yaml
+Requires-Dist: sox
+
+NeMo ASR Collection: Neural Modules for Automatic Speech Recognition
+====================================================================
+
+**Models**
+
+The NeMo ASR collection currently has modules for building
+1. All Jasper convolutional models:
+..* Jasper DR 10x5
+..* Jasper 15x5 Seperable
+..* Jasper Mini
+2. Jasper Encoder + Seq2seq Decoder
+
+See the documentation and tutorials for ``nemo_asr`` [here](https://nvidia.github.io/NeMo/asr/intro.html).
+
