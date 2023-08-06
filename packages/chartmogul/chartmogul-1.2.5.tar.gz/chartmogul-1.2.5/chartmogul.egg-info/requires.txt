@@ -1,0 +1,5 @@
+future>=0.16.0
+marshmallow<3,>=2.12.1
+promise>=1.0.1
+requests>=2.10.0
+uritemplate>=3.0.0
