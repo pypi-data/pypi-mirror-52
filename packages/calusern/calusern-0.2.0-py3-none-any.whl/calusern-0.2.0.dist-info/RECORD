@@ -1,0 +1,16 @@
+calusern/__init__.py,sha256=Q2t8JzAVAG1BkaiZ8dVrrvgMr8YA1T8i3yK4xEF4bbQ,15990
+calusern/__main__.py,sha256=Sv3XlcMQh5vVuhfcIcVJwjEpRrzESJktLSCtpUJTrOI,287
+calusern/static/a-propos.html,sha256=_pMHbunc9Mi8gBC9r2_u21CsahdXff3BgHFlkJvIT-k,1900
+calusern/static/css/master.css,sha256=DA5V7KO5n6JlTNNJT6W1xdavQew3Kx8n026Xedov2hg,830
+calusern/templates/base.html,sha256=6jKgcp7cfAxaGBTHI2kuLdXy7xR5_LEzgnBKHAf80BY,1356
+calusern/templates/category.html,sha256=2IYSkEgmgZU94NlTQmWbBZgGagLELHoYYYdVVDXyDCk,705
+calusern/templates/entire_exam.html,sha256=9rvFh9T-NLnrM-GTk0FnyOarHe46Dp-4PGeCgieoHLs,1168
+calusern/templates/exercice.html,sha256=Qo5deNEkcz_t8kdFBEel1sGy22p8aXUxkZrLGB8x2yk,1168
+calusern/templates/index.html,sha256=CU9DOKRyIrEborW5m9U_QtQMdAAEAVsKYsuWacp7QTA,874
+calusern/templates/solution.html,sha256=o5f_pJperZ03JEDL_9l4L2pCk_rT6kvEQaX3TqDRtR8,837
+calusern/templates/year_index.html,sha256=ie9cHwZXWhoc3B9ve-bT2Yz1sOQsC-FTxaLb4Vslpf4,1164
+calusern-0.2.0.dist-info/LICENSE,sha256=8rSOVRjPoNKJJa2gIKdq8Hh8MHcNFuAPvB2UqKCWdiA,1075
+calusern-0.2.0.dist-info/METADATA,sha256=0aJIBdZwGJpgL3Zn4bTpIdIFiGW2OOtz3vUywt1w6_w,1362
+calusern-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+calusern-0.2.0.dist-info/top_level.txt,sha256=b0gZQVtAJ0QH9U-OOdEt5jw_JgcmHrzYlNcD7XRFBJM,9
+calusern-0.2.0.dist-info/RECORD,,
