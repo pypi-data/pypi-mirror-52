@@ -1,0 +1,13 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api_url_builder.py,sha256=llwjsh7ZAtsZZ_pe3I-IKTLg4tHsZZneZGdagf3W38M,2099
+tests/test_client.py,sha256=SuWCQqsMYT-PdCZPmOda8yeC2o1LNOFLDGJNM31ENwQ,882
+tests/test_connection.py,sha256=ygbvU_T9ImMGp5VGkCU9PTG3Vwr42If3iDvb6XYnI3g,1280
+xcodestream/__init__.py,sha256=8_f8RKF1Fc4E-Z5VIhvLZxpoDBTlvCl-GLkTqj8b8O0,49
+xcodestream/client.py,sha256=oqkh3GAHK_esUczBImlMKpJ-H0jkEbd9DNwaNwD5j3o,1389
+xcodestream/connection.py,sha256=ygnDnYPZO-b_PwqnJ_Wi2tp8Yu-_FWi8pThS2aQXjVA,1025
+xcodestream/url_api_builder.py,sha256=UUPN_3j4xm-0WeMq-o_I-3m-rP2DR_uCZyrgq-7Qczk,1702
+xcodestream-0.0.8.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+xcodestream-0.0.8.dist-info/METADATA,sha256=0N6cjoKh3OslB5K6NMRSd6siWOJvIil1JJliLlUEPCU,615
+xcodestream-0.0.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+xcodestream-0.0.8.dist-info/top_level.txt,sha256=zqnO_ELi58bpBpOE7VCFZMsA6VoGafIPjxKGpOaqC9w,18
+xcodestream-0.0.8.dist-info/RECORD,,
