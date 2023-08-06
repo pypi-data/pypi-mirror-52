@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pyDcmio
+Version: 2.0.2
+Summary: 
+DICOM managment package.
+
+Home-page: https://github.com/neurospin/pydcmio
+Author: pyDcmio developers
+Author-email: antoine.grigis@cea.fr
+License: CeCILL-B
+Description: PYDCMIO: Python DiCoM IO
+        
+        [pydcmio] A Python project that provides a wrapping over the 'dcm2nii' and 'dcm2niix' commands, common tools to read and anonymize DICOM files, and transcoding features.
+        
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
