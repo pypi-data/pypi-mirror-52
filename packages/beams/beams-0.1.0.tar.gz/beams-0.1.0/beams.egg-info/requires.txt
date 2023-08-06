@@ -1,0 +1,4 @@
+numpy
+plotly
+notebook>=5.3
+ipywidgets==7.5
