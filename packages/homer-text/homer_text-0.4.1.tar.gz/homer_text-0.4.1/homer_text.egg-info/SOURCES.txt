@@ -1,0 +1,14 @@
+README.rst
+setup.py
+homer/__init__.py
+homer/analyzer.py
+homer/cmdline_printer.py
+homer/constants.py
+homer/homer_cmd.py
+homer/throwaway.py
+homer/utils.py
+homer_text.egg-info/PKG-INFO
+homer_text.egg-info/SOURCES.txt
+homer_text.egg-info/dependency_links.txt
+homer_text.egg-info/requires.txt
+homer_text.egg-info/top_level.txt
