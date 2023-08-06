@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pixel-clusterizer
+Version: 3.1.5
+Summary: A fast, generic, and easy to use clusterizer to cluster hits of a pixel matrix in Python.
+Home-page: https://github.com/SiLab-Bonn/pixel_clusterizer
+Author: David-Leon Pohl, Jens Janssen
+Author-email: pohl@physik.uni-bonn.de, janssen@physik.uni-bonn.de
+Maintainer: David-Leon Pohl, Jens Janssen
+Maintainer-email: pohl@physik.uni-bonn.de, janssen@physik.uni-bonn.de
+License: GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
+Keywords: cluster,clusterizer,pixel
+Platform: any
+Requires-Python: >=2.7
+Requires-Dist: numpy
+Requires-Dist: numba (>=0.24.0)
+
+UNKNOWN
+
+
