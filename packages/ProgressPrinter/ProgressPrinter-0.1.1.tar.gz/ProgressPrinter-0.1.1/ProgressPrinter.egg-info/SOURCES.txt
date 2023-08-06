@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+ProgressPrinter/__init__.py
+ProgressPrinter/byte_progress_bar.py
+ProgressPrinter/progress_bar.py
+ProgressPrinter.egg-info/PKG-INFO
+ProgressPrinter.egg-info/SOURCES.txt
+ProgressPrinter.egg-info/dependency_links.txt
+ProgressPrinter.egg-info/top_level.txt
