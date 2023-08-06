@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: appel_geocode
+Version: 0.1.2
+Summary: A faster spatial join/reverse geocoding algorithm
+Home-page: https://github.com/gcoimbra/appel
+Author: Gabriel Coimbra
+Author-email: gcoimbra@riseup.net
+License: UNKNOWN
+Description: # Project Title
+        
+        APPEL: A faster spatial join/reverse geocoding threaded algorithm
+        
+        ## Getting Started
+        
+        
+        Spatial joins are like common relational database joins, just for geographic data. 
+        In general, we have a set of coordinates and we want to know which point is in which polygon, this operation is described as reverse geocoding.
+        The algorithm relies on standard Point-In-Polygon operations but tends to minimize then.
+        
+        APPEL proposes a new way to spatial joins that promises to be faster than than trivial brute force and R-Tree implementation of PostGIS and GeoPandas.
+        For a million points it takes about 14 seconds to finish locating, while PostGIS takes about 7 minutes and GeoPandas takes 1 minutes and 7 seconds. 
+        All on the same machine.
+        
+        To do so, the polygons to be searched are organized through a tree. The tree levels are predefined based on states, mesoregions, microregions and municipalities.
+        In addition, it is considered that the geographic points provided by users are more likely to be located in more populated regions.
+        Therefore, these areas are sorted to be the first to be found at each level of the tree. 
+        
+        Currently, the systems works only for Brazil territory and locates the cities of each point.
+        But it's principle is extensible for any geographical region.
+        You'll need just a shapefile (or equivalent) with each region and subregions population to build the data structure.
+        
+        
+        These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+        
+        ### Prerequisites
+        
+        ```
+        Python 3.6
+        GeoPandas
+        Numpy
+        Shapely
+        ```
+        
+        ### Installing
+        
+        A step by step series of examples that tell you how to get a development env running
+        Just use pip.
+        
+        ```
+        pip install appel
+        ```
+        By default, it comes with a tree for Brazil's regions.
+        
+        To use, you must input the longitude and latitudes in the query function:
+        ```
+        from numpy import array
+        
+        from appel.searchtree import SearchTree
+        
+        search = SearchTree()
+        
+        longitudes = array([2.748047, -20.890625], dtype='float32')
+        latitudes = array([-63.03125, -49.53125], dtype='float32')
+        results = search.query(longitudes, latitudes)
+        print(results)
+        
+        ```
+        
+        It will return a dataframe with latitudes longitudes and the city id.
+        
+        ## Running the tests
+        
+        Just run methods on the classes of test package.
+        
+        ## Built With
+        
+        * [GeoPandas](http://geopandas.org/) - Essential for reading shapely files and build the search data structure.
+        * [Shapely](https://github.com/Toblerity/Shapely) - vectorized contains function is the core of the search algorithm.
+        
+        ## Contributing
+        
+        Currently I don't have a fixed system. Use issues for critics, help or any question in general.
+        
+        ## Authors
+        
+        * **Gabriel Coimbra** - [gcoimbra](https://github.com/gcoimbra/)
+        
+        ## License
+        
+        This project is licensed under the GNU Affero General Public License - see the [LICENSE.md](LICENSE.md) file for details
+        
+        ## Acknowledgments
+        Thanks [PurpleBooth](https://gist.github.com/PurpleBooth) for this [README.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) template.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
