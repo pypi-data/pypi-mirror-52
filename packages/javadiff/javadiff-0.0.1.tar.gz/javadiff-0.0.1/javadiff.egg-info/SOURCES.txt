@@ -1,0 +1,13 @@
+README.md
+setup.py
+javadiff/CommitsDiff.py
+javadiff/FileDiff.py
+javadiff/SourceFile.py
+javadiff/__init__.py
+javadiff/diff.py
+javadiff/main.py
+javadiff/methodData.py
+javadiff.egg-info/PKG-INFO
+javadiff.egg-info/SOURCES.txt
+javadiff.egg-info/dependency_links.txt
+javadiff.egg-info/top_level.txt
