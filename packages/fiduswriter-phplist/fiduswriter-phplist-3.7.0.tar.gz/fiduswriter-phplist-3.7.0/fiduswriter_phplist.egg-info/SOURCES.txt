@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+fiduswriter/phplist/__init__.py
+fiduswriter/phplist/proxy_views.py
+fiduswriter/phplist/locale/BASE/LC_MESSAGES/djangojs.po
+fiduswriter/phplist/static/js/modules/phplist/index.js
+fiduswriter/phplist/static/js/modules/phplist/templates.js
+fiduswriter/phplist/static/js/plugins/confirm_account/phplist.js
+fiduswriter_phplist.egg-info/PKG-INFO
+fiduswriter_phplist.egg-info/SOURCES.txt
+fiduswriter_phplist.egg-info/dependency_links.txt
+fiduswriter_phplist.egg-info/top_level.txt
