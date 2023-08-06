@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+from geopy.geocoders import Nominatim
+from datetime import datetime
+import requests
+import argparse
+import json
+import sys
+from weathercli import Weather
+
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser(
+        description='Python CLI for Weather.com \n e.g python3 weather.py -p Bhopal -t 3')
+    ap.add_argument("-p", "--place", required=True,
+                    help="Name of the City/Place")
+    ap.add_argument("-d", "--date", default='today',
+                    help="Date \n[default : Current Time]")
+    ap.add_argument("-t", "--type", default="daily", type=int,
+                    help="Type of Forecast: 1: Daily, 2: Hourly, 3: 5-Days, 4: 10-Days, 5: Weekend, 6: Monthly. [Default: 1: Daily]")
+    args = vars(ap.parse_args())
+    Weather(args['place'], args['date'], args['type'])
+
