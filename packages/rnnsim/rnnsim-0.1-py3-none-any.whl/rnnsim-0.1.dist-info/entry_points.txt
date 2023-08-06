@@ -1,0 +1,3 @@
+[console_scripts]
+rnnsim=rnnsim.cli:main
+
