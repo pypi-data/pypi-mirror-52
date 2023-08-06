@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mercylog
+Version: 0.1.0
+Summary: Datalog Inspired Logic Programming in Python
+Author: Rajiv Abraham
+Author-email: rajiv.abraham@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: dataclasses (>=0.6.0,<0.7.0)
+Requires-Dist: multipledispatch (>=0.6.0,<0.7.0)
+Requires-Dist: mypy (>=0.720.0,<0.721.0)
+Requires-Dist: toolz (>=0.10.0,<0.11.0)
