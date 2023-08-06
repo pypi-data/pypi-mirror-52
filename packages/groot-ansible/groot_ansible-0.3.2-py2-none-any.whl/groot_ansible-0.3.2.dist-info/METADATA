@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: groot-ansible
+Version: 0.3.2
+Summary: system installation and update scripts
+Home-page: http://github.com/stonier/groot_ansible
+Author: Daniel Stonier
+Author-email: d.stonier@gmail.com
+Maintainer: Daniel Stonier
+Maintainer-email: d.stonier@gmail.com
+License: BSD
+Keywords: catkin
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Dist: setuptools (<39.1,>=39.0)
+Requires-Dist: PyYAML (<3.13,>=3.12)
+Requires-Dist: ansible (<2.6,>=2.5)
+Provides-Extra: packaging
+Requires-Dist: twine ; extra == 'packaging'
+
+Python wrapped ansible for setting up and updating systems for various use cases.
+
+

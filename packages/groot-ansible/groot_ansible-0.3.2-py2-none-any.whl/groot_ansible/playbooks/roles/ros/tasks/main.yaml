@@ -1,0 +1,77 @@
+---
+#############################################################################
+# Setting Up
+#############################################################################
+
+- name: add osrc repository apt-key
+  apt_key:
+    keyserver: "{{ ros_key_server }}"
+    id: "{{ ros_key_id }}"
+    state: present
+  become: yes
+
+- name: add osrc repository
+  apt_repository:
+    repo: "deb {{ ros_apt_uri }} {{ ansible_lsb.codename }} main"
+    state: present
+    filename: ros
+    update_cache: yes
+  become: yes
+
+#############################################################################
+# Ros Core
+#############################################################################
+
+- name: "update package 'ros-{{ ros_release }}-{{ ros_package }}'"
+  apt:
+    pkg: "ros-{{ ros_release }}-{{ ros_package }}"
+    state: latest
+  become: yes
+
+#############################################################################
+# Ros Update
+#############################################################################
+
+- name: update ros python packages
+  apt:
+    pkg:
+    - python-rosdep
+    - python-bloom
+    - python-wstool
+    - python-vcstool
+    - python-rospkg
+    - python-catkin-pkg
+    - python-catkin-tools
+    only_upgrade: yes
+    state: latest
+  register: update_ros_python_packages_result
+  become: yes
+
+# Check in that it now informs properly when something is upgraded.
+# Previously (trusty, xenial) we used a register hook with a
+# changed_when conditional to check for the resulting phrase on the
+# stdout of the result. The apt module no longer seems pass on stdout
+# to do our own checking in ansible 2.5 though.
+- name: update all ros-{{ ros_release }} packages
+  apt:
+    pkg: ros-{{ ros_release }}-*
+    only_upgrade: yes
+    state: latest
+  become: yes
+
+#############################################################################
+# Rosdep Update
+#############################################################################
+
+- name: rosdep init
+  shell: "rosdep init"
+  args:
+    creates: /etc/ros/rosdep/sources.list.d/20-default.list
+  become: yes
+
+# No way of having a reliable changed or not here unless we go to extremes
+# in checking file sizes and such. Run with -v to get registered result output
+- name: "rosdep update (warning: changes undetectable)"
+  shell: "rosdep update"
+  register: rosdep_result
+  changed_when: False

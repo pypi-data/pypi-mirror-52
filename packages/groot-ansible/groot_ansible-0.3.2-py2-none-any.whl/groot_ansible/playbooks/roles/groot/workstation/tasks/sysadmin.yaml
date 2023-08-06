@@ -1,0 +1,60 @@
+##############################################################################
+# Basic Sysadmin
+##############################################################################
+
+# Add to the users group - do it from groot-ansible-bootstrap instead since
+# the changes can't go into effect till a reboot
+#- user:
+#    name: "{{ ansible_user_id }}"
+#    groups: users,dialout,docker
+#    append: yes
+
+- name: "create {{ ansible_env.HOME }}/.gnupg directory"
+  file:
+    state: directory
+    mode: 0700
+    path: "{{ ansible_env.HOME }}/.gnupg"
+
+- name: "ensure /usr/local/bin is accessible by {{ ansible_user_id }}."
+  file:
+    path: "/usr/local/bin"
+    state: directory
+    recurse: yes
+    owner: "{{ ansible_user_id }}"
+    group: users
+  become: yes
+
+- name: "ensure /usr/local/lib is accessible by {{ ansible_user_id }}."
+  file:
+    path: "/usr/local/lib"
+    state: directory
+    recurse: yes
+    owner: "{{ ansible_user_id }}"
+    group: users
+  become: yes
+
+- name: "netrc configuration to {{ ansible_env.HOME }}/.netrc"
+  template:
+    dest: "{{ ansible_env.HOME }}/.netrc"
+    src: netrc.j2
+    force: no
+    mode: 0600
+
+- name: "bash aliases to {{ ansible_env.HOME }}/.bash_aliases"
+  template:
+    dest: "{{ ansible_env.HOME }}/.bash_aliases"
+    src: bash_aliases.j2
+    force: no
+    mode: 0644
+
+#- name: remove unused home directories
+#  file:
+#    path: "{{ item }}"
+#    state: absent
+#  with_items:
+#    - "{{ ansible_env.HOME }}/Music"
+#    - "{{ ansible_env.HOME }}/Pictures"
+#    - "{{ ansible_env.HOME }}/Public"
+#    - "{{ ansible_env.HOME }}/Templates"
+#    - "{{ ansible_env.HOME }}/Videos"
+
