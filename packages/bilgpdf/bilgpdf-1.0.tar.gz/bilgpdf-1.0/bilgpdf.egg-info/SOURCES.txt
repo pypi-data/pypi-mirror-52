@@ -1,0 +1,8 @@
+setup.py
+bilgpdf/__init__.py
+bilgpdf/pdf2image.py
+bilgpdf/pdf2text.py
+bilgpdf.egg-info/PKG-INFO
+bilgpdf.egg-info/SOURCES.txt
+bilgpdf.egg-info/dependency_links.txt
+bilgpdf.egg-info/top_level.txt
