@@ -1,0 +1,12 @@
+README.md,sha256=y0xYjTlP-drRQxUb8VlmV0bX0QbTDaVlEsmouiuOia4,1108
+airflow_docker_compose/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_docker_compose/__main__.py,sha256=aGLbYQMhMmWWnZOb0w5b4KF1ojzwE0ppjkG_1WxMRR4,81
+airflow_docker_compose/airflow.cfg,sha256=SDnaZah6EqjnMbi-u05aV9jxWi4XrEudFndIlkDMsNw,10693
+airflow_docker_compose/cli.py,sha256=g4_SJsfr3SeSxjkYVAzxr2fxNge7INS3IRRQOte-G2k,11775
+airflow_docker_compose/docker-compose-template.yml,sha256=BSU780Mg7wdWypDd3HeRGQA7OpTu_q5RJvEI68utO_8,1818
+airflow_docker_compose/test.py,sha256=qrYhA_CSiVjsV-8DBUuiJu2_g_DhdL8g4sVfDEUgWi8,834
+airflow_docker_compose-0.1.6.dist-info/entry_points.txt,sha256=T6HjhXYnSnEqZ_73FZjD3J6MhdW2zNZiwXwwnoBSqSM,78
+airflow_docker_compose-0.1.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+airflow_docker_compose-0.1.6.dist-info/WHEEL,sha256=2ExTMxZnOfNc9iNOUkSKxNFufl-sMyQSjn2E1gOkPGc,85
+airflow_docker_compose-0.1.6.dist-info/METADATA,sha256=YVNtVNtgMQNZg9gRIgLHbS2p5KXjPaMmSPqZDQkKKQ0,1894
+airflow_docker_compose-0.1.6.dist-info/RECORD,,

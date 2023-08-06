@@ -1,0 +1,3 @@
+[console_scripts]
+airflow-docker-compose=airflow_docker_compose.__main__:run
+
