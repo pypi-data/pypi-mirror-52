@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kslabs_scrapy_heroku/__init__.py
+kslabs_scrapy_heroku/app.py
+kslabs_scrapy_heroku/poller.py
+kslabs_scrapy_heroku/scheduler.py
+kslabs_scrapy_heroku/spiderqueue.py
+kslabs_scrapy_heroku/utils.py
+kslabs_scrapy_heroku.egg-info/PKG-INFO
+kslabs_scrapy_heroku.egg-info/SOURCES.txt
+kslabs_scrapy_heroku.egg-info/dependency_links.txt
+kslabs_scrapy_heroku.egg-info/requires.txt
+kslabs_scrapy_heroku.egg-info/top_level.txt
