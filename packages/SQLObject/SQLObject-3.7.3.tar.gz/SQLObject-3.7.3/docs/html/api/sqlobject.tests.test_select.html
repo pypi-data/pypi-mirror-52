@@ -1,0 +1,491 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>sqlobject.tests.test_select module &#8212; SQLObject 3.7.3 documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">SQLObject 3.7.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/sqlobject.tests.test_select.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sqlobject.tests.test_select">
+<span id="sqlobject-tests-test-select-module"></span><h1>sqlobject.tests.test_select module<a class="headerlink" href="#module-sqlobject.tests.test_select" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sqlobject.tests.test_select.Counter2">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">Counter2</code><span class="sig-paren">(</span><em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#Counter2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.Counter2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.main.html#sqlobject.main.SQLObject" title="sqlobject.main.SQLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.main.SQLObject</span></code></a></p>
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.j">
+<code class="sig-name descname">j</code><em class="property"> = counter2</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.j" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.Counter2.n1">
+<em class="property">property </em><code class="sig-name descname">n1</code><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.n1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.Counter2.n2">
+<em class="property">property </em><code class="sig-name descname">n2</code><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.n2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.q">
+<code class="sig-name descname">q</code><em class="property"> = counter2</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.q" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta">
+<em class="property">class </em><code class="sig-name descname">sqlmeta</code><span class="sig-paren">(</span><em class="sig-param">instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.main.html#sqlobject.main.sqlmeta" title="sqlobject.main.sqlmeta"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.main.sqlmeta</span></code></a></p>
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.childName">
+<code class="sig-name descname">childName</code><em class="property"> = None</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.childName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.columnDefinitions">
+<code class="sig-name descname">columnDefinitions</code><em class="property"> = {'n1': &lt;IntCol b4b5ccec n1&gt;, 'n2': &lt;IntCol b4c9030c n2&gt;}</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.columnDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.columnList">
+<code class="sig-name descname">columnList</code><em class="property"> = [&lt;SOIntCol n1 not null&gt;, &lt;SOIntCol n2 not null&gt;]</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.columnList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.columns">
+<code class="sig-name descname">columns</code><em class="property"> = {'n1': &lt;SOIntCol n1 not null&gt;, 'n2': &lt;SOIntCol n2 not null&gt;}</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.idName">
+<code class="sig-name descname">idName</code><em class="property"> = 'id'</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.idName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.indexDefinitions">
+<code class="sig-name descname">indexDefinitions</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.indexDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.indexes">
+<code class="sig-name descname">indexes</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.indexes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.joinDefinitions">
+<code class="sig-name descname">joinDefinitions</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.joinDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.joins">
+<code class="sig-name descname">joins</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.joins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.soClass">
+<code class="sig-name descname">soClass</code><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.soClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#sqlobject.tests.test_select.Counter2" title="sqlobject.tests.test_select.Counter2"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.tests.test_select.Counter2</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.style">
+<code class="sig-name descname">style</code><em class="property"> = &lt;sqlobject.styles.MixedCaseUnderscoreStyle object&gt;</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.style" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.Counter2.sqlmeta.table">
+<code class="sig-name descname">table</code><em class="property"> = 'counter2'</em><a class="headerlink" href="#sqlobject.tests.test_select.Counter2.sqlmeta.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.tests.test_select.IterTest">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">IterTest</code><span class="sig-paren">(</span><em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#IterTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.IterTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.main.html#sqlobject.main.SQLObject" title="sqlobject.main.SQLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.main.SQLObject</span></code></a></p>
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.j">
+<code class="sig-name descname">j</code><em class="property"> = iter_test</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.j" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.IterTest.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.q">
+<code class="sig-name descname">q</code><em class="property"> = iter_test</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.q" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta">
+<em class="property">class </em><code class="sig-name descname">sqlmeta</code><span class="sig-paren">(</span><em class="sig-param">instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.main.html#sqlobject.main.sqlmeta" title="sqlobject.main.sqlmeta"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.main.sqlmeta</span></code></a></p>
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.childName">
+<code class="sig-name descname">childName</code><em class="property"> = None</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.childName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.columnDefinitions">
+<code class="sig-name descname">columnDefinitions</code><em class="property"> = {'name': &lt;StringCol b4b5974c name&gt;}</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.columnDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.columnList">
+<code class="sig-name descname">columnList</code><em class="property"> = [&lt;SOStringCol name&gt;]</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.columnList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.columns">
+<code class="sig-name descname">columns</code><em class="property"> = {'name': &lt;SOStringCol name&gt;}</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.idName">
+<code class="sig-name descname">idName</code><em class="property"> = 'id'</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.idName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.indexDefinitions">
+<code class="sig-name descname">indexDefinitions</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.indexDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.indexes">
+<code class="sig-name descname">indexes</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.indexes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.joinDefinitions">
+<code class="sig-name descname">joinDefinitions</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.joinDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.joins">
+<code class="sig-name descname">joins</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.joins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.soClass">
+<code class="sig-name descname">soClass</code><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.soClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#sqlobject.tests.test_select.IterTest" title="sqlobject.tests.test_select.IterTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.tests.test_select.IterTest</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.style">
+<code class="sig-name descname">style</code><em class="property"> = &lt;sqlobject.styles.MixedCaseUnderscoreStyle object&gt;</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.style" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.IterTest.sqlmeta.table">
+<code class="sig-name descname">table</code><em class="property"> = 'iter_test'</em><a class="headerlink" href="#sqlobject.tests.test_select.IterTest.sqlmeta.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.tests.test_select.TestSelect">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">TestSelect</code><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#TestSelect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.TestSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sqlobject.tests.test_select.TestSelect.accumulateEqual">
+<code class="sig-name descname">accumulateEqual</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">counters</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#TestSelect.accumulateEqual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.TestSelect.accumulateEqual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.TestSelect.counterEqual">
+<code class="sig-name descname">counterEqual</code><span class="sig-paren">(</span><em class="sig-param">counters</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#TestSelect.counterEqual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.TestSelect.counterEqual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.TestSelect.setup_method">
+<code class="sig-name descname">setup_method</code><span class="sig-paren">(</span><em class="sig-param">meth</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#TestSelect.setup_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.TestSelect.setup_method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.TestSelect.test_1">
+<code class="sig-name descname">test_1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#TestSelect.test_1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.TestSelect.test_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.TestSelect.test_2">
+<code class="sig-name descname">test_2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#TestSelect.test_2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.TestSelect.test_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.tests.test_select.UniqTest">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">UniqTest</code><span class="sig-paren">(</span><em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#UniqTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.main.html#sqlobject.main.SQLObject" title="sqlobject.main.SQLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.main.SQLObject</span></code></a></p>
+<dl class="method">
+<dt id="sqlobject.tests.test_select.UniqTest.byName">
+<em class="property">classmethod </em><code class="sig-name descname">byName</code><span class="sig-paren">(</span><em class="sig-param">val</em>, <em class="sig-param">connection=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.byName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.j">
+<code class="sig-name descname">j</code><em class="property"> = uniq_test</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.j" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.tests.test_select.UniqTest.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.q">
+<code class="sig-name descname">q</code><em class="property"> = uniq_test</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.q" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta">
+<em class="property">class </em><code class="sig-name descname">sqlmeta</code><span class="sig-paren">(</span><em class="sig-param">instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.main.html#sqlobject.main.sqlmeta" title="sqlobject.main.sqlmeta"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.main.sqlmeta</span></code></a></p>
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.childName">
+<code class="sig-name descname">childName</code><em class="property"> = None</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.childName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.columnDefinitions">
+<code class="sig-name descname">columnDefinitions</code><em class="property"> = {'name': &lt;StringCol b4b399ac name&gt;}</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.columnDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.columnList">
+<code class="sig-name descname">columnList</code><em class="property"> = [&lt;SOStringCol name&gt;]</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.columnList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.columns">
+<code class="sig-name descname">columns</code><em class="property"> = {'name': &lt;SOStringCol name&gt;}</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.idName">
+<code class="sig-name descname">idName</code><em class="property"> = 'id'</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.idName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.indexDefinitions">
+<code class="sig-name descname">indexDefinitions</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.indexDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.indexes">
+<code class="sig-name descname">indexes</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.indexes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.joinDefinitions">
+<code class="sig-name descname">joinDefinitions</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.joinDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.joins">
+<code class="sig-name descname">joins</code><em class="property"> = []</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.joins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.soClass">
+<code class="sig-name descname">soClass</code><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.soClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#sqlobject.tests.test_select.UniqTest" title="sqlobject.tests.test_select.UniqTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.tests.test_select.UniqTest</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.style">
+<code class="sig-name descname">style</code><em class="property"> = &lt;sqlobject.styles.MixedCaseUnderscoreStyle object&gt;</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.style" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.tests.test_select.UniqTest.sqlmeta.table">
+<code class="sig-name descname">table</code><em class="property"> = 'uniq_test'</em><a class="headerlink" href="#sqlobject.tests.test_select.UniqTest.sqlmeta.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="sqlobject.tests.test_select.names">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">names</code><em class="property"> = ('a', 'b', 'c')</em><a class="headerlink" href="#sqlobject.tests.test_select.names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.setupIter">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">setupIter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#setupIter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.setupIter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_00_normal">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_00_normal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_00_normal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_00_normal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_00b_lazy">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_00b_lazy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_00b_lazy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_00b_lazy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_01_turn_to_list">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_01_turn_to_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_01_turn_to_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_01_turn_to_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_02_generator">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_02_generator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_02_generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_02_generator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_03_ranged_indexed">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_03_ranged_indexed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_03_ranged_indexed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_03_ranged_indexed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_04_indexed_ended_by_exception">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_04_indexed_ended_by_exception</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_04_indexed_ended_by_exception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_04_indexed_ended_by_exception" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_05_select_limit">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_05_select_limit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_05_select_limit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_05_select_limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_06_contains">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_06_contains</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_06_contains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_06_contains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_07_contains_special">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_07_contains_special</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_07_contains_special"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_07_contains_special" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_by_uniq">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_by_uniq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_by_uniq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_by_uniq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_selectBy">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_selectBy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_selectBy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_selectBy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_selectBy_kwargs">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_selectBy_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_selectBy_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_selectBy_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_select_LIKE">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_select_LIKE</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_select_LIKE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_select_LIKE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_select_RLIKE">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_select_RLIKE</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_select_RLIKE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_select_RLIKE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_select_getOne">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_select_getOne</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_select_getOne"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_select_getOne" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_select_perConnection">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_select_perConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_select_perConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_select_perConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sqlobject.tests.test_select.test_select_sqlbuilder">
+<code class="sig-prename descclassname">sqlobject.tests.test_select.</code><code class="sig-name descname">test_select_sqlbuilder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/tests/test_select.html#test_select_sqlbuilder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.tests.test_select.test_select_sqlbuilder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">SQLObject 3.7.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2004-2019, Ian Bicking and contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
+    </div>
+  </body>
+</html>

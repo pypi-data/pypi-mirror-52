@@ -1,0 +1,194 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>sqlobject.sybase.sybaseconnection module &#8212; SQLObject 3.7.3 documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">SQLObject 3.7.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/sqlobject.sybase.sybaseconnection.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sqlobject.sybase.sybaseconnection">
+<span id="sqlobject-sybase-sybaseconnection-module"></span><h1>sqlobject.sybase.sybaseconnection module<a class="headerlink" href="#module-sqlobject.sybase.sybaseconnection" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.sybase.sybaseconnection.</code><code class="sig-name descname">SybaseConnection</code><span class="sig-paren">(</span><em class="sig-param">db</em>, <em class="sig-param">user</em>, <em class="sig-param">password=''</em>, <em class="sig-param">host='localhost'</em>, <em class="sig-param">port=None</em>, <em class="sig-param">locking=1</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.dbconnection.html#sqlobject.dbconnection.DBAPI" title="sqlobject.dbconnection.DBAPI"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.dbconnection.DBAPI</span></code></a></p>
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.HAS_IDENTITY">
+<code class="sig-name descname">HAS_IDENTITY</code><em class="property"> = &quot;\n       SELECT col.name, col.status, obj.name\n       FROM syscolumns col\n       JOIN sysobjects obj\n       ON obj.id = col.id\n       WHERE obj.name = '%s'\n             AND (col.status &amp; 0x80) = 0x80\n    &quot;</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.HAS_IDENTITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.NumericType">
+<code class="sig-name descname">NumericType</code><em class="property"> = None</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.NumericType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.SHOW_COLUMNS">
+<code class="sig-name descname">SHOW_COLUMNS</code><em class="property"> = &quot;SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '%s'&quot;</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.SHOW_COLUMNS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.SHOW_TABLES">
+<code class="sig-name descname">SHOW_TABLES</code><em class="property"> = &quot;SELECT name FROM sysobjects WHERE type='U'&quot;</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.SHOW_TABLES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.addColumn">
+<code class="sig-name descname">addColumn</code><span class="sig-paren">(</span><em class="sig-param">tableName</em>, <em class="sig-param">column</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.addColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.addColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.columnsFromSchema">
+<code class="sig-name descname">columnsFromSchema</code><span class="sig-paren">(</span><em class="sig-param">tableName</em>, <em class="sig-param">soClass</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.columnsFromSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.columnsFromSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.createColumn">
+<code class="sig-name descname">createColumn</code><span class="sig-paren">(</span><em class="sig-param">soClass</em>, <em class="sig-param">col</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.createColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.createColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.createIDColumn">
+<code class="sig-name descname">createIDColumn</code><span class="sig-paren">(</span><em class="sig-param">soClass</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.createIDColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.createIDColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.createIndexSQL">
+<code class="sig-name descname">createIndexSQL</code><span class="sig-paren">(</span><em class="sig-param">soClass</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.createIndexSQL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.createIndexSQL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.createReferenceConstraint">
+<code class="sig-name descname">createReferenceConstraint</code><span class="sig-paren">(</span><em class="sig-param">soClass</em>, <em class="sig-param">col</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.createReferenceConstraint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.createReferenceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.dbName">
+<code class="sig-name descname">dbName</code><em class="property"> = 'sybase'</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.dbName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.delColumn">
+<code class="sig-name descname">delColumn</code><span class="sig-paren">(</span><em class="sig-param">sqlmeta</em>, <em class="sig-param">column</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.delColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.delColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.guessClass">
+<code class="sig-name descname">guessClass</code><span class="sig-paren">(</span><em class="sig-param">t</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.guessClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.guessClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.insert_id">
+<code class="sig-name descname">insert_id</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.insert_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.insert_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sybase adapter/cursor does not support the
+insert_id method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.joinSQLType">
+<code class="sig-name descname">joinSQLType</code><span class="sig-paren">(</span><em class="sig-param">join</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.joinSQLType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.joinSQLType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.makeConnection">
+<code class="sig-name descname">makeConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.makeConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.makeConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.schemes">
+<code class="sig-name descname">schemes</code><em class="property"> = ['sybase']</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.schemes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.supportTransactions">
+<code class="sig-name descname">supportTransactions</code><em class="property"> = False</em><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.supportTransactions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sybase.sybaseconnection.SybaseConnection.tableExists">
+<code class="sig-name descname">tableExists</code><span class="sig-paren">(</span><em class="sig-param">tableName</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sybase/sybaseconnection.html#SybaseConnection.tableExists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sybase.sybaseconnection.SybaseConnection.tableExists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">SQLObject 3.7.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2004-2019, Ian Bicking and contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
+    </div>
+  </body>
+</html>

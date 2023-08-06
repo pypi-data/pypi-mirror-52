@@ -1,0 +1,107 @@
+language: python
+
+python:
+  - "2.7"
+
+cache: pip
+
+services:
+  - mysql
+  - postgres
+
+addons:
+  apt:
+    packages:
+      - python-egenix-mxdatetime
+      - python-mysqldb
+      - python-psycopg2
+      - python3-psycopg2
+      - firebird2.5-super
+  postgresql: "9.4"
+
+matrix:
+  include:
+    - python: "2.7"
+      env: TESTS=py27-mysql
+    - python: "3.4"
+      env: TESTS=py34-mysql
+    - python: "3.5"
+      env: TESTS=py35-mysql
+    - python: "3.6"
+      env: TESTS=py36-mysql
+    - python: "3.7"
+      dist: xenial
+      env: TESTS=py37-mysql
+    - python: "2.7"
+      env: TESTS=py27-postgres
+    - python: "3.4"
+      env: TESTS=py34-postgres
+    - python: "3.5"
+      env: TESTS=py35-postgres
+    - python: "3.6"
+      env: TESTS=py36-postgres
+    - python: "3.7"
+      dist: xenial
+      env: TESTS=py37-postgres
+    - python: "2.7"
+      env: TESTS=py27-sqlite
+    - python: "3.4"
+      env: TESTS=py34-sqlite
+    - python: "3.5"
+      env: TESTS=py35-sqlite
+    - python: "3.6"
+      env: TESTS=py36-sqlite
+    - python: "3.7"
+      dist: xenial
+      env: TESTS=py37-sqlite
+    - python: "2.7"
+      env: TESTS=py27-flake8
+    - python: "3.7"
+      dist: xenial
+      env: TESTS=py37-flake8
+    - python: "2.7"
+      env: TESTS=py27-firebird
+    - python: "3.6"
+      env: TESTS=py36-firebird
+    - python: "2.7"
+      env: TESTS=py27-firebird
+    - python: "3.6"
+      env: TESTS=py36-firebird
+
+  allow_failures:
+    - env: TESTS=py27-firebird
+    - env: TESTS=py36-firebird
+    - env: TESTS=py27-firebird
+    - env: TESTS=py36-firebird
+
+  fast_finish: true
+
+before_install:
+  # Start the firebird database server.
+  # We use firebird-super, so there's none of the inetd configuration
+  # required by firebird-classic.
+  # We also create a test user for the firebird test and
+  # create a script that can be fed into isql-fb
+  # to create the test database.
+  # Copied password initializtion from
+  # https://github.com/xdenser/node-firebird-libfbclient/blob/master/.travis.yml
+  - if [[ $TESTS = *firebird* ]]; then
+      sudo sed -i /etc/default/firebird2.5 -e 's/=no/=yes/' &&
+      sudo /etc/init.d/firebird2.5-super start && sleep 5 &&
+      sudo /bin/bash -c '(export FB_VER="2.5"; export FB_FLAVOUR="super";source /usr/share/firebird2.5-common/functions.sh; writeNewPassword masterkey)' &&
+      sudo gsec -user sysdba -pass masterkey -add test -pw test &&
+      sudo /bin/bash -c "echo \"CREATE DATABASE 'localhost:/tmp/test.fdb';\" > /var/lib/firebird/create_test_db" &&
+      sudo chmod 644 /var/lib/firebird/create_test_db;
+    fi
+
+install: travis_retry pip install --upgrade "pip < 19.1" setuptools tox coveralls codecov ppu
+
+script: devscripts/tox-select-envs $TESTS
+
+after_success:
+    - cd sqlobject
+    - coveralls
+    - codecov
+
+before_cache:
+  - remove-old-files.py -o 180 ~/.cache/pip

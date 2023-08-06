@@ -1,0 +1,235 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>sqlobject.sqlite.sqliteconnection module &#8212; SQLObject 3.7.3 documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">SQLObject 3.7.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/sqlobject.sqlite.sqliteconnection.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sqlobject.sqlite.sqliteconnection">
+<span id="sqlobject-sqlite-sqliteconnection-module"></span><h1>sqlobject.sqlite.sqliteconnection module<a class="headerlink" href="#module-sqlobject.sqlite.sqliteconnection" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sqlobject.sqlite.sqliteconnection.ErrorMessage">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.sqlite.sqliteconnection.</code><code class="sig-name descname">ErrorMessage</code><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#ErrorMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection">
+<em class="property">class </em><code class="sig-prename descclassname">sqlobject.sqlite.sqliteconnection.</code><code class="sig-name descname">SQLiteConnection</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">autoCommit=1</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sqlobject.dbconnection.html#sqlobject.dbconnection.DBAPI" title="sqlobject.dbconnection.DBAPI"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlobject.dbconnection.DBAPI</span></code></a></p>
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.addColumn">
+<code class="sig-name descname">addColumn</code><span class="sig-paren">(</span><em class="sig-param">tableName</em>, <em class="sig-param">column</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.addColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.addColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.columnsFromSchema">
+<code class="sig-name descname">columnsFromSchema</code><span class="sig-paren">(</span><em class="sig-param">tableName</em>, <em class="sig-param">soClass</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.columnsFromSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.columnsFromSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.createColumn">
+<code class="sig-name descname">createColumn</code><span class="sig-paren">(</span><em class="sig-param">soClass</em>, <em class="sig-param">col</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.createColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.createColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.createEmptyDatabase">
+<code class="sig-name descname">createEmptyDatabase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.createEmptyDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.createEmptyDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.createIDColumn">
+<code class="sig-name descname">createIDColumn</code><span class="sig-paren">(</span><em class="sig-param">soClass</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.createIDColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.createIDColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.createIndexSQL">
+<code class="sig-name descname">createIndexSQL</code><span class="sig-paren">(</span><em class="sig-param">soClass</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.createIndexSQL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.createIndexSQL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.createReferenceConstraint">
+<code class="sig-name descname">createReferenceConstraint</code><span class="sig-paren">(</span><em class="sig-param">soClass</em>, <em class="sig-param">col</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.createReferenceConstraint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.createReferenceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.dbName">
+<code class="sig-name descname">dbName</code><em class="property"> = 'sqlite'</em><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.dbName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.delColumn">
+<code class="sig-name descname">delColumn</code><span class="sig-paren">(</span><em class="sig-param">sqlmeta</em>, <em class="sig-param">column</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.delColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.delColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.dropDatabase">
+<code class="sig-name descname">dropDatabase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.dropDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.dropDatabase" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.getConnection">
+<code class="sig-name descname">getConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.getConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.getConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.guessClass">
+<code class="sig-name descname">guessClass</code><span class="sig-paren">(</span><em class="sig-param">t</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.guessClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.guessClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.joinSQLType">
+<code class="sig-name descname">joinSQLType</code><span class="sig-paren">(</span><em class="sig-param">join</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.joinSQLType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.joinSQLType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.listDatabases">
+<code class="sig-name descname">listDatabases</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.listDatabases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.listDatabases" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.listTables">
+<code class="sig-name descname">listTables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.listTables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.listTables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.makeConnection">
+<code class="sig-name descname">makeConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.makeConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.makeConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.makeMemoryConnection">
+<code class="sig-name descname">makeMemoryConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.makeMemoryConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.makeMemoryConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.oldUri">
+<code class="sig-name descname">oldUri</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.oldUri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.oldUri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.recreateTableWithoutColumn">
+<code class="sig-name descname">recreateTableWithoutColumn</code><span class="sig-paren">(</span><em class="sig-param">sqlmeta</em>, <em class="sig-param">column</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.recreateTableWithoutColumn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.recreateTableWithoutColumn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.releaseConnection">
+<code class="sig-name descname">releaseConnection</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">explicit=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.releaseConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.releaseConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.schemes">
+<code class="sig-name descname">schemes</code><em class="property"> = ['sqlite']</em><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.schemes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.supportTransactions">
+<code class="sig-name descname">supportTransactions</code><em class="property"> = True</em><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.supportTransactions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.tableExists">
+<code class="sig-name descname">tableExists</code><span class="sig-paren">(</span><em class="sig-param">tableName</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.tableExists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.tableExists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sqlobject.sqlite.sqliteconnection.SQLiteConnection.uri">
+<code class="sig-name descname">uri</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sqlobject/sqlite/sqliteconnection.html#SQLiteConnection.uri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.SQLiteConnection.uri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sqlobject.sqlite.sqliteconnection.sqlite2_Binary">
+<code class="sig-prename descclassname">sqlobject.sqlite.sqliteconnection.</code><code class="sig-name descname">sqlite2_Binary</code><a class="headerlink" href="#sqlobject.sqlite.sqliteconnection.sqlite2_Binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.memoryview</span></code></p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">SQLObject 3.7.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2004-2019, Ian Bicking and contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0.
+    </div>
+  </body>
+</html>
