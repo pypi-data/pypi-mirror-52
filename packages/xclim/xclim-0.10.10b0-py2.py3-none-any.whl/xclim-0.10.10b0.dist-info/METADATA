@@ -1,0 +1,234 @@
+Metadata-Version: 2.1
+Name: xclim
+Version: 0.10.10b0
+Summary: Derived climate variables built with xarray.
+Home-page: https://github.com/Ouranosinc/xclim
+Author: Travis Logan
+Author-email: logan.travis@ouranos.ca
+License: Apache Software License 2.0
+Keywords: xclim climate climatology netcdf gridded analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+Requires-Dist: scipy (>=1.2)
+Requires-Dist: numpy (>=1.15)
+Requires-Dist: pandas (>=0.23)
+Requires-Dist: cftime (>=1.0.3)
+Requires-Dist: netCDF4 (>=1.4)
+Requires-Dist: dask[complete]
+Requires-Dist: bottleneck (>=1.2.1)
+Requires-Dist: xarray (>=0.12.2)
+Requires-Dist: pyproj (>=1.9.5.1)
+Requires-Dist: pint (>=0.8)
+Requires-Dist: boltons (>=18.0)
+Provides-Extra: dev
+Requires-Dist: pip ; extra == 'dev'
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: watchdog ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-runner ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: guzzle-sphinx-theme ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: pandoc ; extra == 'docs'
+Requires-Dist: ipython ; extra == 'docs'
+
+======
+xclim
+======
+
+.. image:: _static/_images/xclim-logo.png
+        :align: center
+        :target: _static/_images/xclim-logo.png
+        :alt: xclim
+
+.. image:: https://img.shields.io/pypi/v/xclim.svg
+        :align: center
+        :target: https://pypi.python.org/pypi/xclim
+        :alt: Python Package Index Build
+
+.. image:: https://img.shields.io/conda/vn/conda-forge/xclim.svg
+        :align: center
+        :target: https://anaconda.org/conda-forge/xclim
+        :alt: Conda-forge Build Version
+
+----
+
+|build| |coveralls| |codefactor| |zenodo| |black|
+
+* Documentation: |docs|
+* Chat with us: |gitter|
+
+``xclim`` is a library of functions to compute climate indices. It is built using xarray and can benefit from the parallelization handling provided by dask. Its objective is to make it as simple as possible for users to compute indices from large climate datasets and for scientists to write new indices with very little boilerplate.
+
+For example, the following would compute monthly mean temperature from daily mean temperature:
+
+.. code-block:: python
+
+  import xclim
+  import xarray as xr
+  ds = xr.open_dataset(filename)
+  tg = xclim.icclim.TG(ds.tas, freq='YS')
+
+For applications where meta-data and missing values are important to get right, ``xclim`` also provides a class for each index that validates inputs, checks for missing values, converts units and assigns metadata attributes to the output. This provides a mechanism for users to customize the indices to their own specifications and preferences.
+
+``xclim`` is still in active development at the moment, but is close to being production ready. We're are currently nearing a release candidate (as of Q2 2019). If you're interested in participating to the development, please leave us a message on the issue tracker.
+
+* Free software: |license|
+
+Credits
+-------
+
+This work is made possible thanks to the contributions of the Canadian Center for Climate Services.
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+.. |gitter| image:: https://badges.gitter.im/Ouranosinc/xclim.svg
+        :target: https://gitter.im/Ouranosinc/xclim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+        :alt: Gitter Chat
+
+
+.. |build| image:: https://img.shields.io/travis/Ouranosinc/xclim.svg
+        :target: https://travis-ci.org/Ouranosinc/xclim
+        :alt: Build Status
+
+.. |coveralls| image:: https://coveralls.io/repos/github/Ouranosinc/xclim/badge.svg
+        :target: https://coveralls.io/github/Ouranosinc/xclim
+        :alt: Coveralls
+
+.. |codefactor| image:: https://www.codefactor.io/repository/github/ouranosinc/xclim/badge
+        :target: https://www.codefactor.io/repository/github/ouranosinc/xclim
+        :alt: CodeFactor
+
+.. |docs| image:: https://readthedocs.org/projects/xclim/badge
+        :target: https://xclim.readthedocs.io/en/latest
+        :alt: Documentation Status
+
+.. |zenodo| image:: https://zenodo.org/badge/142608764.svg
+        :target: https://zenodo.org/badge/latestdoi/142608764
+        :alt: DOI
+
+.. |license| image:: https://img.shields.io/github/license/Ouranosinc/xclim.svg
+        :target: https://github.com/Ouranosinc/xclim/blob/master/LICENSE
+        :alt: License
+
+.. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+        :target: https://github.com/python/black
+        :alt: Python Black
+
+
+=======
+History
+=======
+
+0.10.x-beta (2019-06-18)
+------------------------
+* Added indices to ICCLIM module.
+* Added indices `days_over_precip_thresh` and `fraction_over_precip_thresh`.
+* Migrated to a `major.minor.patch-release` semantic versioning system.
+* Removed attributes in netCDF output from Indicators that are not in the CF-convention.
+* Added `fit` indicator to fit the parameters of a distribution to a series.
+* Added utilities with ensemble, run length, and subset algorithms to the documentation.
+* Source code development standards now implement Python Black formatting.
+* Pre-commit is now used to launch code formatting inspections for local development.
+* Documentation now includes more detailed usage and an example workflow notebook.
+* Development build configurations are now available via both Anaconda and pip install methods.
+* Modified create_ensembles() to allow creation of ensemble dataset without a time dimension as well as from xr.Datasets.
+* Modified create ensembles() to pad input data with nans when time dimensions are unequal.
+* Updated subset_gridpoint() and subset_bbox() to use .sel method if 'lon' and 'lat' dims are present.
+* *Added Azure Pipelines to automatically build xclim in Microsoft Windows environments.* -- **REMOVED**
+* Now employing PEP8 + Black compatible autoformatting.
+* Added Windows and macOS images to Travis CI build ensemble.
+* Added variable thresholds for tasmax and tasmin in daily_freezethaw_events.
+* Updated subset.py to use date formatted strings ("%Y", "%Y%m" etc.) in temporal subsetting
+
+
+0.10-beta (2019-06-06)
+----------------------
+* Dropped support for Python 2.
+* Added support for *period of the year* subsetting in ``checks.missing_any``.
+* Now allow for passing positive longitude values when subsetting data with negative longitudes.
+* Improved runlength calculations for small grid size arrays via ``ufunc_1dim`` flag.
+
+0.9-beta (2019-05-13)
+---------------------
+This is a significant jump in the release. Many modifications have been made and will be added to the documentation in the coming days. Among the many changes:
+
+* New indices have been added with documentation and call examples.
+* Run_length based operations have been optimized.
+* Support for CF non-standard calendars.
+* Automated/improved unit conversion and management via pint library.
+* Added ensemble utilities for creation and analysis of muti-model climate ensembles.
+* Added subsetting utilities for spatio-temporal subsets of xarray data objects.
+* Added streamflow indicators.
+* Refactoring of the code : separation of indices.py into a directory with sub-files (simple, threshold and multivariate); ensembles and subset utilities separated into distinct modules (pulled from utils.py).
+* Indicators are now split into packages named by realms. import xclim.atmos to load indicators related to atmospheric variables.
+
+0.8-beta (2019-02-11)
+---------------------
+*This was a staging release and is functionally identical to 0.7-beta*.
+
+0.7-beta (2019-02-05)
+---------------------
+Major Changes:
+
+* Support for resampling of data structured using non-standard CF-Time calendars.
+* Added several ICCLIM and other indicators.
+* Dropped support for Python 3.4.
+* Now under Apache v2.0 license.
+* Stable PyPI-based dependencies.
+* Dask optimizations for better memory management.
+* Introduced class-based indicator calculations with data integrity verification and CF-Compliant-like metadata writing functionality.
+
+Class-based indicators are new methods that allow index calculation with error-checking and provide on-the-fly metadata checks for CF-Compliant (and CF-compliant-like) data that are passed to them. When written to NetCDF, outputs of these indicators will append appropriate metadata based on the indicator, threshold values, moving window length, and time period / resampling frequency examined.
+
+0.6-alpha (2018-10-03)
+----------------------
+* File attributes checks.
+* Added daily downsampler function.
+* Better documentation on ICCLIM indices.
+
+0.5-alpha (2018-09-26)
+----------------------
+* Added total precipitation indicator.
+
+0.4-alpha (2018-09-14)
+----------------------
+* Fully PEP8 compliant and available under MIT License.
+
+0.3-alpha (2018-09-4)
+---------------------
+* Added icclim module.
+* Reworked documentation, docs theme.
+
+0.2-alpha (2018-08-27)
+----------------------
+* Added first indices.
+
+0.1.0-dev (2018-08-23)
+----------------------
+* First release on PyPI.
+
+
