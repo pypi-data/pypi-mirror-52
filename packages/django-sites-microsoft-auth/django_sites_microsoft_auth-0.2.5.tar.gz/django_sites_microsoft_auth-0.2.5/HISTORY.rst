@@ -1,0 +1,34 @@
+=======
+History
+=======
+
+0.2.5 (2019-09-23)
+------------------
+
+* Add SiteConfiguration object for all sites during initial migrate.
+* Change default for login_enabled to False
+
+0.2.4 (2019-09-23)
+------------------
+
+* Fix bug where 'MicrosoftAuthenticationBackend` is not respecting `site` on the MicrosoftAccount model.
+
+0.2.3 (2019-09-23)
+------------------
+
+* Fixed bug with `MicrosoftAuthenticationBackend` not restricting users to their respective sites.
+
+0.2.2 (2019-09-23)
+------------------
+
+* Updated package name to `sites_microsoft_auth` from `microsoft_auth`
+
+0.2.1 (2019-09-23)
+------------------
+
+* Updated documentation.
+
+0.2.0 (2019-09-23)
+------------------
+
+* First working release on PyPi
