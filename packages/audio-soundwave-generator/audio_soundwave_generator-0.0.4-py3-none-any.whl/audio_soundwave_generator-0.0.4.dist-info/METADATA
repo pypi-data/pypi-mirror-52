@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: audio-soundwave-generator
+Version: 0.0.4
+Summary: A package to convert audio file into several waveform images of specific duration
+Home-page: https://github.com/wiwski/audio-soundwave-generator.git
+Author: Witold Wroblewski
+Author-email: witoldwrob@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ffmpeg
+
+# Audio Soundwave Generator
+
+A package to convert audio file into several waveform images of specific duration
+Use ffpmeg to break mp3 in smaller mp3s and convert them into images
+### TODO
+
