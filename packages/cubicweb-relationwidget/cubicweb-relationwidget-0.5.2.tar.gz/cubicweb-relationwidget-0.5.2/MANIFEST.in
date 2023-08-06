@@ -1,0 +1,9 @@
+include *.py
+include tox.ini
+recursive-include cubicweb_relationwidget *.py
+recursive-include test *.py
+include test/data/bootstrap_cubes
+recursive-include cubicweb_relationwidget/data *.gif *.png *.ico *.css *.js
+recursive-include cubicweb_relationwidget/i18n *.po
+prune debian
+prune cubicweb-relationwidget.spec
