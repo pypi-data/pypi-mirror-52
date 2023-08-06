@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: autt
+Version: 2.1.5
+Summary: An feature extraction algorithm
+Home-page: UNKNOWN
+Author: jnddd
+Author-email: 122296743@qq.com
+License: MIT Licence
+Platform: any
+Requires-Dist: numpy
+
+An feature extraction algorithm, improve the FastICA
+
+
