@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyramid-session-redis
+Version: 1.5.1
+Summary: Pyramid web framework session factory backed by Redis
+Home-page: https://github.com/jvanasco/pyramid_session_redis
+Author: Jonathan Vanasco
+Author-email: jonathan@findmeon.com
+License: FreeBSD
+Description: High performance and actively maintained server-side session framework for Pyramid and Redis.  https://github.com/jvanasco/pyramid_session_redis
+Keywords: pyramid session redis
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Pyramid
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: docs
+Provides-Extra: testing
