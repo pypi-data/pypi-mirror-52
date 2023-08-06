@@ -1,0 +1,9 @@
+python-nubia
+jellyfish
+prettytable
+prompt-toolkit
+Pygments
+pyparsing
+termcolor
+wcwidth
+web3>=5.1.0
