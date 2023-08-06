@@ -1,0 +1,14 @@
+fprules/__init__.py,sha256=kqkY5zMS-jmJkH3pA7MTDecRuBA0M28zyRoukTVblG8,574
+fprules/_version.py,sha256=kM8B9tWJzEXX_FdC_0hAClVs4ogvKSGQIOPv8fS6glo,116
+fprules/main.py,sha256=_G44020CrEfDY4oKeUSvfb07ecN51Azxz9-XXd9utCk,12907
+fprules/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fprules/tests/ddl_data.py,sha256=lJuPfy5mnZ6C2Xlc8UL56h8LqV67KyZL0HRCh1mkGiY,1623
+fprules/tests/test_basics.py,sha256=W9mgBHHFcvdUU6fYZ7wqby1d9rSyujIudm80Li9OvRY,3712
+fprules/tests/test_doc.py,sha256=jkb9REiXf-RcF6qCUwmBxIqIBpf-0Bn0SeO_Smsz24Y,3530
+fprules/tests/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fprules/tests/resources/example_csv_ddl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fprules-0.2.1.dist-info/LICENSE,sha256=yTeWsaz_NqBZHpBx6sqlzffuH9jd2qPvaWjREK-uYwU,1514
+fprules-0.2.1.dist-info/METADATA,sha256=Bfr966KRbnm5kjrkfryaM6aTEN_I0RaGfz3phCHXtQw,2543
+fprules-0.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+fprules-0.2.1.dist-info/top_level.txt,sha256=EvVkExOnCkMXcFTYYVHujJa6Eajskse0_w484pFPnvQ,8
+fprules-0.2.1.dist-info/RECORD,,
