@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+target_azureblobstorage.py
+target_azureblobstorage.egg-info/PKG-INFO
+target_azureblobstorage.egg-info/SOURCES.txt
+target_azureblobstorage.egg-info/dependency_links.txt
+target_azureblobstorage.egg-info/entry_points.txt
+target_azureblobstorage.egg-info/requires.txt
+target_azureblobstorage.egg-info/top_level.txt

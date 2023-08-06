@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    target-azureblobstorage=target_azureblobstorage:main
+    
