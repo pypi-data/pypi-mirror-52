@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gerby
+Version: 0.3.0
+Summary: Core functionality for Very data analysis.
+Author: Jeff McGehee
+Author-email: jeff@verypossible.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: cached_property (>=1.5,<2.0)
+Requires-Dist: numpy (>=1.17,<2.0)
+Requires-Dist: pandas (>=0.25.0,<0.26.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: slackclient (==1.3.2)
