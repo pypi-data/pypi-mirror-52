@@ -1,0 +1,8 @@
+pandas
+SQLAlchemy
+snowflake-connector-python
+snowflake-sqlalchemy
+mysql-connector-python
+retrying
+google-cloud-storage
+boto3
