@@ -1,0 +1,4 @@
+
+          [console_scripts]
+          tap-ga360=tap_ga360:main
+      
