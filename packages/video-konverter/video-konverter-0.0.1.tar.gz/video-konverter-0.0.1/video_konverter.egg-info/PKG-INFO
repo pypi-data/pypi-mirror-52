@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: video-konverter
+Version: 0.0.1
+Summary: Convert video files using ffmpeg.
+Home-page: https://github.com/SyntaxualSugar/VideoKonverter
+Author: Trenton Fox
+Author-email: tcfox54@gmail.com
+License: UNKNOWN
+Description: # VideoKonverter
+        
+        VideoKonverter is a small python script for linux systems that allows you to convert video files to and from various formats. Since VideoKonverter works by interfacing with ffmpeg, most formats are accepted. So, why use VideoKonverter over ffmpeg directly? VideoKonverter supports converting entire directories of files to a given format!
+        
+        At some point, I may also get around to writing a qt front end.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
