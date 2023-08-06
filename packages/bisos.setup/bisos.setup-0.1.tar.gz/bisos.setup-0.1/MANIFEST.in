@@ -1,0 +1,14 @@
+# 
+
+include lh-agpl3-LICENSE.txt
+
+include TITLE.txt
+include README.rst
+
+# Include the data files
+recursive-include bisos/bootstrap-vagrants *
+recursive-exclude bisos/bootstrap-vagrants/.git *
+
+global-exclude *.py[co]
+global-exclude */.git/*
+global-exclude *~

@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+TITLE.txt
+lh-agpl3-LICENSE.txt
+setup.py
+./bin/bxSysGenWithGitRepo
+./bin/foreignBxoBaseSetup.sh
+bisos/__init__.py
+bisos.setup.egg-info/PKG-INFO
+bisos.setup.egg-info/SOURCES.txt
+bisos.setup.egg-info/dependency_links.txt
+bisos.setup.egg-info/namespace_packages.txt
+bisos.setup.egg-info/not-zip-safe
+bisos.setup.egg-info/requires.txt
+bisos.setup.egg-info/top_level.txt
+bisos/setup/__init__.py
+bisos/setup/bootstrapPkgThis.py
