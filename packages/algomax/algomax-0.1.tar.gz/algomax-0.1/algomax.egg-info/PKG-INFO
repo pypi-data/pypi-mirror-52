@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: algomax
+Version: 0.1
+Summary: cli tool for write your own trade algorithms
+Home-page: https://mabnadp.com
+Author: mabna DP
+Author-email: mabnadp@gmail.com
+License: UNKNOWN
+Description: # Algomax-CLI
+        
+        A command line tools for working with EMAX API.
+        
+        install the package with bellow command:
+        
+        `-> pip install algomax`
+        
+        use bellow command for working with the package:
+        
+        `-> algomax algorithm.py config.json -p params.json -m schedule.json`
+        
+        **Caution**: scheduling (`-m schedule.json`) functionality has not implemented.
+Keywords: algomax EMAX trader cli-trader algomax-cli
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
