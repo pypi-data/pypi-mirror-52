@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: picard
+Version: 2.2.0.dev4
+Summary: The next generation MusicBrainz tagger
+Home-page: https://picard.musicbrainz.org/
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: MusicBrainz metadata tagger picard
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Description-Content-Type: text/markdown
