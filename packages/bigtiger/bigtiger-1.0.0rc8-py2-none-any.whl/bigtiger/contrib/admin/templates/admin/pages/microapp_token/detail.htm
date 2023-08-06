@@ -1,0 +1,62 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 18em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+{% block box_content %}
+
+
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>微应用|会话票据</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-Id">
+					<td class="field-t">Id：</td>
+					<td class="field-c">{{ object.id }}</td>
+				</tr>
+				<tr class="field field-App_Id">
+					<td class="field-t">AppId：</td>
+					<td class="field-c">{{ object.app_id }}</td>
+				</tr>
+				<tr class="field field-App_Secret">
+					<td class="field-t">App安全码：</td>
+					<td class="field-c">{{ object.app_secret }}</td>
+				</tr>
+				<tr class="field field-Token_Code">
+					<td class="field-t">临时票据：</td>
+					<td class="field-c">{{ object.token_code }}</td>
+				</tr>
+				<tr class="field field-Grant_Type">
+					<td class="field-t">权限类型：</td>
+					<td class="field-c">{{ object.grant_type }}</td>
+				</tr>
+				<tr class="field field-Session_Id">
+					<td class="field-t">会话Id：</td>
+					<td class="field-c">{{ object.session_id }}</td>
+				</tr>
+				<tr class="field field-Expire_Date">
+					<td class="field-t">到期时间：</td>
+					<td class="field-c">{{ object.expire_date }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}
+
+
+

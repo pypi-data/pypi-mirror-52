@@ -1,0 +1,44 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 10em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed" style="word-wrap:break-word; word-break:break-all;">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>系统配置</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-Config_Key">
+					<td class="field-t">键：</td>
+					<td class="field-c">{{ object.config_key }}</td>
+				</tr>
+				<tr class="field field-Config_Value">
+					<td class="field-t">值：</td>
+					<td class="field-c">{{ object.config_value }}</td>
+				</tr>
+				<tr class="field field-Config_Name">
+					<td class="field-t">说明：</td>
+					<td class="field-c">{{ object.config_name }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,57 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.group_name.label_tag }}
+{{ form.group_name }}
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+        		<th data-options="field:'ck',checkbox:true"></th>
+        		<th data-options="field:'name',width:20">角色名称</th>
+        		<th data-options="field:'remark',width:80">角色描述</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search', 'insert', 'update', 'delete'],
+			gridOptions: {
+				fitColumns: true
+			},
+			// detailColumn: 'Id',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {'group_name': $('#id_group_name').val()};
+		    		return q;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

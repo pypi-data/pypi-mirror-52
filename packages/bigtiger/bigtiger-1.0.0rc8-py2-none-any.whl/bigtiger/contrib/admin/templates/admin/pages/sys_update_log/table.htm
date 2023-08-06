@@ -1,0 +1,58 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block toolbarWrapper %}
+<div id="zssly_report_dg_toolbar">
+	<div class="searchWrapper">
+		<form id="searchform" class="form-inline" action="" method="get">{% csrf_token %}
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'version_number',width:10">版本号</th>
+	        	<th data-options="field:'public_date',width:15,formatter:humanize.formatDateTime">发布时间</th>
+	        	<th data-options="field:'update_content',width:60">更新内容</th>
+	        	<th data-options="field:'remark',width:15">备注</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['insert', 'update', 'delete'],
+			gridOptions: {'fitColumns': true},
+			// detailColumn: 'Id',
+			getRowKey: function (row) {
+				var keys = [row['version_number']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+		    		return null;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

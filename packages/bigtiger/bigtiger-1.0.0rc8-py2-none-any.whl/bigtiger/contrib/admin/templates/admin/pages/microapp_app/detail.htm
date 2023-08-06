@@ -1,0 +1,59 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 12em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>微应用|应用信息</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-Id">
+					<td class="field-t">Id：</td>
+					<td class="field-c">{{ object.id }}</td>
+				</tr>
+				<tr class="field field-App_Code">
+					<td class="field-t">App编码：</td>
+					<td class="field-c">{{ object.app_code }}</td>
+				</tr>
+				<tr class="field field-App_Name">
+					<td class="field-t">App名称：</td>
+					<td class="field-c">{{ object.app_name }}</td>
+				</tr>
+				<tr class="field field-App_Secret">
+					<td class="field-t">App安全码：</td>
+					<td class="field-c">{{ object.app_secret }}</td>
+				</tr>
+				<tr class="field field-App_Summary">
+					<td class="field-t">App简介：</td>
+					<td class="field-c">{{ object.app_summary }}</td>
+				</tr>
+				<tr class="field field-Sso_Url">
+					<td class="field-t">单点登陆URL：</td>
+					<td class="field-c">{{ object.sso_url }}</td>
+				</tr>
+				<tr class="field field-Status">
+					<td class="field-t">状态：</td>
+					<td class="field-c">{% ifequal object.status 1 %}启用{% else %}禁用{% endifequal %}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,65 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.daterange.label_tag }}
+{{ form.daterange }}
+</div>
+<div class="form-group">
+{{ form.location.label_tag }}
+{{ form.location }}
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+        	<th data-options="field:'ck',checkbox:true"></th>
+        	<th data-options="field:'ip',width:60">访客IP</th>
+        	<th data-options="field:'request_date',width:60,formatter:humanize.formatDateTime">访问时间</th>
+        	<th data-options="field:'location',width:60">地理位置</th>
+        	<th data-options="field:'remark',width:30">备注</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search', 'delete'],
+			gridOptions: {'fitColumns': true},
+			// detailColumn: 'Id',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {
+					'daterange_begin': $('#id_daterange_begin').val(),
+					'daterange_end': $('#id_daterange_end').val(),
+					'location': $('#id_location').val(),
+				};
+		    		return q;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

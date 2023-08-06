@@ -1,0 +1,68 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 12em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed"  style="word-wrap:break-word; word-break:break-all;">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>用户管理|用户日志</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-user_name">
+					<td class="field-t">操作用户：</td>
+					<td class="field-c">{{ object.user_name }}</td>
+				</tr>
+				<tr class="field field-action_flag">
+					<td class="field-t">动作标志：</td>
+					<td class="field-c">{% ifequal object.action_flag 0 %}登陆{% else %}其他{% endifequal %}</td>
+				</tr>
+				<tr class="field field-action_time">
+					<td class="field-t">操作时间：</td>
+					<td class="field-c">{{ object.action_time }}</td>
+				</tr>
+				<tr class="field field-ip">
+					<td class="field-t">ip：</td>
+					<td class="field-c">{{ object.ip }}</td>
+				</tr>
+				<tr class="field field-action_class">
+					<td class="field-t">操作类名：</td>
+					<td class="field-c">{{ object.action_class }}</td>
+				</tr>
+				<tr class="field field-action_object">
+					<td class="field-t">操作对象：</td>
+					<td class="field-c">{{ object.action_object }}</td>
+				</tr>
+				<tr class="field field-action_handler">
+					<td class="field-t">执行处理器：</td>
+					<td class="field-c">{{ object.action_handler }}</td>
+				</tr>
+				<tr class="field field-status">
+					<td class="field-t">执行状态：</td>
+					<td class="field-c">{% ifequal object.status 1 %}成功{% else %}失败{% endifequal %}</td>
+				</tr>
+				<tr class="field field-status_note">
+					<td class="field-t">状态说明：</td>
+					<td class="field-c">{{ object.status_note }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}
+
+
+

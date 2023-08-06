@@ -1,0 +1,49 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 18em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>系统黑名单</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-id">
+					<td class="field-t">id：</td>
+					<td class="field-c">{{ object.id }}</td>
+				</tr>
+				<tr class="field field-ip">
+					<td class="field-t">ip：</td>
+					<td class="field-c">{{ object.ip }}</td>
+				</tr>
+				<tr class="field field-begin_date">
+					<td class="field-t">开始时间：</td>
+					<td class="field-c">{{ object.begin_date }}</td>
+				</tr>
+				<tr class="field field-end_date">
+					<td class="field-t">截止时间：</td>
+					<td class="field-c">{{ object.end_date }}</td>
+				</tr>
+				<tr class="field field-remark">
+					<td class="field-t">备注：</td>
+					<td class="field-c">{{ object.remark }}</td>
+				</tr>
+				</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

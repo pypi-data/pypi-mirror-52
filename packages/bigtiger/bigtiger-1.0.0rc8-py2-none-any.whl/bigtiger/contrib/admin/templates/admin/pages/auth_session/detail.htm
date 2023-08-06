@@ -1,0 +1,44 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 10em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed" style="word-wrap:break-word; word-break:break-all;">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>用户管理|会话信息</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-Session_Key">
+					<td class="field-t">会话Key：</td>
+					<td class="field-c">{{ object.session_key }}</td>
+				</tr>
+				<tr class="field field-Expire_Date">
+					<td class="field-t">到期时间：</td>
+					<td class="field-c">{{ object.expire_date }}</td>
+				</tr>
+				<tr class="field field-Session_Data">
+					<td class="field-t">会话数据：</td>
+					<td class="field-c">{{ object.session_data }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}
+
+
+

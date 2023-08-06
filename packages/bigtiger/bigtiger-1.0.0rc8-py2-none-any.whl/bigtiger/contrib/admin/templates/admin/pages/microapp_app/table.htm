@@ -1,0 +1,68 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.app_name.label }}
+{{ form.app_name }}
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'_link',formatter:humanize.formatDetailInfo,width:10,align:'center'"></th>
+	        	<th data-options="field:'app_code',width:40">App编码</th>
+	        	<th data-options="field:'app_name',width:40">App名称</th>
+	        	<th data-options="field:'app_secret',width:90">App安全码</th>
+	        	<th data-options="field:'app_summary',width:90">App简介</th>
+	        	<th data-options="field:'sso_url',width:105">单点登陆URL</th>
+	        	<th data-options="field:'status',width:30,formatter:humanize.formatYesNoImg,align:'center'">状态</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search', 'insert', 'update', 'delete'],
+			gridOptions: {'fitColumns': true},
+			detailColumn: '_link',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {'app_name': $('#id_app_name').val()};
+		    		return q;
+			},
+			deleteValid: function (rows) {
+				if (rows.length > 1) {
+			    		throw {
+			    			'name': 'Error',
+						'message': '只能选择一个删除项目'
+			    		}
+		    		}
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

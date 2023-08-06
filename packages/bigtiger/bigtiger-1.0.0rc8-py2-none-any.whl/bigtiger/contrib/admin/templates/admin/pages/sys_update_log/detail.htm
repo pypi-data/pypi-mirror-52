@@ -1,0 +1,50 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 18em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+{% block box_content %}
+
+
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>系统更新日志</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-version_number">
+					<td class="field-t">版本号：</td>
+					<td class="field-c">{{ object.version_number }}</td>
+				</tr>
+				<tr class="field field-public_date">
+					<td class="field-t">发布时间：</td>
+					<td class="field-c">{{ object.public_date }}</td>
+				</tr>
+				<tr class="field field-update_content">
+					<td class="field-t">更新内容：</td>
+					<td class="field-c">{{ object.update_content }}</td>
+				</tr>
+				<tr class="field field-remark">
+					<td class="field-t">备注：</td>
+					<td class="field-c">{{ object.remark }}</td>
+				</tr>
+				</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}
+
+
+

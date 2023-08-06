@@ -1,0 +1,99 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.action_flag.label }}
+{{ form.action_flag }}
+</div>
+<div class="form-group">
+{{ form.status.label }}
+{{ form.status }}
+</div>
+<div class="form-group">
+{{ form.daterange.label }}
+{{ form.daterange }}
+</div>
+<div class="form-group">
+{{ form.action_class.label }}
+{{ form.action_class }}
+</div>
+{% endblock %}
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'_link',formatter:humanize.formatDetailInfo,align:'center'"></th>
+	        	<th data-options="field:'user_name',width:30">操作用户</th>
+	        	<th data-options="field:'action_time',width:40">操作时间</th>
+	        	<th data-options="field:'action_handler',width:30">执行处理器</th>
+	        	<th data-options="field:'action_class',width:90,formatter:humanize.formatActionClass">操作类名</th>
+	        	<th data-options="field:'ip',width:30">IP</th>
+	        	<th data-options="field:'action_flag',width:20,formatter:humanize.formatActionFlag">动作标志</th>
+	        	<th data-options="field:'status',width:20,formatter:humanize.formatStatus">执行状态</th>
+	        	<th data-options="field:'status_note',width:40">状态说明</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+	
+	var humanize = humanize || {};
+	humanize.formatActionFlag = function (val, row) {
+		if (row.action_flag == 0) {
+			return "登陆";
+		}
+		return "其他";
+	};
+	
+	humanize.formatStatus = function (val, row) {
+		if (row.status == 1) {
+			return "成功";
+		}
+		return "失败";
+	};
+	
+	humanize.formatActionClass = function (val, row) {
+		var class_name = row.action_class.replace('<', '').replace('>', '');
+		return class_name;
+	};
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search'],
+			gridOptions: {'fitColumns': true},
+			detailColumn: '_link',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {
+					'action_flag': $('#id_action_flag').val(),
+					'status': $('#id_status').val(),
+					'daterange_begin': $('#id_daterange_begin').val(),
+					'daterange_end': $('#id_daterange_end').val(),
+					'action_class': $('#id_action_class').val(),
+				};
+		    		return q;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

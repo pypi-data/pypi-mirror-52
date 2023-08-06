@@ -1,0 +1,71 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.cover_title.label_tag }}
+{{ form.cover_title }}
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'cover_title',width:60">封面标题</th>
+	        	<th data-options="field:'cover_summary',width:60">封面介绍</th>
+	        	<th data-options="field:'cover_image',width:60,formatter:humanize.formatOpenFile">封面图片</th>
+	        	<th data-options="field:'upload_date',width:60,formatter:humanize.formatDateTime">上传时间</th>
+	        	<th data-options="field:'upload_user',width:45">上传人</th>
+	        	<th data-options="field:'order_number',width:45">排序号</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	var humanize = humanize || {};
+	(function () {
+		humanize.formatOpenFile = function (val, row) {
+		    console.log(row);
+		    var t = _.template("<a href='/minio/open/?file=<%= remark %>' target='_blank'><i class='glyphicon glyphicon-paperclip'></i><%= cover_title %></a>");
+		    return t({'remark': row.remark, 'cover_title': row.cover_title});
+		};
+		
+	})();
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search', 'insert', 'update', 'delete'],
+			gridOptions: {'fitColumns': true},
+			// detailColumn: 'Id',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {
+					'cover_title': $('#id_cover_title').val()
+				};
+		    		return q;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}
