@@ -1,0 +1,3 @@
+[console_scripts]
+dmaudit = dmaudit.cli:dmaudit
+
