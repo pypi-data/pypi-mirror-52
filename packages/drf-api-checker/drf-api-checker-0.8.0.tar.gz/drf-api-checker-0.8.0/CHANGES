@@ -1,0 +1,59 @@
+Release 0.8
+-----------
+* handle OrderedDict
+* BACKWARD INCOMPATIBLE: changed way to create fixtures/cassettes names
+* BACKWARD INCOMPATIBLE: @frozenfixture is now a function decorator.
+* new arg in `frozenfixture` fixture_name
+
+
+Release 0.7
+-----------
+* improves some customization capabilities
+* deprecate 'check_headers' and `check_status` arguments
+* add ability to determinate checks order: default at [STATUS_CODE, FIELDS, HEADERS]
+
+
+Release 0.6
+-----------
+* fixes compatibility pytest 5.0
+
+
+Release 0.5.1
+-------------
+* fixes wrong packaging
+
+
+Release 0.5
+-----------
+* consider url arguments when generate filename to avoid name clashing
+
+
+Release 0.4.1
+-------------
+* fixes wrong packaging
+
+
+Release 0.4
+-----------
+* add pytest option `--reset-contracts`
+* fixes custom asserter resolution
+* add support django 2.1
+* add support python 3.7
+
+
+Release 0.3
+-----------
+* add support for GET/POST/PATCH/DELETE/HEAD
+* BACKWARD INCONPATIBLE: `assertAPI` is now `assertGET` more consistent with new `assertPUT`, `assertPOST`, `assertDELETE`
+
+
+Release 0.2
+-----------
+* improve subclasssing support
+* add support for protected url
+* raise error if response code > 299
+
+
+Release 0.1
+-----------
+* Initial release
