@@ -1,0 +1,13 @@
+README.rst
+setup.py
+src/terraformpy/__init__.py
+src/terraformpy/cli.py
+src/terraformpy/helpers.py
+src/terraformpy/objects.py
+src/terraformpy/resource_collections.py
+src/terraformpy.egg-info/PKG-INFO
+src/terraformpy.egg-info/SOURCES.txt
+src/terraformpy.egg-info/dependency_links.txt
+src/terraformpy.egg-info/entry_points.txt
+src/terraformpy.egg-info/requires.txt
+src/terraformpy.egg-info/top_level.txt
