@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: collectiondbf
+Version: 0.1.2
+Summary: Download all files in a Blackfynn collection via command line or gui
+Home-page: https://github.com/tehsurfer/collectiondbf
+Author: Jesse Khorasanee
+Author-email: jessekhorasanee@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+Requires-Dist: blackfynn
+Requires-Dist: requests
+Requires-Dist: progressbar2
+
+collectiondbf
+=======
+Collection Downloads from BlackFynn 
+
+A tool for downloading a collection of files from Blackfynn
+
+Usage
+-------
+```
+pip install collectiondbf
+python -m collectiondbf <api-key> <api-secret> <collection:ID>
+```
+
+If you cannot find the collection ID for the folder you wish to download, check for it in the url like so:
+
+![collectionID](https://user-images.githubusercontent.com/37255664/64832679-fe039c80-d62e-11e9-96db-38a54cbd6c55.jpg)
+
+
+
+
