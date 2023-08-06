@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: spriterx
+Version: 0.1.1
+Summary: Python 3.6+ web scraping micro-framework based on asyncio coroutine pool.
+Home-page: https://github.com/ttloveyy/sprite
+Author: liyong
+Author-email: 819078740@qq.com
+License: MIT
+Project-URL: Source, https://github.com/ttloveyy/sprite
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
