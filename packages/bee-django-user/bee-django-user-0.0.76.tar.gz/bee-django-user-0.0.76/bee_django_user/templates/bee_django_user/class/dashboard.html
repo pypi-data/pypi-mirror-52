@@ -1,0 +1,49 @@
+{% extends "bee_django_user/base.html" %}
+{% load bee_django_user_filter %}
+
+{% block content %}
+    {% include 'bee_django_user/logo.html' %}
+    {% include 'bee_django_user/nav.html' %}
+    <div class="text-center"><h3>
+        {{ time }}班级总览
+    </h3>
+    </div>
+    <div style="margin: 10px auto;">
+        {% include 'bee_django_user/class/search.html' %}
+    </div>
+
+    {% for class in class_list %}
+        <div><h3>{{ class.name }}</h3></div>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td colspan="5">本周班级剩余{{ context_coin_name }}：{{ class|get_class_coin|default:"-" }}
+                    <a href="{% url 'bee_django_coin:other_record_list' coin_identity='user_class' coin_content_id=class.id %}">发{{ context_coin_name }}</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5"><a
+                        href="{% url 'bee_django_report:user_class_progress' class.id %}">班级进度查看</a></td>
+            </tr>
+            {% for student in class.get_students %}
+                <tr>
+                    <td>
+                        <a href="{{ student.get_user_search_link }}">{{ student.username }} {{ student.first_name }}</a>
+                    </td>
+                    {% get_user_live_detail student time as detail %}
+                    <td>录播：{{ detail.0 }}分钟</td>
+                    <td>录播：{{ detail.1 }}次</td>
+                    <td>助教观看{{ detail.2 }}次</td>
+                    <td><a href="{% url 'bee_django_course:live_list' student.id %}">录播记录</a></td>
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    {% endfor %}
+    {% include 'bee_django_user/paginator.html' %}
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

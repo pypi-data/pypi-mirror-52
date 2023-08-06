@@ -1,0 +1,53 @@
+Metadata-Version: 1.1
+Name: bee-django-user
+Version: 0.0.76
+Summary: A simple Django app to conduct Web-based message.
+Home-page: http://www.example.com/
+Author: zhangyue
+Author-email: zhangyue@zhenpuedu.com
+License: MIT License
+Description-Content-Type: UNKNOWN
+Description: ==========
+        user
+        ==========
+        
+        Quick start
+        -----------
+        
+        1. Add "bee_django_user" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = (
+                ...
+                'bee_django_user.apps.BeeDjangoUserConfig',
+            )
+        
+        2. Include the crm URLconf in your project urls.py like this::
+        
+            from django.conf.urls import include, url
+            ...
+            url(r'^user/', include('bee_django_user.urls')),
+        
+        3.settings.py like this::
+        
+            USER_TABLE = None
+            USER_NAME_FIELD = 'first_name'
+        
+        3. Run `python manage.py makemigrations`,`python manage.py migrate` to create the crm models.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to create a message (you'll need the Admin app enabled).
+        
+        5. Visit http://127.0.0.1:8000/user/ to participate in the user.
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
