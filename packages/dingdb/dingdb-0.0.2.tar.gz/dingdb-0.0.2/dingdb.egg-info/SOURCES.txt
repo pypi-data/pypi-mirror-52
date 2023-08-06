@@ -1,0 +1,9 @@
+README.md
+setup.py
+dingdb/__init__.py
+dingdb.egg-info/PKG-INFO
+dingdb.egg-info/SOURCES.txt
+dingdb.egg-info/dependency_links.txt
+dingdb.egg-info/entry_points.txt
+dingdb.egg-info/top_level.txt
+dingdb/migrations/1-create-dingdb-schema.py
