@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+share/jupyter/voila/templates/vuetify-base/nbconvert_templates/app.html
+share/jupyter/voila/templates/vuetify-base/nbconvert_templates/util.js
+share/jupyter/voila/templates/vuetify-base/nbconvert_templates/voila.tpl
+share/jupyter/voila/templates/vuetify-default/conf.json
+share/jupyter/voila/templates/vuetify-default/nbconvert_templates/app.html
+voila_vuetify.egg-info/PKG-INFO
+voila_vuetify.egg-info/SOURCES.txt
+voila_vuetify.egg-info/dependency_links.txt
+voila_vuetify.egg-info/requires.txt
+voila_vuetify.egg-info/top_level.txt
