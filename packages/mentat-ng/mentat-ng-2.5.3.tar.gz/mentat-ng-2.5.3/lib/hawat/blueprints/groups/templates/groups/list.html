@@ -1,0 +1,48 @@
+{%- extends "_layout_list.html" %}
+
+{%- block contentinner %}
+
+                    <table class="table table-bordered table-hover table-striped hawat-datatable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    {{ _('Name') }}
+                                </th>
+                                <th>
+                                    {{ _('Source') }}
+                                </th>
+                                <th>
+                                    {{ _('Description') }}
+                                </th>
+                                <th>
+                                    {{ _('State') }}
+                                </th>
+                                <th data-toggle="tooltip" title="{{ _('Contextual item actions') }}">
+                                    {{ get_icon('actions') }} {{ _('Actions') }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {%- for item in items %}
+                            <tr>
+                                <td>
+                                    {{ item.name | default(_('<< unknown >>'), True) }}
+                                </td>
+                                <td>
+                                    {{ item.source | default(_('<< unknown >>'), True) }}
+                                </td>
+                                <td>
+                                    {{ item.description | default(_('<< unknown >>'), True) | truncate(50) }}
+                                </td>
+                                <td>
+                                    {{ macros_site.render_label_item_state(item.enabled, True) }}
+                                </td>
+                                <td class="column-actions">
+                                    {{ macros_page.render_menu_context_actions(item) }}
+                                </td>
+                            </tr>
+                            {%- endfor %}
+                        </tbody>
+                    </table>
+
+{%- endblock contentinner %}
