@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: sparkipy
+Version: 0.0.9
+Summary: Framework for pyspark jobs
+Home-page: https://github.com/Valuraise/sparkipy
+Author: Wajdi FATHALLAH
+Author-email: wfathallah@valuraise.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# sparkipy
+Framework for pyspark jobs 
+
+
+## 1 Naming convention for job files
+In the package sparkipy.jobs: 
+
+- Job files as well as class must have the same name 
+- to be consistent please use camel case
+
