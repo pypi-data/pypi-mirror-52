@@ -1,0 +1,5 @@
+djangorestframework-xml==1.4.0
+djangorestframework==3.9.2
+pyxform==0.13.1
+requests==2.21.0
+xlrd==1.2.0
