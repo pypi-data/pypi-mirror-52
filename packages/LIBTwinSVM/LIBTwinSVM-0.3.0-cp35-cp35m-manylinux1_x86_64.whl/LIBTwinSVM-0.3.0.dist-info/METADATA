@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: LIBTwinSVM
+Version: 0.3.0
+Summary: LIBTwinSVM: A Library for Twin Support Vector Machines.
+Home-page: https://github.com/mir-am/LIBTwinSVM
+Author: Mir, A. and Mahdi Rahbar
+Author-email: mir-am@hotmail.com, mahdirahbar@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: alldeps
+Requires-Dist: cython
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pyQt5
+Requires-Dist: sklearn
+Requires-Dist: pandas
+Requires-Dist: xlsxwriter
+Requires-Dist: joblib
+Requires-Dist: numpydoc (==0.7.0)
+Provides-Extra: alldeps
+Requires-Dist: numpy (>=1.14.0); extra == 'alldeps'
+Requires-Dist: cython (>=0.28); extra == 'alldeps'
+
+Please check out the project's `GitHub page <https://github.com/mir-am/LIBTwinSVM>`_ for installation guide and documentation.
+
+
