@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: Comickaze
+Version: 1.0
+Summary: A CLI tool to download comics
+Home-page: UNKNOWN
+Author: Chr1st-oo
+Author-email: aaroncgonzales.dev@gmail.com
+License: UNKNOWN
+Description: # Comickaze
+        > A Python CLI that scrapes and lets you download comics easily.
+        > Comickaze gets comic data, images from ReadComicsOnline.ru
+        
+        ![Comickaze Demo](https://i.imgur.com/a1LY2hH.gif "Comickaze Demo")
+        
+        ### Sample Usage ###
+        
+        **Command line:**
+        
+        ```comickaze dl "deadpool"```
+        
+        ### Module: ###
+        
+        ```python
+        from comickaze.Comickaze import Comickaze
+        
+        c = Comickaze()
+        res = c.search("Deadpool")
+        comic = res[0] #gets the first result
+        c.downloader(comic).startDownload()
+        ```
+        
+        ### Arguments ###
+        
+        **Command line:**
+        
+        ```
+        --path                          Specifies the download directory
+        --dl-range      --range         Specifies the range of issues to be downloaded, <start>-<end>. Can use * at the <end> to download all chapters from <start>.
+        ```
+        
+        ### Methods: ###
+        
+        + search(keyword)
+        ```python
+        res = c.search("Deadpool")
+        ```
+        
+        + downloader(comic, dl_range (default: *), path (default: C:\Users\<User>\comickaze\downloads))
+        ```python
+        downloader = c.downloader(comic)
+        ```
+        
+        + Downloader.startDownload()
+        ```python
+        downloader.startDownload()
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
