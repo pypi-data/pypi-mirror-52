@@ -1,0 +1,10 @@
+faiss/__init__.py,sha256=4bhRy8mFmNpB2oyS00xvSbTbPT8Hb2SMIwXEUeaEhcI,22926
+faiss/_swigfaiss.so,sha256=wx-3FDF0gSFErzw-AiwbC1p2-BNQymrG6UTaiJJaBQA,6545892
+faiss/setup.py,sha256=S7MD3qcl2tr87FdQzUjorZdEreCaTIsLGYljXOYS4kI,1734
+faiss/swigfaiss.py,sha256=Po_twci7CNFl718K2q2u32G29y2Gj0epE2-AhlHaSs8,318866
+faiss/.dylibs/libomp.dylib,sha256=648HIxfqWD1XhUaUIrKHY9X5DK5hnNH6uZRssCNhQMs,442396
+faiss_cpu-1.6.0.dist-info/LICENSE,sha256=UkEte8fOQVfqYou6rLiCngqcs8WPV_mRdhJryM8r_IU,1086
+faiss_cpu-1.6.0.dist-info/METADATA,sha256=7JWGLHwBYtjj4H9Td7-FBdR3f_pMP_FSHNdvhpjM2uM,714
+faiss_cpu-1.6.0.dist-info/RECORD,,
+faiss_cpu-1.6.0.dist-info/top_level.txt,sha256=nr2S-1YAhqAuAlFJukntDvRGXfI1KmwnUNs_iFlNiig,6
+faiss_cpu-1.6.0.dist-info/WHEEL,sha256=ZrHYOcMnL_5uLQP8udngXy9clBw_QBqhCMEIIai-Q3A,249
