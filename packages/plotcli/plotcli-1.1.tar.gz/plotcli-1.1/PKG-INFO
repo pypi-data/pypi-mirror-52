@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: plotcli
+Version: 1.1
+Summary: A command line interface to create 2D plots
+Home-page: https://github.com/iitrabhi/plotcli
+Author: Abhinav Gupta
+Author-email: iitrabhi@gmail.com
+License: License :: OSI Approved :: MIT License
+Description: # plotcli
+        A command line interface to create 2D plots
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3
+Description-Content-Type: text/markdown
