@@ -1,0 +1,14 @@
+dupfilesremover/__init__.py,sha256=aF1qTFTEaCr30mm2ii0Wqs4ybLcLlwuiMraorC40TkU,34
+dupfilesremover/__main__.py,sha256=R40K6SbP5CnZi_N47lce7vB8leSiIU6_qTLuO151ze0,477
+dupfilesremover/app.py,sha256=6b9RzRKRk7dPo8f3j_kuq7b4rt3BjCFtWAPV4o3odBU,4169
+dupfilesremover/version.py,sha256=jRuiCP8sIMR7jcTiyn65VecaT_0wdb21rSqpe_LDSSc,116
+dupfilesremover/command_line/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dupfilesremover/command_line/dupfilesremover.py,sha256=1LQzCYxiDtJTeMyRgXRV77-AdyW5y2OMd2bFPdHWml4,506
+dupfilesremover/implementation/__init__.py,sha256=ZFZO18KRh3ArZoRousybnr1Idtjek2WAN8R3GdAxutA,164
+dupfilesremover/implementation/duplicate_files_remover.py,sha256=lpdIufc0u--H8oxG67k8BXoZVYSa1gfP9XMBD8fOp7k,5327
+dupfilesremover-0.2.2.0.dist-info/LICENSE,sha256=vex-96hQMtXECQ-ntx5FL-MEaZqHrFGDlCasb3UhKy4,1096
+dupfilesremover-0.2.2.0.dist-info/METADATA,sha256=qliTZkUrSnQtjvWKHOpEqRFmBqKj71Y230NcvCTZ3G0,526
+dupfilesremover-0.2.2.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+dupfilesremover-0.2.2.0.dist-info/entry_points.txt,sha256=X_YXZNGJEVnyMHMb9-MK_hX2g4WsuZ7j1JU9ChBs_aA,87
+dupfilesremover-0.2.2.0.dist-info/top_level.txt,sha256=EhXNPGiWouCLpNlBDSa_0SFcBnl3qnw-V5pkQhikB7M,16
+dupfilesremover-0.2.2.0.dist-info/RECORD,,
