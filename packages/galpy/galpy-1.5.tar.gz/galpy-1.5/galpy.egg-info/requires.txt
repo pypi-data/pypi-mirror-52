@@ -1,0 +1,6 @@
+numpy>=1.7
+scipy
+matplotlib
+pytest
+six
+future
