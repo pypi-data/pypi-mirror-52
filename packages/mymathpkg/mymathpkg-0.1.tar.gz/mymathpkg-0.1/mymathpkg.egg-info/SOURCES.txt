@@ -1,0 +1,12 @@
+setup.py
+mymathpkg/__init__.py
+mymathpkg/add.py
+mymathpkg/divide.py
+mymathpkg/multiply.py
+mymathpkg/subtract.py
+mymathpkg.egg-info/PKG-INFO
+mymathpkg.egg-info/SOURCES.txt
+mymathpkg.egg-info/dependency_links.txt
+mymathpkg.egg-info/top_level.txt
+mymathpkg/adv/__init__.py
+mymathpkg/adv/sqrt.py
