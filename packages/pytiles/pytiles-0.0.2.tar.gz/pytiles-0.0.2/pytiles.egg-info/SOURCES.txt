@@ -1,0 +1,10 @@
+setup.py
+pytiles/__init__.py
+pytiles/cli.py
+pytiles/getmap.py
+pytiles.egg-info/PKG-INFO
+pytiles.egg-info/SOURCES.txt
+pytiles.egg-info/dependency_links.txt
+pytiles.egg-info/entry_points.txt
+pytiles.egg-info/requires.txt
+pytiles.egg-info/top_level.txt
