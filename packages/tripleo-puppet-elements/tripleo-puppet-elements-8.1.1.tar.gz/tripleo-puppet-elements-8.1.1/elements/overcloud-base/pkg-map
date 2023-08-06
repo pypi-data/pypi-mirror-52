@@ -1,0 +1,17 @@
+{
+  "default": {
+    "aide": "aide",
+    "ansible_pacemaker": "ansible-pacemaker",
+    "ansible_role_redhat_subscription": "ansible-role-redhat-subscription",
+    "crudini": "crudini",
+    "docker": "docker",
+    "libreswan": "libreswan",
+    "python_docker_py": "python-docker-py",
+    "python_ipaddr": "python-ipaddr",
+    "openstack_selinux": "openstack-selinux",
+    "net_snmp": "net-snmp",
+    "numactl": "numactl",
+    "yum_plugin_priorities_package": "yum-plugin-priorities",
+    "tmpwatch": "tmpwatch"
+  }
+}
