@@ -1,0 +1,11 @@
+home/egon/.kill_hogs/kill_hogs.yml,sha256=vHVP_70PcLAcL_CbXGWJJupv9swbsdgnI1MPHVXhnvs,1397
+kill_hogs/__init__.py,sha256=XtFyPUKShTFASA9lPlkeqwj6AaBs5PiphvVibhR0QVE,32
+kill_hogs/kill_hogs.py,sha256=cAZm0J3gn2ZguAf1KNuAX1AHgP-TbiBlltJ3Q_T5bE0,9007
+unittests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unittests/test_kill_hogs.py,sha256=KWqgf_FmT-D2cvjEIQNauY2dp0iCVXlUiK_mIV2qv_g,8152
+kill_hogs-0.1.dist-info/LICENCE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+kill_hogs-0.1.dist-info/METADATA,sha256=modtehz3LzVXb5JOaQNrpJLrpi6FPH70cBJerU-Qvh8,1800
+kill_hogs-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+kill_hogs-0.1.dist-info/entry_points.txt,sha256=9fLDCdQkryXBW_QLLc53EFO-f5lHEKIptgcJOfobxL0,56
+kill_hogs-0.1.dist-info/top_level.txt,sha256=aMU6YYGkKArgN4hxKpFbmUyYNf8-SNPeAK3bgkdrLps,20
+kill_hogs-0.1.dist-info/RECORD,,

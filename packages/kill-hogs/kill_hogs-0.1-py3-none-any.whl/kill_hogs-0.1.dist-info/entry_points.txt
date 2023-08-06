@@ -1,0 +1,3 @@
+[console_scripts]
+kill-hogs = kill_hogs.kill_hogs:main
+
