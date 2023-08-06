@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: oeg-feature-class
+Version: 1.1
+Summary: Module for anomaly dimension classification
+Home-page: https://github.com/vb64/oeg.feature.class
+Author: Vitaly Bogomolov
+Author-email: mail@vitaly-bogomolov.ru
+License: UNKNOWN
+Download-URL: https://github.com/vb64/oeg.feature.class/archive/v1.1.tar.gz
+Keywords: python,OrgEnergoGaz,anomaly,pipelines,MFL,TFI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+# oeg_feature_class
+
+Module for anomaly dimension classification for intelligent pig inspection of pipelines
+
+
