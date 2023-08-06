@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include rectifai *
+recursive-include scripts *
+recursive-include configs *.json
+recursive-include tutorials *
+recursive-exclude * __pycache__
