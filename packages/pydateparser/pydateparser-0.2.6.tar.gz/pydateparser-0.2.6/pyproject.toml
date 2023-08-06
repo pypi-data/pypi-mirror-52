@@ -1,0 +1,17 @@
+[metadata]
+name = 'pydateparser'
+version = '0.0.1'
+description = 'date and time parsing library.'
+author = 'glib.ai'
+author_email = ''
+license = 'MIT'
+url = 'https://github.com/GlibAi/pydateparser'
+
+[requires]
+python_version = ['3.6']
+
+[build-system]
+requires = ['setuptools', 'wheel']
+
+[tool.hatch.commands]
+prerelease = 'hatch build'
