@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+license
+requirements.txt
+setup.cfg
+setup.py
+cython_compiler/__init__.py
+cython_compiler/compiler.py
+cython_compiler.egg-info/PKG-INFO
+cython_compiler.egg-info/SOURCES.txt
+cython_compiler.egg-info/dependency_links.txt
+cython_compiler.egg-info/entry_points.txt
+cython_compiler.egg-info/not-zip-safe
+cython_compiler.egg-info/requires.txt
+cython_compiler.egg-info/top_level.txt
