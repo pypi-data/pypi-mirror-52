@@ -1,0 +1,11 @@
+setuptools
+transaction
+zope.component
+zope.interface
+zope.processlifetime
+
+[test]
+ZODB
+zope.site
+zope.testing
+zope.testrunner
