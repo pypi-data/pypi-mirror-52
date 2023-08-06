@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        comickaze=comickaze.cli:cli
+    
