@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+revtorch/__init__.py
+revtorch/revtorch.py
+revtorch.egg-info/PKG-INFO
+revtorch.egg-info/SOURCES.txt
+revtorch.egg-info/dependency_links.txt
+revtorch.egg-info/top_level.txt
