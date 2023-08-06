@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: safemount
+Version: 0.1
+Summary: A FUSE mount that only permits safe characters in the file names
+Home-page: http://github.com/vrthra/safemount
+Author: Rahul Gopinath
+Author-email: rahul@gopinath.org
+License: UNKNOWN
+Description: A FUSE mount that only permits safe characters in the file names
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Security
