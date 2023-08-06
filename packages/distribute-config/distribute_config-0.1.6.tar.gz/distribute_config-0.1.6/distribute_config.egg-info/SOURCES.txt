@@ -1,0 +1,10 @@
+README.md
+setup.py
+distribute_config/__init__.py
+distribute_config/variable.py
+distribute_config.egg-info/PKG-INFO
+distribute_config.egg-info/SOURCES.txt
+distribute_config.egg-info/dependency_links.txt
+distribute_config.egg-info/requires.txt
+distribute_config.egg-info/top_level.txt
+distribute_config/tests/__init__.py
