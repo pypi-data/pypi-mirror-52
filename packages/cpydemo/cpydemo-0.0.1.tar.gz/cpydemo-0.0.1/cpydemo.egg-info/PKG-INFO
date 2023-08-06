@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: cpydemo
+Version: 0.0.1
+Summary: A simple example
+Home-page: https://github.com/q1b1fd8l/cpydemo
+Author: q1b1fd8l
+Author-email: q1b1fd8l@yandex.com
+License: UNKNOWN
+Description: # cpydemo
+        C extends python's modules
+        
+        ## build
+        `python setup.py build`
+        
+        ### install
+        `python setup.py install`
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Description-Content-Type: text/markdown
