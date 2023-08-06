@@ -1,0 +1,2 @@
+include header/*.h
+recursive-include armadillo-code/include *
