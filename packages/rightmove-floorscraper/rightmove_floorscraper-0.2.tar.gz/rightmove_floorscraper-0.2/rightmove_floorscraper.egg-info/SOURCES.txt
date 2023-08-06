@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+rightmove_floorscraper/__init__.py
+rightmove_floorscraper.egg-info/PKG-INFO
+rightmove_floorscraper.egg-info/SOURCES.txt
+rightmove_floorscraper.egg-info/dependency_links.txt
+rightmove_floorscraper.egg-info/requires.txt
+rightmove_floorscraper.egg-info/top_level.txt
