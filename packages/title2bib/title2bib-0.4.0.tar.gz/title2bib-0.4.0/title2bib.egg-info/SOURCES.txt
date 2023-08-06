@@ -1,0 +1,12 @@
+MANIFEST.in
+README
+setup.cfg
+setup.py
+title2bib/__init__.py
+title2bib/crossref.py
+title2bib.egg-info/PKG-INFO
+title2bib.egg-info/SOURCES.txt
+title2bib.egg-info/dependency_links.txt
+title2bib.egg-info/requires.txt
+title2bib.egg-info/top_level.txt
+title2bib/bin/title2bib
