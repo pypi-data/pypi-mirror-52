@@ -1,0 +1,10 @@
+[console_scripts]
+blurring = blurring.cli:create_blurred_video
+blurring-t = blurring.cli:create_template
+
+[wmc.register_main]
+blurring = blurring.hook:main
+
+[wmc.register_setup]
+blurring = blurring.hook:setup
+
