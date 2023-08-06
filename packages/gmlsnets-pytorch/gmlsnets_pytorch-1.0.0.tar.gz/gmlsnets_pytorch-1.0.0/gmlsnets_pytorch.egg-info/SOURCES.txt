@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+gmlsnets_pytorch/__init__.py
+gmlsnets_pytorch/dataset.py
+gmlsnets_pytorch/nn.py
+gmlsnets_pytorch/util.py
+gmlsnets_pytorch/vis.py
+gmlsnets_pytorch.egg-info/PKG-INFO
+gmlsnets_pytorch.egg-info/SOURCES.txt
+gmlsnets_pytorch.egg-info/dependency_links.txt
+gmlsnets_pytorch.egg-info/top_level.txt
