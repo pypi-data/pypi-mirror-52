@@ -1,0 +1,17 @@
+README.md
+setup.py
+mockchain/__init__.py
+mockchain/__main__.py
+mockchain/conf.py
+mockchain/processor.py
+mockchain/webserver.py
+mockchain.egg-info/PKG-INFO
+mockchain.egg-info/SOURCES.txt
+mockchain.egg-info/dependency_links.txt
+mockchain.egg-info/top_level.txt
+mockchain/contracts/__init__.py
+mockchain/contracts/submission.s.py
+mockchain/contracts/genesis/__init__.py
+mockchain/contracts/genesis/currency.s.py
+tests/__init__.py
+tests/test_processor.py
