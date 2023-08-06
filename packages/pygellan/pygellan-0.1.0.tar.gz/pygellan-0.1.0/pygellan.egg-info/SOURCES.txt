@@ -1,0 +1,10 @@
+README.md
+setup.py
+pygellan/__init__.py
+pygellan/acquire.py
+pygellan/magellan_data.py
+pygellan.egg-info/PKG-INFO
+pygellan.egg-info/SOURCES.txt
+pygellan.egg-info/dependency_links.txt
+pygellan.egg-info/requires.txt
+pygellan.egg-info/top_level.txt
