@@ -1,0 +1,15 @@
+cloud_storage_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloud_storage_client/as3.py,sha256=-2lM3j7NKnlznZHnRGEQFCa0c3D5SZDlE_K2-eKoVHU,6619
+cloud_storage_client/azure.py,sha256=uhnBGY4juABBDmSgwFMnbgOHsbSlS90kKuPJBDUuhsY,5369
+cloud_storage_client/exceptions.py,sha256=k6EZsM-MQyNIyLR7-O2bzb1jMKzUUDkmM4c0fwvwu0I,275
+cloud_storage_client/file_system.py,sha256=lCN9wJ4uPzVZmOD402LnQlfDTm-ih44JFdFxtIL74wU,3282
+cloud_storage_client/ftp.py,sha256=obpWSYA2748_uWRZSyxIMcTL-IwRwHdnINhqq5V_3S0,5952
+cloud_storage_client/gcloud.py,sha256=WdmDDmxfhXTQdKiDoRK_oiMdmOKTnsP9p1dhhyIQGOQ,6623
+cloud_storage_client/gcloud_access_secret.py,sha256=JOZGDufgcfA7r2CdiqyBZNSkYUNoszggZVbtEYqthSY,5741
+cloud_storage_client/sftp.py,sha256=bjKcAW1-yHXN5o3jZPZ7_X9rfkl1eNLu4YP-ShL96PI,4092
+cloud_storage_client/storage.py,sha256=YuxeE9ZpeATWRj0mnxW2Buzc8S__jsFeITw-FK-pEBQ,11481
+cloud_storage_client/storage_adapter.py,sha256=VtSLs8UyidSMr1-3UBbfDIlAdkcfyC2-KOlRT8WxtJs,543
+cloud_storage_client-1.2.dist-info/METADATA,sha256=mIm6XvBZ6NWUrscQF7TVg6c_Bseov-hzmqaectpIoMQ,1694
+cloud_storage_client-1.2.dist-info/RECORD,,
+cloud_storage_client-1.2.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+cloud_storage_client-1.2.dist-info/top_level.txt,sha256=Em2w6_iAjc2CaprBCJ_elivd1yTKevfnDpF5JqcGPXw,21
