@@ -1,0 +1,3 @@
+[console_scripts]
+kvdiff = kvdiff.kvdiff:main
+

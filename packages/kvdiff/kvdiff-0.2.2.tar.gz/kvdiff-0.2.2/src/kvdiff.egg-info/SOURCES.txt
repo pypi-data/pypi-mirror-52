@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/kvdiff/__init__.py
+src/kvdiff/kvdiff.py
+src/kvdiff.egg-info/PKG-INFO
+src/kvdiff.egg-info/SOURCES.txt
+src/kvdiff.egg-info/dependency_links.txt
+src/kvdiff.egg-info/entry_points.txt
+src/kvdiff.egg-info/top_level.txt
