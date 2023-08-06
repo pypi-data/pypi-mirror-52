@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: atman_kg_nlp
+Version: 0.2.1
+Summary: a nlp toolkit package for atman corp
+Home-page: UNKNOWN
+Author: Jiang Shan
+Author-email: mli@atman360.com
+License: UNKNOWN
+Description: This is nlp package for knowledge graph work in atman corp.
+        After install this package, users should download spacy model by themself. Pls 
+        refer spacy homepage for details.
+          
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: cpu
+Provides-Extra: gpu

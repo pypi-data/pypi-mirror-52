@@ -1,0 +1,12 @@
+nltk>=3.3
+spacy==2.1.3
+jieba
+stanfordnlp
+
+[cpu]
+tensorflow==1.12.0
+benepar[cpu]
+
+[gpu]
+tensorflow-gpu==1.12.0
+benepar[gpu]
