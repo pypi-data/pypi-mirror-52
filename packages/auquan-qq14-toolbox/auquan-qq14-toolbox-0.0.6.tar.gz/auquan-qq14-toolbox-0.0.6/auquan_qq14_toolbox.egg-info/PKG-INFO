@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: auquan-qq14-toolbox
+Version: 0.0.6
+Summary: Toolbox for QQ14
+Home-page: UNKNOWN
+Author: Auquan Team
+Author-email: qqadmins@auquan.com
+License: MIT
+Description: # Example Package
+        
+        This is a simple example package. You can use
+        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+        
+        
+Keywords: auquan finance trading backtesting development
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
