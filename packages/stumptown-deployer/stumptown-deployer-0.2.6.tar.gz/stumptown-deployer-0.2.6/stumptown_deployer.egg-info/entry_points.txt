@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        stumptown-deployer=deployer.main:cli
+    
