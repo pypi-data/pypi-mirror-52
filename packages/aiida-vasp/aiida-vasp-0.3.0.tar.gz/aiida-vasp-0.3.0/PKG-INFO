@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: aiida-vasp
+Version: 0.3.0
+Summary: AiiDA Plugin for running VASP calculations.
+Home-page: https://github.com/aiida-vasp/aiida-vasp
+Author: Espen Flage-Larsen
+Author-email: espen.flage-larsen@sintef.no
+License: MIT License, see LICENSE.txt file.
+Description: TEST
+Keywords: vasp,aiida,wannier90,workflow,materials
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides-Extra: regen_default_paws
+Provides-Extra: dev
+Provides-Extra: wannier
+Provides-Extra: graphs
