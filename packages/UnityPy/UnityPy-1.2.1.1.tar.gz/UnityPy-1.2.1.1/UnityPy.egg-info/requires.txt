@@ -1,0 +1,13 @@
+fsb5
+lz4
+brotli
+colorama
+termcolor
+Pillow
+
+[Decrunch Support]
+decrunch
+decrunch_unity
+
+[ETC Texture Support]
+etcpack
