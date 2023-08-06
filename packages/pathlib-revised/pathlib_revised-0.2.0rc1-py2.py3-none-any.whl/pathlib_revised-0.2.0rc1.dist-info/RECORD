@@ -1,0 +1,13 @@
+pathlib_revised/__init__.py,sha256=4kZtvaNr6yO0QH7uslZB-i9OTbyz3v9r6wDQpBHUh_0,160
+pathlib_revised/dir_entry_path.py,sha256=azc8lnVEe4vOuojNVEVsmLoS3KX8CYNRJqMupbMdBv0,2834
+pathlib_revised/pathlib.py,sha256=z1Jsszjz9tdwnl4AuGYFbJ7uzfbTs6tHgGy9Vufa96M,5294
+pathlib_revised/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pathlib_revised/tests/test_dir_entry_path.py,sha256=c7Vsfu2W7elAlqOBChwh_5WUQMg70u60kzJaGHIW590,7448
+pathlib_revised/tests/test_pathlib2.py,sha256=aNnsXGXBWwHTtfgKdWMIIEDiywlYK8wcAnNMnYiqXRQ,7402
+pathlib_revised/tests/test_project_meta.py,sha256=Tt33RRhVKiMgkzgFhueMcsipk1RZbtbTUAcbKnjKKm4,639
+pathlib_revised-0.2.0rc1.dist-info/AUTHORS.txt,sha256=vHAQ1U0sti2X0gXlzZgiTXIDxexXd2g70QP2OkzU_Q8,221
+pathlib_revised-0.2.0rc1.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+pathlib_revised-0.2.0rc1.dist-info/METADATA,sha256=kQxfkuo1sv2F-LB66jSfAruG5OGPmhVRjbfszyZMulw,10455
+pathlib_revised-0.2.0rc1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+pathlib_revised-0.2.0rc1.dist-info/top_level.txt,sha256=UCAJ4A3Jjk514YA5UlaWabrq5wOONx5h72jqW70p0EQ,16
+pathlib_revised-0.2.0rc1.dist-info/RECORD,,
