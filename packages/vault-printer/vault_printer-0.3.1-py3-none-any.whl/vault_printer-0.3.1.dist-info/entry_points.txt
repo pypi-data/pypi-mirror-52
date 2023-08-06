@@ -1,0 +1,3 @@
+[console_scripts]
+vault_printer = vault_printer.main:main
+
