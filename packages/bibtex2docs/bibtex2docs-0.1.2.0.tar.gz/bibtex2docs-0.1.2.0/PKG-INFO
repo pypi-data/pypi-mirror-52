@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: bibtex2docs
+Version: 0.1.2.0
+Summary: Translate BibTeX references from a Google Docs document
+Home-page: https://gitlab.com/xgrg/bibtex2docs
+Author: Greg Operto
+Author-email: goperto@barcelonabeta.org
+License: UNKNOWN
+Download-URL: https://gitlab.com/xgrg/bibtex2docs/-/archive/0.1/bibtex2docs-0.1.tar.gz
+Description: Translate BibTeX references from a Google Docs document
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.7
