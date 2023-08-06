@@ -1,0 +1,15 @@
+COPYING.txt
+MANIFEST.in
+README.md
+setup.py
+bacdive/DSMZClient.py
+bacdive/__init__.py
+bacdive/build_url.py
+bacdive/clean.py
+bacdive/utils.py
+bacdive.egg-info/PKG-INFO
+bacdive.egg-info/SOURCES.txt
+bacdive.egg-info/dependency_links.txt
+bacdive.egg-info/requires.txt
+bacdive.egg-info/top_level.txt
+bacdive/scripts/__init__.py
