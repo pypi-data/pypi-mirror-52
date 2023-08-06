@@ -1,0 +1,7 @@
+urllib3[secure]
+
+[dev]
+black
+mypy
+prospector
+wheel
