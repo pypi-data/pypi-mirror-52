@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: odin-ai
+Version: 1.1.0
+Summary: Deep learning for research and production
+Home-page: https://github.com/imito/odin-ai
+Author: Trung Ngo Trong
+Author-email: trung@imito.ai
+License: MIT
+Keywords: tensorflow pytorch machine learning neural networks deep learning bayesian
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy (>=1.0.0)
+Requires-Dist: tensorflow (==2.0.0-rc1)
+Requires-Dist: tensorflow-probability (==0.8.0)
+Requires-Dist: tensorflow-datasets
+Requires-Dist: torch (==1.1.0)
+Requires-Dist: six (>=1.9.0)
+Requires-Dist: scikit-learn (>=0.18.0)
+Requires-Dist: matplotlib (>=3.0.0)
+Requires-Dist: decorator
+Requires-Dist: tqdm
+Requires-Dist: dill
+Requires-Dist: pyyaml
+Requires-Dist: pycrypto
+Provides-Extra: audio
+Requires-Dist: soundfile ; extra == 'audio'
+Requires-Dist: resampy ; extra == 'audio'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pandas ; extra == 'tests'
+Requires-Dist: requests ; extra == 'tests'
+Provides-Extra: visualize
+Requires-Dist: pydot (>=1.2.4) ; extra == 'visualize'
+Requires-Dist: colorama ; extra == 'visualize'
+Requires-Dist: seaborn ; extra == 'visualize'
+
+
+An end-to-end framework support multi-modal data processing
+and fast prototyping of machine learning algorithm in form
+of organized networks.
+
+
