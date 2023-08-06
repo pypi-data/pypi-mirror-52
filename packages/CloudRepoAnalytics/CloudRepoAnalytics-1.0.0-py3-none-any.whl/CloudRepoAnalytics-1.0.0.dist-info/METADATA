@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: CloudRepoAnalytics
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://cloudrepooss.github.io/download-analytics/
+Author: CloudRepo
+Author-email: support@cloudrepo.io
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Flask (>=1.0.2)
+Requires-Dist: Flask-HttpAuth (==3.3.0)
+Requires-Dist: filehandlers (>=2.7)
+
+UNKNOWN
+
+
