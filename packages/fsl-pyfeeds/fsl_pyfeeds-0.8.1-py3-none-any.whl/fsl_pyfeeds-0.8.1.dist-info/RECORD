@@ -1,0 +1,14 @@
+pyfeeds/__init__.py,sha256=M1oF7QyraQsfvVr0vn-Ej-junfzQ6gM1D001hzjjYkg,337
+pyfeeds/__main__.py,sha256=c-um4WYaANw2alanl4518ZwJ4OAv-7Bk62qIVtGeQHg,98
+pyfeeds/common.py,sha256=McCl0BWT46vNtLIZN3_HJ9CpiWLHERE9FPkE3ny-xis,10246
+pyfeeds/evaluate.py,sha256=heaHspHLCB0DQd6YYw4_FoRaD6oDXwL9t9w8PCa8KoU,20176
+pyfeeds/hashing.py,sha256=AlBI6etdgZ62LkziYskRuNLHewBX8EVEm76BvMifuow,13096
+pyfeeds/imagecache.py,sha256=LsX0krnLf8JtHsdR91Gw6hsba5DdhpmDpWl7oybgK4c,3132
+pyfeeds/main.py,sha256=rWzfkcktwmOIS96FTcMkdhEmFb7aSFShhbVySWZb910,37281
+pyfeeds/testing.py,sha256=tA_ZdNuzLdZanQnMDyq2mbBoEUBrxGS6CPxii_Zx7OU,18110
+fsl_pyfeeds-0.8.1.dist-info/LICENSE,sha256=tH-jQS7drkY1KXZ0HrnC_E3HhKFkQQRAE2ucq-pcgN4,595
+fsl_pyfeeds-0.8.1.dist-info/METADATA,sha256=zD1vcahTzsCb9-DCMjaqNiWpM3Vls8ugyrTP_igpV5g,688
+fsl_pyfeeds-0.8.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+fsl_pyfeeds-0.8.1.dist-info/entry_points.txt,sha256=UAzAxbFaASiCjglKRORhG3_8ERG-DM44TD__BmnsWcY,47
+fsl_pyfeeds-0.8.1.dist-info/top_level.txt,sha256=78vwpVURqhK65iByWpi9ZZzxDb9fqAAtAoEwlDevBSQ,8
+fsl_pyfeeds-0.8.1.dist-info/RECORD,,
