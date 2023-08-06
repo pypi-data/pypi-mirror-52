@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+data_structures/__init__.py
+data_structures/exceptions.py
+data_structures/queue.py
+data_structures/stack.py
+py_data_structures.egg-info/PKG-INFO
+py_data_structures.egg-info/SOURCES.txt
+py_data_structures.egg-info/dependency_links.txt
+py_data_structures.egg-info/top_level.txt

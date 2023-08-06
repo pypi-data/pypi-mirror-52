@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: py-data-structures
+Version: 0.2
+Summary: Some widely used data structures
+Home-page: https://github.com/vishalsharma14/py-data-structures
+Author: Vishal
+Author-email: vishal.sharma9597@gmail.com
+License: MIT
+Description: # py-data-structures
+        
+        Python implementation of abstract data structures
+        
+        ## Install
+        ```
+        pip install py-data-structures
+        ```
+        ## Stack
+        
+        
+        #### Usage
+        ```
+        from data_structures import Stack
+        
+        stack = Stack()
+        stack.push(item)  # push an item in stack
+        stack.pop()  # returns the top item from the stack
+        stack.length  # contains the length of the stack
+        stack.top  # contains the top item of the stack
+        
+        stack.iterate()  # override to iterate or perform action on the stack elements
+        ```
+        #### Exceptions
+        ```
+        from data_structures import exceptions
+        
+        # raised on pop() or top when stack is empty
+        exceptions.EmptyStackException   
+        ```
+        
+Keywords: DATA STRUCTURES,STACK,QUEUE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
