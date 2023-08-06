@@ -1,0 +1,8 @@
+setup.py
+pylermo/__init__.py
+pylermo/pylermo.py
+pylermo.egg-info/PKG-INFO
+pylermo.egg-info/SOURCES.txt
+pylermo.egg-info/dependency_links.txt
+pylermo.egg-info/entry_points.txt
+pylermo.egg-info/top_level.txt
