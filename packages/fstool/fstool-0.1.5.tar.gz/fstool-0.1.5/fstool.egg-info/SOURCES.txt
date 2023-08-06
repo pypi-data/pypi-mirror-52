@@ -1,0 +1,13 @@
+README.md
+setup.py
+fstool/__init__.py
+fstool/__main__.py
+fstool/_config.py
+fstool/_crawler.py
+fstool/_main.py
+fstool/_structure.py
+fstool.egg-info/PKG-INFO
+fstool.egg-info/SOURCES.txt
+fstool.egg-info/dependency_links.txt
+fstool.egg-info/top_level.txt
+test/test_config.py
