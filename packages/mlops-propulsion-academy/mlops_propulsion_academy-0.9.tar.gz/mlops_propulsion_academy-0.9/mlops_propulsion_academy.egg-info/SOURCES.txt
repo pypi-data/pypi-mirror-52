@@ -1,0 +1,13 @@
+setup.py
+bin/install.sh
+bin/mlops_scripts
+bin/start.sh
+bin/update.sh
+mlops_propulsion_academy/__init__.py
+mlops_propulsion_academy/command_line.py
+mlops_propulsion_academy/mlops.py
+mlops_propulsion_academy.egg-info/PKG-INFO
+mlops_propulsion_academy.egg-info/SOURCES.txt
+mlops_propulsion_academy.egg-info/dependency_links.txt
+mlops_propulsion_academy.egg-info/not-zip-safe
+mlops_propulsion_academy.egg-info/top_level.txt
