@@ -1,0 +1,9 @@
+README.md
+setup.py
+arkho_jsonquery.egg-info/PKG-INFO
+arkho_jsonquery.egg-info/SOURCES.txt
+arkho_jsonquery.egg-info/dependency_links.txt
+arkho_jsonquery.egg-info/top_level.txt
+jsonquery/__init__.py
+jsonquery/jsonquery.py
+jsonquery/test.py
