@@ -1,0 +1,4 @@
+[console_scripts]
+get_n_genomes = plentyofbugs.get_n_genomes:main
+plentyofbugs = plentyofbugs.plentyofbugs:main
+
