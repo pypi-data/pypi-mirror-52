@@ -1,0 +1,139 @@
+{
+    "__gui_label__": "File Crypter",
+    "django_form_main_function": {
+        "__function__": "cryptFile",
+        "filename": {
+            "__type__": "file",
+            "label_desc": "Brooooowse file to crypt",
+            "required": true
+        },
+        "iteratecount": {
+            "__type__": "number",
+            "label_desc": "Iterate count",
+            "value": "1"
+        },
+        "prime_length": {
+            "__type__": "number",
+            "label_desc": "Prime's Length",
+            "value": "2"
+        },
+        "compile_exe": {
+            "__type__": "checkbox",
+            "label_desc": "Compile to EXE",
+            "systems": [
+                "nt"
+            ]
+        },
+        "close": {
+            "__type__": "button",
+            "value": "Close"
+        },
+        "submit": {
+            "__id__": "cryptFile",
+            "__type__": "submit",
+            "value": "Crypt File",
+            "loading_text": "Crypting..."
+        }
+    },
+    "django_form_module_function": {
+        "convertToExe": {
+            "__function__": "convertToExe",
+            "__async__": false,
+            "__return__": "",
+            "stub_name": {
+                "__type__": "text",
+                "label_desc": "stub_name",
+                "placeholder": "stub_name",
+                "required": true
+            }
+        },
+        "createStub": {
+            "__function__": "createStub",
+            "__async__": false,
+            "__return__": "text",
+            "crypto_data_hex": {
+                "__type__": "text",
+                "label_desc": "crypto_data_hex",
+                "placeholder": "crypto_data_hex",
+                "required": true
+            },
+            "public_key": {
+                "__type__": "text",
+                "label_desc": "public_key",
+                "placeholder": "public_key",
+                "required": true
+            },
+            "drop_file_name": {
+                "__type__": "text",
+                "label_desc": "drop_file_name",
+                "placeholder": "drop_file_name",
+                "required": true
+            },
+            "save_name": {
+                "__type__": "text",
+                "label_desc": "save_name",
+                "placeholder": "save_name",
+                "required": true
+            },
+            "is_last": {
+                "__type__": "checkbox",
+                "label_desc": "is_last",
+                "placeholder": "is_last",
+                "value": false
+            },
+            "convert": {
+                "__type__": "checkbox",
+                "label_desc": "convert",
+                "placeholder": "convert",
+                "value": false
+            }
+        },
+        "crypt_file": {
+            "__function__": "crypt_file",
+            "__async__": false,
+            "__return__": "text",
+            "filename": {
+                "__type__": "text",
+                "label_desc": "filename",
+                "placeholder": "filename",
+                "required": true
+            },
+            "new_file_name": {
+                "__type__": "text",
+                "label_desc": "new_file_name",
+                "placeholder": "new_file_name",
+                "required": true
+            },
+            "prime_length": {
+                "__type__": "text",
+                "label_desc": "prime_length",
+                "placeholder": "prime_length",
+                "value": "dropped.py"
+            },
+            "compile_exe": {
+                "__type__": "number",
+                "label_desc": "compile_exe",
+                "placeholder": "compile_exe",
+                "value": 4
+            },
+            "is_iterating": {
+                "__type__": "checkbox",
+                "label_desc": "is_iterating",
+                "placeholder": "is_iterating",
+                "value": false
+            },
+            "iterate_count": {
+                "__type__": "checkbox",
+                "label_desc": "iterate_count",
+                "placeholder": "iterate_count",
+                "value": false
+            },
+            "is_last": {
+                "__type__": "number",
+                "label_desc": "is_last",
+                "placeholder": "is_last",
+                "value": 1
+            }
+        }
+    }
+}
