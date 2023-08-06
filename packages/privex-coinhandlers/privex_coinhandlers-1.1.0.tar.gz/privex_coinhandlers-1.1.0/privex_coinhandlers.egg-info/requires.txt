@@ -1,0 +1,5 @@
+requests>=2.20.1
+privex-jsonrpc>=1.1.2
+privex-helpers>=1.1.0
+python-dateutil
+pytz
