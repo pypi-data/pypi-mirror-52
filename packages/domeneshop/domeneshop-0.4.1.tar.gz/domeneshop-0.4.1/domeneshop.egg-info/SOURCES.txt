@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+domeneshop/__init__.py
+domeneshop/client.py
+domeneshop.egg-info/PKG-INFO
+domeneshop.egg-info/SOURCES.txt
+domeneshop.egg-info/dependency_links.txt
+domeneshop.egg-info/requires.txt
+domeneshop.egg-info/top_level.txt
