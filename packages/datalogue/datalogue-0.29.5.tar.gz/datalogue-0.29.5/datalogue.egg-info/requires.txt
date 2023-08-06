@@ -1,0 +1,8 @@
+requests
+python-dateutil
+validators
+pytest==3.6.3
+numpy
+pyyaml
+pyarrow
+raven
