@@ -1,0 +1,6 @@
+{
+  "apps.groups.settings": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/apps.groups.settings"
+  }
+}

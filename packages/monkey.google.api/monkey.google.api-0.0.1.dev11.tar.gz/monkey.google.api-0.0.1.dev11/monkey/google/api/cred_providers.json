@@ -1,0 +1,44 @@
+{
+  "user_credential_provider": {
+    "module": "monkey.google.api.helpers",
+    "class": "UserCredentialProvider",
+    "parameters": [
+      {
+        "name": "scopes",
+        "type": "ref",
+        "value": "auth_scopes"
+      },
+      {
+        "name": "credential_file",
+        "type": "ref",
+        "value": "user_credential_file"
+      },
+      {
+        "name": "token_file",
+        "type": "ref",
+        "value": "user_token_file"
+      }
+    ]
+  },
+  "service_account_credential_provider": {
+    "module": "monkey.google.api.helpers",
+    "class": "ServiceAccountCredentialProvider",
+    "parameters": [
+      {
+        "name": "scopes",
+        "type": "ref",
+        "value": "auth_scopes"
+      },
+      {
+        "name": "credential_file",
+        "type": "ref",
+        "value": "service_account_credential_file"
+      },
+      {
+        "name": "impersonate_user_email",
+        "type": "ref",
+        "value": "service_account_impersonate_user_email"
+      }
+    ]
+  }
+}

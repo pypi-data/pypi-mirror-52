@@ -1,0 +1,46 @@
+{
+  "admin.directory.group": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.group"
+  },
+  "admin.directory.group.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.group.readonly"
+  },
+  "admin.directory.group.member": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.group.member"
+  },
+  "admin.directory.group.member.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.group.member.readonly"
+  },
+  "admin.directory.orgunit": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.orgunit"
+  },
+  "admin.directory.orgunit.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.orgunit.readonly"
+  },
+  "admin.directory.user": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.user"
+  },
+  "admin.directory.user.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.user.readonly"
+  },
+  "admin.directory.user.alias": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.user.alias"
+  },
+  "admin.directory.user.alias.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.user.alias.readonly"
+  },
+  "admin.directory.user.security": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/admin.directory.user.security"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "gmail_service": {
+    "module": "monkey.google.api.helpers",
+    "class": "GmailService",
+    "parameters": [
+      {
+        "name": "credential_provider",
+        "type": "ref",
+        "value": "credential_provider"
+      }
+    ]
+  },
+  "directory_user_service": {
+    "module": "monkey.google.api.directory.helpers",
+    "class": "DirectoryUserService",
+    "parameters": [
+      {
+        "name": "credential_provider",
+        "type": "ref",
+        "value": "credential_provider"
+      }
+    ]
+  },
+  "directory_group_service": {
+    "module": "monkey.google.api.directory.helpers",
+    "class": "DirectoryGroupService",
+    "parameters": [
+      {
+        "name": "credential_provider",
+        "type": "ref",
+        "value": "credential_provider"
+      }
+    ]
+  },
+  "apps_group_settings_service": {
+    "module": "monkey.google.api.apps.helpers",
+    "class": "GroupSettingsService",
+    "parameters": [
+      {
+        "name": "credential_provider",
+        "type": "ref",
+        "value": "credential_provider"
+      }
+    ]
+  },
+  "drive_service": {
+    "module": "monkey.google.api.drive.helpers",
+    "class": "DriveService",
+    "parameters": [
+      {
+        "name": "credential_provider",
+        "type": "ref",
+        "value": "credential_provider"
+      }
+    ]
+  }
+}

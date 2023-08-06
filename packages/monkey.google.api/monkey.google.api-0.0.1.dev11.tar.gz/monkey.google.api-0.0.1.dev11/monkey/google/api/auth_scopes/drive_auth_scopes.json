@@ -1,0 +1,57 @@
+{
+  "drive": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive",
+    "desc": "Full, permissive scope to access all of a user's files, excluding the Application Data folder."
+  },
+  "drive.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.readonly",
+    "desc": "Allows read-only access to file metadata and file content."
+  },
+   "drive.activity": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.activity",
+    "desc": "Allows read and write access to the Drive Activity API."
+  },
+  "drive.activity.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.activity.readonly",
+    "desc": "Allows read-only access to the Drive Activity API."
+  },
+  "drive.appfolder": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.appfolder",
+    "desc": "Allows access to the Application Data folder."
+  },
+  "drive.apps.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.apps.readonly",
+    "desc": "Allows read-only access to installed apps."
+  },
+  "drive.file": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.file",
+    "desc": "Per-file access to files created or opened by the app. File authorization is granted on a per-user basis and is revoked when the user deauthorizes the app."
+  },
+  "drive.install": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.install",
+    "desc": "Special scope used to let users approve installation of an app, and scope needs to be requested."
+  },
+  "drive.metadata": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.metadata",
+    "desc": "Allows read-write access to file metadata (excluding downloadUrl and contentHints.thumbnail), but does not allow any access to read, download, write or upload file content. Does not support file creation, trashing or deletion. Also does not allow changing folders or sharing in order to prevent access escalation."
+  },
+  "drive.metadata.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.metadata.readonly",
+    "desc": "Allows read-only access to file metadata (excluding downloadUrl and contentHints.thumbnail), but does not allow any access to read or download file content."
+  },
+  "drive.scripts": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/drive.scripts",
+    "desc": "Allows access to Apps Script files."
+  }
+}
