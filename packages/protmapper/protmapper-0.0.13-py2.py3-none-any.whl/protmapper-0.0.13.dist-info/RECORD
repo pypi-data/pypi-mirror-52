@@ -1,0 +1,16 @@
+protmapper/__init__.py,sha256=NEBtz7lFxeRHekfBhqEFSyZBNk43wE2YSC5dA8vMToM,633
+protmapper/api.py,sha256=yc4EWuTzkYJQU66ddbsCtmD_teUc743BjqOS-_MQ7cg,31721
+protmapper/curated_site_map.csv,sha256=e40e5g4E8698BocmjiVtxfiHrUxSpSQyxM8DrJxvUXE,6760
+protmapper/phosphosite_client.py,sha256=-fYJjyG2yCmFwDFK1TXfA4EQCUW6FYDFjZd1mJpsoMk,10558
+protmapper/refseq_client.py,sha256=4ZM-kQFqSwktn5o8WTvvWSxW3Y8X3bFIScH7sf9dvsg,1163
+protmapper/resources.py,sha256=ntiW1vJz46TXqhqUW0OSCPf0Tmljcq6Wp659odtghLI,11652
+protmapper/uniprot_client.py,sha256=Ff10MoUt6nvjuZa6QEF7HfU8UkJS3s3n5TMElkWBMHk,31083
+protmapper/rest_api/__init__.py,sha256=f34gPFN-RR_UhcW3K521u27q6MU1DFYHVDjMnfVLrns,2130
+protmapper/rest_api/__main__.py,sha256=N42FUyVDAmmOeR-K9Dz20YIrZNr4p2jHKe72r_MeSFw,57
+protmapper/rest_api/api.py,sha256=3RBMD25ebcMP3HTDFidZpx-Sl3U3gtoL1jmVxO--M7o,1782
+protmapper/tests/test_cache_read.pkl,sha256=unmiyc5fFMuaRGqpcrjNOv0cAl37Q8cfpD_zNK2LEqo,297
+protmapper-0.0.13.dist-info/LICENSE,sha256=9JVM6NuQL1NxQSPKS1j4fBy37WICOWOEc_WjV51nksw,1315
+protmapper-0.0.13.dist-info/METADATA,sha256=feUedCikh20IYluzBJA-o1TFekKsPeWvHhtnZ6MkKiE,1097
+protmapper-0.0.13.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+protmapper-0.0.13.dist-info/top_level.txt,sha256=wCrQRlcHX83cCRg01oSxLQmkZqZD0A_pqdPvvq26Wqc,11
+protmapper-0.0.13.dist-info/RECORD,,
