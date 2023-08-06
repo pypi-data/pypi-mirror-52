@@ -1,0 +1,16 @@
+ezissue/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezissue/ezissue.py,sha256=Sq7NlHfFJ5tn7jUnFx58Ek-1fgVmhBLU-TcD8uYdDOQ,5995
+ezissue/utils.py,sha256=hzxynSGl-ATmGhwqnfh6wpD01NqO8beatGYhm6xAbhU,1168
+ezissue/converter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezissue/converter/manipulation.py,sha256=3ZzbRQRje6jDjIUvgv2haO74MlwUh4xAkn4hL5MCsiY,3171
+ezissue/secops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezissue/secops/secops_basic.py,sha256=cEihXIKWDRKZNlDy7PozUQhPzWNDMtwMS7rS-aL59eI,2381
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_issue_conv.py,sha256=UO19xz08ix78BCfpVxMurEyWjYYxRoyBzgvrKOokuys,3340
+tests/test_secops.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezissue_br-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ezissue_br-1.0.0.dist-info/METADATA,sha256=AX_nLumZZNSMBfFVyj-aS957aoOFehhxS7xDAle55Dc,7968
+ezissue_br-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+ezissue_br-1.0.0.dist-info/entry_points.txt,sha256=QmOR-2a3Wgn80hZJeB_qBYuJG80zEfHucmtbYIHNgVs,50
+ezissue_br-1.0.0.dist-info/top_level.txt,sha256=Wb0jiAG3EpAMz-K57qjFh9TjpZ3jlXHg-5ZR_Pn0iTI,14
+ezissue_br-1.0.0.dist-info/RECORD,,
