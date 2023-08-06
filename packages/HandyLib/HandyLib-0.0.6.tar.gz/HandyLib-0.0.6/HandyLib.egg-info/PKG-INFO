@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: HandyLib
+Version: 0.0.6
+Summary: A Handy Library
+Home-page: https://github.com/QY-Y/HandyLib
+Author: QY-Y
+Author-email: QY-Y@qq.com
+License: UNKNOWN
+Description: # HandyLib
+        
+        HandyLib provides some handy function that frequently used by me.  
+        Hope you could find it useful!   
+        Any suggestion or comment are welcome.
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Description-Content-Type: text/markdown
