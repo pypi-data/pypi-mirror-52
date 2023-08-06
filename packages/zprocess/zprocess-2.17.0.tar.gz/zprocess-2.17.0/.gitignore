@@ -1,0 +1,7 @@
+.coverage
+coverage_html_report/
+*.pyc
+test-reports/
+dist/
+zprocess/__version__.py
+zprocess.egg-info/
