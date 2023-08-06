@@ -1,0 +1,15 @@
+README.md
+setup.py
+Contra/__init__.py
+Contra/_registration.py
+Contra/actions.py
+Contra/env_contra.py
+Contra/ROMs/__init__.py
+Contra/ROMs/contra.nes
+Contra/ROMs/decode_target.py
+Contra/ROMs/rom_path.py
+gym_contra.egg-info/PKG-INFO
+gym_contra.egg-info/SOURCES.txt
+gym_contra.egg-info/dependency_links.txt
+gym_contra.egg-info/requires.txt
+gym_contra.egg-info/top_level.txt
