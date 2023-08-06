@@ -1,0 +1,19 @@
+numpy
+scipy
+pandas
+imageio
+tifffile
+av
+PySide2
+vispy
+dask
+mako
+click
+coloredlogs
+tqdm
+
+[:platform_system != "Darwin"]
+cupy-cuda101
+
+[:platform_system == "Darwin"]
+cupy
