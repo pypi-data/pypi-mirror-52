@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lsdtt-xtensor-python
+Version: 0.0.3
+Summary: This is an attempt to port LSDTT to Python
+Home-page: https://github.com/LSDtopotools/lsdtt_xtensor
+Author: LSDTopoTools team
+Author-email: b.gailleton@sms.ed.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pybind11 (>=2.0.1)
+Requires-Dist: numpy
+
+UNKNOWN
+
+
