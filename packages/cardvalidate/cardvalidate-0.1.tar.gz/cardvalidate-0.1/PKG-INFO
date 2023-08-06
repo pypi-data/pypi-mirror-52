@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: cardvalidate
+Version: 0.1
+Summary: Credit card number and CVV validator and checker
+Home-page: https://github.com/tansawit/cardvalidate
+Author: sawit.tr@gmail.com
+Author-email: sawit.tr@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: credit,card,validator,checker,issuer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
