@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+short_description.txt
+spellingtest/__init__.py
+spellingtest/__main__.py
+spellingtest/check.py
+spellingtest/version.py
+spellingtest.egg-info/PKG-INFO
+spellingtest.egg-info/SOURCES.txt
+spellingtest.egg-info/dependency_links.txt
+spellingtest.egg-info/requires.txt
+spellingtest.egg-info/top_level.txt
