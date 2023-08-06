@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: reading-helper
+Version: 0.1.7
+Summary: 
+Home-page: https://github.com/neighthan/reading-helper
+License: MIT
+Author: Nathan Hunt
+Author-email: neighthan.hunt@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Project-URL: Repository, https://github.com/neighthan/reading-helper
+Description-Content-Type: text/markdown
+
+# reading-helper
+

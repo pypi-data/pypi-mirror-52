@@ -1,0 +1,4 @@
+[console_scripts]
+make_paper_page=reading_helper:scripts_api.make_paper_page
+search_tags=reading_helper:scripts_api.search_tags
+
