@@ -1,0 +1,8 @@
+Click
+spotipy
+tabulate
+
+[dev]
+black
+flake8
+isort
