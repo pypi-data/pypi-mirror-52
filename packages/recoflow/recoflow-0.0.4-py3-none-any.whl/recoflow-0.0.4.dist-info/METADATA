@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: recoflow
+Version: 0.0.4
+Summary: Deep Recommender System for Humans
+Home-page: https://github.com/amitkaps/recoflow
+License: MIT
+Author: Amit Kapoor
+Author-email: amitkaps@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: altair (>=3.2,<4.0)
+Requires-Dist: keras (>=2.3,<3.0)
+Requires-Dist: matplotlib (>=3.1,<4.0)
+Requires-Dist: numpy (>=1.17,<2.0)
+Requires-Dist: pandas (>=0.25.1,<0.26.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: scikit-learn (>=0.21.3,<0.22.0)
+Project-URL: Repository, https://github.com/amitkaps/recoflow
+Description-Content-Type: text/markdown
+
+# recoflow
+Deep Recommender System for Humans
+
