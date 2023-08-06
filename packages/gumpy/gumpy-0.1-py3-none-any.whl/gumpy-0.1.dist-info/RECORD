@@ -1,0 +1,13 @@
+config/H37rV_v3.gbk,sha256=4YEgawLTwP7cwO9EoeVPomxJIHgC7XP4ZhK7wpVCe9w,10273374
+config/NC_004148.2.fasta.gz,sha256=916U5ERlbiZQvOc08eaGJedzbiYh6kxFWb5pa7zKwg0,4672
+config/NC_004148.2.gbk,sha256=6pEdxr8qbOjTjhQ_w7D_yFhu__gFkpljOShbG-HdA6k,30806
+gumpy/__init__.py,sha256=W8jMKR4QnbLQKHgF8yUV0MjftfR1ghJJPjEIUPz3fg0,149
+gumpy/gene.py,sha256=CWXWMyfEu_PXRQTIJu_75dTR_MsRlXpBHjv4wV52pfU,10813
+gumpy/genome.py,sha256=exO-_Ajn0z-Bzuj6pr1EgZpzI47GPTKO4Yp2LagOAIs,44279
+gumpy/genotype.py,sha256=9Ds-Opkl5V6KSCIs4nTlNuHPi818KqY5E4ZPYfy4UYE,1584
+gumpy-0.1.data/scripts/gumpy-save-genome.py,sha256=hZI85rsiALOiMGTQ3Bj93bnJyTyq5bbZVQjpe1NjYiM,684
+gumpy-0.1.dist-info/LICENSE,sha256=eIKorJVXECjQVeDLdr5xttoxDp-xZAFZnnu9741DmZw,5874
+gumpy-0.1.dist-info/METADATA,sha256=Dv9F0KLg3L5PRFHZIf4-9XSdazutrA3ISNrVzafNT4Q,543
+gumpy-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gumpy-0.1.dist-info/top_level.txt,sha256=E0cDArOJYEAABKB9YF3K5kh-iijc3Stx2yOe2STwMSU,6
+gumpy-0.1.dist-info/RECORD,,
