@@ -1,0 +1,3 @@
+[console_scripts]
+fw-gear-audit = cli.FlywheelGearAudit:main
+
