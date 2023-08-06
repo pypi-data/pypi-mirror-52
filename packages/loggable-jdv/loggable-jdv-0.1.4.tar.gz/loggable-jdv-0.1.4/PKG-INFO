@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: loggable-jdv
+Version: 0.1.4
+Summary: Logging package. Alpha. Not meant for wider release.
+Author: jvrana
+Author-email: justin.vrana@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: arrow (>=0.14.3,<0.15.0)
+Requires-Dist: colorlog (>=4.0,<5.0)
+Requires-Dist: tqdm (>=4.32,<5.0)
