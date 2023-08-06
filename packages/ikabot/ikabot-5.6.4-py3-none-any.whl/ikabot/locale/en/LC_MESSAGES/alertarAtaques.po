@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-07-04 15:11-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: ../../../funcion/alertarAtaques.py:27
+msgid "Se buscarán ataques cada 20 minutos."
+msgstr "I will check for attacks every 20 minutes"
+
+#: ../../../funcion/alertarAtaques.py:34
+msgid ""
+"\n"
+"Espero por ataques cada 20 minutos\n"
+msgstr ""
+"\n"
+"I check for attacks every 20 minutes\n"
+
+#: ../../../funcion/alertarAtaques.py:39
+msgid ""
+"Error en:\n"
+"{}\n"
+"Causa:\n"
+"{}"
+msgstr ""
+"Error in:\n"
+"{}\n"
+"Cause:\n"
+"{}"
+
+#: ../../../funcion/alertarAtaques.py:67
+msgid "Comando inválido: {:d}"
+msgstr "Invalid command: {:d}"
+
+#: ../../../funcion/alertarAtaques.py:95
+msgid ""
+"-- ALERTA --\n"
+msgstr "-- ALERT --\n"
+
+#: ../../../funcion/alertarAtaques.py:97
+msgid ""
+"de la ciudad {} de {}\n"
+msgstr ""
+"from the city {} of {}\n"
+
+#: ../../../funcion/alertarAtaques.py:98
+msgid ""
+"a {}\n"
+msgstr ""
+"to {}\n"
+
+#: ../../../funcion/alertarAtaques.py:99
+msgid ""
+"{} unidades\n"
+msgstr ""
+"{} units\n"
+
+#: ../../../funcion/alertarAtaques.py:100
+msgid ""
+"{} flotas\n"
+msgstr ""
+"{} fleet\n"
+
+#: ../../../funcion/alertarAtaques.py:101
+msgid ""
+"llegada en: {}\n"
+msgstr ""
+"arrival in: {}\n"
+
+#: ../../../funcion/alertarAtaques.py:102
+msgid ""
+"Si quiere poner la cuenta en modo vacaciones envíe:\n"
+msgstr ""
+"If you want to put the account in vacation mode send:\n"
+
+#: ../../../funcion/alertarAtaques.py:103
+msgid "{:d}:1"
+msgstr "{:d}:1"
+
