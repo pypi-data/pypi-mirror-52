@@ -1,0 +1,14 @@
+README.md
+setup.py
+pyrrhic/__init__.py
+pyrrhic/commands.py
+pyrrhic/hash.py
+pyrrhic/rules.py
+pyrrhic/scanners.py
+pyrrhic/types.py
+pyrrhic/util.py
+pyrrhic.egg-info/PKG-INFO
+pyrrhic.egg-info/SOURCES.txt
+pyrrhic.egg-info/dependency_links.txt
+pyrrhic.egg-info/top_level.txt
+pyrrhic.egg-info/zip-safe
