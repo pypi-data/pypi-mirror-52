@@ -1,0 +1,3 @@
+[console_scripts]
+tarakimu = tarakimu.cli:cli
+
