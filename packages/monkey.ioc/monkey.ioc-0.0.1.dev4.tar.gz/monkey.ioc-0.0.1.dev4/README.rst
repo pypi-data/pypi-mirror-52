@@ -1,0 +1,162 @@
+Monkey IOC
+==========
+
+Monkey IoC is a simple framework for inversion of control by dependency injection.
+
+It works with a registery of named elements whose definitions have been loaded from a JSON file.
+
+Supported types:
+    * string
+    * integer and float
+    * date, time and datetime
+    * object
+    * list and dict
+    * JSON map
+    * reference to another definition
+    * reference to an environment variable
+
+Installation guide
+------------------
+
+::
+
+    pip install monkey.ioc
+
+User guide
+----------
+
+::
+
+    from monkey.ioc.core import Registry
+
+    registry = Registry()
+    registry.load('config.json')
+    my_object = registry.get('myObjectID')
+
+Logging
+,,,,,,,
+
+Logger name for Registry instances is :code:`monkey.ioc.core.Registry`.
+
+Definition syntax
+,,,,,,,,,,,,,,,,,
+
+String
+......
+
+::
+
+    "city": {
+        "type": "str",
+        "value": "Tombstone"
+    }
+
+
+Integer
+.......
+
+::
+
+    "year": {
+        "type": "int",
+        "value": 1873
+    }
+
+Float
+.....
+
+::
+
+    "height": {
+        "type": "float",
+        "value": 1.83
+      }
+
+Date
+....
+
+::
+
+     {
+        "name": "birth_date",
+        "type": "date",
+        "format": "%d/%m/%Y",
+        "value": "18/07/1843"
+      }
+
+Default pattern: :code:`%d-%m-%Y`
+
+Object
+......
+
+::
+
+    "wyatt_earp": {
+        "module": "monkey_samples.gunslingers",
+        "class": "Person",
+        "parameters": [
+            {
+                "name": "first_name",
+                "type": "str",
+                "value": "Wyatt"
+            },
+            {
+                "name": "last_name",
+                "type": "str",
+                "value": "EARP"
+            }
+        ]
+    }
+
+Reference
+.........
+
+<TODO>
+
+Environment variable
+....................
+
+::
+
+    "username": {
+        "type": "envvar",
+        "value": "USERNAME"
+    }
+
+List
+....
+
+::
+
+    {
+        "name": "members",
+        "type": "list",
+        "value": [
+            {
+                "type": "ref",
+                "value": "wyatt_earp"
+            },
+            {
+                "type": "ref",
+                "value": "morgan_earp"
+            }
+        ]
+    }
+
+Dictionary
+..........
+
+<TODO>
+
+Inclusion
+.........
+It is possible to compose the registry configuration by including multiple JSON files.
+
+File paths are absolute or relative to working directory and support wildcards.
+
+::
+
+    "include": [
+        "**/*guns.json",
+        "data/guns/rif*"
+    ]
