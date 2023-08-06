@@ -1,0 +1,3 @@
+[console_scripts]
+pockethernet = pockethernet.__main__:main
+
