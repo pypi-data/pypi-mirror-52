@@ -1,0 +1,16 @@
+opengl_registry/__init__.py,sha256=e6ooCc9pABkgLOfa-cYtz1SB2z9nOXRK3HlS2tO49fM,59
+opengl_registry/cli.py,sha256=Hp9KEltcjtTmYHMAcfzMRKH9h5iztiZbYkiz9Dc2TO8,1905
+opengl_registry/commands.py,sha256=YXj8YVQX70osSH4FkHpUgfbGD8ks9EoJEED2H9VKHts,96
+opengl_registry/enums.py,sha256=p65lSVX1-tEfe_KjM7uIFBKB4bDmbZ_GzRKRrh5mUqA,3604
+opengl_registry/extensions.py,sha256=cRzrsm1d_K7ZH0gGpvbtGch3qQhTSMCEODv17obiBS0,32
+opengl_registry/features.py,sha256=oQK1NsAKctemI8JnW9FgLmhPnhpVo_QhWFq-EB2xIEc,30
+opengl_registry/gltype.py,sha256=odJnVuKiT_J2eGLbA9sd8Dr4OgcXGPY8d6Mc6nuwMAo,1109
+opengl_registry/group.py,sha256=jXJ7pi2rqFOvbZC7gGVxtNeFClVPoISpQG2GVeJEKBE,766
+opengl_registry/reader.py,sha256=x5QcYP_yD4GtG3RSAc-t8Gzlg052Uz_e0-6nW6MG_IY,5277
+opengl_registry/registry.py,sha256=sykb2X3kL7CF6HQi2k3Rnp_C5OvholvPcOM8CjLNFgE,1103
+opengl_registry-0.1.0.dist-info/LICENSE,sha256=dhsnsJVQCbGg_63g-BtGbbG70GA3FF6T9jl2zrW0A14,1070
+opengl_registry-0.1.0.dist-info/METADATA,sha256=bBoatdTCGFqt__8zF9Z4lc_Zklw58P0xiwyehig4sNg,7740
+opengl_registry-0.1.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+opengl_registry-0.1.0.dist-info/entry_points.txt,sha256=GreJo-a6cbTbN37Apo9gQDV7ZnL99shpvsaTbaw-E9E,83
+opengl_registry-0.1.0.dist-info/top_level.txt,sha256=pO8V_TGA7NdXR2P3cO_TCRUprwsZjrtrfQtYiYBfqK4,16
+opengl_registry-0.1.0.dist-info/RECORD,,
