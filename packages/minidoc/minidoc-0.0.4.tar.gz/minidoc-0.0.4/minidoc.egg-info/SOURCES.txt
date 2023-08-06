@@ -1,0 +1,17 @@
+README.rst
+setup.py
+minidoc/__init__.py
+minidoc/bin.py
+minidoc/comast.py
+minidoc/minidoc.py
+minidoc/r2x.py
+minidoc/svg.py
+minidoc/tst.py
+minidoc.egg-info/PKG-INFO
+minidoc.egg-info/SOURCES.txt
+minidoc.egg-info/dependency_links.txt
+minidoc.egg-info/entry_points.txt
+minidoc.egg-info/requires.txt
+minidoc.egg-info/top_level.txt
+minidoc/BINS/__init__.py
+minidoc/BINS/minidoc_from_docstring.py

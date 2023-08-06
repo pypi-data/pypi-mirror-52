@@ -1,0 +1,4 @@
+[console_scripts]
+minidoc = minidoc.bin:main
+minidoc_from_docstring = minidoc.BINS.minidoc_from_docstring:main
+
