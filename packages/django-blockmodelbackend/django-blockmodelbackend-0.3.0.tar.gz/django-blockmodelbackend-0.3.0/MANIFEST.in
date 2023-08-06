@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include blockmodelbackend/migrations/ *.py
+recursive-include docs *

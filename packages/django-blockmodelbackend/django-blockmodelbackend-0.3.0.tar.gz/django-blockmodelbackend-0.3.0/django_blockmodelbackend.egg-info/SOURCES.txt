@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+blockmodelbackend/__init__.py
+blockmodelbackend/apps.py
+blockmodelbackend/modelbackend.py
+blockmodelbackend/models.py
+blockmodelbackend/migrations/0001_initial.py
+blockmodelbackend/migrations/__init__.py
+django_blockmodelbackend.egg-info/PKG-INFO
+django_blockmodelbackend.egg-info/SOURCES.txt
+django_blockmodelbackend.egg-info/dependency_links.txt
+django_blockmodelbackend.egg-info/requires.txt
+django_blockmodelbackend.egg-info/top_level.txt
