@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pivotal-parser
+Version: 0.1.0
+Summary: Tool to parse out Pivotal Tracker CSVs.
+Author: Adam Drewery
+Author-email: adam@verypossible.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: pandas (>=0.25.1,<0.26.0)

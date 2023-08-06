@@ -1,0 +1,3 @@
+[console_scripts]
+pivotal_parser=pivotal_parser:cli.run
+
