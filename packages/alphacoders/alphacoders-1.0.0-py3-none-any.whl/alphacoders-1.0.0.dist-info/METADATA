@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: alphacoders
+Version: 1.0.0
+Summary: Download wallpapers from Alpha Coders
+Home-page: https://github.com/whoiscc/alphacoders
+Author: Correctizer
+Author-email: correctizer@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: lxml
+
+# Alphacoders
+
+```
+pip install alphacoders
+python3 -m alphacoders -h
+```
+
