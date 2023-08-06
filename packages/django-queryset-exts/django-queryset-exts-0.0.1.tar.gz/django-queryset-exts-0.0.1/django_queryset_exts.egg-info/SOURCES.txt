@@ -1,0 +1,11 @@
+README.md
+setup.py
+django_queryset_exts/__init__.py
+django_queryset_exts/fields.py
+django_queryset_exts/models.py
+django_queryset_exts/query.py
+django_queryset_exts/signals.py
+django_queryset_exts.egg-info/PKG-INFO
+django_queryset_exts.egg-info/SOURCES.txt
+django_queryset_exts.egg-info/dependency_links.txt
+django_queryset_exts.egg-info/top_level.txt
