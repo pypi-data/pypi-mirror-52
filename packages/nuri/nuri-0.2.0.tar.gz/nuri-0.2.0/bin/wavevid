@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+import nuri,mlpy,numpy,os
+from matplotlib.colors import LogNorm
+import matplotlib.pyplot as plt
+path = '/Users/vincent/Google\ Drive/research/UrbanMagnetometry/Processed\ Data/1Hz/'
+data = nuri.get_data('2016-5-2','2016-6-6',path,station=4,sensor='biomed')
+n,i,length = 1,0,3600
+omega0 = 6
+scales = mlpy.wavelet.autoscales(N=length,dt=1,dj=0.05,wf='morlet',p=omega0)
+while i+1<len(data):
+    spec = mlpy.wavelet.cwt(data.value[i:i+length],dt=1,scales=scales,wf='morlet',p=omega0)
+    spec = numpy.abs(spec)**2
+    freq = (omega0 + numpy.sqrt(2.0 + omega0 ** 2)) / (4 * numpy.pi * scales[1:])
+    idx = abs(freq-1e-2).argmin()
+    fig = plt.figure(figsize=(37.87,10),dpi=50)
+    plt.imshow(spec[:idx],extent=[0,length,freq[idx],freq[0]],aspect='auto',
+               interpolation='nearest',cmap='jet',norm=LogNorm(0.0000001,1))
+    plt.tick_params(which='both', labelleft=False,labelbottom=False)
+    plt.grid(False)
+    plt.tight_layout()
+    plt.savefig('image-%03i'%n)
+    plt.close()
+    n+=1
+    i+=600
+    if n==144: break
+os.system('convert -delay 30 -loop 1 -density 300 *.png animation.gif')
