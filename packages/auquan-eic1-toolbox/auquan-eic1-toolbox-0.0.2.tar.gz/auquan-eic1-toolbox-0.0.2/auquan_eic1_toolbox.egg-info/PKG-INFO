@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: auquan-eic1-toolbox
+Version: 0.0.2
+Summary: Toolbox for QQ14
+Home-page: UNKNOWN
+Author: Auquan Team
+Author-email: qqadmins@auquan.com
+License: MIT
+Description: # Auquan Ethical Investing Challenge 1 Toolbox
+        
+        This package is intended to be used for the Auquan's Ethical Investing Challenge 1
+        
+Keywords: auquan finance trading backtesting development
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
