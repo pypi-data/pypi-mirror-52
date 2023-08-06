@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: svgmanip
+Version: 0.0.5
+Summary: A simple library for programmatically generating SVGs.
+Home-page: https://github.com/CrazyPython/svgmanip
+Author: James Lu
+Author-email: jamtlu@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: svg,image,simple
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: IronPython
+Classifier: Programming Language :: Python :: Implementation :: Jython
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: Implementation :: Stackless
+Classifier: Topic :: Multimedia :: Graphics :: Editors :: Vector-Based
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
