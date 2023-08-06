@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pjlink
+Version: 1.1
+Summary: PJLink is a standard for controlling data projectors.
+Home-page: http://hg.flowblok.id.au/pjlink
+Author: Peter Ward
+Author-email: peteraward@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Topic :: Multimedia :: Video :: Display
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs
+Requires-Dist: six
+
+This library is an implementation of the [PJLink](https://pjlink.jbmia.or.jp/)
+protocol. There is both an API and a command-line tool: for usage information,
+see [this blog post](https://blog.flowblok.id.au/2012-11/controlling-projectors-with-pjlink.html).
+
+
