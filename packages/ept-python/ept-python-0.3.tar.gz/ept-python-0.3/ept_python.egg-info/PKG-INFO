@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: ept-python
+Version: 0.3
+Summary: UNKNOWN
+Home-page: https://github.com/hobu/ept-python
+Author: Howard Butler
+Author-email: howard@hobu.co
+Maintainer: Howard Butler
+Maintainer-email: howard@hobu.co
+License: BSD
+Description: 
+        
+        
+Keywords: point cloud data organization
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: GIS
