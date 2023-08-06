@@ -1,0 +1,2 @@
+[console_scripts]
+hello.py = pylib.hello:main
