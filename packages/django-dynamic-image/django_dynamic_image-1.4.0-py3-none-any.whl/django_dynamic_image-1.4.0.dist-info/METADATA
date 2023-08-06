@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: django-dynamic-image
+Version: 1.4.0
+Summary: A django ImageField whose upload_to value is generated from a model method
+Home-page: https://github.com/alexseitsinger/django-dynamic-image
+Author: Alex Seitsinger
+Author-email: software@alexseitsinger.com
+License: BSD 2-Clause License
+Project-URL: Documentation, https://github.com/alexseitsinger/django-dynamic-image
+Project-URL: Source, https://github.com/alexseitsinger/django-dynamic-image
+Project-URL: Tracker, https://github.com/alexseitsinger/django-dynamic-image/issues
+Keywords: django,imagefield
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System
+Description-Content-Type: text/markdown
+Requires-Dist: Django
+Requires-Dist: requests
+Requires-Dist: image-tools
+
+# Django Dynamic Image
+
+## Description
+
+A django ImageField whose upload_to value is generated from a model method.
+
+## Installation
+
+```python
+pip install django-dynamic-image
+```
+
+## Usage
+
+```python
+from django.db import models
+from dynamic_image.fields import DynamicImageField
+
+class ExampleModel(models.Model):
+    name = models.CharField(max_length=56)
+    image = DynamicImageField()
+
+    def get_upload_to(self, field_name):
+        class_name = self.__class__.__name__.lower()
+        instance_name = self.name
+        return "{}/{}".format(class_name, instance_name)
+```
+
+
