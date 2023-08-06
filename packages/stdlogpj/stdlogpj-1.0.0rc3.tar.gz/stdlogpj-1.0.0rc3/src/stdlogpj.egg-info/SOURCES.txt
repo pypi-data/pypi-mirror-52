@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+src/stdlogpj/__init__.py
+src/stdlogpj/_version.py
+src/stdlogpj/stdlog.py
+src/stdlogpj.egg-info/PKG-INFO
+src/stdlogpj.egg-info/SOURCES.txt
+src/stdlogpj.egg-info/dependency_links.txt
+src/stdlogpj.egg-info/top_level.txt
