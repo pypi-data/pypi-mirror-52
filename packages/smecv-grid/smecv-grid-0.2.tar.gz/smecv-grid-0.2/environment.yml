@@ -1,0 +1,14 @@
+name: smecv_grid
+channels:
+- conda-forge
+- defaults
+dependencies:
+- numpy
+- netcdf4
+- pykdtree
+- pip
+- pip:
+  - configparser
+  - pygeogrids
+  - pyproj
+  - more_itertools
