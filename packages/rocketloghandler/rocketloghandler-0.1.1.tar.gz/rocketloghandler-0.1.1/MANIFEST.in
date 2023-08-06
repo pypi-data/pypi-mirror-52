@@ -1,0 +1,3 @@
+prune testmodule/
+exclude rocketlog_test.py
+exclude test_mine.cfg

@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+rocketloghandler/__init__.py
+rocketloghandler/rocketloghandler.py
+rocketloghandler.egg-info/PKG-INFO
+rocketloghandler.egg-info/SOURCES.txt
+rocketloghandler.egg-info/dependency_links.txt
+rocketloghandler.egg-info/requires.txt
+rocketloghandler.egg-info/top_level.txt
