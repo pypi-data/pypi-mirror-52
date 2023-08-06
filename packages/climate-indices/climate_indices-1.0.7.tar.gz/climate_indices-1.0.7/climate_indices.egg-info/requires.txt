@@ -1,0 +1,9 @@
+dask
+nco
+netcdf4
+numba
+numpy
+pytest
+scipy
+toolz
+xarray
