@@ -1,0 +1,16 @@
+dockerflow>=2018.4.0
+pgsanity
+pyhive
+requests
+six
+sqlparse
+
+[dev]
+watchdog
+
+[test]
+flake8==3.5.0
+mock
+pytest
+pytest-cov
+pytest-flake8<1.0.1
