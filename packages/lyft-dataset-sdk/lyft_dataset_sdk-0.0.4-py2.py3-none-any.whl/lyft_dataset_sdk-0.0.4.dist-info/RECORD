@@ -1,0 +1,13 @@
+lyft_dataset_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lyft_dataset_sdk/lyftdataset.py,sha256=w57sziF6HVtF2nfqAKc3f_X7lUFEPSXe1UY67ZvzmMM,58048
+lyft_dataset_sdk/eval/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lyft_dataset_sdk/eval/detection/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lyft_dataset_sdk/eval/detection/mAP_evaluation.py,sha256=jyBr1M-UtTy-gvmQgkdd-hg0l7JsdC8fk_PK_mu9AEQ,13010
+lyft_dataset_sdk/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lyft_dataset_sdk/utils/data_classes.py,sha256=86ffKcpVGuZFKDJZTr88s8x72ya9ES_s8SFEpVMml1Q,26239
+lyft_dataset_sdk/utils/geometry_utils.py,sha256=oOylWjUXp4JYQdGqQA3L-sydA-355FsaJf2FI6r2b8U,6034
+lyft_dataset_sdk/utils/map_mask.py,sha256=uyvBWILQoeLW7qWJPQ3AaV6s0oALRo9UMp31RWvXyUo,4620
+lyft_dataset_sdk-0.0.4.dist-info/METADATA,sha256=-qJRboMu8iaU3jRnYOxHsELd-ZlHzBBgQL9YPDLG0fI,3470
+lyft_dataset_sdk-0.0.4.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+lyft_dataset_sdk-0.0.4.dist-info/top_level.txt,sha256=yXXIFw5C8v-D10fTvaX-WTHuRE-b4EC0A84Cj4baU2A,17
+lyft_dataset_sdk-0.0.4.dist-info/RECORD,,
