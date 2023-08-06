@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: irsensors
+Version: 0.0.6
+Summary: This package allows to read datas from an IR sensor set connected by USB.
+Home-page: https://github.com/Gillou100/educat_irsensor/tree/master/irsensors
+Author: Gilles HUBERT
+Author-email: gilles.hubert@isen.yncrea.fr
+License: UNKNOWN
+Description: This package allows to read data from an IR sensor set connected by USB.
+        
+        This package expect the IR sensor set to send string encode line data as follow:
+        "ID,Error_Code,Distance,.........,
+        ". What is between the third and the fourth comma does not matter.
+        
+        This package uses the serial package. You can install it with "pip install serial" command.
+        
+        In this version, the sensor ID can not be more than 9 (if it is more than 9, it will cause a bug).
+        
+        
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
