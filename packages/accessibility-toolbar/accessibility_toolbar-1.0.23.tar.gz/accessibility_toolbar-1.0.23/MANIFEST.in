@@ -1,0 +1,21 @@
+include README-Pypi.md
+include accessibility_toolbar/static/font_style/color_control.js
+include accessibility_toolbar/static/font_style/font_control.js
+include accessibility_toolbar/static/font_style/font_spacing.js
+include accessibility_toolbar/static/font_style/font_style.css
+include accessibility_toolbar/static/font_style/font_style.js
+include accessibility_toolbar/static/font_style/predefined_styles.css
+include accessibility_toolbar/static/font_style/predefined_styles.js
+include accessibility_toolbar/static/font_style/spectrum.js
+include accessibility_toolbar/static/planner/planner.css
+include accessibility_toolbar/static/planner/planner.js
+include accessibility_toolbar/static/spell_checker/EN_dictionary.js
+include accessibility_toolbar/static/spell_checker/spc_function.js
+include accessibility_toolbar/static/spell_checker/spell_checker.js
+include accessibility_toolbar/static/spell_checker/spellchecker.css
+include accessibility_toolbar/static/themes/themes.css
+include accessibility_toolbar/static/themes/themes.js
+include accessibility_toolbar/static/voice_control/voice_control.js
+include accessibility_toolbar/static/voice_control/voice_control.css
+include accessibility_toolbar/static/main.js
+recursive-include jupyter-config *.json
