@@ -1,0 +1,10 @@
+setup.py
+fiddler/__init__.py
+fiddler/client.py
+fiddler/core_objects.py
+fiddler/fiddler_api.py
+fiddler_client.egg-info/PKG-INFO
+fiddler_client.egg-info/SOURCES.txt
+fiddler_client.egg-info/dependency_links.txt
+fiddler_client.egg-info/requires.txt
+fiddler_client.egg-info/top_level.txt
