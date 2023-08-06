@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: wistiapy
+Version: 0.0.3
+Summary: A Python client for the Wistia API
+Home-page: https://github.com/Edrolo/wistiapy
+Author: Matt Fisher
+Author-email: matt@edrolo.com
+License: MIT
+Keywords: wistia api client
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests (<3.0.0,>=2.22.0)
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: responses ; extra == 'dev'
+
+UNKNOWN
+
+
