@@ -1,0 +1,17 @@
+proMAD/__init__.py,sha256=4p12tMyd0oaiDoguYOnAn0TgYONy5rWE8HtBBtknipU,144
+proMAD/config.py,sha256=ySYU6C8fmSkHhNoZYUJk0LEKkOQg8CW_WLejAHORe9k,404
+proMAD/core.py,sha256=n5YYy3OkWd6OVCbTVFtPTzTRjqavP6GfbXAZYissxGk,51346
+proMAD/cut.py,sha256=Aly7TqeEaNkYynDVpHq2INrvVLNejd9fsXOCTtERNeE,11121
+proMAD/report.py,sha256=X6J2z4K8uCD9dKIZ_jXlrvpEmlCzbB70sLZ-vySZqac,15970
+proMAD/data/array/ARY007.json,sha256=2Ovb2KeOP9S82V9kh9zGMWlxrxJVQvujOdHi98jqsu0,7175
+proMAD/data/array/ARY015.json,sha256=9Z1KuYKs8XY0Qw0_WFBfBAUhgYciQgPowM6sFSZb2n0,6965
+proMAD/data/array/ARY022B.json,sha256=iIQUGK0qOqKnaRFwyH2ZUAocoB2lTIMRMg9567s3OJY,13175
+proMAD/data/array/ARY028.json,sha256=7ZB7h924Wg_vE9e5qDjowaWo2uOLrORExrT6VriBGAo,14511
+proMAD/data/templates/logo.png,sha256=OiSicjaRrTFT1sY-J3T4Q2a260Q1XctOmc6g-pq0y1w,34204
+proMAD/data/templates/short_report.tex,sha256=QFmrO3WiIWKSykSHPIiaGRXO1sI7OnmBmOGpgTkcdXQ,3629
+proMAD-0.2.4.dist-info/LICENSE.txt,sha256=zXIMcCzcDIRtaW7iYioUXKgZRew8QFLazNQHMSpJGbo,1083
+proMAD-0.2.4.dist-info/METADATA,sha256=YyWto9Ak2gXxOH4j_UErDE3puFASrknghwj5m6ZirmA,3459
+proMAD-0.2.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+proMAD-0.2.4.dist-info/top_level.txt,sha256=YyZtM-HHfxxg5XviOyVkbPoBZ01cEbrhMuX7SIgtbyo,7
+proMAD-0.2.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+proMAD-0.2.4.dist-info/RECORD,,
