@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+  {% block title %}Catégorie “{{ category }}” — {{ exam_type }} {{ topic }}{% endblock %}
+
+  {% block navigation %}
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ site_root }}/">Accueil</a></li>
+        <li class="breadcrumb-item">{{ exam_type }} {{ topic }}</li>
+      </ol>
+    </nav>
+  </div>
+  {% endblock %}
+
+  {% block body %}
+  <h1 id="title">Catégorie: {{ category }}</h1>
+  <div class="container">
+    <ul class="list-nobullet">
+      {% for exo in index %}
+      <li><a href="{{ exo.href }}">{{ exo.description }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
