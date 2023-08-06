@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: vedadb
+Version: 0.2.5
+Summary: A small example package
+Home-page: https://github.com/pypa/sampleproject
+Author: Example Author
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Vedadb - Base de donnée de Vedadb
+========================================================
+
+Ce module est la base de donnée de vedadb 
+Vous pouvez l'installer avec pip:
+
+    pip3 install vedadb
+
+Pour installer le paqueage:
+
+    python setup.py install 
+
+Pour installer le paqueage:
+
+    -->Toutes les version:
+
+        sudo rm -r vedadb-*-py3.7.egg
+    -->Une version spécifique ici le 0.0.2:
+        sudo rm -r vedadb-0.0.2-py3.7.egg 
+
+

@@ -1,0 +1,13 @@
+vedadb/__init__.py,sha256=cdxlXOjfiZF_bka4YPWlt-nqIcPSwba5EnT5ut0htpw,372
+vedadb/connexion.py,sha256=aw1M4vcW9MSmCnuVltsHiTsNJ7GhXKglZI4daIidsbg,531
+vedadb/dimensionContent.py,sha256=2z1CTKTBHLwBY31fp76HQRk188IEWb6_heEtJY4o9g4,6152
+vedadb/endpoint.py,sha256=QlQXyUlXdmQBRCbTLnHQGoQIrIR3fXn04E1cWzslsaY,1089
+vedadb/entete.py,sha256=8zTfd_Avm9aGf2uLDvGksaRK4gqQqUUSH81SPQzGLFQ,2100
+vedadb/fileToDataframe.py,sha256=vGFfpuzqGw7q5Gdm3CqKzRpFhgc4bm8EGVQr3UmvxHQ,1349
+vedadb/resultat.py,sha256=kOQaatV121KLuaDtWVnxEh4vidGDsZ_G-Hh8fZAIaIQ,2848
+vedadb/sets.py,sha256=WEW88Iq_EmtQNtONkhZXrXS307xSTw8z9nWz98RlVXk,1992
+vedadb/tableCreated.py,sha256=XwgWJSQjtA9VXEkZ67LeJqYpNqOBZdSt5neU3gn3Xz0,2474
+vedadb-0.2.5.dist-info/METADATA,sha256=P5GWY0vHjDgQCcAbdFCHUTu8J4d4iAVnvm5PAhqQUoM,874
+vedadb-0.2.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+vedadb-0.2.5.dist-info/top_level.txt,sha256=S-0QoCQ4wkcbMMAOZrGGKYoK_zgKakeJXJGjjqWgX5A,7
+vedadb-0.2.5.dist-info/RECORD,,
