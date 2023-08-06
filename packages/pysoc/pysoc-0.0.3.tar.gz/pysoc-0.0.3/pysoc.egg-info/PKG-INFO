@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pysoc
+Version: 0.0.3
+Summary: Self-Optimizing Control as python toolbox.
+Home-page: https://github.com/feslima/pySOC
+Author: Victor Manuel Cunha Alves, Felipe Souza Lima
+Author-email: feslima93@gmail.com
+License: Apache License 2.0
+Description: # pySOC
+        Self-Optimizing Control algorithms in Python.
+        
+Keywords: self-optimizing-control,plantwide-control
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
