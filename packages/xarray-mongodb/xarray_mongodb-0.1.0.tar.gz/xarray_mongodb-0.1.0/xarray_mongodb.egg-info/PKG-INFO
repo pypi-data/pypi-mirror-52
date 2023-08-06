@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: xarray-mongodb
+Version: 0.1.0
+Summary: xarray_mongodb
+Home-page: https://github.com/AmphoraInc/xarray_mongodb
+Author: Amphora, Inc.
+Author-email: support@amphorainc.com
+License: Apache
+Description: 
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Provides-Extra: pint
+Provides-Extra: asyncio
+Provides-Extra: sparse
