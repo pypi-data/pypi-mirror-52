@@ -1,0 +1,126 @@
+B_BIO_1:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_biotin_B4_S204_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_biotin_B4_S204_R2_001.fastq.gz
+  color: 2
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_BIO_2:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_biotin_B5_S205_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_biotin_B5_S205_R2_001.fastq.gz
+  color: 2
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_BIO_3:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_biotin_B6_S206_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_biotin_B6_S206_R2_001.fastq.gz
+  color: 2
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_NO_1:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_nocap_A4_S192_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_nocap_A4_S192_R2_001.fastq.gz
+  color: 3
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_NO_2:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_nocap_A5_S193_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_nocap_A5_S193_R2_001.fastq.gz
+  color: 3
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_NO_3:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_nocap_A6_S194_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_nocap_A6_S194_R2_001.fastq.gz
+  color: 3
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_PEG_1:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_PEG_D4_S228_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_PEG_D4_S228_R2_001.fastq.gz
+  color: 1
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_PEG_2:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_PEG_D5_S229_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_PEG_D5_S229_R2_001.fastq.gz
+  color: 1
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+B_PEG_3:
+  R1: HEK_CBLR_NewBell_PEG_BCAP31_2-5_PEG_D6_S230_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_BCAP31_2-5_PEG_D6_S230_R2_001.fastq.gz
+  color: 1
+  donor: BCAP31_donor
+  platform: illumina
+  target_info: BCAP31
+C_BIO_1:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_biotin_B1_S201_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_biotin_B1_S201_R2_001.fastq.gz
+  color: 2
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_BIO_2:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_biotin_B2_S202_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_biotin_B2_S202_R2_001.fastq.gz
+  color: 2
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_BIO_3:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_biotin_B3_S203_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_biotin_B3_S203_R2_001.fastq.gz
+  color: 2
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_NO_1:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_nocap_A1_S189_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_nocap_A1_S189_R2_001.fastq.gz
+  color: 3
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_NO_2:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_nocap_A2_S190_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_nocap_A2_S190_R2_001.fastq.gz
+  color: 3
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_NO_3:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_nocap_A3_S191_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_nocap_A3_S191_R2_001.fastq.gz
+  color: 3
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_PEG_1:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_PEG_D1_S225_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_PEG_D1_S225_R2_001.fastq.gz
+  color: 1
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_PEG_2:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_PEG_D2_S226_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_PEG_D2_S226_R2_001.fastq.gz
+  color: 1
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
+C_PEG_3:
+  R1: HEK_CBLR_NewBell_PEG_CLTA_2-5_PEG_D3_S227_R1_001.fastq.gz
+  R2: HEK_CBLR_NewBell_PEG_CLTA_2-5_PEG_D3_S227_R2_001.fastq.gz
+  color: 1
+  donor: CLTA_donor
+  platform: illumina
+  target_info: CLTA
