@@ -1,0 +1,15 @@
+emoji_picker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+emoji_picker/apps.py,sha256=hslTistNTL_vWkFSu416-yK5XrOHvX7so7hQV03mOiw,139
+emoji_picker/widgets.py,sha256=nzlBg0ShYInVI9lBFJWOb5TNQlOQwfXN_jjR6II286s,842
+emoji_picker/static/emoji_picker/emoji-picker-main.css,sha256=ktcWPt62jZ72OTa92D6DkD0_JnJuJxlN-RY8iTmbp6k,440
+emoji_picker/static/emoji_picker/emoji-picker-panel.css,sha256=BtTFDa7xlmMFgEuKJvaWIRQKHWOMxJ3ie211fLiB1Vc,8330
+emoji_picker/static/emoji_picker/emoji-picker.js,sha256=FBlEcTD9u7A0nFTeh6H0iEdQFmdnQuiItOiytIpsky4,743239
+emoji_picker/static/emoji_picker/emoji-picker.js.map,sha256=ynZ-fyP71x7zx4ny_kdIyApWBToHA8N802mHoNB5mKA,466890
+emoji_picker/templates/emoji_picker/base.html,sha256=iPfmThTw7S4yrZcLpJlz_S7jdaQJKf7XLedNz3hnRy8,898
+emoji_picker/templates/emoji_picker/textarea.html,sha256=kShF5acEDGS5qtkrilLPe86QfaC3rOrwCsAH87tPjWs,117
+emoji_picker/templates/emoji_picker/textinput.html,sha256=vZji37JRMV9t_I0MHgtNH5jBwxvdD688UgzYoGxo4bU,113
+django_emoji_picker-0.0.5.dist-info/LICENSE,sha256=nG7N_PQCuOnHKk0Nm3IVSMyF9EJ8U5p-aXxbTGIkTNI,1065
+django_emoji_picker-0.0.5.dist-info/METADATA,sha256=ZHaJ6OeZf9D2E06R0ybkZZvECB-1nclCUOeKcim1XMg,1972
+django_emoji_picker-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+django_emoji_picker-0.0.5.dist-info/top_level.txt,sha256=4E9HGEdz3j7eSH6ATvHiL6vZOPXGNlPjNXlBAtTlbk8,13
+django_emoji_picker-0.0.5.dist-info/RECORD,,
