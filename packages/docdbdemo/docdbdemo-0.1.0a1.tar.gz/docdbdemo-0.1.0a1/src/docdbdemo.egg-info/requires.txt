@@ -1,0 +1,8 @@
+jsii~=0.15.2
+publication>=0.0.3
+aws-cdk.aws-apigateway>=1.8.0,~=1.8
+aws-cdk.aws-docdb>=1.8.0,~=1.8
+aws-cdk.aws-ec2>=1.8.0,~=1.8
+aws-cdk.aws-lambda>=1.8.0,~=1.8
+aws-cdk.aws-secretsmanager>=1.8.0,~=1.8
+aws-cdk.core>=1.8.0,~=1.8
