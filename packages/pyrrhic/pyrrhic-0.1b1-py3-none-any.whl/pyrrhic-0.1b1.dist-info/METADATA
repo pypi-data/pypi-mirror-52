@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyrrhic
+Version: 0.1b1
+Summary: Programmable Python build system
+Home-page: https://github.com/tawesoft/pyrrhic.py
+Author: Ben Golightly
+Author-email: ben@tawesoft.co.uk
+Maintainer: Tawesoft Ltd
+Maintainer-email: opensource@tawesoft.co.uk
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+Programmable Python build system
+
+
