@@ -1,0 +1,16 @@
+xskillscore/__init__.py,sha256=rXTP4R1hlSluAI4n3e1_e82m1arGBMEM9lfE85oDszM,491
+xskillscore/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xskillscore/core/accessor.py,sha256=U1QJU4t0-ACh7WK9smIJvdHg9RZmBKal8C4pz_PhjMI,2156
+xskillscore/core/deterministic.py,sha256=dQwQcZcZIFCEBYSjDYhHu080NgnNmmNwXmi0dlsxef0,5947
+xskillscore/core/np_deterministic.py,sha256=gEYr8v9x0mx0yjx_6KR_ouuwJT9DOHEO6QID9o0GkOM,2831
+xskillscore/core/probabilistic.py,sha256=VQiLpr9dKnEfYogMDyXYpjQpnQzKzToQJ23n-nHJbUw,8062
+xskillscore/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xskillscore/tests/test_accessor.py,sha256=zLS_S8LXYAM4D5xOKtU8UAsow8tQj2T61FU6yTPBFNM,2147
+xskillscore/tests/test_deterministic.py,sha256=VlvC1KEaUwxyM3JEWtlVBvMGuzrpTg2NgBTBP8mVB3k,6533
+xskillscore/tests/test_np_deterministic.py,sha256=9E0wnMDhwp-hRvCGbSFDYFOzie_f1cvjGlLUHRgktN0,8181
+xskillscore/tests/test_probabilistic.py,sha256=fpLNjkt4hWFE7QBVEiLaBIK-d8AL6juqAnYf1H63GxA,5692
+xskillscore-0.0.7.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+xskillscore-0.0.7.dist-info/METADATA,sha256=e67iFxM_WWLWdqJ_7OrtX-Nk4Hy4TWQf2JsmjA8H5DU,444
+xskillscore-0.0.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+xskillscore-0.0.7.dist-info/top_level.txt,sha256=MASXceYTNjHhrjlKYSZz4h7KDP4neTxMZ3pCWxaAbzA,12
+xskillscore-0.0.7.dist-info/RECORD,,
