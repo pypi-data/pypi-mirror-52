@@ -1,0 +1,3 @@
+[console_scripts]
+egproject = egproject._main:main
+

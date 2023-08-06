@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.py
+egproject/__init__.py
+egproject/_main.py
+egproject.egg-info/PKG-INFO
+egproject.egg-info/SOURCES.txt
+egproject.egg-info/dependency_links.txt
+egproject.egg-info/entry_points.txt
+egproject.egg-info/requires.txt
+egproject.egg-info/top_level.txt
