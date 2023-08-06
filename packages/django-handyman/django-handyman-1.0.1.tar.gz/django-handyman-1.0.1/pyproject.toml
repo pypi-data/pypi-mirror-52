@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "django-handyman"
+version = "1.0.1"  # Needs to be the version matching tag
+description = ""
+authors = ["Giannis Katsini <giannis.katsini@gmail.com>"]
+
+# Exclude internal tests when packaging
+exclude = ["django_handyman/tests/*"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+django = "^2.2"
+flake8 = "^3.7"
+autopep8 = "^1.4"
+coverage = "^4.5"
+codecov = "^2.0"
+djangorestframework = "^3.10"
