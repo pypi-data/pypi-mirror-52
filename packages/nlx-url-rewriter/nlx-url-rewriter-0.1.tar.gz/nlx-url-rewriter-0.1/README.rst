@@ -1,0 +1,72 @@
+
+
+.. nlx-url-rewriter documentation master file, created by startproject.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to nlx-url-rewriter's documentation!
+============================================
+
+:Version: 0.1.0
+:Source: https://github.com/maykinmedia/nlx-url-rewriter
+:Keywords: ``<keywords>``
+:PythonVersion: 3.7
+
+|build-status| |requirements| |coverage|
+
+|python-versions| |django-versions| |pypi-version|
+
+Plumbing to rewrite URLs in forward and reverse direction
+
+.. contents::
+
+.. section-numbering::
+
+Features
+========
+
+* Manage rewrites in Django admin
+* Rewriter that can be used in a variety of places
+
+Installation
+============
+
+Requirements
+------------
+
+* Python 3.6 or above
+* setuptools 30.3.0 or above
+* Django 2.2 or above
+
+
+Install
+-------
+
+.. code-block:: bash
+
+    pip install nlx-url-rewriter
+
+
+Usage
+=====
+
+TODO
+
+
+.. |build-status| image:: https://travis-ci.org/maykinmedia/nlx-url-rewriter.svg?branch=develop
+    :target: https://travis-ci.org/maykinmedia/nlx-url-rewriter
+
+.. |requirements| image:: https://requires.io/github/maykinmedia/nlx-url-rewriter/requirements.svg?branch=develop
+    :target: https://requires.io/github/maykinmedia/nlx-url-rewriter/requirements/?branch=develop
+    :alt: Requirements status
+
+.. |coverage| image:: https://codecov.io/gh/maykinmedia/nlx-url-rewriter/branch/develop/graph/badge.svg
+    :target: https://codecov.io/gh/maykinmedia/nlx-url-rewriter
+    :alt: Coverage status
+
+.. |python-versions| image:: https://img.shields.io/pypi/pyversions/nlx-url-rewriter.svg
+
+.. |django-versions| image:: https://img.shields.io/pypi/djversions/nlx-url-rewriter.svg
+
+.. |pypi-version| image:: https://img.shields.io/pypi/v/nlx-url-rewriter.svg
+    :target: https://pypi.org/project/nlx-url-rewriter/
