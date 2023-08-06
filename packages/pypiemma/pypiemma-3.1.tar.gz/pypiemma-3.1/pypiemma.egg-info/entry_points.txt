@@ -1,0 +1,5 @@
+[console_scripts]
+emma = Emma.emma:runEmma
+emma_deltas = Emma.emma_vis:runEmmaDeltas
+emma_vis = Emma.emma_vis:runEmmaVis
+
