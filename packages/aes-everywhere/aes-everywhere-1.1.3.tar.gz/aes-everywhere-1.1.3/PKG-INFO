@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: aes-everywhere
+Version: 1.1.3
+Summary: AES Everywhere - Cross Language Encryption Library
+Home-page: https://github.com/mervick/aes-everywhere
+Author: Andrey Izman
+Author-email: izmanw@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/mervick/aes-everywhere/issues
+Project-URL: Source Code, https://github.com/mervick/aes-everywhere
+Description: # AES Everywhere - Cross Language Encryption Library
+        
+        ## Python implementation
+        
+        Cipher: AES/256/CBC/PKCS7Padding with random generated salt
+        
+        ### Setup
+        ```shell
+        pip install aes-everywhere
+        ```
+        
+        
+        ### Usage
+        
+        ```python
+        from AesEverywhere.aes256 import aes256
+        
+        # encryption
+        encrypted = aes256().encrypt('TEXT', 'PASSWORD')
+        print(encrypted)
+        
+        # decryption
+        print(aes256().decrypt(encrypted, 'PASSWORD'))
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
