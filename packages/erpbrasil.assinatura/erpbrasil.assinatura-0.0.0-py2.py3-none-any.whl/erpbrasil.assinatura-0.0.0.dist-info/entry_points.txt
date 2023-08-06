@@ -1,0 +1,3 @@
+[console_scripts]
+edoc-assinatura = edoc_assinatura.cli:main
+
