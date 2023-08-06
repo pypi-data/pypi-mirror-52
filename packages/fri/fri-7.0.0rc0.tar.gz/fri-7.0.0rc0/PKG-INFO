@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: fri
+Version: 7.0.0rc0
+Summary: Implementation of Feature Relevance Bounds method to perform Feature Selection and further analysis.
+Home-page: https://fri.lpfann.me
+License: MIT
+Keywords: feature selection,linear models,machine learning
+Author: Lukas Pfannschmidt
+Author-email: lukas@lpfann.me
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Requires-Dist: cvxpy (==1.0.24)
+Requires-Dist: ecos (>=2.0.5,<3.0.0)
+Requires-Dist: joblib (>=0.13.2,<0.14.0)
+Requires-Dist: matplotlib (>=3.1,<4.0)
+Requires-Dist: numpy (>=1.17,<2.0)
+Requires-Dist: scikit-learn (>=0.21.1,<0.22.0)
+Requires-Dist: scipy (>=1.0,<2.0)
+Project-URL: Repository, https://github.com/lpfann/fri
