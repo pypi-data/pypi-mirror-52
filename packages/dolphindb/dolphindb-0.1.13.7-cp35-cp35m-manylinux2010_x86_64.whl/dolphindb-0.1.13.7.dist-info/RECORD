@@ -1,0 +1,11 @@
+dolphindb-0.1.13.7.dist-info/RECORD,,
+dolphindb-0.1.13.7.dist-info/METADATA,sha256=OYLvKNthTas_pISCTrNGpvwLfNQAgchYDs3S6okrfUo,920
+dolphindb-0.1.13.7.dist-info/top_level.txt,sha256=l1a4ehsxrK-Stlq8Pp0Hucn8kd-Pt5OV_Y8PXQqdKU0,33
+dolphindb-0.1.13.7.dist-info/WHEEL,sha256=pI8yMLPfYPUGndu37BdC6eAD9zGBJ4FvWklh6qPz-pw,112
+dolphindb/__init__.py,sha256=S5ukWtKcrczegYWRxnz9d2_Kt7g7nSPNbFWRS_nE1sk,96
+dolphindb/settings.py,sha256=ITGzSbioYcmUplvvgcwyF43LXNigu9qmEG6sH2oX6B4,1854
+dolphindb/dolphindbcpp.cpython-35m-x86_64-linux-gnu.so,sha256=bIL5buY34NNq5VCmAvpn3p81GSDA6l4AJg_AER8LSC8,3547264
+dolphindb/vector.py,sha256=-fsimCRK4sBt1Nsg8EkFQEpWmYoK9-uEd3QKYti4lXM,3662
+dolphindb/table.py,sha256=dG6UIgGeN-xplLAcDFmPhgqPVdHrJcBOz272LKIWwo8,46361
+dolphindb/session.py,sha256=4yLZ-JYE6NutB28KQrjYY426sDm7MKcbQ_iu9FEQ2f8,10744
+dolphindb/.libs/libuuid-cca96a7e.so.1.3.0,sha256=Cp9VqIMoAyH275aBxiprk2bZizX1Cj4MqgTTZ1bgASg,17368
