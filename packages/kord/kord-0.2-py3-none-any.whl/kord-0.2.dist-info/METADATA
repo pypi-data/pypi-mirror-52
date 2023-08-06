@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: kord
+Version: 0.2
+Summary: a python framework for programming music applications
+Home-page: https://github.com/synestematic/kord
+Author: Federico Rizzo
+Author-email: foo@bar.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Description-Content-Type: text/markdown
+Requires-Dist: bestia
+
+UNKNOWN
+
+
