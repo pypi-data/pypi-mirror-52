@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        ldrand=ldrand.cli:run
+        ldrandp=ldrand.cli:runp
+    
