@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: checklib
+Version: 0.1.7
+Summary: Library for convenient checker writing
+Home-page: https://github.com/pomo-mondreganto/
+Author: Roman Nikitin
+Author-email: nikrom.prog@gmail.com
+License: MIT
+Download-URL: https://github.com/pomo-mondreganto/checklib/archive/v_0.1.7.tar.gz
+Description: UNKNOWN
+Keywords: AD,CTF,checker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
