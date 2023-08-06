@@ -1,0 +1,12 @@
+
+[configobj]
+configobj
+
+[vault]
+hvac
+
+[vault:(platform.python_implementation=='Jython')]
+requests<2.12.0
+
+[yaml]
+PyYAML
