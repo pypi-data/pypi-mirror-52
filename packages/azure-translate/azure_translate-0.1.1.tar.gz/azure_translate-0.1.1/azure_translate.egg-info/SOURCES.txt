@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+azure_translate/README.md
+azure_translate/__init__.py
+azure_translate/lib.py
+azure_translate.egg-info/PKG-INFO
+azure_translate.egg-info/SOURCES.txt
+azure_translate.egg-info/dependency_links.txt
+azure_translate.egg-info/requires.txt
+azure_translate.egg-info/top_level.txt
