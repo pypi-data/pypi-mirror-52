@@ -1,0 +1,16 @@
+atman_kg_nlp/__init__.py,sha256=ra2LOf-oVDZHfdLK0RhtmPr3S4HeVMvsouQP_l03gGA,21
+atman_kg_nlp/_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atman_kg_nlp/_test/atman_parser_test.py,sha256=0y4-fpq0J1JXA-5t7g3wa59NK8hcTAeVoPrDZ_2MwS8,22119
+atman_kg_nlp/_test/string_utils_test.py,sha256=0Osg7F6gtYuPClhA9XV6fAWI6MTGz7EIdppa9YItYh8,1841
+atman_kg_nlp/preprocess/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atman_kg_nlp/preprocess/_benepar.py,sha256=px27N0hp9phYDajJSxgG_J96dakW1p_GVkgqyx1nZhQ,6622
+atman_kg_nlp/preprocess/_stanford_nlp.py,sha256=NT5soRXiHBqkWku5xHrLJ8hOmV7PMVLHYFZ2GNzKRiw,2690
+atman_kg_nlp/preprocess/model.py,sha256=LbBhHeNUhWcl5kfbQIHkOgMcvwtzuQlWWpxdopT-Nsk,12353
+atman_kg_nlp/preprocess/parser.py,sha256=XBQ0RG4rzcLgBpIWRbZAVGiumbdceimLoMCM9P3QgbM,1137
+atman_kg_nlp/string_utils/__init__.py,sha256=9tRaEG6L4FMefPGYU2TYn-5_H3zwLEn8ZM5Y_QjS1nE,21
+atman_kg_nlp/string_utils/trie.py,sha256=ypJZy5Lf-XgCRNQQ9zPzRtsVaLWl0nsQ-2vo3DHy4tc,1514
+atman_kg_nlp-0.2.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+atman_kg_nlp-0.2.1.dist-info/METADATA,sha256=f0C2eNTHxbW7vw3Lvb2a928xs7tbxwoRatomHMCHuPY,920
+atman_kg_nlp-0.2.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+atman_kg_nlp-0.2.1.dist-info/top_level.txt,sha256=dfPMNpEfxwYDTObGHr1F5_Om7etQMbs4Lz4Wfootv5w,13
+atman_kg_nlp-0.2.1.dist-info/RECORD,,
