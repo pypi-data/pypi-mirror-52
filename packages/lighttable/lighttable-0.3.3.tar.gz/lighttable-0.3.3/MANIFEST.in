@@ -1,0 +1,4 @@
+include lightpivot/*.so
+include lighttable/*.so
+inclued MANIFEST.in
+inclued pivot.cpython-36m-x86_64-linux-gnu.so
