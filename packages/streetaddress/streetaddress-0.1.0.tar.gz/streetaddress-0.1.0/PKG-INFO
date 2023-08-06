@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: streetaddress
+Version: 0.1.0
+Summary: A Python port of the Perl address parser.
+Home-page: https://github.com/ArcadiaPower/python-streetaddress
+Author: Mike Jensen
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: streetaddress
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Security
