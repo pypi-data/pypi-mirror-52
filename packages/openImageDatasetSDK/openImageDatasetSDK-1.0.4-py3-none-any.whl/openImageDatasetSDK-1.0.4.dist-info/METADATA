@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: openImageDatasetSDK
+Version: 1.0.4
+Summary: Python SDK for the Open Image Dataset.
+Home-page: https://dev.azure.com/zhenwan/zhenwan_default/_git/AMLProjects
+Author: zhenwan,t-zhiwan,t-tozho
+Author-email: zhenwan@microsoft.com,t-zhiwan@microsoft.com,t-tozho@microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: azureml-telemetry
+Requires-Dist: azure-storage-blob
+Requires-Dist: multimethods (>=1.0.0)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: pandas (>=0.24.0)
+Requires-Dist: pyspark (>=2.4.3)
+Requires-Dist: matplotlib (>=3.0.3)
+Requires-Dist: opencv-contrib-python (>=4.0.25)
+Requires-Dist: spacy (>=2.1.8)
+
+UNKNOWN
+
+

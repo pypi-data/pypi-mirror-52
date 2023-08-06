@@ -1,0 +1,17 @@
+openImageDatasetSDK-1.0.4.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+openImageDatasetSDK-1.0.4.dist-info/METADATA,sha256=kGDj5gND8d2HKaKGPxccf_3CLXu5tj5RPUWDi9SqAJI,809
+openImageDatasetSDK-1.0.4.dist-info/RECORD,,
+openImageDatasetSDK-1.0.4.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+openImageDatasetSDK-1.0.4.dist-info/metadata.json,sha256=Dd9C96mveGXes9xHhoDipMSr8Sk9A3W1tnhsd66QORM,893
+openImageDatasetSDK-1.0.4.dist-info/top_level.txt,sha256=svDkb4l0gpkkw3tt01LOgEdNnqJ_nn9Fc_Uar-j7S3s,17
+openimagedataset/__init__.py,sha256=wsfhuCcJ9_UjpThjvJ2jaBOpy21m9I2BohGR7xy0X_w,324
+openimagedataset/_open_image.py,sha256=hN1P0bQ5W4qUWEwngATI2OgYoqci6QQtB4_gWoQrBdc,15133
+openimagedataset/environ.py,sha256=VjmU9G_iGCQo06_SYThx_PhxzMkk0h6csnOVQkdAMoI,865
+openimagedataset/_utils/__init__.py,sha256=W3GYMxoLNlA7C1lTnYv_xYzWJ6H_mKe7r2MiQ7NRgcc,241
+openimagedataset/_utils/image_annotation_table_loader.py,sha256=agRBtr1EWdP2wRTt8gmfqm2iZmEHCEyqyMpiHDVNDBI,15195
+openimagedataset/_utils/image_common_types.py,sha256=KQ8fuit4Ic_9Q1JaEd2ZSomFjOjSLLJORzdXWDdBb2U,5591
+openimagedataset/_utils/image_downloader.py,sha256=UvkmscoSyMkXkKFETX9EW0xDi1HSHQsJN9rY_jbZbJU,10005
+openimagedataset/_utils/image_selector.py,sha256=4LWbH3RAmMv_JVUdL4MMDfPXdpmTzqffhEiNGlTYS28,52214
+openimagedataset/_utils/telemetry_utils.py,sha256=4N2rLAjl1yheir1qIGCVubQRSVv8_KhetCCw2yk_K5o,1470
+openimagedataset/dataaccess/__init__.py,sha256=RV7t56Lw6-2nnGKd9TqShWoykpeDWNyGaw666k4BCzM,226
+openimagedataset/dataaccess/_open_image_blob_info.py,sha256=VOtYJ80lpsnTxBYd78X45vafBC2Fro96Qyfa29Fw4so,1317
