@@ -1,0 +1,11 @@
+eth-keyfile
+coincurve
+eth-utils
+eth-keys
+
+[dev]
+mypy
+pytest>=3
+coverage
+tox
+twine
