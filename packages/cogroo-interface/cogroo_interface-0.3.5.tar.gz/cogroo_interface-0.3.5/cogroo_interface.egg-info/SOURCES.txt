@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cogroo_interface/__init__.py
+cogroo_interface/cogroo4py.jar
+cogroo_interface/cogroo_interface.py
+cogroo_interface.egg-info/PKG-INFO
+cogroo_interface.egg-info/SOURCES.txt
+cogroo_interface.egg-info/dependency_links.txt
+cogroo_interface.egg-info/requires.txt
+cogroo_interface.egg-info/top_level.txt
