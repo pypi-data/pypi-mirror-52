@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: download-gitignore
+Version: 0.1
+Summary: A Python CLI program to download .gitignore files from Github's repository
+Home-page: https://github.com/vccolombo/download-gitignore
+Author: Víctor Cora Colombo
+Author-email: victorcora98@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: click (==7.0)
+Requires-Dist: requests (==2.22.0)
+
+# Download-gitignore
+A Python CLI program to download .gitignore files from Github's repository
+
+
