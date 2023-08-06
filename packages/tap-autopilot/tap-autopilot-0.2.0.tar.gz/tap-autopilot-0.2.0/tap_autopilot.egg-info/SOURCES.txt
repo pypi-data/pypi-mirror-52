@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tap_autopilot/__init__.py
+tap_autopilot.egg-info/PKG-INFO
+tap_autopilot.egg-info/SOURCES.txt
+tap_autopilot.egg-info/dependency_links.txt
+tap_autopilot.egg-info/entry_points.txt
+tap_autopilot.egg-info/requires.txt
+tap_autopilot.egg-info/top_level.txt
+tap_autopilot/schemas/contacts.json
+tap_autopilot/schemas/lists.json
+tap_autopilot/schemas/lists_contacts.json
+tap_autopilot/schemas/smart_segments.json
+tap_autopilot/schemas/smart_segments_contacts.json

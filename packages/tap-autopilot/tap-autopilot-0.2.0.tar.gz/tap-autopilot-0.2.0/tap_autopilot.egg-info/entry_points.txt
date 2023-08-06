@@ -1,0 +1,4 @@
+
+          [console_scripts]
+          tap-autopilot=tap_autopilot:main
+      
