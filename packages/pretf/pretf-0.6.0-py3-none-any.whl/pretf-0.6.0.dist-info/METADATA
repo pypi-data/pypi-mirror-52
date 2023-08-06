@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pretf
+Version: 0.6.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Raymond Butcher
+Author-email: ray.butcher@claranet.uk
+License: MIT License
+Platform: UNKNOWN
+Requires-Python: >= 3.6
+Requires-Dist: colorama
+Requires-Dist: pyhcl
+Provides-Extra: aws
+Requires-Dist: pretf.aws (==0.6.0) ; extra == 'aws'
+
+UNKNOWN
+
+
