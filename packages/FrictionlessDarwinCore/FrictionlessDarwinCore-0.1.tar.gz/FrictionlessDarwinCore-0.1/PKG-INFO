@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: FrictionlessDarwinCore
+Version: 0.1
+Summary: A tool converting Darwin Core Archive into Frictionless Data Package.
+Home-page: UNKNOWN
+Author: André Heughebaert
+Author-email: andrejjh@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
