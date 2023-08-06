@@ -1,0 +1,11 @@
+README.md
+setup.py
+authoritah/__init__.py
+authoritah/authorizer.py
+authoritah.egg-info/PKG-INFO
+authoritah.egg-info/SOURCES.txt
+authoritah.egg-info/dependency_links.txt
+authoritah.egg-info/requires.txt
+authoritah.egg-info/top_level.txt
+tests/__init__.py
+tests/test_authorizer.py
