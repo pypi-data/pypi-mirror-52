@@ -1,0 +1,17 @@
+README.md
+setup.py
+bin/piezo-vcf-parse.py
+piezo/__init__.py
+piezo/catalogue.py
+piezo.egg-info/PKG-INFO
+piezo.egg-info/SOURCES.txt
+piezo.egg-info/dependency_links.txt
+piezo.egg-info/not-zip-safe
+piezo.egg-info/requires.txt
+piezo.egg-info/top_level.txt
+piezo/../config/CRYPTICv1.0-RSU-catalogue-H37rV_v3.csv
+piezo/../config/H37rV_v3.gbk
+piezo/../config/LID2015-RSU-catalogue-v1.0-H37rV_v2.csv
+piezo/../config/NC_004148.2.gbk
+piezo/../config/NC_004148.2_RSU_catalogue.csv
+piezo/../config/NEJM2018-RSU-catalogue-H37rV_v3.csv
