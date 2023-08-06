@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jk_pypi/__init__.py
+jk_pypi/pypi.py
+jk_pypi.egg-info/PKG-INFO
+jk_pypi.egg-info/SOURCES.txt
+jk_pypi.egg-info/dependency_links.txt
+jk_pypi.egg-info/not-zip-safe
+jk_pypi.egg-info/requires.txt
+jk_pypi.egg-info/top_level.txt
