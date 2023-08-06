@@ -1,0 +1,52 @@
+CHANGES
+=======
+
+4.0.0
+-----
+
+* Prepare for OSC 4.0 release
+* Revert "check-plugins job: convert the job to tox"
+* Revert "check-plugins job: switch to python3"
+* Removes unused utf-8 declaration
+* check-plugins job: switch to python3
+* check-plugins job: convert the job to tox
+* check-plugins job: Fix pbrx path
+* Add Python 3 Train unit tests
+* Switch to openstackdocstheme
+* Update sphinx dependency for python 2.7
+* update git.openstack.org to opendev
+* OpenDev Migration Patch
+* Change openstack-dev to openstack-discuss
+* Advancing the protocal of the website to HTTPS in index.rst
+
+0.1.0
+-----
+
+* fix tox python3 overrides
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update openstackclient-check-plugins to honor constraints
+* Switch to stestr
+* Trivial: Update pypi url to new url
+* Add python-qinlingclient to zuul job
+* Zuul: Remove project name
+* Update homepage url
+* Fix check plugins: zuul.projects is now a dict
+* Zuul: add file extension to playbook path
+* Always find the test python module in this repo
+* Add OSC plugin job
+* Updated from global requirements
+* Add python-octaviaclient
+* Updated from global requirements
+* Updated from global requirements
+* Explicitly depend on python-openstackclient
+* Updated from global requirements
+* Updated from global requirements
+* add new plugins to requirements.txt
+* Fix for Sphinx 1.5 and pbr 1.10
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Initial commit for the OSC metapackage repo
+* Added .gitreview
