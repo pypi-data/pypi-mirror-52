@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+tencentserverless/__init__.py
+tencentserverless/exception.py
+tencentserverless/scf.py
+tencentserverless.egg-info/PKG-INFO
+tencentserverless.egg-info/SOURCES.txt
+tencentserverless.egg-info/dependency_links.txt
+tencentserverless.egg-info/requires.txt
+tencentserverless.egg-info/top_level.txt
