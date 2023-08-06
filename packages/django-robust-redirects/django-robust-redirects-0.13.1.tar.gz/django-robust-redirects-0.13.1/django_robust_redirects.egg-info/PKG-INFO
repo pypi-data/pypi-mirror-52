@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: django-robust-redirects
+Version: 0.13.1
+Summary: A more robust and feature full django redirect package
+Home-page: http://github.com/spothero/django-robust-redirects
+Author: SpotHero
+Author-email: pypi@spothero.com
+License: UNKNOWN
+Download-URL: http://github.com/spothero/django-robust-redirects/tarball/0.10.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
