@@ -1,0 +1,17 @@
+ethics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ethics/explanations.py,sha256=1bMvjp4iY7uJ4q5aj5vyEscV2VV8KRaWqgVftC9OZCM,1663
+ethics/language.py,sha256=SV9F6MsEPUDpueE6X9eklgndKP7rQLUksChxUiSx8X0,20299
+ethics/primes.py,sha256=8qOaXav2RgsWsQJ3FWBHws8JmCQmPQngYZCu5XmCLhQ,19287
+ethics/solver.py,sha256=wu2LKaOx55mQqSLL_jCsfBPv4gvgaZ6S93CjRCWMo0M,5560
+ethics/tools.py,sha256=R37A2ieInEXvNN7Ov6b0yfkBn4gBOPzM1BSj8gxOA8g,3834
+ethics/verbalizer.py,sha256=pfoFCNtMGqqXjwUH61FMRWpfpoqFn8RfZuR7MSGVUqU,2027
+ethics/cam/principles.py,sha256=_NNL_k4-4BpgCGeiGghyyezoekXoO8DjRm94KbxLev0,18978
+ethics/cam/semantics.py,sha256=110yNbQaSpGMOGsbt00sfbgzOAJmSyFJPD9GKPBeQ7I,14883
+ethics/plans/principles.py,sha256=wQFiWXwOqLmdxZPPe0hjsoDHZx9Za5qK2Hh8EEdElHU,9342
+ethics/plans/semantics.py,sha256=sWqxVy85w9Zv6jvkqgxR1t19NCxRv5b8so4eX6KVrtg,24774
+ethics-0.19.3.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+ethics-0.19.3.dist-info/METADATA,sha256=NrVvtX6Z71XXPXHKs3akYMj6k2858xPmCWlaPIZ3vDY,307
+ethics-0.19.3.dist-info/RECORD,,
+ethics-0.19.3.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+ethics-0.19.3.dist-info/metadata.json,sha256=O6SRkLPHGQ2ooOsPvLP7gHCRprQ7t0qVFI3XBufcecc,473
+ethics-0.19.3.dist-info/top_level.txt,sha256=arcAzWCsOWg9x9Dq6wqhfFUgrA2yGmrNEbTkg2-9dt0,7
