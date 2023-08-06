@@ -1,0 +1,3 @@
+[ipython_startup_hook]
+ipython_nord_theme = ipython_nord_theme.startup:load
+

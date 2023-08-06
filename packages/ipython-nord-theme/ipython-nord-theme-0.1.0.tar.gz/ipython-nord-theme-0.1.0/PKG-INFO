@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: ipython-nord-theme
+Version: 0.1.0
+Summary: An arctic, north-bluish theme for the IPython interactive prompt.
+Home-page: https://github.com/lewisacidic/ipython-nord-theme
+Author: Rich Lewis
+Author-email: opensource@richlew.is
+License: MIT license
+Download-URL: https://github.com/lewisacidic/ipython-nord-theme/releases
+Project-URL: Trackers, https://github.com/lewisacidic/ipython-nord-theme/issues
+Project-URL: Source, https://github.com/lewisacidic/ipython-nord-theme
+Description: # ipython-nord-theme
+        
+        An arctic, north-bluish theme for the IPython interactive prompt.
+        
+        
+        ## Quickstart
+        
+        To easily get the theme installed and loading at startup:
+        
+        ```shell
+        pip install ipython_nord_theme[hook]
+        ```
+        
+        
+        ## Installation
+        
+        Install using [`pip`](https://pip.pypa.io/en/stable/):
+        
+        ```shell
+        pip install ipython-nord-theme 
+        ```
+        
+        or with [`conda`](https://conda.io):
+        
+        ```shell
+        conda install -c lewisacidic ipython-nord-theme
+        ```
+        
+        ## Usage
+        
+        Load the theme with IPython magic:
+        
+        ```shell
+        %load_ext ipython_nord_theme
+        ```
+        
+        To set the theme back to what you had previously:
+        
+        ```shell
+        %unload_ext ipython_nord_theme
+        ```
+        
+        
+        ## Running this at startup
+        
+        You can either put the following snippet in your IPython startup directory (usually `$HOME/.ipython/profile_default/startup`):
+        
+        ```shell
+        try:
+            from ipython_nord_theme.startup import load
+            load()
+            del load  # don't pollute global namespace!!
+        except ModuleNotFoundError:
+            pass
+        ```
+        
+        Or use [`ipython-startup-hook`](https://github.com/lewisacidic/ipython-startup-hook) (recommended if you use IPython within virtual environments).
+        
+        This may be done at install with the command given in the [Quickstart](#quickstart).
+        
+        
+        ## Development 
+        
+        Create the conda environment:
+        
+        ```shell
+        conda env create -f envs/dev.yml
+        conda activate ipython-nord-theme-dev
+        ```
+        
+        Format code by running the pre-commit tasks:
+        
+        ```shell
+        pre-commit run --all
+        ```
+        
+        Run the tests with pytest (note we need to use `ipython` rather than `python` for these tests):
+        
+        ```shell
+        ipython -m pytest
+        ```
+        
+Keywords: ipython,theme,nord
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
+Provides-Extra: hook
+Provides-Extra: lint
+Provides-Extra: dev
+Provides-Extra: test
