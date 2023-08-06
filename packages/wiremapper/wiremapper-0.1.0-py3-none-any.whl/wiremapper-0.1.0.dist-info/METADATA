@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wiremapper
+Version: 0.1.0
+Summary: Library and command line client for the Pockethernet network tester
+Home-page: https://gitlab.com/MartijnBraam/pockethernet-protocol
+Author: Martijn Braam
+Author-email: martijn@brixit.nl
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
+Requires-Dist: pockethernet (>=0.2.0)
+
+UNKNOWN
+
+
