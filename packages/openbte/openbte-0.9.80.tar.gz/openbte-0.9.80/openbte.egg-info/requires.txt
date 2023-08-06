@@ -1,0 +1,13 @@
+numpy
+scipy
+sparse
+shapely
+pyvtk
+unittest2
+ipython
+future
+termcolor
+alabaster
+deepdish
+mpi4py==3.0.0
+matplotlib
