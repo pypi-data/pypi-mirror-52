@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: jsonbox
+Version: 0.1.2
+Summary: Python wrapper for jsonbox.io
+Home-page: https://github.com/harlev/jsonbox-python
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: ==2.7.*
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# jsonbox-python
+Python wrapper for https://jsonbox.io
+
+
