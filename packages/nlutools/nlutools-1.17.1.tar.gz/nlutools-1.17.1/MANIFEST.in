@@ -1,0 +1,5 @@
+include nlutools/config/module_map_url.txt
+include nlutools/config/support_conf.txt
+include nlutools/config/bert_models.txt
+include README.md
+
