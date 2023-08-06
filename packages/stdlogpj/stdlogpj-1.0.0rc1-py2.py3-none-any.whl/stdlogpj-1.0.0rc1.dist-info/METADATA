@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: stdlogpj
+Version: 1.0.0rc1
+Summary: python logging done my way
+Home-page: https://github.com/prjemian/stdlogpj
+Author: Pete R. Jemian
+Author-email: prjemian@gmail.com
+License: Creative Commons Attribution 4.0 International Public License (see LICENSE file)
+Keywords: python,logging
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Freely Distributable
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+
+# stdlogpj
+python logging done my way
+
+home: https://github.com/prjemian/stdlogpj
+
+
