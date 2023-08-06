@@ -1,0 +1,4 @@
+beautifulsoup4==4.8.0
+fpdf==1.7.2
+markovify==0.7.2
+requests==2.22.0

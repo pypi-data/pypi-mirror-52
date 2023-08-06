@@ -1,0 +1,15 @@
+README.md
+setup.py
+DAVE/nlp/Clarke.py
+DAVE/nlp/HAL.py
+DAVE/nlp/Stanley.py
+DAVE/nlp/__init__.py
+DAVE/scraper/DiscoveryOne.py
+DAVE/scraper/Sentinel.py
+DAVE/scraper/__init__.py
+davebot.egg-info/PKG-INFO
+davebot.egg-info/SOURCES.txt
+davebot.egg-info/dependency_links.txt
+davebot.egg-info/not-zip-safe
+davebot.egg-info/requires.txt
+davebot.egg-info/top_level.txt
