@@ -1,0 +1,8 @@
+macaroonbakery<2.0,>=1.1
+pyRFC3339<2.0,>=1.0
+pyyaml<=6.0,>=5.1.2
+theblues<1.0,>=0.5.1
+websockets<8.0,>=7.0
+paramiko<3.0.0,>=2.4.0
+pyasn1>=0.4.4
+toposort<2,>=1.5
