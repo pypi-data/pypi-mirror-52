@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: osmosis-ipfs-driver
+Version: 0.0.1
+Summary: 💧 Osmosis IPFS Driver Implementation
+Home-page: https://github.com/oceanprotocol/osmosis-ipfs-driver
+Author: leucothia
+Author-email: devops@oceanprotocol.com
+License: Apache Software License 2.0
+Keywords: osmosis-ipfs-driver
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: coloredlogs
+Requires-Dist: PyYAML (>=4.2b1)
+Requires-Dist: osmosis-driver-interface (==0.0.7)
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: pkginfo ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: watchdog ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: docker ; extra == 'dev'
+Requires-Dist: mccabe ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-watch ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: docker ; extra == 'test'
+Requires-Dist: mccabe ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-watch ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+# osmosis-ipfs-driver
+Osmosis IPFS Driver Implementation
+
+
+
