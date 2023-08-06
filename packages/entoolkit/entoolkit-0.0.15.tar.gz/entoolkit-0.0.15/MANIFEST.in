@@ -1,0 +1,5 @@
+﻿include README.md
+include LICENSE
+include entoolkit/epanet/Darwin/*
+include entoolkit/epanet/Linux/*
+include entoolkit/epanet/Windows/*
