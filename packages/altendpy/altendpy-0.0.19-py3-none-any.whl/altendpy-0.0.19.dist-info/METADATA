@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: altendpy
+Version: 0.0.19
+Summary: Extras for working with Python.
+Home-page: https://github.com/altendky/altendpy
+Author: Kyle Altendorf
+Author-email: sda@fstab.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: attrs
+Requires-Dist: jinja2
+Provides-Extra: dev
+Requires-Dist: gitignoreio ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: codecov ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+altendpy
+========
+
+|PyPI| |Pythons| |Travis| |AppVeyor| |codecov| |GitHub|
+
+Miscellanious extras that I like to use when working with Python.
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/altendpy.svg
+   :alt: PyPI version
+   :target: https://pypi.python.org/pypi/altendpy
+
+.. |Pythons| image:: https://img.shields.io/pypi/pyversions/altendpy.svg
+   :alt: Supported Python versions
+   :target: https://pypi.python.org/pypi/altendpy
+
+.. |Travis| image:: https://travis-ci.org/altendky/altendpy.svg?branch=develop
+   :alt: Travis build status
+   :target: https://travis-ci.org/altendky/altendpy
+
+.. |AppVeyor| image:: https://ci.appveyor.com/api/projects/status/i7bgg319r4did48i/branch/develop?svg=true
+   :alt: AppVeyor build status
+   :target: https://ci.appveyor.com/project/KyleAltendorf/altendpy
+
+.. |codecov| image:: https://codecov.io/gh/altendky/altendpy/branch/develop/graph/badge.svg
+   :alt: codecov coverage status
+   :target: https://codecov.io/gh/altendky/altendpyq
+
+.. |GitHub| image:: https://img.shields.io/github/last-commit/altendky/altendpy/develop.svg
+   :alt: Source on GitHub
+   :target: https://github.com/altendky/altendpy
+
+

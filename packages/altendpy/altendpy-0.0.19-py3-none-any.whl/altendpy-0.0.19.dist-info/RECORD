@@ -1,0 +1,17 @@
+altendpy/__init__.py,sha256=cGPpHVi945MlF15ZM--Fjt2LWFv-4HSyK9XianNoBVE,176
+altendpy/_version.py,sha256=5H5W_cUWqMut1JoLvHICHJAcgucEbLkgHPmBipWOrFg,499
+altendpy/compat.py,sha256=CLJSx3f_ISXEXItBAEM7eatZDFKtkoaHWzTsWKAGc98,48
+altendpy/misc.py,sha256=U1MQUKWkzyYQeia4VYx10YO0S4n94_gOgnjfeAjPrPQ,617
+altendpy/processtemplates.py,sha256=W4HVrTKD8zp-GANyz8WqXCQUpNrOfHEA_cqxbp1u450,2071
+altendpy/timeit.py,sha256=qnElO-xeWOJa_WDr0dcxOrKfgiXTxibvgGHKdNPwdZA,1777
+altendpy/cli/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+altendpy/cli/misc.py,sha256=vYJ4M1KPk9to8ZTh0yv8Vo9Mzfwm9QttxjnDf_5eu-s,629
+altendpy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+altendpy/tests/common.py,sha256=uTpnVhHNNBSHg0o9ENAwNuC-yTG3lDEj79ZoSf4hN6I,765
+altendpy/tests/test_misc.py,sha256=HkDeF_hjMk4J-vOc1TtgsR4U9gA76B9DXNQ-Md1DnH8,235
+altendpy/tests/test_timeit.py,sha256=nqGzzyKqzIH8WrJqLpaDT_n1Wi8OcBORUPAwSLKDRHE,398
+altendpy-0.0.19.dist-info/METADATA,sha256=mj8Yfu5xcuRbBmKCc-PLVxTC56emJsVvDZ2VGwqI8Hs,2016
+altendpy-0.0.19.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+altendpy-0.0.19.dist-info/entry_points.txt,sha256=BavKS3kTaW5MUDdT5fHCdGv23A1JALVVdNm7-BsHmDQ,73
+altendpy-0.0.19.dist-info/top_level.txt,sha256=c-W-425h1s1dXBg6sC-cFGiH-SYdlJpNfn7YRnaCEqc,9
+altendpy-0.0.19.dist-info/RECORD,,
