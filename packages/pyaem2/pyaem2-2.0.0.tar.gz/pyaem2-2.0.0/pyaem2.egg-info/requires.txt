@@ -1,0 +1,6 @@
+BeautifulSoup4>=4.6.0
+pycurl>=7.43.0
+xmltodict>=0.10.2
+
+[testing]
+pytest
