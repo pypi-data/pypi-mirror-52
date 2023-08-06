@@ -1,0 +1,1 @@
+from way2package2.class1 import printMessage
