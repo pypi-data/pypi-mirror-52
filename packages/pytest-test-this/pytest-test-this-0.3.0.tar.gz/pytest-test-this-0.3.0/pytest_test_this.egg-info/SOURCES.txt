@@ -1,0 +1,13 @@
+AUTHORS.rst
+LICENSE
+MANIFEST.in
+README.rst
+pytest_test_this.py
+setup.py
+pytest_test_this.egg-info/PKG-INFO
+pytest_test_this.egg-info/SOURCES.txt
+pytest_test_this.egg-info/dependency_links.txt
+pytest_test_this.egg-info/entry_points.txt
+pytest_test_this.egg-info/not-zip-safe
+pytest_test_this.egg-info/requires.txt
+pytest_test_this.egg-info/top_level.txt

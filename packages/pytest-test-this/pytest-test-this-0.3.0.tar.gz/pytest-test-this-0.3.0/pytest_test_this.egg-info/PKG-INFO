@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: pytest-test-this
+Version: 0.3.0
+Summary: Plugin for py.test to run relevant tests, based on naively checking if a test contains a reference to the symbol you supply
+Home-page: https://github.com/boxed/pytest-test-this
+Author: Anders Hovmöller
+Author-email: boxed@killingar.net
+License: BSD
+Description: ===============================
+        pytest-test-this
+        ===============================
+        
+        Plugin for ``pytest`` to run relevant tests by naively check if test functions contain a reference to the symbol supplied.
+        
+        
+        Limitations:
+            - it only looks for top level test functions, so test classes won't be discovered
+            - very naive check, so indirect usages of a symbol won't be found
+        
+        This trade off has been made for speed. This method is extremely fast compared to the other common method which tries to be correct by running the full test suite under coverage and checking if the function was called directly or indirectly.
+        
+        Installation
+        ------------
+        
+            pip install pytest-test-this
+        
+        Usage
+        -----
+        
+            pytest --test-this=foo
+        
+        ...where foo is the name of your function, class or variable. You can write multiple symbols comma separated.
+        
+        
+        There is also a special simplified mode for users of git:
+        
+            pytest --test-this-git
+        
+        
+        this will try to automatically guess the symbols to run againsts based on a `git diff` and run pytest-test-this againsts those symbols
+        
+        
+Keywords: pytest,py.test,pycharm
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Pytest
