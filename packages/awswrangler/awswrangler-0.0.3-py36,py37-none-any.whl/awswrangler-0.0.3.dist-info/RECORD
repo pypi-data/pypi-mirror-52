@@ -1,0 +1,17 @@
+awswrangler/__init__.py,sha256=JJGAitnAZuo7fG_cy5A1fPbwnJTvRScJvcKs83zs8RA,639
+awswrangler/__version__.py,sha256=CIKSslLO56CF6-Zp9Vsz3auk8O4yeP_PFIUFl8T6E0Q,139
+awswrangler/athena.py,sha256=Liy9DAneyxnxaQUT_74CjGlXCaIh5YR4ya2aLR4b0Us,4612
+awswrangler/cloudwatchlogs.py,sha256=sPzxaZnMEEJsvOLbCBRAIBdVc5neeOZn1cOgIm-Xwto,3893
+awswrangler/exceptions.py,sha256=lzajYs8iJsKQirE-KsU0AIGwurG3Q1kU05NCg2FlFf4,947
+awswrangler/glue.py,sha256=1qVQpXbq8tPLT2Ij9Ok00hKQP7QWcanSdP-dF6DrlTQ,19232
+awswrangler/pandas.py,sha256=nRGFO5SrRpCCA5nGYc4YUKFE5oUIjjGVtnBRUFr7gec,41245
+awswrangler/redshift.py,sha256=zeQixcxhvw4WVK0NLR2W1Of7yIk_sp3Uvik_04nbRG0,15918
+awswrangler/s3.py,sha256=R8sfe3b2Cywd6-gPUk9DeUohJRs3HW9nyCELuYhU3U0,14590
+awswrangler/session.py,sha256=OgQ2W1n7xLaeHWabzzVlFnXzafhkakGXKBxJr2FMlhw,11370
+awswrangler/spark.py,sha256=oPA73bHPBdIYaHOMZ-PvKUf0E4IPPdmUjM-l7-uDlUM,5735
+awswrangler/utils.py,sha256=4HaYLO1FBWDksAdBdfnaZ0WL413s4wJ0060NXbzJdqI,1321
+awswrangler-0.0.3.dist-info/LICENSE,sha256=CeipvOyAZxBGUsFoaFqwkx54aPnIKEtm9a5u2uXxEws,10142
+awswrangler-0.0.3.dist-info/METADATA,sha256=NGnoOblJiIDzI3VII-PDQUs7o--8mWOgaS_M_xK8q-4,6676
+awswrangler-0.0.3.dist-info/WHEEL,sha256=0O2zW15FZmNCOyznrKOaDLj0VM4SQ7PjYS89tGokPtk,98
+awswrangler-0.0.3.dist-info/top_level.txt,sha256=nFMQ64MN9Xh8IHPTWHMqMHRBto4hApzib4wen0_mOxc,12
+awswrangler-0.0.3.dist-info/RECORD,,
