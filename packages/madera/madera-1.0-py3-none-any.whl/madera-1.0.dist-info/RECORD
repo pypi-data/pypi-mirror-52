@@ -1,0 +1,16 @@
+madera/__init__.py,sha256=d2gDXsJZ5H5zN_9MbBwdLrP5uR7yDeSuFFXeadbceyA,64
+madera/globals.py,sha256=wxHcd3uONqsyhcqFTehIKK0-wO-Dt2kRY4yUWD7nspk,134
+madera/util.py,sha256=4nIE1WN7k-fiXuV-8vuVIuV2hjbtIAytgOPjUMSdG40,314
+madera/consumer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+madera/consumer/topic_listener.py,sha256=D9TI9OYAWlISsITs1C_4pSqh7JHXdzNFu7maEL1kTys,1396
+madera/consumer/topic_watcher.py,sha256=_0YT-unJtlVl8nFrsIPP-_pxGFcuUPZeiU_PINeGsOs,7889
+madera/logging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+madera/logging/frame.py,sha256=0xtg_G7rT_YR-xRaA4zX1u4wY6XqikF-V4YXYUmlfVI,1089
+madera/logging/handler.py,sha256=afB_1qyFafR6nCGYZQ0fOyPlBY9bdtSe0itB_5z_xtM,2707
+madera/logging/publisher.py,sha256=ek0a9fYRnlxNPNoMJWw74oGaWH2yZ59nRCJVdPGCC80,1485
+madera/logging/uploader.py,sha256=Dau6CHz-h0c4C6KoASb4q_Y5ubHY3Qj6-T2Z--useLE,2134
+madera-1.0.dist-info/METADATA,sha256=DCi0hQBTzj18ngIoWO9VbmfoDyucdIHg87UH_dop51Y,448
+madera-1.0.dist-info/RECORD,,
+madera-1.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+madera-1.0.dist-info/entry_points.txt,sha256=xq7OeUhbRF1zYjbLunrV9EwDJNyZ_e7m01gLDrkDuFE,57
+madera-1.0.dist-info/top_level.txt,sha256=csQ-LfIJJsfkZz5kN2Gs3DZe2m7JTPtNm29JjR-D2dE,7
