@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: TikTokApi
+Version: 2.1.4
+Summary: The Unoffical TikTok API Wrapper in Python 3.
+Home-page: https://github.com/davidteather/tiktok-api
+Author: David Teather
+Author-email: contact.davidteather@gmail.com
+License: MIT
+Download-URL: https://github.com/davidteather/TikTok-Api/tarball/master
+Description: UNKNOWN
+Keywords: tiktok,python3,api,unofficial,tiktok-api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
