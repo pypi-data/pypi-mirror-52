@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: irsensors
+Version: 0.0.6
+Summary: This package allows to read datas from an IR sensor set connected by USB.
+Home-page: https://github.com/Gillou100/educat_irsensor/tree/master/irsensors
+Author: Gilles HUBERT
+Author-email: gilles.hubert@isen.yncrea.fr
+License: UNKNOWN
+Requires-Dist: serial
+
+This package allows to read data from an IR sensor set connected by USB.
+
+This package expect the IR sensor set to send string encode line data as follow:
+"ID,Error_Code,Distance,.........,
+
