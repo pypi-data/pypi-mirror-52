@@ -1,0 +1,13 @@
+FusionVet-1.0.1.data/scripts/FusionVet.py,sha256=F2RBQznn7NQenQjuZJIR3iBRhMLO689dyYOwy3oZgJQ,3562
+vetmodule/AberrantRead.py,sha256=EG5wR-wANUo7yucJt7OVxb0H5NMbeLdpoDyCLUetRPg,9741
+vetmodule/BamToBed.py,sha256=qKc_R-dUnBjr_dAYryfC_7vv3jINznI8Sp9y9jCjXy4,7167
+vetmodule/GetBamFiles.py,sha256=WoMtAua6bLJoXr__CtFC9SM6nzwYt2mkVBO5bE3yUDk,2295
+vetmodule/Overlap.py,sha256=uUACP4SOVjhbeP7A4KSByibmGPwdu1yZX8lcfJmXW2M,780
+vetmodule/ReadFusion.py,sha256=w_joBza7iIcbh5V4ERYE9ip_S4oP7WXIG7-Hh2mXiKw,1613
+vetmodule/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vetmodule/bam_cigar.py,sha256=OjdGqO0e-pjlgvFDUwMFy5RR-_zE-w3kkMV6Nt9PwYc,8137
+FusionVet-1.0.1.dist-info/LICENSE.txt,sha256=x17ZVys0wsq620rGq6_TbkNWdT6VZ7uEHnSyqbwPnjo,1050
+FusionVet-1.0.1.dist-info/METADATA,sha256=ePIMXkAlWTimf0aOafgdw98ZNfYATcwBVPYBqH1uQ1E,896
+FusionVet-1.0.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+FusionVet-1.0.1.dist-info/top_level.txt,sha256=YD3g1PwvYZFrU8lk7qyqZcVmMRqSOoC7QnQ6dTAClmo,21
+FusionVet-1.0.1.dist-info/RECORD,,
