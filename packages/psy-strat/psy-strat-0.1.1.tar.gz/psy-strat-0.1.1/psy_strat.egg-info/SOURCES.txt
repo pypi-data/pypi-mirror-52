@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+psy_strat/__init__.py
+psy_strat/plotters.py
+psy_strat/plugin.py
+psy_strat/strat_widget.py
+psy_strat/stratplot.py
+psy_strat.egg-info/PKG-INFO
+psy_strat.egg-info/SOURCES.txt
+psy_strat.egg-info/dependency_links.txt
+psy_strat.egg-info/entry_points.txt
+psy_strat.egg-info/not-zip-safe
+psy_strat.egg-info/requires.txt
+psy_strat.egg-info/top_level.txt
