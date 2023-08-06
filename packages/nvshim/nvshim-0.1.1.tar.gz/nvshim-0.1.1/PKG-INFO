@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: nvshim
+Version: 0.1.1
+Summary: Automagically use the correct version of node
+Home-page: http://github.com/iamogbz/nvshim
+Author: Emmanuel Ogbizi-Ugbe
+Author-email: iamogbz+pypi@gmail.com
+License: GNU
+Description: # NVM Shim
+        
+        ![LOGO](https://i.ibb.co/PZTm9Sr/logo.png)
+        
+        Automagically use the correct version of node with [`nvm exec`](https://github.com/nvm-sh/nvm#usage) functionality.
+        
+        ![Build Status](https://github.com/iamogbz/nvshim/workflows/Build%20Python%20App/badge.svg)
+        [![Coverage Status](https://coveralls.io/repos/github/iamogbz/nvshim/badge.svg?branch=HEAD)](https://coveralls.io/github/iamogbz/nvshim?branch=HEAD)
+        
+        > **No more `nvm use`**
+        
+        This will use existing [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc) file, falling back to the [`nvm alias default`](https://github.com/nvm-sh/nvm#usage-1) version if no config detected.
+        
+        ## Installation
+        
+        ### Pip
+        
+        ```sh
+        pip install nvshim
+        ```
+        
+        ### Build
+        
+        #### Clone project repository
+        
+        ```sh
+        git clone git@github.com:iamogbz/nvshim.git
+        ```
+        
+        #### Pip install python project
+        
+        ```sh
+        pip install nvshim/
+        ```
+        
+        ## Configuration
+        
+        Reads all configuration from the environment.
+        
+        ### [`NVM_DIR`](https://github.com/nvm-sh/nvm#installation-and-update)
+        
+        Relies on nvm being installed and configured correctly.
+        
+        ### `NVSHIM_AUTO_INSTALL`
+        
+        Set to `1` or `true` to auto install specified version of node if not installed by `nvm`.
+        
+        ### `NVSHIM_VERBOSE`
+        
+        Set to `1` or `true` to show more information on the shimmed node process.
+        
+        Otherwise set to `0` or `false` or nothing.
+        
+        ## Contribution
+        
+        All forms of contribution welcome, please see [guide](./CONTRIBUTING.md).
+        
+        ```sh
+        make install
+        ```
+        
+        ```sh
+        make tests
+        ```
+        
+Keywords: node nvm node-shim shim shell nvm-shim
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
