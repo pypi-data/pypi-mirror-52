@@ -1,0 +1,3 @@
+[console_scripts]
+didyoumean3 = didyoumean3.__main__:main
+
