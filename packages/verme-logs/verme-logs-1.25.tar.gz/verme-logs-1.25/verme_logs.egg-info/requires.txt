@@ -1,0 +1,6 @@
+Django>=2.0
+social-auth-app-django
+social-auth-core[saml]
+xlrd
+XlsxWriter
+xlwt
