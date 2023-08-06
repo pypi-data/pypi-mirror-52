@@ -1,0 +1,9 @@
+setup.py
+check_copyright/__init__.py
+check_copyright/check_copyright.py
+check_copyright/filter_files.py
+check_copyright.egg-info/PKG-INFO
+check_copyright.egg-info/SOURCES.txt
+check_copyright.egg-info/dependency_links.txt
+check_copyright.egg-info/entry_points.txt
+check_copyright.egg-info/top_level.txt

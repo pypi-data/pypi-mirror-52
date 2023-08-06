@@ -1,0 +1,3 @@
+[console_scripts]
+check-copyright = check_copyright.check_copyright:check_all_files
+
