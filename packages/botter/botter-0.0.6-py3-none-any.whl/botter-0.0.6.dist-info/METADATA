@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: botter
+Version: 0.0.6
+Summary: Python messenger bot aggregator, supporting Discord, Telegram, and potentially others
+Home-page: https://gitlab.com/Hares/botter
+License: BSD 2-Clause License
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet
+Classifier: Topic :: Communications
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: dataclasses (>=0.6)
+Requires-Dist: dataclasses-json (>=0.2.13)
+Provides-Extra: discord
+Requires-Dist: discord.py (>=1.2.3) ; extra == 'discord'
+Provides-Extra: telegram
+Requires-Dist: python-telegram-bot (>=12.0.0b1) ; extra == 'telegram'
+Requires-Dist: functional-python (>=0.0.1) ; extra == 'telegram'
+Provides-Extra: all
+Requires-Dist: python-telegram-bot (>=12.0.0b1) ; extra == 'all'
+Requires-Dist: functional-python (>=0.0.1) ; extra == 'all'
+Requires-Dist: discord.py (>=1.2.3) ; extra == 'all'
+
+# Botter - Simple interface for creating cross-messenger bots
+
+**Botter** is a framework which allows your bots run in any available messenger.
+Currently, there are only one implementation for [Discord](https://discord.app),
+but it is easy to implement other platforms.
+
+Okay, let's get started!
+
+## Getting Started
+
+### Creating an Application
+At first, you should register a bot in the desired platform.
+As all messengers provide different ways to do so, we will not describe this process here.
+
+### Create Handler
+Botter uses event-based architecture, with a most-common event - `MessageEvent`.
+Events are handled by `EventHandler`'s.
+
+So, let's create out own:
+```python
+from botter.api import *
+from botter.api.handlers import *
+
+class SimpleEchoHandler(ReplyHandler):
+    async def handle_message(self, message: InboundMessage) -> Message:
+        return Message(f"You've said:\n" + message.text)
+```
+
+Here we use the `ReplyHandler`, which:
+ - Nests `MessageHandler`
+ - Checks the event is `MessageEvent`
+ - Calls method `handle_message()` with the message from event.
+ - If this method returns `Message` rather than None,
+`ReplyHandler` would send it to server with a mention to the original message's author.
+
+### Crate a Bot
+Then we need to create a `Bot` - object that aggregates handlers and mappings to the implementation.
+Here we use discord driver as an example.
+```python
+from botter.discord import DiscordBot
+
+class EchoBot(Bot[DiscordBot]):
+    token = 'INSERT_YOUR_TOKEN_HERE'
+    event_handlers = [ SimpleEchoHandler ]
+    client = DiscordBot(token=token)
+```
+
+Okay, let's try it out!
+
+![Simple EchoBot - Discord](/docs/static/echo-1-discord.png)
+
+Wow! It works!
+
+### Extending Events
+Now, let's try to have some fun with the events.
+
+
