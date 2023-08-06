@@ -1,0 +1,4 @@
+requests[security,socks]
+click
+python-dotenv
+python-dateutil
