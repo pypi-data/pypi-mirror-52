@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: biolink-model
+Version: 1.2.5
+Summary: Biolink Model
+Home-page: https://biolink.github.io/biolink-model/docs/
+Author: Harold Solbrig
+Author-email: solbrig@jhu.edu
+License: CC0 1.0 Universal
+Description: 'A high level datamodel of biological entities and associations'
+Keywords: BioLink,Datamodel,NCATS,NCATS-Translator
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
