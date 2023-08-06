@@ -1,0 +1,16 @@
+aiofiles
+aioserial
+altair
+bokeh
+graphviz
+ipython>=7.0
+ipywidgets
+jupyter
+loguru
+nest_asyncio
+networkx
+Pint
+PyYAML
+terminaltables
+vega
+xxhash
