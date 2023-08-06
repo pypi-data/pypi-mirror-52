@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: puppet-env-manager
+Version: 0.4.4
+Summary: Tool to manage puppet environments using librarian-puppet
+Home-page: https://github.com/optiz0r/puppet-env-manager/
+Author: Ben Roberts
+Author-email: ben.roberts@gsacapital.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: lockfile
+Requires-Dist: requests
+
+UNKNOWN
+
+
