@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: joffrey
+Version: 0.5.2
+Summary: A powerful Python 3 command-line parser
+Home-page: https://github.com/supposedly/joffrey
+Author: Hadi Tarhini
+Author-email: eltrhn@gmail.com
+License: MIT
+Keywords: argparse argument parsing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# Yet Another Command-Line-Argument Parser
+
+[![Build Status](https://travis-ci.com/supposedly/joffrey.svg?branch=master)](https://travis-ci.com/supposedly/joffrey)
+[![codecov](https://codecov.io/gh/supposedly/joffrey/branch/master/graph/badge.svg)](https://codecov.io/gh/supposedly/joffrey)
+
+I'm tired of working around argparse. This suits my needs a tad better; vaguely inspired by
+[discord.py](https://github.com/Rapptz/discord.py)'s brilliant
+[ext.commands](http://discordpy.readthedocs.io/en/rewrite/ext/commands/index.html) framework.
+
+
+
+## Why?
+I needed a way to define sort-of-complex interdependencies between command-line options. None of the packages
+I found\* were able to handle this out of the box to an acceptable degree, so I decided to try my own hand;
+I feel like the lib should be able to handle this stuff itself, without your needing to delegate roles like *"check
+that these two flags aren't used at the same time as this arg"* or *"make sure all these things appear
+together, or alternatively that this second thing does"* to external functions or post-parsing if-statements.
+
+*Note: about a month after starting I discovered "[RedCLAP](https://github.com/marekjm/clap)", which did beat Joffrey
+to the idea of AND/OR/XOR clumps (by the names of "requires", "wants", and "conflicts"), albeit with a very different
+design philosophy overall; credit's due for (AFAIK) originating that concept, however! I also at about the same time
+found [argh](https://argh.readthedocs.io/en/latest/index.html), which despite not solving the clumping issue appears
+to (by pure coincidence) share a number of features with Joffrey -- but it's currently looking for maintainers and does
+depend on argparse underneath (which I'm trying my best to get away from), so I'd say we're good.
+
+Joffrey, by the way, is still an experiment. If it really doesn't solve the same problem for you that it does for me,
+I think you'd be better off trying something else -- [here's a list](https://gist.github.com/supposedly/01224262b816df21b601ab0784d5f999)
+of alternatives to check out!
+
+
+## The name
+**Pars**ley, for **pars**ing, is called جعفری /d͡ʒæʔfæˈɾi/ in Farsi. That glottal stop is elided into a vowel in Iran,
+giving /d͡ʒæːfæˈɾi/, and if you squint hard enough that resembles a heavily accented pronunciation of "Joffrey".
+
+
+
