@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pantheon
+Version: 1.0.6
+Summary: Riot API library for Python and asyncio
+Home-page: https://github.com/Canisback/pantheon
+Author: Canisback
+Author-email: canisback@gmail.com
+License: UNKNOWN
+Keywords: Riot API,python
+Platform: UNKNOWN
+Requires-Dist: asyncio
+Requires-Dist: aiohttp
+
+UNKNOWN
+
+
