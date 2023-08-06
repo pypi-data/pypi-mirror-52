@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+cheermeup/__init__.py
+cheermeup/cheermeup.py
+cheermeup/utils.py
+cheermeup.egg-info/PKG-INFO
+cheermeup.egg-info/SOURCES.txt
+cheermeup.egg-info/dependency_links.txt
+cheermeup.egg-info/entry_points.txt
+cheermeup.egg-info/requires.txt
+cheermeup.egg-info/top_level.txt
