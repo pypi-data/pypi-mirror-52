@@ -1,0 +1,5 @@
+[console_scripts]
+rsp = rsp.__main__:main
+rsp-keygen = rsp.keygen:main
+rsp-trust = rsp.trust:main
+
