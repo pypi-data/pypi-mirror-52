@@ -1,0 +1,16 @@
+LICENSE
+README.md
+__init__.py
+requirements.txt
+setup.py
+appel_geocode.egg-info/PKG-INFO
+appel_geocode.egg-info/SOURCES.txt
+appel_geocode.egg-info/dependency_links.txt
+appel_geocode.egg-info/requires.txt
+appel_geocode.egg-info/top_level.txt
+resources/__init__.py
+tests/__init__.py
+tests/correspondence.py
+tests/generateTestDatasets.py
+tests/testparser.py
+trees/brazil.bin
