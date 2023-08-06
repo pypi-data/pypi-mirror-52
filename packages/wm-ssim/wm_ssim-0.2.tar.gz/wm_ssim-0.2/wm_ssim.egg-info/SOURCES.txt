@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+wm_ssim
+wm_ssim/__init__.py
+wm_ssim/compress.py
+wm_ssim/get_object_data.py
+wm_ssim/helper_functions.py
+wm_ssim/util.py
+wm_ssim.egg-info/PKG-INFO
+wm_ssim.egg-info/SOURCES.txt
+wm_ssim.egg-info/dependency_links.txt
+wm_ssim.egg-info/not-zip-safe
+wm_ssim.egg-info/requires.txt
+wm_ssim.egg-info/top_level.txt

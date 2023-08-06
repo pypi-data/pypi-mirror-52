@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: wm_ssim
+Version: 0.2
+Summary: The library to find WM_SSIM of a webapge with all the transformations
+Home-page: http://github.com/abdul-manaan/wm_ssim
+Author: Abdul Manan
+Author-email: manan.lums@gmail.com
+License: MIT
+Description: # Library to calculate WeightedMeanSSIM of different set of transformations of a webpage
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
