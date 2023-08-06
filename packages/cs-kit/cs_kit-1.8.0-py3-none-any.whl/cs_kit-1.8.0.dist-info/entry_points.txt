@@ -1,0 +1,4 @@
+[console_scripts]
+csk-init = cs_kit.cli:init
+csk-token = cs_kit.cli:cs_token
+

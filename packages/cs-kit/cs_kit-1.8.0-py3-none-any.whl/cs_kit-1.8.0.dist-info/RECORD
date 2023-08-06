@@ -1,0 +1,13 @@
+cs_kit/__init__.py,sha256=73mVSw8fAdSxL9kfEGAw3cGH9y-2KBHuwBExba7k_RI,281
+cs_kit/cli.py,sha256=qc-TODuPrhd1xRMMlNLU8DMpxcxNVuEzMp3GuAkvqkE,2878
+cs_kit/exceptions.py,sha256=2Jesw9WcDsiuZ3kChw8saBBTCLkiymfjh8bTNxbpulk,140
+cs_kit/schemas.py,sha256=RRpvch5_Mfjq0aTL2nPEAmyzw5WPM1RENUvvqYMrjAg,1170
+cs_kit/validate.py,sha256=JTA_avj1dr21sRBMO79Gc-KSfZEwfAokkLsiCnzFO28,7929
+cs_kit/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cs_kit/tests/test_FunctionsTest.py,sha256=L51wjwRhiqXD5Fy7Ewt7Pz4JQ9gW2f1lagoA4fwrJgQ,6028
+cs_kit-1.8.0.dist-info/LICENSE,sha256=WzCqU2HeUbp1J0tI-efafTFz4VdBNi1SokRHvOQERBI,1065
+cs_kit-1.8.0.dist-info/METADATA,sha256=ztCe500AJyhGTf2eHd92JOguMn3T9zt2jNhB-gbqErY,2519
+cs_kit-1.8.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+cs_kit-1.8.0.dist-info/entry_points.txt,sha256=_iD4yzsZGXkWhDjSnuX6_JFfg68SiOxAGqjQKqW3rl0,78
+cs_kit-1.8.0.dist-info/top_level.txt,sha256=gZ14RFDoUBl9miY0pXW5jXQVOKoqr5cm2kvUK9Gr35o,7
+cs_kit-1.8.0.dist-info/RECORD,,
