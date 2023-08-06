@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ConfClr
+Version: 0.1.4
+Summary: Conformal Prediction Framework for Binary Classification
+Home-page: UNKNOWN
+Author: Rahul Vishwakarma
+Author-email: vishwr7@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+This is an implemention of Conformal Classificaiotn algorithm mentioned in the book - "Algorithmic Learning in Andom World".
+
+Input: Dataset with two labels.
+
+Algorithms:
+
+1. Calculate Non-Coformity Measure using K-NN.
+2. Determine p-values according to the significance level.
+3. Calculate Confidence and Credibility of each new data level. 
+
+
+
+
