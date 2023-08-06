@@ -1,0 +1,16 @@
+Flask
+Flask-WTF
+WTForms
+Werkzeug
+Flask-Cors
+SQLAlchemy
+click
+watchdog
+beautifulsoup4
+requests
+mpld3
+scipy
+pandas
+matplotlib
+PyQt5<5.13
+pyqtwebengine<5.13
