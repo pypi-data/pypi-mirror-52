@@ -1,0 +1,49 @@
+Metadata-Version: 2.0
+Name: bcipy
+Version: 1.4.2
+Summary: Python Software for Brain-Computer Interface.
+Home-page: https://github.com/BciPy/BciPy
+Author: Tab Memmott
+Author-email: memmott@ohsu.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: wheel (==0.30.0)
+Requires-Dist: wxPython (==4.0.1)
+Requires-Dist: configobj (==5.0.6)
+Requires-Dist: docker (==2.6.1)
+Requires-Dist: json-tricks (==3.8.0)
+Requires-Dist: olefile (==0.44)
+Requires-Dist: PyOpenGL (==3.1.0)
+Requires-Dist: pyOpenSSL (==17.5.0)
+Requires-Dist: mne (==0.17.0)
+Requires-Dist: lxml (==4.1.1)
+Requires-Dist: PsychoPy (==3.0.4)
+Requires-Dist: pytz (==2017.2)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: numpy (==1.16.2)
+Requires-Dist: scipy (==1.2.1)
+Requires-Dist: sklearn (==0.0)
+Requires-Dist: seaborn (==0.9.0)
+Requires-Dist: construct (==2.8.14)
+Requires-Dist: matplotlib (==2.1.1)
+Requires-Dist: pylsl (==1.13.1)
+Requires-Dist: psutil (==5.4.0)
+Requires-Dist: pandas (==0.24.1)
+Requires-Dist: sounddevice (==0.3.10)
+Requires-Dist: SoundFile (==0.10.1)
+Requires-Dist: PySoundCard (==0.5.2)
+Requires-Dist: PySoundFile (==0.9.0)
+Requires-Dist: Pillow (==4.3.0)
+Requires-Dist: openpyxl (==2.6.3)
+
+Python Brain-Computer Interface Software
+
+
