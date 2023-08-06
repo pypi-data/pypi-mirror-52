@@ -1,0 +1,14 @@
+bmdcluster/__init__.py,sha256=dUtdQ9VHsPMbY4fr6pqntDqf9DmFqFfUydlvdMSz1h8,10262
+bmdcluster/bmdcluster.py,sha256=3tsCAJI0r8c3ygmnstJW-v3UhfIOWYa-a8_SpTODJHU,10216
+bmdcluster/initializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bmdcluster/initializers/bootstrap_initializer.py,sha256=tPGnwmHmAhthvPIQjvqSEm_aKRraMxgBAfG3ngz6GeM,5288
+bmdcluster/initializers/cluster_initializers.py,sha256=G9Uh3r_qtkXpzhS2ARz3F1FKOwyGZSrninl-5yHZsH0,3205
+bmdcluster/initializers/primary_initializer.py,sha256=3wKgcX_AgzBFw4dw_cauHZ3F4dYqRkXvlf6V8bxbodA,4035
+bmdcluster/optimizers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bmdcluster/optimizers/blockdiagonalBMD.py,sha256=wYKSqkI3TM4FnyVjTiA2Y7SdmtkbBiFysIYlbuo5S3Q,8160
+bmdcluster/optimizers/generalBMD.py,sha256=KxhcSSCRfOfjeGU4mx2rG8t-Jc4Rvf-ltAiNkedXq5Y,11475
+bmdcluster-0.2.3.dist-info/LICENSE,sha256=31aWaKXxI_5g10z9c4VbpNxZNErdbr1VSf23pxhKn24,1072
+bmdcluster-0.2.3.dist-info/METADATA,sha256=jek4tbIFAwK4x38fLj44kc16eii1KbEsktCyJkJ8H6U,1399
+bmdcluster-0.2.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+bmdcluster-0.2.3.dist-info/top_level.txt,sha256=7eHKDa9KwluO5ju6NNxS7zjH8SwzdkEpsduvfwZFBBE,11
+bmdcluster-0.2.3.dist-info/RECORD,,
