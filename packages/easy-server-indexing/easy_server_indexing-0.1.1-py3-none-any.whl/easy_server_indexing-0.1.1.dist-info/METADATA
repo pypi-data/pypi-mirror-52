@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: easy-server-indexing
+Version: 0.1.1
+Summary: The following package can be integrated into a server indexing softwares which will skip the already traversed files and resume the traversing from the stated error file path.
+Home-page: https://github.com/pankajsonar19/easy_server_indexing
+Author: Pankaj Sonar, Piyush Rumao
+Author-email: pankaj.sonar@ucdconnect.ie, piyushrumao@gmail.com
+License: mit  
+Download-URL: https://github.com/pankajsonar19/easy_server_indexing.git
+Keywords: indexing,resume_code,resume,resumecode,resume_crawl,oswalk,traverse,server_indexing,pause,pause indexing,crawl,listdir
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pypandoc
+
+# easy_server_indexing
+The following package can be integrated into a server indexing software/codes which will skip the already traversed files and resume the traversing from the error file path provided
+
+
