@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: songsheet
+Version: 0.1-alpha
+Summary: Parses songsheet strings
+Home-page: https://github.com/kahunacohen/songsheet
+Author: Aaron Cohen
+Author-email: aaroncohendev@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: music,lyrics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Artistic Software
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
