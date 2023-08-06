@@ -1,0 +1,26 @@
+<<: &shared
+  language_name: Mohawk
+mappings:
+  - display_name: Mohawk to IPA
+    mapping: moh_to_ipa.json
+    in_lang: moh
+    out_lang: moh-ipa
+    case_sensitive: false
+    abbreviations: abbreviations.csv
+    authors:
+      - Aidan Pine
+    <<: *shared
+  - display_name: Mohawk IPA to English IPA
+    mapping: moh_ipa_to_eng_ipa.json
+    in_lang: moh-ipa
+    out_lang: eng-ipa
+    <<: *shared
+  - display_name: Mohawk to Mohawk ASCII
+    mapping: moh_to_ascii.json
+    in_lang: moh
+    out_lang: moh-ascii
+    abbreviations: abbreviations.csv
+    authors:
+      - Aidan Pine
+    notes: This is for TTS. Scrubs all special and non-ascii characters.
+    <<: *shared
