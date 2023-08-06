@@ -1,0 +1,13 @@
+.gitignore
+LICENSE.md
+README.md
+ferrit.py
+requirements.txt
+setup.py
+ferrit.egg-info/PKG-INFO
+ferrit.egg-info/SOURCES.txt
+ferrit.egg-info/dependency_links.txt
+ferrit.egg-info/entry_points.txt
+ferrit.egg-info/requires.txt
+ferrit.egg-info/top_level.txt
+ferrit.egg-info/zip-safe
