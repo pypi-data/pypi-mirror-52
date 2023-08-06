@@ -1,0 +1,47 @@
+%s%%AETEST-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: Starting testcase Testcase
+%s%%AETEST-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: Starting section plain_messages
+%s%%SCRIPT-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: new info messages
+%s%%SCRIPT-2-CRITICAL: %%\[pid=\d+\]\[pname=Task-1\]: new critical messages
+%s%%SCRIPT-4-WARNING: %%\[pid=\d+\]\[pname=Task-1\]: new warning messages
+%s%%SCRIPT-3-ERROR: %%\[pid=\d+\]\[pname=Task-1\]: new error messages
+%s%%SCRIPT-3-ERROR: %%\[pid=\d+\]\[pname=Task-1\]:
+%s%%SCRIPT-6-INFO: %%\[part=13.1/4\]\[pid=\d+\]\[pname=Task-1\]: this is a multiple line
+%s%%SCRIPT-6-INFO: %%\[part=13.2/4\]\[pid=\d+\]\[pname=Task-1\]: message
+%s%%SCRIPT-6-INFO: %%\[part=13.3/4\]\[pid=\d+\]\[pname=Task-1\]: and this line is a new line
+%s%%SCRIPT-6-INFO: %%\[part=13.4/4\]\[pid=\d+\]\[pname=Task-1\]: another new line
+%s%%AETEST-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: The result of section plain_messages is => PASSED
+%s%%AETEST-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: Starting section exception_message
+%s%%SCRIPT-3-ERROR: %%\[part=19.1/5\]\[pid=\d+\]\[pname=Task-1\]: blah!
+%s%%SCRIPT-3-ERROR: %%\[part=19.2/5\]\[pid=\d+\]\[pname=Task-1\]: Traceback \(most recent call last\):
+%s%%SCRIPT-3-ERROR: %%\[part=19.3/5\]\[pid=\d+\]\[pname=Task-1\]:   File ".+?/scripts/script.py", line 25, in exception_message
+%s%%SCRIPT-3-ERROR: %%\[part=19.4/5\]\[pid=\d+\]\[pname=Task-1\]:     abcdef
+%s%%SCRIPT-3-ERROR: %%\[part=19.5/5\]\[pid=\d+\]\[pname=Task-1\]: NameError: name 'abcdef' is not defined
+%s%%AETEST-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: The result of section exception_message is => PASSED
+%s%%AETEST-6-INFO: %%\[pid=\d+\]\[pname=Task-1\]: Starting section pcall_exceptions
+%s%%LOG-6-INFO: %%\[pid=\d+\]\[pname=ChildLabor-3:1\]: >>>> Begin child log .+
+%s%%ASYNC_-3-ERROR: %%\[part=4.1/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]: Caught error while executing target in child process-0:
+%s%%ASYNC_-3-ERROR: %%\[part=4.2/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:   target = func
+%s%%ASYNC_-3-ERROR: %%\[part=4.3/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:   args = \(\)
+%s%%ASYNC_-3-ERROR: %%\[part=4.4/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:   kwargs = \{\}
+%s%%ASYNC_-3-ERROR: %%\[part=4.5/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:
+%s%%ASYNC_-3-ERROR: %%\[part=4.6/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]: Traceback \(most recent call last\):
+%s%%ASYNC_-3-ERROR: %%\[part=4.7/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:   File ".+?/async_/parallelcall.py", line \d\d, in run
+%s%%ASYNC_-3-ERROR: %%\[part=4.8/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:     result \+= \(True, self._target\(\*self._args, \*\*self._kwargs\)\)
+%s%%ASYNC_-3-ERROR: %%\[part=4.9/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:   File ".+?/scripts/script.py", line 33, in func
+%s%%ASYNC_-3-ERROR: %%\[part=4.10/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]:     aaa
+%s%%ASYNC_-3-ERROR: %%\[part=4.11/11\]\[pid=\d+\]\[pname=ChildLabor-3:1\]: NameError: name 'aaa' is not defined
+%s%%LOG-6-INFO: %%\[pid=\d+\]\[pname=ChildLabor-3:1\]: <<<< End child log .+
+%s%%AETEST-3-ERROR: %%\[pid=\d+\]\[pname=Task-1\]: Caught exception during execution:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.1/\d\d\]\[pid=\d+\]\[pname=Task-1\]: pyats.async_.exceptions.RemoteException:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.2/\d\d\]\[pid=\d+\]\[pname=Task-1\]:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.3/\d\d\]\[pid=\d+\]\[pname=Task-1\]: Traceback \(most recent call last\):
+%s%%AETEST-3-ERROR: %%\[part=\d\d.4/\d\d\]\[pid=\d+\]\[pname=Task-1\]:   File ".+?/scripts/script.py", line 33, in func
+%s%%AETEST-3-ERROR: %%\[part=\d\d.5/\d\d\]\[pid=\d+\]\[pname=Task-1\]:     aaa
+%s%%AETEST-3-ERROR: %%\[part=\d\d.6/\d\d\]\[pid=\d+\]\[pname=Task-1\]: NameError: name 'aaa' is not defined
+%s%%AETEST-3-ERROR: %%\[part=\d\d.7/\d\d\]\[pid=\d+\]\[pname=Task-1\]:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.8/\d\d\]\[pid=\d+\]\[pname=Task-1\]:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.9/\d\d\]\[pid=\d+\]\[pname=Task-1\]: The above exception was the direct cause of the following exception:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.10/\d\d\]\[pid=\d+\]\[pname=Task-1\]:
+%s%%AETEST-3-ERROR: %%\[part=\d\d.11/\d\d\]\[pid=\d+\]\[pname=Task-1\]: Traceback \(most recent call last\):
+%s%%AETEST-3-ERROR: %%\[part=\d\d.12/\d\d\]\[pid=\d+\]\[pname=Task-1\]:   File ".+?/scripts/script.py", line 35, in pcall_exceptions
+%s%%AETEST-3-ERROR: %%\[part=\d\d.\d\d/\d\d\]\[pid=\d+\]\[pname=Task-1\]:     pcall\(func\)
