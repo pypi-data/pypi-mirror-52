@@ -1,0 +1,15 @@
+gitup/__init__.py,sha256=WBmftdlGTBAzGIa3ZtsVBL7cIAAmdtydBXMuMFtQ45w,377
+gitup/__main__.py,sha256=iG-2kbkp2NPf7Yjw_Odi7t9ZxuQqcWy9wAR4Ei0EVQI,228
+gitup/cli.py,sha256=MjrMhlRIy0uvZ9dstY2EEpY9bmSjKLrUqp9RKTJ1b-0,5632
+gitup/config.py,sha256=BSx0XNB8N5XLmkvdPYcexL1xbzIadivU_V3jvRBlu9s,4591
+gitup/migrate.py,sha256=WquvZ_cTUp_mjngDEizM2nK9ys6leLBopISnciQfWmo,1917
+gitup/update.py,sha256=tnERuQmu5ltU2-S-XVHKlCh0j3d57ncEJ5grEfA4czo,11342
+gitup/test/__init__.py,sha256=RHoexR4tzoJTBhDRpsf9PJQOWeUUVE6PUgrrwGIHcks,288
+gitup/test/test_bookmarks.py,sha256=BWZSkWBpYxnw5WV9COox1k72C4RTn9kDuiWM-VO81c0,459
+gitup/test/test_cli.py,sha256=51aZ0o_iumBKxt5_1oszww5CrI62hDh1eoJn3D1R2o0,691
+gitup-0.5.1.dist-info/LICENSE,sha256=rWtRnII5cW8-EuHs3VAx57ntagL9E7WIGbruMT2jeC0,1086
+gitup-0.5.1.dist-info/METADATA,sha256=5NlHLnjFV9PZHmko68pK3PnyenIZ7ryHkGWbVKa2Zpc,4567
+gitup-0.5.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+gitup-0.5.1.dist-info/entry_points.txt,sha256=grDJuWvWa0R1YImwPvn5IH_rTpvKJriwA-3f2XiA9kg,41
+gitup-0.5.1.dist-info/top_level.txt,sha256=iaJvvjWiT7iKGbACBMDJcsGQAl-C9lL4thDT6bF3IYg,6
+gitup-0.5.1.dist-info/RECORD,,
