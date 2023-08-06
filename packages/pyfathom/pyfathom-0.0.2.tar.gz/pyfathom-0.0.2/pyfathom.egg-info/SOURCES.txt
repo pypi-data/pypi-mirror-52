@@ -1,0 +1,13 @@
+README.md
+setup.py
+pyfathom/__init__.py
+pyfathom/classification.py
+pyfathom/classifications.py
+pyfathom/classifier.py
+pyfathom/matchers.py
+pyfathom/rule.py
+pyfathom/tokenisers.py
+pyfathom.egg-info/PKG-INFO
+pyfathom.egg-info/SOURCES.txt
+pyfathom.egg-info/dependency_links.txt
+pyfathom.egg-info/top_level.txt
