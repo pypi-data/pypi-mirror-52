@@ -1,0 +1,12 @@
+ai/backend/krunner/ubuntu/__init__.py,sha256=hwOJuFUEKtsgiOt4l6op9s-hviovM6TK1uCdtRNWY4E,22
+ai/backend/krunner/ubuntu/krunner-env.ubuntu16.04.dockerfile,sha256=yrjqW1kgYwX-KRn9JJMQU94JtCPs8uS2Anq8l7JgTP0,904
+ai/backend/krunner/ubuntu/krunner-env.ubuntu16.04.x86_64.tar.xz,sha256=Y8_e1mNCiUssWLknNWrn8gvFQ6qtJLExlfpk5Sv4KUw,22268088
+ai/backend/krunner/ubuntu/krunner-python.ubuntu16.04.dockerfile,sha256=m1Ke-BD4Tu3gM7a0hG5iFIPMfPhD8zQX2I443lbL5Ls,3689
+ai/backend/krunner/ubuntu/krunner-version.ubuntu16.04.txt,sha256=1HNeOiZeFu7gP1lxi5tdAwGcB9i2xR-Q2jpmbuwTqzU,1
+ai/backend/krunner/ubuntu/requirements.txt,sha256=mY_6GYTcl3ne3AO9P6uMqvwHtVESOM159ez09fDrVvg,104
+ai/backend/krunner/ubuntu/ttyd_linux.x86_64.bin,sha256=DcsRR4_CaF9bOUi9TNpZ6SIF5-4HiyPApgmEZsWgjoA,2188280
+backend.ai_krunner_ubuntu-2.0.0.dist-info/LICENSE,sha256=aQcQ-Bqma7DqCHBpf4R7Z2oBjdCB_ChkJ6jJQc9_5Ac,1063
+backend.ai_krunner_ubuntu-2.0.0.dist-info/METADATA,sha256=xas7X3Bulbdq9zWmtiDNJcF0Ab9disFXVm53d_eeWpw,778
+backend.ai_krunner_ubuntu-2.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+backend.ai_krunner_ubuntu-2.0.0.dist-info/top_level.txt,sha256=TJAp5TUfTUztZSUatbygths7CWRrFfnOMCtZ-DIcw6c,3
+backend.ai_krunner_ubuntu-2.0.0.dist-info/RECORD,,
