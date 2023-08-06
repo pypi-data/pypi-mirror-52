@@ -1,0 +1,7 @@
+[pyats.utils.fileutils.plugins]
+ios = genie.libs.filetransferutils.plugins.ios
+iosxe = genie.libs.filetransferutils.plugins.iosxe
+iosxr = genie.libs.filetransferutils.plugins.iosxr
+junos = genie.libs.filetransferutils.plugins.junos
+nxos = genie.libs.filetransferutils.plugins.nxos
+
