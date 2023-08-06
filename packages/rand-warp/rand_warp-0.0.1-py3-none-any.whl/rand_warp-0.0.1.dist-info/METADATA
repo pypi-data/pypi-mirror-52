@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rand-warp
+Version: 0.0.1
+Summary: randomly warp an image
+Home-page: https://google.com
+Author: xuguodong
+Author-email: xuguodong03@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+Requires-Dist: opencv-python
+
+UNKNOWN
+
+
