@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: brewblox-deploy
+Version: 0.4.0
+Summary: UNKNOWN
+Home-page: https://github.com/BrewBlox/brewblox-deployment
+Author: BrewPi
+Author-email: development@brewpi.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: brewblox deployment cli
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
