@@ -1,0 +1,6 @@
+[console_scripts]
+ph-ddg = parse_helper.scripts.ddg:main
+ph-download-file-as = parse_helper.scripts.download_file_as:main
+ph-download-files = parse_helper.scripts.download_files:main
+ph-soup-explore = parse_helper.scripts.soup:main
+
