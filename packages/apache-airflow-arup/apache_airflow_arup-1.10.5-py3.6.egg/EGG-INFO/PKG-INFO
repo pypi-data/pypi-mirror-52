@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: apache-airflow-arup
+Version: 1.10.5
+Summary: Programmatically author, schedule and monitor data pipelines
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # Arup Airflow
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+Description-Content-Type: text/markdown
+Provides-Extra: qds
+Provides-Extra: mongo
+Provides-Extra: kubernetes
+Provides-Extra: github_enterprise
+Provides-Extra: hdfs
+Provides-Extra: emr
+Provides-Extra: password
+Provides-Extra: postgres
+Provides-Extra: all_dbs
+Provides-Extra: celery
+Provides-Extra: mssql
+Provides-Extra: databricks
+Provides-Extra: salesforce
+Provides-Extra: s3
+Provides-Extra: oracle
+Provides-Extra: slack
+Provides-Extra: winrm
+Provides-Extra: devel_hadoop
+Provides-Extra: hive
+Provides-Extra: all
+Provides-Extra: elasticsearch
+Provides-Extra: redis
+Provides-Extra: azure_data_lake
+Provides-Extra: mysql
+Provides-Extra: azure_blob_storage
+Provides-Extra: kerberos
+Provides-Extra: statsd
+Provides-Extra: jira
+Provides-Extra: webhdfs
+Provides-Extra: druid
+Provides-Extra: azure_container_instances
+Provides-Extra: ssh
+Provides-Extra: ldap
+Provides-Extra: samba
+Provides-Extra: vertica
+Provides-Extra: async
+Provides-Extra: jdbc
+Provides-Extra: cloudant
+Provides-Extra: azure_cosmos
+Provides-Extra: devel_azure
+Provides-Extra: datadog
+Provides-Extra: atlas
+Provides-Extra: devel
+Provides-Extra: grpc
+Provides-Extra: gcp
+Provides-Extra: sendgrid
+Provides-Extra: rabbitmq
+Provides-Extra: snowflake
+Provides-Extra: virtualenv
+Provides-Extra: google_auth
+Provides-Extra: gcp_api
+Provides-Extra: segment
+Provides-Extra: crypto
+Provides-Extra: devel_ci
+Provides-Extra: docker
+Provides-Extra: pinot
+Provides-Extra: cassandra
+Provides-Extra: cgroups
+Provides-Extra: doc
+Provides-Extra: dask
