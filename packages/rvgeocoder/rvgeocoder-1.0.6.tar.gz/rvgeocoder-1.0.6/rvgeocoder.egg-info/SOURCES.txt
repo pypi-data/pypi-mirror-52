@@ -1,0 +1,10 @@
+README.md
+setup.py
+./rvgeocoder/__init__.py
+./rvgeocoder/cKDTree_MP.py
+./rvgeocoder/rg_cities1000.csv
+rvgeocoder.egg-info/PKG-INFO
+rvgeocoder.egg-info/SOURCES.txt
+rvgeocoder.egg-info/dependency_links.txt
+rvgeocoder.egg-info/requires.txt
+rvgeocoder.egg-info/top_level.txt
