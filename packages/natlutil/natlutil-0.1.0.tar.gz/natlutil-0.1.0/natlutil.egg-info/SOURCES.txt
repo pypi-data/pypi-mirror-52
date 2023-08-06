@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+natlutil/__init__.py
+natlutil/util.py
+natlutil.egg-info/PKG-INFO
+natlutil.egg-info/SOURCES.txt
+natlutil.egg-info/dependency_links.txt
+natlutil.egg-info/requires.txt
+natlutil.egg-info/top_level.txt
+natlutil/pos/__init__.py
+natlutil/pos/corpora.py
+natlutil/pos/corpus.py
+natlutil/pos/portuguese.py
+natlutil/pos/tagger.py
