@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: fstool
+Version: 0.1.6
+Summary: file system tool extension
+Home-page: https://github.com/mHaisham/fstool
+Author: mhaisham
+Author-email: mhaisham79@gmail.com
+License: UNKNOWN
+Description: ### fstool
+        
+        install using pip
+        
+        ```python
+        python3 -m pip install fstool
+        ```
+        
+        Command line tool
+        ```python
+        python3 -m fstool -h
+        
+        usage: __main__.py [-h] [-p PATH] [-c CONFIG] [-v] [-m] [-s START] [-e END]
+                           {restructure}
+        
+        positional arguments:
+          {restructure}
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -p PATH, --path PATH  home path
+          -c CONFIG, --config CONFIG
+                                config file location. default is config.json
+          -v, --verbose         increase output verbosity
+          -m, --move            moves files instead of default copy
+          -s START, --start START
+                                start depth of file search
+          -e END, --end END     end depth of file search
+        
+        ```
+        
+        #### Documentation
+        
+        Exposes three functions to the public
+        * restructure
+        ```python
+        restructure(
+            config: dict,
+            home: str,
+            files: list = [],
+            verbose: bool = False,
+            move: bool = True):
+        ```
+        
+        `config` is a dictionary of instructions on how to restructure the `files`, an example of which would be
+        ```json
+        { 
+           ".+\\.txt":{ 
+              "dir":"aiml",
+              "file":".+\\.txt"
+           },
+           "(.+)\\.properties":{ 
+              "dir":"config",
+              "file":"\\1.txt"
+           }
+        }
+        ```
+        
+        This is inefficient to write so `fstool` comes with a built in parser (`parse_config`) so that the above json can be written as
+        ```json
+        {
+            "aiml": [
+                ".+\\.txt"
+            ],
+            "config": [{
+                "old": "(.+)\\.properties",
+                "new": "\\1.txt"
+            }],
+        }
+        ```
+        
+        where the `key` is the directory and maps to a list of regex patterns or if you want to rename the file an object with keys `new` and `old`
+        
+        `old` - file to move
+        
+        `new` - file to be moved to
+        
+        * crawl
+        ```python
+        crawl(
+                path: str,
+                start_depth: int = 0,
+                end_depth: int = -1,
+                *,
+                skip_permission_error: bool = True) -> tuple:
+        ```
+        
+        ```python
+            iterates through directores starting with path
+        
+            :return: (files, dirs) from start_depth(inclusive) to end_depth(exclusive)
+        
+            default start_depth is 0
+            default end_depth is -1 (till all paths exhausted)
+        
+            :param skip_permission_error: when true skips through all directores that requires elevated privilages
+        
+            *note: if start_depth equals end_depth lists will be empty
+        ```
+        
+        To default parameters left to it would iterate through all the subdirectories
+        
+        ###### depth 0
+        `start_depth` - 0
+        
+        `start_depth` - 1
+        
+        ###### depth 1
+        `start_depth` - 1
+        
+        `start_depth` - 2
+        
+        `etc`
+        
+        * parse_config
+        
+        Compiles input json to a more efficient version which can be used by the `restructure` function
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
