@@ -1,0 +1,4 @@
+.pybuild
+.tox
+dist
+cubicweb_sentry.egg-info

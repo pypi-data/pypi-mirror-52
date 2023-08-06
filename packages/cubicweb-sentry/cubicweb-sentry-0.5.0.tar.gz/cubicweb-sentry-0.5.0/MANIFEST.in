@@ -1,0 +1,11 @@
+include README
+include *.py
+include */*.py
+
+recursive-include cubicweb_sentry *.py
+recursive-include test/data bootstrap_cubes *.py
+include *.txt
+include *.ini
+
+prune debian
+prune cubicweb-sentry.spec
