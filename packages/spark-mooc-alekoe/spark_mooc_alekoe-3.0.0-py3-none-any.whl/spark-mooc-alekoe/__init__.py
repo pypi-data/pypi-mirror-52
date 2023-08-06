@@ -1,0 +1,1 @@
+name = "spark-mooc-alekoe"
