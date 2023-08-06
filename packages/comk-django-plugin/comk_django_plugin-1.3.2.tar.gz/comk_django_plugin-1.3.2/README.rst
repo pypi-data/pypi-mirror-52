@@ -1,0 +1,86 @@
+comk_djanog_plugin
+========================
+comk个人开发的django插件，用于很方便的记录日志、下载日志，以及其他拥有小功能的中间件
+
+现有功能
+========================
+
+1. 通用日志记录
+-------------------------------------------------------------------------------
+#. 先在settings中进行配置::
+
+    MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'comk_django_plugin.middleware.RequestLogMiddleware', # 加上这一行，注意，添加的位置是非常重要的，建议添加在 auth 下面
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ]
+
+    import comk_django_plugin as comk
+    LOGGING = comk.auto_update_logsetting()  # 可传入各个项目自定义的LOGGING配置，会自动合并，同时生效。
+
+#. 通过django中间件实现对每个请求进行记录，记录类型有：
+    * 记录请求数据和返回数据，并记录在 log/comk_request_[日期].log 下。
+    * 记录错误日志，并记录在 log/comk_error_traceback_[日期].log 下。
+
+
+2. 日志下载
+-------------------------------------------------------------------------------
+#. 先在settings中进行配置::
+
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'comk_django_plugin.apps.ComkDjangoPluginConfig', # 加上这一行
+    ]
+
+#. 然后在在urls.py下加上url配置::
+
+    from django.conf.urls import url, include
+    from django.contrib import admin
+
+    urlpatterns = [
+        url(r'^admin/', admin.site.urls),
+        url(r'^', include('comk_django_plugin.urls')),
+    ]
+
+#. 这样就可以直接在浏览器上输入地址，打开下载log文件的页面，如下::
+
+    http://0.0.0.0:8000/getlog/log_download_html/
+
+    该页面是一个简单的HTML，提供打包下载所有日志文件，以及下载单个日志文件的功能。
+
+3. PublicServer文件
+-------------------------------------------------------------------------------
+#. 一个简单的通用服务的文件，目的是简化开发代码的书写，日后还会不断添加，使用方法如下::
+
+
+    class OrderQuery(View):
+        """
+        查询订单历史，并生成excel文件
+
+        """
+
+        def post(self, request):
+            ps = PublicServer(request)
+            if not ps.check_login_user():
+                return ps.return_build_error_response(msg='没有登录用户，请登录')
+
+4. PublicDao文件
+-------------------------------------------------------------------------------
+#. 一个简单的通用数据库操作的文件，目的是简化开发代码的书写，日后还会不断添加，使用方法如下::
+
+
+    class ModelDao(PublicDao):
+        def __init__(model=Model):
+            super().__init__(model)
+
+
