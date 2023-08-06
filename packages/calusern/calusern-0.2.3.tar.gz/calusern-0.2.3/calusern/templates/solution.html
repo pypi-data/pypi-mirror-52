@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block title %}Exercice {{ exo_nb }} (corrigé) — {{ exam_type }} {{ topic }} {{ year }} {{ region }}{% endblock %}
+
+    {% block navigation %}
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ site_root }}/">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="../..">{{ exam_type }} {{ year }} {{ topic }}</a></li>
+          <li class="breadcrumb-item"><a href="../tout">{{ region }}</a></li>
+        </ol>
+      </nav>
+    </div>
+    {% endblock %}
+
+    {% block body %}
+    <h1 id="title">Exercice {{ exo_nb }} (corrigé)</h1>
+    <div class="container">
+      <h2>Énoncé</h2>
+      {{ instructions_body }}
+      <h2>Correction</h2>
+      {{ solution_body }}
+    </div>
+    {% endblock %}

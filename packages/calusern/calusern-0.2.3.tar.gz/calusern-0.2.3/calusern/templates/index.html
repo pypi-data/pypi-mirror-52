@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+  {% block title %}Annales Brevet et Bac{% endblock %}
+
+  {% block navigation %}{% endblock %}
+
+  {% block body %}
+  <h1 id="title">Annales Brevet et Bac</h1>
+  <div class="container">
+    <p>
+      Ce site est un project collaboratif.
+      Pour en savoir plus,
+      <a href="a-propos.html">cliquez ici</a>.
+    </p>
+    {% for exam_type in index %}
+    <h2>{{ exam_type }}</h2>
+    {% for topic in index[exam_type] %}
+    <h3>{{ topic }}</h3>
+    <p>Années :
+    {% for link in index[exam_type][topic].years | sort(attribute='text', reverse=true) %}
+    <a href="{{ link.href }}"> {{ link.text }}</a>
+    {% endfor %}
+    </p>
+    <p>Catégories :
+    {% for link in index[exam_type][topic].catégories %}
+    <a href="{{ link.href }}">{{ link.text }}</a> ;
+    {% endfor %}
+    </p>
+    {% endfor %}
+    {% endfor %}
+  </div>
+  {% endblock %}

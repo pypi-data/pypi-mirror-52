@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{{ exam_type }} {{ topic }} {{ year }} {{ region }}{% endblock %}
+
+  {% block navigation %}
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ site_root }}/">Accueil</a></li>
+        <li class="breadcrumb-item"><a href="../..">{{ exam_type }} {{ year }} {{ topic }}</a></li>
+      </ol>
+    </nav>
+  </div>
+  {% endblock %}
+
+  {% block body %}
+  <h1 id="title">{{ self.title() }}</h1>
+  <div class="container">
+    {% for exo in exercices | sort(attribute='exo_nb') %}
+      <h2>Exercice {{ exo.exo_nb }} ({{ exo.points }} points)</h2>
+
+      {% if exo.solution %}
+      <p><a href="{{ exo.solution }}">(Voir le corrigé)</a></p>
+      {% endif %}
+
+      {% if exo.spécialité is defined %}
+      <p><b>
+          {% if exo.spécialité == 'commun' %}
+          Commun à tous les candidats
+          {% elif exo.spécialité == 'non-spé' %}
+          Candidats n’ayant pas suivi l’enseignement de spécialité
+          {% endif %}
+      </b></p>
+      {% endif %}
+
+      {{ exo.body }}
+    {% endfor %}
+  </div>
+  {% endblock %}

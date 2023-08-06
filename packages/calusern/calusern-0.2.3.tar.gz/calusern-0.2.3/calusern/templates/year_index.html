@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+  {% block title %}{{ exam_type }} {{ topic }} {{ year }}{% endblock %}
+
+  {% block navigation %}
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ site_root }}/">Accueil</a></li>
+      </ol>
+    </nav>
+  </div>
+  {% endblock %}
+
+  {% block body %}
+  <h1 id="title">{{ self.title() }}</h1>
+  <div class="container">
+    {% for region in exercices %}
+      <h3>{{ region }}</h3>
+      <ul class="list-nobullet">
+        <li><a href="{{ whole_exams[region] }}" >Examen entier</a></li>
+        {% for exo in exercices[region] | sort(attribute='url') %}
+        <li>
+          <a href="{{ exo.url }}">{{ exo.description }}</a>
+          {% if exo.has_solution %}
+          <a href="{{ exo.url }}/corrigé.html">(voir le corrigé)</a>
+          {% endif %}
+          {% if exo.catégories %}
+            :
+            {% for cat in exo.catégories %}
+            <a href="../catégories/{{ cat }}.html">{{ cat }}</a> ;
+            {% endfor %}
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+  {% endblock %}
