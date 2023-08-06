@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: Mopidy-Lagukan
+Version: 0.2.0
+Summary: Mopidy extension for Lagukan
+Home-page: https://github.com/jacobobryant/mopidy-lagukan
+Author: Jacob O'Bryant
+Author-email: foo@jacobobryant.com
+License: Apache License, Version 2.0
+Description: # Mopidy-Lagukan
+        
+        Mopidy extension for Lagukan. See https://lagukan.com
+        
+        ## Installation
+        
+        Install by running:
+        
+        ```
+        sudo pip2 install Mopidy-Lagukan
+        ```
+        
+Platform: UNKNOWN
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
