@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pipdemo/__init__.py
+pipdemo/main.py
+pipdemo.egg-info/PKG-INFO
+pipdemo.egg-info/SOURCES.txt
+pipdemo.egg-info/dependency_links.txt
+pipdemo.egg-info/top_level.txt
