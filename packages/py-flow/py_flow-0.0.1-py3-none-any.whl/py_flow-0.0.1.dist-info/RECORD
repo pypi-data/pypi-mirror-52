@@ -1,0 +1,11 @@
+flow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flow/autograd.py,sha256=Kahlx7uNyxJWjauP_95zfkNgRlgmEZzmfynITEJxoNs,1913
+flow/function.py,sha256=TAcQ0RRUwVnc6OamrGZtuS5givO-zxxpaiBVADiLSP8,1159
+flow/module.py,sha256=BHrbJmnJjtWvbkKyhV9KBuQakNDD8uUch5Dcr23RqTw,1558
+flow/optim.py,sha256=YF_9HTrItstXKFsVVROVR9INlaOsOvhw3ktdACBntEA,422
+flow/tensor.py,sha256=_CzHmFY9kxiC6xBFnb-FHbp7fYAEcQ6ORm47RH68Cl4,778
+py_flow-0.0.1.dist-info/LICENSE,sha256=leqh9fAVFfOICHpFXn_eEnC5jqhXUBIY48uTwgWDCyg,1084
+py_flow-0.0.1.dist-info/METADATA,sha256=6Boi66KoKyXxr7ACFr-ow0_NBr5vOYwBy3-ulkRIQnA,222
+py_flow-0.0.1.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+py_flow-0.0.1.dist-info/top_level.txt,sha256=mZX7nA6le1XNJV9ujgVL0yyesYwj3fMwHSm3zGwjNbU,5
+py_flow-0.0.1.dist-info/RECORD,,
