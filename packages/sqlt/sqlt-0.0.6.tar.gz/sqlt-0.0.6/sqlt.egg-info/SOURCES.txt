@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+sqlt/__init__.py
+sqlt/sqlt.py
+sqlt.egg-info/PKG-INFO
+sqlt.egg-info/SOURCES.txt
+sqlt.egg-info/dependency_links.txt
+sqlt.egg-info/top_level.txt
