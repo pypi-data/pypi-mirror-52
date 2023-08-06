@@ -1,0 +1,21 @@
+#################################################################################################
+# Defaults
+#################################################################################################
+
+core_packages        : [eog, gimp, kile, mesa-utils, mplayer, net-tools, openssh-server,
+                        synaptic, texlive-fonts-extra, texlive-fonts-recommended, 
+                        texlive-xetex, unison-all-gtk, usbmount, vim, wget
+                       ]
+font_packages        : [fonts-unfonts-core, fonts-unfonts-extra, fonts-alee, fonts-baekmuk,
+                        fonts-lexi-gulim, fonts-lexi-saebom,
+                        fonts-liberation, fonts-liberation2, fonts-linuxlibertine,
+                        fonts-nanum, fonts-nanum-coding, fonts-nanum-eco, fonts-woowa-hanna,
+                        ttf-dejavu
+                       ]
+packaging_packages   : [debhelper, gnupg, gnupg2, libssl-dev, libyaml-dev, packaging-dev,
+                        python-stdeb, python-virtualenv,
+                        python3-pip, python3-stdeb, python3-virtualenv,
+                        virtualenvwrapper
+                        ]
+programming_packages : [build-essential, cmake, cmake-curses-gui, cppcheck, exuberant-ctags,
+                        libnotify-bin, python-pip, ttyrec]

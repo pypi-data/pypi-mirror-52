@@ -1,0 +1,15 @@
+#
+# Playbook with personal customisations to the basic development environment.
+#
+---
+- import_playbook: bootstrap-pc.yaml
+
+- name: Groot Workstation
+  hosts:
+    - localhost
+
+  roles:
+  - role: snorriheim
+  - role: ros2
+  - role: groot/workstation
+#  - role: ros
