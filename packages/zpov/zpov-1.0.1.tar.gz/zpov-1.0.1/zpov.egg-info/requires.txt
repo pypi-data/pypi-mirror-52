@@ -1,0 +1,16 @@
+attrs
+flask
+flask-httpauth
+markdown
+path.py
+pynacl
+pygit2
+ruamel.yaml
+
+[dev]
+black==19.3b0
+flake8==3.5.0
+pytest
+pytest-flask
+mypy
+twine
