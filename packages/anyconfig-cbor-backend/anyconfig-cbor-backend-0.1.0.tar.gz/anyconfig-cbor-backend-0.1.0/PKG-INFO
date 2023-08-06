@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: anyconfig-cbor-backend
+Version: 0.1.0
+Summary: Backend module for python-anyconfig to load and dump CBOR data
+Home-page: https://github.com/ssato/python-anyconfig-cbor-backend
+Author: Satoru SATOH
+Author-email: satoru.satoh@gmail.com
+Maintainer: Satoru SATOH
+Maintainer-email: satoru.satoh@gmail.com
+License: MIT
+Description: 
+        This is a backend module for python-anyconfig to support to load and dump
+        CBOR files with using cbor, https://pypi.python.org/pypi/cbor.
+        
+        SEE ALSO:
+        
+        - python-anyconfig: https://pypi.python.org/pypi/anyconfig
+        - CBOR spec: http://cbor.io
+        - Download:
+        
+        - PyPI: https://pypi.python.org/pypi/anyconfig-cbor-backend
+        - Copr RPM repos: https://copr.fedoraproject.org/coprs/ssato/python-anyconfig/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Provides-Extra: devel
