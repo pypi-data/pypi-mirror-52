@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        spotifyliker=spotify_album_liker:cli
+    

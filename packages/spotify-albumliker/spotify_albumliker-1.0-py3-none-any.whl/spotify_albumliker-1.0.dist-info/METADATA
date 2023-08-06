@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: spotify-albumliker
+Version: 1.0
+Summary: Automatically add songs from your Spotify followed albums into 'all songs'
+Home-page: https://github.com/dfresh613/spotify-album-liker
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: spotipy
+
+Miss the old Spotify UI in which you could see all of your songs in a single location? Want to listen to all songs of your liked albums alongside your individually liked songs? This script is for you!
+
+
