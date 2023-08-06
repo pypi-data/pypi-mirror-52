@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: gpt_2_finetuning
+Version: 0.1
+Summary: Package for finetuning GPT-2 models
+Home-page: https://github.com/jonheng/gpt-2-finetuning
+Author: Jonathan Heng
+Author-email: jonheng91@gmail.com
+License: MIT
+Download-URL: https://github.com/jonheng/gpt-2-finetuning/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: language model,machine learning,gpt2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
