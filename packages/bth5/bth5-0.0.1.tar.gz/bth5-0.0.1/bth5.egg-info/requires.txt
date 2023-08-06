@@ -1,0 +1,8 @@
+h5py>=2.8
+numpy>=1.16
+numba>=0.45
+
+[tests]
+pytest>=3.5
+pytest-black
+pytest-cov
