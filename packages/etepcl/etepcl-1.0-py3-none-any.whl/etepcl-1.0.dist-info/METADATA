@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: etepcl
+Version: 1.0
+Summary: Command line end to end processing
+Home-page: https://github.com/anmolwarman/etepcl
+Author: Anmol Warman
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: machine learning,ai,neural network
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: pyparsing
+Requires-Dist: matplotlib
+Requires-Dist: click
+Requires-Dist: tensorflow
+Requires-Dist: keras
+
+UNKNOWN
+
+
