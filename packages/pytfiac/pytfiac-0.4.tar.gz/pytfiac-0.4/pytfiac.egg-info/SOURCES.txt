@@ -1,0 +1,9 @@
+README.md
+pytfiac.py
+setup.py
+pytfiac.egg-info/PKG-INFO
+pytfiac.egg-info/SOURCES.txt
+pytfiac.egg-info/dependency_links.txt
+pytfiac.egg-info/requires.txt
+pytfiac.egg-info/top_level.txt
+test/test_tfiac.py
