@@ -1,0 +1,17 @@
+.DS_Store,sha256=rIYbP8CsWuvhUAqjLc1sblPR2Kx_GcbKxW-mjWoIQr0,10244
+classify/__init__.py,sha256=zJ9jQw69VXTigaEDaQZwtBPNj63keUIXxdzdGXZdk1Y,162
+classify/cnn_model.py,sha256=JAjCsqwrllQwbcesh6LaQjdxX7FwUeHY8L2TnYChR-w,2997
+classify/predict.py,sha256=6eKxP0bEA6Cpiv3YhsW3B98z8F8jHsGrBBZz_aDkRXE,1899
+classify/process_data.py,sha256=OEXF1_f5SWT0c0uhNJvDQluT3vyKlVkv0wl41zl0taQ,824
+classify/rnn_model.py,sha256=DxlpGxtEyjJWE8k8CuDN7qcJFnoHGbUjQddbFUpcRto,3637
+classify/run_cnn.py,sha256=R4rRhn2u96AVqVX_82JQ-24Uc71GkvXwS4VLiJzWKuU,7332
+classify/run_rnn.py,sha256=ngEnxxJcIReYmIg0Pk_OmukO0rXn4L2LKJ8_xVyWTek,7489
+data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data/cnews_loader.py,sha256=54-6mRqmpo8PtTi2lcIKZIFdHtv0r-OPrfTzHLIyn6w,4936
+helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+helper/cnews_group.py,sha256=mE-hDx_xlYN1njYE-G5eC_W0qiRaoo8nVuv8f634Cvo,1745
+zhanglei-0.0.5.dist-info/LICENSE,sha256=vIszyo1VmzXwsHYivJWjH0HaBxILzjop46Zf7Le5Po0,1063
+zhanglei-0.0.5.dist-info/METADATA,sha256=9ImtIN3RkEOfDw_UlMqIZYsUJgsuiizMlpvMmat1Afc,15167
+zhanglei-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+zhanglei-0.0.5.dist-info/top_level.txt,sha256=VQvx00bULQOGBiLoUhilieW5NUTGQQZWd3d8n6H2zOQ,21
+zhanglei-0.0.5.dist-info/RECORD,,
