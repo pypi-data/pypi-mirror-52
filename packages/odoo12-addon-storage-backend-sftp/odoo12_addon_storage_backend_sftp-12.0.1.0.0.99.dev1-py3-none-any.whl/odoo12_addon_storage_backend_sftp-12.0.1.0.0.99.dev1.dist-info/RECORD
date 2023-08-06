@@ -1,0 +1,15 @@
+odoo/addons/storage_backend_sftp/README.rst,sha256=uMR3Iz30wFOxbAfXqEXMMjUzZfGJVc_aSkEfBGfxYAo,747
+odoo/addons/storage_backend_sftp/__init__.py,sha256=SoGdvLzfb39JMhyc2xSWCIBthMtJoxhNsZS19XwE-UQ,46
+odoo/addons/storage_backend_sftp/__manifest__.py,sha256=C6iy6alC0Qc-6PCvusnh9AcUEdku5gywOnf0-a7x7oU,609
+odoo/addons/storage_backend_sftp/components/__init__.py,sha256=Fwqnt8bjOn0ioCtiU2o_E5vH1mPgfsD-Aw249ZSufXM,27
+odoo/addons/storage_backend_sftp/components/sftp_adapter.py,sha256=dG75dfaO-O9SkT8loy3bGGxTq5LUkXI5whBOm7BGuag,3358
+odoo/addons/storage_backend_sftp/models/__init__.py,sha256=WLh-zAgW5JsgfFhrKKtn0jtVLH8SftYTsLB4gwychGE,30
+odoo/addons/storage_backend_sftp/models/storage_backend.py,sha256=3DgRJl9DQMKT_Vp3rWqffYXUwyY-t-ldhEWtiysSizc,805
+odoo/addons/storage_backend_sftp/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/storage_backend_sftp/tests/__init__.py,sha256=j6zWGy5FB0FFXWkNIZknJnVdstKxEcdSYmzvgHxmEug,24
+odoo/addons/storage_backend_sftp/tests/test_sftp.py,sha256=hAvuq5cMJbUuAiEd8xmY7FocurMjCaAHuL5zpnfwiUo,989
+odoo/addons/storage_backend_sftp/views/backend_storage_view.xml,sha256=sitspulmc-p8og3PD02bhDvnaC59OZJRHc9PGpPn-d4,726
+odoo12_addon_storage_backend_sftp-12.0.1.0.0.99.dev1.dist-info/METADATA,sha256=vAjqY2av_M5VdsHwA3nzuPYi1GxHkdx3K3pi0a0H0RI,1318
+odoo12_addon_storage_backend_sftp-12.0.1.0.0.99.dev1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+odoo12_addon_storage_backend_sftp-12.0.1.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_storage_backend_sftp-12.0.1.0.0.99.dev1.dist-info/RECORD,,
