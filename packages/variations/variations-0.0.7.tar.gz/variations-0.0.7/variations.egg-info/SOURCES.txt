@@ -1,0 +1,12 @@
+README.md
+setup.py
+variations/__init__.py
+variations/conf.py
+variations/scaler.py
+variations/utils.py
+variations/variation.py
+variations.egg-info/PKG-INFO
+variations.egg-info/SOURCES.txt
+variations.egg-info/dependency_links.txt
+variations.egg-info/requires.txt
+variations.egg-info/top_level.txt
