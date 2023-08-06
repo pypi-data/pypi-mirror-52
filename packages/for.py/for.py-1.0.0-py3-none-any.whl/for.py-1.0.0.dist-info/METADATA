@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: for.py
+Version: 1.0.0
+Summary: An async Python API wrapper for the Fortnite API
+Home-page: https://github.com/Akhil2149/fortpy
+Author: Akhil
+Author-email: akhilaug2003@gmail.com
+License: MIT
+Keywords: fortnite, forpy, api-wrapper, async
+Platform: UNKNOWN
+Requires-Dist: aiohttp
+Requires-Dist: python-box
+
+Powered by fortnitetracker.com. 
+
+
