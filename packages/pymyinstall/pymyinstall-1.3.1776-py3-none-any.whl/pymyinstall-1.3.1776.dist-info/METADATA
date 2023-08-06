@@ -1,0 +1,187 @@
+Metadata-Version: 2.1
+Name: pymyinstall
+Version: 1.3.1776
+Summary: Easy installation of modules for data scientists
+Home-page: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html
+Author: Xavier Dupré
+Author-email: xavier.dupre@gmail.com
+License: MIT
+Download-URL: https://github.com/sdpython/pymyinstall/
+Keywords: pymyinstall,installation,Xavier Dupré
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Dist: setuptools
+Requires-Dist: pip (>=10.0)
+Requires-Dist: urllib3
+Requires-Dist: requests
+
+
+.. image:: https://github.com/sdpython/pymyinstall/blob/master/_doc/sphinxdoc/source/phdoc_static/project_ico.png?raw=true
+    :target: https://github.com/sdpython/pymyinstall/
+
+.. _l-README:
+
+pymyinstall: easier installation of packages
+============================================
+
+.. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master
+    :target: https://travis-ci.org/sdpython/pymyinstall
+    :alt: Build status
+
+.. image:: https://ci.appveyor.com/api/projects/status/ccsvoi29n3a71i6j?svg=true
+    :target: https://ci.appveyor.com/project/sdpython/pymyinstall
+    :alt: Build Status Windows
+
+.. image:: https://circleci.com/gh/sdpython/pymyinstall/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/sdpython/pymyinstall/tree/master
+
+.. image:: https://badge.fury.io/py/pymyinstall.svg
+    :target: http://badge.fury.io/py/pymyinstall
+
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :alt: MIT License
+    :target: http://opensource.org/licenses/MIT
+
+.. image:: https://requires.io/github/sdpython/pymyinstall/requirements.svg?branch=master
+     :target: https://requires.io/github/sdpython/pymyinstall/requirements/?branch=master
+     :alt: Requirements Status
+
+.. image:: https://codecov.io/github/sdpython/pymyinstall/coverage.svg?branch=master
+    :target: https://codecov.io/github/sdpython/pymyinstall?branch=master
+
+.. image:: http://img.shields.io/github/issues/sdpython/pymyinstall.png
+    :alt: GitHub Issues
+    :target: https://github.com/sdpython/pymyinstall/issues
+
+.. image:: https://www.codacy.com/app/sdpython/pymyinstall?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/pymyinstall&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Badge
+    :target: https://www.codacy.com/app/sdpython/pymyinstall?
+
+.. image:: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/_images/nbcov.png
+    :target: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/all_notebooks_coverage.html
+    :alt: Notebook Coverage
+
+.. image:: https://pepy.tech/badge/pymyinstall/month
+    :target: https://pepy.tech/project/pymyinstall/month
+    :alt: Downloads
+
+.. image:: https://img.shields.io/github/forks/sdpython/pymyinstall.svg
+    :target: https://github.com/sdpython/pymyinstall/
+    :alt: Forks
+
+.. image:: https://img.shields.io/github/stars/sdpython/pymyinstall.svg
+    :target: https://github.com/sdpython/pymyinstall/
+    :alt: Stars
+
+Installing packages on Windows is not necessarily easy when
+they contain C++ code. I usually use
+`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+for one package but it requires some tricks to start from
+scratch and install all the needed packages.
+That's what this package is doing.
+The module helps installing modules in *Windows* and *Linux*.
+It installs two scripts. The first one installs modules:
+
+    pymy_install3
+
+The second one updates installed modules::
+
+    pymy_update3
+
+For a specific module::
+
+    pymy_update3 <module_name>
+
+To install a preconfigured set of modules::
+
+    pymy_install3 --set=pyquickhelper
+
+``--help`` gives the usage.
+
+It provides the following functionalities:
+
+* help installing module from GitHub, pip and setup
+* install other common tools or editors
+* provides a list of modules to install to use Python to manipulate data (IPython, pandas, scikit-learn...)
+* function to build a setup with Python, R and useful packages like `WinPython <https://winpython.github.io/>`_
+
+Source of the packages:
+
+* `PyPI <https://pypi.python.org/pypi>`_: pure python packages
+* `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_: packages with C++
+* `xavierdupre.fr <http://www.xavierdupre.fr/>`_: custom build (xgboost, ...)
+
+**Links:**
+
+* `GitHub/pymyinstall <https://github.com/sdpython/pymyinstall>`_
+* `documentation <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+* `Blog <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/main_0000.html#ap-main-0>`_
+
+.. _l-HISTORY:
+
+=======
+History
+=======
+
+current - 2019-03-23 - 0.00Mb
+=============================
+
+* `65`: upgrade dependencies to pip >=10 (2019-03-17)
+* `63`: add ONNX modules (2019-02-02)
+* `60`: standalone installation on linux (2019-02-02)
+
+1.2.1676 - 2018-11-10 - 1.98Mb
+==============================
+
+* `62`: simplify sets of modules to install (2018-11-10)
+* `61`: fix import issue for pip 0.18.1 (2018-10-06)
+* `33`: add code to remove unneeded packages such as gdata (2018-07-31)
+* `59`: install pythonnet from wheel and not from pip (2018-07-27)
+* `58`: fix issue with pylzma on Python 3.7 (2018-07-24)
+* `56`: fix bug in c:\Python37-x64\lib\site-packages\win32ctypes\core\cffi\_advapi32.py (2018-07-23)
+* `55`: move circleci to python 3.7 (2018-07-23)
+* `54`: remove basemap (deprecated) (2018-07-22)
+* `53`: remove arctic, bitarray (2018-07-06)
+* `52`: remove fastcluster (2018-07-06)
+* `51`: fix issue with torch (2018-07-06)
+* `50`: rename climate into climate_toolbox (2018-07-06)
+* `49`: remove blaze, odo, not maintained (2018-07-06)
+* `48`: add missing modules for keras (2018-07-06)
+* `47`: add traceback2 (2018-07-06)
+* `46`: add pyecharts (2018-07-06)
+* `45`: filter out warnings added by pip 10 (2018-06-16)
+* `44`: rename tensorboard (2018-05-02)
+* `43`: fix param - no longer require C compilation (2018-05-02)
+* `42`: add options --no-warn-script-location by default for pip >= 10.0 (2018-04-19)
+* `41`: update for pip 10 (2018-04-14)
+* `40`: add module absl-py (tensorflow), backcall (ipython) (2018-04-03)
+* `39`: add ipyscales (2018-03-31)
+* `38`: add module asteval (lmfit), ipydatawidgets (pythreejs) (2018-03-31)
+* `37`: add module packaging (2018-03-30)
+* `35`: add python to PATH when testing datascientist distribution (2018-01-05)
+
+1.1.1431 - 2017-11-28 - 1.98Mb
+==============================
+
+* `34`: enable pip+git (2017-09-24)
+* `21`: fix ete3 (2017-09-17)
+* `32`: add Python 3.6.2 (2017-09-16)
+* `22`: fix pypdf and branch trunk (2017-08-29)
+* `30`: compile dlib for python 3.6 (2017-08-05)
+* `27`: fix guidata (2017-08-05)
+* `29`: build dlib on Windows (2017-07-19)
+* `20`: refresh pystruct, polylearn, dlib, pythonnet (2017-03-22)
+* `19`: add a test to check the installation of a portable version with many modules (2017-03-16)
+* `18`: compile fastcache (2017-03-16)
+* `13`: add tensorflow (if it compiles on Windows) (2017-02-25)
+* `16`: add blog about rpy2 issue (2016-08-25)
+* `14`: wheel for module param (2016-08-25)
+* `11`: switch to https to communicate with pypi (2016-06-18)
+* `10`: switch from http to https to communicate with pypi (2016-06-18)
+
+
