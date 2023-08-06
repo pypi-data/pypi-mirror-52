@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+sort/__init__.py
+sort/bubble_sort.py
+sort/insertion_sort.py
+sort/quick_sort.py
+sort/selecting_sort.py
+sort_pckg_frarg.egg-info/PKG-INFO
+sort_pckg_frarg.egg-info/SOURCES.txt
+sort_pckg_frarg.egg-info/dependency_links.txt
+sort_pckg_frarg.egg-info/not-zip-safe
+sort_pckg_frarg.egg-info/top_level.txt
