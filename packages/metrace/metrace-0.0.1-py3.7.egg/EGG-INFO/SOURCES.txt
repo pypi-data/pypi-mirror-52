@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+metrace/__init__.py
+metrace/cli.py
+metrace/plot_command.py
+metrace/run_command.py
+metrace/server.py
+metrace.egg-info/PKG-INFO
+metrace.egg-info/SOURCES.txt
+metrace.egg-info/dependency_links.txt
+metrace.egg-info/entry_points.txt
+metrace.egg-info/not-zip-safe
+metrace.egg-info/requires.txt
+metrace.egg-info/top_level.txt
