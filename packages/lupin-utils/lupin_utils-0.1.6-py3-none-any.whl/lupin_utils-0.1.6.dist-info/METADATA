@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: lupin-utils
+Version: 0.1.6
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Henry
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: Cython (==0.29.10)
+Requires-Dist: numpy (==1.16.4)
+Requires-Dist: scikit-learn (==0.21.2)
+Requires-Dist: pandas (==0.24.2)
+Requires-Dist: mlflow (==0.8.2)
+Requires-Dist: xgboost (==0.90)
+Requires-Dist: fastFM (==0.2.11)
+Requires-Dist: odps (==3.5.1)
+Requires-Dist: redis (==3.2.1)
+Requires-Dist: pymysql (==0.9.3)
+Requires-Dist: pymongo (==3.7.2)
+Requires-Dist: pyyaml (==5.1)
+Requires-Dist: scipy (==1.1.0)
+Requires-Dist: implicit (==0.3.8)
+Requires-Dist: gensim (==3.5.0)
+Requires-Dist: tensorflow (==1.14.0)
+Requires-Dist: oss2 (==2.6.1)
+Requires-Dist: matplotlib (==3.1.1)
+Requires-Dist: psutil (==5.6.3)
+Requires-Dist: pyhdfs (==0.2.2)
+
+UNKNOWN
+
+
