@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+
+from mco_agent import Agent, action, dispatch, register_actions
+
+
+@register_actions
+class Parrot(Agent):
+
+    def should_activate(self):
+        return True
+
+    @action
+    def echo(self):
+        """ Responds with the given input
+
+        return:
+        """
+        self.reply.data['message'] = ''.join([self.config.get('prefix', ''), self.request.data['message']])
+
+    @action
+    def invalid(self):
+        self.logger.warning("Intentionally failing")
+        self.reply.fail(1, "Invalid command")
+
+
+if __name__ == '__main__':
+    dispatch(Parrot)
