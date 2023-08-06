@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: wagtail-instance-selector
+Version: 1.1.0
+Summary: A widget for Wagtail's admin that allows you to create and select related items
+Home-page: https://github.com/ixc/wagtail-instance-selector
+Author: The Interaction Consortium
+Author-email: admins@interaction.net.au
+License: UNKNOWN
+Description: Documentation at https://github.com/ixc/wagtail-instance-selector
+Platform: UNKNOWN
