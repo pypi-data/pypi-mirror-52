@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: bayes_tda
+Version: 0.1
+Summary: Point process model for Bayesian inference with persistence diagrams.
+Home-page: https://github.com/coballejr/bayes_tda/
+Author: Christopher Oballe
+Author-email: coballejr@gmail.com
+License: MIT
+Download-URL: https://github.com/coballejr/bayes_tda/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Persistent Homology,Topological Data Analysis,Bayesian,Point process,Poisson process
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
