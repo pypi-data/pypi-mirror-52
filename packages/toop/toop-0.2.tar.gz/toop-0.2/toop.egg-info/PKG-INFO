@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: toop
+Version: 0.2
+Summary: A Site Connectivity Checker for Mac
+Home-page: https://github.com/Genza999/toop
+Author: Kisekk David
+Author-email: cartpix@gmail.com
+License: UNKNOWN
+Description: # toop
+        
+        Toop is a Python library that monitors that status of a site on Mac
+        
+Keywords: python requests monitor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
