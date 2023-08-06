@@ -1,0 +1,3 @@
+[console_scripts]
+yl-app = ylcli.cli:main
+

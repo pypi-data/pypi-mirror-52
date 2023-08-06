@@ -1,0 +1,4 @@
+DEBUG = True
+PORT = '1012'
+HOST = '0.0.0.0'
+LIMIT = 1000
