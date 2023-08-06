@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+README.rst
+setup.cfg
+setup.py
+force_deps/__init__.py
+force_deps.egg-info/PKG-INFO
+force_deps.egg-info/SOURCES.txt
+force_deps.egg-info/dependency_links.txt
+force_deps.egg-info/top_level.txt
