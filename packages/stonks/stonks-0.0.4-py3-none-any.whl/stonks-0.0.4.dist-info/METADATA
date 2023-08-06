@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: stonks
+Version: 0.0.4
+Summary: Stonks is a Python library made to interact with the [Stonk Exchange Discord Server](https://discord.gg/nyXtEtZ) using the Stonks API.
+Home-page: https://repl.it/@mat1/python-stonks
+Author: mat
+Author-email: pypi@matdoes.dev
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: AsyncIO
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# API Reference
+coming soon
+
+## Source Code
+[Hosted on Repl.it](https://repl.it/@mat1/python-stonks)
+
+
