@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+jsendit/__init__.py
+jsendit/respond.py
+jsendit/version.py
+jsendit.egg-info/PKG-INFO
+jsendit.egg-info/SOURCES.txt
+jsendit.egg-info/dependency_links.txt
+jsendit.egg-info/entry_points.txt
+jsendit.egg-info/top_level.txt

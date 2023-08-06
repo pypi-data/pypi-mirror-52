@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    jsendit=jsendit.cli:cli
+    
