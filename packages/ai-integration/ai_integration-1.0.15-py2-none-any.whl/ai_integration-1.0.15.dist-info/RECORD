@@ -1,0 +1,16 @@
+ai_integration/__init__.py,sha256=56AgeWsIVhBtSbwDAuKeEfN1MCB8dt5FV6y6bQU51oA,65
+ai_integration/fake_inference_function.py,sha256=9Q5sGyuAC_dW3gZAfV18dyxUIoJxGTOo2nENjawVkbM,4065
+ai_integration/image_helpers.py,sha256=1D2l-JPt2_ck1IWC7Dw0zZL3j2Iz5Z9jUiypL7_GEqA,542
+ai_integration/internal_methods.py,sha256=vz0ngPOCc0C2zQ_M0uCuTiV2v3y0lPJVrEt75EdsMFI,2835
+ai_integration/public_interface.py,sha256=xMWT5rpOpyG7qz7Dk1ow46AbAW8OzWIn_T-AFNQLlWg,336
+ai_integration/modes/__init__.py,sha256=YuYhB0EV4VYP6iAJqm2ZWkJWDhnfylDIjIDa6JmzKSg,252
+ai_integration/modes/command_line.py,sha256=xmyW3QQhu3jWk0JXl6vbMhgNIfiSX88Sxex6UKGXQEU,2984
+ai_integration/modes/http.py,sha256=H-9X1ZYfaOA2DZkv1UEbzujdnhyzru-YOKDXnbV2XV8,4936
+ai_integration/modes/testing_modes.py,sha256=et60dKpKPi7-d_It9VzHLD1RFa1awS766aUOYsGzimo,5652
+ai_integration/modes/http_helpers/deepai.js,sha256=n3VowkPLMEJNYfdQ5SKswivjO3ZOSlRQXTfgyu5LEHs,401879
+ai_integration/modes/http_helpers/deepai.min.js,sha256=8stT_SJZr-ir8SiYl0lz70X37vVIK84BEPiSb-2_r5Y,139610
+ai_integration-1.0.15.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ai_integration-1.0.15.dist-info/METADATA,sha256=WQ7oZ87_mo3FMsP5tDuzUN-B00dj1YE5k7pcE0uJV3Y,9588
+ai_integration-1.0.15.dist-info/WHEEL,sha256=MlnUWFZCxbgBkC_PfU2CprVf8-ZZlVOAfry_BsXUBxw,92
+ai_integration-1.0.15.dist-info/top_level.txt,sha256=CcicWczXemTgeZCmwu7Giei1iWDbzJk1FVZiyh1aIbU,15
+ai_integration-1.0.15.dist-info/RECORD,,
