@@ -1,0 +1,1 @@
+from mapping_to_namedtuple.mapping_to_namedtuple import mapping_to_named_tuple

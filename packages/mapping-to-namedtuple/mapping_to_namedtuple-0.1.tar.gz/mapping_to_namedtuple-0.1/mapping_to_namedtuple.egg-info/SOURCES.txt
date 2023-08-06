@@ -1,0 +1,10 @@
+README.md
+setup.py
+mapping_to_namedtuple/__init__.py
+mapping_to_namedtuple/mapping_to_namedtuple.py
+mapping_to_namedtuple.egg-info/PKG-INFO
+mapping_to_namedtuple.egg-info/SOURCES.txt
+mapping_to_namedtuple.egg-info/dependency_links.txt
+mapping_to_namedtuple.egg-info/top_level.txt
+mapping_to_namedtuple/tests/__init__.py
+mapping_to_namedtuple/tests/test_mapping_to_namedtuple.py
