@@ -1,0 +1,93 @@
+# disable debuginfo
+%global pkgname anyconfig-configobj-backend
+
+%global desctxt \
+This is a python backend module for python-anyconfig to load and dump configobj\
+data.\
+\
+python-anyconfig is a python library to provide common APIs to load dump\
+various configuration files like INI, JSON and YAML.
+
+%if 0%{?rhel} == 7 || 0%{?epel} == 7
+%bcond_without python2
+%else
+%bcond_with python2
+%endif
+
+Name:           python-%{pkgname}
+Version:        @VERSION@
+Release:        @RELEASE@
+Summary:        Backend for python-anyconfig to load and dump configobj data
+Group:          Development/Libraries
+License:        MIT
+URL:            https://github.com/ssato/python-anyconfig-configobj-backend
+Source0:        %{url}/archive/RELEASE_%{version}.tar.gz
+BuildArch:      noarch
+
+%if %{with python2}
+BuildRequires:  python2-devel
+BuildRequires:  python2-setuptools
+%endif
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+
+%description    %{desctxt}
+
+%if %{with python2}
+%package     -n python2-%{pkgname}
+Summary:        %{summary}
+Requires:       python2-anyconfig
+Requires:       python2-configobj
+%{?python_provide:%python_provide python2-%{pkgname}}
+
+%description -n python2-%{pkgname} %{desctxt}
+%endif
+
+%package     -n python3-%{pkgname}
+Summary:        %{summary}
+Requires:       python3-anyconfig
+Requires:       python3-configobj
+%{?python_provide:%python_provide python3-%{pkgname}}
+
+%description -n python3-%{pkgname} %{desctxt}
+
+%prep
+%autosetup   -n %{pkgname}-%{version}
+
+%build
+%if %{with python2}
+%py2_build
+%endif
+%py3_build
+
+%install
+%if %{with python2}
+%py2_install
+%endif
+%py3_install
+
+%if %{with python2}
+%files       -n python2-%{pkgname}
+%doc README.rst
+%{python2_sitelib}/*
+%endif
+
+%files       -n python3-%{pkgname}
+%doc README.rst
+%{python3_sitelib}/*
+
+%changelog
+* Sat Sep 21 2019 Satoru SATOH <satoru.satoh@gmail.com> - 0.1.0-1
+- new upstream release
+
+* Tue Jan  9 2018 Satoru SATOH <ssato@redhat.com> - 0.0.4-1
+- new upstream release
+
+* Mon Jan  8 2018 Satoru SATOH <ssato@redhat.com> - 0.0.3-1
+- new upstream release
+
+* Tue Apr 30 2013 Satoru SATOH <ssato@redhat.com> - 0.0.2-1
+- new upstream release
+
+* Tue Apr 23 2013 Satoru SATOH <ssato@redhat.com> - 0.0.1-1
+- Initial packaging
