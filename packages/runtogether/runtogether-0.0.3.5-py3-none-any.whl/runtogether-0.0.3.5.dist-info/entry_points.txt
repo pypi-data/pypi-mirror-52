@@ -1,0 +1,3 @@
+[console_scripts]
+rtg = runtogether.command:main
+
