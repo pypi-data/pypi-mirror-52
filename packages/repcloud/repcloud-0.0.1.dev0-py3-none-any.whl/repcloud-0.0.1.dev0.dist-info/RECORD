@@ -1,0 +1,14 @@
+repcloud/__init__.py,sha256=hOVvSxQxhljHQAYGDQqxnI0GuBL_wpTLo15TiMJC_V0,51
+repcloud/gen_lib.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+repcloud/pg_lib.py,sha256=do7ilvekgpsHFAqqBU2oUYJXVJtay_23R6_ermdGXLM,36747
+repcloud/repack_lib.py,sha256=BHaatUoTY9EAOsMeGsB5j1QTi446VDTmK9XWGWYzhcw,12667
+repcloud/config/config-example.toml,sha256=E9zGX6bV11O4A_PIGLN3tjgRxLol66CTsA-CW6j-p7E,1653
+repcloud/sql/create_schema.sql,sha256=kFrAPiPMpX-u59psDprP7E6zkpK_lPj-gIIXH_KsTFI,34625
+repcloud/sql/drop_schema.sql,sha256=4DnLOMeX4eB-MKwMdi5lpfhIk0zT48P_YxEExT0e8JU,143
+repcloud-0.0.1.dev0.data/scripts/rpcl,sha256=YfxH61ZgHZLJz1L8_esrK75lnw1lgcUrM_E4LbKFQcE,175
+repcloud-0.0.1.dev0.data/scripts/rpcl.py,sha256=UX8ucXHPOiLKooIcFTDgN4vdlB8Au_n8xUGXw8wct2U,1390
+repcloud-0.0.1.dev0.dist-info/LICENSE.txt,sha256=ZFCh8iSzw78LeH7ZJCszFZ5dGAFc18WYswrNHEsIrNM,955
+repcloud-0.0.1.dev0.dist-info/METADATA,sha256=RTd3VmUeVUSr-hSSIBR7x9h_OsIYX96McM9ZhNIXV4o,6340
+repcloud-0.0.1.dev0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+repcloud-0.0.1.dev0.dist-info/top_level.txt,sha256=zePuha1IR7AvsXPf_fBYYF8KsLCWkZnxbLHDbSnz5OE,9
+repcloud-0.0.1.dev0.dist-info/RECORD,,
