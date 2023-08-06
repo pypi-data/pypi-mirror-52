@@ -1,0 +1,4 @@
+requests<3.0,>=2.7
+
+[kerberos]
+requests-kerberos
