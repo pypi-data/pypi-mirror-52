@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: hyperjson
+Version: 0.2.1
+Summary: A hyper-fast Python module for reading/writing JSON data using Rust's serde-json.
+Author: Matthias Endler <matthias-endler@gmx.net>
+Author-Email: Matthias Endler <matthias-endler@gmx.net>
+License: Apache-2.0
