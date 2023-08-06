@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: waflabs
+Version: 1.0.1
+Summary: A python CLI and wrapper for the WAFLABS API - https://waflabs.com/api/
+Home-page: https://waflabs.com
+Author: waflabs
+Author-email: UNKNOWN
+License: MIT
+Keywords: wrapper library waf lab labs waflabs api cli
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests
+Requires-Dist: pyopenssl
+Requires-Dist: html
+
+WAFLABS
+==================
+
+.. image:: https://img.shields.io/pypi/v/waflabs.svg
+    :target: https://pypi.python.org/pypi/waflabs/
+    :alt: Latest Version
+
+``waflabs`` is a Python wrapper and CLI tool for the `WAFLABS REST API`_.
+
+Installation
+------------
+.. code-block:: bash
+
+    $ pip install waflabs
+
+CLI usage
+---------
+.. code-block:: bash
+
+    $ waflabs --testmywaf
+
+To see all options run: $ waflabs --help
+
+Module usage
+------------
+.. code-block:: python
+
+    from waflabs import waflabsapi
+    waflabs = waflabsapi.WAFLabsApi(access_id="1234", acess_key="abcd")
+
+    test_target = {"url": "https://waflabs.com/testme/",
+            "block_code": 406,
+            "waf": "modsecurity}
+
+    print(waflabs.testmywaf(test_target))
+
+.. _WAFLABS REST API: https:/waflabs.com/api/
+
+
