@@ -1,0 +1,5 @@
+numpy
+scipy
+csaps>=0.6.0
+cached_property
+decorator
