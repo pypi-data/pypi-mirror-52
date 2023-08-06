@@ -1,0 +1,3 @@
+recursive-include pygwidgets_test *.jpg
+recursive-include pygwidgets_test *.png
+recursive-include pygwidgets_test *.wav
