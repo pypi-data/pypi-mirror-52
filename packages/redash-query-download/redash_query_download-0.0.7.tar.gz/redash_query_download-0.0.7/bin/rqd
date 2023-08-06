@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+import sys
+import os
+
+import redash_query_download.clidriver
+
+def main():
+    return redash_query_download.clidriver.main()
+
+if __name__ == '__main__':
+    sys.exit(main())

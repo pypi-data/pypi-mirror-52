@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/rqd
+redash_query_download/__init__.py
+redash_query_download/clidriver.py
+redash_query_download.egg-info/PKG-INFO
+redash_query_download.egg-info/SOURCES.txt
+redash_query_download.egg-info/dependency_links.txt
+redash_query_download.egg-info/top_level.txt
