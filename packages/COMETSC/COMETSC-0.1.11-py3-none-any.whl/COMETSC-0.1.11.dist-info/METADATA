@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: COMETSC
+Version: 0.1.11
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: adjustText (==0.7.3)
+Requires-Dist: atomicwrites (==1.1.5)
+Requires-Dist: attrs (==18.1.0)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: Cython (==0.28.4)
+Requires-Dist: decorator (==4.3.0)
+Requires-Dist: future (==0.16.0)
+Requires-Dist: idna (==2.7)
+Requires-Dist: ipython-genutils (==0.2.0)
+Requires-Dist: jsonschema (==2.6.0)
+Requires-Dist: jupyter-core (==4.4.0)
+Requires-Dist: kiwisolver (==1.0.1)
+Requires-Dist: matplotlib (==3.0.0)
+Requires-Dist: more-itertools (==4.2.0)
+Requires-Dist: nbformat (==4.4.0)
+Requires-Dist: numpy (==1.14.5)
+Requires-Dist: pandas (==0.23.3)
+Requires-Dist: plotly (==2.7.0)
+Requires-Dist: pluggy (==0.6.0)
+Requires-Dist: py (==1.5.4)
+Requires-Dist: pyparsing (==2.2.0)
+Requires-Dist: pytest (==3.6.3)
+Requires-Dist: python-dateutil (==2.7.3)
+Requires-Dist: pytz (==2018.5)
+Requires-Dist: requests (==2.20.1)
+Requires-Dist: scipy (==1.1.0)
+Requires-Dist: scikit-learn (==0.21.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: traitlets (==4.3.2)
+Requires-Dist: urllib3 (==1.24.3)
+Requires-Dist: xlmhg (==2.4.9)
+
+# COMET: Identifying candidate marker panels from single-cell transcriptomic data.
+
+[![Documentation Status](https://readthedocs.org/projects/hgmd/badge/?version=latest)](https://hgmd.readthedocs.io/en/latest/?badge=latest)
+
+## Installation and Usage
+  Check out the [COMET documentation](https://hgmd.readthedocs.io/en/latest/)!
+
+## About us
+
+  Maintained & Actively Developed by Conor Delaney (cdelaney@bcb.dfci.harvard.edu).
+
+  Prototyped by Aaron Yao-Smith (aty25@cornell.edu).
+
+  Uses the [XL-mHG](https://github.com/flo-compbio/xlmhg) test, created by Florian Wagner.
+
+
