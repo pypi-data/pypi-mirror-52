@@ -1,0 +1,108 @@
+from .atmosphere import Atmosphere
+
+from scientpyfic.API import API
+
+class EarthScience:
+
+  """
+  For more information check the official documentation:
+    https://github.com/monzita/scientpyfic/wiki/Environment.py
+  """ 
+  def __init__(self, url, title, description, pub_date, body, journals):
+    self._url = url
+    self._title = title
+    self._description = description
+    self._pub_date = pub_date
+    self._body = body
+    self._journals = journals
+
+    self.atmosphere = Atmosphere(url, title, description, pub_date, body, journals)
+
+  def geography(self, title=None, description=None, pub_date=None, body=None, journals=None, **kwargs):
+    """
+    Returns a list with latest news from ScienceDaily about earth geography.
+    """
+    options = {
+      'title': title if not title is None else self._title,
+      'description': description if not description is None else self._description,
+      'pub_date': pub_date if not pub_date is None else self._pub_date,
+      'body': body if not body is None else self._body,
+      'journals': journals if not journals is None else self._journals
+    }
+
+    url = "{}/geography.xml".format(self._url)
+    result = API.get(url, name='Geography', **options, **kwargs)
+
+    return result
+
+
+  def earth_science(self, title=None, description=None, pub_date=None, body=None, journals=None, **kwargs):
+    """
+    Returns a list with latest news from ScienceDaily about earth science.
+    """
+    options = {
+      'title': title if not title is None else self._title,
+      'description': description if not description is None else self._description,
+      'pub_date': pub_date if not pub_date is None else self._pub_date,
+      'body': body if not body is None else self._body,
+      'journals': journals if not journals is None else self._journals
+    }
+
+    url = "{}/earth_science.xml".format(self._url)
+    result = API.get(url, name='EarthScience', **options, **kwargs)
+
+    return result
+
+
+  def geochemistry(self, title=None, description=None, pub_date=None, body=None, journals=None, **kwargs):
+    """
+    Returns a list with latest news from ScienceDaily about geochemistry.
+    """
+    options = {
+      'title': title if not title is None else self._title,
+      'description': description if not description is None else self._description,
+      'pub_date': pub_date if not pub_date is None else self._pub_date,
+      'body': body if not body is None else self._body,
+      'journals': journals if not journals is None else self._journals
+    }
+
+    url = "{}/chemistry.xml".format(self._url)
+    result = API.get(url, name='Geochemistry', **options, **kwargs)
+
+    return result
+
+
+  def geology(self, title=None, description=None, pub_date=None, body=None, journals=None, **kwargs):
+    """
+    Returns a list with latest news from ScienceDaily about geology.
+    """
+    options = {
+      'title': title if not title is None else self._title,
+      'description': description if not description is None else self._description,
+      'pub_date': pub_date if not pub_date is None else self._pub_date,
+      'body': body if not body is None else self._body,
+      'journals': journals if not journals is None else self._journals
+    }
+
+    url = "{}/geology.xml".format(self._url)
+    result = API.get(url, name='Geology', **options, **kwargs)
+
+    return result
+
+
+  def oceanography(self, title=None, description=None, pub_date=None, body=None, journals=None, **kwargs):
+    """
+    Returns a list with latest news from ScienceDaily about oceanography.
+    """
+    options = {
+      'title': title if not title is None else self._title,
+      'description': description if not description is None else self._description,
+      'pub_date': pub_date if not pub_date is None else self._pub_date,
+      'body': body if not body is None else self._body,
+      'journals': journals if not journals is None else self._journals
+    }
+
+    url = "{}/oceanography.xml".format(self._url)
+    result = API.get(url, name='Oceanography', **options, **kwargs)
+
+    return result
