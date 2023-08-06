@@ -1,0 +1,14 @@
+gdascore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdascore/cli.py,sha256=hh8sWUQMsqh7hjSXCdrxsgAUG68HLHH6yh90GEIA6ig,5328
+gdascore/gdaScore.py,sha256=SSlH-MVdBTxONKAKxYUyyhRGgqnT_aQGkMapCyb2bcQ,58286
+gdascore/gdaUtilities.py,sha256=O1ZAroLJvdwjjvog5_X1zrvBrG16jWtaQHukJlrAH-Q,20678
+gdascore/sampleConfig.py,sha256=9zMzqNMShQAxXDnU0eM-OyOXBiTWhOcr7UMTPoD9Jlk,319
+gdascore/global_config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdascore/global_config/config_var.json,sha256=RBNvo1WzZ4oRRq0W9-hknpT7T8If536DEMBg9hyq_4o,2
+gdascore/global_config/master.json,sha256=rfL9Rl3f1QNqQLieU133Ly-wMHsE09hRMHGaxvmvOg8,6104
+gda_score_code-2.2.1.dist-info/LICENSE,sha256=-5_qMk4xS1wDCVM78JMCe2MwpIJq2XRfvC98QjyUCyU,1066
+gda_score_code-2.2.1.dist-info/METADATA,sha256=jo85lXvyWmKu-whJvDg8_cKpcs3LCNQe1IY766mGxk8,2077
+gda_score_code-2.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gda_score_code-2.2.1.dist-info/entry_points.txt,sha256=oibKTBlWKiz2Q1PNy9zlPidWq1-EBkWOzxDBS6laCgI,53
+gda_score_code-2.2.1.dist-info/top_level.txt,sha256=3x5xwEHpA83oqHvod_GfVFQIXkhiNSOB8m3L9PMOnYg,9
+gda_score_code-2.2.1.dist-info/RECORD,,
