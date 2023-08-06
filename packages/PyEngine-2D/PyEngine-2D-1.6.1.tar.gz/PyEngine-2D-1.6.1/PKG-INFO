@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: PyEngine-2D
+Version: 1.6.1
+Summary: A lib to create 2D games
+Home-page: http://github.com/LavaPower/PyEngine
+Author: LavaPower
+Author-email: lavapower84@gmail.com
+License: UNKNOWN
+Description: ![PyEngine logo](Logo.png "PyEngine logo")
+        
+        # PyEngine
+        
+        A lib to build 2D Games.
+        
+        ## Dependencies
+        
+        - Python 3.5+
+        - PyGame
+        - NumPy
+        - PIL
+        - Pymunk
+        
+        ## Other information
+        
+        - Main Developer : LavaPower
+        - Contributors : X
+        - Develop on :
+          - System :
+            - Windows 10 (V 0.1.0-DEV --> Latest)
+          - Version of Python :
+            - 3.7.1 (V 0.1.0-DEV --> Latest)
+          - Library :
+            - PyGame 1.9.6 (V 0.1.0-DEV --> Latest)
+            - NumPy 1.16.2 (V 1.2.0 --> Latest)
+            - PIL 5.4.1 (V 1.5.0 --> Latest)
+            - Pymunk 5.5.0 (V 1.6.0 --> Latest)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
