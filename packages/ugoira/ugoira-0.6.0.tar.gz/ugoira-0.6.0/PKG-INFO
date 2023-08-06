@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ugoira
+Version: 0.6.0
+Summary: ugoira for download pixiv ugoira images
+License: MIT
+Author: Kim Jin Su
+Author-email: item4_hun@hotmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: apng
+Requires-Dist: Wand (>=0.5.7,<0.6.0)
+Requires-Dist: apng (>=0.3.3,<0.4.0); extra == "apng"
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: fake_useragent (>=0.1.11,<0.2.0)
