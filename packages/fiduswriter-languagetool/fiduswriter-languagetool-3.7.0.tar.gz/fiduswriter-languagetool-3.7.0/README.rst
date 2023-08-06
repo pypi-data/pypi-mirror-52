@@ -1,0 +1,32 @@
+========================
+FidusWriter-Languagetool
+========================
+
+FidusWriter-Languagetool is a Fidus writer plugin to connect a Fidus Writer instance
+with Languagetool (LT).
+
+
+Installation
+------------
+
+1. Install Fidus Writer with the command:
+
+    pip install fiduswriter[languagetool]
+
+2. Add "languagetool" to your INSTALLED_APPS setting in the configuration.py file
+   like this::
+
+    INSTALLED_APPS += (
+        ...
+        'languagetool',
+    )
+
+3. Add a setting for the URL where you will be running LT in the configuration.py file like this:
+
+    LT_URL = 'http://localhost:8081'
+
+4. Create the needed JavaScript files by running this::
+
+    fiduswriter setup
+
+5. (Re)start your Fidus Writer server.

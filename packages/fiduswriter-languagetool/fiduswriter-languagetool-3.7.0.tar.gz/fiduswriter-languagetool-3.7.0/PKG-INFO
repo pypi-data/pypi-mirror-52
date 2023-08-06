@@ -1,0 +1,52 @@
+Metadata-Version: 1.1
+Name: fiduswriter-languagetool
+Version: 3.7.0
+Summary: A Fidus Writer plugin to connect to Languagetool.
+Home-page: https://github.com/fiduswriter/fiduswriter-languagetool
+Author: Johannes Wilm
+Author-email: johannes@fiduswriter.org
+License: AGPL License
+Description: ========================
+        FidusWriter-Languagetool
+        ========================
+        
+        FidusWriter-Languagetool is a Fidus writer plugin to connect a Fidus Writer instance
+        with Languagetool (LT).
+        
+        
+        Installation
+        ------------
+        
+        1. Install Fidus Writer with the command:
+        
+            pip install fiduswriter[languagetool]
+        
+        2. Add "languagetool" to your INSTALLED_APPS setting in the configuration.py file
+           like this::
+        
+            INSTALLED_APPS += (
+                ...
+                'languagetool',
+            )
+        
+        3. Add a setting for the URL where you will be running LT in the configuration.py file like this:
+        
+            LT_URL = 'http://localhost:8081'
+        
+        4. Create the needed JavaScript files by running this::
+        
+            fiduswriter setup
+        
+        5. (Re)start your Fidus Writer server.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
