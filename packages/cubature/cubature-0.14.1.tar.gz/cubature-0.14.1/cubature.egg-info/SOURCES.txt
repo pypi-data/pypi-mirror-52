@@ -1,0 +1,14 @@
+README.rst
+setup.py
+cubature/__init__.py
+cubature/_cubature.c
+cubature/_test_integrands.c
+cubature/cubature.py
+cubature/get_ptr.c
+cubature.egg-info/PKG-INFO
+cubature.egg-info/SOURCES.txt
+cubature.egg-info/dependency_links.txt
+cubature.egg-info/requires.txt
+cubature.egg-info/top_level.txt
+cubature/cpackage/hcubature.c
+cubature/cpackage/pcubature.c
