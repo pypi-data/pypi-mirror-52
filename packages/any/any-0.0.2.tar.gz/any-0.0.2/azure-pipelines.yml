@@ -1,0 +1,43 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+strategy:
+  matrix:
+    # Python27:
+    #   python.version: '2.7'
+    # Python35:
+    #   python.version: '3.5'
+    Python36:
+      python.version: '3.6'
+    # Python37:
+    #   python.version: '3.7'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    # For now, we need a bleeding-edge ray
+    pip install https://s3-us-west-2.amazonaws.com/ray-wheels/master/5f5873b182a8dfe9f455ddfc64f0dd5d1d6f3b78/ray-0.8.0.dev4-cp36-cp36m-manylinux1_x86_64.whl
+    pip install -e .
+  displayName: 'Install dependencies and package'
+
+- script: |
+    pip install pytest pytest-azurepipelines
+    pytest
+  displayName: 'pytest'
+
+- script: |
+    any --help
+  displayName: 'cli'
