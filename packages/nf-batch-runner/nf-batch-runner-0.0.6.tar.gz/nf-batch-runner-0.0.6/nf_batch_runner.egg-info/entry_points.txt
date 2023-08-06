@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        nf-batch-runner=nf_batch_runner.cli:cli
+    
