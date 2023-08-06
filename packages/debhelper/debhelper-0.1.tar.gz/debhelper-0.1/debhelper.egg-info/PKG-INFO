@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: debhelper
+Version: 0.1
+Summary: Setup and manage deb repo easily.
+Home-page: https://github.com/tengu/debhelper
+Author: karasuyamatengu
+Author-email: karasuyamatengu@gmail.com
+License: LGPL
+Description: UNKNOWN
+Keywords: debian,package
+Platform: POSIX
