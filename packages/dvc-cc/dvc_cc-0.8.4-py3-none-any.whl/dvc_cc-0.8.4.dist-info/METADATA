@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: dvc-cc
+Version: 0.8.4
+Summary: This connector is used to combine the work of CC (www.curious-containers.cc) and DVC (Open-source Version Control System for Machine Learning Projects).
+Home-page: https://github.com/mastaer/dvc-cc.git
+License: AGPL-3.0
+Author: Jonas Annuscheit
+Author-email: annusch@htw-berlin.de
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: cc-faice (>=8.0,<9.0)
+Requires-Dist: dvc (>=0,<1)
+Requires-Dist: keyring (>=19.0,<20.0)
+Requires-Dist: matplotlib (>=3.1,<4.0)
+Requires-Dist: nbconvert (>=5.5,<6.0)
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: pandas (>=0,<1)
+Requires-Dist: paramiko (>=2.4,<3.0)
+Requires-Dist: pyrsistent (>=0.15.2,<0.16.0)
+Requires-Dist: python-gitlab (>=1.8,<2.0)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: seaborn (>=0,<1)
+Project-URL: Repository, https://github.com/mastaer/dvc-cc.git
+Description-Content-Type: text/markdown
+
+# The DVC-CC client
+In this subrepository the [DVC-CC](https://github.com/deep-projects/dvc-cc) client is defined. The client is needed to define hyper optimization and push your jobs to [Curious Containers CC](https://www.curious-containers.cc/).
+
+## Get started
+TODO
+
+### Overview
+TODO
+
+### Tutorials
+- [An old tutorial](https://github.com/deep-projects/dvc-cc/blob/master/dvc-cc/tutorial/SimpleStart.md)
+
+
+## Acknowledgements
+The DVC-CC software is developed at CBMI (HTW Berlin - University of Applied Sciences). The work is supported by the
+German Federal Ministry of Education and Research (project deep.TEACHING, grant number 01IS17056 and project
+deep.HEALTH, grant number 13FH770IX6).
