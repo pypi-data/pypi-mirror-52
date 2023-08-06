@@ -1,0 +1,12 @@
+README.md
+setup.py
+chinesevocablist/__init__.py
+chinesevocablist/models.py
+chinesevocablist/version.py
+chinesevocablist/vocab_list_data.py
+chinesevocablist.egg-info/PKG-INFO
+chinesevocablist.egg-info/SOURCES.txt
+chinesevocablist.egg-info/dependency_links.txt
+chinesevocablist.egg-info/not-zip-safe
+chinesevocablist.egg-info/requires.txt
+chinesevocablist.egg-info/top_level.txt
