@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: star-conf
+Version: 0.1.1
+Summary: Use Starlette's configuration as a standalone package
+Home-page: https://gitlab.com/reedrichards/star_conf
+Author: Robert Wendt
+Author-email: rwendt1337@gmail.com
+License: MIT license
+Keywords: star_conf
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+
+=========
+Star Conf
+=========
+
+
+.. image:: https://img.shields.io/pypi/v/star_conf.svg
+        :target: https://pypi.python.org/pypi/star_conf
+        :alt: pypi
+
+.. image:: https://gitlab.com/reedrichards/star_conf/badges/master/coverage.svg?job=coverage
+        :target: https://reedrichards.gitlab.io/star_conf/coverage/index.html
+        :alt: coverage
+
+.. image:: https://gitlab.com/reedrichards/star_conf/badges/master/pipeline.svg
+        :alt: pipeline
+
+.. image:: https://img.shields.io/pypi/l/star_conf.svg
+        :target: https://gitlab.com/reedrichards/star_conf/raw/master/LICENSE
+        :alt: PyPI - License
+
+.. image:: https://img.shields.io/pypi/dm/star_conf.svg
+        :alt: PyPI - Downloads
+
+.. image:: https://img.shields.io/pypi/pyversions/star_conf.svg
+        :alt: PyPI - Python Version
+
+.. image:: https://img.shields.io/pypi/status/star_conf.svg
+        :alt: PyPI - Status
+
+
+
+Use Starlette's configuration as a standalone package
+
+
+* Free software: BSD License
+* Documentation: https://reedrichards.gitlab.io/star_conf/index.html
+* Coverage: https://reedrichards.gitlab.io.gitlab.io/star_conf/coverage/index.html
+* Gitlab: https://gitlab.com/reedrichards/star_conf
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2019-09-23)
+------------------
+
+* First release on PyPI.
+
+
