@@ -1,0 +1,27 @@
+---
+
+environment: dev
+
+services:
+  portainer:
+    enabled: false
+    version: latest
+    ram: 512M
+    service_name: Portainer (Docker Webadmin)
+    service_url: http://{}
+
+aliases: {}
+
+proxy:
+  enabled: true
+  domain: localhost
+  http_port: 80
+  https_port: 443
+  version: 1.7.0
+
+project_name: ''
+
+subnet: ''
+
+uid:
+gid:

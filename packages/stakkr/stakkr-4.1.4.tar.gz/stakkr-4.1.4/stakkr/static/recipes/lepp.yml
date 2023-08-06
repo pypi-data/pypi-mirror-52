@@ -1,0 +1,49 @@
+config:
+  services:
+    adminer:
+      enabled: true
+    postgres:
+      enabled: true
+      version: latest
+      ram: 1024M
+      password: postgres
+    nginx:
+      enabled: true
+    php:
+      enabled: true
+      version: latest
+      ram: 1024M
+  proxy:
+    enabled: true
+    domain: localhost
+
+  aliases:
+    composer:
+      description: Run a PHP composer command
+      exec:
+        - container: php
+          user: www-data
+          args: [php, /home/www-data/bin/composer]
+
+services:
+  - databases
+  - php
+  - webservers
+
+commands:
+  Download composer:
+    container: php
+    user: www-data
+    args: [php, -r, "copy('https://getcomposer.org/download/1.8.0/composer.phar', '/home/www-data/bin/composer');"]
+  Set composer as executable:
+    container: php
+    user: www-data
+    args: [chmod, +x, /home/www-data/bin/composer]
+  Create a phpinfo in /var/www:
+    container: php
+    user: www-data
+    args: [php, -r, "file_put_contents('/var/www/index.php', '<?php phpinfo();');"]
+
+messages:
+- Your LEPP stack is ready (Nginx, PHP, Postgres)
+- Postgres user and password are "postgres / postgres". Server is "postgres".

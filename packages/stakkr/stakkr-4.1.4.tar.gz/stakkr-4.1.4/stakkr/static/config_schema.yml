@@ -1,0 +1,76 @@
+---
+
+"$schema": http://json-schema.org/draft-04/schema#
+type: object
+required:
+  - environment
+  - services
+  - proxy
+  - project_name
+  - uid
+  - gid
+  - subnet
+additionalProperties: false
+properties:
+  environment:
+    type: string
+    title: Environment, will be passed as env variable
+
+  services:
+    type: object
+    additionalProperties: false
+    properties:
+      portainer:
+        type: object
+        properties:
+          enabled: { type: boolean }
+          version: { type: [string, number] }
+          ram: { type: string }
+          name: { type: string }
+          service_name: { type: string }
+          service_url: { type: string }
+          blocked_ports: { type: array, items: { type: integer } }
+        required: [enabled, version, ram, service_name, service_url]
+
+
+  aliases:
+    type: object
+    additionalProperties:
+      type: object
+      required: [description, exec]
+      properties:
+        description: { type: string }
+        exec:
+          type: array
+          items:
+            type: object
+            required: [container, args]
+            properties:
+              container: { type: string }
+              user: { type: string }
+              args:
+                type: array
+                title: Command itself split in parts
+                items: { type: [string, number] }
+
+  proxy:
+    type: object
+    properties:
+      enabled: { type: boolean }
+      domain: { type: string }
+      http_port: { type: integer }
+      https_port: { type: integer }
+      version: { type: [string, number] }
+    required: [enabled, domain, http_port, https_port, version]
+
+  project_name:
+    type: string
+    title: Project name, must be the same name as root dir. Detected by default
+
+  uid:
+    title: Detected, by default uid of current user
+  gid:
+    title: Detected, by default gid of current user
+
+  subnet:
+    type: string

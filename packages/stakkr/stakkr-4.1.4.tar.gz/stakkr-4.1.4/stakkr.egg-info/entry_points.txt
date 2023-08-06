@@ -1,0 +1,4 @@
+[console_scripts]
+stakkr=stakkr.cli:main
+stakkr-init=stakkr.setup:init
+stakkr-compose=stakkr.stakkr_compose:cli
