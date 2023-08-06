@@ -1,0 +1,14 @@
+jupyter_marvinjs/__init__.py,sha256=QNz3V8zabFYChLHWlpTHsaRZa1gmbsd1oqOKDc1KUbw,268
+jupyter_marvinjs/_version.py,sha256=mheJlsDon-2hPC_V5U75sDuwzFmOIy1mk0oGFlDbOeM,281
+jupyter_marvinjs/marvin.py,sha256=Zm01dmiMpH-L8ZCXcgHJC1Q9hH_keSqXR_1rnB7d0F0,1142
+jupyter_marvinjs/static/extension.js,sha256=fSD5oZjk4Bv72OAayT_sfybFbN_JggEBNxMtuQyNoec,3354
+jupyter_marvinjs/static/index.js,sha256=w8JLd8L6zliw9wFir_zM7DyC88fYilaHsjMslKcDcO0,548823
+jupyter_marvinjs/static/index.js.map,sha256=n__iTgLuqMXQM3gEGsHQfQezm1LnsL-UwsyOfMDfuz8,675675
+jupyter_marvinjs-0.1.1.data/data/etc/jupyter/nbconfig/notebook.d/jupyter-marvinjs.json,sha256=VGtqmSCWEVVtmxNp5zrOCiEpnvnDAI0sNJtm6nX7_k8,70
+jupyter_marvinjs-0.1.1.data/data/share/jupyter/nbextensions/jupyter-marvinjs/extension.js,sha256=fSD5oZjk4Bv72OAayT_sfybFbN_JggEBNxMtuQyNoec,3354
+jupyter_marvinjs-0.1.1.data/data/share/jupyter/nbextensions/jupyter-marvinjs/index.js,sha256=w8JLd8L6zliw9wFir_zM7DyC88fYilaHsjMslKcDcO0,548823
+jupyter_marvinjs-0.1.1.data/data/share/jupyter/nbextensions/jupyter-marvinjs/index.js.map,sha256=n__iTgLuqMXQM3gEGsHQfQezm1LnsL-UwsyOfMDfuz8,675675
+jupyter_marvinjs-0.1.1.dist-info/METADATA,sha256=tDlD4zX-zMVDw6TYLzUG689JpY5qwWPlXnmHQqQrtFY,647
+jupyter_marvinjs-0.1.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+jupyter_marvinjs-0.1.1.dist-info/top_level.txt,sha256=SbPTlp8OfXvjSat5igWadQ4E193goRl0svvEIofJUFk,17
+jupyter_marvinjs-0.1.1.dist-info/RECORD,,

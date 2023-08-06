@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jupyter-marvinjs
+Version: 0.1.1
+Summary: MarvinJS and CGRtools integration
+Home-page: https://github.com//jupyter-marvinjs
+Author: Ramil Nugmanov
+Author-email: stsouko@live.ru
+License: UNKNOWN
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ipywidgets (>=7.0.0)
+Requires-Dist: CGRtools (>=3.1)
+
+MarvinJS and CGRtools integration
+
+
