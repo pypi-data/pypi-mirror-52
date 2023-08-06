@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: GooeyDev
+Version: 1.0.3.2
+Summary: Gooey (made by Chris Kiehl) turns (almost) any command line program into a full GUI application with one line. This a custom release of the development branch (1.0.3) of gooey.
+Home-page: UNKNOWN
+Author: Thorsten Wagner
+Author-email: thorsten.wagner@mpi-dortmund.mpg.de
+License: MIT
+Description: 
+        
+        Gooey (Beta)
+        ############
+        
+        
+        This a custom release of the development branch (1.0.3) of gooey.
+        
+        _
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
