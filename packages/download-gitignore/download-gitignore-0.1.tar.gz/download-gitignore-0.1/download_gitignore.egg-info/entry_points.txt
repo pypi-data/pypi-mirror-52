@@ -1,0 +1,3 @@
+[console_scripts]
+dgi = download_gitignore.download_gitignore:download_gitignore
+
