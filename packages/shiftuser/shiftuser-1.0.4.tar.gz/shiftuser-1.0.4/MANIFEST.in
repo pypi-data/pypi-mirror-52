@@ -1,0 +1,3 @@
+recursive-include shiftuser/templates *
+
+global-exclude *.py[co]
