@@ -1,0 +1,13 @@
+README.md
+setup.py
+slize/__init__.py
+slize/crf_layer.py
+slize/demo.py
+slize/evaluate.py
+slize/model.py
+slize/train.py
+slize/utils.py
+slize.egg-info/PKG-INFO
+slize.egg-info/SOURCES.txt
+slize.egg-info/dependency_links.txt
+slize.egg-info/top_level.txt
