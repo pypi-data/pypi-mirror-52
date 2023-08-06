@@ -1,0 +1,14 @@
+jupyter_scdg_viewer_widget-0.1.0.data/data/etc/jupyter/nbconfig/notebook.d/scdg-viewer.json,sha256=XA2PKtOuOFHaLXAwEW9Gn-wS1IGJUZUJpXr0AETcdRI,70
+jupyter_scdg_viewer_widget-0.1.0.data/data/share/jupyter/nbextensions/scdg-viewer/extension.js,sha256=LCWGnaR2OvKMYB25r6T1WQfBRNJYsmQz55yr-VTPfg8,3364
+jupyter_scdg_viewer_widget-0.1.0.data/data/share/jupyter/nbextensions/scdg-viewer/index.js,sha256=5O8VUGouBGL6y-PlrMvBgNhwmn88KDuAZLOuV41i-tE,2404130
+jupyter_scdg_viewer_widget-0.1.0.data/data/share/jupyter/nbextensions/scdg-viewer/index.js.map,sha256=qq0iaxdPYtV8MbiXQFvB5hnefjcvmFi5Ow2ESypsmtE,2945082
+scdgviewer/__init__.py,sha256=nf5aK9VvtiMfN6k_btcRsrepehGiVHgS2UbNdH3HS9o,272
+scdgviewer/_version.py,sha256=ua2OhQmpPPkY_82vCRoTzC7w-3G-m-QYqq40HbT0BMU,284
+scdgviewer/scdgviewer.py,sha256=XNj0f_zevUO6-qMQuQZhIwNn1r32WyNkKijEnPcyvWo,3639
+scdgviewer/static/extension.js,sha256=LCWGnaR2OvKMYB25r6T1WQfBRNJYsmQz55yr-VTPfg8,3364
+scdgviewer/static/index.js,sha256=5O8VUGouBGL6y-PlrMvBgNhwmn88KDuAZLOuV41i-tE,2404130
+scdgviewer/static/index.js.map,sha256=qq0iaxdPYtV8MbiXQFvB5hnefjcvmFi5Ow2ESypsmtE,2945082
+jupyter_scdg_viewer_widget-0.1.0.dist-info/METADATA,sha256=1vT1DF7NzSqcv90w9fT0Du_cLvHTmmofzB1rsISLKf8,1689
+jupyter_scdg_viewer_widget-0.1.0.dist-info/WHEEL,sha256=53VSps8MltPLN_x9Ib61FU2ZSaJKzgrWQqu9rS-Dkgk,116
+jupyter_scdg_viewer_widget-0.1.0.dist-info/top_level.txt,sha256=rPKjP5cDQtsBqXCWcXHUaDWkdDP0hAe5gfVuX-IDWkU,11
+jupyter_scdg_viewer_widget-0.1.0.dist-info/RECORD,,
