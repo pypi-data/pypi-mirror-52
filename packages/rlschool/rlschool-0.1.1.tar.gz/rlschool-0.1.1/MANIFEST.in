@@ -1,0 +1,9 @@
+include *.txt
+include LICENSE
+recursive-include rlschool *.gif
+recursive-include rlschool *.ini
+recursive-include rlschool *.md
+recursive-include rlschool *.npy
+recursive-include rlschool *.png
+recursive-include rlschool *.py
+recursive-include rlschool *.zip
