@@ -1,0 +1,13 @@
+README.rst
+setup.py
+aioec/__init__.py
+aioec/client.py
+aioec/emote.py
+aioec/errors.py
+aioec/http.py
+aioec/utils.py
+aioec.egg-info/PKG-INFO
+aioec.egg-info/SOURCES.txt
+aioec.egg-info/dependency_links.txt
+aioec.egg-info/requires.txt
+aioec.egg-info/top_level.txt
