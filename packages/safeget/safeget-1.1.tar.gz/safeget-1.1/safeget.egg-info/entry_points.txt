@@ -1,0 +1,3 @@
+[console_scripts]
+safeget = safeget.safeget:main
+
