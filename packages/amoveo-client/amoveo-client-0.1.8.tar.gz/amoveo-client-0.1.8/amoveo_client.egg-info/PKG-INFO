@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: amoveo-client
+Version: 0.1.8
+Summary: amoveo python client
+Home-page: https://github.com/dmitry1981/amoveo-client
+Author: Dmitry Zhidkih
+Author-email: zhidkih.dmitry@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: amoveo veo
+Platform: UNKNOWN
+Requires-Python: >=3.6,<4
