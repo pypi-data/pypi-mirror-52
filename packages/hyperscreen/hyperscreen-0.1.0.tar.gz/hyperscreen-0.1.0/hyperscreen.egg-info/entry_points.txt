@@ -1,0 +1,3 @@
+[console_scripts]
+hyperscreen = hyperscreen.cli:main
+
