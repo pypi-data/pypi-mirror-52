@@ -1,0 +1,3 @@
+[console_scripts]
+dstack = dstack_tasks.main:program.run
+
