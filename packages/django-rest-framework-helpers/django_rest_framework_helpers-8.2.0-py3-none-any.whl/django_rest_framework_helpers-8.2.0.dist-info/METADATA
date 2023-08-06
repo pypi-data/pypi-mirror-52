@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: django-rest-framework-helpers
+Version: 8.2.0
+Summary: A collection of useful modules for Django Rest Framework
+Home-page: https://github.com/alexseitsinger/django-rest-framework-helpers
+Author: Alex Seitsinger
+Author-email: software@alexseitsinger.com
+License: BSD 2-Clause License
+Project-URL: Documentation, https://github.com/alexseitsinger/django-rest-framework-helpers
+Project-URL: Source, https://github.com/alexseitsinger/django-rest-framework-helpers
+Project-URL: Tracker, https://github.com/alexseitsinger/django-rest-framework-helpers/issues
+Keywords: django,djangorestframework,rest
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System
+Description-Content-Type: text/markdown
+Requires-Dist: Django (>=2.0)
+Requires-Dist: djangorestframework
+
+# Django Rest Framework Helpers
+
+## Description
+
+A collection of useful modules for Django Rest Framework.
+
+## Installation
+
+```python
+pip install django-rest-framework-helpers
+```
+
+
