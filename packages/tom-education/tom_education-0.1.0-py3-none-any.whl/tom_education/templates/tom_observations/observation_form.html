@@ -1,0 +1,22 @@
+{% extends 'tom_common/base.html' %}
+{% load bootstrap4 crispy_forms_tags static %}
+{% block title %}Submit Observation{% endblock %}
+{% block content %}
+<h2>&crarr;&nbsp;<a href="{% url 'tom_education:target_detail' target.pk %}">{{target.identifier}} - {{ target.name }}</a></h2>
+<h3>Submit an observation to {{ form.facility.value }}</h3>
+
+{% comment %}
+    For the LCO observation form, include JavaScript to filter 'filters'
+    dropdown based on the selected instrument #}
+{% endcomment %}
+{% if instrument_filters %}
+    <script type="application/json" id="instrument-filters-json">
+    {
+        "instrument_filters": {{ instrument_filters|safe }}
+    }
+    </script>
+    <script type='text/javascript' src='{% static 'tom_education/lco_instrument_filtering.js' %}'></script>
+{% endif %}
+
+{% crispy form %}
+{% endblock %}
