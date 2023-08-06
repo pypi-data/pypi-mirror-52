@@ -1,0 +1,14 @@
+README.md
+setup.py
+turoboro/__init__.py
+turoboro/common.py
+turoboro/constants.py
+turoboro/daily_rule.py
+turoboro/result.py
+turoboro/rules.py
+turoboro/weekly_rule.py
+turoboro.egg-info/PKG-INFO
+turoboro.egg-info/SOURCES.txt
+turoboro.egg-info/dependency_links.txt
+turoboro.egg-info/requires.txt
+turoboro.egg-info/top_level.txt
