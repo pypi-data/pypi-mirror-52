@@ -1,0 +1,70 @@
+MANIFEST.in
+setup.py
+manta_maastricht/AADClass_v2resized.png
+manta_maastricht/AADEvaluatorUI.py
+manta_maastricht/MANTA_icon.ico
+manta_maastricht/MANTA_icon.png
+manta_maastricht/MANTA_res1.png
+manta_maastricht/MatplotlibWidget5.py
+manta_maastricht/Qt5file.py
+manta_maastricht/Resource_rc5.py
+manta_maastricht/__init__.py
+manta_maastricht/__main__.py
+manta_maastricht/command_line.py
+manta_maastricht/manta_maastricht.py
+manta_maastricht.egg-info/PKG-INFO
+manta_maastricht.egg-info/SOURCES.txt
+manta_maastricht.egg-info/dependency_links.txt
+manta_maastricht.egg-info/entry_points.txt
+manta_maastricht.egg-info/not-zip-safe
+manta_maastricht.egg-info/requires.txt
+manta_maastricht.egg-info/top_level.txt
+manta_maastricht/AADs/=Custom=.txt
+manta_maastricht/AADs/Ajmaline.txt
+manta_maastricht/AADs/Ambasilide.txt
+manta_maastricht/AADs/Amiodarone(acute).txt
+manta_maastricht/AADs/Amiodarone(chronic).txt
+manta_maastricht/AADs/Bepridil.txt
+manta_maastricht/AADs/Caffeine.txt
+manta_maastricht/AADs/Cibenzoline.txt
+manta_maastricht/AADs/Digitalis.txt
+manta_maastricht/AADs/Diltiazem.txt
+manta_maastricht/AADs/Disopyramide.txt
+manta_maastricht/AADs/Dofetilide.txt
+manta_maastricht/AADs/Dronedarone.txt
+manta_maastricht/AADs/E-4031.txt
+manta_maastricht/AADs/Flecainide.txt
+manta_maastricht/AADs/Ibutilide.txt
+manta_maastricht/AADs/Lidocaine.txt
+manta_maastricht/AADs/Mexiletine.txt
+manta_maastricht/AADs/Niferidil.txt
+manta_maastricht/AADs/Nitrendipine.txt
+manta_maastricht/AADs/Phenytoin.txt
+manta_maastricht/AADs/Pilsicainide.txt
+manta_maastricht/AADs/Procainamide.txt
+manta_maastricht/AADs/Propafenone.txt
+manta_maastricht/AADs/Quinidine.txt
+manta_maastricht/AADs/Quinine.txt
+manta_maastricht/AADs/Ranolazine.txt
+manta_maastricht/AADs/Sotalol.txt
+manta_maastricht/AADs/Verapamil.txt
+manta_maastricht/AADs/Vernakalant.txt
+manta_maastricht/models/Canine LV Epi (Decker-2009).mmt
+manta_maastricht/models/Canine LV Epi (Heijman-2011).mmt
+manta_maastricht/models/Guinea Pig LV (Faber-Rudy-2000).mmt
+manta_maastricht/models/Guinea Pig LV (Luo-Rudy-1991).mmt
+manta_maastricht/models/Human LV (Passini-2016).mmt
+manta_maastricht/models/Human LV Endo (O'Hara-2011).mmt
+manta_maastricht/models/Human LV Epi (O'Hara-2011).mmt
+manta_maastricht/models/Human LV HCM (Passini-2016).mmt
+manta_maastricht/models/Human LV HF (Passini-2016).mmt
+manta_maastricht/models/Human LV Mid (O'Hara-2011).mmt
+manta_maastricht/models/Human Purkinje (Sampson-2010).mmt
+manta_maastricht/models/Human Purkinje (Stewart-2009).mmt
+manta_maastricht/models/Human RA (Courtemanche-1998).mmt
+manta_maastricht/models/Human RA (Schmidt-2015).mmt
+manta_maastricht/models/Human RA cAF (Courtemanche-1998).mmt
+manta_maastricht/models/Human RA cAF (Schmidt-2015).mmt
+manta_maastricht/models/Human iPSC-CM (Kernik-2019).mmt
+manta_maastricht/models/Mouse LV (Bondarenko-2004).mmt
+manta_maastricht/models/Rabbit LV (Mahajan-2008).mmt
