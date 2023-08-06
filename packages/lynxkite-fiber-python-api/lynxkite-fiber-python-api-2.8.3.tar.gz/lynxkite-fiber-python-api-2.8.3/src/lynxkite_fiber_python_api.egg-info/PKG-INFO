@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lynxkite-fiber-python-api
+Version: 2.8.3
+Summary: Python API for LynxKite
+Home-page: https://lynxkite.com/
+Author: Lynx Analytics
+Author-email: lynxkite@lynxanalytics.com
+License: UNKNOWN
+Description: # LynxKite Python API
+        
+        This is the official Python client API for [LynxKite](https://lynxkite.com/) from Lynx Analytics.
+        See the LynxKite documentation for usage instructions.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
