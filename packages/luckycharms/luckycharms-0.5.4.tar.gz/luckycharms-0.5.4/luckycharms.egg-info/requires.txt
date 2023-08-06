@@ -1,0 +1,5 @@
+Flask
+marshmallow==3.1.1
+
+[proto]
+protobuf
