@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: tsconv
+Version: 0.0.4
+Summary: Convert unix timestamp in sec/millisec/microsec/nanosec to human readable time
+Home-page: https://github.com/guoxiaoyong/tsconv
+Author: Xiaoyong Guo
+Author-email: guo.xiaoyong@gmail.com
+License: UNKNOWN
+Description: Convert unix timestamp in sec/millisec/microsec/nanosec to human readable time
+Platform: UNKNOWN
