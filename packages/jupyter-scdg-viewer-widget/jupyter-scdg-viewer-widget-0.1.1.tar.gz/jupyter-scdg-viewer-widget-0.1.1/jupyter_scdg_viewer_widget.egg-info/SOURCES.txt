@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+scdg-viewer.json
+setup.cfg
+setup.py
+jupyter_scdg_viewer_widget.egg-info/PKG-INFO
+jupyter_scdg_viewer_widget.egg-info/SOURCES.txt
+jupyter_scdg_viewer_widget.egg-info/dependency_links.txt
+jupyter_scdg_viewer_widget.egg-info/not-zip-safe
+jupyter_scdg_viewer_widget.egg-info/requires.txt
+jupyter_scdg_viewer_widget.egg-info/top_level.txt
+scdgviewer/__init__.py
+scdgviewer/_version.py
+scdgviewer/scdgviewer.py
+scdgviewer/static/extension.js
+scdgviewer/static/index.js
+scdgviewer/static/index.js.map
