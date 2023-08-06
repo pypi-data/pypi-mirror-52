@@ -1,0 +1,4 @@
+[console_scripts]
+biswebpy = biswebpython.biswebpy:main
+biswebpython = biswebpython.biswebpy:main
+
