@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+EveDiscordBot.egg-info/PKG-INFO
+EveDiscordBot.egg-info/SOURCES.txt
+EveDiscordBot.egg-info/dependency_links.txt
+EveDiscordBot.egg-info/requires.txt
+EveDiscordBot.egg-info/top_level.txt
+evediscordbot/RiotRequests.py
+evediscordbot/__init__.py
+evediscordbot/dbCalls.py
+evediscordbot/thotBot.py

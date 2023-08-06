@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: EveDiscordBot
+Version: 0.1.1
+Summary: Discord bot for administration
+Home-page: UNKNOWN
+Author: Matthew Blackman
+Author-email: M.blackman18@yahoo.com
+License: MIT
+Description: 
+        # Thot Bot
+        
+        Eve Administrative bot
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
