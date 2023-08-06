@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: aeroframe
+Version: 0.0.1
+Summary: Framework for aeroelastic analyses
+Home-page: UNKNOWN
+Author: Aaron Dettmann
+Author-email: dettmann@kth.se
+License: Apache License 2.0
+Description: Framework for aeroelastic analyses
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.6.0
