@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: thonny-esp
+Version: 0.2
+Summary: ESP8266 and ESP32 MicroPython support for Thonny IDE
+Home-page: https://github.com/thonny/thonny-esp/
+Author: Aivar Annamaa
+Author-email: aivar.annamaa@gmail.com
+License: MIT
+Keywords: IDE education programming ESP8266 ESP32 MicroPython Thonny
+Platform: Windows
+Platform: macOS
+Platform: Linux
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: Freeware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Education
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires-Python: >=3.5
+Requires-Dist: thonny (<3.2.2,>=3.0.0b1)
+Requires-Dist: esptool (>=2.0)
+
+Plug-in for Thonny IDE which adds ESP8266 and ESP32 MicroPython backends. 
+
+More info: 
+
+* https://github.com/thonny/thonny-esp
+* https://github.com/thonny/thonny/wiki/MicroPython
+* https://thonny.org
+
+NB! This plug-in is only relevant for Thonny up to 3.2.1. 
+Since 3.2.2 this functionality is included in the main package.
+
+
