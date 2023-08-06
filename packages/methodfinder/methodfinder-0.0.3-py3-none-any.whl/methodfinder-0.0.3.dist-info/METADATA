@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: methodfinder
+Version: 0.0.3
+Summary: For when you know some procedure must already exist, and you want to quickly find its name
+Home-page: https://github.com/billsix/methodfinder
+Author: William Emerison Six
+Author-email: billsix@gmail.com
+License: MIT
+Keywords: methodfinder
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+
+
+For when you know some procedure must already exist, and you want to quickly find its name.  Inspired from Smalltalk 80.
+
+
