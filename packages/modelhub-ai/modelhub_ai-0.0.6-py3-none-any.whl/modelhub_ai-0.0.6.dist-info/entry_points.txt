@@ -1,0 +1,6 @@
+[console_scripts]
+modelhub = modelhub.start:main
+modelhub-ai = modelhub.start:main
+modelhub-list = modelhub.start:list_online_models
+modelhub-run = modelhub.start:main
+
