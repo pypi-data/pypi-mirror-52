@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/kivy_garden.qrcode.egg-info/PKG-INFO
+src/kivy_garden.qrcode.egg-info/SOURCES.txt
+src/kivy_garden.qrcode.egg-info/dependency_links.txt
+src/kivy_garden.qrcode.egg-info/requires.txt
+src/kivy_garden.qrcode.egg-info/top_level.txt
+src/kivy_garden/qrcode/__init__.py
+src/kivy_garden/qrcode/qrcode_widget.kv
+src/kivy_garden/qrcode/qrcode_widget.py
+src/kivy_garden/qrcode/version.py
