@@ -1,0 +1,3 @@
+[console_scripts]
+quetzal-client = quetzal.client.cli.main:cli
+

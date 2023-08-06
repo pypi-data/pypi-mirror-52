@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: quetzal-client
+Version: 0.3.1
+Summary: Python client and helpers to the Quetzal API
+Home-page: https://github.com/quetz-al/quetzal-client
+Author: David Ojeda
+Author-email: support@quetz.al
+License: BSD-3-Clause
+Project-URL: Documentation, https://quetzal-client.readthedocs.io
+Project-URL: Code, https://github.com/quetz-al/quetzal-client
+Project-URL: Issue tracker, https://github.com/quetz-al/quetzal-client/issues
+Description: quetzal-client
+        ==============
+        
+        A Python package that provides a layer on top of quetzal-openapi-client for
+        easier usage of the [Quetzal API](https://quetz.al).
+        
+Keywords: OpenAPI,Quetzal API
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: System :: Archiving
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
