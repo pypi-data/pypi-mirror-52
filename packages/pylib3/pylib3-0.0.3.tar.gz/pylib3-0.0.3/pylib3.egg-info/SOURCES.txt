@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pylib3/PYLIB3_VERSION
+pylib3/__init__.py
+pylib3/__init__.pyc
+pylib3.egg-info/PKG-INFO
+pylib3.egg-info/SOURCES.txt
+pylib3.egg-info/dependency_links.txt
+pylib3.egg-info/requires.txt
+pylib3.egg-info/top_level.txt
+pylib3/__pycache__/__init__.cpython-37.pyc
