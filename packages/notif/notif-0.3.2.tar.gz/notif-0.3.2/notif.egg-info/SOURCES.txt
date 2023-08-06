@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+notif/__init__.py
+notif/fail_decorator.py
+notif/notificator.py
+notif/version.py
+notif.egg-info/PKG-INFO
+notif.egg-info/SOURCES.txt
+notif.egg-info/dependency_links.txt
+notif.egg-info/top_level.txt
