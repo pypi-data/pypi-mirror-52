@@ -1,0 +1,62 @@
+Metadata-Version: 1.1
+Name: django_saml2_auth_metadata_inline
+Version: 0.0.8
+Summary: Inline metadata plugin for django-saml2-auth
+Home-page: https://github.com/ambsw/django-saml2-auth-metadata-inline
+Author: Clayton Daley
+Author-email: technology+saml2_metadata_plugin@gmail.com
+License: Apache 2.0
+Description: # django-saml2-auth-metadata-inline
+        A plugin to support inline metadata configuration in django-saml2-auth
+        
+        # Introduction
+        
+        By default, django-saml2-auth only supports metadata from a local file or a remote URL.  The underlying library supports
+        "inline" metadata i.e. a string in the settings file.  This makes it possible to follow the [12factor]() 
+        methodology because an environment variable can be used to provide this "inline" data.
+        
+        # Example
+        
+        In settings.py:
+        
+            INSTALLED_APPS += (
+                ...
+                'django_saml2_auth',
+                # ensure the plugin is loaded
+                'django_saml2_auth_metadata_inline',
+                ...
+            )
+            
+            
+            
+            # this is the "usual" config object from django-saml2-auth
+            SAML2_AUTH = {
+                'DEFAULT_NEXT_URL': '/',
+                'PLUGINS': {
+                    # use this package in lieu of DEFAULT metadata plugin (or list both) 
+                    'METADATA': ['INLINE'],
+                }
+                # plugin looks for configuraiton here
+                'METADATA_XML_STRING':  os.environ.get('SAML_CONFIG')
+            }
+        
+Keywords: Django SAML2 Plugin for Inline Metadata
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Framework :: Django :: 1.5
+Classifier: Framework :: Django :: 1.6
+Classifier: Framework :: Django :: 1.7
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
