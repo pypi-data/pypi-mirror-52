@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pysaj
+Version: 0.0.1
+Summary: Library to communicate with SAJ inverters
+Home-page: https://github.com/fredericvl/pysaj
+Author: fredericvl
+Author-email: frederic.van.linthoudt@gmail.com
+License: UNKNOWN
+Description: # PySAJ
+        
+        Library to communicate with SAJ solar inverters.
+        
+        ```
+        client = PySAJ('192.168.1.5')
+        client.getData()
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
