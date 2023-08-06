@@ -1,0 +1,13 @@
+README.md
+setup.py
+findMin.egg-info/PKG-INFO
+findMin.egg-info/SOURCES.txt
+findMin.egg-info/dependency_links.txt
+findMin.egg-info/top_level.txt
+find_min/__init__.py
+find_min/find_min.py
+find_min/sample/__init__.py
+find_min/sample/sample_file.py
+find_min/sample/samples.py
+find_min/tests/__init__.py
+find_min/tests/test_find_min.py
