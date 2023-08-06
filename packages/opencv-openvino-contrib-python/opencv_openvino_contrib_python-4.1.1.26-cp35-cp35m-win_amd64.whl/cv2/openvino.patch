@@ -1,0 +1,114 @@
+Index: inference-engine/thirdparty/clDNN/kernel_selector/core/common/primitive_db.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- inference-engine/thirdparty/clDNN/kernel_selector/core/common/primitive_db.cpp	(date 1558981112000)
++++ inference-engine/thirdparty/clDNN/kernel_selector/core/common/primitive_db.cpp	(date 1567638505079)
+@@ -16,6 +16,7 @@
+ #include "primitive_db.h"
+ #include <assert.h>
+ #include <algorithm>
++#include <stdexcept>
+ 
+ #ifndef NDEBUG
+ #include <fstream>
+Index: inference-engine/thirdparty/mkl-dnn/src/cpu/jit_uni_bin_conv_kernel.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- inference-engine/thirdparty/mkl-dnn/src/cpu/jit_uni_bin_conv_kernel.cpp	(date 1558981112000)
++++ inference-engine/thirdparty/mkl-dnn/src/cpu/jit_uni_bin_conv_kernel.cpp	(date 1567638505077)
+@@ -339,12 +339,14 @@
+         kmovw(ktail_mask, reg_tmp_32);
+     }
+ 
++    std::vector<int> kw_padding_vector(ur_w);
++
+     const auto &p = attr_.post_ops_;
+     for (int r = 0; r < repeats; r++) {
+         int tail_size = isa == sse42 ? nstl::min(jcp.oc_block / 2, oc_step - r * jcp.oc_block / 2) : oc_step;
+         bool is_scalar_store = isa == sse42 ? tail_size < jcp.oc_block / 2 : tail_size < jcp.oc_block;
+ 
+-        int kw_padding[ur_w];
++        auto kw_padding = kw_padding_vector.data();
+         if (jcp.exclude_pad) {
+             mov(reg_tmp_32, jcp.ic);
+             imul(reg_tmp_32,  ptr[param1 + GET_OFF(kh_padding)]);
+Index: inference-engine/CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- inference-engine/CMakeLists.txt	(date 1558981112000)
++++ inference-engine/CMakeLists.txt	(date 1567638576892)
+@@ -128,7 +128,7 @@
+ message (STATUS "CMAKE_GENERATOR ....................... " ${CMAKE_GENERATOR})
+ message (STATUS "CMAKE_C_COMPILER_ID ................... " ${CMAKE_C_COMPILER_ID})
+ 
+-include(sdl)
++#include(sdl)
+ 
+ set (CMAKE_POSITION_INDEPENDENT_CODE ON)
+ 
+@@ -139,7 +139,7 @@
+ include(cpplint)
+ 
+ add_subdirectory(src)
+-add_subdirectory(tests)
++#add_subdirectory(tests)
+ add_subdirectory(thirdparty)
+ set(InferenceEngine_DIR "${CMAKE_BINARY_DIR}")
+ 
+Index: inference-engine/thirdparty/mkl-dnn/src/cpu/jit_uni_planar_convolution.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- inference-engine/thirdparty/mkl-dnn/src/cpu/jit_uni_planar_convolution.cpp	(date 1558981112000)
++++ inference-engine/thirdparty/mkl-dnn/src/cpu/jit_uni_planar_convolution.cpp	(date 1567638505080)
+@@ -60,7 +60,8 @@
+     const auto &jcp = kernel_->jcp;
+     const int MB = pd()->MB();
+ 
+-    int od_indexes[jcp.od];
++    std::vector<int> od_indexes_vector(jcp.od);
++    auto od_indexes = od_indexes_vector.data();
+ 
+     int idx = 0;
+     for (int i = 0; i < (jcp.dilate_d + 1); i++) {
+Index: inference-engine/thirdparty/mkldnn.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- inference-engine/thirdparty/mkldnn.cmake	(date 1558981112000)
++++ inference-engine/thirdparty/mkldnn.cmake	(date 1567638505078)
+@@ -106,6 +106,10 @@
+         ${CMAKE_BINARY_DIR}/include/
+ )
+ 
++if(MSVC)
++    set_source_files_properties(${MKLDNN_ROOT}/src/cpu/cpu_memory.cpp PROPERTIES COMPILE_FLAGS "$<$<CONFIG:Debug>:/bigobj>")
++    set_source_files_properties(${MKLDNN_ROOT}/src/cpu/cpu_reorder.cpp PROPERTIES COMPILE_FLAGS "$<$<CONFIG:Debug>:/bigobj>")
++endif()
+ if(WIN32)
+     add_definitions(-D_WIN)
+     add_definitions(-DNOMINMAX)
+Index: inference-engine/src/mkldnn_plugin/mkldnn_node.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- inference-engine/src/mkldnn_plugin/mkldnn_node.cpp	(date 1558981112000)
++++ inference-engine/src/mkldnn_plugin/mkldnn_node.cpp	(date 1567638505078)
+@@ -609,7 +609,7 @@
+                 Engine::GetWeightsSharing().findOrCreate(string_hash, [&] () {
+                     MKLDNNMemoryPtr _ptr = MKLDNNMemoryPtr(new MKLDNNMemory(engine));
+                     _ptr->Create(intDescs[i]);
+-                    MKLDNNMemory memory(engine);
++                    MKLDNNMemory memory{engine};
+ 
+                     auto newDesc = MKLDNNMemoryDesc(internalBlob->getTensorDesc());
+                     auto newFormat = newDesc.getFormat();
