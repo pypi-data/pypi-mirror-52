@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: bullet_journal
+Version: 0.7
+Summary: Toolkit to make bullet journaling simple and easy
+Home-page: https://github.com/pinxiu/bullet_journal
+Author: Pinxiu Gong
+Author-email: pinxiu.gong@gmail.com
+License: MIT
+Download-URL: https://github.com/pinxiu/bullet_journal/archive/v_06.tar.gz
+Description: UNKNOWN
+Keywords: bullet,journal,toolkit,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
