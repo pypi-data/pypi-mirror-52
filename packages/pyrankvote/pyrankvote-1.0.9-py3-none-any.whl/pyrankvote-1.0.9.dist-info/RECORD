@@ -1,0 +1,10 @@
+pyrankvote/__init__.py,sha256=fxUWtdeFlJpmjnpgDimlQOXIGMp77z8Ty4P4Rq4pM0M,389
+pyrankvote/helpers.py,sha256=EljinhEBxN6FkgCbr2qHtltE25SIfP5CvYlBLE845YQ,13320
+pyrankvote/models.py,sha256=Kcrm3uhMKNkVpT1x1u4OSUf6KdAY2tQq5czAjE4htt4,2159
+pyrankvote/multiple_seat_ranking_methods.py,sha256=KR8vmQkRgkmR_WPpC-YF0OY6BfQZ-aANP9J_Ts_2TyQ,5874
+pyrankvote/single_seat_ranking_methods.py,sha256=f4FhhfDH1iTsHml_ZghnXrrlU9fyPh7G58H7aYjcrvc,1692
+pyrankvote/test_helpers.py,sha256=BHGvcv5erh2bQEZ-qHseCNi6GyPF13Q7JFwEx94a4pk,607
+pyrankvote-1.0.9.dist-info/METADATA,sha256=zY38MYs7KJDXJ8CWIgr2phMXuIeUhoffdKEi4ZMvdtY,6947
+pyrankvote-1.0.9.dist-info/RECORD,,
+pyrankvote-1.0.9.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyrankvote-1.0.9.dist-info/top_level.txt,sha256=AAiR7j1IvSQSegK9BdiKGzqvh_yjGjiwcwcWi3WbNqA,11
