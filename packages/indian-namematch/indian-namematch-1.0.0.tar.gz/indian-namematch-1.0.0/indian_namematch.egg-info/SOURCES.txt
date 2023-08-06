@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+indian_namematch/pack_admin.py
+indian_namematch/pack_preprocess.py
+indian_namematch/pack_utils_namematching.py
+indian_namematch.egg-info/PKG-INFO
+indian_namematch.egg-info/SOURCES.txt
+indian_namematch.egg-info/dependency_links.txt
+indian_namematch.egg-info/requires.txt
+indian_namematch.egg-info/top_level.txt
