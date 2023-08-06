@@ -1,0 +1,56 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.poetry]
+name = "aiographql-client"
+packages = [
+    { include = "aiographql" }
+]
+version = "0.4.0-alpha.0"
+description = "An asyncio GraphQL client built on top of aiohttp and graphql-core-next"
+authors = [
+    "Twyla Engineering <software@twyla.ai>"
+]
+license = "MIT"
+
+readme = "README.md"
+
+repository = "https://github.com/twyla-ai/aiographql-client"
+
+keywords = []
+
+classifiers = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cafeteria-asyncio = "^0.1.0"
+aiohttp = "^3.5"
+graphql-core = {version="^3.0.0a2", allows-prereleases = true }
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^1.17"
+flake8 = "^3.7"
+coverage = "^4.5"
+black = "^19.3b0"
+tox = "^3.13"
+pytest = "^5.0"
+pytest-asyncio = "^0.10.0"
+pytest-cov = "^2.7"
