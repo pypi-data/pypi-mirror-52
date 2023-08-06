@@ -1,0 +1,12 @@
+.gitignore
+LICENSE.txt
+README.rst
+setup.py
+LICENSES/ipython_memory_usage.txt
+ipython_memwatcher/__init__.py
+ipython_memwatcher/memwatcher.py
+ipython_memwatcher.egg-info/PKG-INFO
+ipython_memwatcher.egg-info/SOURCES.txt
+ipython_memwatcher.egg-info/dependency_links.txt
+ipython_memwatcher.egg-info/requires.txt
+ipython_memwatcher.egg-info/top_level.txt
