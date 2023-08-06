@@ -1,0 +1,7 @@
+include LICENSE.MIT
+include MANIFEST.in
+include README.*
+include pkg/*
+include setup.*
+recursive-include anyconfig_bson_backend *.py
+recursive-include tests *.py *.bson *.bats
