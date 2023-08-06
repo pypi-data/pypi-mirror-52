@@ -1,0 +1,14 @@
+README.md
+setup.py
+WordToVec/__init__.py
+WordToVec/abstractModel.py
+WordToVec/abstractVectorizer.py
+WordToVec/anyClassifier.py
+WordToVec/doc_to_vec.py
+WordToVec/logisticRegression.py
+WordToVec/tf_idf.py
+WordToVec/word_to_vec.py
+text_classification_prova_alessandro_artoni.egg-info/PKG-INFO
+text_classification_prova_alessandro_artoni.egg-info/SOURCES.txt
+text_classification_prova_alessandro_artoni.egg-info/dependency_links.txt
+text_classification_prova_alessandro_artoni.egg-info/top_level.txt
