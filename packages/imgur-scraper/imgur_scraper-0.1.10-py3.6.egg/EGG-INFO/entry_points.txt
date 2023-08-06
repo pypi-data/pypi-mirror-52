@@ -1,0 +1,3 @@
+[console_scripts]
+imgur-scraper = imgur_scraper.imgur_scraper:main
+
