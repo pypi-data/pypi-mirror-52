@@ -1,0 +1,14 @@
+scipy~=1.2
+dash-daq~=0.1
+webviz-config>=0.0.4
+webviz-subsurface-components>=0.0.3
+
+[tests]
+chromedriver-binary>=74.0.3729.6.0
+ipdb
+percy
+selenium~=3.141
+flake8
+pylint
+mock
+black
