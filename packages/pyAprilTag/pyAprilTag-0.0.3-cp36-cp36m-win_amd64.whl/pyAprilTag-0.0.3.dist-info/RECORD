@@ -1,0 +1,15 @@
+pyAprilTag/__init__.py,sha256=kJu4XhWFC2DpNqPNWwjPWXbdHD8Ji3UHChhGw9uNnGo,571
+pyAprilTag/_apriltag.cp36-win_amd64.pyd,sha256=FPh7Zmt2pxMzxpIqeaqo9lWgbVnvlBECgrBcwWTNebE,347648
+pyAprilTag/demo.py,sha256=ItrQElxyulf-PefFeuEaA0JFESMiIorkKV9KJc_oMkY,140
+pyAprilTag/demo_calib.py,sha256=N-ECL-fOZHH7as19L7V_3NJZC-qN1K99j6oDuFPHSwc,872
+pyAprilTag/demo_calib_by_photo.py,sha256=WHJ7b9p-VKoKh0foTS1_cVAUxopUo-qVXE4QVUYxg18,840
+pyAprilTag/demo_plt.py,sha256=Q0PvDhfzBJ1k9z9P6MWS7HJRXCpcmAfE7r3uQh51r0w,247
+pyAprilTag/opencv_ffmpeg347_64.dll,sha256=gaf5eIldawOqgNI1ncRIJQhPiMmx6kSBPgJCqp7m4bk,18216448
+pyAprilTag/opencv_world347.dll,sha256=rWfkM6ZtPCW-x7lRxB77ko9Sej0q4N6u3LhWwbvDbBY,71182336
+pyAprilTag/vdemo_cv.py,sha256=V7ZvPbHUQoIJNi1DvhKrmQ1IX5KWMQnTVpSDSChcV_I,1344
+pyAprilTag/vdemo_plt.py,sha256=ws1bbzi5XhnxrOCJX16gAmJ4WQLcJrug9jtJfncjjuI,1756
+pyAprilTag/data/calib_pattern_Tag36h11.png,sha256=B6yajilZ8usoNANSwNoaKk495BHE_VVW_6masY5QMT4,70603
+pyAprilTag-0.0.3.dist-info/METADATA,sha256=jzW_ar3vV-B8mpAqaHrOxfxl4SpVF1CsYVlroYt-d9o,255
+pyAprilTag-0.0.3.dist-info/RECORD,,
+pyAprilTag-0.0.3.dist-info/WHEEL,sha256=xq3J6sB2oJqjv0tDC7tGUGvne1fOugw1JUmk86QA7UM,106
+pyAprilTag-0.0.3.dist-info/top_level.txt,sha256=krBOId_dckMrHbsphSHgOzm7dPjd1pwPk2ioAco0Vj0,11
