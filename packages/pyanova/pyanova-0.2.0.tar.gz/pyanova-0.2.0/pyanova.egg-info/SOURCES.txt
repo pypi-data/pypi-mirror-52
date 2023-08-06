@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyanova/__init__.py
+pyanova/pyanova.py
+pyanova.egg-info/PKG-INFO
+pyanova.egg-info/SOURCES.txt
+pyanova.egg-info/dependency_links.txt
+pyanova.egg-info/not-zip-safe
+pyanova.egg-info/requires.txt
+pyanova.egg-info/top_level.txt
