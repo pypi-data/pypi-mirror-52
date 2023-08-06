@@ -1,0 +1,7 @@
+flattentool
+libcove
+
+[test]
+coveralls
+pytest
+pytest-cov
