@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: roax-postgis
+Version: 2.0a1
+Summary: PostGIS extension for Roax.
+Home-page: https://github.com/roax/roax-postgis/
+License: MIT
+Keywords: wsgi,framework,resource,openapi
+Author: Paul Bryan
+Author-email: pbryan@anode.ca
+Requires-Python: >=3.7,<3.8
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Dist: roax-geo (>=2.0a1,<3.0)
+Requires-Dist: roax-postgresql (>=2.0a1,<3.0)
+Description-Content-Type: text/markdown
+
+# Roax-PostGIS
+
+[![PyPI](https://badge.fury.io/py/roax-postgis.svg)](https://badge.fury.io/py/roax-postgis)
+[![License](https://img.shields.io/github/license/roax/roax-postgis.svg)](https://github.com/roax/roax-postgis/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/badge/github-master-blue.svg)](https://github.com/roax/roax-postgis/)
+[![Travis CI](https://travis-ci.org/roax/roax-postgis.svg?branch=master)](https://travis-ci.org/roax/roax-postgis)
+[![Codecov](https://codecov.io/gh/roax/roax-postgis/branch/master/graph/badge.svg)](https://codecov.io/gh/roax/roax-postgis)
+[![Black](https://img.shields.io/badge/code%20style-black-black.svg)](https://github.com/psf/black)
+
+Roax-PostGIS: PostGIS extension for Roax.
+
+## Develop
+
+```
+poetry install
+poetry run pre-commit install
+```
+
+## Test
+
+```
+poetry run pytest
+```
+
