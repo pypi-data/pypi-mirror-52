@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sentry-flake8
+Version: 0.1.1
+Summary: Sentry's custom flake8 checker plugin.
+Home-page: https://github.com/getsentry/sentry-flake8
+Author: Sentry
+Author-email: hello@sentry.io
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: flake8 (<3.8.0,>=3.7.0)
+
+UNKNOWN
+
+
