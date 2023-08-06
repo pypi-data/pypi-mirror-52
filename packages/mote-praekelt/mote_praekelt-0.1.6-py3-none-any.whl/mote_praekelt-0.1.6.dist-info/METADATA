@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: mote-praekelt
+Version: 0.1.6
+Summary: Mote - the pattern library framework.
+Home-page: https://github.com/praekelt/mote
+Author: Praekelt Foundation
+Author-email: dev@praekelt.org
+License: BSD
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: django
+Requires-Dist: beautifulsoup4
+Requires-Dist: six
+Requires-Dist: djangorestframework-jwt
+Requires-Dist: djangorestframework
+Requires-Dist: xmltodict
+Requires-Dist: PyYAML
+Requires-Dist: yamlordereddictloader
+Requires-Dist: pypandoc
+Requires-Dist: dill
+
+Mote - the pattern library framework
+====================================
+
+.. figure:: https://travis-ci.org/praekeltfoundation/mote.svg?branch=develop
+   :align: center
+   :alt: Travis
+
+Quick start
+===========
+
+Run Mote using ``mote.lib.base`` as the only pattern library::
+
+    - virtualenv ve
+    - ./ve/bin/pip install -r example/requirements.txt
+    - ./ve/bin/python manage.py migrate --run-syncdb --settings=example.settings
+    - ./ve/bin/python manage.py runserver 0.0.0.0:8000 --settings=example.settings
+
+Browse to `http://localhost:8000/mote/` to view the pattern libraries.
+
+Building the docs
+=================
+
+virtualenv ve
+source ve/bin/activate
+pip sphinx install sphinx_rtd_theme
+cd docs
+make html
+
+Documentation
+=============
+
+Documentation is at http://mote-pattern-library-framework.readthedocs.io/en/latest/
+
+Authors
+=======
+
+Praekelt Foundation
+-------------------
+
+* Aphiwe Moshesh
+
+Changelog
+=========
+
+0.1.6
+-----
+#. First release.
+#. This package is a fork of mote-prk see https://github.com/praekelt/mote
+
