@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: stock_quote
+Version: 1.6.0.1
+Summary: python script to get stock quotes and calculate gains and losses
+Home-page: https://github.com/gps1539/stock_quote
+Author: Graham Smith
+Author-email: gps1539@gmail.com
+License: GPL3
+Download-URL: https://github.com/gps1539/stock_quote/archive/1.6.0.tar.gz
+Description: UNKNOWN
+Keywords: testing,example
+Platform: UNKNOWN
+Requires-Python: >=3.4
