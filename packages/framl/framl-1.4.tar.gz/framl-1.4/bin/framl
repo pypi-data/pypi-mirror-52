@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+# encoding: utf-8
+
+# hiding GCP warning since we're using user creds
+import warnings
+
+from framl.monitoring import Monitoring
+
+warnings.filterwarnings("ignore", "Your application has authenticated using end user credentials")
+
+import yaml
+import os, sys
+import click
+from tabulate import tabulate
+from framl.assembler import Assembler
+from framl.flags import Flags
+from framl.config_cli import ConfigFraml
+
+current_path = os.getcwd()
+ass = Assembler(current_path)
+
+
+@click.group()
+def root():
+    pass
+
+
+@root.command('init', help="To create and configure a new frame in the current directory")
+def init():
+    cli_conf = ConfigFraml()
+    name = click.prompt('Model Name', type=click.STRING, err=True)
+    name = name.replace(' ', '_').lower()
+
+    gcp = click.prompt('GCP Project id', type=click.STRING, err=True)
+
+    author = click.prompt('Author', type=click.STRING, err=True)
+    git = click.prompt('Git repo URL', type=click.STRING, default="")
+
+    desc = click.prompt('Description', type=click.STRING, default="")
+
+    conf_dict = Assembler.create_config(model_name=name, gcp_project_id=gcp, description=desc, author=author,
+                                        git_url=git)
+    click.confirm(f"\nYou're about to create a frame in {current_path}/.\n"
+                  f"Here is your configuration file:\n{yaml.dump(conf_dict)}\n\n"
+                  f"Is this OK?", default=True, show_default=True, abort=True)
+
+    ass.download_skeleton(
+        bucket_name=cli_conf.get_skeleton_bucket(),
+        name=cli_conf.get_skeleton_name(),
+        tag=cli_conf.get_skeleton_tag()
+    )
+    ass.copy_base()
+    ass.save_conf_fil(conf_dict)
+
+    click.echo("Frame successfully created created!")
+
+
+@root.group()
+def flags():
+    if not os.path.isfile(current_path + '/config.yaml'):
+        raise click.UsageError('No config.yaml in the current working directory. '
+                               'Please make sure you\'re at the right path')
+
+
+@flags.command('list', help="List declared and hosted flags")
+def list_flags():
+    flags_ob = Flags(current_path)
+    comp = flags_ob.compare_current_with_config()
+    click.echo(tabulate(comp, headers=['Declared', 'Pushed', 'Value', ''], tablefmt=""))
+
+
+@flags.command('update', help="Publish declared flags (with values) to remote location")
+@click.option('--env', help='Environment to publish.')
+def publish_flags(env):
+    print(env)
+    cli_conf = ConfigFraml()
+    flags_ob = Flags(current_path)
+    declared = flags_ob.declared_flags
+    for flag in declared:
+        res = click.prompt(f'New value for {flag}', type=click.STRING, default=flags_ob.get(flag))
+
+        # we don't know the type of the input and we need to determine it
+        try:
+            res = int(res)
+        except ValueError:
+            try:
+                res = float(res)
+            except ValueError:
+                pass
+
+        flags_ob.set(flag, res)
+
+    click.echo()
+    comp = flags_ob.compare_current_with_config()
+    click.echo(tabulate(comp, headers=['Declared', 'Pushed', 'Value', ''], tablefmt=""))
+
+    click.confirm(f"\nYou're sure you want to update {cli_conf.get_env()}?", default=True, show_default=True,
+                  abort=True)
+    flags_ob.save()
+
+    click.echo("Flags have been updated!")
+
+
+@root.group()
+def monitoring():
+    if not os.path.isfile(current_path + '/config.yaml'):
+        raise click.UsageError('No config.yaml in the current working directory. '
+                               'Please make sure you\'re at the right path')
+
+
+@monitoring.command('list', help="List monitoring sources")
+def list_monitoring():
+    mon = Monitoring(current_path)
+    info = mon.list()
+    click.echo("1. All raw data are sent to:\n"
+               f"\tPubsub topic {info['topic']}\n"
+               f"2. Then these logs are saved in JSON files alongside other models in:\n"
+               f"\tGCS bucket: {info['bucket']}\n"
+               f"3. Finally fields that are monitored (see config.yaml) are copied to:\n"
+               f"\tBiQuery table: {info['table']}")
+
+
+@monitoring.command('prepare', help="Create or update BigQuery monitoring table and GCS logs's bucket")
+def prepare_monitoring():
+    mon = Monitoring(current_path)
+    mon.prepare_table()
+    click.echo("Ready for monitoring")
+
+
+try:
+    root()
+except Exception as e:
+    raise click.ClickException(e)
