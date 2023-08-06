@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: timon
+Version: 0.3.0
+Summary: simple, low resource monitoring tool
+Home-page: https://www.teledomic.eu
+Author: Teledomic
+Author-email: info@teledomic.eu
+License: Apache Software License
+Description-Content-Type: UNKNOWN
+Keywords: tiny monitor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.5, <4
+Requires-Dist: click
+Requires-Dist: cryptography
+Requires-Dist: mytb
+Requires-Dist: minibelt
+Requires-Dist: pyyaml
+Requires-Dist: requests
+
+UNKNOWN
+
+
