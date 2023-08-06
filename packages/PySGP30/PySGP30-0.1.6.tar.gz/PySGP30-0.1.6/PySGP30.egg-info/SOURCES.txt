@@ -1,0 +1,12 @@
+README.md
+setup.py
+PySGP30.egg-info/PKG-INFO
+PySGP30.egg-info/SOURCES.txt
+PySGP30.egg-info/dependency_links.txt
+PySGP30.egg-info/requires.txt
+PySGP30.egg-info/top_level.txt
+tests/__init__.py
+tests/context.py
+tests/mock_smbus2.py
+tests/test_crc.py
+tests/test_sgp.py
