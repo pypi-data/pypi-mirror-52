@@ -1,0 +1,3 @@
+[console_scripts]
+foamgen = foamgen.generation:parse_cli_and_generate
+
