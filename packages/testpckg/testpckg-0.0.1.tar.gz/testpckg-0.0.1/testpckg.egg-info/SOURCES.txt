@@ -1,0 +1,8 @@
+README.md
+setup.py
+testpckg/__init__.py
+testpckg/testingpckg.py
+testpckg.egg-info/PKG-INFO
+testpckg.egg-info/SOURCES.txt
+testpckg.egg-info/dependency_links.txt
+testpckg.egg-info/top_level.txt
