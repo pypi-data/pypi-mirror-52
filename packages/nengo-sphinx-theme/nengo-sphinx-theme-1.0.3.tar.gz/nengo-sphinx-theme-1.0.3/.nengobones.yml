@@ -1,0 +1,73 @@
+project_name: Nengo Sphinx Theme
+pkg_name: nengo_sphinx_theme
+repo_name: nengo/nengo-sphinx-theme
+
+description: Sphinx theme for Nengo project documentation pages
+copyright_start: 2019
+
+travis_yml:
+  python: 3.6
+  jobs:
+    - script: static
+    - script: docs
+  pypi_user: tbekolay
+  deploy_dists:
+    - sdist
+    - bdist_wheel
+
+ci_scripts:
+  - template: static
+  - template: docs
+  - template: deploy
+
+contributing_rst: {}
+
+contributors_rst: {}
+
+license_rst: {}
+
+manifest_in:
+  global-include:
+    - "*.conf"
+    - "*.html"
+
+setup_py:
+  entry_points:
+    sphinx.html_themes:
+      - nengo_sphinx_theme=nengo_sphinx_theme
+  include_package_data: True
+  install_req:
+    - sphinx>=1.8
+  docs_req:
+    - jupyter
+    - matplotlib
+    - nbsphinx
+    - nengo
+  classifiers:
+    - "Development Status :: 4 - Beta"
+    - "Framework :: Nengo"
+    - "Intended Audience :: Developers"
+    - "License :: Free for non-commercial use"
+    - "Operating System :: Microsoft :: Windows"
+    - "Operating System :: POSIX :: Linux"
+    - "Programming Language :: Python"
+    - "Programming Language :: Python :: 3.5"
+    - "Programming Language :: Python :: 3.6"
+    - "Programming Language :: Python :: 3.7"
+    - "Topic :: Software Development"
+
+setup_cfg:
+  pylint:
+    disable:
+      - missing-docstring
+
+docs_conf_py:
+  exclude_patterns:
+    - examples/test-example.ipynb
+  extensions:
+    - nengo_sphinx_theme.ext.resolvedefaults
+  analytics_id: UA-41658423-2
+
+pre_commit_config_yaml: {}
+
+pyproject_toml: {}

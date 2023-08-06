@@ -1,0 +1,17 @@
+sphinx>=1.8
+
+[all]
+jupyter
+matplotlib
+nbsphinx
+nengo
+
+[docs]
+jupyter
+matplotlib
+nbsphinx
+nengo
+
+[optional]
+
+[tests]
