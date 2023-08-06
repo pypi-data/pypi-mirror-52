@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ShellyPy
+Version: 0.1.1
+Summary: Wrapper around the Shelly HTTP api
+Home-page: https://github.com/Jan200101/ShellyPy
+Author: Jan Drögehoff
+License: MIT
+Description: # ShellyPy
+        not to be confused with [pyShelly](https://github.com/StyraHem/pyShelly)
+        Wrapper around the Shelly HTTP api
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
