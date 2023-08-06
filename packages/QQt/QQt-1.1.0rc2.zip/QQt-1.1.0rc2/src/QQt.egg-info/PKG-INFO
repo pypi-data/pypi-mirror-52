@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: QQt
+Version: 1.1.0rc2
+Summary: Wrapper for various PySide2/PyQt5 related packages.
+Home-page: http://pypi.org/project/QQt/
+Author: Adam Karpierz
+Author-email: adam@karpierz.net
+Maintainer: Adam Karpierz
+Maintainer-email: adam@karpierz.net
+License: zlib/libpng License ; http://opensource.org/licenses/zlib/
+Download-URL: http://pypi.org/project/QQt/
+Description: QQt
+        ===
+        
+        Wrapper for various PySide2/PyQt5 related packages.
+        
+        Overview
+        ========
+        
+        TBD...
+        
+        Installation
+        ============
+        
+        Prerequisites:
+        
+        + Python 3.5 or later
+        
+          * http://www.python.org/
+          * 3.7 is a primary test environment.
+        
+        + pip and setuptools
+        
+          * http://pypi.org/project/pip/
+          * http://pypi.org/project/setuptools/
+        
+        To install run::
+        
+            python -m pip install --upgrade QQt
+        
+        Development
+        ===========
+        
+        Visit `development page <https://github.com/karpierz/QQt/>`__
+        
+        Installation from sources:
+        
+        Clone the `sources <https://github.com/karpierz/QQt/>`__ and run::
+        
+            python -m pip install ./QQt
+        
+        or on development mode::
+        
+            python -m pip install --editable ./QQt
+        
+        Prerequisites:
+        
+        + Development is strictly based on *tox*. To install it run::
+        
+            python -m pip install tox
+        
+        License
+        =======
+        
+          | Copyright (c) 2012-2019 Adam Karpierz
+          |
+          | Licensed under the zlib/libpng License
+          | http://opensource.org/licenses/zlib/
+          | Please refer to the accompanying LICENSE file.
+        
+        Authors
+        =======
+        
+        * Adam Karpierz <adam@karpierz.net>
+        
+        .. _`development page`: https://github.com/karpierz/QQt/
+        
+        Changelog
+        =========
+        
+        1.1.0rc3 (2019-09-13)
+        ---------------------
+        - | Requirements upgrade:
+          | PySide2 to at least 5.13.1
+        - Adding of (for now fake/empty) test case.
+        
+        1.1.0rc2 (2019-08-02)
+        ---------------------
+        - StreamEmitter class added.
+        
+        1.1.0rc1 (2019-07-23)
+        ---------------------
+        - | Requirements upgrade:
+          | QtPy    to at least 1.9.0
+          | PySide2 to at least 5.13.0
+          | PyQt5   to at least 5.13.0
+          | This allows to have applications that import PySide2 and PyQt5 at the same time
+          | (which is possible if both bindings are compiled for the same Qt version).
+        
+        1.0.0b5 (2019-06-10)
+        --------------------
+        - Adding setup extras PySide and PyQt for installing PySide2 or PyQt5 backends.
+        
+        1.0.0b4 (2019-06-06)
+        --------------------
+        - Fix a bug for PySide2 as backend.
+        
+        1.0.0b3 (2019-06-04)
+        --------------------
+        - Adding a monkey-patch for vtk.qt (vtk==8.1.x).
+        
+        1.0.0b2 (2019-05-22)
+        --------------------
+        - Fixes and cleanup of setup.
+        
+        1.0.0b1 (2019-05-22)
+        --------------------
+        - First public release.
+        
+        0.0.1a1 (2012-03-9)
+        -------------------
+        - Initial version.
+        
+Keywords: QQt,PySide2,PySide,PyQt,PyQt5,PyQt4,Qt
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Polish
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: Stackless
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5.0
+Description-Content-Type: text/x-rst; charset=UTF-8
+Provides-Extra: doc
+Provides-Extra: pyqt
+Provides-Extra: test
+Provides-Extra: pyside
