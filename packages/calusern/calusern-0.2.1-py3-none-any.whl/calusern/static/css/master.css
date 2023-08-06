@@ -1,0 +1,69 @@
+body {
+    padding: 1em 0em;
+}
+
+/* 
+ * Overriding Bootstrap Container width
+ * XXX there's probably a better way
+*/
+@media (min-width: 1200px) { 
+    .container {
+        max-width: 960px;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+table td, table th {
+     border: 1px black solid;
+}
+
+th, td {
+  padding: 10pt;
+}
+
+ul.list-nobullet {
+    list-style-type: none;
+}
+
+.figure {
+    text-align: center;
+}
+
+img {
+    width: 90%;
+    max-width: 40em;
+    display: block;
+    margin:auto;
+}
+
+.max-width-20-em {
+    max-width: 20em;
+}
+
+.max-width-30-em {
+    max-width: 30em;
+}
+
+li img {
+    width: 100%;
+}
+
+p.caption {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2em;
+}
+
+div.math {
+    text-align: center;
+    margin-top: 1em;
+}
+
+h1#title {
+    text-align: center;
+}
