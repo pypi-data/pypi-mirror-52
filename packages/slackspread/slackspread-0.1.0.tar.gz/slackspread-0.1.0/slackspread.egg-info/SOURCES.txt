@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+easyspread/__init__.py
+slackbot/__init__.py
+slackspread.egg-info/PKG-INFO
+slackspread.egg-info/SOURCES.txt
+slackspread.egg-info/dependency_links.txt
+slackspread.egg-info/requires.txt
+slackspread.egg-info/top_level.txt
