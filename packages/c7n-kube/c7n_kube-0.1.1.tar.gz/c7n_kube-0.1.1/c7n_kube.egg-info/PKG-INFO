@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: c7n-kube
+Version: 0.1.1
+Summary: Cloud Custodian - Kubernetes Provider
+Home-page: https://github.com/cloud-custodian/cloud-custodian
+License: Apache-2.0
+Description: # Custodian Kubernetes Support
+        
+        
+        Work in Progress - Not Ready For Use.
+        
+        
+Platform: UNKNOWN
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: System :: Distributed Computing
+Description-Content-Type: text/markdown
