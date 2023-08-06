@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: funwithconsole
+Version: 0.0.1
+Summary: funny console tools
+Home-page: https://github.com/cccaaannn/funwithconsole
+Author: Can Kurt
+Author-email: can.kurt.aa@gmail.com
+License: UNKNOWN
+Description: ## funwithconsole
+        
+        - **Prints strings as big letters to console**
+        
+        - **Prints a christmas tree**
+        
+        
+        ## Install
+        
+        ```sh
+        pip install funwithconsole
+        ```
+        
+        ## Usage
+        
+        ```python
+        from funwithconsole import writeLettersToConsole,giveMeChristmas
+        ```
+        
+        ```python
+        writeLettersToConsole("hello")
+        ```
+        
+        ```
+          H   H    EEEEE    L        L        OOOOO
+          H   H    E        L        L        O   O
+          HHHHH    EEEEE    L        L        O   O
+          H   H    E        L        L        O   O
+          H   H    EEEEE    LLLLL    LLLLL    OOOOO
+        ```
+        
+        
+        ```python
+        giveMeChristmas()
+        ```
+        
+        ```
+                                 *
+                              *  *  *
+                           *  *  *  *  *
+                              0  *  *
+                           0  *  *  0  0
+                        *  *  *  *  *  0  *
+                           *  *  *  *  *
+                        *  *  *  *  *  *  *
+                     *  *  *  *  *  *  *  0  *
+                           0  *  *  *  *
+                        *  *  *  *  *  *  *
+                     *  *  *  *  *  *  *  *  *
+                  *  *  *  *  *  *  *  *  *  *  *
+                           *  *  0  *  *
+                        *  *  *  *  *  *  0
+                     *  *  *  *  0  *  *  *  *
+                  *  *  *  *  *  *  *  *  0  *  *
+               *  *  *  *  *  0  *  *  *  *  *  0  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+                           *  *  *  *  *
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
