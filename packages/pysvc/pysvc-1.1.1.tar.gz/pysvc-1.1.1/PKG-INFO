@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: pysvc
+Version: 1.1.1
+Summary: IBM Spectrum Virtualize Python Client
+Home-page: https://github.com/IBM/pysvc
+Author: Peng Wang
+Author-email: wangpww@cn.ibm.com
+Maintainer: Peng Wang
+License: Apache License, Version 2.0
+Description: CLI Python Client for IBM Spectrum Virtualize Family Storage.
+Keywords: IBM,Spectrum Virtualize Family Storage
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: munch
+Requires: paramiko
+Provides: pysvc
