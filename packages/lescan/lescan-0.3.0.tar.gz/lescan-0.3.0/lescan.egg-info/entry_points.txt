@@ -1,0 +1,3 @@
+[console_scripts]
+lescan = lescan.__main__:main
+
