@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gmsfile
+Version: 0.1.3
+Summary: A converter from XYZ to GAMESS file
+Home-page: https://github.com/amardrylab/gmsfile3
+Author: Gourab Kanti Das
+Author-email: gourabkanti.das@visva-bharati.ac.in
+License: UNKNOWN
+Description: ## XYZ to GAMESS file converter
+        This is a simple package You can use it by calling
+        
+        >   from gmsfile import gms
+        
+        >   mol=gms("mol.xyz")
+        
+        >   mol.runtyp("opt")
+        
+        >   mol.writefile("mol.inp")
+        
+        
+        This will convert your xyz file to a gamess input file that you can run
+        in GAMESS for optimization of a molecule.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
