@@ -1,0 +1,15 @@
+README.md
+setup.py
+tests/__init__.py
+tests/torchdata_test.py
+torchdata/__init__.py
+torchdata/_base.py
+torchdata/cachers.py
+torchdata/maps.py
+torchdata/modifiers.py
+torchdata/samplers.py
+torchfunc_nightly.egg-info/PKG-INFO
+torchfunc_nightly.egg-info/SOURCES.txt
+torchfunc_nightly.egg-info/dependency_links.txt
+torchfunc_nightly.egg-info/requires.txt
+torchfunc_nightly.egg-info/top_level.txt
