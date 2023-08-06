@@ -1,0 +1,31 @@
+defaults:
+  - hydra/hydra_logging : default
+  - hydra/job_logging : default
+  - hydra/launcher: basic
+  - hydra/sweeper: basic
+  - hydra/output: default
+
+hydra:
+  # Normal run output configuration
+  run: ???
+  # Multi-run output configuration
+  sweep: ???
+
+  # Logging configuration for Hydra
+  hydra_logging: ???
+  # Logging configuration for the job
+  job_logging: ???
+
+  sweeper: ???
+
+  launcher: ???
+
+  # Those lists will contain runtime overrides
+  overrides:
+    # Overrides for the hydra configuration
+    hydra: []
+    # Overrides for the task configuration
+    task: []
+
+  # job runtime information will be populated here
+  job: {}
