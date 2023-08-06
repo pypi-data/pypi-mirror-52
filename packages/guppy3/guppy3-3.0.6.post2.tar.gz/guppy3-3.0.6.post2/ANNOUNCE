@@ -1,0 +1,28 @@
+I am happy to announce Guppy 3 3.0.6
+
+Guppy 3 is a library and programming environment for Python,
+currently providing in particular the Heapy subsystem, which supports
+object and heap memory sizing, profiling and debugging. It also
+includes a prototypical specification language, the Guppy
+Specification Language (GSL), which can be used to formally specify
+aspects of Python programs and generate tests and documentation from a
+common source.
+
+Guppy 3 is a fork of Guppy-PE, created by Sverker Nilsson for Python 2.
+
+The main news in this release:
+
+o Bug fixes & removal of unused code
+o Windows now gets output from _PyObject_DebugMallocStats with xmemstats()
+o More code is now tested, and some unported code, mostly found by these
+  tests got ported
+
+License: MIT
+
+The project homepage is on GitHub:
+
+https://github.com/zhuyifei1999/guppy3
+
+Enjoy,
+
+YiFei Zhu
