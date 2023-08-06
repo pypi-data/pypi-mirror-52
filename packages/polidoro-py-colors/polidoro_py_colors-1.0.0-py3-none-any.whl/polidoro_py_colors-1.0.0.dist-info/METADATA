@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: polidoro-py-colors
+Version: 1.0.0
+Summary: Set of constants to simplify print with colors.
+Home-page: https://github.com/heitorpolidoro/colors
+Author: Heitor Polidoro
+License: unlicense
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Colors [![Latest](https://img.shields.io/github/release/heitorpolidoro/colors.svg?label=latest)](https://github.com/heitorpolidoro/colors/releases/latest)
+Set of constants to simplify print with colors
+
+#### How to use:
+```
+from colors import *
+print(Red, 'Error')
+```
+<span style='color:red'>Error</span>
+
+The package creates a wrapper in the default `print` to remove the color 
+on every print. So you don't have to worry to put the `Color_Off`.  
+```
+print('This is ', Green, 'Green.')
+print('This is not.')
+```
+This is <span style='color:green'>Green.</span><br>
+This is not.
+
+Unless you really wanted to
+```
+print(Blue, 'Color on', Color_Off, ' Color off')
+```
+<span style='color:blue'>Color on</span> Color off
+
+**SIDE EFFECTS**
+
+The wrapper removes single spaces strings (`" "`) so this:
+```
+print('Hello', 'World')
+```
+Will print: `HelloWorld` instead of `Hello World`.
+
+
