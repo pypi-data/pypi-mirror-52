@@ -1,0 +1,16 @@
+Products.CMFCore
+setuptools
+ftw.upgrade
+path.py
+rfc6266
+zope.app.file<4.0.0
+
+[tests]
+ftw.builder
+plone.app.contenttypes
+plone.app.testing
+plone.directives.form
+plone.app.dexterity
+plone.namedfile
+z3c.blobfile
+unittest2
