@@ -1,0 +1,47 @@
+Metadata-Version: 1.2
+Name: nba-gateway-pdenno
+Version: 0.1.0
+Summary: Server to communicate between Jupyter notebooks and nba-agent
+Home-page: https://github.com/pdenno/nba_gateway/
+Author: Peter Denno
+Author-email: podenno@gmail.com
+Maintainer: Peter Denno
+Maintainer-email: podenno@gmail.com
+License: BSD
+Project-URL: Documentation, https://github.com/pdenno/nba_gateway/
+Project-URL: Code, https://github.com/pdenno/nba_gateway/
+Project-URL: Issue tracker, https://github.com/pdenno/nba_gateway/issues
+Description: ===================================
+        IPython Magic for minizinc nb-agent
+        ===================================
+        
+        :author: Peter Denno <podenno@gmail.com>
+        :homepage: https://github.com/pdenno/mznb
+        
+        Provides communication between the Jupyter notebook and the MiniZinc nb-agent. 
+        
+        The module requires an existing installation of the nb-agent (https://github.com/pdenno/nb-agent)  and MiniZinc. 
+        
+        Installation
+        ============
+        
+        You can install or upgrade this module via pip
+        
+            pip install -U mznb
+        
+        
+        Basic usage
+        ===========
+        
+        %load_ext mznb
+                    
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
