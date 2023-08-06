@@ -1,0 +1,17 @@
+README.md
+setup.py
+scouts.egg-info/PKG-INFO
+scouts.egg-info/SOURCES.txt
+scouts.egg-info/dependency_links.txt
+scouts.egg-info/entry_points.txt
+scouts.egg-info/requires.txt
+scouts.egg-info/top_level.txt
+scripts/__init__.py
+scripts/heatmaps.py
+src/__init__.py
+src/analysis.py
+src/gui.py
+src/gui_violins.py
+src/utils.py
+tests/__init__.py
+tests/unit_tests.py
