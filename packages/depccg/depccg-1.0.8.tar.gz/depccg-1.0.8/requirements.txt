@@ -1,0 +1,8 @@
+simplejson
+cython
+lxml
+pyyaml
+nltk
+chainer>=2.0.0
+googledrivedownloader
+requests
