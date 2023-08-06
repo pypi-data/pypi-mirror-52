@@ -1,0 +1,11 @@
+bump_release/__init__.py,sha256=VXQYe9ky2Jrk6V128LQKakPVHOs8zwv8jb6hyatF6Sk,10681
+bump_release/__main__.py,sha256=wZo-qtZ8ikzrFbgi2uKRG9BRh0Ikux4C3O4klWRAnfY,708
+bump_release/helpers.py,sha256=u8eGSiFn2y8dubP7qwcGqtw-YLz9uQODTN7n-qABkn8,6164
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_updater.py,sha256=3F4lMVtCkpVZsPULvFhhwqXyrPTbKNiSzBBonKPuNpM,5946
+bump_release-0.5.9.dist-info/LICENSE,sha256=NOaZ7jjWCSk-BZBPZ99vy1tefgVcYK7myjXYElBXONU,1105
+bump_release-0.5.9.dist-info/METADATA,sha256=8BIdqWlh-MxfXw-BU9OgYfdCnO3Kldh86thB7rLN3mg,3195
+bump_release-0.5.9.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+bump_release-0.5.9.dist-info/entry_points.txt,sha256=QgHAYYC3TytX16i5Nb1fHyDH_pXoMwZn_Nph1gaP8e8,72
+bump_release-0.5.9.dist-info/top_level.txt,sha256=p33TtQ3IqEPg7-px7HdUYfvgdihVPxJLuIb5uRQq1QE,19
+bump_release-0.5.9.dist-info/RECORD,,
