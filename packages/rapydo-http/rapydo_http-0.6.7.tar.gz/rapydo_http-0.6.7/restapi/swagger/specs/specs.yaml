@@ -1,0 +1,8 @@
+
+file: miscellaneous
+class: SwaggerSpecifications
+baseuri: "/api"
+mapping:
+  status: "/specs"
+labels:
+  - specifications
