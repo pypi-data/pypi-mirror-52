@@ -1,0 +1,16 @@
+docker
+click
+delegator.py
+google-auth
+flask
+
+[doc]
+sphinx
+numpydoc
+sphinx-rtd-theme
+sphinx-autobuild
+
+[test]
+pytest
+pytest-cov
+flake8
