@@ -1,0 +1,14 @@
+snowflake/ingest/__init__.py,sha256=9439PFQLJ9m188PlyepWwNxrsEQs1b4HbGf_nC3_xXw,111
+snowflake/ingest/error.py,sha256=cVd_hdcAShYpNXDW2kQCboStTov6W5zaNY9XNgV9EPE,1298
+snowflake/ingest/errorcode.py,sha256=bwk_p9qV_bkeKwB3eKznP0lRKlPuazcwbKEkJJ36VPA,107
+snowflake/ingest/simple_ingest_manager.py,sha256=bnfRHXs5LNqL7lUIjuiarmnEHc0GtHycMSIvT00mUTs,6941
+snowflake/ingest/version.py,sha256=uE9HNuNsD4Hz43Lku2_50ZdMsRGxBcsI2LvB3sCJ_rE,125
+snowflake/ingest/utils/__init__.py,sha256=_Fm3BBCtxdhJIo3ziDQA40ePFOA_HC8qjmUJza-61ko,161
+snowflake/ingest/utils/network.py,sha256=py7wzJuTlj3SubDPVqnN_Jh37Xh7ZlU_2SnI7GODsEE,3539
+snowflake/ingest/utils/tokentools.py,sha256=djYD2mEtRl_Q8sH3ieADMxh3-kRX3Dp8nNYUoX4lJKM,5471
+snowflake/ingest/utils/uris.py,sha256=46tbO26jYBDM5C0vUsvbQms1dSx8q2xxvUx1nzHQzpU,5907
+snowflake_ingest-1.0.0.dist-info/LICENSE,sha256=K02xJilR7OVXSekgaKN0P9nAakfrJUijuKT4OZ7NYPE,11364
+snowflake_ingest-1.0.0.dist-info/METADATA,sha256=kDkziMvOFvRYVvAmtw-aZwPHbvZ4R89y12AFsBwCPK4,1115
+snowflake_ingest-1.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+snowflake_ingest-1.0.0.dist-info/top_level.txt,sha256=TY0gFSHKDdZy3THb0FGomyikWQasEGldIR1O0HGOHVw,10
+snowflake_ingest-1.0.0.dist-info/RECORD,,
