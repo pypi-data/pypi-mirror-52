@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pose_estimation
+Version: 0.0.1
+Summary: pose_estimation
+Home-page: https://github.com/quanhua92/pose_estimation
+Author: Quan Hua
+Author-email: quanhua92@gmail.com
+License: Apache
+Description: # pose_estimation
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
