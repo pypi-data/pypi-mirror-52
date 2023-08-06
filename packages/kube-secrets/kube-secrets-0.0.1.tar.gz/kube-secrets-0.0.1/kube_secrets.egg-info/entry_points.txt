@@ -1,0 +1,3 @@
+[console_scripts]
+kube-secrets = kube_secrets.cli:main
+
