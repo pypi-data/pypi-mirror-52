@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        genome-to-sqlite=genome_to_sqlite.cli:cli
+    
