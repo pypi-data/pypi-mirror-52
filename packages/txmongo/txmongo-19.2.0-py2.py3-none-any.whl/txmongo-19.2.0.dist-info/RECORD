@@ -1,0 +1,17 @@
+txmongo/__init__.py,sha256=yialaG7grFvwmTPO8KBtVjwSY4uiZcgrhrf570iYEZo,600
+txmongo/collection.py,sha256=82M3JaoCwPkQBzk0qPxR6yVSdNsOQ4SqCVth08k4Tqs,57347
+txmongo/connection.py,sha256=1rBfFzK589yvL_5vLI2pkwDfkuTTLVw-ioiygrgw7uM,18067
+txmongo/database.py,sha256=NxXvtHAzzEE_jxpkl-cMNFPI37nOEp1hY2kOPE_drAs,4729
+txmongo/errors.py,sha256=3ZTshPiZYbBQwgHIxqBgUgo9nIPa7nm-EfYxYsLUIUY,321
+txmongo/filter.py,sha256=wupq1f59k6CGVdaGIu-vKnnBArKCxEfTfm-pWr8TCUY,3898
+txmongo/gridfs.py,sha256=bjQVBVQLSDa9C3VSRs05KGdQU5ImRtdOgiVZWpscZuU,405
+txmongo/protocol.py,sha256=JT5pFWgjz8AjNPIHiUFPkLsd-hpZkQ4zJU5Flg-voB0,27204
+txmongo/_gridfs/__init__.py,sha256=KMDPF_tXAyVCr3jhcfFbI5vxmPQBnqz2OuA-YuSSK38,9153
+txmongo/_gridfs/errors.py,sha256=TPhUA4I7UOyNDBAHy6OXU1_UuSJGtwcUp4DZqKoh_Jc,1476
+txmongo/_gridfs/grid_file.py,sha256=RctjH4on-s9fZ27lALLUZW9_PHSwcGwt9ukQpKfigR8,16221
+txmongo/utils/__init__.py,sha256=8oiqSwu52sJtf2zIH_UldcoFktrOuie9l6BsgR02FYk,1822
+txmongo-19.2.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+txmongo-19.2.0.dist-info/METADATA,sha256=N5mF-WdBb2GOwjGRBdJxaD54iFzWzW0mCp4Ml277mOI,1271
+txmongo-19.2.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+txmongo-19.2.0.dist-info/top_level.txt,sha256=mg3ojdsrefgaTi4d7_f1qrnc5_uaXiVO_MuET0wk4Qc,8
+txmongo-19.2.0.dist-info/RECORD,,
