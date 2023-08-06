@@ -1,0 +1,9 @@
+pytest_docker_postgresql.py,sha256=5elBqETg4VkchhFUeNQj3WcRLte46fRxd7s7GzKobHk,2376
+pytest_docker_postgresql/docker/.env,sha256=xtW0iCwcGuJclk_tzwWGRoQTzezdU4M1WuJfNOLWilc,27
+pytest_docker_postgresql/docker/docker-compose.yml,sha256=5piQENZdlBpjPhGNr7Kga0IMJXUUAuDJ5bEGunuSmPU,186
+pytest_docker_postgresql-0.1.0.dist-info/LICENSE,sha256=XziW2msTrGp6Iy_go5X-l1IDYKpeBW5QEcO2CL3Ge-I,1081
+pytest_docker_postgresql-0.1.0.dist-info/METADATA,sha256=XeWss7Ojc7HA5uqZuZwC-kHPHa49A6IT8wy0b6r3ix4,2291
+pytest_docker_postgresql-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pytest_docker_postgresql-0.1.0.dist-info/entry_points.txt,sha256=iEwJaYS7YPCAFZjhufNg9MAQxphLWyLyNocG0XrJ-FY,50
+pytest_docker_postgresql-0.1.0.dist-info/top_level.txt,sha256=W6Xqi3OWz6k9c9hwQ7xKIzrvtClElLK2oYc8jSDR1qk,25
+pytest_docker_postgresql-0.1.0.dist-info/RECORD,,
