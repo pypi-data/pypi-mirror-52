@@ -1,0 +1,8 @@
+uamqp~=1.2.0
+azure-common~=1.1
+
+[:python_version<'3.0']
+azure-nspkg
+
+[:python_version<'3.5']
+typing
