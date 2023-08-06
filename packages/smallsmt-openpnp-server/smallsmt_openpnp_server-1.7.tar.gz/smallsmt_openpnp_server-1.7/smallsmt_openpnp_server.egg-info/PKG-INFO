@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: smallsmt-openpnp-server
+Version: 1.7
+Summary: Python server for SmallSmt Pick&Place machines
+Home-page: http://www.kartech.org
+Author: Jaroslaw Karwik
+Author-email: jaroslaw.karwik@gmail.com
+License: MIT
+Description: Python server for SmallSmt Pick&Place machines
+        
+        See:
+        
+        Source repo:
+        https://github.com/jarekkt/smallsmt-openpnp
+        
+        OpenPnp project:
+        http://openpnp.org/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
