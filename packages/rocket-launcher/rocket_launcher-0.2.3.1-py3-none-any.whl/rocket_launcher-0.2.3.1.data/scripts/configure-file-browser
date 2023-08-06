@@ -1,0 +1,4 @@
+#!/bin/sh
+export TERM=linux
+export TERMINFO=/bin/sh 
+ranger --copy-config=all 
