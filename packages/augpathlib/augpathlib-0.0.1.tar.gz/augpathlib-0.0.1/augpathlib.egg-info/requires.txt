@@ -1,0 +1,14 @@
+gitpython
+pexpect>=4.7.0
+python-dateutil
+python-magic
+pyxattr
+terminaltables
+
+[dev]
+pytest-cov
+wheel
+
+[test]
+pytest
+pytest-runner
