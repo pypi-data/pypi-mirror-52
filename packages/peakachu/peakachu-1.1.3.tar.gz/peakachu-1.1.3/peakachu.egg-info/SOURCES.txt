@@ -1,0 +1,17 @@
+README.md
+setup.py
+peakachu/__init__.py
+peakachu/calculate_depth.py
+peakachu/call_loops.py
+peakachu/peakacluster.py
+peakachu/scoreUtils.py
+peakachu/score_chromosome.py
+peakachu/score_genome.py
+peakachu/trainUtils.py
+peakachu/train_models.py
+peakachu/utils.py
+peakachu.egg-info/PKG-INFO
+peakachu.egg-info/SOURCES.txt
+peakachu.egg-info/dependency_links.txt
+peakachu.egg-info/top_level.txt
+scripts/peakachu
