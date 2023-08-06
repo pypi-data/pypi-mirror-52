@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pyminiproj
+Version: 0.0.26
+Summary: creat a python project template DIR , includes some shell-scripts for git and pypi
+Home-page: https://github.com/ihgazni2/pyminiproj
+Author: dli
+Author-email: ihgazni2010@hotmail.com
+License: MIT
+Description: refer to .md files in https://github.com/ihgazni2/pyminiproj
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
