@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: svllib
+Version: 0.1.dev0
+Summary: UNKNOWN
+Home-page: https://github.com/koreyhinton/svl
+Author: Korey Hinton
+Author-email: korey.hinton@mail.com
+License: LGPLv3
+Description: # svl
+        String Variable Language
+        
+        # License
+        
+        svl is distributed under the LGPL version 3 license, see LICENSE for more details
+Platform: UNKNOWN
+Requires-Python: >=3.7

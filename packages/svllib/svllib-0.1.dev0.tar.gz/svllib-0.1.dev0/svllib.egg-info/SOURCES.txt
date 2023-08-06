@@ -1,0 +1,9 @@
+README.md
+setup.py
+svl/__init__.py
+svl/parser.py
+svl/test/__init__.py
+svllib.egg-info/PKG-INFO
+svllib.egg-info/SOURCES.txt
+svllib.egg-info/dependency_links.txt
+svllib.egg-info/top_level.txt
