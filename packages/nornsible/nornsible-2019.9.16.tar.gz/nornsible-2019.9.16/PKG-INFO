@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: nornsible
+Version: 2019.9.16
+Summary: Wrapper for tags and host/group limiting for nornir scripts.
+Home-page: UNKNOWN
+Author: Carl Montanari
+Author-email: carl.r.montanari@gmail.com
+License: UNKNOWN
+Description: ![](https://github.com/carlmontanari/nornsible/workflows/build/badge.svg)
+        [![PyPI version](https://badge.fury.io/py/nornsible.svg)](https://badge.fury.io/py/nornsible)
+        [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+        [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+        [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        
+        nornsible
+        =======
+        
+        Wrap Nornir with Ansible-like host/group limits and tagging!
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
