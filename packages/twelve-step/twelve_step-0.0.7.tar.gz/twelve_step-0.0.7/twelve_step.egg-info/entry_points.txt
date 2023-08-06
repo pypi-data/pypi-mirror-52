@@ -1,0 +1,3 @@
+[console_scripts]
+twelve-step = twelve_step.main:main
+
