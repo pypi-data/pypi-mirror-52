@@ -1,0 +1,12 @@
+zstdarchiver/__init__.py,sha256=QFrI-8QFMCLUI7ysWq3GW_wfPCvlSBYOeUeXrghvo7w,666
+zstdarchiver/zstdarchiver.py,sha256=dEvnqBF0UWk3N7lmHkta8OAMOThFKDR0vDna5RNETzM,32274
+zstdarchiver/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zstdarchiver/plugins/crypt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zstdarchiver/plugins/crypt/default.py,sha256=U4784c1f6J69wk3MBfP-ZYt5BG4NDK1gRIk2WXqcbf4,4404
+zstdarchiver/plugins/meta/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zstdarchiver/plugins/meta/mozilla.py,sha256=e1k5p5cIHedMBGFBo4LVOOlsRLYajMOToq9XUztC49c,2112
+zstdarchiver-0.2.0.dist-info/LICENSE.txt,sha256=39ZHmwKAPHjTY8ILjgyYTyk3o4UY7jvNMAKc4oSVI_E,1126
+zstdarchiver-0.2.0.dist-info/METADATA,sha256=_Bei0cOyiMUxYzUF6MZEu1MQaQVKwEi3PehVgFTvewU,812
+zstdarchiver-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+zstdarchiver-0.2.0.dist-info/top_level.txt,sha256=ZpPcdiZpa6T70DRgPm1JfX6kTgt65nz51kaT1W4W9p8,13
+zstdarchiver-0.2.0.dist-info/RECORD,,

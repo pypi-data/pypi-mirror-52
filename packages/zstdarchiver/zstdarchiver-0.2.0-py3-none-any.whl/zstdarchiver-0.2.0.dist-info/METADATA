@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zstdarchiver
+Version: 0.2.0
+Summary: The Z-Archiver. A fast archiving module.
+Home-page: https://github.com/brmmm3/zstdarchiver
+Author: Martin Bammer
+Author-email: mrbm74@gmail.com
+License: MIT
+Download-URL: https://github.com/brmmm3/zstdarchiver/releases/download/0.2.0/zstdarchiver-0.2.0.tar.gz
+Keywords: zip archiving
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: fastthreadpool
+Requires-Dist: msgpack
+Requires-Dist: zstandard
+Requires-Dist: cryptography
+
+UNKNOWN
+
+
