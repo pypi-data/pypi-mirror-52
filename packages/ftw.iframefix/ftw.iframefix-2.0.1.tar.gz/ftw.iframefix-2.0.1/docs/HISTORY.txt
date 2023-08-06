@@ -1,0 +1,29 @@
+Changelog
+=========
+
+
+2.0.1 (2019-09-16)
+------------------
+
+- Add Plone 5.1 support. [jone]
+
+
+2.0.0 (2017-07-05)
+------------------
+
+- Provide mixins for various fixes. [Kevin Bieri]
+
+- Require ftw.theming 1.10.2. [Kevin Bieri]
+
+- Introduce general CSS-selectors for fixes [Kevin Bieri]
+
+
+1.0.0 (2017-03-29)
+------------------
+
+- Introduce iframe fixes  [Kevin Bieri]
+
+  - webkit iframe resize bug
+  - ie iframe pointer events propagation
+
+- Initial implementation.  [Kevin Bieri]

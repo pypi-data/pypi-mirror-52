@@ -1,0 +1,16 @@
+/*
+  Video- and iFrame-blocks contain iframes. Internet Explorer and Edge are not able to handle
+  pointer events properly on iframes. This means that all events are not propagated up through
+  the iframe. This causes the simplelayout toolbar to stay invisible. So disable pointer events
+  on Video- and iFrame-blocks. This way the user is able to edit these blocks but unable to interact
+  with the iframe itself.
+  IE10 and older MS browsers don't know pointer-events, so this selector won't work for them.
+*/
+
+@mixin fix-iframe-cursor() {
+  cursor: not-allowed;
+}
+
+@mixin fix-iframe-hover() {
+  pointer-events: none;
+}

@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: ftw.iframefix
+Version: 2.0.1
+Summary: ftw.iframefix
+Home-page: https://github.com/4teamwork/ftw.iframefix
+Author: 4teamwork AG
+Author-email: mailto:info@4teamwork.ch
+License: GPL2
+Description: .. contents:: Table of Contents
+        
+        
+        Introduction
+        ============
+        
+        This packages includes various browser vendor fixes for iframe-specific issues.
+        
+        Compatibility
+        -------------
+        
+        Plone 4.3.x
+        Plone 5.1.x
+        
+        
+        Installation
+        ============
+        
+        - Add the package to your buildout configuration:
+        
+        ::
+        
+            [instance]
+            eggs +=
+                ...
+                ftw.iframefix
+        
+        
+        Development
+        ===========
+        
+        1. Fork this repo
+        2. Clone your fork
+        3. Shell: ``ln -s development.cfg buildout.cfg``
+        4. Shell: ``python bootstrap.py``
+        5. Shell: ``bin/buildout``
+        
+        Run ``bin/test`` to test your changes.
+        
+        Or start an instance by running ``bin/instance fg``.
+        
+        
+        Links
+        =====
+        
+        - Github: https://github.com/4teamwork/ftw.iframefix
+        - Issues: https://github.com/4teamwork/ftw.iframefix/issues
+        - Pypi: http://pypi.python.org/pypi/ftw.iframefix
+        
+        
+        Copyright
+        =========
+        
+        This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
+        
+        ``ftw.iframefix`` is licensed under GNU General Public License, version 2.
+        
+        Changelog
+        =========
+        
+        
+        2.0.1 (2019-09-16)
+        ------------------
+        
+        - Add Plone 5.1 support. [jone]
+        
+        
+        2.0.0 (2017-07-05)
+        ------------------
+        
+        - Provide mixins for various fixes. [Kevin Bieri]
+        
+        - Require ftw.theming 1.10.2. [Kevin Bieri]
+        
+        - Introduce general CSS-selectors for fixes [Kevin Bieri]
+        
+        
+        1.0.0 (2017-03-29)
+        ------------------
+        
+        - Introduce iframe fixes  [Kevin Bieri]
+        
+          - webkit iframe resize bug
+          - ie iframe pointer events propagation
+        
+        - Initial implementation.  [Kevin Bieri]
+        
+Keywords: ftw iframefix
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.3
+Classifier: Framework :: Plone :: 5.1
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: tests

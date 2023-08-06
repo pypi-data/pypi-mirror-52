@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ftw.iframefix">
+
+    <browser:resourceDirectory name="ftw.iframefix" directory="resources" />
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include file="resources/resources.zcml" />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="ftw.iframefix default"
+        directory="profiles/default"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="ftw.iframefix : uninstall"
+        directory="profiles/uninstall"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+        />
+
+    <include package="ftw.upgrade" file="meta.zcml" />
+
+    <upgrade-step:directory
+        profile="ftw.iframefix:default"
+        directory="upgrades"
+        />
+
+</configure>

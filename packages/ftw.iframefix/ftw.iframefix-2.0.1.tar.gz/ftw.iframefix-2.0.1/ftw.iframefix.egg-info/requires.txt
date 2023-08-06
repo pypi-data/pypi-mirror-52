@@ -1,0 +1,11 @@
+Plone
+setuptools
+ftw.upgrade
+ftw.theming>=1.10.2
+
+[tests]
+ftw.builder
+ftw.testbrowser
+ftw.testing
+plone.app.testing
+plone.testing

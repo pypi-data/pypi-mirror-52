@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:theme="http://namespaces.zope.org/ftw.theming"
+    i18n_domain="ftw.iframefix">
+
+    <include package="ftw.theming" />
+
+    <theme:resources profile="ftw.iframefix:default" slot="mixins">
+        <theme:scss file="scss/iefixes.scss" />
+        <theme:scss file="scss/webkitfixes.scss" />
+    </theme:resources>
+
+</configure>

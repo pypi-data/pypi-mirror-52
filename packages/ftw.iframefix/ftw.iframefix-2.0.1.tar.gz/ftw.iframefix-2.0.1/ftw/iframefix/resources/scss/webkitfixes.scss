@@ -1,0 +1,14 @@
+/*
+  According to https://bugs.webkit.org/show_bug.cgi?id=155198 there is a
+  webkit bug which resizes iframes incorrectly on orientation change.
+  This bug can be reproduced on safari webkit on iPhone devices.
+
+  There is a workaround in the ampproject: https://github.com/ampproject/amphtml/pull/2502
+*/
+@include webkit-only {
+  iframe[width*="100%"], iframe[style*="width:100%"] {
+    width: 1px !important;
+    min-width: 100% !important;
+  }
+}
+
