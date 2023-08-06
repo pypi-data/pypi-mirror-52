@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: cobra2fn
+Version: 0.1
+Summary: Transform a cobra model into a flexible net
+Home-page: https://bitbucket.org/Julvez/cobra2fn
+Author: Jorge Julvez
+Author-email: fnyzer@unizar.es
+License: GNU GENERAL PUBLIC LICENSE
+Description: # cobra2fn
+        
+        Transform a [cobra model](https://opencobra.github.io/cobrapy/) into a flexible net
+        
+        ## Installation
+        ```
+        pip install cobra2fn
+        ```
+        
+        ## Use
+        ```
+        from cobra2fn import cobra2fn
+        import cobra
+        model = cobra.io.read_sbml_model('MODELXXX.xml')
+        fnet = cobra2fn(model)
+        ```
+        
+Keywords: cobra sbml flexible nets
+Platform: UNKNOWN
