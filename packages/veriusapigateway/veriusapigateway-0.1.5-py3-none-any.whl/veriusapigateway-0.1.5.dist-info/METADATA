@@ -1,0 +1,395 @@
+Metadata-Version: 2.1
+Name: veriusapigateway
+Version: 0.1.5
+Summary: API Gateway for accessing Verius Web Services.
+Home-page: https://bitbucket.org/veriusai/veriusapigateway/
+Author: İlke Elvan
+Author-email: ilke.elvan@verius.com.tr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# PROJECT DESCRIPTION
+
+A Gateway for VeriUs Text Mining API.
+Version: 0.1.5-beta (Anything on this document is subject to change.)
+Please always use the most recent version.
+---
+
+## Authentication
+
+VeriUs Text API’s uses "API KEY"s to authenticate incoming requests.
+You should pass in your "API KEY" while creating the VeriUsAPI Object.
+
+###### INFO
+
+- You must replace **“$API_KEY”** with your **“API KEY”**.
+- Since our services are constantly get updated results in this page may or may not represent actual values.
+
+---
+## Installation and Importation
+
+```
+$ pip install requests
+$ pip install veriusapigateway
+$ python3
+from veriusapigateway import VeriUsAPIGateway
+VeriUsAPI = VeriUsAPIGateway("$API_KEY")
+```
+
+---
+## Text Similarity
+
+**Estimate the degree of similarity between two texts**
+
+**Usage:**
+
+```
+text1 = "Artificial intelligence (AI), the ability of a digital computer or computer-controlled robot to perform tasks commonly associated with intelligent beings."
+text2 = "AI (artificial intelligence) is the simulation of human intelligence processes by machines, especially computer systems."
+VeriUsAPI.text_similarity(text1, text2)
+{'result': 0.4136701519960154}
+```
+
+---
+## Language Detection
+
+**Detect the language of a text.**
+
+**Usage:**
+
+```
+text = "Yapay zeka (AI), bir dijital bilgisayarın veya bilgisayar kontrollü robotun, akıllı varlıklar ile yaygın olarak ilişkili görevleri gerçekleştirme kabiliyetidir."
+VeriUsAPI.language(text)
+{'result': 'tr'}
+```
+
+---
+## Abusive Content Detection
+
+**Check if a sentence is abusive or not.**
+
+**Usage:**
+
+```
+text = "Yapay zeka (AI), bir dijital bilgisayarın veya bilgisayar kontrollü robotun, akıllı varlıklar ile yaygın olarak ilişkili görevleri gerçekleştirme kabiliyetidir."
+VeriUsAPI.abusive(text)
+{'confidency': '0.9427243215855821', 'result': 'Non-abusive'}
+```
+
+---
+## Text Summarization
+
+**Summarize with the major points of the original document.**
+
+**Usage:**
+
+```
+text = "Bir kedi varmış, çok yalnızmış.  Çünkü kedi, annesini ve babasını kaybetmiş.Her gün yollarda gezermiş aç aç. Çöplükte yaşarmış. Bir gün bir evin yanından geçerken bir çocuğa rastlamış. Çocuk kediyi 2-3 dakika sevdikten sonra onu evine götürmüş, kedi ise hiç bir şey dememiş çünkü kedi hiç  Olamaz çünkü onun bir ailesi var demiş. Ancak çocuk ısrar etmiş ve babasını ikna etmiş. Çocuk da mutluymuş kedi  de. Kediyi beslemeye başlamışlar. 1 sene geçtikten sonra kedinin annesi ve babası ortaya çıkmış. Yavrularını bulmak için çabalamışlar ve sonunda bulmuşlar. Kedi ilk önce gitmek istememiş fakat annesi babası olduğunu anlayınca hemen onların yanına gitmiş. Çocuk ağlamaya başlamış.-Anladım baba, mutlu mutlu yaşasınlar, demiş. Kedi ve ailesi yola çıkmışlar, iyi bir hayata yeniden başlamışlar."
+VeriUsAPI.summary(text)
+{'result': 'Çocuk kediyi 2-3 dakika sevdikten sonra onu evine götürmüş, kedi ise hiç bir şey dememiş çünkü kedi hiç  Olamaz çünkü onun bir ailesi var demiş. Çocuk da mutluymuş kedi  de.'}
+
+```
+
+---
+## Keyword Extraction
+
+**Identify terms that best decribe the subject of a document.**
+
+**Usage:**
+
+```
+text = "Carl Sagan, Dünya dışında akıllı hayatın araştırılmasından yanaydı. Bilim dünyasını, Dünya dışı akıllı yaşam formlarından gelen sinyalleri dinlemek için büyük radyo-teleskopları kullanmaya sevk etmiştir. Diğer gezegenlere sondalar gönderilmesi gerektiğini savunmuştur. Carl Sagan, 12 yıl boyunca Icarus dergisinin editörlüğünü yapmıştır. Planetary Society nin kurucularındandır. Carl Sagan, SETI Enstitüsü nün yönetim kurulunun bir üyesiydi."
+VeriUsAPI.keywords(text)
+{'result': 'Carl Sagan Akıllı'}
+```
+
+---
+## Entity Extraction
+
+**Identify relevant nouns (people, places and organizations) that are mentioned in a text.**
+
+**Usage:**
+
+```
+text = "Merhaba ben Ahmet, nasılsınız?"
+VeriUsAPI.named_entitites(text)
+{'word_list': ['Merhaba', 'ben', 'Ahmet', ',', 'nasılsınız', '?'], 'prediction_list': ['O', 'O', 'B-PERSON', 'O', 'O', 'O']}
+```
+
+---
+## Distorted Language Detection
+
+**A fun project to detect distorted language spoken by the white collar.**
+
+**Usage:**
+
+```
+text = "Gelecek hafta için bir toplantı assign edip brainstorming yapalım ve bir an önce bu konuda aksiyon alalım çünkü deadline yaklaşıyor."
+VeriUsAPI.distorted(text)
+{'result': '0.9992382579798134'}
+```
+
+---
+## Intent Detection
+
+**Determine the expressed intent of given text.**
+
+**Usage:**
+
+```
+text = "Merhaba banka hesabı açmak istiyorum yardımcı olabilir misiniz?"
+VeriUsAPI.intent(text)
+{'result': 'QUERY'}
+```
+
+---
+## Normalization
+
+**Normalize a given sentence to its proper written form**
+
+**Usage:**
+
+```
+text = "@dida bi yere gitcem büttttttüüüünnnnn insanlar hür, haysiyet ve haklari bakimindan e$it doğarlaaaar."
+VeriUsAPI.normal(text)
+{'result': '@mansiyon[@dida] bir yere gideceğim bütün insanlar hür , haysiyet ve haklar bakımından eşit doğarlar .'}
+```
+
+---
+## Deasciifier
+
+**Replace ascii characters with Turkish characters**
+
+**Usage:**
+
+```
+text = "Dun yolda bir kedi gordum, cok sevımlıydı. Hemen alıp cantama koydum ve eve getırdım."
+VeriUsAPI.deasciified(text)
+{'result': 'Dün yolda bir kedi gördüm, çok sevimliydi. Hemen alıp çantama koydum ve eve getirdim.'}
+```
+
+---
+## Morphological Analysis
+
+**Decompose a given text to its morphogical characteristics**
+
+**Usage:**
+
+```
+text = "Bütün insanlar hür , haysiyet ve haklar bakımından eşit doğarlar ."
+VeriUsAPI.morphology(text)
+{'result': '[[bütün:Adj] bütün:Adj, [insan:Noun] insan:Noun+lar:A3pl, [hür:Adj] hür:Adj, [,:Punc] ,:Punc, [haysiyet:Noun] haysiyet:Noun+A3sg, [ve:Conj] ve:Conj, [hak:Noun] hak:Noun+lar:A3pl, [bakım:Noun] bakım:Noun+A3sg+ı:P3sg+ndan:Abl, [eşit:Adj] eşit:Adj, [doğmak:Verb] doğ:Verb+ar:Aor+lar:A3pl, [.:Punc] .:Punc]'}
+```
+
+---
+## Sexual Content Detection
+
+**An aggressive service to detect sexual content**
+
+**Usage:**
+
+```
+text = "Senden her yerin gözükecek şekilde fotoğraf istiyorum."
+VeriUsAPI.sexual(text)
+{'confidency': 0.9279416838064626, 'result': 'SEXUAL'}
+```
+
+---
+## Gibberish Detection
+
+**Detect whether words in a sentence are meaningful or not**
+
+**Usage:**
+
+```
+text = "RÖHAEHÖHEY. Gülmeyi unuttuk be Hüseyin."
+VeriUsAPI.gibberish(text)
+{'result': 'GIBBERISH'}
+```
+
+---
+## Sentence Tokenizer
+
+**Decompose a given text to its sentences**
+
+**Usage:**
+
+```
+text = "Geçen gün o geldi ama neden geldi hala belli değil."
+VeriUsAPI.sentence_tokens(text)
+{'result': ['Geçen gün o geldi', 'ama neden geldi', 'hala belli değil .']}
+```
+
+
+---
+## Sentiment Classification
+
+**Determine whether a text is positive or negative**
+
+**Usage:**
+
+```
+text = "Bu ürünü hiç beğenmedim, iade etmek istiyorum."
+VeriUsAPI.sentiment(text)
+{'result': 'Negative'}
+```
+
+
+---
+## Turkish Stemmer
+
+**Find roots of given words in a sentence**
+
+**Usage:**
+
+```
+text = "Büyük haberlerle geldim sana."
+VeriUsAPI.stem(text)
+{'result': 'Büyük haber gel sen .'}
+```
+
+
+---
+## Topic Detection (Electronic Shop Domain)
+
+**Extract relevant topics from a given complaint on a specific domain**
+
+**Usage:**
+
+```
+text = "güven veren güler yüzlü eleman enes için teşekkür ederim"
+VeriUsAPI.topics_electronics(text)
+{'result': ['personel', 'teşekkür']}
+```
+
+
+---
+## Topic Detection (Clothing Domain)
+
+**Extract relevant topics from a given complaint on a specific domain**
+
+**Usage:**
+
+```
+text = "pantolon aldım 200 lira para verdim. İndirim yok mu hiç?"
+VeriUsAPI.topics_clothing(text)
+{'result': ['ürün', 'fiyat_kampanya']}
+```
+
+
+---
+## Topic Detection (Banking Domain)
+
+**Extract relevant topics from a given complaint on a specific domain**
+
+**Usage:**
+
+```
+text = "güven veren güler yüzlü eleman enes için teşekkür ederim"
+VeriUsAPI.topics_banking(text)
+{'result': ['personel', 'teşekkür']}
+```
+
+
+---
+## Topic Detection (Hospital Domain)
+
+**Extract relevant topics from a given complaint on a specific domain**
+
+**Usage:**
+
+```
+text = "Doktor beyden çok memnun kaldım. Teşekkürler."
+VeriUsAPI.topics_hospital(text)
+{'result': ['hekimlik_hizmeti', 'teşekkür']}
+```
+
+
+---
+## Topic Detection (Retail Domain)
+
+**Extract relevant topics from a given complaint on a specific domain**
+
+**Usage:**
+
+```
+text = "market içinde mevcut kötü bir koku var; balık, et ve peynir reyonundan geliyor."
+VeriUsAPI.topics_market(text)
+{'result': ['ortam', 'ürün']}
+```
+
+
+---
+## Taxonomy
+
+**Classify the description of web sites**
+
+**Usage:**
+
+```
+text = "VeriUs teknoloji servis olarak yapay zeka (AIaaS) ürünleri geliştiren çeşitli yapay zeka, makine öğrenmesi, metin madenciliği, doğal dil isleme ve sosyal ağ analizi servisleri ve danışmanlığı sağlayan bir yapay zeka servis sağlayıcıdır. Ekibimiz oldukça donanımlı Yapay Zeka araştırmacıları, makine öğrenmesi yazılım mühendisleri ve veri bilimcilerden oluşmaktadır. Şirketin kurucusunun 15+ yıl akademik ve uygulamalı makine öğrenmesi ve metin madenciliği tecrübesi bulunmaktadır. Bir üniversite spin-off şirketi olarak VeriUs bu akademik araştırma tecrübesi ve üniversite araştırma grupları ve laboratuvarındaki birikmiş olan bilgiyle desteklenmektedir. İsmimiz VeriUs Türkçe Veri ve Us yani zeka kelimelerinin birleşiminden oluşmaktadır. İsmimiz odak noktamızı vurgulamaktadır; veri analizi ve yapay zeka."
+VeriUsAPI.taxonomy(text)
+{'result': 'Bilgisayar'}
+```
+
+
+---
+## Arabic Sentiment Classification
+
+**Determine whether a text is positive or negative**
+
+**Usage:**
+
+```
+text = "لم يعجبني هذا المنتج وأردت إعادته"
+VeriUsAPI.arabic_sentiment(text)
+{'result': 'Negative'}
+```
+
+
+---
+## Arabic News Classification
+
+**Classify the subject of the given news**
+
+**Usage:**
+
+```
+text = "ينتظر لاعب فريق نابولي الإيطالي لكرة القدم للشباب، جيانلوكا غايتانو، مستقبل كروي مشرق نظرا لإمكانياته ومهاراته الفنية العالية، والتحاقه بالفريق الأول ليس إلا مسألة وقت.واستعرض جيانلوكا غايتانو مهاراته الفنية العالية، كما يظهر في الفيديو الملحق، خلال مباراة فريقه ضد كالياري، فقد انطلق اللاعب الواعد من منتصف الملعب تقريبا وراوغ عددا من اللاعبين ومن ثم حارس المرمى قبل أن يسجلا هدفا جميلا، واستغرق كل ذلك ثماني ثوان فقط."
+VeriUsAPI.arabic_news_class(text)
+{'result': 'SPORTS'}
+```
+
+
+---
+## Arabic Text Summarization
+
+**Summarize with the major points of the original document in Arabic**
+
+**Usage:**
+
+```
+text = "كانت حادثة استهداف موكب رئيس الوزراء الفلسطيني، رامي الحمد الله، في قطاع غزة خلال شهر مارس/ آذار الماضي، صادمة للشارع الفلسطيني، وأصابت جهد تحقيق المصالحة الداخلية في مقتل، لا سيما بعدما تلاها من اتهام السلطة الفلسطينية المباشر لحركة حماس بوقوفها خلف الحادث .وجاءت الزيارة في حينه بعد إتمام اتفاق بين حركتي فتح وحماس وبحضور الجانب المصري في القاهرة في أكتوبر / تشرين الأول من عام 2017، والذي نص على تسليم حكومة الوفاق مهامها في وزارات ومؤسسات قطاع غزة، وتسليم المعابر لأمن السلطة الفلسطينية. أعقاب ذلك الاتفاق كانت حكومة الوفاق قد أعلنت حلها قضية رواتب عشرات الآلاف من الموظفين الذين عُينوا بعد تولي حركة حماس الحكم في غزة، من موازنتها لعام 2018، وأعلنت الحكومة الفلسطينية أن حركة حماس أعاقت تمكين حكومة الوفاق في غزة. هدد زعيم حركة فتح، رئيس السلطة الفلسطينية، محمود عباس، في الشهر ذاته، باتخاذ مزيد من الإجراءات القانونية والمالية ضد حركة حماس ما لم تلتزم الأخيرة باتفاقيات المصالحة المتعاقبة، وتُمكن حكومة الوفاق من عملها في القطاع بشكل كامل وفعل حركة حماس فأكدت أنها سلمت بالفعل السيطرة الكاملة لحكومة الوفاق، والمعابر لأمن السلطة الفلسطينية، موجهة الاتهام لحركة فتح والسلطة الفلسطينية بالمماطلة في رفع ما وصفته بعقوباتها عن قطاع غزة. وقال القيادي في حركة حماس, أحمد يوسف لبي بي سي نحن التزمنا بكل ما علينا لتمكين حكومة الوفاق، وطرحنا إمكانية وجود طرف ثالث مكون إما من الإطار القيادي الفلسطيني المؤقت أو وفد من المصريين، للإقامة في قطاع غزة وليحكموا على مسألة التمكين من عدمها وبالمواصفات التي ترضي حركتي فتح وحماس.. التمكين موجود وهناك استحقاقات وذمم مالية للموظفين في عنق الحكومة يجب التعامل معها لضمان هذا التمكين أيضا، الحكومة وفتح في رام الله لديهم اعتراضات ويبدو أنهم غير راغبين بالقدوم وتحمل المسؤولية في قطاع غزة، فهم يواصلون التهرب ووضع الاشتراطات على حركة حماس"
+VeriUsAPI.arabic_summary(text)
+{'result': 'كانت حادثة استهداف موكب رئيس الوزراء الفلسطيني، رامي الحمد الله، في قطاع غزة خلال شهر مارس/ آذار الماضي، صادمة للشارع الفلسطيني، وأصابت جهد تحقيق المصالحة الداخلية في مقتل، لا سيما بعدما تلاها من اتهام السلطة الفلسطينية المباشر لحركة حماس بوقوفها خلف الحادث .وجاءت الزيارة في حينه بعد إتمام اتفاق بين حركتي فتح وحماس وبحضور الجانب المصري في القاهرة في أكتوبر / تشرين الأول من عام 2017، والذي نص على تسليم حكومة الوفاق مهامها في وزارات ومؤسسات قطاع غزة، وتسليم المعابر لأمن السلطة الفلسطينية.'}
+```
+
+
+
+---
+## Arabic Keyword Extraction
+
+**Identify terms that best describe the subject of a document in Arabic**
+
+**Usage:**
+
+```
+text = "كانت حادثة استهداف موكب رئيس الوزراء الفلسطيني، رامي الحمد الله، في قطاع غزة خلال شهر مارس/ آذار الماضي، صادمة للشارع الفلسطيني، وأصابت جهد تحقيق المصالحة الداخلية في مقتل، لا سيما بعدما تلاها من اتهام السلطة الفلسطينية المباشر لحركة حماس بوقوفها خلف الحادث .وجاءت الزيارة في حينه بعد إتمام اتفاق بين حركتي فتح وحماس وبحضور الجانب المصري في القاهرة في أكتوبر / تشرين الأول من عام 2017، والذي نص على تسليم حكومة الوفاق مهامها في وزارات ومؤسسات قطاع غزة، وتسليم المعابر لأمن السلطة الفلسطينية. أعقاب ذلك الاتفاق كانت حكومة الوفاق قد أعلنت حلها قضية رواتب عشرات الآلاف من الموظفين الذين عُينوا بعد تولي حركة حماس الحكم في غزة، من موازنتها لعام 2018، وأعلنت الحكومة الفلسطينية أن حركة حماس أعاقت تمكين حكومة الوفاق في غزة. هدد زعيم حركة فتح، رئيس السلطة الفلسطينية، محمود عباس، في الشهر ذاته، باتخاذ مزيد من الإجراءات القانونية والمالية ضد حركة حماس ما لم تلتزم الأخيرة باتفاقيات المصالحة المتعاقبة، وتُمكن حكومة الوفاق من عملها في القطاع بشكل كامل وفعل حركة حماس فأكدت أنها سلمت بالفعل السيطرة الكاملة لحكومة الوفاق، والمعابر لأمن السلطة الفلسطينية، موجهة الاتهام لحركة فتح والسلطة الفلسطينية بالمماطلة في رفع ما وصفته بعقوباتها عن قطاع غزة. وقال القيادي في حركة حماس, أحمد يوسف لبي بي سي نحن التزمنا بكل ما علينا لتمكين حكومة الوفاق، وطرحنا إمكانية وجود طرف ثالث مكون إما من الإطار القيادي الفلسطيني المؤقت أو وفد من المصريين، للإقامة في قطاع غزة وليحكموا على مسألة التمكين من عدمها وبالمواصفات التي ترضي حركتي فتح وحماس.. التمكين موجود وهناك استحقاقات وذمم مالية للموظفين في عنق الحكومة يجب التعامل معها لضمان هذا التمكين أيضا، الحكومة وفتح في رام الله لديهم اعتراضات ويبدو أنهم غير راغبين بالقدوم وتحمل المسؤولية في قطاع غزة، فهم يواصلون التهرب ووضع الاشتراطات على حركة حماس"
+VeriUsAPI.arabic_keywords(text)
+{'result': 'حكومة حركة لحرك حماس الفلسطيني حكوم وفاق حرك فتح حماس وأعلن حكومة تمكين لتمكين التمكين السلط فلسطينية المصالحة وفعل بالفعل والسلطة غزة والمالية مالية الله رئيس حينه الحكم الحمد أحمد بعدم لاها بالقدوم حمل التهرب وضع ذ اتخاذ أعلنت عدم'}
+```
+
+
