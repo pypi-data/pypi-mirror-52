@@ -1,0 +1,4 @@
+[console_scripts]
+scouts = src.gui:main
+scouts-violins = src.violins:main [violins]
+
