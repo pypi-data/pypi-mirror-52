@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+codeomatic.egg-info/PKG-INFO
+codeomatic.egg-info/SOURCES.txt
+codeomatic.egg-info/dependency_links.txt
+codeomatic.egg-info/not-zip-safe
+codeomatic.egg-info/top_level.txt
+codeomatic/core/__init__.py
+codeomatic/core/ratelimit.py
