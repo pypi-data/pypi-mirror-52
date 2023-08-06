@@ -1,0 +1,3 @@
+[console_scripts]
+maderad = madera.scripts.maderad:main
+
