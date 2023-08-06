@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: jupyter-math
+Version: 0.0.1
+Summary: display and evaluate math on jupyter notebook
+Home-page: https://github.com/Madoshakalaka/jupyter-math
+Author: Matt Yan
+Author-email: syan4@ualberta.ca
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/Madoshakalaka/jupyter-math/issues
+Project-URL: Funding, https://github.com/Madoshakalaka/jupyter-math
+Project-URL: Say Thanks!, https://github.com/Madoshakalaka/jupyter-math
+Project-URL: Source, https://github.com/Madoshakalaka/jupyter-math
+Description: # jupyter-math
+        
+        [![Build Status](https://travis-ci.org/Madoshakalaka/jupyter-math.svg)](https://travis-ci.org/Madoshakalaka/jupyter-math)
+        [![codecov](https://codecov.io/gh/Madoshakalaka/jupyter-math/branch/master/graph/badge.svg)](https://codecov.io/gh/Madoshakalaka/jupyter-math)
+        [![PyPI version](https://badge.fury.io/py/jupyter-math.svg)](https://badge.fury.io/py/jupyter-math)
+        [![PyPI pyversions](https://img.shields.io/pypi/pyversions/jupyter-math.svg)](https://pypi.python.org/pypi/jupyter-math/)
+        
+        
+        ## Installation
+        
+        `pip install jupyter-math`
+        
+        ## What Does It Do
+        
+        evaluate and display math on jupyter notebook with latex
+        
+        ![what-does-it-do](https://raw.githubusercontent.com/Madoshakalaka/jupyter-math/master/readme_assets/glorious.png)
+        
+        ## How to Use
+        
+        Don't Use it.
+        
+        I just came this overnight.
+        
+        If you really want to use it.
+        
+        Go to [this notebook file](./tests/interactive_test.ipynb) to see some use cases.
+        
+        <!--
+        
+        add some help here 
+        
+        ```python
+        
+        ```
+        
+        -->
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >3.4, !=3.5.*,  <3.8
+Description-Content-Type: text/markdown
