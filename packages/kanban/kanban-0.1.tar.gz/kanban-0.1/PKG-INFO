@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kanban
+Version: 0.1
+Summary: Kanban application
+Home-page: https://github.com/Tastyep/Kanban
+Author: Luc Sinet
+Author-email: luc.sinet@gmail.com
+License: MIT
+Description: A Kanban application in command line interface
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
