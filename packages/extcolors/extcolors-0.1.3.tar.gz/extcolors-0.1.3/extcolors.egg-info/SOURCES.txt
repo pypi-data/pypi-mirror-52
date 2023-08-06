@@ -1,0 +1,10 @@
+README.rst
+setup.py
+extcolors/__init__.py
+extcolors/colorutil.py
+extcolors.egg-info/PKG-INFO
+extcolors.egg-info/SOURCES.txt
+extcolors.egg-info/dependency_links.txt
+extcolors.egg-info/entry_points.txt
+extcolors.egg-info/requires.txt
+extcolors.egg-info/top_level.txt
