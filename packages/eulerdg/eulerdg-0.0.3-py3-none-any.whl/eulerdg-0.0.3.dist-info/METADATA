@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: eulerdg
+Version: 0.0.3
+Summary: #本程序由高端设计编写，需要引用或者有建议请联系邮箱1481407566@qq.com#本程序模拟二代测序后的DNA碎片拼接过程，使用通常的暴风(brute force)算法耗费较多计算机算力#本程序使用欧拉回路算法加以个人改进，意图提供有竞争力的运算速度
+Home-page: https://github.com/pypa/sampleproject
+Author: DUAN GAO
+Author-email: 1481407566@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+#本程序由高端设计编写，需要引用或者有建议请联系邮箱1481407566@qq.com
+#本程序模拟二代测序后的DNA碎片拼接过程，使用通常的暴风(brute force)算法耗费较多计算机算力
+#本程序使用欧拉回路算法加以个人改进，意图提供有竞争力的运算速度
+
+
