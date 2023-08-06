@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: mdinteract
+Version: 0.2
+Summary: A Pandas interface to the analysis of biomolecular structures with MD trajectory support
+Home-page: https://github.com/MD-Studio/MDInteract
+Author: Marc van Dijk - VU University - Amsterdam
+Author-email: m4.van.dijk@vu.nl
+License: Apache Software License 2.0
+Download-URL: https://github.com/MD-Studio/MDInteract
+Description: UNKNOWN
+Keywords: MDStudio biomolecules interactions trajectories pandas
+Platform: Any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
