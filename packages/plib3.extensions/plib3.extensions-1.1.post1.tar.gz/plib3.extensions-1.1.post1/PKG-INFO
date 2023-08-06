@@ -1,0 +1,61 @@
+Metadata-Version: 1.1
+Name: plib3.extensions
+Version: 1.1.post1
+Summary: Useful Python 3 Python/C API functions.
+Home-page: http://pypi.org/project/plib3.extensions
+Author: Peter A. Donis
+Author-email: peterdonis@alum.mit.edu
+License: UNKNOWN
+Description: The PLIB3.EXTENSIONS package contains functions (and possibly,
+        in the future, other objects) exported from an extension
+        module written using the Python/C API. The general
+        philosophy of PLIB3 is to do everything possible in pure
+        Python, so the only functions that appear in this package
+        are those which by their very nature cannot be done in pure
+        Python.
+        
+        Note: PLIB3.EXTENSIONS works with Python 3. If you are using
+        Python 2.7, see the PLIB.EXTENSIONS package, available at
+        https://pypi.org/project/plib.extensions.
+        
+        The ``setup.py`` script for PLIB3.EXTENSIONS uses the ``setuputils``
+        helper module, which helps to automate away much of the
+        boilerplate in Python 3 setup scripts. This module is available
+        as a separate release at https://pypi.org/project/setuputils3.
+        
+        The PLIB3.EXTENSIONS Package
+        ----------------------------
+        
+        The following functions are available in the ``plib.extensions``
+        namespace:
+        
+        - The ``capsule_compare`` function checks whether two Capsules
+          wrap the same C-level pointer.
+        
+        Installation
+        ------------
+        
+        To install PLIB3.EXTENSIONS, you can simply run::
+        
+            $ python3 setup.py install
+        
+        at a shell prompt from the directory into which you
+        unzipped the source tarball (the same directory that this
+        README file is in). This will install PLIB3 and then
+        run each of the post-install scripts in the scripts
+        directory.
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: plib3.stdlib (>=1.1)
