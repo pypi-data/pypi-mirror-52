@@ -1,0 +1,3 @@
+[console_scripts]
+workdown = workdown.workdown:main
+
