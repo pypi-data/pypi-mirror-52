@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: polidoro-py-argument
+Version: 1.1.0
+Summary: Package to create command line arguments for Python.
+Home-page: https://github.com/heitorpolidoro/argument
+Author: Heitor Polidoro
+License: unlicense
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Argument [![Latest](https://img.shields.io/github/release/heitorpolidoro/argument.svg?label=latest)](https://github.com/heitorpolidoro/argument/releases/latest)
+Package to create command line arguments for Python.
+
+#### How to use:
+- Decorate the method you want to call from command line with `@Argument`.
+- Create a `ArgumentParser` (from this package not from argparse)
+- Call `parser.parse_args()`
+
+All keywords arguments are the same as in [argparse.ArgumentParser.add_argument](https://docs.python.org/3.7/library/argparse.html#the-add-argument-method) except for 'action' and 'nargs'.
+'action' is a custom Action created to run the decorated method and 'nargs' is the number of parameters in the decorated method. 
+
+
+
+###### Exemples:
+foo.py
+```
+
+from argument import Argument, ArgumentParser
+
+@Argument
+def bar():
+    print('hi')
+
+parser = ArgumentParser()
+parser.parse_args()
+```
+Result:
+```
+$ python foo.py --bar
+hi 
+```
+
+You can pass argument to the method
+```
+@Argument
+def bar(baz=None):
+    print(baz)
+```
+```
+$ python foo.py --bar Hello
+Hello
+```
+
+
+
+
