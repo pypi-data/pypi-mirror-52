@@ -1,0 +1,15 @@
+openctm/__init__.py,sha256=6W0bnHtn0_OskYLOecIwUf_APDdAJ2YiaoC4kxMjsbw,21
+openctm/compression.py,sha256=0-2gkwHNAK2Aqjdx-KTZt7MUlxPgFCqeiZB23ORxphE,1275
+openctm/ctm.py,sha256=cu4v5mCTCFl_s2qSgd-hsBOsHwaJabXKS_5GB3olFbw,2355
+openctm/header.py,sha256=rDserDbOgAhdBPjXzV1EwC_jMMuBVsBj-VD1jn4GflM,1277
+openctm/reader.py,sha256=vG2_q_al33I5K52c5q3Hqo7WiiTBpmX3Qko1S3P0kRQ,1076
+openctm/utils.py,sha256=Qg0f0yvwQu5V0T5EbDjfX00IjhfWvjr6xLNRTPiCmA0,4861
+openctm/version.py,sha256=y5oLnjIFOOBzZ4AKCmjm0C6UJGM0nWrVppZiBw-0LBI,162
+openctm/writer.py,sha256=0Wl3--r-_50Jz_f09TtKuQo6GvTLwOYgNfvAu3vbffQ,844
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=wGunKBXQEJgwDLabdpBG8NgkaDhvCA__VTD5Q7UGzNQ,623
+python_openctm_nightly-1.0.10a20199241437.dist-info/LICENSE,sha256=pKPhxZDXujhGkPijGHMdLAAaO9zrPhV18R80hDygI4U,2844
+python_openctm_nightly-1.0.10a20199241437.dist-info/METADATA,sha256=WW5VrG-qu-6Yw8RXkZvKNufI5d_dEaig0wZIUk4nmyo,1619
+python_openctm_nightly-1.0.10a20199241437.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+python_openctm_nightly-1.0.10a20199241437.dist-info/top_level.txt,sha256=npiHkFPKAtzYQ-J6FcBgOXfV2Qg6JCo99cB0Dk2JIsg,14
+python_openctm_nightly-1.0.10a20199241437.dist-info/RECORD,,
