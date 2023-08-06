@@ -1,0 +1,3 @@
+[molecule.verifier]
+goss = molecule_goss.goss:Goss
+
