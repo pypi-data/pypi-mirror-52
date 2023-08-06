@@ -1,0 +1,14 @@
+.gitignore
+.travis.yml
+README.md
+requirements.txt
+setup.py
+YTSAPI.egg-info/PKG-INFO
+YTSAPI.egg-info/SOURCES.txt
+YTSAPI.egg-info/dependency_links.txt
+YTSAPI.egg-info/entry_points.txt
+YTSAPI.egg-info/requires.txt
+YTSAPI.egg-info/top_level.txt
+ytsapi/__init__.py
+ytsapi/__main__.py
+ytsapi/ytsapi.py
