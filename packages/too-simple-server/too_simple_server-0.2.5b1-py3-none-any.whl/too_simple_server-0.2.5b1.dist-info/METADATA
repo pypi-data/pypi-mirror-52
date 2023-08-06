@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: too-simple-server
+Version: 0.2.5b1
+Summary: Simple web server stub for testing purposes (with a lot of dependencies)
+License: Apache-2.0
+Author: Anton Kachurin
+Author-email: anton.kachurin@t-systems.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: dataclasses (>=0.6.0,<0.7.0); python_version >= "3.6" and python_version < "3.7"
+Requires-Dist: docutils (==0.14)
+Requires-Dist: flask (>=1.1,<2.0)
+Requires-Dist: flask-restful (>=0.3.7,<0.4.0)
+Requires-Dist: lockfile (>=0.12.2,<0.13.0)
+Requires-Dist: ocomone (>=0.3.1,<0.4.0)
+Requires-Dist: peewee (>=3.9,<4.0)
+Requires-Dist: psycopg2-binary (>=2.8,<3.0)
+Requires-Dist: python-daemon (>=2.2,<3.0)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: wsgiserver (>=1.3,<2.0)
+Description-Content-Type: text/markdown
+
+### Simple Mock Server
+
+[![Build Status](https://travis-ci.com/opentelekomcloud-infra/Simple-Mock-Webserver.svg?branch=master)](https://travis-ci.com/outcatcher/Simple-Mock-Webserver)
+![PyPI](https://img.shields.io/pypi/v/too-simple-server)
+
+This is single-purpose web server having 2 endpoints:
+
+`/entities` — for listing all existing entities
+
+`/entity`, `/entity/<uuid>` — for creating and retrieving existing entities
+
+Server can use either debug sqlite DB or PostgreSQL database
+
+Server configuration is done with configuration yaml file:
+```yaml
+debug: true
+server_port: 5449 
+
+pg_bd_url: 'localhost:9999'
+pg_database: 'users'
+pg_username: 'admin'
+pg_password: 'qwertyui!'
+```
+
+Default location of configuration file is `/etc/too-simple/config.yml`,
+this can be changed using `--config` argument 
+
+Debug mode is switched using `--debug` argument and enabled by default
+
