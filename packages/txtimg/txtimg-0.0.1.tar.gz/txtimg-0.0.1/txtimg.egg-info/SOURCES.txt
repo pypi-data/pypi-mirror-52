@@ -1,0 +1,10 @@
+README.md
+setup.py
+txtimg/__init__.py
+txtimg/txtimg.py
+txtimg.egg-info/PKG-INFO
+txtimg.egg-info/SOURCES.txt
+txtimg.egg-info/dependency_links.txt
+txtimg.egg-info/requires.txt
+txtimg.egg-info/top_level.txt
+txtimg/fonts/Roboto-Regular.ttf

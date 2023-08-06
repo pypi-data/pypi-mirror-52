@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: txtimg
+Version: 0.0.1
+Summary: A library to easily create text-based images (e.g. images that primarily contain text).
+Home-page: https://github.com/yoongkang/txtimg
+Author: Yoong Kang Lim
+Author-email: yoongkang.lim@gmail.com
+License: UNKNOWN
+Description: # TxtImg
+        
+        A library to easily create text-based images (e.g. images that primarily contain text).
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
