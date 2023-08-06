@@ -1,0 +1,171 @@
+CHANGES
+=======
+
+* fix topic menu, remove documentation group
+* add first-seen update to script
+* Create logs (#55)
+* Adapt demo script
+* Rename env variables
+* Renaming EnvironmentVariableAbsence to MissingEnvironmentVariable
+* Rework testing module
+* Add supervisor (#39)
+* Topic are now iterables
+* Add topic and webclient in \_\_init\_\_
+* Delete useless generation of a Kirby Producer
+* Allow parameters to be passed to send function
+* Resolve rollback errors. Add explanation on errors
+* Correct queue ajax calls
+* Consumer now seek at an init\_time given as parameter. With a Topic, the Consumer is init with the init\_time as init\_time of the Topic
+* Delete duplicated test
+* Add missing requirement
+* Add a session\_id handled by the client. LogReader can create an independant group\_id
+* Make consumer lazy-loaded again
+* Old logs won't mix anymore. Use promises to wait for previous API calls
+* Old logs won't mix anymore. Use promises to wait for previous API calls
+* Now parse headers in Consumer.between function
+* Handle old logs time from the client's side
+* Resolve no offset error while rollback on no messages
+* Add close function for Topic
+* Add rollback feature
+* Refactor queue test
+* Refactor kirby.api.ext structure
+* Add scolling update old logs on frontend
+* Transform deletion on change of package\_name into a filter on package\_name
+* Add log filter on webpage
+* Improve display. Reduce length of milliseconds. Improve colors. Auto-scroll once on bottom of the div
+* Resolve getattr error
+* Adapt testing module to new architecture
+* Resolve import errors
+* Improve Topic/Queue/Log hierarchy. Now Queue and Log inherits from Topic. In Topic, separate Consumer and Producer. The latter are now lazy-loaded
+* Removing ctx as attribute from Kirby class
+* Resolve test error with the use of tls
+* Resolve error in next function (Topic). Adapt LogReader to new behaviour of Topic. Tests LogReader
+* Add nexts function to Topic and clarify function in Topic. Apply modifications to the Log view in the web end
+* Apply ctx modifications to testing module
+* Add ConfigException and check that a database URI is specified. (#56)
+* Add log in init
+* Resolve error in Topic test mode
+* Resolve env variable absence when instantiate web service
+* Connect log to Kafka. Supporting log levels automatic format
+* Test default\_level at Logger init. Add a LogReader
+* Resolve error of unique message
+* Allow next to return more than one record
+* Use new ctx instead of getenv
+* Context now more flexible for signature but raise error if there is no var env
+* Improving integration tests (#52)
+* Reworking of WebClient (#51)
+* add some schemas (#53)
+* Adding context manager to populate a topic (#49)
+* Improving demo script (#50)
+* Test mode for kirby apps (#48)
+* Fixing registration call (#46)
+* update travis password
+* update travis password
+* update travis password
+* fix travis config typo
+* add deploy password
+* release even dev versions from master
+* update metadata in setup.cfg
+* the name of the branch is master
+* Travis enable pypi (#43)
+* Add docs (#41)
+* Resolving test error
+* Improving coverage. Deleting read\_topic. Resolving tests errors
+* Adding handling errors from POST
+* Now using MagicMock instead of a custom implementation
+* Resolve import error for Queues
+* Adding WebClient
+* Adding tenacity as requirement
+* Make RETRIES and WAIT\_BETWEEN\_RETRIES env variables. Using tenacity. Modifying security\_protocol as ssl\_security\_protocol, which is a bool now
+* Topic is now a Context Manager
+* Making 'api.queue.Queue' inherit from 'api.ext.Topic'. Adding a retry decorator to handle Kafka errors. Rewriting tests
+* Comment variable since it is in .env file
+* Modifying Topic's 'bootstrap\_servers' var name, adding it in the .env file. Setting tests as integration tests
+* Modifying 'bad' ids
+* added some cosmetic changes to the UI
+* Delete return
+* Modifying errors
+* add exceptions for coverage
+* add coveragerc file
+* add integration tests around the Queue object
+* prevent double submission during wakeup window
+* fix multi-processing test
+* update requirements
+* we do not need to actually pop from a queue
+* add kafka-based queue
+* add queue
+* Added raising errors instead of assertions
+* Deleting load function and load automatically
+* Rewriting registration API
+* Delete useless variables
+* Adding Kirby.add\_source and Kirby.add\_destination and register at call
+* Adding tests
+* Adding kirby.ext
+* Adding Topic. Using Kafka
+* when starting the election process, don't wait for a full window time before participating in the election
+* make pre-commit tests pass
+* add extra pre-commit hooks
+* solve leader key premature expiration
+* add test for scheduler
+* add job parsing
+* add comments about the Election logic
+* Creating the Kirby API
+* add election process
+* Resolving error related to the demo
+* Merging with master
+* Now using pytest.raises. Adding test on update Schedule
+* preferably on the same line
+* add build info while we're at it
+* add requirements
+* enable coveralls
+* rename test
+* return variables during endpoint call
+* Validating schedule
+* Create CODE\_OF\_CONDUCT.md
+* Create LICENSE
+* add inline forms for config
+* add search box in config list
+* improve config edition screen
+* move demo code to specific module
+* add demo script
+* enable cache for pip packages in travis CI
+* fix is\_local comparison with Enum
+* make provider types an Enum
+* cosmetic changes on user screen
+* add travis integration
+* enable superuser creation
+* black
+* store roles in an Enum, make role checks use Enums
+* add tests around admin role
+* Now using pickle
+* add flask restplus dependency
+* Adding ContextManager and Context which handle passing environment variables to sub-processes
+* add first context test
+* Use start parameter in enumerate
+* Deleting useless imports
+* Adding environment description in the current schedule endpoint. Rewriting tests
+* Adding test for schedule at the current schedule endpoint
+* Renaming function
+* Refactoring tests
+* Splitting try-except statements at each query. Now rollback if any fails
+* Adding emails in the current schedule
+* Correcting error message
+* Adapt registration endpoint to the new model (now register a Script and not a Job anymore). Resolving models errors (set external\_keys to the real primary\_keys). Adding representation of rows of the model for readibility on the admin plateform
+* Clear code
+* Deleted the dangling prints
+* Primary keys has been reset to ids. Kept the unique constraint on names
+* Adding an API endpoint: schedule. Adding package\_version in the Context in the model
+* Removing useless model
+* The primary\_key of Environment and Job are now their names. Modifying relation between Schedule and Context as many-to-many. Adding Script and Topic tables
+* Adding a unique constraint on the name of a Job. Renamed error message when the constraint in not respected
+* Renaming base api that is mocked
+* Refactoring parsing arguments. Correct error message if bad request. Renaming class for registration endpoint
+* Creating tests for a registration endpoint. Adding a registration endpoint
+* Adding environment view in the admin app
+* Adding a secret key to the config for the app
+* add web UI
+* add at least one assertion to the model test
+* really interact with database
+* add draft db model
+* add project structure
+* Initial commit
