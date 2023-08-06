@@ -1,0 +1,3 @@
+[console_scripts]
+generate_photons_messages = photons_messages_generator.executor:main
+
