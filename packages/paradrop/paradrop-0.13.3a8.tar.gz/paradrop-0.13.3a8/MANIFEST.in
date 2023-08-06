@@ -1,0 +1,2 @@
+include paradrop/core/container/templates/Dockerfile-*.txt
+graft paradrop/static
