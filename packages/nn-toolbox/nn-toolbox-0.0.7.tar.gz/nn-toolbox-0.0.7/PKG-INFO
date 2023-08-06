@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: nn-toolbox
+Version: 0.0.7
+Summary: A toolbox for common deep learning procedures
+Home-page: https://github.com/nhatsmrt/nn-toolbox
+Author: Nhat Pham
+Author-email: nphamcs@gmail.com
+License: UNKNOWN
+Description: A toolbox for common deep learning components and procedures. For more information, please go to the GitHub repository.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
