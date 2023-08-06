@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Quantum-Ciphers
+Version: 3.0.1
+Summary: A package of diffenent easy-to-use text ciphers.
+Home-page: https://github.com/GrandMoff100/Quantum_Cipher2
+Author: Quantum_Wizard
+Author-email: minecraftcrusher100@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: omegamath01
+Requires-Dist: antigravity
+
+# Quantum_Cipher2
+
+Installation:
+    pip install Quantum_Cipher2
+
+
+
