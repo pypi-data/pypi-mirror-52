@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pyUntis
+Version: 0.3
+Summary: Python parser for Untis substitution tables
+Home-page: https://github.com/sn0wmanmj/pyUntis
+Author: Moritz Jannasch
+Author-email: contact@moritzj.de
+License: MIT
+Description: # pyUntis
+        
+        Initial working prototype for a Python parser for Untis substitution tables
+        
+        ## Todo
+        
+        - Cleanup and modularize code
+        - export JSON
+        
+        ## Installation
+        
+            pip install pyUntis
+        
+        ## Usage
+        
+            import pyuntis
+            
+            untis = pyuntis.PyUntis(data)
+            print(untis.parse())
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
