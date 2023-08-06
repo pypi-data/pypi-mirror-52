@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: snmp-fetch
+Version: 0.1.0
+Summary: An opinionated python SNMPv2 library built for rapid database ingestion.
+Author: Christopher Aubut
+Author-email: christopher@aubut.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: attrs (>=19.1,<20.0)
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: pandas (>=0.25,<0.26)
+Requires-Dist: toolz (>=0.10.0,<0.11.0)
