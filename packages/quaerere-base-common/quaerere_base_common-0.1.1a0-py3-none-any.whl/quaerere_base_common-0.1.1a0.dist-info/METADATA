@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: quaerere-base-common
+Version: 0.1.1a0
+Summary: Common elements used in the Quaerere Platform
+Home-page: https://github.com/QuaererePlatform/quaerere-base-common
+Author: Caitlyn O'Hanna
+Author-email: ravenoak@virtualxistenz.com
+License: AGPLv3+
+Project-URL: Documentation, http://quaerere-base-common.readthedocs.io/
+Project-URL: Source Code, https://github.com/QuaererePlatform/quaerere-base-common
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >= 3.6
+Requires-Dist: marshmallow (<3,>=2.16.0)
+
+About
+=====
+
+**quaerere-base-common** contains the common elements shared between components of the Quaerere Platform.
+
+
+Links
+-----
+
+* Documentation: http://quaerere-base-common.readthedocs.io/
+* PyPI: https://pypi.org/project/quaerere-base-common/
+* Source: https://github.com/QuaererePlatform/quaerere-base-common.git
+
+
+Installation
+============
+
+Using pip:
+
+.. code-block:: shell
+
+   pip install quaerere-base-common
+
+Or using setup.py:
+
+.. code-block:: shell
+
+   python setup.py install
+
+
+Tests can be ran using:
+
+.. code-block:: shell
+
+   python setup.py test
+
+
+Documentation can be generated using:
+
+.. code-block:: shell
+
+   python setup.py build_sphinx
+
+
+Usage
+=====
+
+
