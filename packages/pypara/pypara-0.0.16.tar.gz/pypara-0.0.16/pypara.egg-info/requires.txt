@@ -1,0 +1,9 @@
+python-dateutil==2.8.0
+
+[dev]
+ipython
+mypy
+flake8
+tox
+twine
+wheel
