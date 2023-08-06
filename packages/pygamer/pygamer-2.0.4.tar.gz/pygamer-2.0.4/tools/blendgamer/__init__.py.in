@@ -1,0 +1,108 @@
+# ***************************************************************************
+# This file is part of the GAMer software.
+# Copyright (C) 2016-2018
+# by Christopher Lee, Tom Bartol, John Moody, Rommie Amaro, J. Andrew McCammon,
+#    and Michael Holst
+
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# Lesser General Public License for more details.
+
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+# ***************************************************************************
+#
+
+bl_info = {
+        "name": "GAMer: Geometry-preserving Adaptive Mesher",
+        "description": "Utilities for generating finite elements simulation compatible meshes",
+        "author": "Christopher T. Lee, John B. Moody, Zeyun Yu, Tom Bartol, Johan Hake, and Michael Holst",
+        "version": (@PROJECT_VERSION_MAJOR@, @PROJECT_VERSION_MINOR@, @PROJECT_VERSION_PATCH@),
+        "blender": (2, 80, 0),
+        "location": "3D View > Tool Shelf",
+        "wiki_url": "https://github.com/ctlee/gamer",
+        "tracker_url": "https://github.com/ctlee/gamer/issues",
+        "support": 'COMMUNITY',
+        "category": "Mesh",
+    }
+
+if "bpy" in locals():
+    import importlib
+    importlib.reload(blendgamer)
+    importlib.reload(markers)
+    importlib.reload(meshstats)
+    importlib.reload(report)
+    importlib.reload(surfacemesh_ops)
+    importlib.reload(tetrahedralization)
+    importlib.reload(versions)
+    importlib.reload(ui)
+else:
+    from . import (
+            blendgamer,
+            markers,
+            meshstats,
+            report,
+            surfacemesh_ops,
+            tetrahedralization,
+            ui,
+            versions,
+            )
+
+# General import
+import bpy
+from bpy.props import PointerProperty
+
+# Tuple of modules to register
+modules = (markers,
+           meshstats,
+           surfacemesh_ops,
+           tetrahedralization,
+           ui,
+           versions,
+           blendgamer)
+
+def add_handler(handler_list, handler_function):
+    """ Only add a handler if it's not already in the list """
+    if not (handler_function in handler_list):
+        handler_list.append(handler_function)
+
+
+def remove_handler(handler_list, handler_function):
+    """ Only remove a handler if it's in the list """
+    if handler_function in handler_list:
+        handler_list.remove(handler_function)
+
+def register():
+    for module in modules:
+        module.register()
+
+    types = bpy.types
+    types.Scene.gamer = PointerProperty(type=blendgamer.GAMerAddonProperties)
+    types.Object.gamer = PointerProperty(type=markers.GAMerBoundaryMarkersList)
+    types.Material.gamer = PointerProperty(type=markers.GAMerBoundaryMaterial)
+
+    # Add the load_post handlers
+    add_handler(bpy.app.handlers.load_post, blendgamer.gamer_load_post)
+
+def unregister():
+    from bpy.utils import unregister_class
+
+    remove_handler(bpy.app.handlers.load_post, blendgamer.gamer_load_post)
+    types = bpy.types
+    del types.Material.gamer
+    del types.Object.gamer
+    del types.Scene.gamer
+
+    for module in reversed(modules):
+        module.unregister()
+
+# for testing
+if __name__ == '__main__':
+    register()
