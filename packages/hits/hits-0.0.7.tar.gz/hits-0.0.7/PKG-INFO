@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: hits
+Version: 0.0.7
+Summary: utilities for processing high-throughput sequencing experiments
+Home-page: https://github.com/jeffhussmann/hits
+Author: Jeff Hussmann
+Author-email: jeff.hussmann@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
