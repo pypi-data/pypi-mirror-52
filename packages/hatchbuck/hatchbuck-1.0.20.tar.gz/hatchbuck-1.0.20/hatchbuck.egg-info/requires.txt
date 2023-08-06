@@ -1,0 +1,5 @@
+requests>=2
+pycountry>=1
+
+[dev]
+tox
