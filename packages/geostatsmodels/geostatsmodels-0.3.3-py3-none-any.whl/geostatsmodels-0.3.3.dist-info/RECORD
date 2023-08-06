@@ -1,0 +1,13 @@
+geostatsmodels/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geostatsmodels/geoplot.py,sha256=SuBa4ZaQ0T-gkyF7on_jZDhyRnwp7eC2JqsUdUI6IKM,6299
+geostatsmodels/kriging.py,sha256=SkSEjJweeO76AVlJpOiQte735mu-ZK9qpikCIA4tN5Q,4042
+geostatsmodels/model.py,sha256=FwAuMp8Hchm3LyNfBuBfMG5zJ8F5ZlNRK6iRIIuQMCI,3637
+geostatsmodels/simulation.py,sha256=R0xXCOmUL6EQuscZcmGF6mqqKa-UWi8iOBHNmCf21GM,2688
+geostatsmodels/utilities.py,sha256=VheLoohKOnepz4JZ6MgoYTQtDymvK47ol9lOyM5EubY,4485
+geostatsmodels/variograms.py,sha256=oYzC0eTEw_rayP53lX62YW7irzAHkErqnc-HONSluxY,4975
+geostatsmodels/zscoretrans.py,sha256=ZzPOFLO-BqsFE7kjBKobx-DUy0Rr2PkrFJWEmMuNNF4,5012
+geostatsmodels-0.3.3.dist-info/AUTHORS.md,sha256=iWbTw4Hko1CoKfyE5XO7KPF10XD7v4CYywxgt8KTp9w,147
+geostatsmodels-0.3.3.dist-info/METADATA,sha256=qV-cE3Oz8yqR_pcu8nmy6ndre5huCgsEHWNdEE5x_rU,2610
+geostatsmodels-0.3.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+geostatsmodels-0.3.3.dist-info/top_level.txt,sha256=2-inhI3ctBtv5h3UwdVzHnhV-ShrWoYGqR7EEr8nb6s,15
+geostatsmodels-0.3.3.dist-info/RECORD,,
