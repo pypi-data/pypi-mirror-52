@@ -1,0 +1,16 @@
+django_oidc_user/__init__.py,sha256=TosS90vcoDos0-x9LkV3a-04p2CwcA4SW7EsGBeMgJg,66
+django_oidc_user/admin.py,sha256=fiD5G4RCI1OLRXERgvG0EsfR2TF0PHZe1xytSlbItwo,912
+django_oidc_user/apps.py,sha256=65I9qZnHMyfLpco1LrfTS1Ch4icQJwW0OgOxweDnaPc,133
+django_oidc_user/locales.py,sha256=8eU9vczmtX0iCSVCXniqvUL8NT50jCnia1Q8Nx57igo,617
+django_oidc_user/models.py,sha256=HV2jpGxiHo6cQgMmFQqjoC-3RvcJWnhQ3dsfBayePcU,2665
+django_oidc_user/oidc_provider.py,sha256=RpzQaRhs7JIINjZN1-hwBEeM-WtSHxs_yw182uvCdnE,512
+django_oidc_user/timezones.py,sha256=9QkUd2Q6-3OFTFkzBW4BDJHN7GwxoQ5KpA6JUi9s4FY,19355
+django_oidc_user/migrations/0001_initial.py,sha256=W001WprrmkofbqiR9lKgnLMQl-aIj0hAdjOxSRzEb7s,23134
+django_oidc_user/migrations/0002_add_is_verified_field.py,sha256=gq382KyFHM1ysoNBA2c10C0ofLQh8PpPSLY6EoXA3xo,1256
+django_oidc_user/migrations/0003_fix_locales.py,sha256=CGyinvom-JBiy7BcItze5ZwRexblJ9Q3djVgbjIDBOQ,1088
+django_oidc_user/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_oidc_user-0.3.4.dist-info/LICENSE,sha256=QeYxYsu9JEhtLs1sFsQcUHsveFwKzzAGLr-61K9QTW8,1072
+django_oidc_user-0.3.4.dist-info/METADATA,sha256=pdd3pudb4azCrGeEl5dw2L1enI_CjjEitJCx13d9r4A,1337
+django_oidc_user-0.3.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+django_oidc_user-0.3.4.dist-info/top_level.txt,sha256=ugpBKfrMsmAu-ghV19jrUAVHJmDiIEGI_QfBwHIfpew,17
+django_oidc_user-0.3.4.dist-info/RECORD,,
