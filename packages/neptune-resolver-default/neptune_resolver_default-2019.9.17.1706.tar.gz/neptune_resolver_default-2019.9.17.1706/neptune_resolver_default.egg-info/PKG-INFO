@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: neptune-resolver-default
+Version: 2019.9.17.1706
+Summary: DNS Resolver for Neptune DNS server
+Home-page: https://git.best-service.online/yurzs/triton
+Author: Yury (Yurzs)
+Author-email: dev@best-service.online
+License: MIT
+Description: # Basic dns resolver for Neptune DNS Server
+        This is a basic dns resolver for neptune dns server
+        ## Installation
+        
+        You can install from pypi.org or clone this repo
+        ### From PYPI
+        ```
+        pip3 install neptune_resolver_default
+        ```
+        ### From this repo
+        ```
+        git clone https://git.best-service.online/yurzs/neptune-default-resolver
+        cd neptune-default-resolver
+        python3 setup.py install
+        ```
+        ## How to use
+        In Neptune config file add 
+        ```
+        NEPTUNE_RESOLVER_DEFAULT = {
+            'resolvers': ['1.1.1.1', '8.8.8.8'] # Your favorite DNS resolvers
+        }
+        ```
+        
+Keywords: neptune,DNS,resolver
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
