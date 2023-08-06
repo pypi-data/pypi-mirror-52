@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: PSpincalc
+Version: 0.2.7
+Summary: Package for converting between attitude representations (DCM, Euler angles, Quaternions, and Euler vectors)
+Home-page: https://github.com/tuxcell/PSpincalc
+Author: Jose Gama
+Author-email: josephgama@yahoo.com
+Maintainer: tuxcell
+Maintainer-email: josephgama@yahoo.com
+License: UNKNOWN
+Description: A package for converting between attitude representations (DCM, Euler angles, Quaternions, and Euler vectors).
+        Plus conversion between 2 Euler angle set types (xyx, yzy, zxz, xzx, yxy, zyz, xyz, yzx, zxy, xzy, yxz, zyx).
+        Fully vectorized code, with warnings/errors for Euler angles (singularity, out of range, invalid angle order),
+        DCM (orthogonality, not proper, exceeded tolerance to unity determinant) and Euler vectors(not unity).
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown

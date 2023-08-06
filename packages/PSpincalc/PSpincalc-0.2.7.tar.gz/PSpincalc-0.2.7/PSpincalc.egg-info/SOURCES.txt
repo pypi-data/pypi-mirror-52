@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+PSpincalc/PSpincalc.py
+PSpincalc/__init__.py
+PSpincalc.egg-info/PKG-INFO
+PSpincalc.egg-info/SOURCES.txt
+PSpincalc.egg-info/dependency_links.txt
+PSpincalc.egg-info/top_level.txt
+examples/__init__.py
+examples/examplesPSpincalc.py
+tests/__init__.py
+tests/tests.py
