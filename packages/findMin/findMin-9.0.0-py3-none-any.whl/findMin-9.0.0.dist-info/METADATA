@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: findMin
+Version: 9.0.0
+Summary: Find the minimum in array using as few comparisons as possible
+Home-page: https://github.com/rafey.husain/findMin
+Author: Syed Rafey Husain
+Author-email: rafey.husain@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Given an array of elements that provide a less than operator, find the minimum using as few comparisons as possible. The array shall be given such that the first few elements are strictly monotonically decreasing, the remaining elements are strictly monotonically increasing. The less than operator be defined as the operator that works on such arrays where a < b if min(a,b) == a.
+
+
