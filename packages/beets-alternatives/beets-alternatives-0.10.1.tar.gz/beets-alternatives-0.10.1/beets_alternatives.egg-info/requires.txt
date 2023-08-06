@@ -1,0 +1,5 @@
+beets>=1.4.7
+six
+
+[:python_version < "3"]
+futures
