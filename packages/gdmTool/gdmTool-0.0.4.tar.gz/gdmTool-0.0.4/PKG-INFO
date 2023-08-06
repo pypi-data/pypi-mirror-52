@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: gdmTool
+Version: 0.0.4
+Summary: A dataset tool for converting all images in a folder into neural network recognition
+Home-page: http://www.cosmosource.com/
+Author: cosmosource
+Author-email: gaoyuan@cosmosource.com
+License: GPLv3
+Description: # gdmTools 
+        ### A dataset tool for converting all images in a folder into neural network recognition
+        
+        <hr>
+        
+        ## This tool includes a total of three methods
+        ### 1. Convert images to data using the image method of the PIL package
+        ### 2. Read the file directory and return the data set
+        ### 3. Slices of known global datasets and return them as training sets, test sets, validation sets
+        
+        ### example:
+        ```
+          data = read(input_Path)
+          train_index, test_index, valid_index = cut(data, 0.5, 0.2, 0.3)
+          # x
+          data[train_index], data[test_index], data[valid_index] 
+          # y
+          label
+        ```
+        <hr>
+        
+        ## GDM is a graphical data modeling product developed by the cosmosource. The main functions are graphical development of machine learning tasks with Spark as the engine, and graphical development of deep learning tasks with Tensorflow as the engine.
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
