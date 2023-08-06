@@ -1,0 +1,3 @@
+[molecule.verifier]
+inspec = molecule_inspec.inspec:Inspec
+
