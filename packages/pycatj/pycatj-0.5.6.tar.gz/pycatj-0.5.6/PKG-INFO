@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pycatj
+Version: 0.5.6
+Summary: Json/Yaml/Toml Flattener
+Home-page: https://git.devfu.net/fuzzy/pycatj/
+Author: Mike 'Fuzzy' Partin
+Author-email: fuzzy@devfu.net
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: yaml,json,toml
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3

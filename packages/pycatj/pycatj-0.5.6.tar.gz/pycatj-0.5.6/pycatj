@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+
+
+import os
+import sys
+import json
+try:
+    import yaml 
+    yaml_support = True
+except ImportError:
+    yaml_support = False
+try:
+    import toml
+    toml_support = True
+except ImportError:
+    toml_support = False
+
+
+class Str(str):
+    def __write__(self, bold=False, color=37, text=''):
+        if bold: 
+            return '\033[1;%sm%s\033[0m' % (color, text)
+        else:
+            return '\033[%sm%s\033[0m' % (color, text)
+
+    def black(self, bold=False):
+        return self.__write__(bold=bold, color=30, text=self)
+        
+    def red(self, bold=False):
+        return self.__write__(bold=bold, color=31, text=self)
+
+    def green(self, bold=False):
+        return self.__write__(bold=bold, color=32, text=self)
+
+    def yellow(self, bold=False):
+        return self.__write__(bold=bold, color=33, text=self)
+
+    def blue(self, bold=False):
+        return self.__write__(bold=bold, color=34, text=self)
+
+    def purple(self, bold=False):
+        return self.__write__(bold=bold, color=35, text=self)
+
+    def cyan(self, bold=False):
+        return self.__write__(bold=bold, color=36, text=self)
+
+    def white(self, bold=False):
+        return self.__write__(bold=bold, color=37, text=self)
+
+
+try:
+    import yaml
+except ImportError:
+    sys.stderr.write('%s%s YAML Is not supported (PyYAML is not installed)\n' % (
+        Str("ERROR").red(True),
+        Str(":").white(True)
+    ))
+    sys.stderr.flush()
+
+
+class PyCatj:
+
+    parent = []
+    
+    def __init__(self, data={}):
+        self._process(data)
+
+    def _process(self, data={}):
+        for key, val in data.items():
+            value = False
+            self.parent.append(Str(key).cyan())
+            parent = self._dot().join(self.parent)
+            equals = Str(':').white(True)
+            if isinstance(val, dict):
+                self._process(val)
+            elif isinstance(val, str):
+                value  = Str(val).yellow(True)
+            elif isinstance(val, int):
+                value  = Str(val).yellow(True)
+            elif isinstance(val, (list, tuple)):
+                for idx in range(len(val)):
+                    i = Str('[%s]' % str(idx)).cyan()
+                    v = Str(str(val[idx])).yellow(True)
+                    sys.stdout.write('%s%s%s %s\n' % (parent, i, equals, v))
+            if value:
+                sys.stdout.write('%s%s %s\n' % (parent, equals, value))
+            self.parent.pop(len(self.parent)-1)
+                
+    def _dot(self):
+        return Str('.').white(True)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        for fname in sys.argv[1:]:
+            data = False
+            if os.path.isfile(fname):
+                print(Str('Processing: %s' % fname).blue(True))
+                if 'json' in fname:
+                    data = json.loads(open(fname).read())
+                elif 'yml' in fname or 'yaml' in fname and yaml_support:
+                    data = yaml.load(open(fname).read(), Loader=yaml.FullLoader)
+                elif 'toml' in fname or 'tml' in fname and toml_support:
+                    data = toml.loads(open(fname).read())
+                if data:
+                    PyCatj(data)
+                    print('')
+    else:
+        data = sys.stdin.read()
+        try:
+            PyCatj(json.loads(data))
+            sys.exit(0)
+        except json.decoder.JSONDecodeError:
+            pass
+        if yaml_support:
+            try:
+                PyCatj(yaml.load(data, Loader=yaml.FullLoader))
+                sys.exit(0)
+            except yaml.scanner.ScannerError:
+                pass
+            except yaml.parser.ParserError:
+                pass
+        if toml_support:
+            try:
+                PyCatj(toml.loads(data))
+                sys.exit(0)
+            except toml.decoder.TomlDecodeError:
+                pass
+        print('%s%s Non JSON|YAML|TOML input. Sorry.' % (Str("ERROR").red(True), Str(":").white(True)))
+        sys.exit(1)
