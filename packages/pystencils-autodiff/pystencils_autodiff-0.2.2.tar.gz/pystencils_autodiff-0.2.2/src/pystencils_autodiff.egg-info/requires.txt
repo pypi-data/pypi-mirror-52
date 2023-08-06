@@ -1,0 +1,12 @@
+numpy
+pystencils>=0.2.7
+jinja2
+tqdm
+stringcase
+
+[testing]
+pytest
+pytest-html
+ansi2html
+pytest-cov
+tensorflow
