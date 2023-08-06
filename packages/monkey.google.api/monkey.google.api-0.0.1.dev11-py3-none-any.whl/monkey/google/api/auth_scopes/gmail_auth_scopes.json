@@ -1,0 +1,42 @@
+{
+  "gmail": {
+    "type": "str",
+    "value": "https://mail.google.com/"
+  },
+  "gmail.readonly": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.readonly"
+  },
+  "gmail.compose": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.compose"
+  },
+  "gmail.send": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.send"
+  },
+  "gamil.insert": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.insert"
+  },
+  "gmail.labels": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.labels"
+  },
+  "gmail.modify": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.modify"
+  },
+  "gmail.metadata": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.metadata"
+  },
+  "gmail.settings.basic": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.settings.basic"
+  },
+  "gmail.settings.sharing": {
+    "type": "str",
+    "value": "https://www.googleapis.com/auth/gmail.settings.sharing"
+  }
+}
