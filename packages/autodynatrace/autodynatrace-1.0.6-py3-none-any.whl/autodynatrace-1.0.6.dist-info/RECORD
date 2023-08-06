@@ -1,0 +1,13 @@
+autodynatrace/__init__.py,sha256=vG-XEYKoZLqFxPlwWGc1EbBgAFdLB27dOHWsZYsT_K0,363
+autodynatrace/log.py,sha256=363C84-aMhMZgXtvZgC9KCD5GhBJU7lHFX6nH8ccM_g,306
+autodynatrace/sdk.py,sha256=EzxD06GoDuIkvt_HY93Ndph9klXKIEcYVqMaFxkIVUc,127
+autodynatrace/wrappers/custom.py,sha256=ihHc4B7LHjJkIPc3JaVY6KqRIm-iZBTcb2NDGicCICI,466
+autodynatrace/wrappers/flask.py,sha256=xixqmnR1Yavh1McAKoEYj9a8Cz61EqpAUq3B_3oRct8,2663
+autodynatrace/wrappers/pymongo.py,sha256=W-l3t0AQnd93C58VaUqUFFV6wX_mOXYhtypRR2GA9P4,1484
+autodynatrace/wrappers/sqlalchemy.py,sha256=u02oQ5IV-wb96UQVgbRX-dB4Dsrvhxn4wUnxd5ngLwo,1856
+autodynatrace/wrappers/urllib3.py,sha256=08IvCiBC7W8obkQnFICBBxu5l_IvxC_aAf8fIKndaf0,1648
+autodynatrace-1.0.6.dist-info/LICENSE,sha256=Vw2JtN5EQ57byOwDyWaabN1r-emngQTG7eIpo7Qq0iM,1075
+autodynatrace-1.0.6.dist-info/METADATA,sha256=_N8kaLumVtOWcgIocVYPiPh0zQgD-tjczh-x2aGob9g,540
+autodynatrace-1.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+autodynatrace-1.0.6.dist-info/top_level.txt,sha256=kFlGs1LHxlBw6FsTxREBG1tzp6MSTd_Sozmmm7Z3ESU,14
+autodynatrace-1.0.6.dist-info/RECORD,,

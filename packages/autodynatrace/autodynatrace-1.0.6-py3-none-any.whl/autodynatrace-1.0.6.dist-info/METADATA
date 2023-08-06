@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: autodynatrace
+Version: 1.0.6
+Summary: Auto instrumentation for the OneAgent SDK
+Home-page: https://github.com/dlopes7/autodynatrace
+Author: David Lopes
+Author-email: davidribeirolopes@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: wrapt (>=1.11.2)
+Requires-Dist: oneagent-sdk (>=1.2.1)
+
+THe autodynatrace package will auto instrument your python apps
+
+
