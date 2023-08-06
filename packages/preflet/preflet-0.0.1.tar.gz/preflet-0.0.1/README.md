@@ -1,0 +1,37 @@
+# Preflet - Python SDK
+
+Use this SDK to communicate with Preflet's services to make your ML apps cloud native.
+
+
+## Sample Code
+
+
+from preflet import Model
+from preflet import generate_auth_token
+from preflet import list_all_models
+from preflet import get_model
+
+# train_type defaults to "Classification" and can be "Multi-Class" or
+# "Regression" as well
+my_model = Model("your_model_name", trained_clf, train_type="Multi-Class")
+
+my_model.calculate_metrics(y_test, predictions)
+
+my_model.extract_metadata(x_train, y_train)
+
+token = generate_auth_token(api_key='your_api_key')
+
+# host can be 'beta.preflet.com' if you want to host it on the cloud, or
+# 'localhost'
+my_model.upload(token, host='beta.preflet.com')
+
+
+# to get a list of all your models
+data = list_all_models(token, host='beta.preflet.com')
+
+# get a specific model for normal use/batch-prediction
+downloaded_clf, details = get_model("your_model_name", token, host='beta.preflet.com')
+
+
+# make predictions out of the box
+downloaded_clf.predict([...])
