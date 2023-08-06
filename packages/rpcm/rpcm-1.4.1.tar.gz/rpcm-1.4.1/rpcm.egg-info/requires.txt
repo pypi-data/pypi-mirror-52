@@ -1,0 +1,5 @@
+numpy
+pyproj
+geojson
+rasterio[s3]>=1.0
+srtm4
