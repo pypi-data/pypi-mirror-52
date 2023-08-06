@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: axonius-api-client
+Version: 2.0.3
+Summary: Axonius API client for Python
+Home-page: https://github.com/Axonius/axonius_api_client
+Author: Axonius
+Author-email: apiclient@axonius.com
+License: MIT
+Keywords: Axonius,API Library
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Description-Content-Type: text/markdown
+Requires-Dist: requests[security,socks]
+Requires-Dist: click
+Requires-Dist: python-dotenv
+Requires-Dist: python-dateutil
+Requires-Dist: pyreadline ; platform_system == "Windows"
+Requires-Dist: pathlib2 ; python_version < "3.0"
+
+# axonius_api_client
+
+An API client for [Axonius](https://axonius.com).
+
+## Documentation
+
+**With the 2.0 release the docs are in the midst of an overhaul.**
+
+Current version of 2.0.1 has more docs with usage of the CLI.
+
+Found [here](https://axonius-api-client.readthedocs.io/en/latest/?)
+
+
