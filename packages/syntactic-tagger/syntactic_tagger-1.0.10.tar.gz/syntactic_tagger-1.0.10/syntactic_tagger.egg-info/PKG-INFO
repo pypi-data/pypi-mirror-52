@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: syntactic-tagger
+Version: 1.0.10
+Summary: Spanish part-of-speech tagger using a syntactic table.
+Home-page: https://github.com/ivansiiito/syntactic_tagger
+Author: Ivan Arias Rodriguez
+Author-email: ivan.arias.rodriguez@gmail.com
+License: UNKNOWN
+Description: # Syntactic Tagger
+        
+        The Syntactic Tagger is a part-of-speech tagger that uses a lexicon extracted from an electronic dictionary and a plain text corpus to tag texts.
+        
+        Apart from tagging the text tokens using syntactic tags based on the EAGLES proposal for Spanish, it also lemmatizes each token, creating a representation of the text as a list of lemmas.
+        
+        The Syntactic Tagger works for Spanish, as it has taken the information from the Diccionario de la Real Academia EspaÃ±ola (in order to create the lexicon) and the Spanish Wikipedia (for the plain text corpus).
+        
+        The creation of this software was supported by the Spanish Ministry of Education, Culture and Sport via a doctoral grant to IvÃ¡n Arias RodrÃ­guez (FPU16/04039). It has also been funded by research projects TIN2014-52010-R (RedR+Human) and TIN2017-88092 R (CetrO+Spec).
+        
+        ------------------------------------------
+        
+        El Syntactic Tagger es un etiquetador morfosintÃ¡ctico que es capaz de etiquetar un texto usando un lexicÃ³n extraÃ­do de un diccionario electrÃ³nico y un corpus de texto plano.
+        
+        AdemÃ¡s de etiquetar morfosintÃ¡cticamente el texto usando un repertorio de etiquetas basado en las recomendaciones EAGLES para el espaÃ±ol, tambiÃ©n lematiza cada token, creando una representaciÃ³n del texto como una lista de lemas.
+        
+        El Syntactic Tagger funciona para el espaÃ±ol, ya que la informaciÃ³n para la creaciÃ³n del lexicÃ³n y del corpus de texto plano se ha obtenido del Diccionario de la Real Academia EspaÃ±ola y la Wikipedia espaÃ±ola, respectivamente.
+        
+        La creaciÃ³n de este software fue apoyada por el Ministerio de EducaciÃ³n, Cultura y Deporte de EspaÃ±a, a travÃ©s de una beca doctoral otorgada a IvÃ¡n Arias RodrÃ­guez (FPU16/04039). TambiÃ©n ha sido financiado por los proyectos de investigaciÃ³n TIN2014-52010-R (RedR+Human) y TIN2017-88092 R (CetrO+Spec).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
