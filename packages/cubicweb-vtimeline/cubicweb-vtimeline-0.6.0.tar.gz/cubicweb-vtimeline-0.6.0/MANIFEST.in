@@ -1,0 +1,9 @@
+include tox.ini
+include setup.py
+include README
+recursive-include cubicweb_vtimeline *.py
+recursive-include cubicweb_vtimeline/data *.gif *.png *.ico *.css *.js *.html
+recursive-include cubicweb_vtimeline/i18n *.po
+
+prune debian
+prune cubicweb-vtimeline.spec
