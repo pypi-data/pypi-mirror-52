@@ -1,0 +1,16 @@
+requests
+
+[all]
+pytest
+pytest-cov
+codecov
+
+[test]
+pytest
+pytest-cov
+codecov
+
+[tests]
+pytest
+pytest-cov
+codecov
