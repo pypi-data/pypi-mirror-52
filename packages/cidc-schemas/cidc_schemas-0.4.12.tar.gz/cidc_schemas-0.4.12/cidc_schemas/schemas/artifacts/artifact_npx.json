@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "npx_artifact",
+  "title": "NPX Artifact",
+  "type": "object",
+  "description": "Information about a xlsx file.",
+  "allOf": [
+    {
+      "$ref": "artifacts/artifact_core.json"
+    },
+    {
+      "properties": {
+        "number_of_aliquots": {
+          "description": "Number of aliquots within this assay.",
+          "type": "integer"
+        },
+        "aliquots": {
+          "type": "array",
+          "items": {
+            "$comment": "Ids of the aliquot(s) within this assay.",
+            "$ref": "aliquot.json#properties/cimac_aliquot_id"
+          }
+        },
+        "data_format": {
+          "description": "Data format.",
+          "const": "NPX"
+        }
+      }
+    }
+  ],
+  "mergeStrategy": "objectMerge",
+  "anyOf": [
+    { "required": ["number_of_aliquots", "aliquots"] },
+    { "required": ["upload_placeholder"] }
+  ]
+}
