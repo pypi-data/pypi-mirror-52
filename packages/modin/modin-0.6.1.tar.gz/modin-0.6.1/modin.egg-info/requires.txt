@@ -1,0 +1,13 @@
+pandas==0.25.1
+
+[all]
+dask>=2.1.0
+distributed>=2.3.2
+ray==0.7.3
+
+[dask]
+dask>=2.1.0
+distributed>=2.3.2
+
+[ray]
+ray==0.7.3
