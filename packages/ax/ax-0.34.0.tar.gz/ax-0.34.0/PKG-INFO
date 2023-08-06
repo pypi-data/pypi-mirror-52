@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ax
+Version: 0.34.0
+Summary: Ax - workflow apps builder
+Home-page: https://github.com/enf644/ax
+Author: Mikhail Marenov
+Author-email: enf644@gmail.com
+License: COMMERCIAL
+Description: This is readme for Ax workflow application builder.
+Platform: UNKNOWN
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Office/Business :: Groupware
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
