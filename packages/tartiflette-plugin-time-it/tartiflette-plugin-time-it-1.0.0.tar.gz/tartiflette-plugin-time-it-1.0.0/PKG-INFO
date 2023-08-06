@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: tartiflette-plugin-time-it
+Version: 1.0.0
+Summary: A tartiflette plugin that will print execution duration of a field
+Home-page: https://github.com/tartiflette/tartiflette-plugin-time-it
+Author: Aurelien Busi
+Author-email: aurelien.busi@dailymotion.com
+License: MIT
+Description: # tartiflette-plugin-time-it
+        
+        Allows you to view field time execution in your log as easily as :
+        
+        ```
+        type Example {
+            aField: String @timeIt
+        }
+        ```
+        
+        By default the `timeIt` directive will use it's own logger retrieved by `logging.getLogger("__name__")`.
+        
+        If called with `useLogger: false` it will use the print statement.
+        
+        At init time, using the `create_engine` api, you can pass your own logger to the directive.
+        
+        ```python
+        engine = await create_engine(sdl, modules=[{"name": "tartiflette_plugin_time_it", "config": {"logger": myLogger()}}])
+        ```
+Keywords: graphql protocol api tartiflette timeit
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
+Provides-Extra: test
