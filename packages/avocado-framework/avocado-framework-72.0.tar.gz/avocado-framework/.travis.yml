@@ -1,0 +1,41 @@
+dist: xenial
+language: python
+
+python:
+    - "3.4"
+    - "3.5"
+    - "3.6"
+    - "3.7"
+    - "nightly"
+
+env:
+    - AVOCADO_PARALLEL_LINT=1
+      AVOCADO_PARALLEL_CHECK=yes
+      AVOCADO_LOG_DEBUG=yes
+      SELF_CHECK_CONTINUOUS=y
+      AVOCADO_CHECK_LEVEL=1
+
+matrix:
+  include:
+    - python: "3.7"
+      env:
+        - RUN_ONLY_COVERAGE=yes
+        - SELF_CHECK_CONTINUOUS=yes
+  allow_failures:
+    - python: "nightly"
+
+cache:
+    directories:
+        - $HOME/.cache/pip
+
+addons:
+  apt:
+    packages:
+    - libvirt-dev
+    - golang
+
+install:
+    - pip install -r requirements-selftests.txt
+
+script:
+    - if [ "$RUN_ONLY_COVERAGE" == yes ]; then pip install codecov && make develop && ./selftests/run_coverage && codecov; else make check; fi
