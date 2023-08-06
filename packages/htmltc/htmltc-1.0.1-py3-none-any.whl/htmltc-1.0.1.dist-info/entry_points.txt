@@ -1,0 +1,3 @@
+[console_scripts]
+htmltc = tagcounter.console:main
+
