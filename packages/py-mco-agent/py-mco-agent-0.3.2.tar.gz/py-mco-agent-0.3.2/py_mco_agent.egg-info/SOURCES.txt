@@ -1,0 +1,17 @@
+README.md
+setup.py
+mco_agent/__init__.py
+mco_agent/agent.py
+mco_agent/config.py
+mco_agent/dispatcher.py
+mco_agent/exceptions.py
+mco_agent/protocol.py
+mco_agent/version.py
+mco_agent/schemas/io.choria.mcorpc.external.v1.activation_reply.json
+mco_agent/schemas/io.choria.mcorpc.external.v1.activation_request.json
+mco_agent/schemas/io.choria.mcorpc.external.v1.rpc_reply.json
+mco_agent/schemas/io.choria.mcorpc.external.v1.rpc_request.json
+py_mco_agent.egg-info/PKG-INFO
+py_mco_agent.egg-info/SOURCES.txt
+py_mco_agent.egg-info/dependency_links.txt
+py_mco_agent.egg-info/top_level.txt
