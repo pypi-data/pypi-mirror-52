@@ -1,0 +1,10 @@
+pygments
+six>=1.9.0
+wcwidth
+
+[test]
+pytest
+pytest-cov
+pyte
+pexpect
+ptyprocess
