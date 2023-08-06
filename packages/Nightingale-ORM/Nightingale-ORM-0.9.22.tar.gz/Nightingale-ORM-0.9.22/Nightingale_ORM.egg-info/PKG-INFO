@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: Nightingale-ORM
+Version: 0.9.22
+Summary: ('一个简单而小巧的orm工具，只用于生成sql和对象，而不依赖db驱动', 'A simple and compact ORM tool that only generates SQL and objects, not DB drivers')
+Home-page: https://github.com/beincy/Nightingale-ORM
+Author: beincy
+Author-email: bianhui0524@sina.com
+Maintainer: 卞辉(beincy)
+Maintainer-email: bianhui0524@sina.com
+License: MIT
+Description: UNKNOWN
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
