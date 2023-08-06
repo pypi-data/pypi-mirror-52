@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+kbhmap/__init__.py
+kbhmap/heatmap.py
+kbhmap/textutil.py
+kbhmap.egg-info/PKG-INFO
+kbhmap.egg-info/SOURCES.txt
+kbhmap.egg-info/dependency_links.txt
+kbhmap.egg-info/entry_points.txt
+kbhmap.egg-info/top_level.txt
+kbhmap/images/example_bakamana.png
+kbhmap/images/example_qwerty.png
+kbhmap/images/keyboard_bakamana.png
+kbhmap/images/keyboard_qwerty.png
