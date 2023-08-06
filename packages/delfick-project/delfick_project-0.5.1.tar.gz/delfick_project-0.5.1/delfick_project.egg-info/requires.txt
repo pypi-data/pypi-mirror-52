@@ -1,0 +1,5 @@
+
+[tests]
+pytest
+noseOfYeti==1.8.3
+rainbow_logging_handler==2.2.2
