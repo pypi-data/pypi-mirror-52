@@ -1,0 +1,6 @@
+bottle==0.12.17
+gunicorn==19.9.0
+python-daemon
+lockfile
+huey==2.1.2
+requests==2.22.0
