@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pypkg-manager
+Version: 0.0.1
+Summary: This is a Python project packaging manager.
+Home-page: https://github.com/williamcanin/pypkg-manager
+Author: William da Costa Canin
+Author-email: william.costa.canin@gmail.com
+Maintainer: William da Costa Canin
+License: MIT Licences
+Keywords: pypkg-manager manager packaging package
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# PyPkg Manager
+
+`PyPkg Manager` is a Python project packaging manager.
+
+## UNDER CONSTRUCTION!
+
+

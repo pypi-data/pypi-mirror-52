@@ -1,0 +1,3 @@
+[console_scripts]
+pypkg-manager = pypkg_manager.commands:create
+
