@@ -1,0 +1,14 @@
+pyterprise/__init__.py,sha256=dgkhVqxU8T4hGFpJyJpLwDYiZ42gX0-_r0_A88m_990,31
+pyterprise/organizations.py,sha256=J0e0BCul2rSuavfYcvblSeUfv69_ZxYzVdV4iCrtcpU,1292
+pyterprise/plans.py,sha256=sqvXShTDS-5MRdtzrQ23lTlWiop06VOhZ4QRp1unmoA,152
+pyterprise/pyterprise_exceptions.py,sha256=Y0lFwLSwBcMmhlJ1to0WPR0ZupUCL3lHeuEuAUvYLEw,556
+pyterprise/runs.py,sha256=xE2iCEla10NWhY144HlF9HnRGZVy2LIR2gpr2tWOtZc,1940
+pyterprise/teams.py,sha256=-slgjqOn_X3FeRM-rhnIbrpBC_NaEnGSfqis6qdgNcM,1317
+pyterprise/tfe_client.py,sha256=6WGVO-X9WUgVRMviRWVcCRgpxsS21enbhoehFBZuzi0,3704
+pyterprise/variables.py,sha256=iZnZkXbmQfSJOt-6hJ1W93VMGUoNoKTWHADNbNTE1_k,2438
+pyterprise/workspaces.py,sha256=g7o4qP-jeQqNATgTwPHZMGiXFeJ-oWQTT1pMcEknq2o,2800
+pyterprise-0.0.10.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+pyterprise-0.0.10.dist-info/METADATA,sha256=2sEb4GNw9bLd6dcqyMtPQByWKvu_L19JbyK_BapPTd8,4573
+pyterprise-0.0.10.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+pyterprise-0.0.10.dist-info/top_level.txt,sha256=r8RuPmpuyItsXlUVfyfbNWTukDxYIPV78PMTGKlxERw,11
+pyterprise-0.0.10.dist-info/RECORD,,
