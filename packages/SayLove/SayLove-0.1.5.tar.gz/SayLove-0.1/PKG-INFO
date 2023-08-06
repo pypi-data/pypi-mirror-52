@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: SayLove
+Version: 0.1
+Summary: My first python package to show love quotes
+Home-page: https://github.com/testcara/SayLove
+Author: Cara Wang
+Author-email: bookview@126.com
+License: MIT
+Download-URL: https://github.com/testcara/SayLove/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: First Python Package,Love Quotes
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
