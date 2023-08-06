@@ -1,0 +1,10 @@
+README.md
+setup.py
+faiss_gpu.egg-info/PKG-INFO
+faiss_gpu.egg-info/SOURCES.txt
+faiss_gpu.egg-info/dependency_links.txt
+faiss_gpu.egg-info/requires.txt
+faiss_gpu.egg-info/top_level.txt
+python/__init__.py
+python/setup.py
+python/swigfaiss.i
