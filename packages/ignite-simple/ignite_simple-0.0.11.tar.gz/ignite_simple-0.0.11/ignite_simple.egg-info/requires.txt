@@ -1,0 +1,10 @@
+pca3dvis
+torch
+numpy
+matplotlib
+scipy
+pyzmq
+beautifulsoup4
+pytorch-ignite
+psutil
+sortedcontainers
