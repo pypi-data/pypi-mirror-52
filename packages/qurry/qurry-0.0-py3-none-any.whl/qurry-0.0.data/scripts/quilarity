@@ -1,0 +1,13 @@
+#!python
+from pyquil.gates import STANDARD_INSTRUCTIONS, STANDARD_GATES
+import pyquil.gates
+
+from pprint import pprint
+
+import inspect
+
+for k, v in {**STANDARD_INSTRUCTIONS, **STANDARD_GATES}.items():
+    if callable(v):
+        aspec = inspect.getfullargspec(v)
+        print(k)
+        print('    ' + str(aspec.args))
