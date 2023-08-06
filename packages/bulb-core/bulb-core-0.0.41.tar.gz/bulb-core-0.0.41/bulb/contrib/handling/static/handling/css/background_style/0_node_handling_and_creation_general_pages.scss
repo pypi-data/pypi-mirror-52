@@ -1,0 +1,326 @@
+/* Schéma */
+
+    /* Position */
+
+    /* Dimensions */
+
+    /* Style */
+
+    /* For child properties */
+
+
+/*
+    ##################################################
+    ##################### GENERAL ####################
+    ##################################################
+*/
+
+html {
+
+    body {
+        margin-left: 62px;
+
+        form {
+
+            div.checkbox-div {
+                /* Position */
+
+                /* Dimensions */
+
+                /* Style */
+
+                /* For child properties */
+                display: flex;
+                align-items: center;
+
+
+                label.checkbox-label {
+                    /* Position */
+
+                    /* Dimensions */
+
+                    /* Style */
+
+                    /* For child properties */
+                    display: flex;
+                    align-items: center;
+                }
+
+
+                div.onoffswitch {
+                    /* Position */
+                    position: relative;
+
+                    /* Dimensions */
+                    width: 50px;
+
+                    /* Style */
+                    background-color: #3f56ff;
+                    border-radius: 100%;
+
+                    /* For child properties */
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    display: inline-block;
+
+
+                    input.onoffswitch-checkbox {
+                        /* Position */
+
+                        /* Dimensions */
+
+                        /* Style */
+
+                        /* For child properties */
+                        display: none;
+
+                        &:checked + label.onoffswitch-label span.onoffswitch-inner {
+                            margin-left: 0;
+                        }
+
+                        &:checked + label.onoffswitch-label span.onoffswitch-switch {
+                            right: 0;
+                        }
+                    }
+
+
+                    label.onoffswitch-label {
+                        /* Position */
+
+                        /* Dimensions */
+
+                        /* Style */
+                        border: 2px solid #505050;
+                        border-radius: 50px;
+
+                        /* For child properties */
+                        display: block;
+                        overflow: hidden;
+                        cursor: pointer;
+
+
+                        span.onoffswitch-inner {
+                            /* Position */
+                            margin-left: -100%;
+
+                            /* Dimensions */
+                            width: 200%;
+
+                            /* Style */
+
+                            /* For child properties */
+                            display: block;
+
+                            /* Animations */
+                            transition: margin 0.3s ease-in 0s;
+
+                            &:before, &:after {
+                                /* Position */
+                                float: left;
+                                padding: 0;
+
+                                /* Dimensions */
+                                width: 50%;
+                                height: 20px;
+                                line-height: 20px;
+
+                                /* Style */
+                                color: white;
+                                font-size: 18px;
+                                font-family: Trebuchet, Arial, sans-serif;
+                                font-weight: bold;
+                                box-sizing: border-box;
+
+                                /* For child properties */
+                                display: block;
+                            }
+
+                            &:before {
+                                /* Position */
+                                padding-left: 40px;
+
+                                /* Dimensions */
+
+                                /* Style */
+                                background-color: #3f56ff;
+                                color: #FFFFFF;
+
+                                /* For child properties */
+                                content: "";
+                            }
+
+                            &:after {
+                                /* Position */
+
+                                /* Dimensions */
+                                padding-right: 40px;
+
+                                /* Style */
+                                background-color: orangered;
+                                color: #505050;
+                                text-align: right;
+
+                                /* For child properties */
+                                content: "";
+                            }
+                        }
+
+
+                        span.onoffswitch-switch {
+                            /* Position */
+                            margin: 0;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 26px;
+
+                            /* Dimensions */
+                            width: 20px;
+
+                            /* Style */
+                            background: #FFFFFF;
+                            border: 2px solid #505050;
+                            border-radius: 50px;
+
+                            /* For child properties */
+                            display: block;
+
+                            /* Animations */
+                            transition: all 0.3s ease-in 0s;
+                        }
+                    }
+                }
+            }
+
+            div.datetime-box, div.date-box, div.time-box {
+                /* Position */
+                padding: 3px;
+
+                /* Dimensions */
+
+                /* Style */
+                border-color: #a3a3a3;
+                border-width: 0.5px;
+                border-radius: 3px;
+                border-style: solid;
+                background-color: #f9f9f9;
+
+                /* For child properties */
+                display: inline-block;
+
+                input {
+                    /* Position */
+                    padding: 0;
+                    margin: 0;
+
+                    /* Dimensions */
+
+                    /* Style */
+                    text-align: center;
+                    font-size: 18px;
+                    border: none;
+                    background-color: #f9f9f9;
+
+                    /* For child properties */
+                    display: inline-block;
+                }
+
+                p {
+                    /* Position */
+                    padding: 0;
+                    margin: 0;
+
+                    /* Dimensions */
+
+                    /* Style */
+                    font-size: 18px;
+                    color: gray;
+
+                    /* For child properties */
+                    display: inline-block;
+                }
+            }
+        }
+
+
+        div#action-buttons-div {
+            /* Position */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            top: 0;
+
+            /* Dimensions */
+
+            /* Style */
+            width: auto;
+            height: auto;
+            background-color: #2d3436;
+            border: {
+                style: solid;
+                width: 1px;
+                color: #2d3436;;
+            }
+
+            /* For child properties */
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+
+            input, button, a {
+                /* Position */
+
+                /* Dimensions */
+                height: 60px;
+                width: 60px;
+
+                /* Style */
+                font-size: 52px;
+                text-align: center;
+                color: white;
+                border-top: {
+                    style: solid;
+                    width: 1px;
+                    color: #2d3436;
+                }
+
+                /* Animations */
+                transition-duration: 250ms;
+
+                /* For child properties */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            button#submit-button {
+                background-color: #27ae60;
+
+                &:hover {
+                    background-color: lighten(#27ae60, 20);
+                }
+            }
+
+
+            button#delete-button {
+                background-color: #d63031;
+
+                &:hover {
+                    background-color: lighten(#d63031, 20);
+                }
+            }
+
+
+            a#previous-page-button {
+                background-color: #2d3436;
+
+                &:hover {
+                    background-color: lighten(#2d3436, 20);
+                }
+            }
+        }
+    }
+}

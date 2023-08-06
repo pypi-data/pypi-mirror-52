@@ -1,0 +1,33 @@
+{% extends "admin/background_pages/base.html" %}
+
+{% load bulb_static static compress %}
+
+{% block title %}Gestion{% endblock title %}
+
+{% block head %}
+    {% if DEBUG %}
+        {% compress css %}
+            <link rel="stylesheet" type="text/x-scss" href="{% static "handling/css/style/handling_home_page.scss" %}"/>
+        {% endcompress %}
+
+    {% elif not DEBUG %}
+        <link rel="stylesheet" href="{% static_bundled_src "handling/bundle_handling_home.css" %}"/>
+
+    {% endif %}
+{% endblock head %}
+
+{% block administration_part_name %}
+    >
+    <a class="nav-link" href="{% url "handling_home" %}">Gestion</a>
+{% endblock administration_part_name %}
+
+{% block content %}
+    <br/>
+    <br/>
+    <br/>
+    {% for name in node_classes_names %}
+        <h3><a href="{% url "node_model_home" node_model_name=name %}">{{ name }}</a></h3>
+    {% endfor %}
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}
