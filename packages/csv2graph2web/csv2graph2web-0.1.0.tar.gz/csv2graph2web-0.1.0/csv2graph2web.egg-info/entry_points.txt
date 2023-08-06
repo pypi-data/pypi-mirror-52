@@ -1,0 +1,3 @@
+[console_scripts]
+cgw_copy = csv2graph2web.cgw_copy:main
+

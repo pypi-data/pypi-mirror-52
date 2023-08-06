@@ -1,0 +1,14 @@
+README.md
+setup.py
+csv2graph2web/__init__.py
+csv2graph2web/cgw.py
+csv2graph2web/cgw_copy.py
+csv2graph2web/csv2graph2web.py
+csv2graph2web.egg-info/PKG-INFO
+csv2graph2web.egg-info/SOURCES.txt
+csv2graph2web.egg-info/dependency_links.txt
+csv2graph2web.egg-info/entry_points.txt
+csv2graph2web.egg-info/requires.txt
+csv2graph2web.egg-info/top_level.txt
+tests/__init__.py
+tests/test_csv2graph2web.py
