@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "neat_panda"
+version = "0.8.0"
+readme = "README.md"
+authors = "Henric Sundberg <henric.sundberg@gmail.com>"
+home-page = "https://github.com/htp84/neat_panda"
+classifiers = ["Development Status :: 2 - Pre-Alpha",
+               "Intended Audience :: Developers",
+               "License :: OSI Approved :: MIT License",
+               "Natural Language :: English",
+               "Programming Language :: Python :: 3.6",
+               "Programming Language :: Python :: 3.7",
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pandas = "^0.24.2"
+pandas_flavor = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.3.1"
+pytest-runner = "^4.2"
+toml = "^0.10.0"
+
+[build-system]
+requires = ["poetry>=0.12.17"]
+build-backend = "poetry.masonry.api"
