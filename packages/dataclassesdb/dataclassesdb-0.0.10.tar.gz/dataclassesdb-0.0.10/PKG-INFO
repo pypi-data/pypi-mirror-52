@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: dataclassesdb
+Version: 0.0.10
+Summary: Generates ***SQL*** and ***NoSQL*** Database Models from @dataclass
+Home-page: https://github.com/dutradda/dataclassesdb
+Author: Diogo Dutra
+Author-email: diogodutradamata@gmail.com
