@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+contrib_extension/__init__.py
+contrib_extension/_core.py
+contrib_extension.egg-info/PKG-INFO
+contrib_extension.egg-info/SOURCES.txt
+contrib_extension.egg-info/dependency_links.txt
+contrib_extension.egg-info/not-zip-safe
+contrib_extension.egg-info/top_level.txt
