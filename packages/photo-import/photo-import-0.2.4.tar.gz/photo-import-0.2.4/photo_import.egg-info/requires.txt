@@ -1,0 +1,5 @@
+exif
+docopt
+
+[python_version<3.5]
+typing==3.7.4.1
