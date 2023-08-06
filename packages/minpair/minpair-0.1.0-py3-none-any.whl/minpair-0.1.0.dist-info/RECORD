@@ -1,0 +1,12 @@
+minpair/__init__.py,sha256=LVu5LQyWe576o0EZE4IJ4mQgk1e4C8tla2elOAItG9k,262
+minpair/_version.py,sha256=r_SIMIHc9z6UHqWx7MGMnu3yUCK1modp6qPB256ioD4,116
+minpair/arpabet.py,sha256=7u9lriEDb8rq33IQPyDDwbUzVe2eTXiHeRiD3Fz7CWs,1649
+minpair/minpair.py,sha256=d_4IGuE5dzxpuxC7gOoTuDVoqctUkzXZM1ozxYz3IBs,2941
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_arpabet.py,sha256=mp7RF-crdpecEqGPf_to6d2QlDGX4o85NUKG315ymYA,840
+tests/test_minpair.py,sha256=HfMWjhBsX6eyFkJP_P_cnIHLmIWoCVf_9VR02l5F3q8,663
+minpair-0.1.0.dist-info/LICENSE,sha256=MVFK4YAQbDtyEkln3O5CvKT2UzM-I0VefUzYHunTFwo,1068
+minpair-0.1.0.dist-info/METADATA,sha256=0Sg8iuWEtAHft4D4JkYNcJUBM-UICf121GsM28C9nSM,970
+minpair-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+minpair-0.1.0.dist-info/top_level.txt,sha256=YDFe7haA8iJMlL4tewAzSmaAr7_nwzy-zc_9JnhhFwU,14
+minpair-0.1.0.dist-info/RECORD,,

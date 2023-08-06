@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: minpair
+Version: 0.1.0
+Summary: Generate minimal pairs (and minimal sets).
+Home-page: https://github.com/brandonlim-hs/minpair
+Author: Brandon Lim
+Author-email: brandonlim.lim@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: nltk (==3.4.5)
+Requires-Dist: six (==1.12.0)
+
+# Minpair
+
+Generate minimal pairs (and minimal sets).
+
+> In phonology, minimal pairs are pairs of words or phrases in a particular language, spoken or signed, that differ in only one phonological element
+>
+> -- <cite>https://en.wikipedia.org/wiki/Minimal_pair</cite>
+
+```
+>>> import minpair
+>>> minpair.vowel_minpair(['AE', 'EH'])
+[{'AE': 'al', 'EH': 'l'}, {'AE': 'axe', 'EH': 'x'}, {'AE': 'bad', 'EH': 'bed'}, {'AE': 'bag', 'EH': 'beg'}]
+```
+
+
