@@ -1,0 +1,14 @@
+hattori/__init__.py,sha256=IquvnUAfbqDAG-gRR2nRJzzqgppCCX7uABy9IM8fr0E,109
+hattori/base.py,sha256=TRzhAicHLt-mXa2t96rgwsX4ffkQw1RoNxgQ-A5Hozs,2243
+hattori/constants.py,sha256=m8RjVSFzLOvNiQldJGAlKv5O78OBopYsEeyDzb1IrAA,88
+hattori/exceptions.py,sha256=bS6fOOP1WuIxyFqfrs3k-Vxzh5MYj_09UTzz2ZyqX6k,284
+hattori/utils.py,sha256=Z_2Nx9HXr81SiuU5353kqfFNWrqDE4HfSGX3mkc-Yag,2477
+hattori/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hattori/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hattori/management/commands/anonymize_db.py,sha256=ZKGdwFteZojGfd6V2Gs0g8qZTesyEFB9oT1LaWMi51Y,2582
+django_hattori-0.2.1.dist-info/AUTHORS,sha256=jXB4sip70EF6BZyxvQqx5_6GTix6BNQ3cNj7tYLJ78w,29
+django_hattori-0.2.1.dist-info/LICENSE,sha256=PJWuEGTzmKtiEe9q-jRwkSnHIk8-_WAtl_ageDFOk-A,1049
+django_hattori-0.2.1.dist-info/METADATA,sha256=Ax6A_QktnvQ6zAw-5DTEYabYGDwOq3kgr3TmxMKlQSQ,3855
+django_hattori-0.2.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+django_hattori-0.2.1.dist-info/top_level.txt,sha256=dbej7KfVblhLXW2BVTabCpRSQtun7-qk0C6kQTN5hT4,8
+django_hattori-0.2.1.dist-info/RECORD,,
