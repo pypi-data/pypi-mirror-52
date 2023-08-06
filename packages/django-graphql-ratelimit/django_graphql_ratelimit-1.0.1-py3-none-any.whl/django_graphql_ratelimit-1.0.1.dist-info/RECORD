@@ -1,0 +1,12 @@
+django_graphql_ratelimit/__init__.py,sha256=8YECRnSKULoWrrnxNDPmmGsdom9GaA1_Prl9IaYu84U,58
+django_graphql_ratelimit/middleware.py,sha256=GdfUD9nfiG3qFpEHwws3vZyKFiLcXtsdYOwRnT2-3FE,259
+django_graphql_ratelimit/ratelimit.py,sha256=qGj-F3n5hzgjZFODbXGYBGjAHOi1WUrvWFGVbKjP9m4,1561
+django_graphql_ratelimit/tests.py,sha256=LNzG3zbnQysEG6YfaXsr9ExXXV0VYZikwdVCadEn1xo,2386
+example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example/settings.py,sha256=iauKvw15gwKol6xxuCvVRb8Yz8AF7T0m-WFI7AiAYp4,3092
+example/urls.py,sha256=zydAbZ8mXijfvvcCm1y1X9ljJzq2qU2dq2Q1UlWkLao,749
+example/wsgi.py,sha256=kmTHmUWpf5KxZmmDLLVqvGP-gUgzBHxgpOxC_RyWmII,391
+django_graphql_ratelimit-1.0.1.dist-info/METADATA,sha256=d3cColOGIop-kIrDXxg0bgLhSBUzQDHQwY2z56-Qkm8,2927
+django_graphql_ratelimit-1.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+django_graphql_ratelimit-1.0.1.dist-info/top_level.txt,sha256=lyQ74UXrupDkVVAtlVfnnHUDLnUh8p7B630EMGtufpM,33
+django_graphql_ratelimit-1.0.1.dist-info/RECORD,,
