@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-29 15:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "sent"
+msgstr "odeslána"
+
+msgid "queued"
+msgstr "zařazeno do fronty"
+
+msgid "scheduled"
+msgstr "naplánováno"
+
+msgid "rejected"
+msgstr "zamítnuto"
+
+msgid "invalid"
+msgstr "špatný formát"
+
+msgid "timeouted"
+msgstr "vypršel čas na zpracování dotazu"
+
+msgid "not found"
+msgstr "nenalezeno"
+
+msgid "not sent yet"
+msgstr "zatím neodeslána"
+
+msgid "delivered"
+msgstr "doručena"
+
+msgid "not delivered"
+msgstr "nedoručena"
+
+msgid "not able to determine the state"
+msgstr "není možné zjistit stav"
+
+msgid "authentication failed"
+msgstr "ověření se nezdařilo"
+
+msgid "DB error"
+msgstr "chyba databáze"
+
+msgid "SMS is OK and ready to be sent"
+msgstr "SMS je připravena k odeslání"
+
+msgid "unspecified error"
+msgstr "nespecifikovaná chyba"
+
+msgid "one of the requests has not unique \"uniq\""
+msgstr "jeden z požadavků nemá unikátní hodnotu \"uniq\""
+
+msgid "SMS has not unique \"uniq\""
+msgstr "SMS nemá unikátní hodnotu \"uniq\""
+
+msgid "SMS lacks keyword"
+msgstr "SMS postrádá klíčové slovo"
+
+msgid "keyword not valid"
+msgstr "neplatné klíčové slovo"
+
+msgid "no sender specified"
+msgstr "není specifikován odesílatel"
+
+msgid "sender not valid"
+msgstr "číslo odesílatele je neplatné"
+
+msgid "MO PR SMS not allowed"
+msgstr "SMS typu MO PR není povolena"
+
+msgid "MT PR SMS not allowed"
+msgstr "SMS typu MT PR není povolena"
+
+msgid "MT PR SMS daily limit exceeded"
+msgstr "počet SMS typu MT PR překročen denní limit"
+
+msgid "MT PR SMS total limit exceeded"
+msgstr "počet SMS typu MT PR překročen celkový limit"
+
+msgid "geographic number is not allowed"
+msgstr "geografické číslo není povoleno"
+
+msgid "MT SMS to Slovakia not allowed"
+msgstr "SMS typu MT na Slovensko není povolena"
+
+msgid "shortcodes not allowed"
+msgstr "zkratky nejsou povoleny"
+
+msgid "sender is unknown"
+msgstr "odesílatel je neznámý"
+
+msgid "type of SMS not specified"
+msgstr "type SMS zprávny není určen"
+
+msgid "SMS too long"
+msgstr "text SMS je moc dlouhý"
+
+msgid "too many SMS parts (max. is 10)"
+msgstr "příliš mnoho částí SMS (maximum je 10)"
+
+msgid "wrong number of sender/receiver"
+msgstr "špatné číslo odesílatele nebo příjemce"
+
+msgid "recipient is missing or in wrong format"
+msgstr "číslo příjemce chybí nebo je ve špatném formátu"
+
+msgid "using \"textid\" is not allowed"
+msgstr "použití hodnoty \"texstid\" není povoleno"
+
+msgid "\"textid\" is in wrong format"
+msgstr "hodnota \"textid\" má špatný formát"
+
+msgid "long SMS with \"textid\" not allowed"
+msgstr "dlouhá SMS s \"textid\" není povolena"
+
+msgid "XML body missing"
+msgstr "chybí tělo XML zprávy"
+
+msgid "XML is not readable"
+msgstr "XML zpráva není validní"
+
+msgid "unknown HTTP method or not HTTP POST"
+msgstr "neznámá HTTP metoda"
+
+msgid "XML invalid"
+msgstr "XML má špatný formát"
+
+msgid "number not exists"
+msgstr "číslo neexistuje"
+
+msgid "wrong number format"
+msgstr "špatný formát čísla"
+
+msgid "another error"
+msgstr "jiná chyba"
+
+msgid "event error"
+msgstr "chyba události"
+
+msgid "SMS text too long"
+msgstr "text SMS je moc dlouhý"
+
+msgid "partly delivered"
+msgstr "částečně doručeno"
+
+msgid "unknown"
+msgstr "stav neznámý"
+
+msgid "partly delivered, partly unknown"
+msgstr "částečně doručeno, částečně neznáme"
+
+msgid "partly not delivered, partly unknown"
+msgstr "částečně nedoručeno, částečně neznámé"
+
+msgid "partly delivered, partly not delivered, partly unknown"
+msgstr "částečně doručeno, částečně nedoručeno, částečně neznámé"
+
+msgid "sent at"
+msgstr "odesláno v"
+
+msgid "recipient"
+msgstr "příjemce"
+
+msgid "content"
+msgstr "obsah"
+
+msgid "slug"
+msgstr "slug"
+
+msgid "state"
+msgstr "stav"
+
+msgid "backend"
+msgstr "backend"
+
+msgid "error"
+msgstr "chyba"
+
+msgid "extra data"
+msgstr "extra data"
+
+msgid "extra sender data"
+msgstr "extra data odesílatele"
+
+msgid "tag"
+msgstr "tag"
+
+msgid "content type of the related object"
+msgstr "typ vztaženého objektu"
+
+msgid "ID of the related object"
+msgstr "identifikátor vztaženého objektu"
+
+msgid "ID of the related object in int format"
+msgstr "identifikátor vztaženého objektu ve formátu integer"
+
+msgid "message body"
+msgstr "tělo zprávy"
+
+msgid "is active"
+msgstr "je aktivní"
+
+msgid "Duplicate messages are allowed"
+msgstr "Duplicitní zprávy jsou povolené"
+
+msgid "Error during template body rendering: \"{}\""
+msgstr "Chyba během vykreslování obsahu zprávy: \"{}\""
+
+msgid "not assigned"
+msgstr "nepřiřazeno"
+
+msgid "ready"
+msgstr "připraveno"
+
+msgid "rescheduled by dialer"
+msgstr "naplánováno volajícím"
+
+msgid "call in progress"
+msgstr "probíhající hovor"
+
+msgid "hangup"
+msgstr "zavěšeno"
+
+msgid "done"
+msgstr "dokončen"
+
+msgid "rescheduled"
+msgstr "naplánováno"
+
+msgid "listened up complete message"
+msgstr "vyslechnuta celá zpráva"
+
+msgid "listened up partial message"
+msgstr "nevyslechnuta celá zpráva"
+
+msgid "unreachable"
+msgstr "nedostupné číslo"
+
+msgid "declined"
+msgstr "odmítnuto"
+
+msgid "unanswered"
+msgstr "volaný nezvedá"
+
+msgid "debug"
+msgstr "testovací"
+
+msgid "template"
+msgstr "šablona"
+
+msgid "dialer message"
+msgstr "navolávání"
+
+msgid "dialer messages"
+msgstr "navolávání"
+
+msgid "is final state"
+msgstr "ukončeno"
+
+msgid "related object of a dialer message"
+msgstr "vztažený objekt zprávy dialeru"
+
+msgid "related objects of dialer messages"
+msgstr "vztažené typy zpráv dialeru"
+
+msgid "dialer template"
+msgstr "šablona navolávání"
+
+msgid "dialer templates"
+msgstr "šablony navolávání"
+
+msgid "disallowed object of a dialer template"
+msgstr "zakázaný objekt zprávy dialeru"
+
+msgid "disallowed objects of dialer templates"
+msgstr "zakázané objekty zpráv dialeru"
+
+msgid "waiting"
+msgstr "čeká"
+
+msgid "sending"
+msgstr "odesílá se"
+
+msgid "sender"
+msgstr "odesílatel"
+
+msgid "sender name"
+msgstr "jméno odesílatele"
+
+msgid "subject"
+msgstr "předmět"
+
+msgid "number of send attempts"
+msgstr "počet pokusů odeslání"
+
+msgid "e-mail message"
+msgstr "e-mail"
+
+msgid "e-mail messages"
+msgstr "e-maily"
+
+msgid "related object of a e-mail message"
+msgstr "vztažený objekt e-mailové zprávy"
+
+msgid "related objects of e-mail messages"
+msgstr "vztažené typy e-mailových zpráv"
+
+msgid "content type"
+msgstr "typ přílohy"
+
+msgid "file"
+msgstr "soubor"
+
+msgid "attachment"
+msgstr "příloha"
+
+msgid "attachments"
+msgstr "přílohy"
+
+msgid "Error during template subject rendering: \"{}\""
+msgstr "Chyba během vykreslování předmětu zprávy: \"{}\""
+
+msgid "e-mail template"
+msgstr "šablona e-mailu"
+
+msgid "e-mail templates"
+msgstr "šablony e-mailů"
+
+msgid "disallowed object of an e-mail template"
+msgstr "zakázaný objekt e-mailové zprávy"
+
+msgid "disallowed objects of e-mail templates"
+msgstr "zakázané objekty e-mailových zpráv"
+
+msgid "heading"
+msgstr "nadpis"
+
+msgid "URL"
+msgstr "URL adresa"
+
+msgid "push notification"
+msgstr "push notifikace"
+
+msgid "push notifications"
+msgstr "push notifikace"
+
+msgid "push notification message"
+msgstr "zpráva push notifikace"
+
+msgid "related object of a push notification message"
+msgstr "vztažený objekt zprávy push notifikace"
+
+msgid "related objects of a push notification message"
+msgstr "vztažené objekty zprávy push notifikace"
+
+msgid "push notification template"
+msgstr "šablona push notifikace"
+
+msgid "push notification templates"
+msgstr "šablony push notifikace"
+
+msgid "output SMS"
+msgstr "odchozí SMS"
+
+msgid "output SMS message"
+msgstr "odchozí SMS zpráva"
+
+msgid "related object of a SMS message"
+msgstr "vztažený objekt SMS zprávy"
+
+msgid "related objects of SMS messages"
+msgstr "vztažené objekty SMS zpráv"
+
+msgid "SMS template"
+msgstr "SMS šablona"
+
+msgid "SMS templates"
+msgstr "SMS šablony"
+
+msgid "disallowed object of an SMS template"
+msgstr "zakázaný objekt SMS zprávy"
+
+msgid "disallowed objects of SMS templates"
+msgstr "zakázané objekty SMS zpráv"
+
+msgid "HTML body contains one of banned tag: {}"
+msgstr "Tělo HTML obsahuje jeden ze zakázaných tagů: {}"
