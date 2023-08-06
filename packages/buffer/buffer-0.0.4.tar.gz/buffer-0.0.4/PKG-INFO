@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: buffer
+Version: 0.0.4
+Summary: A stream buffer backed by a spooled temporary file.
+Home-page: https://alexdelorenzo.dev
+Author: Alex DeLorenzo
+License: AGPL-3.0
+Description: # buffer
+        
+        A stream buffer backed by `tempfile.SpooledTemporaryFile`.
+Keywords: stream-buffer,stream,buffer,file,buffer,temporary,file
+Platform: UNKNOWN
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
