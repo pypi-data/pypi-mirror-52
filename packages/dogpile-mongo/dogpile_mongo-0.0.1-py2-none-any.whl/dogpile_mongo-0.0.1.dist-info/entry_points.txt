@@ -1,0 +1,4 @@
+
+    [dogpile.cache]
+    mongo = dogpile_mongo.backends:MongoBackend
+    
