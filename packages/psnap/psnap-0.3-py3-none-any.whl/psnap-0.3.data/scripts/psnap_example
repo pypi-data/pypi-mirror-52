@@ -1,0 +1,21 @@
+#!python
+
+import sys
+from psnap import state_tracker
+
+if __name__ == "__main__":
+    # Can use datetime.datetime.strftime formatting for dateformat
+    # and reference your dateformat with %D.
+    #   %Y=year, %m=month, %d=day, %H=hour, %M=minute, %S=second, etc.
+    dateformat = None
+    # Can override if a daily timestamp is enough
+    #dateformat = "%Y%m%d"
+    st = state_tracker.StateTracker("results_%D.json", dateformat=dateformat)
+    st.set("val1", 1)
+    # $val1$
+    st.set("val2", "number 2") # $val2$
+    json_output = st.save()
+    print(f"Saved history to: {json_output}")
+    output = st.save_code_snap(output_directory=".")
+    print(f"Saved code_snap to: {output['code_snap']}")
+    print(f"Check differences with: diff -u {sys.argv[0]} {output['code_snap']}")
