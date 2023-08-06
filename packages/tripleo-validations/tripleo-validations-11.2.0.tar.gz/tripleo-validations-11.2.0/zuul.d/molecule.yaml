@@ -1,0 +1,190 @@
+---
+- project-template:
+    check:
+      queue: integrated
+      jobs:
+      - tripleo-validations-centos-7-molecule-controller-token
+      - tripleo-validations-centos-7-molecule-controller-ulimits
+      - tripleo-validations-centos-7-molecule-ctlplane-ip-range
+      - tripleo-validations-centos-7-molecule-dns
+      - tripleo-validations-centos-7-molecule-haproxy
+      - tripleo-validations-centos-7-molecule-repos
+      - tripleo-validations-centos-7-molecule-undercloud-cpu
+      - tripleo-validations-centos-7-molecule-undercloud-ram
+      - tripleo-validations-centos-7-molecule-undercloud-debug
+      - tripleo-validations-centos-7-molecule-undercloud-disk-space
+      - tripleo-validations-centos-7-molecule-xfs-check-ftype
+      - tripleo-validations-centos-7-molecule-no-op-firewall-nova-driver
+      - tripleo-validations-centos-7-molecule-nova-status
+      - tripleo-validations-centos-7-molecule-image-serve
+      - tripleo-validations-centos-7-molecule-check-network-gateway
+      - tripleo-validations-centos-7-molecule-undercloud-heat-purge-deleted
+      - tripleo-validations-centos-7-molecule-undercloud-tokenflush
+      - tripleo-validations-centos-7-molecule-rabbitmq-limits
+      - tripleo-validations-centos-7-molecule-stonith-exists
+      - tripleo-validations-centos-7-molecule-check-latest-packages-version
+    gate:
+      queue: integrated
+      jobs:
+      - tripleo-validations-centos-7-molecule-controller-token
+      - tripleo-validations-centos-7-molecule-controller-ulimits
+      - tripleo-validations-centos-7-molecule-ctlplane-ip-range
+      - tripleo-validations-centos-7-molecule-dns
+      - tripleo-validations-centos-7-molecule-haproxy
+      - tripleo-validations-centos-7-molecule-repos
+      - tripleo-validations-centos-7-molecule-undercloud-cpu
+      - tripleo-validations-centos-7-molecule-undercloud-ram
+      - tripleo-validations-centos-7-molecule-undercloud-debug
+      - tripleo-validations-centos-7-molecule-undercloud-disk-space
+      - tripleo-validations-centos-7-molecule-xfs-check-ftype
+      - tripleo-validations-centos-7-molecule-no-op-firewall-nova-driver
+      - tripleo-validations-centos-7-molecule-nova-status
+      - tripleo-validations-centos-7-molecule-image-serve
+      - tripleo-validations-centos-7-molecule-check-network-gateway
+      - tripleo-validations-centos-7-molecule-undercloud-heat-purge-deleted
+      - tripleo-validations-centos-7-molecule-undercloud-tokenflush
+      - tripleo-validations-centos-7-molecule-rabbitmq-limits
+      - tripleo-validations-centos-7-molecule-stonith-exists
+      - tripleo-validations-centos-7-molecule-check-latest-packages-version
+    name: tripleo-validations-molecule-jobs
+- job:
+    files:
+    - ^roles/controller-token/.*
+    name: tripleo-validations-centos-7-molecule-controller-token
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: controller-token
+- job:
+    files:
+    - ^roles/controller-ulimits/.*
+    name: tripleo-validations-centos-7-molecule-controller-ulimits
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: controller-ulimits
+- job:
+    files:
+    - ^roles/ctlplane-ip-range/.*
+    name: tripleo-validations-centos-7-molecule-ctlplane-ip-range
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: ctlplane-ip-range
+- job:
+    files:
+    - ^roles/dns/.*
+    name: tripleo-validations-centos-7-molecule-dns
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: dns
+- job:
+    files:
+    - ^roles/haproxy/.*
+    name: tripleo-validations-centos-7-molecule-haproxy
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: haproxy
+- job:
+    files:
+    - ^roles/repos/.*
+    name: tripleo-validations-centos-7-molecule-repos
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: repos
+- job:
+    files:
+    - ^roles/undercloud-cpu/.*
+    name: tripleo-validations-centos-7-molecule-undercloud-cpu
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: undercloud-cpu
+- job:
+    files:
+    - ^roles/undercloud-ram/.*
+    name: tripleo-validations-centos-7-molecule-undercloud-ram
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: undercloud-ram
+- job:
+    files:
+    - ^roles/undercloud-debug/.*
+    name: tripleo-validations-centos-7-molecule-undercloud-debug
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: undercloud-debug
+- job:
+    files:
+    - ^roles/undercloud-disk-space/.*
+    name: tripleo-validations-centos-7-molecule-undercloud-disk-space
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: undercloud-disk-space
+- job:
+    files:
+    - ^roles/xfs-check-ftype/.*
+    name: tripleo-validations-centos-7-molecule-xfs-check-ftype
+    parent: tripleo-validations-centos-7-base
+    voting: false
+    vars:
+      tripleo_validations_role_name: xfs-check-ftype
+- job:
+    files:
+    - ^roles/no-op-firewall-nova-driver/.*
+    name: tripleo-validations-centos-7-molecule-no-op-firewall-nova-driver
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: no-op-firewall-nova-driver
+- job:
+    files:
+    - ^roles/nova-status/.*
+    name: tripleo-validations-centos-7-molecule-nova-status
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: nova-status
+- job:
+    files:
+    - ^roles/image-serve/.*
+    name: tripleo-validations-centos-7-molecule-image-serve
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: image-serve
+- job:
+    files:
+    - ^roles/check-network-gateway/.*
+    name: tripleo-validations-centos-7-molecule-check-network-gateway
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: check-network-gateway
+- job:
+    files:
+    - ^roles/undercloud-heat-purge-deleted/.*
+    name: tripleo-validations-centos-7-molecule-undercloud-heat-purge-deleted
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: undercloud-heat-purge-deleted
+- job:
+    files:
+    - ^roles/undercloud-tokenflush/.*
+    name: tripleo-validations-centos-7-molecule-undercloud-tokenflush
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: undercloud-tokenflush
+- job:
+    files:
+    - ^roles/rabbitmq-limits/.*
+    name: tripleo-validations-centos-7-molecule-rabbitmq-limits
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: rabbitmq-limits
+- job:
+    files:
+    - ^roles/stonith-exists/.*
+    name: tripleo-validations-centos-7-molecule-stonith-exists
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: stonith-exists
+- job:
+    files:
+    - ^roles/check-latest-packages-version/.*
+    name: tripleo-validations-centos-7-molecule-check-latest-packages-version
+    parent: tripleo-validations-centos-7-base
+    vars:
+      tripleo_validations_role_name: check-latest-packages-version
