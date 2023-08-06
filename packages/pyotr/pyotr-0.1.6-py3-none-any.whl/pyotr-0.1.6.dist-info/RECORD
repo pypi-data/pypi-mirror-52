@@ -1,0 +1,14 @@
+pyotr/client.py,sha256=pHrtnomIuitKzHJ6qy5AKxmf1R2DzK39afaHdogyWdY,2640
+pyotr/server.py,sha256=W_HtVFm1C7Waf4VUcZc2ym7AA7yNwNWW7NPqgDA6XNs,2907
+pyotr/typing.py,sha256=yUq-mbngaeuH8QbuXRsou6QSqQ0YHpj0Zb_Y2Ppr1QA,333
+pyotr/utils.py,sha256=biLFlzmPEMWKLkfciCjRLVmS4eHoBAw-kG9ekJAHwOs,802
+pyotr/validation/requests/__init__.py,sha256=qBKYLpVzmeTWoA-6AGeXLAzc8FVfbWi8xqkf8C8phwE,88
+pyotr/validation/requests/client.py,sha256=_dQt27xnTRqVpfcVizSnHMyCg0CDkChtfvUfLzLNEpQ,2093
+pyotr/validation/requests/starlette.py,sha256=TAiSiIbFS_t75MTIeNx20nLmJy26CF1Hor2qt20ISo4,1379
+pyotr/validation/responses/__init__.py,sha256=8S-XMyzW4cYfmYNgIHwqKWZzwxBe9tMyLjJM34yBPy8,90
+pyotr/validation/responses/client.py,sha256=-YCxbntNd0elEY7IrS0QsZA-7VuUIjIXQtQn6rQSoL8,564
+pyotr/validation/responses/starlette.py,sha256=JivZb9Dh-x7vrr_x_1xP_C32WCqakgWHziMtP6HiAbs,373
+pyotr-0.1.6.dist-info/LICENSE,sha256=duVW-ye_dVedgmRqKIZvvUuKEJr1j2EFKtiZtPvy5PY,1071
+pyotr-0.1.6.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+pyotr-0.1.6.dist-info/METADATA,sha256=e9-M2gBTyEkxEkYsUTad7MVmRhn2JbSdayN9yDTpSEI,2192
+pyotr-0.1.6.dist-info/RECORD,,

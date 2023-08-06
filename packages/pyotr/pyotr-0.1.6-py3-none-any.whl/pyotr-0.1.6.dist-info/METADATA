@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: pyotr
+Version: 0.1.6
+Summary: Python OpenAPI-to-REST (and back) framework 
+Home-page: https://pyotr.readthedocs.io
+License: MIT
+Author: Berislav Lopac
+Author-email: berislav@lopac.net
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: uvicorn
+Requires-Dist: http3 (>=0.6.3,<0.7.0)
+Requires-Dist: httpx (>=0.7.2,<0.8.0)
+Requires-Dist: mkdocs (>=1.0,<2.0)
+Requires-Dist: openapi-core (>=0.11.0,<0.12.0)
+Requires-Dist: pytest-cov (>=2.7,<3.0)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: starlette (>=0.12.9,<0.13.0)
+Requires-Dist: stringcase (>=1.2,<2.0)
+Requires-Dist: typing-extensions (>=3.7,<4.0)
+Requires-Dist: uvicorn (>=0.9.0,<0.10.0); extra == "uvicorn"
+Project-URL: Repository, https://github.com/berislavlopac/pyotr
+Description-Content-Type: text/markdown
+
+Pyotr
+=====
+
+[![Documentation Status](https://readthedocs.org/projects/pyotr/badge/?version=latest)](https://pyotr.readthedocs.io/en/latest/?badge=latest)
+
+**Pyotr** is a Python library for serving and consuming REST APIs based on [OpenAPI](https://swagger.io/resources/open-api/) specifications. Its name is acronym of "Python OpenAPI to REST".
+
+The project consists of two separate libraries that can be used independently:
+
+* `pyotr.server` is a [Starlette](https://www.starlette.io)-based framework for serving OpenAPI-based services. It is functionally very similar to [connexion](https://connexion.readthedocs.io), except that it aims to be fully [ASGI](https://asgi.readthedocs.io)-compliant. 
+* `pyotr.client` is a simple HTTP client for consuming OpenAPI-based services.
+
+**WARNING:** This is still very much work in progress and not nearly ready for any kind of production.
+
+
+Quick Start
+-----------
+
+### Server
+
+    from pyotr.server import Application
+    
+    app = Application.from_file("path/to/openapi.yaml", "path.to.endpoints.module")
+    
+### Client
+
+    from pyotr.client import Client
+    
+    client = Client.from_file("path/to/openapi.yaml")
+    result = client.some_endpoint_id("path", "variables", "query_var"="example")
+    
+
