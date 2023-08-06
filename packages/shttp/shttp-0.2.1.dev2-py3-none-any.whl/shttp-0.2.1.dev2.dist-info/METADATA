@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: shttp
+Version: 0.2.1.dev2
+Summary: python http.server based http server, support file uploading
+Home-page: http://https://pypi.org/project/simple-ftp/
+Author: singein
+Author-email: singein@outlook.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: fire
+
+SHTTP
+
+install
+
+pip install shttp
+
+quick start
+
+python -m shttp 8000
+
+
+
