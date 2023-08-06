@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+cityloc/__init__.py
+cityloc/db.py
+cityloc/lookup.py
+cityloc.egg-info/PKG-INFO
+cityloc.egg-info/SOURCES.txt
+cityloc.egg-info/dependency_links.txt
+cityloc.egg-info/not-zip-safe
+cityloc.egg-info/top_level.txt
+cityloc/resources/cities.db
