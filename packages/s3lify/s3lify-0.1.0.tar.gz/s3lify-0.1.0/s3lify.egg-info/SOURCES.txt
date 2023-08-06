@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+s3lify/__init__.py
+s3lify/__init__.pyc
+s3lify/cli.py
+s3lify/cli.pyc
+s3lify/s3lify.yml
+s3lify.egg-info/PKG-INFO
+s3lify.egg-info/SOURCES.txt
+s3lify.egg-info/dependency_links.txt
+s3lify.egg-info/entry_points.txt
+s3lify.egg-info/not-zip-safe
+s3lify.egg-info/requires.txt
+s3lify.egg-info/top_level.txt

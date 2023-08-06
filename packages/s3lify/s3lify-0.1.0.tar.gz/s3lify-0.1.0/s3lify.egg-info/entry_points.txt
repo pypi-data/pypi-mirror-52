@@ -1,0 +1,4 @@
+[console_scripts]
+s3l = s3lify.cli:main
+s3lify = s3lify.cli:main
+
