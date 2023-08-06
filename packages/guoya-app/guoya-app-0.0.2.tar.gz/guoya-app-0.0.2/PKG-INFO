@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: guoya-app
+Version: 0.0.2
+Summary: to simplify auto test
+Home-page: https://github.com/LudvikWoo/guoya-tools
+Author: wuling
+Author-email: wuling@guoyasoft.com
+License: MIT Licence
+Description: A init package,to simplify develope auto test
+Keywords: init,auto-app-test
+Platform: python
