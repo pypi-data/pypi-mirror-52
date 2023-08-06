@@ -1,0 +1,4 @@
+[console_scripts]
+screwdrivercd_validate_type = screwdrivercd.validation.validate_type:main
+screwdrivercd_version = screwdrivercd.version.cli:main
+
