@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: bdgenomics.adam
+Version: 0.28.0a1
+Summary: A fast, scalable genome analysis system
+Home-page: https://github.com/bdgenomics/adam
+Author: Big Data Genomics
+Author-email: adam-developers@googlegroups.com
+License: UNKNOWN
+Description: !!!!! missing pandoc do not upload to PyPI !!!!
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
