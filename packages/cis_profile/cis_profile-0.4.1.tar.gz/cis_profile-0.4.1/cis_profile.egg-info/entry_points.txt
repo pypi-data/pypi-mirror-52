@@ -1,0 +1,3 @@
+[console_scripts]
+cpf = cis_profile.cli:main
+
