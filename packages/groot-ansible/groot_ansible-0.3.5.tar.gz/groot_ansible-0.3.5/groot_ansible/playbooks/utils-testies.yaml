@@ -1,0 +1,30 @@
+#
+# Playbook to ensure ros is installed and up to date. This includes:
+#
+# - the ros repository
+# - ros-<rosdistro>-base
+# - rosdep
+# - any other ros packages the user may have installed
+#
+---
+- name: Testies
+  hosts:
+    - localhost
+
+  roles:
+  - role: testies
+
+  pre_tasks:
+  - name: List the index
+    vci:
+      key: catkin
+      path: /tmp/foo
+      force: true
+    register: result
+
+  - name: Result
+    debug:
+      var: result
+  - name: Yaml
+    debug:
+      msg: "{{ result.yaml.split('\n') }}"

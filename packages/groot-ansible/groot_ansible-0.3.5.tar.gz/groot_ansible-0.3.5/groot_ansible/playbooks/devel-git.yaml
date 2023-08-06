@@ -1,0 +1,10 @@
+##############################################################################
+# Playbook for installing Chrome from Ubuntu repositories
+##############################################################################
+
+- name: Git
+  hosts:
+    - localhost
+
+  roles:
+  - role: git
