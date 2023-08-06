@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/ndvector/__init__.py
+src/ndvector/point.py
+src/ndvector/vector.py
+src/ndvector.egg-info/PKG-INFO
+src/ndvector.egg-info/SOURCES.txt
+src/ndvector.egg-info/dependency_links.txt
+src/ndvector.egg-info/top_level.txt
