@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            recopytex=recopytex.scripts.recopytex:cli
+    

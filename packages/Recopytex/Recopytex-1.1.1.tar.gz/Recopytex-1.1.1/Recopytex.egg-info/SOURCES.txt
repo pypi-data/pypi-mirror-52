@@ -1,0 +1,14 @@
+README.md
+setup.py
+Recopytex.egg-info/PKG-INFO
+Recopytex.egg-info/SOURCES.txt
+Recopytex.egg-info/dependency_links.txt
+Recopytex.egg-info/entry_points.txt
+Recopytex.egg-info/requires.txt
+Recopytex.egg-info/top_level.txt
+recopytex/__init__.py
+recopytex/config.py
+recopytex/csv_extraction.py
+recopytex/df_marks_manip.py
+recopytex/scripts/__init__.py
+recopytex/scripts/recopytex.py
