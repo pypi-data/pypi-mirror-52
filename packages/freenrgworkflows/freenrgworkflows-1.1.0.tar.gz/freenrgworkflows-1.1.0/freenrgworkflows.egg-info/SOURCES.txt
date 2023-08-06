@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+bin/run_networkanalysis.py
+freenrgworkflows.egg-info/PKG-INFO
+freenrgworkflows.egg-info/SOURCES.txt
+freenrgworkflows.egg-info/dependency_links.txt
+freenrgworkflows.egg-info/top_level.txt
+networkanalysis/__init__.py
+networkanalysis/_version.py
+networkanalysis/experiments.py
+networkanalysis/jupyter.py
+networkanalysis/networkanalysis.py
+networkanalysis/plotting.py
+networkanalysis/stats.py
