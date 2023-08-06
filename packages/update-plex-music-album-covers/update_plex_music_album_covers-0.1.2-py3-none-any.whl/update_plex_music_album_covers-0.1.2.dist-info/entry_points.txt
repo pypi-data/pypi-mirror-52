@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        update-plex-music-album-covers=update_plex_music_album_covers:cli
+    
