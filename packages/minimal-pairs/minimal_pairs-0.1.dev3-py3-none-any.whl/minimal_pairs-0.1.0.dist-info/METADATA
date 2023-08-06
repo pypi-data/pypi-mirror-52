@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: minimal-pairs
+Version: 0.1.0
+Summary: Generate minimal pairs
+Home-page: https://github.com/brandonlim-hs/minimal-pairs
+Author: Brandon Lim
+Author-email: brandonlim.lim@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: nltk (==3.4.5)
+Requires-Dist: six (==1.12.0)
+
+# Minimal Pairs
+
+
