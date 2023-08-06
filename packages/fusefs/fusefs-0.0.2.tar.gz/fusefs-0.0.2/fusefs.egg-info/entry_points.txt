@@ -1,0 +1,3 @@
+[console_scripts]
+fusefs = fusefs.cli:main
+
