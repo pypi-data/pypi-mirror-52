@@ -1,0 +1,16 @@
+.cirrus.yml
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+.ci/upload.xsh
+gqlmod_cirrusci/__init__.py
+gqlmod_cirrusci.egg-info/PKG-INFO
+gqlmod_cirrusci.egg-info/SOURCES.txt
+gqlmod_cirrusci.egg-info/dependency_links.txt
+gqlmod_cirrusci.egg-info/entry_points.txt
+gqlmod_cirrusci.egg-info/requires.txt
+gqlmod_cirrusci.egg-info/top_level.txt
+tests/test_cirrus.py

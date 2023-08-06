@@ -1,0 +1,50 @@
+test_task:
+  container:
+    image: python:3
+  setup_script:
+    # Until we get release stuff rolling
+    - pip install "git+https://github.com/gqlmod/gqlmod.git#egg=gqlmod"
+    - pip install .
+  test_script:
+    - python setup.py test
+
+
+flake8_task:
+  container:
+    image: python:3
+  setup_script:
+    - pip install flake8
+  script:
+    - flake8
+
+
+build_task:
+  container:
+    image: python:3
+  setup_script:
+    - pip install bork
+  script:
+    - bork build
+  dist_artifacts:
+    path: "dist/**"
+ 
+
+upload_task:
+  only_if: $CIRRUS_BRANCH == $CIRRUS_DEFAULT_BRANCH || $CIRRUS_RELEASE != ''
+  depends_on:
+    - build
+    - test
+    - flake8
+  env:
+    TWINE_TEST_TOKEN: "ENCRYPTED[0937e154aa202dfd9a213844206045b9323290721b84f9d9621bfe857a4a9d3e73d33c93ad84d306f704c872e48fa06c]"
+    TWINE_PROD_TOKEN: "ENCRYPTED[0ad4a513e67ec5831b8654afe72d1db0d3f8b20bb12d788be864a13f9dc289b89532e73a59903bf6d11c8661b63a8e14]"
+    GITHUB_TOKEN: "ENCRYPTED[76df3a440bfa2243c5a73abcd96acc4bc4f7aa9ee33409e8fbe76e808170436c9b684f9911e2f0350d85b57ef6ee2945]"
+
+  container:
+    image: xonsh/xonsh:slim
+
+  install_script:
+    - pip install twine
+
+  script:
+    - xonsh .ci/upload.xsh
