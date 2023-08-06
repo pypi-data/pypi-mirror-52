@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cloudgarden
+Version: 0.1.2
+Summary: Cloudgarden basic library
+Author: Elendir
+Author-email: mich.spicka.ja+pypi@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3 (>=1.9.232,<2.0.0)
+Requires-Dist: marshmallow (>=3.2.0,<4.0.0)
