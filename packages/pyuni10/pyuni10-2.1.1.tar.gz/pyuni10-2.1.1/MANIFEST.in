@@ -1,0 +1,10 @@
+include CMakeLists.txt
+recursive-include cmake *
+include LICENSE
+include LGPL
+include GPL
+include README.md
+recursive-include src *
+recursive-include include *
+include pyuni10/pyuni10.cpp
+include requirements.txt 
