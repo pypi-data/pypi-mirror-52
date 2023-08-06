@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: airduct
+Version: 0.1.20
+Summary: Simple Pipeline Scheduler in Python
+Home-page: https://github.com/alairock/airduct
+Author: Skyler Lewis
+Author-email: skyler.lewis@canopytax.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: crontab (>=0.22.6,<0.23.0)
+Requires-Dist: flask (>=1.1,<2.0)
+Requires-Dist: flask_cors (>=3.0,<4.0)
+Requires-Dist: flask_httpauth (>=3.3,<4.0)
+Requires-Dist: psycopg2 (>=2.8,<3.0)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: sqlalchemy (>=1.3,<2.0)
+Project-URL: Repository, https://github.com/alairock/airduct.git
+Description-Content-Type: text/markdown
+
+# airduct
+Simple Pipeline Scheduler in Python
+
+![Airduct Screenshot](docs/screenshot.png)
+
+## Links
+
+- [Github](https://github.com/alairock/airduct)
+- [Documentation](https://airduct.readthedocs.io)
+
+## Installing
+    $ pip install airduct
+
+or
+
+    $ poetry add airduct
+
+## Quickstart
+
+Create a file and put into a folder/python-module.
+
+```python
+from airduct import schedule, task
+
+
+schedule(
+    name='ExampleFlow',
+    run_at='* * * * *',
+    flow=[
+        task('e1f1'),
+        [task('e1f2'), task('e1f3', can_fail=True)],
+        [task('e1f4')]
+    ]
+)
+
+async def e1f1():
+    print('e1f1 - An async function!')
+
+def e1f2():
+    print('e1f2 - Regular functions work too')
+
+async def e1f3():
+    print('e1f3')
+
+async def e1f4():
+    print('e1f4')
+```
+
+Run: `$ airduct schedule --path /path/to/folder`
+
+By default it uses a sqlite in-memory database. If using the in-memory database, it will also automatically run as a worker, in addition to a scheduler. If you wish to use a non in-memory sqlite database, you will need to also run a worker (could be on same box, or separate) See the documentation for more info.
+
+
