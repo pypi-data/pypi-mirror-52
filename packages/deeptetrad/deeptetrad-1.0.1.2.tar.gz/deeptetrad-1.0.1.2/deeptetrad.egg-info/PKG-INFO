@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: deeptetrad
+Version: 1.0.1.2
+Summary: DeepTetrad: a deep learning model for fluorescent pollen-tetrad image analysis
+Home-page: https://github.com/abysslover/deeptetrad
+Author: Eun-Cheon Lim
+Author-email: abysslover@gmail.com
+License: GPL3.0
+Description: UNKNOWN
+Keywords: tetrad crossover interference tensorflow keras
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.4
