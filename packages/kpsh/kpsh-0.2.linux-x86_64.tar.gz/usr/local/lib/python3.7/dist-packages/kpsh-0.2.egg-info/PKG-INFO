@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: kpsh
+Version: 0.2
+Summary: Rofi KeePass interface
+Home-page: https://gitlab.com/mgoral/kpsh
+Author: Michał Góral
+Author-email: dev@mgoral.org
+License: GPLv3+
+Description: UNKNOWN
+Platform: linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5,<3.8
