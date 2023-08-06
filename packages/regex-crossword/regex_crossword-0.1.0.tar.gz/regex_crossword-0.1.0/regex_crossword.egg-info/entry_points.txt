@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        regex_crossword=regex_crossword.scripts.regex_crossword:cli
+    
