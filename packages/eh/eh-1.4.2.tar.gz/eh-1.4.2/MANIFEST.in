@@ -1,0 +1,7 @@
+include distribute_setup.py
+include *.txt
+include *.rst
+include *.md
+include *.ini
+prune dist
+# include files, but exclude the directory
