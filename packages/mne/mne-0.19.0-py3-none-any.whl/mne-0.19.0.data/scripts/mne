@@ -1,0 +1,5 @@
+#!python
+# -*- coding: utf-8 -*-
+
+import mne
+mne.commands.utils.main()
