@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ $1 == "install" ]
+then
+    echo "install"
+    install.sh
+elif [ $1 == "update" ]
+then
+   echo "updateing"
+elif [ $1 == "start" ]
+then
+    echo "starting"
+    start.sh
+fi
