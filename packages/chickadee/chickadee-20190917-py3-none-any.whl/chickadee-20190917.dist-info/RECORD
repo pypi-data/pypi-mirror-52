@@ -1,0 +1,17 @@
+libchickadee/__init__.py,sha256=M1W6YuiBNfkSRpsNv0Oydk_C1yrc5Nilbfo2Jn-ZZxs,216
+libchickadee/chickadee.py,sha256=0uwsQgGcKT8mqfq7gqxdmvRkXdiB_QaH-g7frZg2QEE,7976
+libchickadee/backends/__init__.py,sha256=TT6qw0ezV_fLFe77QWWi2ZN7ivtwupqqZ2VIHOm46_0,3126
+libchickadee/backends/ipapi.py,sha256=IPietH4ckTPUy0jnyyvpd_I_Ei_A7kNmEWAZ1SJjuc0,1987
+libchickadee/parsers/__init__.py,sha256=lX_N6ULCyE0JTjFvjhGQvI8x_UKil30_-1QwwvLoGYc,2176
+libchickadee/parsers/plain_text.py,sha256=bU2osb-d_fwckMcCiKeku93c4xhAHf996n1anhObyDk,2027
+libchickadee/parsers/xlsx.py,sha256=IWBdq5QX3PeCmjImfOToo-5tw98qVys2gFZoIO377yw,1665
+libchickadee/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libchickadee/test/test_backend_ipapi.py,sha256=WRd2fKy0Y3Mt5oFqPIKAisDoZho3l6w-xcFKBUzHoqA,3555
+libchickadee/test/test_parser_plaintext.py,sha256=cDlWlic1v4FPYoS6R5NhJtDKfbUkDm5joo5iDG10bmk,1649
+libchickadee/test/test_parser_xlsx.py,sha256=p-vkU2TuOqqheg-i7-Y3uESWAv2Dn7xGPJc-OOM6WgA,954
+chickadee-20190917.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+chickadee-20190917.dist-info/METADATA,sha256=vC-UvaUxzki4FGXdUFuCMxprTWKB1neRC278QUrfX88,5442
+chickadee-20190917.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+chickadee-20190917.dist-info/entry_points.txt,sha256=GMdU7qpbaJckNoLxKHThOWslmRvqep0X37dv0llRWA8,60
+chickadee-20190917.dist-info/top_level.txt,sha256=0FrudGGf3GEg1oZQW8xJpREzD3WDBEwqdK4BN2w1s0U,13
+chickadee-20190917.dist-info/RECORD,,
