@@ -1,0 +1,8 @@
+MANIFEST.in
+README.rst
+setup.py
+travis_ci_pypi_deploy_test.py
+zabana_travis_ci_test.egg-info/PKG-INFO
+zabana_travis_ci_test.egg-info/SOURCES.txt
+zabana_travis_ci_test.egg-info/dependency_links.txt
+zabana_travis_ci_test.egg-info/top_level.txt

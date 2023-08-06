@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: zabana-travis-ci-test
+Version: 0.1.1
+Summary: A Python package to test the Travis-CI PyPI deploy.
+Home-page: https://github.com/zabanaa/travis-ci-pypi-deploy-test
+Author: Karim C
+Author-email: jannis@leidel.info
+License: MIT license
+Description: travis-ci-pypi-deploy-test
+        ==========================
+        
+        .. image:: https://travis-ci.org/jezdez/travis-ci-pypi-deploy-test.svg?branch=master
+           :target: https://travis-ci.org/jezdez/travis-ci-pypi-deploy-test
+        
+        This is just a quick project to test the PyPI deployment provider of
+        Travis-CI's dpl_ project.
+        
+        .. _dpl: https://github.com/travis-ci/dpl
+        
+Platform: UNKNOWN
