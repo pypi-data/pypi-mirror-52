@@ -1,0 +1,191 @@
+Metadata-Version: 1.1
+Name: pelican-webassets
+Version: 0.0.0
+Summary: A Pelican plugin so you can use webassets
+Home-page: https://gitlab.com/bryanbrattlof/pelican-webassets
+Author: Bryan Brattlof
+Author-email: hello@bryanbrattlof.com
+License: MIT
+Description: pelican-webassets
+        #################
+        
+        This plugin allows you to use `webassets
+        <https://github.com/miracle2k/webassets>`_ (a popular asset management
+        application for Python web development) to manage your CSS and JavaScript
+        assets for your `Pelican <https://github.com/getpelican/pelican/>`_ powered
+        static website.
+        
+        :code:`webassets` comes with `many filters
+        <https://webassets.readthedocs.io/en/latest/builtin_filters.html>`_ like:
+        
+        * :code:`cssmin` and :code:`yui_css` to compress your CSS assets
+        * :code:`libsass` and :code:`less` to compile CSS assets.
+        * :code:`closure_js` and :code:`uglifyjs` for your JS assets
+        
+        as well as many more useful things like 
+        
+        * `URL Expiry "cache-busting" 
+          <https://webassets.readthedocs.io/en/latest/expiring.html>`_, allowing you to
+          set your :code:`Expires` headers for your assets long into the future.
+        * :code:`spritemapper` to merge multiple images into one and generates CSS
+          positioning for the corresponding slices
+        * :code:`datauri` to replace :code:`url()` references to external files with
+          internal `data: URIs <http://en.wikipedia.org/wiki/Data_URI_scheme>`_.
+        
+        For a more complete list, check out the `included filters
+        <https://webassets.readthedocs.io/en/latest/builtin_filters.html>`_ section in
+        their documentation.
+        
+        Installing
+        ##########
+        
+        The :code:`pelican-webassets` package is ready to be installed via a simple
+        :code:`pip` command:
+        
+        .. code-block::
+        
+           $ pip install pelican-webassets
+           
+        Then add the plugin to your list of :code:`PLUGINS` in your
+        :code:`pelicanconf.py` file to include the plugin in your next pelican build.
+        
+        .. code-block:: python
+        
+           PLUGINS = [
+               # ...
+               'pelican_webassets',
+               # ...
+           ]
+        
+        
+        Using the Plugin
+        ################
+        
+        After you've installed the package, include one or more :code:`{% assets %}` 
+        tags into your templates to generate the links to your processed assets.
+        
+        .. code-block:: jinja
+        
+           {% assets filters="libsass,cssmin", output="css/style.min.css", "css/style.scss" %}
+             <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+           {% endassets %}
+        
+        The example above uses the :code:`libsass` and :code:`cssmin` filters to
+        compile, minify and save :code:`style.scss` to :code:`ASSET_URL` (equals
+        :code:`{THEME_STATIC_DIR}/`) and results in a final output path of:
+        
+        .. code-block:: jinja
+        
+           <link href="http://{SITEURL}/{THEME_STATIC_DIR}/css/style.min.css?b3a7c807" rel="stylesheet">
+        
+        JavaScript
+        ==========
+        
+        Another example using JavaScript, uses :code:`closure_js` to combine, minify
+        and compress :code:`js/jQuery.js` and :code:`js/app.js`:
+        
+        .. code-block:: jinja
+           
+           {% assets filters="closure_js", output="js/packed.js", "js/jQuery.js", "js/widgets.js" %}
+            <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+           {% endassets %}
+           
+        into a script element like this:
+        
+        .. code-block:: jinja
+        
+           <script src="http://{SITEURL}/{THEME_STATIC_DIR}/js/packed.js?00703b9d"></script>
+        
+        Options
+        #######
+        
+        WEBASSETS_CONFIG
+        ================
+        
+        Some filters require extra configuration options to function properly. You can
+        use :code:`WEBASSETS_CONFG` to specify these options in a list of 
+        :code:`(key, value)` tuples.
+        
+        .. code-block:: python
+        
+           WEBASSETS_CONFIG = [
+             ('closure_compressor_optimization', 'ADVANCED_OPTIMIZATIONS'),
+             ('libsass_style', 'compressed') 
+           ]
+        
+        
+        WEBASSETS_BUNDLES
+        =================
+        
+        :code:`WEBASSETS_BUNDLES` is a list of 3 item tuples consisting of
+        :code:`(name, args, kwargs)` which will be passed to the environment's `register()
+        <https://webassets.readthedocs.io/en/latest/environment.html#registering-bundles>`_
+        method.
+        
+        .. code-block:: python
+        
+           WEBASSETS_BUNDLES = ((
+                'my_bundle',
+                ('css/style.scss',),
+                {'output': 'css/style.min.css', 'filters': ['libsass', 'cssmin']}
+           ),)
+           
+        Allowing you to simplify something like this:
+        
+        .. code-block:: jinja
+        
+           {% assets filters="libsass,cssmin", output="css/style.min.css", "css/style.scss" %}
+           
+        into this:
+        
+        .. code-block:: jinja
+        
+           {% assets 'my_bundle' %}
+        
+        
+        WEBASSETS_DEBUG
+        ===============
+        
+        By default, :code:`webassets` will disable asset packaging if Pelican is in
+        :code:`DEBUG` mode. You can change this by overriding the :code:`WEBASSETS_DEBUG`
+        value.
+        
+        .. code-block:: python 
+        
+           # put webassets into DEBUG mode if pelican is 
+           WEBASSETS_DEBUG = logger.getEffectiveLevel() <= logging.DEBUG
+           
+        WEBASSETS_SOURCE_PATH
+        =====================
+        
+        If your raw assets are in directories other than your :code:`THEME_STATIC_PATHS`,
+        you can supply additional directories to search in with
+        :code:`WEBASSETS_SOURCE_PATHS`.
+        
+        .. code-block:: python
+        
+           WEBASSETS_SOURCE_PATHS = [
+              'src/scss',
+              'src/js'
+           ]
+           
+        Want to Help?
+        #############
+        
+        Please feel free to help. Issues, pull requests, even `patches via email
+        <https://bryanbrattlof.com/connect/>`_, all are warmly welcomed.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Framework :: Pelican
+Classifier: Framework :: Pelican :: Plugins
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Natural Language :: English
