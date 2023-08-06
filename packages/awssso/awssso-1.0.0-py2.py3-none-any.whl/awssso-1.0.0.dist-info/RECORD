@@ -1,0 +1,14 @@
+awssso/__init__.py,sha256=1_axbOw5ZzlqidyXKZcc2qYphnKHYdA5q6fFxpbgVaE,193
+awssso/__main__.py,sha256=Sd3yf9GTTAKCt_EO2MR3ZrWqzL98Unz6yEGOpyDwOJc,89
+awssso/cli.py,sha256=lz70tCcKrabiG-gF_XxxcjD9kDpV4K-BtzSMHPNXZ6Q,9028
+awssso/config.py,sha256=St1znn03s6hi9latC7XKEn1GmJC7GADNBA3OrNZxaRU,955
+awssso/helpers.py,sha256=jNl-nQ-0gfHPu9uRDxQacJUZVNSdGTz_TpByJA9N0R0,3614
+awssso/saml.py,sha256=CBGi507iSTOKHh_MYBxxFJrkh7cHYTbsm7HK4JMbHmw,2359
+awssso/ssoclient.py,sha256=kHxOwlGpiZLCX1HZCLggorjPH_xaYKXpomvxp88N9OI,1090
+awssso/ssodriver.py,sha256=OXcB8OZ4PD2QdzJNLrRTFEfkT6zM3OeQQMHzzqyl6Io,5304
+awssso-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+awssso-1.0.0.dist-info/METADATA,sha256=iWNEyCz4-xrAOt8DSeVBW8pgilqg1DgSReGZKqpzAqM,4555
+awssso-1.0.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+awssso-1.0.0.dist-info/entry_points.txt,sha256=R8TJw6iwLB46zEgw9LIuGm0-1oYFN_EzUT0ya4hwuMU,44
+awssso-1.0.0.dist-info/top_level.txt,sha256=4MdhfrHpGRvjQQkc0famY1-f9if9G1zZcbUPKzURo1Q,7
+awssso-1.0.0.dist-info/RECORD,,
