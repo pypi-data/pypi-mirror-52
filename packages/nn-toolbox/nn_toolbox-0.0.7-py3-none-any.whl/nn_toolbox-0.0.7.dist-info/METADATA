@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: nn-toolbox
+Version: 0.0.7
+Summary: A toolbox for common deep learning procedures
+Home-page: https://github.com/nhatsmrt/nn-toolbox
+Author: Nhat Pham
+Author-email: nphamcs@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+Requires-Dist: torchgpipe
+Requires-Dist: pretrainedmodels
+Requires-Dist: imgaug
+Requires-Dist: scikit-image
+Requires-Dist: opencv-python
+Requires-Dist: imageio
+Requires-Dist: Shapely
+Requires-Dist: torchtext
+Requires-Dist: nltk
+Requires-Dist: spacy
+Requires-Dist: sentencepiece
+Requires-Dist: pytorch-transformers
+Requires-Dist: fastai
+Requires-Dist: ax-platform
+Requires-Dist: six
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: networkx
+Requires-Dist: tb-nightly
+Requires-Dist: hiddenlayer
+Requires-Dist: future
+
+A toolbox for common deep learning components and procedures. For more information, please go to the GitHub repository.
+
+
