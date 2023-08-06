@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: tbnns
+Version: 0.1.0
+Summary: TBNN-s - Tensor Basis Neural Network for Scalar Mixing
+Home-page: https://github.com/pmmilani/tbnns.git
+Author: Pedro M. Milani
+Author-email: pmmilani@stanford.edu
+License: Apache
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: tensorflow (>=1.13.1)
+Requires-Dist: joblib
+
+## TBNN-s v0.1.0 - Tensor Basis Neural Network for Scalar Mixing
+Author: Pedro M. Milani (email: pmmilani@stanford.edu)
+
+Last modified: 09/16/2019
+
+Developed and tested in Python 3.7
+
+### Installation
+To install, run the following (optionally within a virtual environment): 
+
+    pip install tbnns [--user] [--upgrade]
+
+This will install the stable version from the Python Package Index. Use
+the flag --user in case you do not have administrator privileges and the
+flag --upgrade to get the newest version.
+
+To test the program while it is being developed, run the command below
+from the current directory. This is useful when you are developing the
+code.
+
+    pip install -e .
+
+To uninstall, run:
+
+    pip uninstall tbnns
+
+The commands above will also install
+some dependencies (included in the file "requirements.txt")
+needed for this package.
+
+### Examples and Testing
+
+Under construction.
+
+
+
