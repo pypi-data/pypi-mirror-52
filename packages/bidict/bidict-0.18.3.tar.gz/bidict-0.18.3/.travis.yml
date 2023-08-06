@@ -1,0 +1,203 @@
+language: 'python'
+
+# Default version used for jobs that don't override it.
+python: '3.7'
+
+# TODO: Update to 'bionic' once available.
+# https://travis-ci.community/t/ubuntu-18-04-1-lts-bionic-beaver/1270
+dist: 'xenial'
+
+
+# https://docs.travis-ci.com/user/customizing-the-build/
+# "Without the top-level env, no job will be allowed to fail."
+env:
+  global:
+    - 'INSTALL_EXTRAS=test'
+
+
+before_install:  # Ensure we have the required versions of Python and Pip.
+  - 'echo "TRAVIS_PULL_REQUEST_SHA: $TRAVIS_PULL_REQUEST_SHA"'
+  - 'echo "TRAVIS_COMMIT: $TRAVIS_COMMIT"'
+  - 'git --no-pager log -n2'
+  # Travis does a shallow (--depth=50) clone by default.
+  # Clone the full history as requested by setuptools_scm.
+  - 'travis_retry git fetch --unshallow'
+  # Install Python on macOS since https://github.com/travis-ci/travis-ci/issues/2312 is WONTFIXed.
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      declare -r pyver="${TASK##*-}"  # strip all chars up to and including the last -
+      declare -r python="python$pyver"
+      echo "TASK=$TASK -> pyver=$pyver python=$python"
+      if ! type "$python"; then
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        brew tap minrk/homebrew-python-frameworks
+        brew cask install "python-framework-${pyver/./}"
+        type "$python" || exit 1
+      fi
+      type python
+      "$python" --version
+      travis_retry curl https://bootstrap.pypa.io/get-pip.py | "$python"
+      "$python" -m pip install virtualenv
+      "$python" -m virtualenv ~/travis-env
+      source ~/travis-env/bin/activate
+      type python
+    fi
+  - 'python --version'
+  # https://github.com/python-trio/trio/issues/487#issuecomment-377931587
+  - 'echo "Installing latest pip..."'
+  - 'travis_retry curl https://bootstrap.pypa.io/get-pip.py | python'
+  - 'pip --version'
+
+
+install:  # Install our test dependencies.
+  - |
+    [[ "$COVERAGE" ]] && INSTALL_EXTRAS+=",coverage"
+    install_cmd="pip install -U --upgrade-strategy=eager ."
+    [[ "$INSTALL_EXTRAS" ]] && install_cmd+="[$INSTALL_EXTRAS]"
+    echo "install_cmd: $install_cmd"
+    travis_retry $install_cmd
+
+
+before_script:
+  - 'pip list'
+  - |
+    if [[ "$TASK" == lint-* ]]; then
+      shopt -s globstar
+      export LINT_SRC=**/*.py
+      echo "LINT_SRC:" $LINT_SRC
+    fi
+
+
+script:  # Run the test suite.
+  - |
+    if [[ "$TRAVIS_EVENT_TYPE" == "cron" ]]; then
+      export HYPOTHESIS_MAX_EXAMPLES="2000"  # See tests/conftest.py
+      export PYTEST_ADDOPTS="--hypothesis-verbosity=verbose --hypothesis-show-statistics"
+    fi
+    if [[ "$COVERAGE" ]]; then
+      export PYTEST_ADDOPTS="${PYTEST_ADDOPTS} --cov=bidict --cov-config=.coveragerc"
+    fi
+    ./run_tests.py
+
+
+after_script:
+  - |
+    if [[ "$COVERAGE" ]]; then
+      echo "Installing codecov..."
+      travis_retry pip install codecov || exit 1
+      echo
+      echo "Uploading coverage report to codecov..."
+      travis_retry codecov
+    fi
+
+
+matrix:
+  allow_failures:
+    - env: 'TASK=docs-linkcheck INSTALL_EXTRAS=docs'
+    - env: 'TASK=test-linux-cpython-3.8-dev'
+    - env: 'TASK=deploy-if-tag'
+  ## fast_finish causes Travis to sned a useless daily "build pending" email; not worth the noise.
+  # fast_finish: true
+  include:
+    # Each job below performs a single task. Setting a per-job "TASK" env var
+    # causes Travis to clearly show each job's task in the web UI.
+
+    # "test*" tasks run the test suite with various Python versions.
+
+    # Travis runs jobs in the order defined below -> order jobs by priority.
+
+    ## Test suite on Linux with latest CPython and PyPy 2 and 3 -> enable coverage.
+    - python: '3.7'
+      env: 'TASK=test-linux-cpython-3.7 COVERAGE=1'
+
+    - python: '2.7'
+      env: 'TASK=test-linux-cpython-2.7 COVERAGE=1'
+
+    - python: 'pypy3'
+      env: 'TASK=test-linux-pypy3 COVERAGE=1'
+
+    - python: 'pypy'
+      env: 'TASK=test-linux-pypy COVERAGE=1'
+
+    ## Test suite on Mac with latest CPython 2 and 3.
+    - python: '2.7'
+      env: 'TASK=test-mac-cpython-2.7'
+      os: 'osx'
+      language: 'generic'
+
+    - python: '3.7'
+      env: 'TASK=test-mac-cpython-3.7'
+      os: 'osx'
+      language: 'generic'
+
+    ## Make sure there are no relied-on side effects in assert statements.
+    - env: 'TASK=test-with-optimization-flag'
+      before_install: 'skip'
+      install: 'skip'
+      script: 'python -O -m doctest -o IGNORE_EXCEPTION_DETAIL -o ELLIPSIS tests/*.txt'
+
+    ## Linting, static analysis, code style.
+    - env: 'TASK=lint-flake8 INSTALL_EXTRAS=flake8'
+      before_install: 'skip'
+      script: 'flake8 $LINT_SRC'
+
+    - env: 'TASK=lint-pylint INSTALL_EXTRAS=pylint,test'
+      before_install: 'skip'
+      script: 'pylint --jobs=0 $LINT_SRC'
+
+    - env: 'TASK=lint-pydocstyle INSTALL_EXTRAS=pydocstyle'
+      before_install: 'skip'
+      script: 'pydocstyle $LINT_SRC'
+
+    ## Misc.
+    - env: 'TASK=docs-build INSTALL_EXTRAS=docs'
+      before_install: 'skip'
+      script: './build-docs.sh'
+
+    - env: 'TASK=docs-linkcheck INSTALL_EXTRAS=docs'
+      before_install: 'skip'
+      script: '(cd docs && travis_retry make linkcheck)'
+
+    ## Remaining CPython versions on Linux.
+    - python: '3.6'
+      env: 'TASK=test-linux-cpython-3.6'
+
+    - python: '3.5'
+      env: 'TASK=test-linux-cpython-3.5'
+
+    - python: '3.8-dev'
+      env: 'TASK=test-linux-cpython-3.8-dev'
+
+    - stage: 'deploy-if-tag'
+      env: 'TASK=deploy-if-tag'
+      before_install: 'skip'
+      install: 'skip'
+      script: 'skip'
+      deploy:
+        - provider: 'pypi'
+          user: 'jab'
+          password:
+            secure: 'B9LLgXkTbtjeC/IbH4wh9PEBzvKEAuYo3EBNW5f1xuLqVqtsysIyxJa5ar/FQ4qwUCBwZPFAXFurN3lLzRhb2Tc04YQ0GYVv6f8lkzwrjoWau4iB9Qt/nnvdRa7KryEJvtenHCAnwoEUaADCjkZjwo6fIA0hEOLB6/AYfhfgXYA='
+          on:
+            tags: true
+            # Does this deploy all tags to PyPI, not just release tags?
+            # https://docs.travis-ci.com/user/deployment/pypi/ doesn't say.
+          distributions: 'sdist bdist_wheel'
+
+
+before_cache:
+  - 'rm -rf "$HOME"/.cache/pip/log'
+
+
+cache:
+  directories:
+    - '"$HOME"/.cache/pip'
+    - '"$HOME"/.hypothesis'
+
+
+notifications:
+  webhooks:
+    urls:
+      - 'https://webhooks.gitter.im/e/bf64fb45a633c0935b9b'
+  email:
+    recipients: 'jab@math.brown.edu'
