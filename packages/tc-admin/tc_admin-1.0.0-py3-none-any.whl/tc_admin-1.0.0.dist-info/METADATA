@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tc-admin
+Version: 1.0.0
+Summary: Administration of Taskcluster runtime configuration
+Home-page: https://github.com/taskcluster/tc-admin
+Author: Dustin Mitchell
+Author-email: dustin@mozilla.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: taskcluster (~=16.0.0)
+Requires-Dist: click (<7)
+Requires-Dist: blessings (<2)
+Requires-Dist: attrs
+Requires-Dist: memoized (==0.3)
+Requires-Dist: sortedcontainers (<3)
+Requires-Dist: aiohttp (<3)
+Requires-Dist: pyyaml (<4)
+Requires-Dist: iso8601 (==0.1.12)
+
+UNKNOWN
+
+
