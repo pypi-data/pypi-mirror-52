@@ -1,0 +1,14 @@
+importlib_metadata
+pex[cachecontrol,requests]
+shiv
+zapp
+
+[package]
+twine
+wheel
+zapp
+
+[test]
+pytest
+pytest-pep8
+pytest-pylint
