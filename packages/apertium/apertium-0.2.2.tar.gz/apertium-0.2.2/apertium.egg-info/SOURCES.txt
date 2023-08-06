@@ -1,0 +1,17 @@
+README.md
+setup.py
+apertium/__init__.py
+apertium/installer.py
+apertium/iso639.py
+apertium/mode_search.py
+apertium/py.typed
+apertium/utils.py
+apertium.egg-info/PKG-INFO
+apertium.egg-info/SOURCES.txt
+apertium.egg-info/dependency_links.txt
+apertium.egg-info/requires.txt
+apertium.egg-info/top_level.txt
+apertium/analysis/__init__.py
+apertium/generation/__init__.py
+apertium/tagger/__init__.py
+apertium/translation/__init__.py
