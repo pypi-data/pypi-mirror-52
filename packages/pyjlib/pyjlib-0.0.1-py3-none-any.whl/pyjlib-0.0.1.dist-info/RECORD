@@ -1,0 +1,12 @@
+pyjlib/__init__.py,sha256=EBOwJ-6y52MqP96jdKRMg5HNsjPpvY8lQLo4nxL2XT4,60
+pyjlib/_version.py,sha256=ugyuFliEqtAwQmH4sTlc16YXKYbFWDmfyk87fErB8-8,21
+pyjlib/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyjlib/util/stringjoiner.py,sha256=E6iRZhI6joa8qAFKhwFY4yvmJLw7KyWBNwoKgMy7DbQ,15765
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/util/test_stringJoiner.py,sha256=zGaMij1SLya0deiSP_x5f9632oJgq6JDOkPoMDPMd7Q,13201
+pyjlib-0.0.1.dist-info/LICENSE,sha256=CaFO-9ZfiEQVj2LMfnaCgqbC2iWF7o7HlwqNdh3blrc,2812
+pyjlib-0.0.1.dist-info/METADATA,sha256=WgSvFm_N4ltjXUMSu8lS7WavsgdfNafrwq9GvbMSs2M,1217
+pyjlib-0.0.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+pyjlib-0.0.1.dist-info/top_level.txt,sha256=WphVQtzknUbL16yHl7uW_ElhTSpVLpd5z4eurprgjPY,13
+pyjlib-0.0.1.dist-info/RECORD,,

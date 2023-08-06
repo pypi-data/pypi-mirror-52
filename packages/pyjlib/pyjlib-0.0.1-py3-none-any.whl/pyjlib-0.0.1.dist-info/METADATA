@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pyjlib
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/maboualidev/PyJLib
+Author: Mohammad Abouali
+Author-email: maboualidev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+[![CircleCI](https://circleci.com/gh/maboualidev/PyJLib/tree/master.svg?style=svg&circle-token=25596efbbaa45d12f23a22c6bbf3cf7d84976b3f)](https://circleci.com/gh/maboualidev/PyJLib/tree/master)
+[![Documentation Status](https://readthedocs.org/projects/pyjlib/badge/?version=latest)](https://pyjlib.readthedocs.io/en/latest/?badge=latest)
+# PyJLib
+Python Implementation of some of the Java classes.
+
+The objects in this library, try to mimic the behavior of their Java counter-part. However,
+some Python flavor is also added to them. It is possible that certain extra features are
+added to the object.
+
+# How to install
+## Using PIP
+just issue:
+```
+pip install pyjlib
+```
+
+# Documentation
+The documentation is available at [https://pyjlib.readthedocs.io/en/latest/](https://pyjlib.readthedocs.io/en/latest/)
+
+# LICENSE
+refer to the LICENSE file
+
+
