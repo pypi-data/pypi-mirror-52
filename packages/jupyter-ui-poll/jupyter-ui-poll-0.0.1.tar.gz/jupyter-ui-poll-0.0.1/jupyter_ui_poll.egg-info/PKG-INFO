@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: jupyter-ui-poll
+Version: 0.0.1
+Summary: Block jupyter cell execution while interacting with widgets
+Home-page: https://github.com/kirill888/jupyter-ui-poll
+Author: Kirill Kouzoubov
+Author-email: kirill888@gmail.com
+License: MIT License
+Description: ===============
+        jupyter-ui-poll
+        ===============
+        
+        Block jupyter cell execution while interacting with widgets
+        
+Keywords: jupyter,ipywidgets
+Platform: UNKNOWN
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >= 3.6
+Provides-Extra: dev
