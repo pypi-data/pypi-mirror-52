@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+mcp9600/__init__.py
+mcp9600.egg-info/PKG-INFO
+mcp9600.egg-info/SOURCES.txt
+mcp9600.egg-info/dependency_links.txt
+mcp9600.egg-info/requires.txt
+mcp9600.egg-info/top_level.txt
