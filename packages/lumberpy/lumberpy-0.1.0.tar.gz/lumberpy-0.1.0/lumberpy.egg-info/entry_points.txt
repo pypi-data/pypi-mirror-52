@@ -1,0 +1,3 @@
+[console_scripts]
+lumberpy = lumberpy.cli:main
+
