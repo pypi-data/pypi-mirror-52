@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: spintop
+Version: 0.5.4
+Summary: Spintop, a library of extensions to OpenHTF
+Home-page: UNKNOWN
+Author: William Laroche
+Author-email: william.laroche@tackv.ca
+Maintainer: William Laroche
+Maintainer-email: william.laroche@tackv.ca
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: spintopd
