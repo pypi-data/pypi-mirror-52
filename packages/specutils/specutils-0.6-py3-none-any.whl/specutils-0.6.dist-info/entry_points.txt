@@ -1,0 +1,6 @@
+[asdf_extensions]
+specutils = specutils.io.asdf.extension:SpecutilsExtension
+
+[console_scripts]
+
+
