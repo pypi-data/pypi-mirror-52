@@ -1,0 +1,3 @@
+[console_scripts]
+lgs = lg_shell:main.main
+
