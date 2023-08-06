@@ -1,0 +1,13 @@
+apkverify/__init__.py,sha256=BFi0tZwovKZAk1bB0rDdn8OaUQPxAX9j3i-WmZUCNxI,136
+apkverify/__main__.py,sha256=OIzAIralbc5YNEIB1Tcu0HGcDyQpLFKJnyoGepN1VaE,2204
+apkverify/apkfile.py,sha256=0xczwX1UM4jURdhSWlgmvZTur2gEwOfUnarXkWwB2YA,31734
+apkverify/apkverify.py,sha256=YR-HxAACU3YqV4lNq4RN9ZautvTDSovbbZIOg7aJD9I,24311
+apkverify/check_apk.py,sha256=CjgXvKmS41BUKkuU3YWlLbFu7gg0PhiUsqLy749BY9Y,2150
+apkverify/metadata.py,sha256=RAnidEVIHggWO2YcwJphkeVggjVag2AYxeqzrLBmgqQ,476
+apkverify/sigverify.py,sha256=9_NXnqu8WBVZAPOPc0RFp8vW-G95iwFtOfi5UcEQkFg,27797
+ak_apkverify-0.1.1.1.dist-info/AUTHORS.rst,sha256=h7n5K_q9I29_faaIVIqD2BQqvAVdsTWjwgaAw55-yTE,205
+ak_apkverify-0.1.1.1.dist-info/LICENSE,sha256=ETMn43y_sCcyBWbmTCKQzPZMuKvA8eeWdPdUR-qlNKk,1074
+ak_apkverify-0.1.1.1.dist-info/METADATA,sha256=K6uHAKbPutMMWrlzJ9_k1jkyLLNHVZrtAECcPNfP_GI,20272
+ak_apkverify-0.1.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ak_apkverify-0.1.1.1.dist-info/top_level.txt,sha256=EkcAXmM_O1obWlvfumVh4P1KvBXpOrULCTY2h6g_DZw,10
+ak_apkverify-0.1.1.1.dist-info/RECORD,,
