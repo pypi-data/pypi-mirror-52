@@ -1,0 +1,7 @@
+-e .
+
+check-manifest
+nose
+pylint
+tox
+twine
