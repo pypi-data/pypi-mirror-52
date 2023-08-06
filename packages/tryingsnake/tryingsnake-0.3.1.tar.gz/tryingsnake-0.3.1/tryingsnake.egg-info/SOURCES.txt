@@ -1,0 +1,10 @@
+README.md
+setup.py
+tryingsnake/__init__.py
+tryingsnake.egg-info/PKG-INFO
+tryingsnake.egg-info/SOURCES.txt
+tryingsnake.egg-info/dependency_links.txt
+tryingsnake.egg-info/not-zip-safe
+tryingsnake.egg-info/top_level.txt
+tryingsnake/test/__init__.py
+tryingsnake/test/test_try.py
