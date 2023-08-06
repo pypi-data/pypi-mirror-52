@@ -1,0 +1,16 @@
+openpyxl
+requests
+six
+pendulum
+click
+lxml
+
+[docs]
+sphinx
+sphinx_rtd_theme
+
+[tests]
+httmock
+mock
+pytest
+coverage
