@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: brewblox-plaato
+Version: 0.1.1.dev6
+Summary: Integration with the Plaato airlock
+Home-page: https://github.com/BrewBlox/brewblox-plaato
+Author: BrewPi
+Author-email: Development@brewpi.com
+License: UNKNOWN
+Description: # Brewblox-Plaato
+        
+        TODO
+        
+Keywords: brewing brewpi brewblox embedded plugin service
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: System :: Hardware
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
