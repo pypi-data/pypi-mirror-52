@@ -1,0 +1,492 @@
+#!/usr/bin/env bash
+#
+# functions to run automated test framework on POSIX systems
+#
+# 1. setting up the environment
+# 2. running actual test scripts
+# 3. clean up afterwards
+#
+# All steps can be run in a single task or be invoked individually
+#
+# required variables are TEST_FILE, PYPI_USR, PYPI_PWD and CC_TEST_REPORTER_ID
+
+set -e
+BIN="$(pwd)/.bin"
+NAME=$(pwd | awk -F/ '{print $NF}');
+
+PROFILE_FILE="dev.py"
+TEST_DIR="test"
+
+# ----------------------------------------------------------------------------
+# define environment maintenance functions
+# ----------------------------------------------------------------------------
+
+_pre()
+{
+    echo "*** load environment from file $1 ***"
+    . $1;
+    echo '';
+}   # end of _pre
+
+create()
+{
+    echo '*** create new project ***';
+
+    python -c "import auxilium; auxilium.create_project()"
+
+    echo ''
+}   # end of create
+
+update()
+{
+    echo '*** update project to latest auxilium version ***'
+
+    # cp ??/setup.py ./setup.py
+    # cp ??/doc/sphinx/conf.py ./doc/sphinx/conf.py
+
+    echo ''
+}   # end of update
+
+setup()
+{
+    # 1. setup the environment
+    echo '*** setup environment requirements ***';
+    # echo "pip freeze:"
+    # python -m pip freeze;
+    python -m pip freeze > freeze_requirements.txt;
+    if [[ -s requirements.txt ]]; then
+        python -m pip install -r requirements.txt;
+    fi;
+    if [[ -s upgrade_requirements.txt ]]; then
+        python -m pip install --upgrade -r upgrade_requirements.txt;
+    fi;
+    if [[ ! $? ]]; then exit 1; fi;
+    echo '';
+}   # end of setup
+
+cleanup()
+{
+    echo '*** clean environment ***';
+
+    # removed profiling data files
+    rm -f -v .cprofile
+
+    # removed coverage data files
+    rm -f -v .coverage;
+    rm -f -v coverage.xml
+    rm -f -r -v htmlcov;
+
+    # removed coverage data files from test/
+    rm -f -v test/.coverage;
+    rm -f -v test/coverage.xml
+    rm -f -r -v test/htmlcov;
+
+
+    # remove bin files
+    rm -f -r -v ./.bin/
+
+    # remove doc build files
+    rm -f -r -v ./doc/sphinx/_build/
+
+    # remove setuptools release files
+    rm -f -r -v ./build/
+    rm -f -r -v ./dist/
+    rm -f -r -v *.egg-info
+    rm -f -r -v .eggs
+
+    # 3. clean up afterwards
+    # if [[ -s requirements.txt ]]; then
+    #     python -m pip uninstall -y -r requirements.txt;
+    # fi;
+    # if [[ -s upgrade_requirements.txt ]]; then
+    #     python -m pip uninstall -y -r upgrade_requirements.txt;
+    # fi;
+    # sed -i 's/==/>=/g' freeze_requirements.txt
+    # if [[ -s freeze_requirements.txt ]]; then
+    #     python -m pip install --upgrade -r freeze_requirements.txt;
+    #     rm freeze_requirements.txt
+    # fi;
+    echo '';
+}   # end of cleanup
+
+install()
+{
+    echo '*** install project via pip install -e ***';
+
+    cd ..;
+    python -m pip install -e ${NAME};
+    cd ${NAME};
+
+    echo '';
+}   # end of install
+
+upgrade()
+{
+    echo '*** install project via pip install -e ***';
+
+    cd ..;
+    python -m pip install --upgrade -e ${NAME};
+    cd ${NAME};
+
+    echo '';
+}   # end of install
+
+uninstall()
+{
+    echo '*** install project via pip uninstall ***';
+
+    python -m pip uninstall -y ${NAME};
+
+    echo '';
+}   # end of uninstall
+
+# ----------------------------------------------------------------------------
+# define test functions
+# ----------------------------------------------------------------------------
+
+run()
+{
+    # 2. running actual test scripts
+    echo '*** run test scripts ***';
+
+    cd ${TEST_DIR};
+    #python -m unittest discover -v -s ${TEST_DIR} -p "*.py"
+    python -m unittest discover -v -p "*.py"
+    cd ..;
+    echo '';
+}   # end of run
+
+test()
+{
+    run;
+}
+
+profile()
+{
+    echo '*** run test profiling ***'
+
+    python -m cProfile -s tottime ${PROFILE_FILE}
+
+    # python -m cProfile -o .cprofile ${PROFILE_FILE}
+    # python -m pstats .cprofile stat
+    # snakeviz .cprofile
+
+    echo '';
+}   # end of profile
+
+analysis()
+{
+    echo '*** run code analysis scripts ***';
+
+    echo '*** run pylint ***';
+    pylint --exit-zero "${NAME}";
+
+    # echo '*** run flake8 ***';
+    # flake8 --exit-zero "${NAME}";
+
+    # echo '*** run pycodestyle (aka pep8) ***';
+    # pycodestyle "${NAME}";
+
+    echo '*** run bandit ***';
+    bandit -r "${NAME}";
+
+    echo '':
+}   # end of analysis
+
+coverage()
+{
+    echo '*** run coverage scripts ***';
+
+    cd ${TEST_DIR};
+    python -m coverage run --include="*${NAME}*" --omit="*test?.py" --module unittest discover -v -p "*.py";
+    python -m coverage xml;
+    python -m coverage report;
+    python -m coverage html;
+    cd ..;
+
+    echo '';
+}   # end of coverage
+
+codeclimate()
+{
+    echo '*** install codeclimate scripts ***';
+
+    mkdir -p ${BIN};
+    if [[ -e "${BIN}/cc-test-reporter" ]]; then
+        echo '*** codeclimate coverage reporter found ***'
+    else
+        case $(uname) in
+            "Darwin" )
+                echo '*** download codeclimate coverage reporter for macOS ***';
+                curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > "${BIN}/cc-test-reporter";
+                ;;
+            "Linux" )
+                echo '*** download codeclimate coverage reporter for Linux ***';
+                curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "${BIN}/cc-test-reporter";
+                ;;
+        esac;
+        chmod +x "${BIN}/cc-test-reporter";
+    fi;
+
+    echo '*** run coverage scripts for codeclimate ***';
+    "${BIN}/cc-test-reporter" before-build;
+    echo '';
+    coverage;
+    echo '*** upload coverage report ***';
+    cd ${TEST_DIR};
+    "${BIN}/cc-test-reporter" after-build -r ${CC_TEST_REPORTER_ID} -t coverage.py --exit-code $? --prefix $(pwd)
+    cd ..;
+
+    echo '';
+}   # end of codeclimate
+
+codecoverage()
+{
+    echo '*** run coverage scripts for codecov ***';
+    coverage;
+    codecov --token=${CODECOV_TOKEN};
+    echo '';
+}
+
+api()
+{
+    echo '*** run sphinx apidoc scripts ***';
+
+    rm -f -r -v doc/sphinx/api;
+    sphinx-apidoc -o doc/sphinx/api -f -E ${NAME};
+
+    echo 'INFO: Do not forgett to add file under doc/sphinx/api to git (or your favourite scv).';
+
+    echo '';
+}   # end of api
+
+html()
+{
+    echo '*** run sphinx html scripts ***';
+    echo '';
+
+    sphinx-build -M clean ./doc/sphinx/ ./doc/sphinx/_build;
+    sphinx-build -M html ./doc/sphinx/ ./doc/sphinx/_build;
+
+    echo '';
+}   # end of html
+
+latexpdf()
+{
+    echo '*** run sphinx latexpdf scripts ***';
+    echo '';
+
+    sphinx-build -M latexpdf ./doc/sphinx/ ./doc/sphinx/_build;
+
+    echo '';
+}   # end of html
+
+doctest()
+{
+    echo '*** run sphinx doctest scripts ***';
+    echo '';
+
+    sphinx-build -M doctest ./doc/sphinx/ ./doc/sphinx/_build;
+
+    echo '';
+}   # end of sphinx
+
+show()
+{
+    html;
+    open doc/sphinx/_build/html/index.html;
+}
+
+sphinx()
+{
+    echo '*** run sphinx scripts ***';
+    echo '';
+
+    # api;
+    html;
+    doctest;
+
+    echo '';
+}
+setuptools()
+{
+    echo '*** run setuptools scripts ***';
+    echo '';
+
+    python setup.py build
+    python setup.py sdist bdist_wheel
+    twine check dist/*
+
+    echo '';
+}   # end of setuptools
+
+build ()
+{
+    setuptools;
+}
+
+docmaintain()
+{
+    echo '*** run docmaintain scripts ***';
+    echo '';
+
+    python -c "import auxilium; auxilium.set_timestamp('${NAME}')";
+    python -c "import auxilium; auxilium.replace_headers('${NAME}')";
+
+    echo '';
+}   # end of doc_tools
+
+repo()
+{
+    echo '*** init a repository locally and on github.com ***';
+    echo '';
+    echo '-> command still under development <-';
+    exit 1;
+
+    git init ${NAME};
+    cd ${NAME};
+    git add -all;
+    git commit -m "Initial commit (via auxilium)";
+
+    JSON='
+    {
+      "name": "'"${NAME}"'",
+      "description": "'"${SLOGAN}"'",
+      "homepage": "https://github.com/"'"${GITHUB_USR}"'"/"'"${NAME}"'",
+      "private": false,
+      "has_issues": true,
+      "has_projects": true,
+      "has_wiki": true
+    }';
+    URL="https://api.github.com/${GITHUB_USR}/repos";
+    REMOTE="https://github.com/${GITHUB_USR}/${NAME}";
+
+    echo '';
+    echo "curl -X POST ${URL}";
+    echo ${JSON} >> repo.json
+    curl -u ${GITHUB_USR}:${GITHUB_PWD} -d "@repo.json" -X POST ${URL};
+    rm -f repo.json
+
+    git fetch ${REMOTE};
+    git push;
+
+    echo '';
+}
+
+release()
+{
+    echo '*** draft release on github.com ***';
+    echo '';
+
+    NAME=$(pwd | awk -F/ '{print $NF}');
+    VERSION=$(python -c "import ${NAME} as pkg; print('v' + pkg.__version__)");
+    MSG="update for release ${VERSION}";
+
+    # draft new GitHub release;
+    JSON='
+    {
+       "tag_name": "'"${VERSION}"'",
+       "target_commitish": "master",
+       "name": "'"${VERSION}"'",
+       "body": "'"${MSG}"'",
+       "draft": false,
+       "prerelease": false
+    }';
+    URL="https://api.github.com/repos/${GITHUB_USR}/${NAME}/releases";
+
+    # POST http://api.github.com/repos/${GITHUB_USR}/${NAME}/releases
+    echo '';
+    echo "curl -X POST ${URL}";
+    echo ${JSON} >> release.json
+    curl -u ${GITHUB_USR}:${GITHUB_PWD} -d "@release.json" -X POST ${URL};
+    rm -f release.json
+
+    echo '';
+}   # end of release
+
+deploy()
+{
+    echo '*** deploy release on pypi.org ***';
+    echo '';
+
+    # run setuptools build
+    python setup.py sdist bdist_wheel
+    python -m twine check dist/*
+
+    # push to PyPi.org
+    python -m twine upload -u ${PYPI_USR} -p ${PYPI_PWD} dist/* #--repository-url https://test.pypi.org/legacy/ dist/*;
+
+    echo '';
+}   # end of deploy
+
+# ----------------------------------------------------------------------------
+# define test bundles
+# ----------------------------------------------------------------------------
+
+simple()
+{
+    echo "*** run simple test pipeline ***"
+    setup;
+    run;
+    echo '';
+    echo "*** run simple test pipeline finished ***"
+}
+
+full()
+{
+    echo "*** run full test pipeline ***"
+    setup;
+    sphinx;
+    analysis;
+    codecoverage;
+    build;
+    echo '';
+    echo "*** run full test pipeline finished ***"
+}
+
+# ----------------------------------------------------------------------------
+# invoke command by arguments
+# ----------------------------------------------------------------------------
+
+if [[ -n $1 ]] ; then
+
+    echo '';
+    FUNC=$1
+    shift;
+
+    # todo prompt help if FUNC=='-h'|'--help' or FUNC==None
+
+    # ---------------------------------------------
+    # setup test python environment using arguments
+    # ---------------------------------------------
+
+    for i in "$@"
+    do
+    case ${i} in
+
+        -p=*|--pre=*)
+        PRE_FILE="${i#*=}"
+        shift 1 # past argument=value
+        _pre ${PRE_FILE};
+        ;;
+
+        ---*=*)
+        VAL="${i#*---}"
+        shift 1 # past argument=value
+        echo "export $VAL";
+        export ${VAL};
+        ;;
+
+    esac;
+    done;
+
+    # --------------------
+    # invoke test function
+    # --------------------
+
+    # echo "${FUNC} $@";
+    ${FUNC} $@;
+
+else
+    echo "please provide command for the auxilium script, e.g. 'setup', 'run', 'deploy', 'cleanup'";
+fi;
