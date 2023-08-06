@@ -1,0 +1,22 @@
+## secret-manager
+Secret manager for Python
+
+**How to use -** 
+
+****Install library -****  
+add in requirements.txt secrets-manager==0.0.1
+
+****Set environment variable -****  
+APP_ENV = prepod/prod  
+APP_NAME = etl_pipeline
+
+**In config file:**  
+from secretmanager import secrets
+
+redshift_secrets = secrets['redshift']
+
+REDSHIFT_HOST = redshift_secrets['host']
+REDSHIFT_PORT = redshift_secrets['port']
+REDSHIFT_USER = redshift_secrets['username']
+REDSHIFT_PASS = redshift_secrets['password']
+REDSHIFT_DB = redshift_secrets['dbname']
