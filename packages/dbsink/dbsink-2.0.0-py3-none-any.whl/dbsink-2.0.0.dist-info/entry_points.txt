@@ -1,0 +1,13 @@
+[console_scripts]
+dbsink = dbsink.listen:run
+
+[dbsink.maps]
+AreteData = dbsink.tables:AreteData
+GenericFloat = dbsink.tables:GenericFloat
+GenericGeography = dbsink.tables:GenericGeography
+JsonMap = dbsink.maps:JsonMap
+NumurusData = dbsink.tables:NumurusData
+NumurusStatus = dbsink.tables:NumurusStatus
+NwicFloatReports = dbsink.tables:NwicFloatReports
+StringMap = dbsink.maps:StringMap
+
