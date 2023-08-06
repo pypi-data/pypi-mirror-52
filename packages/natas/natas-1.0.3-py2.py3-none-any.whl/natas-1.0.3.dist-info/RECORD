@@ -1,0 +1,12 @@
+natas/__init__.py,sha256=kwMc2S4vu7NZjlO5mf1_svcXK3p2oAQMU-BjIrzB3ak,1272
+natas/download.py,sha256=8PP2i6WDgBPnN8NwPt2PT4HqRQcUr_vmy9gw_TRbyFY,402
+natas/get_wiktionary_lemmas.py,sha256=FDpHtz7yYcDklsSw9tPkVx2A6R1VnoJxxvsSFPmBBeU,614
+natas/normalize.py,sha256=vUFVPXPVWZktF0M-8TtJweIAo2l6PCpgvztKT4KbNOo,4950
+natas/ocr_builder.py,sha256=jh84ovqUbeVJKPJm8GE_vGpYvQAYBYeY7TrdPNGNCKU,1851
+natas/wiktionary_lemmas.json,sha256=1rLuQg5ejRnhWZ5HTI9pBdsFy2glmgPY7KdFGAKUhVg,10605506
+natas/models/README.txt,sha256=MF0pLAPQeL37CKhY3Xl_WVNDTd7tyAv3JIGOKZIaPYk,161
+natas-1.0.3.dist-info/METADATA,sha256=VJsZnYq4-tTQTRD6dE1bKx9WNxjhMlJnM2gF7p09FPU,7494
+natas-1.0.3.dist-info/RECORD,,
+natas-1.0.3.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+natas-1.0.3.dist-info/dependency_links.txt,sha256=AClRvJKVyQWWOKQ9iJSEz41bPFYEWGyTQUziWmw5UAE,280
+natas-1.0.3.dist-info/top_level.txt,sha256=_bAG9tR8NmHYKgSqDgWqLm9Vx-1ezFgA2V46A42I2tY,6
