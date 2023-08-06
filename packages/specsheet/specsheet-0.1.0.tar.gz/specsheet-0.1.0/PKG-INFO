@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: specsheet
+Version: 0.1.0
+Summary: Command to produce navigable documentation from Gherkin feature files.
+Home-page: https://gitlab.com/eddarmitage/spec-sheet
+Author: Edd Armitage
+Author-email: edward.armitage@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.4
+Description-Content-Type: text/x-rst

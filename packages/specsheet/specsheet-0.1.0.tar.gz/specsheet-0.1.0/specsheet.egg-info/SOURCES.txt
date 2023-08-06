@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+specsheet/__init__.py
+specsheet/_version.py
+specsheet/command.py
+specsheet.egg-info/PKG-INFO
+specsheet.egg-info/SOURCES.txt
+specsheet.egg-info/dependency_links.txt
+specsheet.egg-info/entry_points.txt
+specsheet.egg-info/requires.txt
+specsheet.egg-info/top_level.txt
