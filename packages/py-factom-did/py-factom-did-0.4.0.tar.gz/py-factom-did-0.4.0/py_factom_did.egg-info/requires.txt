@@ -1,0 +1,5 @@
+base58>=1.0.3
+ecdsa>=0.13.2
+ed25519>=1.5
+factom-api>=1.0.2
+pycryptodome>=3.9.0
