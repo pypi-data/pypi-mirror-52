@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: Blinder
+Version: v0.1
+Summary: Blidner is a small python library to automate time-based blind SQL injection by using a pre defined queries as a functions to automate a rapid PoC development.
+Home-page: https://github.com/user/reponame
+Author: Askar
+Author-email: m.askar@isecur1ty.org
+License: GPL V3.0
+Download-URL: https://github.com/mhaskar/Blinder/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: SQL injection,Pentesting,AppSec
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.7
