@@ -1,0 +1,12 @@
+README.md
+setup.py
+imagedegrade/__init__.py
+imagedegrade/im.py
+imagedegrade/np.py
+imagedegrade.egg-info/PKG-INFO
+imagedegrade.egg-info/SOURCES.txt
+imagedegrade.egg-info/dependency_links.txt
+imagedegrade.egg-info/requires.txt
+imagedegrade.egg-info/top_level.txt
+tests/__init__.py
+tests/test_imagedegrade.py
