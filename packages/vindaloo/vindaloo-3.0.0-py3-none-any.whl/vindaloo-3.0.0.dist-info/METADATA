@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: vindaloo
+Version: 3.0.0
+Summary: K8S deployer
+Home-page: UNKNOWN
+Author: Daniel Milde
+Author-email: daniel.milde@firma.seznam.cz
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: argcomplete (>=1.9.5)
+Requires-Dist: pystache
+Requires-Dist: typing
+
+UNKNOWN
+
+
