@@ -1,0 +1,5 @@
+capturer==2.4
+
+[publish]
+pre-commit
+twine
