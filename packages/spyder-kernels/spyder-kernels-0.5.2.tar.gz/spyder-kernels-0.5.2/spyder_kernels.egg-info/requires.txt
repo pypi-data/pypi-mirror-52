@@ -1,0 +1,18 @@
+ipykernel>=4.8.2
+pyzmq>=17
+jupyter-client>=5.2.3
+cloudpickle
+
+[:platform_system != "Windows"]
+wurlitzer
+
+[test]
+numpy
+pandas
+scipy
+pytest
+pytest-cov
+mock
+cython
+matplotlib
+xarray
