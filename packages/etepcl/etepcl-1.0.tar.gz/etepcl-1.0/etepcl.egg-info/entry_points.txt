@@ -1,0 +1,3 @@
+[console_scripts]
+etepcl = etepcl.cli:main
+
