@@ -1,0 +1,47 @@
+===========
+pytest-stoq
+===========
+
+.. image:: https://img.shields.io/pypi/v/pytest-stoq.svg
+    :target: https://pypi.org/project/pytest-stoq
+    :alt: PyPI version
+
+.. image:: https://img.shields.io/pypi/pyversions/pytest-stoq.svg
+    :target: https://pypi.org/project/pytest-stoq
+    :alt: Python versions
+
+A plugin to pytest stoq.
+
+This plugin automatically set up the stoq test environment. It also provide a range of
+fixtures to ease the testing of stoq-related projects.
+
+
+Installation
+============
+
+You can install "pytest-stoq" via `pip`_ from `PyPI`_::
+
+    $ pip install pytest-stoq
+
+
+Fixtures
+========
+
+The plugin provides the following fixtures:
+
+- ``store``: an instance of storm's (ORM) store used to access the database
+- ``example_creator``: instance creates (inserts) database objects with example/test data
+- ``current_station``
+- ``current_user``
+- ``current_branch``
+
+
+License
+=======
+
+Distributed under the terms of the `GNU GPL v3.0`_ license, "pytest-stoq" is free and open source software
+
+
+.. _`GNU GPL v3.0`: http://www.gnu.org/licenses/gpl-3.0.txt
+.. _`pip`: https://pypi.org/project/pip/
+.. _`PyPI`: https://pypi.org/project
