@@ -1,0 +1,8 @@
+README.md
+setup.py
+downloader/__init__.py
+downloader/my_downloader.py
+mydload.egg-info/PKG-INFO
+mydload.egg-info/SOURCES.txt
+mydload.egg-info/dependency_links.txt
+mydload.egg-info/top_level.txt
