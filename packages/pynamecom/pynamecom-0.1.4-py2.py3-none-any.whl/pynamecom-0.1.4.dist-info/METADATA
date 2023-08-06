@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: pynamecom
+Version: 0.1.4
+Summary: Python Library for Name.com v4 API
+Home-page: https://github.com/CtheSky/namecom
+Author: Tianhong Chu
+Author-email: cthesky13@gmail.com
+License: UNKNOWN
+Keywords: name.com,namecom,api,domain name registrar
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >= 2.7, != 3.0.*, != 3.1.*, != 3.2.*
+Requires-Dist: requests (>=2.18.0)
+
+Overview
+------------
+.. image:: https://circleci.com/gh/CtheSky/namecom.svg?style=svg
+  :target: https://circleci.com/gh/CtheSky/namecom
+.. image:: https://codecov.io/gh/CtheSky/namecom/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/CtheSky/namecom
+.. image:: https://img.shields.io/badge/python-2.7%2B%2C%203.4%2B-brightgreen.svg
+  :target: https://github.com/CtheSky/namecom
+.. image:: https://img.shields.io/badge/pypi-v0.1.3-brightgreen.svg
+  :target: https://pypi.org/project/pynamecom/
+
+*namecom* is a python library for the v4 api of `name.com <https://www.name.com>`_, a domain name registrar.
+
+Installation
+------------
+
+If you haven't already, start by installing it
+with *pip*::
+
+   pip install --upgrade pynamecom
+
+Quick Start
+-----------
+
+Use `DnsApi` to create a dns record:
+
+.. sourcecode:: python
+
+    from namecom import Auth, DnsApi
+
+    auth = Auth('username', 'access_token')
+    api = DnsApi(domainName='example.org', auth=auth)
+
+    result = api.create_record(host='test', type='A', answer='10.0.0.1')
+
+Documentation
+-------------
+Read more about this project at `readthedocs <https://namecom.readthedocs.io/en/latest/>`_:
+
+* `Overview <https://namecom.readthedocs.io/en/latest/#overview>`_
+* `Installaton <https://namecom.readthedocs.io/en/latest/#installation>`_
+* `Quick Start <https://namecom.readthedocs.io/en/latest/#quick-start>`_
+* `More About API <https://namecom.readthedocs.io/en/latest/#more-about-api>`_
+* `More References <https://namecom.readthedocs.io/en/latest/#more-references>`_
+* `Usage Example <https://namecom.readthedocs.io/en/latest/#usage-example>`_
+* `Hey, it's not Snake Case! <https://namecom.readthedocs.io/en/latest/#hey-it-s-not-snake-case>`_
+
+
