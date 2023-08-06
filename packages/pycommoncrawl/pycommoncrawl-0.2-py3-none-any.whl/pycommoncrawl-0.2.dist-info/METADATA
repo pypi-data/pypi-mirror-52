@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pycommoncrawl
+Version: 0.2
+Summary: An interface to access common crawl data
+Home-page: https://github.com/Aunsiels/pycommoncrawl
+Author: Julien Romero
+Author-email: romerojulien34@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: progressbar
+Requires-Dist: pytest
+Requires-Dist: warc3-wet
+
+# PyCommonCrawl
+
+A python interface for [Common Crawl](https://commoncrawl.org/).
+
+## INSTALL
+
+pip3 install pycommoncrawl
+
+## USAGE
+
+```python
+from pycommoncrawl.common_crawl_data_accessor import CommonCrawlDataAccessor
+
+common_crawl_data_accessor = CommonCrawlDataAccessor()
+
+# Iterate by line
+for line in common_crawl_data_accessor.get_raw_resource_data("WAT"):
+    print(line)
+
+# Iterate by WARC bloc
+for warc in common_crawl_data_accessor.get_raw_resource_data_per_warc("WAT"):
+    print(warc["Content-Length"])
+```
+
+
