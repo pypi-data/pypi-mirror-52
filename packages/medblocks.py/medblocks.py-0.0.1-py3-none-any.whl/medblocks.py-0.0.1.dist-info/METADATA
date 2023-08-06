@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: medblocks.py
+Version: 0.0.1
+Summary: MedBlocks python client
+Home-page: https://gitlab.com/medblocks/medblocks.py
+Author: Sidharth R
+Author-email: tornadoalert@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Medblocks.py
+
+## Installation
+```
+pip install -r requirements.txt
+```
+
+
+## Usage
+```python
+from medblocks import Client
+
+api = Client("165.22.211.124")
+api.register("email@example.com", "yoursecretpassword")
+api.login("email@example.com", "yoursecretpassword")
+api.list()
+# Returns all medblocks on the blockchain
+api.addBlock("file.txt", "anotheremail@example.com")
+
+```
+
+
