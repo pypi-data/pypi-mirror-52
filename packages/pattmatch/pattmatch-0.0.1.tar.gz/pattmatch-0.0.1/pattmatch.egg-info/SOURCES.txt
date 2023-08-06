@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+pattmatch/__init__.py
+pattmatch/boyer_moore.py
+pattmatch/helpers.py
+pattmatch/kmp.py
+pattmatch/rabin_karp.py
+pattmatch/z_array.py
+pattmatch.egg-info/PKG-INFO
+pattmatch.egg-info/SOURCES.txt
+pattmatch.egg-info/dependency_links.txt
+pattmatch.egg-info/top_level.txt
