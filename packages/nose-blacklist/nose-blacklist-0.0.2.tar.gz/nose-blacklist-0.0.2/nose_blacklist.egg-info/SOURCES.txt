@@ -1,0 +1,10 @@
+README.rst
+setup.py
+nose_blacklist.egg-info/PKG-INFO
+nose_blacklist.egg-info/SOURCES.txt
+nose_blacklist.egg-info/dependency_links.txt
+nose_blacklist.egg-info/entry_points.txt
+nose_blacklist.egg-info/requires.txt
+nose_blacklist.egg-info/top_level.txt
+noseblacklist/__init__.py
+noseblacklist/plugin.py
