@@ -1,0 +1,12 @@
+beautifulsoup4<5,>=4.6.0
+requests<3,>=2.18.2
+html5lib==1.0.1
+
+[lxml]
+lxml<4.4.0,>=4.1.1
+
+[nkf]
+nkf==0.2.0
+
+[test]
+pytest

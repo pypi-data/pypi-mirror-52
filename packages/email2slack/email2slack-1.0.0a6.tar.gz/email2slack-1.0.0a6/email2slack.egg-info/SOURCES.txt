@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+contrib/email2slack
+email2slack/__init__.py
+email2slack/__main__.py
+email2slack/compat.py
+email2slack/parser.py
+email2slack/slack.py
+email2slack.egg-info/PKG-INFO
+email2slack.egg-info/SOURCES.txt
+email2slack.egg-info/dependency_links.txt
+email2slack.egg-info/entry_points.txt
+email2slack.egg-info/requires.txt
+email2slack.egg-info/top_level.txt
