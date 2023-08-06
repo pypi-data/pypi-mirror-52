@@ -1,0 +1,12 @@
+README.md
+setup.py
+LatexTool/__init__.py
+LatexTool/tex_tools.py
+LatexTool/totable.py
+LatexTool/ast/__init__.py
+LatexTool/ast/tabel.py
+x2t.egg-info/PKG-INFO
+x2t.egg-info/SOURCES.txt
+x2t.egg-info/dependency_links.txt
+x2t.egg-info/entry_points.txt
+x2t.egg-info/top_level.txt
