@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: asyncprogressor
+Version: 0.1.6
+Summary: Package for showing progress on your function based on last run
+Home-page: https://github.com/Spr00t/asyncprogressor
+Author: Vlad Nadzuga
+Author-email: nadzuga0vlad@gmail.com    
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
