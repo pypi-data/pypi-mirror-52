@@ -1,0 +1,3 @@
+[console_scripts]
+mongodbrdg = mongodbrdg.mongodbrdg_main:main
+
