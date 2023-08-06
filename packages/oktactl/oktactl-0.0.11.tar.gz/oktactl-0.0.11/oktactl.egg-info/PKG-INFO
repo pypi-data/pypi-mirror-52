@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: oktactl
+Version: 0.0.11
+Summary: Sample Okta CLI tool in python
+Home-page: https://github.com/atul3015kr/oktactl
+Author: Atulya Kumar Pandey
+Author-email: atul3015@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
