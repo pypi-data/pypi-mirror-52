@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: kube-secrets
+Version: 0.0.1
+Summary: Easier management of kubernetes secrets.
+Home-page: https://github.com/maroshmka/kube-secrets
+Author: hmka
+Author-email: hunka.mario@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: Click
+Requires-Dist: kubernetes
+
+UNKNOWN
+
+
