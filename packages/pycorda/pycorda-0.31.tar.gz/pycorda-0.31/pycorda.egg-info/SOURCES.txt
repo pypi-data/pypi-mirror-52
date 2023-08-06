@@ -1,0 +1,10 @@
+README.md
+setup.py
+pycorda/__init__.py
+pycorda/core.py
+pycorda/stats.py
+pycorda.egg-info/PKG-INFO
+pycorda.egg-info/SOURCES.txt
+pycorda.egg-info/dependency_links.txt
+pycorda.egg-info/requires.txt
+pycorda.egg-info/top_level.txt
