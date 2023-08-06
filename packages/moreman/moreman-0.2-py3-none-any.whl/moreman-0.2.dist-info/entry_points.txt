@@ -1,0 +1,3 @@
+[console_scripts]
+moreman = moreman.main:main
+
