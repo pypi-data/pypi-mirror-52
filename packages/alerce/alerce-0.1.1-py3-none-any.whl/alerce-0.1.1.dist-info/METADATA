@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: alerce
+Version: 0.1.1
+Summary: Package to access to ALeRCE data
+Home-page: UNKNOWN
+Author: ALeRCE Team
+Author-email: contact@alerce.online
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas (>=0.24)
+Requires-Dist: requests (>=2.0)
+Requires-Dist: IPython
+
+UNKNOWN
+
+
