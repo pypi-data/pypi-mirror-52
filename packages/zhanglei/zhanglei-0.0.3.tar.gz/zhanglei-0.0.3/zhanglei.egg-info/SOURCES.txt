@@ -1,0 +1,11 @@
+README.md
+setup.py
+classify/__init__.py
+data/__init__.py
+data/cnews_loader.py
+helper/__init__.py
+helper/cnews_group.py
+zhanglei.egg-info/PKG-INFO
+zhanglei.egg-info/SOURCES.txt
+zhanglei.egg-info/dependency_links.txt
+zhanglei.egg-info/top_level.txt
