@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+platformshconfig/__init__.py
+platformshconfig/config.py
+platformshconfig.egg-info/PKG-INFO
+platformshconfig.egg-info/SOURCES.txt
+platformshconfig.egg-info/dependency_links.txt
+platformshconfig.egg-info/top_level.txt
+tests/valid/ENV.json
+tests/valid/ENV_runtime.json
+tests/valid/PLATFORM_APPLICATION.json
+tests/valid/PLATFORM_RELATIONSHIPS.json
+tests/valid/PLATFORM_ROUTES.json
+tests/valid/PLATFORM_VARIABLES.json
