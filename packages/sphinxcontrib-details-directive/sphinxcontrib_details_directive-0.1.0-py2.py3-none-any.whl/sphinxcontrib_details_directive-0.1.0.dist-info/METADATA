@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: sphinxcontrib-details-directive
+Version: 0.1.0
+Summary: "details" directive for Sphinx
+Home-page: https://github.com/tk0miya/sphinxcontrib-details-directive/
+Author: Takeshi KOMIYA
+Author-email: i.tkomiya@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
+Requires-Dist: Sphinx (>=2.0)
+Provides-Extra: test
+Requires-Dist: tox ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: flake8-import-order ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+
+===============================
+sphinxcontrib-details-directive
+===============================
+
+``details`` directive for Sphinx
+
+It enables ``details`` directive as an element to represent ``<details>`` element in HTML output.
+It will be converted into mere paragraphs in other output formats.
+
+## Install
+
+Install the package via pip
+```
+$ pip install sphinxcontrib-details-directive
+```
+
+And append `sphinxcontrib.details.directive` to extensions list in your conf.py.
+```
+extensions = ['sphinxcontrib.details.directive]
+```
+
+## Directive
+
+**details**
+
+  ``details`` directive create a ``<details>`` block containing following contents::
+
+    .. details:: summary of the detail block
+
+       description of the details block.
+       blah blah blah
+
+   It will be rendered with ``<details>`` tag in HTML output.  On the other hand, for
+   other output formats, it will be rendered as mere paragraphs.
+
+   ``:open:`` flag is allowed to indicate the details block is opened by default.
+
+
