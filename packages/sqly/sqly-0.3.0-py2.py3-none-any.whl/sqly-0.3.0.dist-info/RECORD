@@ -1,0 +1,14 @@
+sqly/__init__.py,sha256=H5kcXCI49yP3bEMV5cK5SrDLC-6blVWxedAihUVXYWg,69
+sqly/__main__.py,sha256=mF4q-RJaoKf8pYMGVWQGLmXpz4Pkemc4XL6Hbjl7tT8,2375
+sqly/connection.py,sha256=AVzDjfRoAq_IoIBU2X4Q3t5vctnhjuaxIvyxFeTB5fs,962
+sqly/dialects.py,sha256=1EaAxG7DKrWVJsFA3VA2KoP5WDIiv78ALD0fDzCeR1I,3835
+sqly/lib.py,sha256=QofrpkeRq9vbyL5pPLDWmL99aDvKfCMj_K6qtLqMXHw,993
+sqly/queries.py,sha256=0qtgCqr3SEI6VVc21eGIQ__CPlTqFnBHiZKyrF_lzwQ,1227
+sqly/schema.py,sha256=aqR11qMJ8XaLMxFoeS4tVanIapoRtuj_2GySGCm69vQ,11780
+sqly/sql.py,sha256=Yp4HGawTh7zg6jr-Ds54oqnrmDER0KYKZSPlQNRh-OU,2129
+sqly-0.3.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+sqly-0.3.0.dist-info/METADATA,sha256=QzD_GJ2LwKDjb0zSzMGpqzOQNZ-NPE3pcWtDglLXLkA,2552
+sqly-0.3.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+sqly-0.3.0.dist-info/entry_points.txt,sha256=AgOByxa8qShuDotX7kQJui6yaat9xLuzu3SZ52tvkag,45
+sqly-0.3.0.dist-info/top_level.txt,sha256=eo3qAaA3yma6ziOcwxCy_H8OUbnolJ2f8vtOS8GIf-Q,5
+sqly-0.3.0.dist-info/RECORD,,
