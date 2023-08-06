@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+bambora/__init__.py
+bambora/base_objects.py
+bambora/exceptions.py
+bambora/misc.py
+bambora/objects.py
+bambora.egg-info/PKG-INFO
+bambora.egg-info/SOURCES.txt
+bambora.egg-info/dependency_links.txt
+bambora.egg-info/requires.txt
+bambora.egg-info/top_level.txt
