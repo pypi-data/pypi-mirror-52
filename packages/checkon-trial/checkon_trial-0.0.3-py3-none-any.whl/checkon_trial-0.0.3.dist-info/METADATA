@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: checkon-trial
+Version: 0.0.3
+Summary: Patch for trial to ensure subunit reporting.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: python-subunit
+Requires-Dist: twisted
+Requires-Dist: junitxml
+
+UNKNOWN
+
+
