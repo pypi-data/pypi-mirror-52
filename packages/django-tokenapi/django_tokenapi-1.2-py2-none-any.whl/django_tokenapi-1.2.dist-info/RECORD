@@ -1,0 +1,14 @@
+tokenapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenapi/backends.py,sha256=I2pnmDvnkdfJiqBrmiZ5ixVBdpuSxOBNWdRwtIRiwpE,669
+tokenapi/decorators.py,sha256=0UJvE_0JYqDOfxL_hySx3YA1EZcvBAWhMrF9zmIjOzc,1311
+tokenapi/http.py,sha256=kw9sqpwnUGbbppA7957xVX-7o2QYFFliQe081sZYgrY,1181
+tokenapi/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenapi/tests.py,sha256=JY4xFd2q0PzTEu1-m777ftOOrMYfgiM2OvA82-F1spE,4481
+tokenapi/tokens.py,sha256=C8O_Fn-GkUYJg213dnapZk2r_jT1MtyrsOmdpWnvrv4,2119
+tokenapi/urls.py,sha256=UTj2kCIZ-p1KLRQ_bxxmJgdx6AZlDhVvVVO4gmcV8ZM,231
+tokenapi/views.py,sha256=ndCTA0NiyrGY1k5ngmis5JMvglei4o59j_snKytepy4,1384
+django_tokenapi-1.2.dist-info/LICENSE,sha256=n5S1MmUrMCvFU1H_GrGV2-rpLgjgJOe_MmaG7Vfj9dk,556
+django_tokenapi-1.2.dist-info/METADATA,sha256=5L63kGefJgk2kfc8B9l7n1dEHU5uxyox5hLSMxtwMsA,5404
+django_tokenapi-1.2.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+django_tokenapi-1.2.dist-info/top_level.txt,sha256=3yKXqgHnWOE-11kA3fhuG25mDOPzURThqULm9FbxFkA,9
+django_tokenapi-1.2.dist-info/RECORD,,
