@@ -1,0 +1,16 @@
+btdht-0.3.3.dist-info/top_level.txt,sha256=R1CwMWk38PXAUan0Uk7o80H_detZdEusbUlFP0AZYm8,6
+btdht-0.3.3.dist-info/RECORD,,
+btdht-0.3.3.dist-info/METADATA,sha256=iQPbcIWNowYCuTvtFyRK0rO9qctR9aZSRjbvSOFVDE4,5287
+btdht-0.3.3.dist-info/WHEEL,sha256=CKrsQRZNKddeqWkqlP4DoIBo-Lb-ExiV2oTN8bWPh84,109
+btdht/dht.pyx,sha256=6DFAwZlFEkn8qyE56wFblYHKMZAER5vFF4Ni_RxirL4,105159
+btdht/krcp.so,sha256=d9V8dvcmPA0S-VXNeM2qNRX0yufJ8-ztt4WCQggD7xs,867864
+btdht/utils.so,sha256=tclHlCJ0DHL0XKdKXoom3HJglBySDNCHa302TI1Obto,1786840
+btdht/krcp.c,sha256=w8Vc6K5Crh6Bub3OscMZ7qya8ZZke-t6XGphqCAC0bc,994326
+btdht/krcp.pxd,sha256=3QNEeLdiQE2nR4thoVda4Q_6HIgT6pbtkF8-MlDUBJk,3357
+btdht/__init__.py,sha256=VhuokF8LWo1wbiOpJfnEsnP6-Yjjqk1L9wN7et1yJMc,682
+btdht/dht.so,sha256=YtkVts87eOP0evsuxW5nlMvBqP8mARG8QcPts-NCnUg,4235896
+btdht/dht.c,sha256=WWGwhG1b9V6_3Yl3gM51zGhjfKnCi_OqkF00z64Zp2s,2916279
+btdht/krcp.pyx,sha256=0uaY3AhXuREnE-lM1xx5mVP1-zX7YIY6C5-oIhWCtMg,72274
+btdht/utils.pyx,sha256=K_a4HrzXFoe38Kgl9vs7_p8vvVruSKgroaw-V0TX_hw,39115
+btdht/exceptions.py,sha256=nzjGEXnIAZUacZtCyBt-5jfBcIuzi2SpNHRIkL2mAtw,1484
+btdht/utils.c,sha256=Jq_4dx9AUz4Dw4LpW0YGNNteDCYZMpushAYsBiDEkDU,1339268
