@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: ems-dataflow-testframework
+Version: 1.0.2
+Summary: Framework helping testing Google Cloud Dataflows
+Home-page: UNKNOWN
+Author: Emarsys
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: atomicwrites (==1.3.0)
+Requires-Dist: attrs (==19.1.0)
+Requires-Dist: cachetools (==3.1.1)
+Requires-Dist: certifi (==2019.6.16)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: ems-gcp-toolkit (==0.1.50)
+Requires-Dist: google-api-core (==1.14.2)
+Requires-Dist: google-auth (==1.6.3)
+Requires-Dist: google-cloud-bigquery (==1.19.0)
+Requires-Dist: google-cloud-bigtable (==1.0.0)
+Requires-Dist: google-cloud-core (==1.0.3)
+Requires-Dist: google-cloud-pubsub (==1.0.0)
+Requires-Dist: google-resumable-media (==0.4.0)
+Requires-Dist: googleapis-common-protos (==1.6.0)
+Requires-Dist: grpc-google-iam-v1 (==0.12.3)
+Requires-Dist: grpcio (==1.23.0)
+Requires-Dist: idna (==2.8)
+Requires-Dist: importlib-metadata (==0.21)
+Requires-Dist: inflection (==0.3.1)
+Requires-Dist: more-itertools (==7.2.0)
+Requires-Dist: packaging (==19.1)
+Requires-Dist: pluggy (==0.13.0)
+Requires-Dist: protobuf (==3.9.1)
+Requires-Dist: py (==1.8.0)
+Requires-Dist: pyasn1 (==0.4.7)
+Requires-Dist: pyasn1-modules (==0.2.6)
+Requires-Dist: pyparsing (==2.4.2)
+Requires-Dist: pytest (==5.1.2)
+Requires-Dist: pytz (==2019.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: rsa (==4.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: tenacity (==5.1.1)
+Requires-Dist: urllib3 (==1.25.3)
+Requires-Dist: wcwidth (==0.1.7)
+Requires-Dist: zipp (==0.6.0)
+
+ems-dataflow-testframework
+==========================
+
+[![Codeship status](https://app.codeship.com/projects/b6f50310-b6ba-0137-4346-7a70f6e67953/status?branch=master)](https://app.codeship.com/projects/364126)
+[![PyPI version](https://badge.fury.io/py/ems-dataflow-testframework.svg)](https://badge.fury.io/py/ems-dataflow-testframework)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
+Purpose of the project
+======================
+
+This framework aims to help test Google Cloud Platform dataflows in an end-to-end way.
+
+How to develop locally
+======================
+
+Use [virtualenv](https://docs.python-guide.org/dev/virtualenvs/) preferably to manage Python dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+How to run unit tests
+=====================
+```bash
+make test
+```
+
+How to run statical code analysis
+=================================
+```bash
+make check
+```
+
+How to contribute
+=================
+Fork the repository and apply your changes. Pull requests are welcome. Please pay attention on the commit message [conventions](https://github.com/semantic-release/semantic-release). Thanks in advance!
+
+How to release
+=================================
+Releasing is managed by [python-semantic-release](https://github.com/relekang/python-semantic-release) which means your commit messages define the upgraded version number. Use the following convention during writing commit messages:
+ 1. fix({SCOPE}): {BODY} -> patch
+ 2. feat({SCOPE}): {BODY} -> minor
+ 3. xxx({SCOPE}): {BODY} -> BREAKING CHANGE -> major
+
+If you are unsure how to write valid commit messages enforce yourself with using tools like [commitizen](https://github.com/commitizen/cz-cli).
+
+To trigger a release merge `master` branch into `release` and push it.
+
+License
+=======
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
