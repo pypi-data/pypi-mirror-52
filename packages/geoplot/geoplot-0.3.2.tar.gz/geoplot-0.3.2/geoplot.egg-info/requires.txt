@@ -1,0 +1,13 @@
+matplotlib
+seaborn
+pandas
+geopandas
+cartopy
+descartes
+mapclassify
+contextily>=1.0rc2
+
+[develop]
+pytest
+pytest-mpl
+scipy
