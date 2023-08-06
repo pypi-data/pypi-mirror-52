@@ -1,0 +1,3 @@
+[console_scripts]
+aws_ssh_sync = aws_ssh_sync.main:main
+
