@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pyfunction
+Version: 0.002
+Summary: Library to plot linear functions
+Home-page: https://github.com/AndrasHPataki/pyfunction
+Author: AndrásPataki
+Author-email: andras.h.pataki@gmail.com
+License: MIT
+Download-URL: https://github.com/AndrasHPataki/pyfunction/archive/0.02.tar.gz
+Description: Recommended to integrate in order of services and other scientific applications;
+        This library needs tkinter to launch the graphical application, use: (sudo apt install python3-tk) to linux users.
+        See my Readme to see how it is used: https://github.com/AndrasHPataki/pyfunction
+Keywords: Math,Plot,Function
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
