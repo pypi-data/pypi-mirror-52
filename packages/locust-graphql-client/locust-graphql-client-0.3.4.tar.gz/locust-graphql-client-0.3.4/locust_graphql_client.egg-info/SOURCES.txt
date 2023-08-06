@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+locust_graphql_client.egg-info/PKG-INFO
+locust_graphql_client.egg-info/SOURCES.txt
+locust_graphql_client.egg-info/dependency_links.txt
+locust_graphql_client.egg-info/requires.txt
+locust_graphql_client.egg-info/top_level.txt
+locustgraphqlclient/__init__.py
+locustgraphqlclient/client.py
