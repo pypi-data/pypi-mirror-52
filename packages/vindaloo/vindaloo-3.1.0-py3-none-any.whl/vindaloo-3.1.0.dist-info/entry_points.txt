@@ -1,0 +1,3 @@
+[console_scripts]
+vindaloo = vindaloo.vindaloo:run
+
