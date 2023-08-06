@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package repeated;
+
+message Message {
+    // Packed by default.
+    repeated int32 int32s = 1;
+
+    // Can not be packed.
+    repeated Message messages = 2;
+
+    repeated string strings = 3;
+    repeated bytes bytes = 4;
+}
+
+message MessageScalarValueTypes {
+    repeated int32 int32s = 1;
+    repeated int64 int64s = 2;
+    repeated sint32 sint32s = 3;
+    repeated sint64 sint64s = 4;
+    repeated uint32 uint32s = 5;
+    repeated uint64 uint64s = 6;
+    repeated fixed32 fixed32s = 7;
+    repeated fixed64 fixed64s = 8;
+    repeated sfixed32 sfixed32s = 9;
+    repeated sfixed64 sfixed64s = 10;
+    repeated float floats = 11;
+    repeated double doubles = 12;
+    repeated bool bools = 13;
+    repeated string strings = 14;
+    repeated bytes bytess = 15;
+}
+
+message Foo {
+    repeated Message messages = 1;
+}
+
+message Bar {
+    message Fie {
+        repeated Foo inner_foos = 1;
+    }
+
+    repeated Foo foos = 1;
+    repeated Fie fies = 2;
+}
