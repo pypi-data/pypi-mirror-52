@@ -1,0 +1,8 @@
+avocado_loader_yaml/__init__.py,sha256=yFRZ2fP4EfbyvHr2OWR-AjD00EXldo14b621fnPicw4,5781
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_yaml_loader.py,sha256=fp93SB5mi-FIp2XGyumXd_U0QIbnkmL_SD-s84Zam2s,2130
+avocado_framework_plugin_loader_yaml-72.0.dist-info/METADATA,sha256=YXn3jrrpTVoqRHy99_s2kuMTutIxTVTXBhl99OLctgI,357
+avocado_framework_plugin_loader_yaml-72.0.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+avocado_framework_plugin_loader_yaml-72.0.dist-info/entry_points.txt,sha256=3CncK4R0-P5DInQLTk_MF5a2jVykX7wr-DmfqWqX2Q8,68
+avocado_framework_plugin_loader_yaml-72.0.dist-info/top_level.txt,sha256=SCWr5pi6IUNMRO9ERTAWaT9-fqgugZO5g_ZscrIUxow,26
+avocado_framework_plugin_loader_yaml-72.0.dist-info/RECORD,,
