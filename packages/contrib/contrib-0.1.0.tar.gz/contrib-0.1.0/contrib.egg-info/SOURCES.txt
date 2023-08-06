@@ -1,0 +1,9 @@
+README.md
+setup.py
+contrib/__init__.py
+contrib/config.py
+contrib.egg-info/PKG-INFO
+contrib.egg-info/SOURCES.txt
+contrib.egg-info/dependency_links.txt
+contrib.egg-info/requires.txt
+contrib.egg-info/top_level.txt
