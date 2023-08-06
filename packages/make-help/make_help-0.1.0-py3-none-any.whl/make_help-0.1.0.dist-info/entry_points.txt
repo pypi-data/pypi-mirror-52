@@ -1,0 +1,3 @@
+[console_scripts]
+make-help=make_help.cli:main
+
