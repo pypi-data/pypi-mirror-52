@@ -1,0 +1,16 @@
+tom_nonsidereal_airmass/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tom_nonsidereal_airmass/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+tom_nonsidereal_airmass/apps.py,sha256=OWEELMlAUc9VDBvwNGrP5Fx6zTUquSITmiIxiBg-4XU,119
+tom_nonsidereal_airmass/forms.py,sha256=AsYMUSakT2FZYfKz9f0jQSE14pG0-zgwrUfKyqwDeDg,701
+tom_nonsidereal_airmass/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+tom_nonsidereal_airmass/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+tom_nonsidereal_airmass/utils.py,sha256=ufzuhrqgky1oTTvbIXhV8onFFZGnI5Xan4a_ouMtG0o,8086
+tom_nonsidereal_airmass/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+tom_nonsidereal_airmass/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tom_nonsidereal_airmass/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tom_nonsidereal_airmass/templatetags/nonsidereal_airmass_extras.py,sha256=a4i_a5HpUtlFUk8GLY-60xeTXi9FK8Tc9H3vj5c1vgU,1944
+tom_nonsidereal_airmass-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tom_nonsidereal_airmass-0.1.0.dist-info/METADATA,sha256=NrbBewFFwCyTK25hwM1Itx_E_i9uxt7CFSVBxYR2VNs,2185
+tom_nonsidereal_airmass-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+tom_nonsidereal_airmass-0.1.0.dist-info/top_level.txt,sha256=a73qIrYhtQBeuJhmHGaW5aaz6PVaTf09dBmaQPyu86Y,24
+tom_nonsidereal_airmass-0.1.0.dist-info/RECORD,,
