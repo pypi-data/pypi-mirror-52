@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: neptune-cache-redis
+Version: 2019.9.14.2005
+Summary: REDIS CACHE FOR NEPTUNE DNS SERVER
+Home-page: https://git.best-service.online/yurzs/neptune-cache-redis
+Author: Yury (Yurzs)
+Author-email: dev@best-service.online
+License: MIT
+Description: # Neptune Resolver Rest
+        This module is made as a caching middleware for Neptune DNS server
+        ## Installation
+        ```pip3 install neptune_cache_redis```
+        ## Connect to server
+        In config.py edit CACHE variable. Add ```'neptune_cache_redis'```\n
+        It will look like this\n
+        ```CACHE = 'neptune_cache_redis'```\n
+        Then you need to set settings for this cacher. Those settings are set by creating variable\n in config.py with upper module name like this\n
+        ```NEPTUNE_CACHE_REDIS = {'host':'localhost', 'database': 1}```
+Keywords: NEPTUNE,CACHE,REDIS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
