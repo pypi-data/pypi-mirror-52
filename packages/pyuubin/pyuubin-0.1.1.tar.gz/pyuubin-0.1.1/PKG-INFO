@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: pyuubin
+Version: 0.1.1
+Summary: Mailing services with HTTP Api
+Home-page: https://pyuubin.io
+License: Apache-2.0
+Author: Michal Mazurek
+Author-email: mazurek.michal@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: Free To Use But Restricted
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Communications :: Email
+Requires-Dist: aioredis (>=1.2,<2.0)
+Requires-Dist: aiosmtplib (>=1.0,<2.0)
+Requires-Dist: bcrypt (>=3.1,<4.0)
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: coloredlogs (>=10.0,<11.0)
+Requires-Dist: email-validator (>=1.0,<2.0)
+Requires-Dist: envparse (>=0.2.0,<0.3.0)
+Requires-Dist: fastapi (>=0.38.1,<0.39.0)
+Requires-Dist: html2text (>=2018.1,<2019.0)
+Requires-Dist: hypercorn (>=0.6.0,<0.7.0)
+Requires-Dist: jinja2 (>=2.10,<3.0)
+Requires-Dist: msgpack (>=0.6.1,<0.7.0)
+Requires-Dist: pydantic (>=0.32.2,<0.33.0)
+Requires-Dist: python-dotenv (>=0.10.3,<0.11.0)
+Requires-Dist: tblib (>=1.3,<2.0)
+Requires-Dist: trio (>=0.11.0,<0.12.0)
+Project-URL: Documentation, https://pyuubin.io
+Project-URL: Repository, https://github.com/MichalMazurek/pyuubin.git
+Description-Content-Type: text/markdown
+
+# 💨💨💨 Pyuubin – Mailing System 💨💨💨
+
+[![Build Status](https://travis-ci.org/MichalMazurek/pyuubin.svg?branch=master)](https://travis-ci.org/MichalMazurek/pyuubin)
+
+Asynchronous mailing system over HTTP API.
+
+郵便 (Yūbin) - Postal Service
+
+ぴゅー (Pyu-) – SFX for a sudden burst of speed, like running away from something
+
+## Installation
+
+```bash
+pip install pyuubin
+```
+
+## Installation from source
+
+```bash
+pip install .
+```
+
+## Running the service
+
+You need to run the API and Worker for the system to work.
+
+### The API
+
+Use hypercorn or uvicorn to run it
+
+```bash
+hypercorn pyuubin.api.app:app --access-log - --error-log -
+```
+
+### The Worker
+
+```bash
+$ python -m pyuubin.worker --help
+Usage: worker.py [OPTIONS]
+
+  Run the worker.
+
+Options:
+  -n, --name TEXT                 Name of the service
+  -w, --workers INTEGER           Number of workers
+  -d, --debug                     Enable debug mode.
+  -e, --print-environment-variables
+                                  print environment variables to be put in
+                                  .env file for configuration
+  --help                          Show this message and exit.
+```
+
+## Configuration
+
+You can configure Pyuubin by using environmental variables. List of variables is available on running
+
+```bash
+$ python -m pyuubin -e
+PYUUBIN_REDIS_PREFIX=pyuubin:
+PYUUBIN_REDIS_MAIL_QUEUE=pyuubin::mail_queue
+PYUUBIN_REDIS_URL=redis://localhost:6379
+PYUUBIN_SMTP_HOST=smtp.gmail.com
+PYUUBIN_SMTP_PORT=465
+PYUUBIN_SMTP_USER=email@gmail.com
+PYUUBIN_SMTP_PASSWORD=SecretStr('**********')
+PYUUBIN_SMTP_TLS=True
+PYUUBIN_MAIL_FROM=email@gmail.com
+PYUUBIN_MAIL_RETURN=returns@exampple.tld
+PYUUBIN_MAIL_CONNECTOR=pyuubin.connectors.smtp
+PYUUBIN_AUTH_HTPASSWD_FILE=
+```
+
+> Note that the password is a `SecretStr` type from pydantic, so in your `.env.` file please just write your password without `SecretStr()`, so actually what you want is: `PYUUBIN_SMTP_PASSWORD=secret`
+
+Pyuubin supports `.env` files. You can create one quite easily by running above command and directing the output to a `.env` file.
+
+```bash
+$ python -m pyuubin -e > .env
+$
+```
+
+Then edit this file, put the values required and run the app.
+
+## Authentication - Password File
+
+Generating passwords with htpasswd:
+
+```bash
+htpasswd -Bc test_htpasswd app1
+```
+
+> Note: Only blowfish encrypted hashes are supported
+
+## API Specification
+
+You can find API docs here: [redoc pages](https://pyuubin.io/docs/index.html)
+
+## TODO
+
+- Documentation
+- Client library
+- Handling of rejected/failed mails
+- Bounces management
+- Rate limitting for source / global
+
