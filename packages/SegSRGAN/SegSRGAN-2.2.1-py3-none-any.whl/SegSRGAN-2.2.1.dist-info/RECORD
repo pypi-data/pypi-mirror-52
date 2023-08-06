@@ -1,0 +1,22 @@
+SegSRGAN/Function_for_application_test_python3.py,sha256=-wNG34pxZSeaDT42-BeMEqhRpBznEFYtToJ2-c4Qov8,17573
+SegSRGAN/ImageReader.py,sha256=lkHoMt38XGhcDNGnkSSHSsxVaC-w6yDTvv1R88ca17k,2417
+SegSRGAN/SegSRGAN_training.py,sha256=0GrjlBSYo6Am8XG65epA_ZdvhhNMadSS9UZZzCxDRwo,24226
+SegSRGAN/__init__.py,sha256=I99CB5cDT_QIDDjxjf5xUqXctfGFTd4gBaLyVg08HL0,223
+SegSRGAN/job_model.py,sha256=7sTLl4UIQ1zWWvr4QnJYt7IjP1FVX72BMPd6PCSs3e0,9955
+SegSRGAN/job epirmex/Job.py,sha256=2pxhs5EUO4kqDaed8lyGUlvlPmT8dye45CGDJkQ2Ixk,4428
+SegSRGAN/job epirmex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SegSRGAN/utils/Adam_lr_mult.py,sha256=bRIjWnq2iFT17-miXKoAgiKVGvpDBA6YAf5Z8NuAPeo,5063
+SegSRGAN/utils/SegSRGAN.py,sha256=MxoEwjQ41IB5CmYQfMWfmgE43SDLcSTT5rpeCzf64jk,36199
+SegSRGAN/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SegSRGAN/utils/download.py,sha256=4ofFpr9XE9FDyIHCsFQF9hw2Dd9Pw86wPLOf2x528pM,1185
+SegSRGAN/utils/interpolation.py,sha256=ImU7MnZmjhmVYnBZ2AXD_RA4exdGxxBuYoBkGMjWgBY,2168
+SegSRGAN/utils/layers.py,sha256=TF3nao5vOXjtSB4Q9-2dTxzrLZ-9HEYaIYjCvzk3CbY,9092
+SegSRGAN/utils/normalization.py,sha256=1e84lh6gXBwJPqDfNGBPxMFtxFNp5HkTB-SO7nOvurk,384
+SegSRGAN/utils/patches.py,sha256=JPsleyrMFRjObe6OOwNL5-ZsXPB7HcH3Zx_vNYDYuNo,15337
+SegSRGAN/utils/store2hdf5.py,sha256=8oNS0mFmogPZqzq1w1f9M9I7nQBW7FvIqVhiG3b65Vc,7484
+SegSRGAN/utils/utils3d.py,sha256=ef1Hwbi6xJhsBn7aGuVijEsIv9GbPgNTBJNoEpwj5io,4860
+SegSRGAN-2.2.1.dist-info/LICENSE.md,sha256=UJvHhH0LQW4-6wwcEdHQQa9srKiaJR-AV41Bl4ICpFA,1285
+SegSRGAN-2.2.1.dist-info/METADATA,sha256=nxd-CFwDCWWQPgyMFw-V2UpGGHr4oSG8x6G0FcwrEeo,12274
+SegSRGAN-2.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+SegSRGAN-2.2.1.dist-info/top_level.txt,sha256=DzCd1SRp4xHMSejV7Qt2m1xlXji40HAhvRi_lvzwTXA,9
+SegSRGAN-2.2.1.dist-info/RECORD,,
