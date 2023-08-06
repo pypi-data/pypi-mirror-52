@@ -1,0 +1,3 @@
+[console_scripts]
+qvibe-recorder = qvibe.app:run
+
