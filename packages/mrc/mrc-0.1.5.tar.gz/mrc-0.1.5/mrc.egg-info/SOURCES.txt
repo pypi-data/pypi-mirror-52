@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+mrc/__init__.py
+mrc/lenses.py
+mrc/mrc.py
+mrc.egg-info/PKG-INFO
+mrc.egg-info/SOURCES.txt
+mrc.egg-info/dependency_links.txt
+mrc.egg-info/not-zip-safe
+mrc.egg-info/requires.txt
+mrc.egg-info/top_level.txt
