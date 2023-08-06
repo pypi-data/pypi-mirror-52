@@ -1,0 +1,11 @@
+skkeras/__init__.py,sha256=fJXvF6r9zW9qyXD5wO6FDGunMy2lW2yYZhuRkO_xY3E,216
+skkeras/build_fn.py,sha256=KkGtYtbCuvO-Q5vfnpAYCwuoW5fIJ8cNtX2AK502U28,51709
+skkeras/scikit_learn.py,sha256=YdlP_Jlg9NVN02n4T_K_z3C3soPdPlcZFaval1xMxnk,16867
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/build_fn_test.py,sha256=EfE__TkW-sx4BSX_IMM103Y1r_IHZ7lnv1BbICrE4vw,9476
+tests/scikit_learn_test.py,sha256=EkJAGeEOT7-SHc-6A1WuG9MwuNi-VEMkZYRKw3xvN4A,13329
+scikit_keras-0.1.12.dist-info/LICENSE,sha256=N0RRlXJqtd3zuTmB1CaEIB7Z0qXlhqZpXKm6zBbi4iM,1073
+scikit_keras-0.1.12.dist-info/METADATA,sha256=fSB-iRUIQ5ikiZn5YWgdTDbTZS3nm-rX5MyZAqVMeT8,804
+scikit_keras-0.1.12.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+scikit_keras-0.1.12.dist-info/top_level.txt,sha256=NdEIabekmzl7tDzL9lpBBsQ4MNqVFwZAYhgN5EyzQog,14
+scikit_keras-0.1.12.dist-info/RECORD,,
