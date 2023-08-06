@@ -1,0 +1,7 @@
+setup.py
+plg.egg-info/PKG-INFO
+plg.egg-info/SOURCES.txt
+plg.egg-info/dependency_links.txt
+plg.egg-info/top_level.txt
+src/__init__.py
+src/plg.py
