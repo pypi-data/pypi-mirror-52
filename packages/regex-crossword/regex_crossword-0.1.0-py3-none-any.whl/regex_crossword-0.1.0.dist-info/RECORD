@@ -1,0 +1,16 @@
+regex_crossword/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+regex_crossword/crossword.py,sha256=85qlMSs7XYe0VjuNFXiYq6r_9PVQ7mftwXCAPm-qwZQ,4505
+regex_crossword/game.py,sha256=RIVwmxgSU-8kPJsU2MuHePHN8IYWhKhlvpHkMfVDy4Q,7964
+regex_crossword/level.py,sha256=agZ20Qxx_Ys_pC56uJGbXMlvweOHQ48QkJrKtAM-zvs,6961
+regex_crossword/level_pack.py,sha256=GvpcAiy7KbiTOQ7QMQYyDpxFCd_x93GsnXlcue6daMY,606
+regex_crossword/matrix.py,sha256=IMTkGbk_WbU-21Cbeg9LYZ8W25WcT3XWd8SVh5H-xO8,1502
+regex_crossword/utils.py,sha256=tMBDFwVmzyyJGmmTIMiWT61MVexnA0-Jz4vWB-K8VH4,1376
+regex_crossword/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+regex_crossword/scripts/regex_crossword.py,sha256=6lZ4l5USRLMDKmoK_CvVLZFO9kZiC231XoMgo1QTYKc,2684
+regex_crossword/scripts/scraper.py,sha256=6ddJ7--sTqwCC9-PW8emGtsWHqSWJbhioi2Q1fRVTBU,3880
+regex_crossword-0.1.0.dist-info/LICENSE,sha256=c3TEiMPtus4VaRvKJfMcvySeO0o4nAquOyNjOe682Nk,1068
+regex_crossword-0.1.0.dist-info/METADATA,sha256=9UvKOXMFhougiI5JkR-k5R6HnoPzJzh8dwP5dbWl8xA,5221
+regex_crossword-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+regex_crossword-0.1.0.dist-info/entry_points.txt,sha256=lg9FGfJVHa7QToQi8yirbvC0ooSGEQgDnTjCNUBu3_U,99
+regex_crossword-0.1.0.dist-info/top_level.txt,sha256=DMOXS-unFKUrOh4KmYq4lbK3PTGi8UXor2eBtHzQaRo,16
+regex_crossword-0.1.0.dist-info/RECORD,,
