@@ -1,0 +1,16 @@
+ddrr/__init__.py,sha256=gcja26lTzrIHwsCUQGHXBKiP3gRDo52VlWxfXravVaA,44
+ddrr/apps.py,sha256=erxb3MGJIkzexmTMnJ-6nzft56iOh2l8j3Wa8kqOcYk,3319
+ddrr/filters.py,sha256=gxaX491pgh05wkAJpGYvDaEhZM0cdJoMp5ecBk7YY-A,2043
+ddrr/formatters.py,sha256=4vFJadyBMS8MuPV8iweynNi2xqguE9DIs-93QREf5IY,3078
+ddrr/helpers.py,sha256=KnQX-2sS9nm8KlK4wkMclyzaQq2bNdoVT28spz6uliw,2310
+ddrr/loggers.py,sha256=YfBNyL1cbBH9IpxO5B50rWCFUYaCZGzCN6NPWo37mRY,134
+ddrr/middleware.py,sha256=diWPEhUyApeqnBtxfu9_WiNYSPdO0Ryf8dOyWfzOWh0,374
+ddrr/records.py,sha256=YLapJQpvhMysUrtjG2i9NQ3KdgNDxykqh_oQfhTyjfc,4679
+ddrr/templates/ddrr/default-request.html,sha256=WunKjxiUNnwj_NhoX0lZXD4BbEBdlqxtKrid1fhXROM,294
+ddrr/templates/ddrr/default-response.html,sha256=tTI20mvFg_PLYstLWhAxaP5iG6HApUU0RQClIXDrvMQ,291
+ddrr/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ddrr/templatetags/ddrr.py,sha256=iXCuFuZck9g5QNz48vZGxW9DdvEZGXFlzJKkfO5NFXk,209
+ddrr-1.2.0.dist-info/LICENSE,sha256=u505M15hwua0wQh4rFk_QPYzvC0N5AysZp1FPdoUQCc,1068
+ddrr-1.2.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+ddrr-1.2.0.dist-info/METADATA,sha256=HxEFgWWNZ3V_dHhU8TV0-R_dvvzrrXKPku6qNq6TgWk,5921
+ddrr-1.2.0.dist-info/RECORD,,
