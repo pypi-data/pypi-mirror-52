@@ -1,0 +1,2 @@
+include ephys_viz/dist/bundle.js
+recursive-include ephys_viz/electron *
