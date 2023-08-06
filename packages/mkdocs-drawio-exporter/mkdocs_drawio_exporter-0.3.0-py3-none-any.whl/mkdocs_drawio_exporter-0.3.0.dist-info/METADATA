@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mkdocs-drawio-exporter
+Version: 0.3.0
+Summary: Exports your Draw.io diagrams at build time for easier embedding into your documentation
+Home-page: https://github.com/LukeCarrier/mkdocs-drawio-exporter
+Author: Luke Carrier
+Author-email: luke@carrier.im
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: mkdocs
+
+UNKNOWN
+
+
