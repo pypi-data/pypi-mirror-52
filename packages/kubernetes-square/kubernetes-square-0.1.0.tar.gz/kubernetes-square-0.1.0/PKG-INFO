@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: kubernetes-square
+Version: 0.1.0
+Summary: 
+Author: Oliver Nagy
+Author-email: olitheolix@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: bumpversion (>=0.5.3,<0.6.0)
+Requires-Dist: colorama (>=0.4.1,<0.5.0)
+Requires-Dist: flake8 (>=3.7,<4.0)
+Requires-Dist: flake8-isort (>=2.7,<3.0)
+Requires-Dist: google (>=2.0,<3.0)
+Requires-Dist: google-api-python-client (>=1.7,<2.0)
+Requires-Dist: ipython (>=7.8,<8.0)
+Requires-Dist: isort (>=4.3,<5.0)
+Requires-Dist: jsonpatch (>=1.24,<2.0)
+Requires-Dist: pytest-cov (>=2.7,<3.0)
+Requires-Dist: pytest-dotenv (>=0.4.0,<0.5.0)
+Requires-Dist: pytest-flake8 (>=1.0,<2.0)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: requests-mock (>=1.7,<2.0)
