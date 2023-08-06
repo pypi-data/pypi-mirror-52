@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: onechat
+Version: 1.1.8
+Summary: onechat
+Home-page: https://chat-develop.one.th
+Author: Punnawish.th
+Author-email: punnawish.th@inet.co.th
+License: MIT
+Description: Onechat-Lib
+        
+Keywords: onechat
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: IronPython
+Classifier: Programming Language :: Python :: Implementation :: Jython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering
