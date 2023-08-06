@@ -1,0 +1,85 @@
+#cloud-config
+packages:
+ - python-simplejson
+ - ipa-client
+ - ipa-admintools
+ - openldap-clients
+ - hostname
+write_files:
+ - content: |
+     #!/bin/sh
+     
+     function get_metadata_config_drive {
+         if [ -f /run/cloud-init/status.json ]; then
+             # Get metadata from config drive
+             data=`cat /run/cloud-init/status.json`
+             config_drive=`echo $data | python -c 'import json,re,sys;obj=json.load(sys.stdin);ds=obj.get("v1", {}).get("datasource"); print(re.findall(r"source=(.*)]", ds)[0])'`
+             if [[ -b $config_drive ]]; then
+                 temp_dir=`mktemp -d`
+                 mount $config_drive $temp_dir
+                 if [ -f $temp_dir/openstack/latest/vendor_data2.json ]; then
+                     data=`cat $temp_dir/openstack/latest/vendor_data2.json`
+                     umount $config_drive
+                     rmdir $temp_dir
+                 else
+                     umount $config_drive
+                     rmdir $temp_dir
+                 fi
+             else 
+                 echo "Unable to retrieve metadata from config drive."
+                 return 1
+             fi
+         else
+             echo "Unable to retrieve metadata from config drive."
+             return 1
+         fi
+     
+         return 0
+     }
+     
+     function get_metadata_network {
+         # Get metadata over the network
+         data=$(timeout 300 /bin/bash -c 'data=""; while [ -z "$data" ]; do sleep $[ ( $RANDOM % 10 )  + 1 ]s; data=`curl -s http://169.254.169.254/openstack/2016-10-06/vendor_data2.json 2>/dev/null`; done; echo $data')
+     
+         if [[ $? != 0 ]] ; then
+             echo "Unable to retrieve metadata from metadata service."
+             return 1
+         fi
+     }
+     
+     function get_fqdn {
+         # Get the instance hostname out of the metadata
+         fqdn=`echo $data | python -c 'import json,sys;obj=json.load(sys.stdin);print(obj.get("join", {}).get("hostname", ""))'`
+         if [ -z "$fqdn"]; then
+             echo "Unable to determine hostname"
+             return 1
+         fi
+         return 0
+     }
+     
+     if ! get_metadata_config_drive || ! get_fqdn; then
+        if ! get_metadata_network || ! get_fqdn; then
+            echo "FATAL: No metadata available or could not read the hostname from the metadata"
+            exit 1
+        fi
+     fi
+     
+     realm=`echo $data | python -c 'import json,sys;obj=json.load(sys.stdin);print(obj.get("join", {}).get("krb_realm", ""))'`
+     otp=`echo $data | python -c 'import json,sys;obj=json.load(sys.stdin);print(obj.get("join", {}).get("ipaotp", ""))'`
+     
+     if [ -z "$otp" ]; then
+         echo "FATAL: Could not read OTP from the metadata. This means that a host with the same name was already enrolled in IPA."
+         exit 1
+     fi
+     
+     # run ipa-client-install
+     OPTS="-U -w $otp --hostname $fqdn --mkhomedir"
+     if [ -n "$realm" ]; then
+         OPTS="$OPTS --realm=$realm"
+     fi
+     ipa-client-install $OPTS
+   path: /root/setup-ipa-client.sh
+   permissions: '0700'
+   owner: root:root
+runcmd:
+- sh -x /root/setup-ipa-client.sh > /var/log/setup-ipa-client.log 2>&1

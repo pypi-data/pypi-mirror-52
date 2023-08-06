@@ -1,0 +1,14 @@
+This directory contains configuration files placed in /etc/
+(see setup.cfg for details)
+
+IMPORTANT: cloud-config-novajoin.json is manually generated from
+cloud-config-novajoin.yaml, by using tools/cloud-config-unpack.py and
+tools/cloud-config-pack.py scripts.
+
+Before editing cloud-config-novajoin.yaml, run tools/cloud-config-unpack.py.
+After editing cloud-config-novajoin.yaml, run tools/cloud-config-pack.py.
+This will place your edits in cloud-config-novajoin.json, which is the only
+file that is installed in /etc/.
+
+cloud-config-novajoin.json cannot be automatically generated, because we use a
+setup.py provided by the global requirements repo, which we cannot modify.
