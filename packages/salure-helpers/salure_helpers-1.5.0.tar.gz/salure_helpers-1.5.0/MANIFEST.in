@@ -1,0 +1,4 @@
+INCLUDE README.md
+INCLUDE salure_helpers/templates/*.html
+INCLUDE docs/*
+INCLUDE datasets/*
