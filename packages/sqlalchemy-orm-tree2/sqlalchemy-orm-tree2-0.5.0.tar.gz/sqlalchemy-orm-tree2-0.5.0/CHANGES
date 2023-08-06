@@ -1,0 +1,54 @@
+=========
+Changelog
+=========
+
+Here you can find the recent changes to sqlalchemy-orm-tree.
+
+.. changelog::
+    :version: 0.2.0-dev
+    :released: Ongoing
+
+    .. change::
+        :tags:  docs
+        :tickets: 2
+        :pullreq: 20
+
+        - ``__future__`` imports for ``.py`` files.
+        - Replaces some instances of ``filter`` with list comprehensions.
+        - Created a ``py2map`` inside of ``_compat`` to import into code, which preserves python 2.x's ``map`` behavior in python 3.
+        - Update README.rst for python 3 support
+        - Update ``setup.py`` classifier data
+        - Update Travis for python 3.3 support (they don't have 3.4 support yet, tox passes 3.4 for me though)
+        - Import ``reduce`` from ``functools``.
+        - Add ``tox.ini`` file.
+
+    .. change::
+        :tags:  docs
+        :tickets: 7
+
+        SQLAlchemy-ORM-tree now has a ReadTheDocs page at
+        http://sqlalchemy-orm-tree.readthedocs.org/.
+
+        Changelog
+
+        TODO
+
+    .. change::
+        :tags: internals
+        :tickets: 5, 6
+        :pullreq: 8, 10
+
+        - PEP8
+        - Package modernization
+
+    .. change::
+        :tags: tests
+        :tickets: 5, 11
+        :pullreq: 8
+
+        - Update testsuite to werkzeug/flask format.
+        - Split tests into multiple files
+        - Coveralls.io and Travis support
+
+
+.. todo:: vim: set filetype=rst:

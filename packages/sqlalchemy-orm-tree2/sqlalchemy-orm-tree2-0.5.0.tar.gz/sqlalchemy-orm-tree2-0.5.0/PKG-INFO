@@ -1,0 +1,89 @@
+Metadata-Version: 1.2
+Name: sqlalchemy-orm-tree2
+Version: 0.5.0
+Summary: An implementation for SQLAlchemy-based applications of the nested-sets/modified-pre-order-tree-traversal technique for storing hierarchical data in a relational database.
+Home-page: http://www.github.com/miracle2k/sqlalchemy-orm-tree/
+Author: RokuSigma Inc. and contributors
+Author-email: sqlalchemy-orm-tree@monetize.io
+Maintainer: Mark Friedenbach
+Maintainer-email: mark@monetize.io
+License: UNKNOWN
+Description: .. image:: https://travis-ci.org/monetizeio/sqlalchemy-orm-tree.png?branch=master
+            :target: https://travis-ci.org/monetizeio/sqlalchemy-orm-tree
+        
+        .. image:: https://badge.fury.io/py/SQLAlchemy-ORM-tree.png
+            :target: http://badge.fury.io/py/sqlalchemy-orm-tree
+        
+        .. image:: https://coveralls.io/repos/monetizeio/sqlalchemy-orm-tree/badge.png?branch=master
+            :target: https://coveralls.io/r/monetizeio/sqlalchemy-orm-tree?branch=master
+        
+        SQLAlchemy-ORM-tree
+        -------------------
+        
+        An implementation for SQLAlchemy-based applications of the nested-sets /
+        modified-pre-order-tree-traversal technique for storing hierarchical data
+        in a relational database.
+        
+        ==============  ==========================================================
+        Python support  Python 2.6+, 3.3+
+        SQLAlchemy      SQLAlchemy >=0.7.5, >=0.8, >=0.9
+        Source          https://github.com/monetizeio/sqlalchemy-orm-tree
+        Issues          https://github.com/monetizeio/sqlalchemy-orm-tree/issues
+        Docs            https://sqlalchemy-orm-tree.readthedocs.org/
+        API             https://sqlalchemy-orm-tree.readthedocs.org/api.html
+        Travis          http://travis-ci.org/monetizeio/sqlalchemy-orm-tree
+        Test coverage   https://coveralls.io/r/monetizeio/sqlalchemy-orm-tree
+        pypi            https://pypi.python.org/pypi/sqlalchemy-orm-tree
+        ohloh           http://www.ohloh.net/p/sqlalchemy-orm-tree
+        License         `BSD`_.
+        git repo        .. code-block:: bash
+        
+                            $ git clone https://github.com/monetizeio/sqlalchemy-orm-tree.git
+        install         .. code-block:: bash
+        
+                            $ pip install sqlalchemy-orm-tree
+        
+        install dev     .. code-block:: bash
+        
+                            $ git clone https://github.com/monetizeio/sqlalchemy-orm-tree.git sqlalchemy-orm-tree
+                            $ cd ./sqlalchemy-orm-tree
+                            $ virtualenv .env
+                            $ source .env/bin/activate
+                            $ pip install -e .
+        tests           .. code-block:: bash
+        
+                            $ python setup.py test
+        ==============  ==========================================================
+        
+        .. _BSD: http://opensource.org/licenses/BSD-3-Clause
+        
+        
+        Simple Example
+        ==============
+        
+        ::
+        
+            import sqlalchemy_tree
+            Model = declarative_base(metaclass=sqlalchemy_tree.DeclarativeMeta)
+        
+            class Page(Model):
+        
+                # This activates sqlalchemy-orm-tree.
+                __tree_manager__ = 'tree'
+        
+        
+        Page.tree.register()
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
