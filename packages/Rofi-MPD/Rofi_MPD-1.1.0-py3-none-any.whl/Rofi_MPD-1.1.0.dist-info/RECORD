@@ -1,0 +1,14 @@
+Rofi_MPD-1.1.0.data/scripts/rofi-mpd,sha256=RBuKe3D_4sLIWpOCdyFXUCjsnE3eG4T1cTYApmp07Uc,40
+main/__init__.py,sha256=ymq1CTgbagltwFaUQyAB2Bi-vzC8TtcN1kE2_BOIWqU,24
+main/rofi_mpd.py,sha256=fsMGMtPt3-sMDL5vgh7fkYYrKrpWATlI1aZv3WPfT8E,11095
+rofi/__init__.py,sha256=Uoew8EM1YSiiV3LidCH2zbmtm9G5TdSewUlwt-5kkD4,19
+rofi/rofi.py,sha256=yaW7x1RKPZ2SK9GBV1rDhhRwiPpDTIYo48soDhZUkYQ,29719
+rofi-mpd/__init__.py,sha256=ymq1CTgbagltwFaUQyAB2Bi-vzC8TtcN1kE2_BOIWqU,24
+rofi-mpd/rofi_mpd.py,sha256=fsMGMtPt3-sMDL5vgh7fkYYrKrpWATlI1aZv3WPfT8E,11095
+rofi_mpd/__init__.py,sha256=ymq1CTgbagltwFaUQyAB2Bi-vzC8TtcN1kE2_BOIWqU,24
+rofi_mpd/rofi_mpd.py,sha256=sSfqY6JXrlMZwvVDRVmVOL3FoRQ0bo7kpNprQkVMWzE,12031
+Rofi_MPD-1.1.0.dist-info/LICENSE,sha256=eqDIrx3yu5Jobmv-o5tdSyM3pfKQK1YZh4Ca9QyDqo8,1069
+Rofi_MPD-1.1.0.dist-info/METADATA,sha256=fACkA7WxWP6TJ9uUhOsJA5A_8cOOpLMAmkvKDGPfrvI,295
+Rofi_MPD-1.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+Rofi_MPD-1.1.0.dist-info/top_level.txt,sha256=V8uk2kTTlXUmzPC97Dn2SRTEhjg5B-86jHcoMKdEm_M,14
+Rofi_MPD-1.1.0.dist-info/RECORD,,
