@@ -1,0 +1,17 @@
+staff_auth/__init__.py,sha256=3H-zCh6Vw01bhTgdPY9FOsCPabwIgELODYAeCetAuwc,80
+staff_auth/apps.py,sha256=prFnoMO2sGBDrFCI-FR7Ly2Tp5E0ZdxjlS5fbHwWxIs,176
+staff_auth/backend.py,sha256=qwTkxHhCZ3EMWoqlaWx8PsK-mbVLtjEHsZrS5NBTwpY,733
+staff_auth/configured_settings.py,sha256=-V0DvNVByAZdcaRGayeUiwBE3x-2HN-9a0CO-Lr7lwI,1179
+staff_auth/middleware.py,sha256=3NssmKSj_gy8Zi1i3g-i_EDz8GcRQlB7m1cC3gBTy60,1130
+staff_auth/pipeline.py,sha256=E0G7Fynsntm6rOpPACd3el1VS_YG3_Z750JagdQNY8g,556
+staff_auth/urls.py,sha256=uLq6LQXTE8KHSZLd6dVXzegaXcccwpNIGQuysk4fWIs,455
+staff_auth/views.py,sha256=shP2myH0qLWAoel8eldMF28fLh00gZfYbC-ytmUbj1c,608
+staff_auth/static/staff_auth/css/custom-login.css,sha256=wWct0eb59kg8VYcM2dt2I8qHH9aYKcW6PDln1b3ODIc,1259
+staff_auth/static/staff_auth/css/page-styles.css,sha256=ptrVr44vUC3M3H-JrzbcSwqQnHTpb9xsywCn1hNIdXg,6075
+staff_auth/templates/admin/login.html,sha256=8EcZ16zJW01bcIb3y3QvPaUF0oZB9jSM9jXFR1dnH7E,2055
+staff_auth/templates/staff_auth/auth-error.html,sha256=1NbIZ0YhizSbZTF0OKmIWCQVAij_zeF-5sEr7Ymd2dg,3641
+politico_staff_auth-0.0.5.dist-info/LICENSE,sha256=I88f2fvwfLF_4kAOmnvh5J_Kosjxb9ngHhBcY5DkhOY,1061
+politico_staff_auth-0.0.5.dist-info/METADATA,sha256=uYmjsnsJjW5O5M8yupxuBDbjTkGAS0EugCxWZuECA5E,10781
+politico_staff_auth-0.0.5.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+politico_staff_auth-0.0.5.dist-info/top_level.txt,sha256=5MlJrh7aXuu7PzGDCe8Jtx2jLRY8GinbEJibMErwVr0,11
+politico_staff_auth-0.0.5.dist-info/RECORD,,

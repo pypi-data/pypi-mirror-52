@@ -1,0 +1,64 @@
+.login .submit-row {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 10px;
+}
+
+.submit-row .slack-login-outer {
+  display: block;
+  position: relative;
+}
+.submit-row .slack-login-outer::before {
+  color: rgba(255,255,255,0.75);
+  content: "\f198";
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  height: 14px;
+  left: 14px;
+  line-height: 14px;
+  margin-top: -7px;
+  pointer-events: none;
+  position: absolute;
+  text-rendering: auto;
+  top: 50%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.submit-row .slack-login {
+  padding-left: 33px;
+}
+
+.submit-row .or-label {
+  color: #777777;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 39px;
+  margin: 0 6px;
+  white-space: nowrap;
+}
+
+.submit-row .conventional-login-outer {
+  display: block;
+  position: relative;
+}
+.submit-row .conventional-login-outer::before {
+  color: rgba(255,255,255,0.75);
+  content: "\f0c3";
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  height: 14px;
+  left: 14px;
+  line-height: 14px;
+  margin-top: -7px;
+  pointer-events: none;
+  position: absolute;
+  text-rendering: auto;
+  top: 50%;
+}
+.submit-row .conventional-login {
+  padding-left: 33px;
+}
