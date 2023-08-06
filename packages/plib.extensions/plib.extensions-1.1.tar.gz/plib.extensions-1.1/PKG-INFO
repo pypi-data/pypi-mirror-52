@@ -1,0 +1,64 @@
+Metadata-Version: 1.1
+Name: plib.extensions
+Version: 1.1
+Summary: Useful Python classes.
+Home-page: http://pypi.org/project/plib.extensions
+Author: Peter A. Donis
+Author-email: peterdonis@alum.mit.edu
+License: UNKNOWN
+Description: The PLIB.EXTENSIONS package contains functions (and possibly,
+        in the future, other objects) exported from an extension
+        module written using the Python/C API. The general
+        philosophy of PLIB is to do everything possible in pure
+        Python, so the only functions that appear in this package
+        are those which by their very nature cannot be done in pure
+        Python.
+        
+        Note: PLIB.EXTENSIONS works with Python 2.7. If you are using
+        Python 3, see the PLIB3.EXTENSIONS package, available at
+        https://pypi.org/project/plib3.classes.
+        
+        The ``setup.py`` script for PLIB.EXTENSIONS uses the ``setuputils``
+        helper module, which helps to automate away much of the
+        boilerplate in Python setup scripts. This module is available
+        as a separate release at https://pypi.org/project/setuputils.
+        
+        The PLIB.EXTENSIONS Package
+        ---------------------------
+        
+        The following classes are available in the ``plib.extensions`` namespace:
+        
+        - The ``capsule_compare`` function checks whether two Capsules
+          wrap the same C-level pointer.
+        
+        - The ``cobject_compare`` function checks whether two CObjects
+          wrap the same C-level pointer.
+        
+        Installation
+        ------------
+        
+        To install PLIB.EXTENSIONS, you can simply run::
+        
+            $ python setup.py install
+        
+        at a shell prompt from the directory into which you
+        unzipped the source tarball (the same directory that this
+        README file is in). This will install PLIB and then
+        run each of the post-install scripts in the scripts
+        directory.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: plib.stdlib (>=1.1)
