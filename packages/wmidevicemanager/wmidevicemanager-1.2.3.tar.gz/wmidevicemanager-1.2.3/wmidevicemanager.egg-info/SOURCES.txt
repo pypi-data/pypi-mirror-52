@@ -1,0 +1,11 @@
+README.md
+setup.py
+wmidevicemanager/__init__.py
+wmidevicemanager/const.py
+wmidevicemanager/win32pnpentity.py
+wmidevicemanager/wmidevicemanager.py
+wmidevicemanager.egg-info/PKG-INFO
+wmidevicemanager.egg-info/SOURCES.txt
+wmidevicemanager.egg-info/dependency_links.txt
+wmidevicemanager.egg-info/requires.txt
+wmidevicemanager.egg-info/top_level.txt
