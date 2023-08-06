@@ -1,0 +1,4 @@
+[console_scripts]
+xargsd = xargsd.server:main
+xargsd-cli = xargsd.client:main
+
