@@ -1,0 +1,21 @@
+#! python
+
+import os
+import sys
+
+from cc import Confluence
+from bb2cc import sync_to_confluence
+
+if (len(sys.argv) < 2 or
+        'USERNAME' not in os.environ or
+        'PASSWORD' not in os.environ or
+        'REPOSITORY_URL' not in os.environ):
+    raise ValueError(
+        'Usage: USERNAME=<username> PASSWORD=<password> '
+        'REPOSITORY_URL=<repository_url> bb2cc <file>')
+
+client = Confluence(
+    host=os.getenv('HOST', 'https://hello.atlassian.net/wiki/'),
+    username=os.environ['USERNAME'], password=os.environ['PASSWORD'])
+
+sync_to_confluence(client, os.environ['REPOSITORY_URL'], sys.argv[-1])
