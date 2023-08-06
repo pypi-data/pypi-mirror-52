@@ -1,0 +1,68 @@
+Metadata-Version: 1.2
+Name: pgxnclient
+Version: 1.3
+Summary: A command line tool to interact with the PostgreSQL Extension Network.
+Home-page: https://github.com/pgxn/pgxnclient
+Author: Daniele Varrazzo
+Author-email: daniele.varrazzo@gmail.com
+License: BSD
+Project-URL: Source, https://github.com/pgxn/pgxnclient
+Project-URL: Documentation, https://pgxn.github.io/pgxnclient/
+Project-URL: Discussion group, https://groups.google.com/group/pgxn-users/
+Description: =====================================================================
+                                    PGXN Client
+        =====================================================================
+        A command line tool to interact with the PostgreSQL Extension Network
+        =====================================================================
+        
+        |travis|
+        
+        .. |travis| image:: https://travis-ci.org/pgxn/pgxnclient.svg?branch=master
+            :target: https://travis-ci.org/pgxn/pgxnclient
+            :alt: build status
+        
+        The `PGXN Client <https://github.com/pgxn/pgxnclient>`__ is a command
+        line tool designed to interact with the `PostgreSQL Extension Network
+        <https://pgxn.org/>`__ allowing searching, compiling, installing, and removing
+        extensions in PostgreSQL databases.
+        
+        For example, to install the semver_ extension, the client can be invoked as::
+        
+            $ pgxn install semver
+        
+        which would download and compile the extension for one of the PostgreSQL
+        servers hosted on the machine and::
+        
+            $ pgxn load -d somedb semver
+        
+        which would load the extension in one of the databases of the server.
+        
+        The client interacts with the PGXN web service and a ``Makefile`` provided by
+        the extension. The best results are achieved with makefiles using the
+        PostgreSQL `Extension Building Infrastructure`__; however the client tries to
+        degrade gracefully in presence of any package hosted on PGXN.
+        
+        .. _semver: https://pgxn.org/dist/semver
+        .. __: https://www.postgresql.org/docs/current/extend-pgxs.html
+        
+        - Documentation: https://pgxn.github.io/pgxnclient/
+        - Source repository: https://github.com/pgxn/pgxnclient
+        - Downloads: https://pypi.python.org/pypi/pgxnclient/
+        - Discussion group: https://groups.google.com/group/pgxn-users/
+        
+        Please refer to the files in the ``docs`` directory or online__ for
+        instructions about the program installation and usage.
+        
+        .. __: https://pgxn.github.io/pgxnclient/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
