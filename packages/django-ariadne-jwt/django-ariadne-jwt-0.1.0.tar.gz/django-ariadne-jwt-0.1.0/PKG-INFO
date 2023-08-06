@@ -1,0 +1,35 @@
+Metadata-Version: 1.2
+Name: django-ariadne-jwt
+Version: 0.1.0
+Summary: JSON Web Token for Django Ariadne
+Home-page: https://github.com/binarytree-software/django-ariadne-jwt
+Author: marco-btree
+Author-email: marco@binarytree-software.com
+Maintainer: marco-btree
+License: MIT
+Project-URL: Issues, https://github.com/binarytree-software/django-ariadne-jwt/issues
+Description: Django Ariadne JWT
+        ==================
+        
+        This is currently our first open source project. It is heavily inspired by
+        
+        `django-graph.jwt
+        <https://github.com/flavors/django-graphql-jwt>`_.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
