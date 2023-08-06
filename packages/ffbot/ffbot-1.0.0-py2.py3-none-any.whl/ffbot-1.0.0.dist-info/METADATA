@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: ffbot
+Version: 1.0.0
+Summary: Automate playing Yahoo Fantasy Football
+Home-page: https://github.com/amarvin/fantasy-football-bot
+Author: Alex Marvin
+Author-email: alex.marvin@gmail.com
+License: UNKNOWN
+Keywords: fantasy-football bot yahoo
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: pulp
+Requires-Dist: requests
+Requires-Dist: selenium
+Requires-Dist: tabulate
+
+# fantasy-football-bot (ffbot)
+Automate playing Yahoo Fantasy Football
+
+# Installation
+- `pip install ffbot`
+- requires downloading [ChromeDriver](http://chromedriver.chromium.org)
+
+# Usage
+```python
+from ffbot import optimize, scrape
+
+# Yahoo credentials and league/team id
+# Visit your team at https://football.fantasysports.yahoo.com/f1/, and the url will also include your league and team ID
+credentials = dict(
+    username='your_yahoo_fantasy_username',
+    password='your_yahoo_fantasy_password',
+    league=123456,
+    team=1,
+)
+
+# Scrape data for current and available players, and their point forecasts for each week
+scrape(credentials)
+
+# Optimize the assignment of players to positions each week to maximize remaining season discounted total points (points this week are worth more than points in future weeks)
+#  decides which players to add and drop
+#  optimization is repeated for current roster, for one player add/drop, two player add/drops, etc.
+optimize()
+```
+
+# Contribution
+Please add Issues or submit Pull requests!
+
+
