@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: transformers_keras
+Version: 0.0.1
+Summary: Transformer-based models implemented in tensorflow 2.x(Keras)
+Home-page: https://github.com/luozhouyang/transformers-keras
+Author: ZhouYang Luo
+Author-email: zhouyang.luo@gmail.com
+License: Apache Software License
+Description: # transformers-keras
+        
+        Transformer-based models implemented in tensorflow 2.x(Keras).
+        
+        ## Models
+        
+        - [x] Transformer
+            * [Attention Is All You Need](https://arxiv.org/abs/1706.03762). 
+            * Here is a tutorial from tensorflow:[Transformer model for language understanding](https://www.tensorflow.org/beta/tutorials/text/transformer)
+        - [ ] TransformerXL
+        - [ ] GPT
+        - [ ] GPT2
+        - [ ] BERT
+        - [ ] XLNet
+        
+        
+        ## Documents
+        
+        * [Transformer](doc/tramsformer.md)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
