@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: django-template-model
+Version: 1.0.1
+Summary: Template model.
+Home-page: https://github.com/Terralego/django-template-model
+Author: Makina Corpus
+Author-email: terralego-pypi@makina-corpus.com
+License: UNKNOWN
+Description: [![Build Status](https://travis-ci.org/Terralego/django-template-model.svg?branch=master)](https://travis-ci.org/Terralego/django-template-model)
+        [![PyPI version](https://badge.fury.io/py/django-template-model.svg)](https://badge.fury.io/py/django-template-model)
+        [![Maintainability](https://api.codeclimate.com/v1/badges/2e15c7ac17e66d1c8e16/maintainability)](https://codeclimate.com/github/courtem/django-template-model/maintainability)
+        [![codecov](https://codecov.io/gh/courtem/django-template-model/branch/master/graph/badge.svg)](https://codecov.io/gh/courtem/django-template-model)
+        ![Python Version](https://img.shields.io/badge/python-%3E%3D%203.6-blue.svg)
+        ![Django Version](https://img.shields.io/badge/django-%3E%3D%202.1-blue.svg)
+        ![Rest Version](https://img.shields.io/badge/django--rest--framework-%3E%3D%203.8.0-blue)
+        
+        # django-template-model
+        
+        ## Description
+        
+        This application will allow you to store `odt`, `docx` or `html` templates in
+        your database. You will be able to manipulate them through a view set, enriched
+        with an additional route to download the template.
+        
+        ## Setup
+        
+        Edit your settings file as follows:
+        
+        ```
+        INSTALLED_APPS = [
+            ...
+            template_model,
+        ]
+        ```
+        
+        Then your urls file:
+        
+        ```
+        urlpatterns = [
+            ...
+            path('...', include('template_model.urls')),
+        ]
+        ```
+        
+        ## Routes
+        
+        * `.../document-template/` (name: `template-list`, methods: `['get', 'post']`)
+        * `.../document-template/{pk}/` (name: `template-detail`,
+          methods: `['get', 'update', 'patch', 'delete']`)
+        * `.../document-template/{pk}/content/` (name: `template-content`,
+          methods: `['get']`)
+        
+        
+        # Versions
+        
+        # 1.0.1      (2019-09-24)
+        
+        Update:
+        
+        * mimetype and magic are no longer used
+        
+        
+        ## 1.0.0
+        
+        From now on, `Template` model contains:
+        
+        * a name (`name`),
+        * a mime type (`mime_type`),
+        * a file (`template_file`),
+        * the date of its creation (`added`),
+        * the date of its last update (`updated`).
+        
+        ## 0.1.1
+        
+        This package is compatible with `Django>=2.1.0,<3.0.0` et `djangorestframework>=3.8.0,<3.11.0`.
+        
+        ## 0.1.0
+        
+        From now on, `Template` model contains:
+        
+        * a name,
+        * a format,
+        * a content,
+        * the date of its creation,
+        * the date of its last update.
+        
+        ## 0.0.1
+        
+        * `Template` model
+        * Admin site
+        * View set with an additional route to download a template
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev

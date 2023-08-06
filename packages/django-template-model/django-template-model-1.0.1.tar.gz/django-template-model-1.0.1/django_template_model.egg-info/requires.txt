@@ -1,0 +1,7 @@
+Django>=2.1.0
+djangorestframework>=3.8.0
+
+[dev]
+flake8
+coverage
+codecov
