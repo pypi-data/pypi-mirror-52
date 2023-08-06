@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: lucy
+Version: 1.2.1
+Summary: CLI to create a LICENSE file
+Home-page: https://github.com/pattu777/Lucy
+Author: Chinmaya Kr. Patanaik
+Author-email: patanaikchinmaya@gmail.com
+License: MIT
+Description: Lucy generates a LICENSE file for your project from the command line for you.
+Keywords: license,github,command line,cli
+Platform: UNKNOWN
