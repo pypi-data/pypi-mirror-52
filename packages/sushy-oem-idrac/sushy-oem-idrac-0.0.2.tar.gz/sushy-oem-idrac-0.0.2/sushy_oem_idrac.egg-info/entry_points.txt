@@ -1,0 +1,3 @@
+[sushy.resources.manager.oems]
+dell = sushy_oem_idrac.resources.manager.manager:get_extension
+

@@ -1,0 +1,26 @@
+CHANGES
+=======
+
+0.0.2
+-----
+
+* Indicate package description is in markdown format
+
+0.0.1
+-----
+
+* Rename package to \`sushy-oem-idrac\`
+* Rephrase package maturity status
+* Update README
+* Update unit test to match changed implementation
+* Align vmedia integration test with ironic behaviour
+* Support \`permanent\` option of \`set\_virtual\_boot\_device\`
+* Make ImportConfiguration functional
+* Rename reboot -> utils
+* Add missing test case
+* Add functional virtual media boot test
+* Add primitive Redfish task monitor
+* Progress with \`set\_virtual\_boot\_device\` action call
+* Accommodate changed sushy OEM architecture
+* Initial revision
+* Initial commit
