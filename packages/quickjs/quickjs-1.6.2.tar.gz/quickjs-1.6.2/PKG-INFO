@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: quickjs
+Version: 1.6.2
+Summary: Wrapping the quickjs C library.
+Home-page: https://github.com/PetterS/quickjs
+Author: Petter Strandmark
+Author-email: petter.strandmark@gmail.com
+License: UNKNOWN
+Description: 
+        Thin Python wrapper around https://bellard.org/quickjs/ .
+        
+Platform: UNKNOWN
