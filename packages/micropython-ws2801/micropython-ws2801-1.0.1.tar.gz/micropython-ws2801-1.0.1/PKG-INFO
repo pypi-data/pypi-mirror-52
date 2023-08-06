@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: micropython-ws2801
+Version: 1.0.1
+Summary: MicroPython library for WS2801.
+Home-page: https://github.com/HeMan/micropython-ws2801
+Author: Jimmy Hedman
+Author-email: jimmy.hedman@gmail.com
+Maintainer: Jimmy Hedman
+Maintainer-email: jimmy.hedman@gmail.com
+License: MIT
+Description: This library lets you control strands of WS2801 RGB LEDs.
+Keywords: ws2801 rgb led micropython
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Classifier: License :: OSI Approved :: MIT License
