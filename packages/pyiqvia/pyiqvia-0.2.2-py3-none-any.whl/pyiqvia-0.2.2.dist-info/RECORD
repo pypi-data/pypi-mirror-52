@@ -1,0 +1,17 @@
+pyiqvia/__init__.py,sha256=7AO_dRumfQVy84kXjqUbXmR-F24E4XfohdzTfRpXsuk,64
+pyiqvia/__version__.py,sha256=15694fITOw7sEeUGwC_B2za9wHck70L4_AH2w4LQyeA,54
+pyiqvia/allergens.py,sha256=iPi73pyaWExU6rNlc728i9RoeU2Le2B5bRz3TA1w1j8,1087
+pyiqvia/asthma.py,sha256=i4oFzytMV7X4eiv2Iuwhv6NQHS5RbZ1gv6bAaigIRTg,970
+pyiqvia/client.py,sha256=WTD_1Bi9mbpYKYrlW2aWpu0TcRuJMoY3YT2so-qx8RU,2232
+pyiqvia/disease.py,sha256=0-Cv1gujiEKGJTvW5_oaIZHoCR2KZdJDg4nb0p5YOpI,948
+pyiqvia/errors.py,sha256=tMwZCyaeRsEVV4zuA1uGALzNv4AwZT-K0fuOxsPn0RY,264
+tests/fixtures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/fixtures/allergens.py,sha256=fPxuhjGD8wFsPUBuTBzr1ALat8qAYqlvj4vTnPl4TJk,6996
+tests/fixtures/asthma.py,sha256=U9Oklqat2t3uaZt3_UpidxFfI-w6L6a8oY39BW8fcN0,6461
+tests/fixtures/disease.py,sha256=wM7oEC9fsfxyiqhnZHjRON69Jn913StPjHE3DwFYFZI,6017
+pyiqvia-0.2.2.dist-info/AUTHORS.md,sha256=Wjh444vb8Zo5Cgzfg4aRgNILtmI_hCjXB9E1F53OAKc,82
+pyiqvia-0.2.2.dist-info/LICENSE,sha256=FTF9lC9P4MjR5EcYxNqTzoze0OjPm4L7Up_oihQ3S5I,1067
+pyiqvia-0.2.2.dist-info/METADATA,sha256=lJdgxUNrYWJHbp7TZx0ewSYp-zJn2pGcQjE_55CaJmk,4207
+pyiqvia-0.2.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pyiqvia-0.2.2.dist-info/top_level.txt,sha256=bggL-oVlOD_5VJb24-zTvhLCeDrCoMuojuwN1sdvuWA,14
+pyiqvia-0.2.2.dist-info/RECORD,,
