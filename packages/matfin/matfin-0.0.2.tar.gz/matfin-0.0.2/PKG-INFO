@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: matfin
+Version: 0.0.2
+Summary: Simple package with mathematical finance functions for me to use in my finance course at the Univeristy of São Paulo. :)
+Home-page: https://github.com/bailez/matfin   
+Author: Felipe Bailez
+Author-email: bailez@usp.br
+License: MIT
+Description: # matfin
+        Financial Mathematics
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
