@@ -1,0 +1,3 @@
+[console_scripts]
+anki_ocr_gui = anki_ocr_gui.cli_entry:main
+
