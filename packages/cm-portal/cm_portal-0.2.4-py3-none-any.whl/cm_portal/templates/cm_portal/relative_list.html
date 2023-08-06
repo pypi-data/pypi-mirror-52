@@ -1,0 +1,18 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| List of Relatives{% endblock %}
+
+{% block page_title %}| List of Relatives{% endblock %}
+
+{% block content %}  
+  <div class="jumbotron"><div class="table-responsive">
+  {% load django_tables2 %}
+  {% render_table table %}
+  </div>   
+  <br>
+  {% if perms.cm_portal.add_relative %} 
+    <a class="btn btn-primary" href="{% url 'relative-create' %}" role="button">Add a relative</a>
+  {% else %}
+    <a class="btn btn-primary disabled" href="{% url 'relative-create' %}" role="button">Add a relative</a>
+  {% endif %}</div>  
+{% endblock %}

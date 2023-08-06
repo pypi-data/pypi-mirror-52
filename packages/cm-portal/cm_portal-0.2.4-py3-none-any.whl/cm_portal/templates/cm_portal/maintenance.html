@@ -1,0 +1,38 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| Inventory of Medicines{% endblock %}
+
+{% block page_title %}| Inventory of Medicines{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="jumbotron">
+	<button type="button" class="btn btn-outline-info btn-sm">Get printable version</button>
+	<p></p>	
+	{% for building in building_list %}
+		<div class="table-responsive">
+			<table class="table table-sm table-hover">
+			  <thead><h4>{{ building }} - Male</h4></thead>  
+			  {% include 'includes/maintenance_th.html' %}
+			  {% for resident in building.resident_set.all  %}
+			    {% if resident.gender == 'M' and resident.vital_status == 'LI' %}
+			      {% include 'includes/maintenance_data.html' %}
+			    {% endif %}
+			  {% endfor %}
+			</table>
+		</div>		
+		<div class="table-responsive">
+			<table class="table table-sm table-hover">
+			  <thead><h4>{{ building }} - Female</h4></thead>  
+			  {% include 'includes/maintenance_th.html' %}
+			  {% for resident in building.resident_set.all  %}
+			    {% if resident.gender == 'F' and resident.vital_status == 'LI' %}
+			      {% include 'includes/maintenance_data.html' %}
+			    {% endif %}
+			  {% endfor %}
+			</table>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

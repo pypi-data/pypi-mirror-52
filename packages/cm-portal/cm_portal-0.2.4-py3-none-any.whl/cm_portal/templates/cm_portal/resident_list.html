@@ -1,0 +1,31 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| {{ title }}{% endblock %}
+
+{% block page_title %}| {{ title }}{% endblock %}
+
+{% block external %}
+  <script type="text/javascript" src="/static/js/obj_list.js"></script>
+{% endblock %}
+ 
+{% block content %}
+  <div class="jumbotron">
+    <form id="search-form" action="{% url 'residents' %}" method="get">
+      {{ form.as_p }}            
+    </form>
+    <div class="table-responsive">
+    {% load django_tables2 %}
+    {% if search %}
+      {% render_table results %}
+    {% else %}
+      {% render_table table %}
+    {% endif %}
+    </div>    
+    <br>
+    {% if perms.cm_portal.add_resident %}
+      <a class="btn btn-primary" href="{% url 'resident-create' %}" role="button">Add a resident</a>
+    {% else %}
+      <a class="btn btn-primary disabled" href="{% url 'resident-create' %}" role="button">Add a resident</a>
+    {% endif %}
+  </div>
+{% endblock %}

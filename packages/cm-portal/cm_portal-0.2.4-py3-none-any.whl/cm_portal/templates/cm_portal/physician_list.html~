@@ -1,0 +1,25 @@
+{% extends "cm_portal/geriatric_index.html" %}
+
+{% block title %}| List of Physicians{% endblock %}
+
+{% block page_title %}| List of Physicians{% endblock %}
+
+{% block content %}  
+  <div class="jumbotron"><div class="table-responsive">
+  <form id="search-form" action="{% url 'physicians' %}" method="get">
+      {{ form.as_p }}            
+  </form>
+  {% load django_tables2 %}
+    {% if search %}
+      {% render_table results %}
+    {% else %}
+      {% render_table table %}
+    {% endif %}
+  </div>   
+  <br>
+  {% if perms.cm_portal.add_physician %} 
+    <a class="btn btn-primary" href="{% url 'physician-create' %}" role="button">Add a physician</a>
+  {% else %}
+    <a class="btn btn-primary disabled" href="{% url 'physician-create' %}" role="button">Add a physician</a>
+  {% endif %}</div>  
+{% endblock %}
