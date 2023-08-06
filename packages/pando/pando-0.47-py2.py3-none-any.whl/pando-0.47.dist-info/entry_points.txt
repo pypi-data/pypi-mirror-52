@@ -1,0 +1,3 @@
+[console_scripts]
+fcgi_pando = fcgi_pando:main [fcgi]
+
