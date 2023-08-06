@@ -1,0 +1,15 @@
+.gitignore
+Makefile
+Pipfile
+README.md
+items-status-codes.md
+status_codes.md
+swagger.yaml
+.github/workflows/python-package.yml
+.github/workflows/python-publish.yml
+pybridgeapi.egg-info/PKG-INFO
+pybridgeapi.egg-info/SOURCES.txt
+pybridgeapi.egg-info/dependency_links.txt
+pybridgeapi.egg-info/requires.txt
+pybridgeapi.egg-info/top_level.txt
+scripts/test.py

@@ -1,0 +1,968 @@
+openapi: 3.0.0
+servers:
+  - description: Bankin bridgeapi.io server
+    url: https://sync.bankin.com/v2
+info:
+  description: bridgeapi.io
+  version: "1.0.0"
+  title: Bridge API
+paths:
+  /users:
+    post:
+      summary: Create a User
+      operationId: createUser
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/emptyBody'
+        required: true
+      parameters:
+        - in: query
+          name: email
+          description: User's email address.
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: password
+          description: |
+            User's password.
+            Must be at least 6 characters and less than 255 characters.
+          required: true
+          schema:
+            type: string
+            minLength: 6
+            maxLength: 255
+
+      responses:
+        '200':
+          description: created User
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    delete:
+      summary: Delete all users
+      operationId: deleteAllUsers
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      responses:
+        '204':
+          description: successful deletion
+    get:
+      summary: List users
+      operationId: listUsers
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      responses:
+        '200':
+          description: paginated list of users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  resources:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+  /users/{uuid}:
+    parameters:
+      - in: path
+        required: true
+        name: uuid
+        schema:
+          type: string
+          format: uuid
+    put:
+      summary: edit User credentials
+      operationId: editUser
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      parameters:
+        - in: query
+          required: true
+          name: current_password
+          schema:
+            type: string
+        - in: query
+          required: true
+          name: new_password
+          schema:
+            type: string
+      responses:
+        '200':
+          description: edit User credentials response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/editUserCredentialsResponse'
+    delete:
+      summary: delete a User
+      operationId: deleteUser
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      parameters:
+        - in: query
+          required: true
+          name: password
+          schema:
+            type: string
+      responses:
+        '204':
+          description: delete User credentials response
+  /users/{uuid}/password:
+    parameters:
+      - in: path
+        required: true
+        name: uuid
+        schema:
+          type: string
+          format: uuid
+    put:
+      summary: edit User password
+      operationId: editUserPassword
+      security:
+        - ClientId:     []
+          ClientSecret: []
+      responses:
+        '200':
+          description: edit user password response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /users/me/email/confirmation:
+    get:
+      summary: check Email Validation
+      operationId: checkEmailValidation
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: check Email Validation response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  is_confirmed:
+                    type: boolean
+  /connect/users/email/confirmation/url:
+    get:
+      summary: get the URL for email validation
+      operationId: getEmailValidationUrl
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: email Validation Url response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  redirect_url:
+                    type: string
+  /banks/{id}:
+    get:
+      parameters:
+        - name: id
+          description: bankId
+          in: path
+          required: true
+          schema:
+            type: integer
+      summary: get a single Bank
+      operationId: getBank
+      security:
+        - ClientId:     []
+          ClientSecret: []
+      responses:
+        '200':
+          description: a single Bank
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bank'
+  /banks:
+    get:
+      parameters:
+      - in: query
+        name: before
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: after
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+          default: 50
+      summary: get All banks
+      operationId: getAllBanks
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      responses:
+        '200':
+          description: Paginated list of banks
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListofBanks'
+  /items:
+    get:
+      summary: get Bridge items
+      operationId: getItems
+      security:
+        - ClientId: []
+          ClientSecret: []
+          Authorization: []
+      responses:
+        '200':
+          description: list of items
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  resources:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Item'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+  /items/{id}:
+    parameters:
+    - name: id
+      description: itemId
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: get a single Bridge Item
+      operationId: getItem
+      security:
+      - ClientId:      []
+        ClientSecret:  []
+        Authorization: []
+      responses:
+        '200':
+          description: a single item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+    delete:
+      summary: delete a Bridge Item
+      operationId: deleteItem
+      security:
+      - ClientId:      []
+        ClientSecret:  []
+        Authorization: []
+      responses:
+        '202':
+          description: item has been delete
+  /items/{id}/refresh/status:
+    parameters:
+      - name: id
+        description: itemId
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: get a Bridge Item refresh Status
+      operationId: refreshStatus
+      security:
+      - ClientId:      []
+        ClientSecret:  []
+        Authorization: []
+      responses:
+        '200':
+          description: item refresh status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RefreshStatus'
+  /items/{id}/refresh:
+    parameters:
+    - name: id
+      description: itemId
+      in: path
+      required: true
+      schema:
+        type: integer
+    post:
+      summary: Refresh a Bridge Item
+      operationId: refreshItem
+      security:
+      - ClientId:      []
+        ClientSecret:  []
+        Authorization: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/emptyBody'
+      responses:
+        '202':
+          description: item has been refreshed
+  /connect/items/edit/url:
+    get:
+      summary: Returns the URL to Bridge's Connect funnel for editing an item
+      operationId: editConnect
+      security:
+        - ClientId:     []
+          ClientSecret: []
+          Authorization: []
+      parameters:
+        - name: item_id
+          description: itemId
+          in: query
+          required: true
+          schema:
+            type: integer
+
+      responses:
+        '200':
+          description: the redirect_url
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  redirect_url:
+                    type: string
+  /connect/items/add/url:
+    get:
+      summary: Returns the URL to Bridge's Connect funnel for adding an item
+      operationId: addConnect
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: the redirect_url
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  redirect_url:
+                    type: string
+  /authenticate:
+    post:
+      summary: Authenticate a User
+      operationId: authenticateUser
+      security:
+        - ClientId:     []
+          ClientSecret: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/emptyBody'
+      parameters:
+        - name: email
+          in: query
+          description: User's email address.
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: |
+            User's password.
+            Must be at least 6 characters and less than 255 characters.
+          required: true
+          schema:
+            type: string
+            minLength: 6
+            maxLength: 255
+      responses:
+        '200':
+          description: authenticated User
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticatedUser'
+  /accounts/{id}:
+    parameters:
+      - name: id
+        description: accountId
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: get User Account
+      operationId: getAccount
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: account details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+  /accounts:
+    get:
+      summary: get User Accounts
+      operationId: getAccounts
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: list of account resources
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountResources'
+  /transactions/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Get Transaction
+      operationId: getTransaction
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: Single transaction
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+  /accounts/{id}/transactions:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: List Transactions By Account
+      operationId: getAccountTransactions
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      parameters:
+      - in: query
+        name: before
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: after
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+          default: 50
+      - in: query
+        name: since
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - in: query
+        name: until
+        required: false
+        schema:
+          type: string
+          format: date-time
+      responses:
+        '200':
+          description: list of transactions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionsList'
+  /accounts/{id}/transactions/updated:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: List Updated Transactions By Account
+      operationId: getUpdatedAccountTransactions
+      parameters:
+      - in: query
+        name: before
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: after
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: since
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - in: query
+        name: until
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+          default: 50
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      responses:
+        '200':
+          description: list of transactions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionsList'
+  /transactions:
+    get:
+      summary: List Transactions
+      operationId: getTransactions
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      parameters:
+      - in: query
+        name: after
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+          default: 50
+      responses:
+        '200':
+          description: list of transactions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionsList'
+  /transactions/updated:
+    get:
+      summary: List Updated Transactions
+      operationId: getUpdatedTransactions
+      security:
+      - ClientId:     []
+        ClientSecret: []
+        Authorization: []
+      parameters:
+      - in: query
+        name: before
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: after
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: since
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - in: query
+        name: until
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+          default: 50
+      responses:
+        '200':
+          description: list of transactions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionsList'
+  /categories:
+    get:
+      summary: List Categories
+      operationId: getCategories
+      security:
+      - ClientId:     []
+        ClientSecret: []
+      responses:
+        '200':
+          description: list of categories
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CategoriesList'
+components:
+  securitySchemes:
+    ClientId:
+      type: apiKey
+      in: query
+      name: client_id
+    ClientSecret:
+      type: apiKey
+      in: query
+      name: client_secret
+    Authorization:
+      type: apiKey
+      in: header
+      name: authorization
+  schemas:
+    CategoriesList:
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+    Category:
+      allOf:
+      - $ref: '#/components/schemas/Resource'
+      - type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          categories:
+            type: array
+            items:
+              $ref: '#/components/schemas/Category'
+    TransactionsList:
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Transaction'
+    Transaction:
+      allOf:
+        - $ref: '#/components/schemas/Resource'
+        - type: object
+          properties:
+            id:
+              type: integer
+            description:
+              type: string
+            raw_description:
+              type: string
+            amount:
+              type: number
+              format: double
+            date:
+              type: string
+              format: date
+            updated_at:
+              type: string
+              format: date-time
+            is_deleted:
+              type: boolean
+            category:
+              $ref: '#/components/schemas/Resource'
+            account:
+              $ref: '#/components/schemas/Resource'
+    editUserCredentialsResponse:
+      allOf:
+        - type: object
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              example: 79c8961c-bdf7-11e5-88a3-4f2c2aec0665
+            email:
+              type: string
+        - $ref: '#/components/schemas/Response'
+    AccountResources:
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+    Account:
+      allOf:
+        - $ref: '#/components/schemas/Resource'
+        - type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            balance:
+              type: float
+            status:
+              type: integer
+            item:
+              $ref: '#/components/schemas/IntegerIdResource'
+            bank:
+              $ref: '#/components/schemas/IntegerIdResource'
+            last_refresh_date:
+              type: string
+              format: date-time
+            loan_details:
+              $ref: '#/components/schemas/LoanDetails'
+            saving_details:
+              $ref: '#/components/schemas/SavingDetails'
+    SavingsDetails:
+      type: object
+      properties:
+        opening_date:
+          type: string
+          format: date
+        interest_rate:
+          type: number
+          format: double
+        ceiling:
+          type: number
+          format: dbouel
+    LoanDetails:
+      type: object
+      properties:
+        next_payment_date:
+          type: string
+          format: date
+        next_payment_amount:
+          type: integer
+        maturity_date:
+          type: string
+          format: date
+        opening_date:
+          type: string
+          format: date
+        interest_rate:
+          type: number
+          format: double
+        type:
+          type: string
+        borrowed_capital:
+          type: integer
+        repaid_capital:
+          type: integer
+        remaining_capital:
+          type: integer
+    Resource:
+      type: object
+      properties:
+        resource_type:
+          type: string
+          enum:
+            - bank
+            - item
+            - account
+            - category
+            - user
+        resource_uri:
+          type: string
+    Pagination:
+      type: object
+      properties:
+        previous_uri:
+          type: string
+        next_uri:
+          type: string
+    AuthenticatedUser:
+      type: object
+      properties:
+        user:
+          $ref: '#/components/schemas/User'
+        access_token:
+          type: string
+        expires_at:
+          type: string
+          format: date-time
+          example: "2016-05-06T11:08:25.040Z"
+    User:
+      allOf:
+        - $ref: '#/components/schemas/Resource'
+        - type: object
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              example: 79c8961c-bdf7-11e5-88a3-4f2c2aec0665
+            email:
+              type: string
+              example: john.doe@email.com
+    BankCountry:
+      type: object
+      properties:
+        country_code:
+          type: string
+        parent_banks:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParentBank'
+    ParentBank:
+      type: object
+      properties:
+        name:
+          type: string
+        logo_url:
+          type: string
+        banks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bank'
+    ListofBanks:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/BankResource'
+        pagination:
+          type: object
+          properties:
+            previous_uri:
+              type: string
+            next_uri:
+              type: string
+    BankResource:
+      type: object
+      properties:
+        country_code:
+          type: string
+        parent_banks:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParentBank'
+    Bank:
+      allOf:
+        - $ref: '#/components/schemas/IntegerIdResource'
+        - type: object
+          properties:
+            name:
+              type: string
+            country_code:
+              type: string
+            automatic_refresh:
+              type: boolean
+            form:
+              type: array
+              items:
+                $ref: '#/components/schemas/BankForm'
+    BankForm:
+      type: object
+      properties:
+        label:
+          type: string
+          example: 'Numéroclient'
+        type:
+          type: string
+          example: 'USER'
+        isNum:
+          type: string
+        maxLength:
+          type: integer
+    emptyBody:
+      type: object
+    IntegerIdResource:
+      allOf:
+        - $ref: '#/components/schemas/Resource'
+        - type: object
+          properties:
+            id:
+              type: integer
+    Item:
+      allOf:
+        - $ref: '#/components/schemas/Resource'
+        - type: object
+          properties:
+            id:
+              type: integer
+            status:
+              type: integer
+            bank:
+              $ref: '#/components/schemas/Resource'
+            accounts:
+              type: array
+              items:
+                $ref: '#/components/schemas/IntegerIdResource'
+    Mfa:
+      type: object
+      properties:
+        label:
+          type: string
+        is_numeric:
+          type: boolean
+    RefreshStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        mfa:
+          $ref: '#/components/schemas/Mfa'
+        refreshed_at:
+          type: string
+          format: date-time
+        refreshed_accounts_count:
+          type: integer
+        total_accounts_count:
+          type: integer
