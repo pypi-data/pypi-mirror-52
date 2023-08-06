@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dzo
+Version: 0.0.7
+Summary: dzo -- Python implemented portable and easy-to-use search engine.
+Home-page: https://github.com/moriaki3193/dzo
+Author: Moriaki Saigusa
+Author-email: moriaki3193@gmail.com
+License: MIT
+Keywords: Python Search Engine
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Cython
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: mecab-python3
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: numpy-stubs ; extra == 'dev'
+
+UNKNOWN
+
+
