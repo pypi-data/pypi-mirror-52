@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hippybase
+Version: 0.1.2
+Summary: A Python library to interact with Apache Hbase through its REST api
+Home-page: https://github.com/WeiJiHsiao/hippybase
+Author: WeiJi Hsiao
+License: MIT License
+Description: # HippyBase
+        HippyBase is a Python library to interact with Apache Hbase through its REST api.
+        
+        ## Installation
+        ```bash
+        pip install hippybase
+        ```
+        
+        ## Example
+        ```python
+        import hippybase
+        
+        connection = hippybase.Connection('hostname')
+        table=connection.table('table_name')
+        
+        table.put('row_key', {'family:qual': 'value'})
+        
+        row = table.row('row_key')
+        
+        for key, data in table.scan():
+            print(key, data)
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

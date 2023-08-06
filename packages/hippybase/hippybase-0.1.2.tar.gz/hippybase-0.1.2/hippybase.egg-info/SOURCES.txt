@@ -1,0 +1,12 @@
+README.md
+setup.py
+hippybase/__init__.py
+hippybase/client.py
+hippybase/connection.py
+hippybase/schema_pb2.py
+hippybase/table.py
+hippybase.egg-info/PKG-INFO
+hippybase.egg-info/SOURCES.txt
+hippybase.egg-info/dependency_links.txt
+hippybase.egg-info/requires.txt
+hippybase.egg-info/top_level.txt
