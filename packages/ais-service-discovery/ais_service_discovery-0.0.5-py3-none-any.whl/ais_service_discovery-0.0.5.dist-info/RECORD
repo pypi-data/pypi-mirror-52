@@ -1,0 +1,11 @@
+ais_service_discovery/__init__.py,sha256=tKa5gbgiOOqVJjngTrC0jtguTkEPQkeTMnxMEt2cC8Q,47
+ais_service_discovery/call_service.py,sha256=P848kwDIv0w3aYaLFtpZvUs421zBySslpg4V4vrJ7h8,1315
+ais_service_discovery/functions/__init__.py,sha256=GcGd1rM8RFgAa5LgAfLoLTBM1s7OccCG0YZ0ZMJb4WA,547
+ais_service_discovery/services/__init__.py,sha256=grwt3jOHQizy5HIFv98S2Kh_KVytwoqeHXlBYel43Ak,278
+ais_service_discovery/services/cloudmap.py,sha256=XgCFtS1KiwpIHpsDnRcZ3DrgjvmHGlA4Kq0uVjJtXfs,339
+ais_service_discovery/services/helpers.py,sha256=xfLmnyzB7RGL5Ext-oHBkJ1a_YRabOWMuplCVbCjQl0,2035
+ais_service_discovery-0.0.5.dist-info/LICENSE,sha256=VXapH-nuSz68DG5ScURElxHkl1lKk4MOK9cgZCSRDXs,34502
+ais_service_discovery-0.0.5.dist-info/METADATA,sha256=WT-Sg9YbC0YniqKGD8kKOCW6B0Bybf3C0SI4c3flr5Q,1699
+ais_service_discovery-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ais_service_discovery-0.0.5.dist-info/top_level.txt,sha256=8j_W67IXHteMdhIOEQip7UzWGOjgmrlerbokFXSYHfg,22
+ais_service_discovery-0.0.5.dist-info/RECORD,,
