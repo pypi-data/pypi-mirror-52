@@ -1,0 +1,4 @@
+include LICENSE
+include VERSION
+
+graft myst/data
