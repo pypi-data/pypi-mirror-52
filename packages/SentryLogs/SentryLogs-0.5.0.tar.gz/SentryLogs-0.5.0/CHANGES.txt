@@ -1,0 +1,14 @@
+v0.0.1, 12/05/2012 -- Initial Alpha release, not ready for production
+v0.0.2, 12/05/2012 -- No conf and parsers included
+v0.0.3, 12/05/2012 -- No conf and parsers included, fixed
+v0.0.4, 12/05/2012 -- Documentation
+v0.0.5, 12/05/2012 -- Django settings eliminated
+v0.0.6, 12/05/2012 -- Nginx default error log path fixed
+v0.0.7, 12/10/2012 -- Documentation bug fix
+v0.0.8, 01/16/2013 -- README.md addded to manifest
+v0.0.9, 02/18/2013 -- Patch for invalid Nginx errors
+v0.1.0, 07/25/2014 -- Fix syntax error in nginx parser (07/03/2013; released 1y later w/ non-versioned version bump)
+v0.2.0, 06/10/2016 -- Add --sentryconfig option, add static code analysis (flake8, pylint) and integration tests
+v0.3.0, 07/14/2017 -- Use entry_point.console_scripts for script setup, use relative imports in script module
+v0.4.0, 11/05/2018 -- Update interface for extended message, add real tests
+v0.5.0, 04/05/2019 -- Use sentry-sdk client
