@@ -1,0 +1,7 @@
+map {{ key_name }} {{ value_name }} {
+    default "";
+
+{% for key_pair in key_pairs %}
+    "{{ key_pair.key }}" "{{ key_pair.value }}";
+{% endfor %}
+}

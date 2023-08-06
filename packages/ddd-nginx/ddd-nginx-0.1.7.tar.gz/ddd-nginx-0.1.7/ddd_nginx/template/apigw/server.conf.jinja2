@@ -1,0 +1,31 @@
+server {
+{% for var in variables %}
+    set {{ var.key }} {{ var.value }};
+{% endfor %}
+    access_log /var/log/nginx/api_access.log {{ name }};
+
+    listen 80;
+    server_name {{ name }};
+
+{% if tls %}
+    # TLS config
+    listen 443 ssl;
+    ssl_certificate      /etc/ssl/certs/{{ name }}.crt;
+    ssl_certificate_key  /etc/ssl/private/{{ name }}.key;
+    ssl_session_cache    shared:SSL:10m;
+    ssl_session_timeout  5m;
+    ssl_ciphers          HIGH:!aNULL:!MD5;
+    ssl_protocols        TLSv1.1 TLSv1.2;
+{% endif %}
+
+    # API definitions, one per file
+{% for location in locations %}
+    {{ location }}
+{% endfor %}
+
+    # Error responses
+    error_page 404 = @400;         # Invalid paths are treated as bad requests
+    proxy_intercept_errors on;     # Do not send backend errors to the client
+    include error_page.conf;       # API client friendly JSON error responses
+    default_type application/json; # If no content-type then assume JSON
+}
