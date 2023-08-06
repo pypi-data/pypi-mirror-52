@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/ignr
+ignr/__init__.py
+ignr/cli.py
+ignr/gitignoreio_api.py
+ignr.egg-info/PKG-INFO
+ignr.egg-info/SOURCES.txt
+ignr.egg-info/dependency_links.txt
+ignr.egg-info/top_level.txt
