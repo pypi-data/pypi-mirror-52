@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: textools
+Version: 0.0.7.2.dev1
+Summary: convert xls table to tex code
+Home-page: https://github.com/sailist/LatexTool
+Author: sailist
+Author-email: sailist@outlook.com
+License: MIT
+Keywords: xlsx tex table
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+
+UNKNOWN
+
+

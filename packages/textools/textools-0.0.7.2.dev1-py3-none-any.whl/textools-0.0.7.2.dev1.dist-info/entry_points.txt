@@ -1,0 +1,4 @@
+[console_scripts]
+pst = LatexTool.paste:main
+x2t = LatexTool.totable:main
+
