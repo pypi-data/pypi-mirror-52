@@ -1,0 +1,14 @@
+CHANGES.rst
+HOWTO.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+goma/__init__.py
+goma/basematch.py
+goma/exactmatch.py
+goma/prioritymatch.py
+goma.egg-info/PKG-INFO
+goma.egg-info/SOURCES.txt
+goma.egg-info/dependency_links.txt
+goma.egg-info/top_level.txt
