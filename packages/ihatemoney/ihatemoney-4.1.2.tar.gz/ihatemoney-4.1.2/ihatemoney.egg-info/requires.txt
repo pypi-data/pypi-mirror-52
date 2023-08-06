@@ -1,0 +1,14 @@
+Flask-Migrate
+Flask-script
+blinker
+email_validator
+flask
+flask-babel
+flask-cors
+flask-mail
+flask-restful
+flask-sqlalchemy<3.0
+flask-wtf
+itsdangerous
+jinja2
+six
