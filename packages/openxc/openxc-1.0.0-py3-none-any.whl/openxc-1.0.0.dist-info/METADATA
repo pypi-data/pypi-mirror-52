@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: openxc
+Version: 1.0.0
+Summary: A Python library to connect to an OpenXC vehicle interface
+Home-page: http://github.com/openxc/openxc-python
+Author: Christopher Peplin
+Author-email: cpeplin@ford.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Requires-Dist: pyusb (==1.0.0a3)
+Requires-Dist: units (>=0.5)
+Requires-Dist: argparse
+Requires-Dist: requests (==2.20.0)
+Requires-Dist: protobuf (==3.9.1)
+Requires-Dist: windows-curses (>=1.1)
+Provides-Extra: bluetooth
+Requires-Dist: pybluez ; extra == 'bluetooth'
+Provides-Extra: lxml
+Requires-Dist: lxml ; extra == 'lxml'
+Provides-Extra: serial
+Requires-Dist: pyserial (==3.1.1) ; extra == 'serial'
+
+===============================================
+OpenXC for Python
+===============================================
+
+.. image:: /docs/_static/logo.png
+
+:Version: 1.0.0
+:Web: http://openxcplatform.com
+:Download: http://pypi.python.org/pypi/openxc/
+:Documentation: http://python.openxcplatform.com
+:Source: http://github.com/openxc/openxc-python/
+:Keywords: vehicle, openxc, python
+
+.. image:: https://travis-ci.org/openxc/openxc-python.svg?branch=master
+    :target: https://travis-ci.org/openxc/openxc-python
+
+.. image:: https://coveralls.io/repos/openxc/openxc-python/badge.png?branch=master
+    :target: https://coveralls.io/r/openxc/openxc-python?branch=master
+
+.. image:: https://readthedocs.org/projects/openxc-python-library/badge/
+    :target: http://python.openxcplatform.com
+    :alt: Documentation Status
+
+The OpenXC Python library (for Python 3.6.7) provides an interface to
+vehicle data from the OpenXC Platform. The primary platform for OpenXC
+applications is Android, but for prototyping and testing, often it is
+preferrable to use a low-overhead environment like Python when developing.
+
+In addition to a port of the Android library API, the package also contains a
+number of command-line tools for connecting to the CAN translator and
+manipulating previously recorded vehicle data.
+
+To package run "setup.py sdist bdist_wheel"
+to push to pypi run "python -m twine upload dist/*"
+Version files:
+	CHANGELOG.rst
+	README.rst
+	openxc/version.py
+	docs/index.rst
+
+License
+=======
+
+Copyright (c) 2012-2017 Ford Motor Company
+
+Licensed under the BSD license.
+
+
