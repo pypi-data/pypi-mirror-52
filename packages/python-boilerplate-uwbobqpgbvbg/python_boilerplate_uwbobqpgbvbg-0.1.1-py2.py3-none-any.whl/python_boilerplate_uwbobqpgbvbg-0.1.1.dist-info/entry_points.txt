@@ -1,0 +1,3 @@
+[console_scripts]
+python_boilerplate = python_boilerplate.cli:main
+
