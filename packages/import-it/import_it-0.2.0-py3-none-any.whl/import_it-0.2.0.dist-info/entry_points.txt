@@ -1,0 +1,3 @@
+[console_scripts]
+import_it.py=import_it:main
+

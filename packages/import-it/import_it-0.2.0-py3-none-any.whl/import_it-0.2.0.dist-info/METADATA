@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: import-it
+Version: 0.2.0
+Summary: Determine the way to import a symbol using rg.
+Author: Razzi Abuissa
+Author-email: razzi@abuissa.net
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ripgrepy (>=1.0,<2.0)
