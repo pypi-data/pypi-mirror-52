@@ -1,0 +1,13 @@
+sanic_service_utils/__init__.py,sha256=IcpUkGkp0pw564MTT5sGw9lxWKpS6QufA4Jt5GfbBs0,312
+sanic_service_utils/command.py,sha256=XwNxtCKB7Yp-DY7i9G8jPt95xZP8kkqhOVA9zk34_bQ,4300
+sanic_service_utils/common.py,sha256=VIV99rJ5ZgXbgnv3v3jONzxmMkaPFVivy2SSMqYVHt8,4297
+sanic_service_utils/configuration.py,sha256=chijVLJUiQMP6AI0DOiEytpNJf5M9LNPeBhGhn3J4vw,7700
+sanic_service_utils/orm_utils.py,sha256=nahAvG_73JUT8JTk19ighyQONJy1ksWgWxFFQY03qII,5875
+sanic_service_utils/tokens.py,sha256=ab4bmGmlGQVDiD_J6G3_C57gz3Hc8M1Drvj3fmArf08,1221
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/orm_utils_test.py,sha256=PGJRL_sfsDY7Vo2xScSzuVooCzBTZQUGRbl44oXDw1I,976
+sanic_service_utils-0.6.0.dist-info/LICENSE.txt,sha256=faGkWQdXDRDoZDqYwNGo3-IvYN-O1mJpA9yUGLvEWP4,1072
+sanic_service_utils-0.6.0.dist-info/METADATA,sha256=X6Yuf0Nd6RNaRj9J8gmwKAAKCP-ox1q4PVmvIvRbG3U,4007
+sanic_service_utils-0.6.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+sanic_service_utils-0.6.0.dist-info/top_level.txt,sha256=1nvb0cmKQ-9_A6XIJKATaRXgIXO1ciQ66s6jXLIYtEQ,26
+sanic_service_utils-0.6.0.dist-info/RECORD,,
