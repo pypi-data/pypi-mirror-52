@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+coverage
+sphinx
+
+[docs]
+sphinx
+numpydoc
