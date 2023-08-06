@@ -1,0 +1,12 @@
+bake/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bake/bakefile.py,sha256=6yYGsN0-uCoRivmj2D9Ftk1lxlse5wkIrrUZdGgh-DI,17576
+bake/bash.py,sha256=1tKd2WLG89dHm3dCSa2wHzjTuhShpdsmH-lMP4TLMqs,4634
+bake/cli.py,sha256=leL7wjsai9MANFWueEtJJ_pFtkRdlLdrZ5ONw9qh0Hs,10445
+bake/clint.py,sha256=mN3f9EEUYCXkDI5ZBKN2KtczlBIdlODck81Z0XQIAqo,1001
+bake/scripts/stdlib.sh,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bake_cli-0.8.3.dist-info/LICENSE,sha256=yrBCX31YdJXb79iVjhXzqSWZPUvyFD3slfHSLprkxX8,728
+bake_cli-0.8.3.dist-info/METADATA,sha256=JqsBnTjXYffkx7FpIV9mhnJqmZclRaDxJtq260DqkuI,9831
+bake_cli-0.8.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+bake_cli-0.8.3.dist-info/entry_points.txt,sha256=LWcudf5vh_6PM-nUrbBd4hNHW2ynYq1jtKxzTqAy_Yw,46
+bake_cli-0.8.3.dist-info/top_level.txt,sha256=JfzAM794-cNFnVhac0J8EYg8Xka-cq9oi42s2-S4wbM,5
+bake_cli-0.8.3.dist-info/RECORD,,
