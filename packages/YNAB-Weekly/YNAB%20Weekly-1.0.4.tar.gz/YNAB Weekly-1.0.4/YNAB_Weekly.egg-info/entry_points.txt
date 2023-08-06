@@ -1,0 +1,3 @@
+[console_scripts]
+ynab-weekly = ynab_weekly.main:run
+

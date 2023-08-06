@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: YNAB-Weekly
+Version: 1.0.4
+Summary: Recieve top spending categories in YNAB weekly
+Home-page: https://github.com/kotnik/ynab-weekly-spending
+Author: Nikola Kotur
+Author-email: kotnick@gmail.com
+License: Apache-2.0
+Description: # YNAB Weekly Spending Reports with Python
+        
+        If you want weekly mail with top 10 spending categories in [You Need a Budget](https://ynab.com/referral/?ref=2QOWY7f12Aeo5ASi&utm_source=customer_referral), you are in the right place.
+        
+        This application is inspired by [YNAB Weekly Spending Reports with Google Apps Script](https://www.connorcg.com/ynab-spending-report-google-apps-script.html) by [Connor Griffin](https://gist.github.com/ConnorGriffin), only in Python instead of JavaScript.
+        
+        ## How to Run
+        
+        Easy. You need:
+        
+        * [YNAB Personal Access Token](https://api.youneedabudget.com/#authentication-overview).
+        * Your [Mailgun](https://mailgun.com) personal [token](https://app.mailgun.com/app/account/security/api_keys) (it's free to send up to 10k mails).
+        * A place to run Python, any hosting option will do or you can use your computer!
+        
+        Now, after making sure you have all of the above, install this package:
+        
+        ```
+        pip2 install --user YNAB-Weekly
+        ```
+        
+        That is all, we are ready! Use this to run:
+        
+        ```
+        ynab-weekly \
+            --ynab-api-key     YNAB_KEY       \
+            --ynab-budget-name "Budged name"  \
+            --mailgun-api-key  MAILGUN_KEY    \
+            --mailgun-domain   MAILGUN_DOMAIN \
+            --mails            me@myhouse.com my-so@myhouse.com
+        ```
+        
+        Please report bugs in issues.
+        
+        ## How to run in development mode
+        
+        ```
+        virtualenv -p python2 .env
+        source .env/bin/activate
+        pip install --editable .
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Requires-Python: >=2.6, <3
+Description-Content-Type: text/markdown
