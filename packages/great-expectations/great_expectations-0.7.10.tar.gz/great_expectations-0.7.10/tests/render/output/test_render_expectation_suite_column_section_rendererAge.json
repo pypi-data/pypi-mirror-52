@@ -1,0 +1,349 @@
+{
+  "section_name": "Age", 
+  "content_blocks": [
+    {
+      "header": "Age", 
+      "styling": {
+        "header": {
+          "classes": [
+            "alert", 
+            "alert-secondary"
+          ]
+        }, 
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "header"
+    }, 
+    {
+      "bullet_list": [
+        {
+          "string_template": {
+            "params": {
+              "mostly": null, 
+              "column": "Age", 
+              "v__5": "float", 
+              "v__0": "DOUBLE_PRECISION", 
+              "v__1": "DoubleType", 
+              "v__2": "FLOAT", 
+              "v__3": "FloatType", 
+              "v__4": "NUMERIC", 
+              "type_list": [
+                "DOUBLE_PRECISION", 
+                "DoubleType", 
+                "FLOAT", 
+                "FloatType", 
+                "NUMERIC", 
+                "float"
+              ]
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "value types must belong to this set: $v__0 $v__1 $v__2 $v__3 $v__4 $v__5."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "max_value": null, 
+              "min_value": null, 
+              "mostly": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "may have any number of unique values."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "max_value": null, 
+              "min_value": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "may have any percentage of unique values."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "mostly_pct": "50.0", 
+              "mostly": 0.5
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "values must not be null, at least $mostly_pct % of the time."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "max_value": null, 
+              "min_value": null, 
+              "parse_strings_as_datetimes": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "minimum value may have any numerical value."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "max_value": null, 
+              "min_value": null, 
+              "parse_strings_as_datetimes": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "maximum value may have any numerical value."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "max_value": null, 
+              "min_value": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "mean may have any numerical value."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "max_value": null, 
+              "min_value": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "median may have any numerical value."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "expectation_type": "expect_column_quantile_values_to_be_between", 
+              "kwargs": {
+                "column": "Age", 
+                "quantile_ranges": {
+                  "value_ranges": [
+                    [
+                      null, 
+                      null
+                    ], 
+                    [
+                      null, 
+                      null
+                    ], 
+                    [
+                      null, 
+                      null
+                    ], 
+                    [
+                      null, 
+                      null
+                    ], 
+                    [
+                      null, 
+                      null
+                    ]
+                  ], 
+                  "quantiles": [
+                    0.05, 
+                    0.25, 
+                    0.5, 
+                    0.75, 
+                    0.95
+                  ]
+                }
+              }
+            }, 
+            "styling": {
+              "params": {
+                "expectation_type": {
+                  "classes": [
+                    "badge", 
+                    "badge-warning"
+                  ]
+                }
+              }
+            }, 
+            "template": "$expectation_type(**$kwargs)"
+          }, 
+          "styling": {
+            "parent": {
+              "classes": [
+                "alert", 
+                "alert-warning"
+              ]
+            }
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Age", 
+              "partition_object": null, 
+              "threshold": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "sparklines_histogram": {
+                  "styles": {
+                    "font-family": "serif !important"
+                  }
+                }
+              }
+            }, 
+            "template": "Kullback-Leibler (KL) divergence with respect to a given distribution must be lower than a provided threshold but no distribution was specified."
+          }, 
+          "content_block_type": "string_template"
+        }
+      ], 
+      "styling": {
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "bullet_list"
+    }
+  ]
+}

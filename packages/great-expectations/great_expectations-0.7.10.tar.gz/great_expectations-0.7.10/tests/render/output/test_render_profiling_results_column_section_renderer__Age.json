@@ -1,0 +1,680 @@
+{
+  "section_name": "Age", 
+  "content_blocks": [
+    {
+      "subheader": {
+        "tooltip": {
+          "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+        }, 
+        "template": "Type: None"
+      }, 
+      "header": {
+        "tooltip": {
+          "content": "expect_column_to_exist", 
+          "placement": "top"
+        }, 
+        "template": "Age"
+      }, 
+      "styling": {
+        "header": {
+          "classes": [
+            "alert", 
+            "alert-secondary"
+          ]
+        }, 
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "header"
+    }, 
+    {
+      "table": [
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_unique_value_count_to_be_between"
+              }, 
+              "template": "Distinct (n)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          75
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_proportion_of_unique_values_to_be_between"
+              }, 
+              "template": "Distinct (%)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "9.9%"
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_values_to_not_be_null"
+              }, 
+              "template": "Missing (n)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          557
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_values_to_not_be_null"
+              }, 
+              "template": "Missing (%)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "42.4%"
+        ]
+      ], 
+      "header_row": [], 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "body": {
+          "styles": {
+            "width": "100%"
+          }, 
+          "classes": [
+            "table", 
+            "table-sm", 
+            "table-unbordered"
+          ]
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "table", 
+      "header": "Properties"
+    }, 
+    {
+      "header": "Quantiles", 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "body": {
+          "classes": [
+            "table", 
+            "table-sm", 
+            "table-unbordered"
+          ]
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "table", 
+      "table": [
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_quantile_values_to_be_between"
+              }, 
+              "template": "0.05"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          6.0
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_quantile_values_to_be_between"
+              }, 
+              "template": "Q1"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          21.0
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_quantile_values_to_be_between \n expect_column_median_to_be_between"
+              }, 
+              "template": "Median"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          28.0
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_quantile_values_to_be_between"
+              }, 
+              "template": "Q3"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          39.0
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_quantile_values_to_be_between"
+              }, 
+              "template": "0.95"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          57.0
+        ]
+      ]
+    }, 
+    {
+      "header": "Statistics", 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "body": {
+          "classes": [
+            "table", 
+            "table-sm", 
+            "table-unbordered"
+          ]
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "table", 
+      "table": [
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_mean_to_be_between"
+              }, 
+              "template": "Mean"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "30.40"
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_min_to_be_between"
+              }, 
+              "template": "Minimum"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "0.17"
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_max_to_be_between"
+              }, 
+              "template": "Maximum"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "71.00"
+        ]
+      ]
+    }, 
+    {
+      "header": {
+        "tooltip": {
+          "content": "expect_column_kl_divergence_to_be_less_than"
+        }, 
+        "template": "Histogram"
+      }, 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "graph", 
+      "graph": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v3.3.0.json\", \n  \"autosize\": \"fit\", \n  \"config\": {\n    \"mark\": {\n      \"tooltip\": null\n    }, \n    \"view\": {\n      \"height\": 300, \n      \"width\": 400\n    }\n  }, \n  \"data\": {\n    \"name\": \"data-1fcf1567afb37cdfbc33738daa010e8f\"\n  }, \n  \"datasets\": {\n    \"data-1fcf1567afb37cdfbc33738daa010e8f\": [\n      {\n        \"bin_max\": 8.0, \n        \"bin_min\": 0.2, \n        \"weights\": 6.084656084656085\n      }, \n      {\n        \"bin_max\": 15.9, \n        \"bin_min\": 8.0, \n        \"weights\": 3.571428571428571\n      }, \n      {\n        \"bin_max\": 23.8, \n        \"bin_min\": 15.9, \n        \"weights\": 24.867724867724867\n      }, \n      {\n        \"bin_max\": 31.7, \n        \"bin_min\": 23.8, \n        \"weights\": 24.47089947089947\n      }, \n      {\n        \"bin_max\": 39.5, \n        \"bin_min\": 31.7, \n        \"weights\": 16.26984126984127\n      }, \n      {\n        \"bin_max\": 47.4, \n        \"bin_min\": 39.5, \n        \"weights\": 11.11111111111111\n      }, \n      {\n        \"bin_max\": 55.3, \n        \"bin_min\": 47.4, \n        \"weights\": 7.804232804232804\n      }, \n      {\n        \"bin_max\": 63.1, \n        \"bin_min\": 55.3, \n        \"weights\": 3.968253968253968\n      }, \n      {\n        \"bin_max\": 71.0, \n        \"bin_min\": 63.1, \n        \"weights\": 1.8518518518518516\n      }\n    ]\n  }, \n  \"encoding\": {\n    \"x\": {\n      \"field\": \"bin_min\", \n      \"type\": \"ordinal\"\n    }, \n    \"x2\": {\n      \"field\": \"bin_max\"\n    }, \n    \"y\": {\n      \"field\": \"weights\", \n      \"type\": \"quantitative\"\n    }\n  }, \n  \"height\": 200, \n  \"mark\": \"bar\", \n  \"width\": 200\n}"
+    }, 
+    {
+      "value_list": [
+        {
+          "string_template": {
+            "params": {
+              "value": "22.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "21.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "30.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "18.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "36.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "24.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "26.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "27.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "28.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "19.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "20.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "23.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "25.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "32.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "45.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "29.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "31.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "33.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "35.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "39.0"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }
+      ], 
+      "header": {
+        "tooltip": {
+          "content": "expect_column_values_to_be_in_set"
+        }, 
+        "template": "Example Values"
+      }, 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "value_list"
+    }
+  ]
+}

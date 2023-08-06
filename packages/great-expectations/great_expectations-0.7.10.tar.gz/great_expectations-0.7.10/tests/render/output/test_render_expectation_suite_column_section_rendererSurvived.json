@@ -1,0 +1,178 @@
+{
+  "section_name": "Survived", 
+  "content_blocks": [
+    {
+      "header": "Survived", 
+      "styling": {
+        "header": {
+          "classes": [
+            "alert", 
+            "alert-secondary"
+          ]
+        }, 
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "header"
+    }, 
+    {
+      "bullet_list": [
+        {
+          "string_template": {
+            "params": {
+              "mostly": null, 
+              "column": "Survived", 
+              "v__5": "int", 
+              "v__0": "BIGINT", 
+              "v__1": "INTEGER", 
+              "v__2": "IntegerType", 
+              "v__3": "LongType", 
+              "v__4": "SMALLINT", 
+              "type_list": [
+                "BIGINT", 
+                "INTEGER", 
+                "IntegerType", 
+                "LongType", 
+                "SMALLINT", 
+                "int"
+              ]
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "value types must belong to this set: $v__0 $v__1 $v__2 $v__3 $v__4 $v__5."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Survived", 
+              "max_value": null, 
+              "min_value": null, 
+              "mostly": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "may have any number of unique values."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Survived", 
+              "max_value": null, 
+              "min_value": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "may have any percentage of unique values."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Survived", 
+              "mostly_pct": "50.0", 
+              "mostly": 0.5
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "values must not be null, at least $mostly_pct % of the time."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "Survived", 
+              "value_set": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "distinct values must belong to a set, but that set is not specified."
+          }, 
+          "content_block_type": "string_template"
+        }
+      ], 
+      "styling": {
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "bullet_list"
+    }
+  ]
+}

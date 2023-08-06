@@ -1,0 +1,3071 @@
+{
+  "data_asset_name": null, 
+  "page_title": "2019-09-18T201035.118325Z-default-ProfilingResults", 
+  "full_data_asset_identifier": "", 
+  "utm_medium": "profiling-results-page", 
+  "sections": [
+    {
+      "section_name": "Overview", 
+      "content_blocks": [
+        {
+          "header": "Overview", 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "header": "Dataset info", 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "classes": [
+                "table", 
+                "table-sm"
+              ]
+            }, 
+            "classes": [
+              "col-6"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "table": [
+            [
+              "Number of variables", 
+              7
+            ], 
+            [
+              {
+                "string_template": {
+                  "params": {
+                    "tooltip_text": "Number of observations"
+                  }, 
+                  "tooltip": {
+                    "content": "expect_table_row_count_to_be_between"
+                  }, 
+                  "template": "Number of observations"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              1313
+            ], 
+            [
+              "Missing cells", 
+              "6.06%"
+            ]
+          ]
+        }, 
+        {
+          "header": "Variable types", 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "classes": [
+                "table", 
+                "table-sm"
+              ]
+            }, 
+            "classes": [
+              "col-6", 
+              "table-responsive"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "table": [
+            [
+              "int", 
+              "3"
+            ], 
+            [
+              "float", 
+              "1"
+            ], 
+            [
+              "string", 
+              "3"
+            ], 
+            [
+              "unknown", 
+              "0"
+            ]
+          ]
+        }, 
+        {
+          "bullet_list": [
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 7, 
+                  "expectation_type": "expect_column_proportion_of_unique_values_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 7, 
+                  "expectation_type": "expect_column_unique_value_count_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 7, 
+                  "expectation_type": "expect_column_values_to_be_in_set"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 7, 
+                  "expectation_type": "expect_column_values_to_be_in_type_list"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 7, 
+                  "expectation_type": "expect_column_values_to_not_be_null"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 4, 
+                  "expectation_type": "expect_column_distinct_values_to_be_in_set"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 3, 
+                  "expectation_type": "expect_column_values_to_not_match_regex"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_values_to_be_unique"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_table_row_count_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_quantile_values_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_kl_divergence_to_be_less_than"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_median_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_table_columns_to_match_ordered_list"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_max_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_mean_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "expectation_count": 1, 
+                  "expectation_type": "expect_column_min_to_be_between"
+                }, 
+                "styling": {
+                  "classes": [
+                    "list-group-item", 
+                    "d-flex", 
+                    "justify-content-between", 
+                    "align-items-center"
+                  ], 
+                  "params": {
+                    "expectation_count": {
+                      "classes": [
+                        "badge", 
+                        "badge-secondary", 
+                        "badge-pill"
+                      ]
+                    }
+                  }
+                }, 
+                "template": "$expectation_type $expectation_count"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": "Expectation types <span class=\"mr-3 triangle\"></span>", 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "header": {
+              "styles": {
+                "cursor": "pointer"
+              }, 
+              "attributes": {
+                "aria-controls": "collapseExample", 
+                "data-toggle": "collapse", 
+                "href": "#{{content_block_id}}-body", 
+                "aria-expanded": "true"
+              }, 
+              "classes": [
+                "collapsed"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ], 
+            "body": {
+              "classes": [
+                "list-group", 
+                "collapse"
+              ]
+            }
+          }, 
+          "content_block_type": "bullet_list"
+        }
+      ]
+    }, 
+    {
+      "section_name": "Unnamed: 0", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: int"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "Unnamed: 0"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              1313
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "100.0%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.0%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "1"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "2"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "3"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "4"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "5"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "6"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "7"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "8"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "9"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "10"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "11"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "12"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "13"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "14"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "15"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "16"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "17"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "18"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "19"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "20"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }
+      ]
+    }, 
+    {
+      "section_name": "Name", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: string"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "Name"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              1310
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "99.8%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.0%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "Carlsson, Mr Frans Olof"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Connolly, Miss Kate"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Kelly, Mr James"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Allen, Miss Elisabeth Walton"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Allison, Master Hudson Trevor"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Allison, Miss Helen Loraine"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Allison, Mr Hudson Joshua Creighton"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Allison, Mrs Hudson JC (Bessie Waldo Daniels)"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Anderson, Mr Harry"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Andrews, Miss Kornelia Theodosia"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Andrews, Mr Thomas, jr"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Appleton, Mrs Edward Dale (Charlotte Lamson)"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Artagaveytia, Mr Ramon"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Astor, Colonel John Jacob"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Astor, Mrs John Jacob (Madeleine Talmadge Force)"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Aubert, Mrs Leontine Pauline"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Barkworth, Mr Algernon H"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Baumann, Mr John D"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Baxter, Mr Quigg Edmond"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "Baxter, Mrs James (Helene DeLaudeniere Chaput)"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }
+      ]
+    }, 
+    {
+      "section_name": "PClass", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: string"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "PClass"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              4
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.3%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.0%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "3rd"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "1st"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "2nd"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "*"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }, 
+        {
+          "header": {
+            "tooltip": {
+              "content": "expect_column_distinct_values_to_be_in_set"
+            }, 
+            "template": "Value Counts"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "graph", 
+          "graph": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v3.3.0.json\", \n  \"autosize\": \"fit\", \n  \"config\": {\n    \"mark\": {\n      \"tooltip\": null\n    }, \n    \"view\": {\n      \"height\": 300, \n      \"width\": 400\n    }\n  }, \n  \"data\": {\n    \"name\": \"data-291df9be3b14fbee9cb1f91eb58e4499\"\n  }, \n  \"datasets\": {\n    \"data-291df9be3b14fbee9cb1f91eb58e4499\": [\n      {\n        \"count\": 1, \n        \"value\": \"*\"\n      }, \n      {\n        \"count\": 322, \n        \"value\": \"1st\"\n      }, \n      {\n        \"count\": 279, \n        \"value\": \"2nd\"\n      }, \n      {\n        \"count\": 711, \n        \"value\": \"3rd\"\n      }\n    ]\n  }, \n  \"encoding\": {\n    \"x\": {\n      \"field\": \"value\", \n      \"type\": \"ordinal\"\n    }, \n    \"y\": {\n      \"field\": \"count\", \n      \"type\": \"quantitative\"\n    }\n  }, \n  \"height\": 200, \n  \"mark\": {\n    \"size\": 20, \n    \"type\": \"bar\"\n  }, \n  \"width\": 200\n}"
+        }
+      ]
+    }, 
+    {
+      "section_name": "Age", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: float"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "Age"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              75
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "9.9%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              557
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "42.4%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "header": "Quantiles", 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_quantile_values_to_be_between"
+                  }, 
+                  "template": "0.05"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              6.0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_quantile_values_to_be_between"
+                  }, 
+                  "template": "Q1"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              21.0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_quantile_values_to_be_between \n expect_column_median_to_be_between"
+                  }, 
+                  "template": "Median"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              28.0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_quantile_values_to_be_between"
+                  }, 
+                  "template": "Q3"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              39.0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_quantile_values_to_be_between"
+                  }, 
+                  "template": "0.95"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              57.0
+            ]
+          ]
+        }, 
+        {
+          "header": "Statistics", 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_mean_to_be_between"
+                  }, 
+                  "template": "Mean"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "30.40"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_min_to_be_between"
+                  }, 
+                  "template": "Minimum"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.17"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_max_to_be_between"
+                  }, 
+                  "template": "Maximum"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "71.00"
+            ]
+          ]
+        }, 
+        {
+          "header": {
+            "tooltip": {
+              "content": "expect_column_kl_divergence_to_be_less_than"
+            }, 
+            "template": "Histogram"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "graph", 
+          "graph": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v3.3.0.json\", \n  \"autosize\": \"fit\", \n  \"config\": {\n    \"mark\": {\n      \"tooltip\": null\n    }, \n    \"view\": {\n      \"height\": 300, \n      \"width\": 400\n    }\n  }, \n  \"data\": {\n    \"name\": \"data-1fcf1567afb37cdfbc33738daa010e8f\"\n  }, \n  \"datasets\": {\n    \"data-1fcf1567afb37cdfbc33738daa010e8f\": [\n      {\n        \"bin_max\": 8.0, \n        \"bin_min\": 0.2, \n        \"weights\": 6.084656084656085\n      }, \n      {\n        \"bin_max\": 15.9, \n        \"bin_min\": 8.0, \n        \"weights\": 3.571428571428571\n      }, \n      {\n        \"bin_max\": 23.8, \n        \"bin_min\": 15.9, \n        \"weights\": 24.867724867724867\n      }, \n      {\n        \"bin_max\": 31.7, \n        \"bin_min\": 23.8, \n        \"weights\": 24.47089947089947\n      }, \n      {\n        \"bin_max\": 39.5, \n        \"bin_min\": 31.7, \n        \"weights\": 16.26984126984127\n      }, \n      {\n        \"bin_max\": 47.4, \n        \"bin_min\": 39.5, \n        \"weights\": 11.11111111111111\n      }, \n      {\n        \"bin_max\": 55.3, \n        \"bin_min\": 47.4, \n        \"weights\": 7.804232804232804\n      }, \n      {\n        \"bin_max\": 63.1, \n        \"bin_min\": 55.3, \n        \"weights\": 3.968253968253968\n      }, \n      {\n        \"bin_max\": 71.0, \n        \"bin_min\": 63.1, \n        \"weights\": 1.8518518518518516\n      }\n    ]\n  }, \n  \"encoding\": {\n    \"x\": {\n      \"field\": \"bin_min\", \n      \"type\": \"ordinal\"\n    }, \n    \"x2\": {\n      \"field\": \"bin_max\"\n    }, \n    \"y\": {\n      \"field\": \"weights\", \n      \"type\": \"quantitative\"\n    }\n  }, \n  \"height\": 200, \n  \"mark\": \"bar\", \n  \"width\": 200\n}"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "22.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "21.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "30.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "18.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "36.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "24.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "26.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "27.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "28.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "19.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "20.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "23.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "25.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "32.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "45.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "29.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "31.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "33.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "35.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "39.0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }
+      ]
+    }, 
+    {
+      "section_name": "Sex", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: string"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "Sex"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              2
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.2%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.0%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "male"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "female"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }, 
+        {
+          "header": {
+            "tooltip": {
+              "content": "expect_column_distinct_values_to_be_in_set"
+            }, 
+            "template": "Value Counts"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "graph", 
+          "graph": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v3.3.0.json\", \n  \"autosize\": \"fit\", \n  \"config\": {\n    \"mark\": {\n      \"tooltip\": null\n    }, \n    \"view\": {\n      \"height\": 300, \n      \"width\": 400\n    }\n  }, \n  \"data\": {\n    \"name\": \"data-45d63c35cf141cfb27d06ce421c0fd3c\"\n  }, \n  \"datasets\": {\n    \"data-45d63c35cf141cfb27d06ce421c0fd3c\": [\n      {\n        \"count\": 462, \n        \"value\": \"female\"\n      }, \n      {\n        \"count\": 851, \n        \"value\": \"male\"\n      }\n    ]\n  }, \n  \"encoding\": {\n    \"x\": {\n      \"field\": \"value\", \n      \"type\": \"ordinal\"\n    }, \n    \"y\": {\n      \"field\": \"count\", \n      \"type\": \"quantitative\"\n    }\n  }, \n  \"height\": 200, \n  \"mark\": {\n    \"size\": 20, \n    \"type\": \"bar\"\n  }, \n  \"width\": 200\n}"
+        }
+      ]
+    }, 
+    {
+      "section_name": "Survived", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: int"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "Survived"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              2
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.2%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.0%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "1"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }, 
+        {
+          "header": {
+            "tooltip": {
+              "content": "expect_column_distinct_values_to_be_in_set"
+            }, 
+            "template": "Value Counts"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "graph", 
+          "graph": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v3.3.0.json\", \n  \"autosize\": \"fit\", \n  \"config\": {\n    \"mark\": {\n      \"tooltip\": null\n    }, \n    \"view\": {\n      \"height\": 300, \n      \"width\": 400\n    }\n  }, \n  \"data\": {\n    \"name\": \"data-9d14843c4c44622247aa86903b7aa379\"\n  }, \n  \"datasets\": {\n    \"data-9d14843c4c44622247aa86903b7aa379\": [\n      {\n        \"count\": 863, \n        \"value\": 0\n      }, \n      {\n        \"count\": 450, \n        \"value\": 1\n      }\n    ]\n  }, \n  \"encoding\": {\n    \"x\": {\n      \"field\": \"value\", \n      \"type\": \"ordinal\"\n    }, \n    \"y\": {\n      \"field\": \"count\", \n      \"type\": \"quantitative\"\n    }\n  }, \n  \"height\": 200, \n  \"mark\": {\n    \"size\": 20, \n    \"type\": \"bar\"\n  }, \n  \"width\": 200\n}"
+        }
+      ]
+    }, 
+    {
+      "section_name": "SexCode", 
+      "content_blocks": [
+        {
+          "subheader": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+            }, 
+            "template": "Type: int"
+          }, 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_to_exist", 
+              "placement": "top"
+            }, 
+            "template": "SexCode"
+          }, 
+          "styling": {
+            "header": {
+              "classes": [
+                "alert", 
+                "alert-secondary"
+              ]
+            }, 
+            "classes": [
+              "col-12"
+            ]
+          }, 
+          "content_block_type": "header"
+        }, 
+        {
+          "table": [
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_unique_value_count_to_be_between"
+                  }, 
+                  "template": "Distinct (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              2
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_proportion_of_unique_values_to_be_between"
+                  }, 
+                  "template": "Distinct (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.2%"
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (n)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              0
+            ], 
+            [
+              {
+                "string_template": {
+                  "tooltip": {
+                    "content": "expect_column_values_to_not_be_null"
+                  }, 
+                  "template": "Missing (%)"
+                }, 
+                "content_block_type": "string_template"
+              }, 
+              "0.0%"
+            ]
+          ], 
+          "header_row": [], 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "body": {
+              "styles": {
+                "width": "100%"
+              }, 
+              "classes": [
+                "table", 
+                "table-sm", 
+                "table-unbordered"
+              ]
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "table", 
+          "header": "Properties"
+        }, 
+        {
+          "value_list": [
+            {
+              "string_template": {
+                "params": {
+                  "value": "0"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }, 
+            {
+              "string_template": {
+                "params": {
+                  "value": "1"
+                }, 
+                "styling": {
+                  "default": {
+                    "styles": {
+                      "word-break": "break-all"
+                    }, 
+                    "classes": [
+                      "badge", 
+                      "badge-info"
+                    ]
+                  }
+                }, 
+                "template": "$value"
+              }, 
+              "content_block_type": "string_template"
+            }
+          ], 
+          "header": {
+            "tooltip": {
+              "content": "expect_column_values_to_be_in_set"
+            }, 
+            "template": "Example Values"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "value_list"
+        }, 
+        {
+          "header": {
+            "tooltip": {
+              "content": "expect_column_distinct_values_to_be_in_set"
+            }, 
+            "template": "Value Counts"
+          }, 
+          "styling": {
+            "styles": {
+              "margin-top": "20px"
+            }, 
+            "classes": [
+              "col-4"
+            ]
+          }, 
+          "content_block_type": "graph", 
+          "graph": "{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v3.3.0.json\", \n  \"autosize\": \"fit\", \n  \"config\": {\n    \"mark\": {\n      \"tooltip\": null\n    }, \n    \"view\": {\n      \"height\": 300, \n      \"width\": 400\n    }\n  }, \n  \"data\": {\n    \"name\": \"data-150682aca135c7574dc44505db9fdb5e\"\n  }, \n  \"datasets\": {\n    \"data-150682aca135c7574dc44505db9fdb5e\": [\n      {\n        \"count\": 851, \n        \"value\": 0\n      }, \n      {\n        \"count\": 462, \n        \"value\": 1\n      }\n    ]\n  }, \n  \"encoding\": {\n    \"x\": {\n      \"field\": \"value\", \n      \"type\": \"ordinal\"\n    }, \n    \"y\": {\n      \"field\": \"count\", \n      \"type\": \"quantitative\"\n    }\n  }, \n  \"height\": 200, \n  \"mark\": {\n    \"size\": 20, \n    \"type\": \"bar\"\n  }, \n  \"width\": 200\n}"
+        }
+      ]
+    }
+  ], 
+  "renderer_type": "ProfilingResultsPageRenderer"
+}

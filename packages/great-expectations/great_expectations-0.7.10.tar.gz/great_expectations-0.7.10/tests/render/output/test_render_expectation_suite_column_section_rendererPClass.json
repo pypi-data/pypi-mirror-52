@@ -1,0 +1,205 @@
+{
+  "section_name": "PClass", 
+  "content_blocks": [
+    {
+      "header": "PClass", 
+      "styling": {
+        "header": {
+          "classes": [
+            "alert", 
+            "alert-secondary"
+          ]
+        }, 
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "header"
+    }, 
+    {
+      "bullet_list": [
+        {
+          "string_template": {
+            "params": {
+              "mostly": null, 
+              "column": "PClass", 
+              "v__5": "string", 
+              "v__0": "CHAR", 
+              "v__1": "StringType", 
+              "v__2": "TEXT", 
+              "v__3": "VARCHAR", 
+              "v__4": "str", 
+              "type_list": [
+                "CHAR", 
+                "StringType", 
+                "TEXT", 
+                "VARCHAR", 
+                "str", 
+                "string"
+              ]
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "value types must belong to this set: $v__0 $v__1 $v__2 $v__3 $v__4 $v__5."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "PClass", 
+              "max_value": null, 
+              "min_value": null, 
+              "mostly": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "may have any number of unique values."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "PClass", 
+              "max_value": null, 
+              "min_value": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "may have any percentage of unique values."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "PClass", 
+              "mostly_pct": "50.0", 
+              "mostly": 0.5
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "values must not be null, at least $mostly_pct % of the time."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "PClass", 
+              "regex": "^\\s+|\\s+$", 
+              "mostly": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "values must not match this regular expression: $regex."
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "column": "PClass", 
+              "value_set": null
+            }, 
+            "styling": {
+              "default": {
+                "classes": [
+                  "badge", 
+                  "badge-secondary"
+                ]
+              }, 
+              "params": {
+                "column": {
+                  "classes": [
+                    "badge", 
+                    "badge-primary"
+                  ]
+                }
+              }
+            }, 
+            "template": "distinct values must belong to a set, but that set is not specified."
+          }, 
+          "content_block_type": "string_template"
+        }
+      ], 
+      "styling": {
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "bullet_list"
+    }
+  ]
+}

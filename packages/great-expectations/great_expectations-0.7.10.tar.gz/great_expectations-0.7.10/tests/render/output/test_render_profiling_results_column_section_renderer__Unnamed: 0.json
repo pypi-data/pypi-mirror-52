@@ -1,0 +1,524 @@
+{
+  "section_name": "Unnamed: 0", 
+  "content_blocks": [
+    {
+      "subheader": {
+        "tooltip": {
+          "content": "expect_column_values_to_be_of_type <br>expect_column_values_to_be_in_type_list"
+        }, 
+        "template": "Type: None"
+      }, 
+      "header": {
+        "tooltip": {
+          "content": "expect_column_to_exist", 
+          "placement": "top"
+        }, 
+        "template": "Unnamed: 0"
+      }, 
+      "styling": {
+        "header": {
+          "classes": [
+            "alert", 
+            "alert-secondary"
+          ]
+        }, 
+        "classes": [
+          "col-12"
+        ]
+      }, 
+      "content_block_type": "header"
+    }, 
+    {
+      "table": [
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_unique_value_count_to_be_between"
+              }, 
+              "template": "Distinct (n)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          1313
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_proportion_of_unique_values_to_be_between"
+              }, 
+              "template": "Distinct (%)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "100.0%"
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_values_to_not_be_null"
+              }, 
+              "template": "Missing (n)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          0
+        ], 
+        [
+          {
+            "string_template": {
+              "tooltip": {
+                "content": "expect_column_values_to_not_be_null"
+              }, 
+              "template": "Missing (%)"
+            }, 
+            "content_block_type": "string_template"
+          }, 
+          "0.0%"
+        ]
+      ], 
+      "header_row": [], 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "body": {
+          "styles": {
+            "width": "100%"
+          }, 
+          "classes": [
+            "table", 
+            "table-sm", 
+            "table-unbordered"
+          ]
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "table", 
+      "header": "Properties"
+    }, 
+    {
+      "value_list": [
+        {
+          "string_template": {
+            "params": {
+              "value": "1"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "2"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "3"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "4"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "5"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "6"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "7"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "8"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "9"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "10"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "11"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "12"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "13"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "14"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "15"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "16"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "17"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "18"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "19"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }, 
+        {
+          "string_template": {
+            "params": {
+              "value": "20"
+            }, 
+            "styling": {
+              "default": {
+                "styles": {
+                  "word-break": "break-all"
+                }, 
+                "classes": [
+                  "badge", 
+                  "badge-info"
+                ]
+              }
+            }, 
+            "template": "$value"
+          }, 
+          "content_block_type": "string_template"
+        }
+      ], 
+      "header": {
+        "tooltip": {
+          "content": "expect_column_values_to_be_in_set"
+        }, 
+        "template": "Example Values"
+      }, 
+      "styling": {
+        "styles": {
+          "margin-top": "20px"
+        }, 
+        "classes": [
+          "col-4"
+        ]
+      }, 
+      "content_block_type": "value_list"
+    }
+  ]
+}
