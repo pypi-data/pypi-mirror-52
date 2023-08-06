@@ -1,0 +1,3 @@
+[console_scripts]
+watcard = fund_my_watcard.main:main
+
