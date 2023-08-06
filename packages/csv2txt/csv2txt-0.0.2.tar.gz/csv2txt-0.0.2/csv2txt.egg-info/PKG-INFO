@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: csv2txt
+Version: 0.0.2
+Summary: Convert a csv file to token separator txt file(把csv文件转换为分隔符分隔的文本文件，支持跨行单元格哦)
+Home-page: https://github.com/gyk001/csv2txt
+Author: gyk001
+Author-email: gyk001@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/gyk001/csv2txt
+Project-URL: Documentation, https://github.com/gyk001/csv2txt
+Project-URL: Tracker, https://github.com/gyk001/csv2txt/issues
+Description: # CSV to TXT 
+        
+        [![PyPI](https://img.shields.io/pypi/v/csv2txt?color=blue&style=flat-square)](https://pypi.org/project/csv2txt/)
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/csv2txt?style=flat-square)
+        ![PyPI - Downloads](https://img.shields.io/pypi/dm/csv2txt?style=flat-square)
+        [![GitHub](https://img.shields.io/github/license/gyk001/csv2txt?style=flat-square)](https://github.com/gyk001/csv2txt)
+        
+        A python util package for convert a csv file to token separator txt file.
+        
+        * HomePage: https://pypi.org/project/csv2txt/
+        * SourceCode: https://github.com/gyk001/csv2txt
+        
+        # Usage
+        
+        ## In command line
+        
+        Just install the package by pip, then enjoy it!
+        
+        ```bash
+        pip install csv2txt
+        csv2txt input.csv out.txt
+        ```
+        
+        ## In source code 
+        
+        ```python
+        import csv2txt
+        
+        # for File Path
+        csv2txt.convertByPath(csvFilePathString, txtFilePathString, '\t');
+        
+        # for File Object
+        csv2txt.convertByFile(csvFile, txtFile, '\t');
+        ```
+        
+        
+        
+Keywords: csv txt convert
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
