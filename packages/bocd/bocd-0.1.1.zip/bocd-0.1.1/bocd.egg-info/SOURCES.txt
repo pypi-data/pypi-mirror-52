@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+./bocd/__init__.py
+./bocd/bocd.py
+./bocd/distribution.py
+./bocd/hazard.py
+./tests/__init__.py
+./tests/test_distribution.py
+./tests/test_hazard.py
+bocd.egg-info/PKG-INFO
+bocd.egg-info/SOURCES.txt
+bocd.egg-info/dependency_links.txt
+bocd.egg-info/requires.txt
+bocd.egg-info/top_level.txt
