@@ -1,0 +1,75 @@
+Metadata-Version: 1.1
+Name: mopac_step
+Version: 0.6
+Summary: mopac_step
+Home-page: https://github.com/molssi-seam/mopac_step
+Author: Paul Saxe
+Author-email: psaxe@molssi.org
+License: BSD-3-Clause
+Description: ==========
+        MOPAC step
+        ==========
+        
+        
+        .. image:: https://img.shields.io/travis/molssi-seamm/mopac_step.svg
+                :target: https://travis-ci.org/molssi-seamm/mopac_step
+        
+        .. image:: https://pyup.io/repos/github/molssi-seamm/mopac_step/shield.svg
+             :target: https://pyup.io/repos/github/molssi-seamm/mopac_step/
+             :alt: Updates
+        
+        .. image:: https://codecov.io/gh/molssi-seamm/mopac_step/branch/master/graph/badge.svg
+          :target: https://codecov.io/gh/molssi-seamm/mopac_step
+        
+        .. image:: https://readthedocs.org/projects/mopac-step/badge/?version=latest
+                :target: https://mopac-step.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        .. image:: https://img.shields.io/pypi/v/mopac_step.svg
+                :target: https://pypi.python.org/pypi/mopac_step
+        
+        
+        A step for a SEAMM flowchart for handling the semiempirical quantum code MOPAC
+        
+        
+        * Free software: BSD license
+        * Documentation: https://mopac-step.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        ---------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-01-20)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: mopac_step
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
