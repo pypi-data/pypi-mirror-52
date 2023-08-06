@@ -1,0 +1,5 @@
+pexpect<5,>=4
+appdirs>=1.4.3<2
+pyte==0.8.0
+tqdm<5,>=4
+pygments<3,>=2
