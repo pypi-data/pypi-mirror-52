@@ -1,0 +1,9 @@
+setup.py
+tonyfast.egg-info/PKG-INFO
+tonyfast.egg-info/SOURCES.txt
+tonyfast.egg-info/dependency_links.txt
+tonyfast.egg-info/entry_points.txt
+tonyfast.egg-info/requires.txt
+tonyfast.egg-info/top_level.txt
+wypes/__init__.py
+wypes/namespaces.py
