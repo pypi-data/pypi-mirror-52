@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: postmodernize
+Version: 0.0.1
+Summary: A hack on top of 2to3 for converting straddling (2 and 3) Python code to pure Python 3. Just squatting on the name for now...
+Home-page: https://github.com/msullivan/postmodernize
+Author: Michael J. Sullivan
+Author-email: sully@msully.net
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
