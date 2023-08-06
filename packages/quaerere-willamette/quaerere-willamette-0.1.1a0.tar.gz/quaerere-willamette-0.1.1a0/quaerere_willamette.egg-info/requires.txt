@@ -1,0 +1,8 @@
+Flask>=1.0.0
+Flask-arango-orm>=0.1.1
+Flask-Classful>=0.14.2
+flask-marshmallow>=0.10.0
+marshmallow<3,>=2.16.0
+python-arango<5,>=4.4
+quaerere-base-flask>=0.3.0
+quaerere-willamette-common>=0.2.0
