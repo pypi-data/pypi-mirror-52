@@ -1,0 +1,107 @@
+---
+- name: Collect facts
+  hosts: all
+  become: true
+  gather_facts: smart
+  tasks:
+    - debug: msg="Fetching facts from cluster instances"
+      tags: [print_action]
+    - setup:
+
+- name: Create groups
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - debug: msg="Calculate"
+      tags: [print_action]
+    - name: "Add boot node to group bcboot"
+      tags:
+        - always
+      add_host:
+        name: "{{ item }}"
+        groups: bcboot
+        inventory_dir: "{{ hostvars[item].inventory_dir }}"
+      loop: "{{ groups['all'] }}"
+      when: '"boot" in hostvars[item]["ansible_hostname"]'
+      changed_when: false
+    - name: "Add all nodes to group bcpeers"
+      tags:
+        - always
+      add_host:
+        name: "{{ item }}"
+        groups: bcpeers
+        inventory_dir: "{{ hostvars[item].inventory_dir }}"
+      loop: "{{ groups['all'] }}"
+      when: '"prod" in hostvars[item]["ansible_hostname"] or "boot" in hostvars[item]["ansible_hostname"]'
+      changed_when: false
+    - name: "Add monitnoring nodes to group monitoring_peer"
+      tags:
+        - always
+      register: _create_group_monitoring
+      add_host:
+        name: "{{ item }}"
+        groups: monitoring_peer
+        inventory_dir: "{{ hostvars[item].inventory_dir }}"
+      loop: "{{ groups['all'] }}"
+      when: '"monitoring" in hostvars[item]["ansible_hostname"]'
+      changed_when: false
+    - name: "Add all nodes to group allnodes"
+      tags:
+        - always
+      add_host:
+        name: "{{ item }}"
+        groups: allnodes
+        inventory_dir: "{{ hostvars[item].inventory_dir }}"
+      loop: "{{ groups['all'] }}"
+      when: '"prod" in hostvars[item]["ansible_hostname"] or "boot" in hostvars[item]["ansible_hostname"] or "full" in hostvars[item]["ansible_hostname"]'
+      changed_when: false
+
+- name: "Updating packages on instances"
+  hosts: all
+  become: true
+  gather_facts: smart
+  tasks:
+    - name: "Updating apt-get before installing packages"
+      apt:
+        cache_valid_time: 8640
+      changed_when: false
+
+- name: "Install Docker and requirement packages"
+  hosts: all
+  # strategy: mitogen_free
+  become: true
+  gather_facts: smart
+  roles:
+    - role: tank.docker
+  tasks:
+    - name: "Install python packages"
+      apt:
+        name: python3-pip
+    - debug: msg="Docker Engine installed"
+      tags: [print_action]
+
+- import_playbook: "{{ blockchain_ansible_playbook }}"
+
+- name: Converge monitoring node
+  hosts: "*monitoring*"
+  # strategy: mitogen_free
+  become: true
+  gather_facts: smart
+  vars:
+    bc_polkadot_comp_state_monitoring: present
+    install_promstack: true
+    admin_user: "{{ monitoring_user_login }}"
+    admin_password: "{{ monitoring_user_password }}"
+    grafana_http_port: 80
+  roles:
+    - role: tank.blockchain
+
+- name: Create cluster report
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: "Generate report"
+      template:
+        src: templates/ansible-report.json.j2
+        dest: "{{ _cluster_ansible_report }}"
+      run_once: true

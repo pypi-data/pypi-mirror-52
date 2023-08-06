@@ -1,0 +1,10 @@
+cement==3.0.4
+ansible>=2.8.0
+jinja2
+pyyaml
+colorlog
+sh==1.12.13
+jsonschema==3.0.1
+filelock
+tabulate==0.8.3
+namesgenerator==0.3
