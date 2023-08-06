@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: sundry
+Version: 0.11.2
+Summary: miscellaneous code
+Home-page: https://github.com/jamesabel/sundry
+Author: James Abel
+Author-email: j@abel.co
+License: MIT License
+Download-URL: https://github.com/jamesabel/sundry/archive/master.zip
+Keywords: utility
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Requires-Dist: python-dateutil
+Requires-Dist: pillow
+
+
+Sundry
+======
+
+Miscellaneous Code
+
+is_main()
+---------
+
+Instead of the not-so-pretty:
+
+.. code-block:: python
+
+    if __name__ == "__main__":
+        main()
+
+
+pip install `sundry` from PyPI:
+
+.. code-block:: shell
+
+    $pip install sundry
+
+And use ``is_main()`` from `sundry`:
+
+.. code-block:: python
+
+    from sundry import is_main
+
+    if is_main():
+        main()
+
+
+
