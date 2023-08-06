@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: lppypi
+Version: 0.0.1
+Summary: lppypi
+Home-page: https://github.com/vcancy/spider80s
+Author: liupeng
+Author-email: lp3799@163.com
+License: MIT
+Description: # pypi-demo
+        A sample demo project Packaging and distributing projects to Pypi
+        
+        Packaging
+        
+        ```
+        python setup.py sdist 
+        ```
+        
+        Testing
+        
+        ```
+        pip install dist/lppypi-0.0.1.tar.gz 
+        ```
+        
+        ```
+        demo
+        ```
+        
+        Distributing
+        
+        ```
+        pip install twine
+        
+        twine upload dist/lppypi-0.0.1.tar.gz 
+        ```
+        
+Keywords: lppypi
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
