@@ -1,0 +1,17 @@
+dialect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dialect/__main__.py,sha256=90VgT0y00NnaDkVCuCPWWpenZMnvjgsQ5e39oCAFYSE,555
+dialect/context.py,sha256=NtL8cbe4nCJu4rQ9t-uWvfxAJxJ8b04mg6mizVCa9ok,1048
+dialect/engine.py,sha256=hty07x8_NDdDThGUFw-iIIa7kAzpsr1Or7ZU5I39uQ4,7020
+dialect/lex.py,sha256=tyXwcrCNMsqvXEpqI-Vh5URu4NZRDAQnpJcXm5n3KKI,2196
+dialect/macro.py,sha256=CDAJTM4CmN_VtLfVaE42tgAKFBZDEJc9dLAwQtdycKs,2149
+dialect/main.py,sha256=g7N5xzGU8hQ2zHdzodNSPNMiH3PydOfZtGvfrEFJ0vI,552
+dialect/parse.py,sha256=o23IwO9C6uN7Qa0rdulSQdmNAO6xYS0Zy4UEwD9IiYI,7633
+dialect/parsetab.py,sha256=JqlHrnTndtweFYGTkxkZaHp5lnydt6eptB2HjJUUfX4,25433
+dialect/stdlib.py,sha256=hXxC1wJ9kNY9sjxOGLlu61nVw4grqfuFt-b5d39LQTw,3236
+dialect/util.py,sha256=TebbMTzx2_NrtRRrOvvbxEKKnTFkMilNHIGScGkkrrc,396
+dialect-0.1.8.dist-info/LICENSE,sha256=RB-1WsXX4GnOrb8RsoX8_f2w4R5iTK7UmmpyjdV0JVo,1063
+dialect-0.1.8.dist-info/METADATA,sha256=3nRM2R-C24Gqtnv8sr34pscsLX_mr2h-w9yFjWnJl8E,252
+dialect-0.1.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dialect-0.1.8.dist-info/entry_points.txt,sha256=nalIgD54q_7kX3UsIzXdQ2TXb23VTTTuJGZkKuM7_14,42
+dialect-0.1.8.dist-info/top_level.txt,sha256=gzPg2hA80YZfCcbm9t0njNJNQ3KRmKozUjj0y7TMkmM,8
+dialect-0.1.8.dist-info/RECORD,,
