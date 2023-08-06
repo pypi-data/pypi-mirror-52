@@ -1,0 +1,14 @@
+AUTHORS.rst
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_saml2_auth_metadata_inline/__init__.py
+django_saml2_auth_metadata_inline/apps.py
+django_saml2_auth_metadata_inline/plugin.py
+django_saml2_auth_metadata_inline.egg-info/PKG-INFO
+django_saml2_auth_metadata_inline.egg-info/SOURCES.txt
+django_saml2_auth_metadata_inline.egg-info/dependency_links.txt
+django_saml2_auth_metadata_inline.egg-info/requires.txt
+django_saml2_auth_metadata_inline.egg-info/top_level.txt
