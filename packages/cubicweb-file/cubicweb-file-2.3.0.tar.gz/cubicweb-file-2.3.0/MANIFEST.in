@@ -1,0 +1,16 @@
+include README
+include *.py
+include */*.py
+recursive-include cubicweb_file *.py
+recursive-include cubicweb_file/data *.gif *.png *.ico *.css *.js
+recursive-include cubicweb_file/i18n *.po
+recursive-include cubicweb_file/wdoc *
+recursive-include test/data bootstrap_cubes *.py
+include *.ini
+include *.txt
+recursive-include test *.gif
+recursive-include test *.jpg
+recursive-include test *.txt
+include cubicweb_file/data/icons/README
+prune *.spec
+prune debian

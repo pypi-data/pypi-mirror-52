@@ -1,0 +1,3 @@
+syntax: glob
+.tox
+cubicweb_file.egg-info
