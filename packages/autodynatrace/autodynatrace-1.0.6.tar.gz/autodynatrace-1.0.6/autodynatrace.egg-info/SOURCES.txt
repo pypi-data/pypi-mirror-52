@@ -1,0 +1,15 @@
+README.md
+setup.py
+autodynatrace/__init__.py
+autodynatrace/log.py
+autodynatrace/sdk.py
+autodynatrace.egg-info/PKG-INFO
+autodynatrace.egg-info/SOURCES.txt
+autodynatrace.egg-info/dependency_links.txt
+autodynatrace.egg-info/requires.txt
+autodynatrace.egg-info/top_level.txt
+autodynatrace/wrappers/custom.py
+autodynatrace/wrappers/flask.py
+autodynatrace/wrappers/pymongo.py
+autodynatrace/wrappers/sqlalchemy.py
+autodynatrace/wrappers/urllib3.py
