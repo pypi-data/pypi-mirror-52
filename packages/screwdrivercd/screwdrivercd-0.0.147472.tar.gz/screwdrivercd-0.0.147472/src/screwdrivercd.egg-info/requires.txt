@@ -1,0 +1,14 @@
+distro
+lxml
+mypy
+parsley
+pyroma
+requests
+setuptools>39.0.0
+termcolor
+toml
+
+[test]
+pytest
+pytest-cov
+pypirun
