@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: tom-nonsidereal-airmass
+Version: 0.1.0
+Summary: Tom Toolkit module to plot non-sidereal airmass
+Home-page: https://tomtoolkit.github.io
+Author: TOM Toolkit Project
+Author-email: jburke@lco.global
+License: UNKNOWN
+Description: # Nonsidereal Target Airmass TOM Module
+        
+        This module adds support to generate nonsidereal airmass plots
+        to the TOM Toolkit.
+        
+        ## Installation:
+        
+        Install the module into your TOM environment:
+        
+            cd ~/github
+            git clone https://github.com/jfrostburke/tom_nonsidereal_airmass
+            cd tom_nonsidereal_airmass
+            python setup.py build -f && python setup.py install -f
+        
+        In your TOM's `settings.py`, add this to `INSTALLED_APPS`:
+        
+            ...
+            'tom_nonsidereal_airmass',
+        
+        If you have already customized your `target_detail.html`
+        template you can skip ahead to "At the top of the file."
+        
+        `cd` into the `templates` directory in the main directory of
+        your project. Make a directory called `tom_targets` and `cd` into it.
+        
+        Now you need to find where pip installed the `tomtoolkit`
+        in the virtual environment you use for your TOM. If you don't remember
+        where that is, you can do
+        
+            pip show tomtoolkit
+        
+        and the `Location` will tell you where it is.
+        Copy the following file into your `templates/tom_targets` dir:
+        
+            {tomtoolkit location}/tom_targets/templates/tom_targets/target_detail.html
+        
+        At the top of the file (I put it after the first `{% load %}`),
+        paste the following line
+        
+            {% load nonsidereal_airmass_extras %}
+        
+        Then to actually display the plots, find the line that says
+        
+            {% elif target.type == 'NON_SIDEREAL' %}
+        
+        and delete the following statement about not being able to plot non-sidereal airmass.
+        Change it to
+        
+            {% nonsidereal_target_plan %}
+        
+Keywords: tomtoolkit,astronomy,astrophysics,cosmology,science,fits,observatory
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
