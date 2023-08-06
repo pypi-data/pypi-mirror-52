@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: my-vision-utils
+Version: 0.0.11
+Summary: A small example package
+Home-page: https://github.com/miltonbd/my_vision_utils
+Author: Md Ashraful Alam Milton
+Author-email: milton.2002@yahoo.com
+License: UNKNOWN
+Description: # my_vision_utils
+        Computer Vision Related utils inlcuding tensorflow 2, pytorch, opencv
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
