@@ -1,0 +1,3 @@
+[submodule "src/pyronn_layers/PYRO-NN-Layers"]
+	path = src/pyronn_layers/PYRO-NN-Layers
+	url = git@github.com:csyben/PYRO-NN-Layers.git
