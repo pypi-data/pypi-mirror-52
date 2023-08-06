@@ -1,0 +1,17 @@
+pyexiv2/__init__.py,sha256=WavNUayFJpHGoikunWC-4tj7bJ1_DMkLUaKJGFSmKDs,164
+pyexiv2/core.py,sha256=s0AtYvrc_QsP1zWznQ-R-ngoQrNxv1CY85eSNPFQRPU,6444
+pyexiv2/lib/README.md,sha256=LQZ5xUoln5BqOe5ef7OtiyLMBW0QJp4T-QzE66l2As8,2095
+pyexiv2/lib/api.cpp,sha256=LSZIBwJXaFeKbrwd8FwSoTzsaAuo6BvJs1XKj2NncyA,6393
+pyexiv2/lib/api.dll,sha256=DzSJ3z_QuNxFR7II4QiVyv3bc60aBsC14iYjGLnA_PA,56832
+pyexiv2/lib/api.so,sha256=vvBuf6y5YMO9H0pB4_9wgStCLRYWKySYFvpqcbUlJlk,77256
+pyexiv2/lib/exiv2.dll,sha256=Ba7XAOoVrvY4N2GSZIDA7nKNL8r92-lXN-hSSlmjPxA,2761216
+pyexiv2/lib/libexiv2.so,sha256=_OtzfVXltpPdrHaK42edV5NsztK6AC-n3bI_BL7KBwI,3525296
+pyexiv2/tests/1.jpg,sha256=mIAXz86Zs9OMeOMqz6CMi13uayu7Nf5ce6cw_QhU04g,17981
+pyexiv2/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyexiv2/tests/test_func.py,sha256=_K_7wwv4I77pYWInib5QOM3izWtW1ainvggHVWjz9DY,4256
+pyexiv2/tests/test_perf.py,sha256=5craQxk-FE54IJR0Hz1MmxISrMCSFhslGUqwXMmlhY4,2982
+pyexiv2-1.2.3.dist-info/LICENSE,sha256=UkEriS33Ho5tkzlsO9qXVBgQjZrrvxlFu7C1fYPgcYI,34801
+pyexiv2-1.2.3.dist-info/METADATA,sha256=uSu94bkX7k6EWFBzBnPBsKO994mZ1bSwBRK4eZxTOpw,2909
+pyexiv2-1.2.3.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+pyexiv2-1.2.3.dist-info/top_level.txt,sha256=HaLtNjoeNJpwp2LdljiW4rvUxlCy_zvbPve-1Xnl3Us,8
+pyexiv2-1.2.3.dist-info/RECORD,,
