@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+Celery_OpenTracing.egg-info/PKG-INFO
+Celery_OpenTracing.egg-info/SOURCES.txt
+Celery_OpenTracing.egg-info/dependency_links.txt
+Celery_OpenTracing.egg-info/requires.txt
+Celery_OpenTracing.egg-info/top_level.txt
+celery_opentracing/__init__.py
+celery_opentracing/tracing.py

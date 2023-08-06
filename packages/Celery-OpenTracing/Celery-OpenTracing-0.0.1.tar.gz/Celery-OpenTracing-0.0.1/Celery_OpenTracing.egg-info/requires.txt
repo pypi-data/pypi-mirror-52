@@ -1,0 +1,11 @@
+opentracing>=2.0
+six>=1.12.0
+
+[integration_tests]
+mock
+pytest
+docker
+
+[unit_tests]
+mock
+pytest
