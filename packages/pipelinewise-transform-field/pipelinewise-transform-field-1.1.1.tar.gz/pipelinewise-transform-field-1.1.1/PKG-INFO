@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: pipelinewise-transform-field
+Version: 1.1.1
+Summary: Singer.io simple field transformator between taps and targets - PipelineWise compatible
+Home-page: https://github.com/transferwise/pipelinewise-transform-field
+Author: TransferWise
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
