@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ts-eval
+Version: 0.0.1
+Summary: Time Series analysis and evaluation tools
+Home-page: https://github.com/vshulyak/ts-eval
+Author: Vladimir Shulyak
+Author-email: vladimir@shulyak.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: numpy (>=1.16.0)
+
+# ts-eval
+Time Series analysis and evaluation tools
+
+**WORK IN PROGRESS**
+
+# TODO:
+* tests for fourier
+* pretty api
+* more definsive style
+* black/isort
+* docstrings
+* poetry
+
+
