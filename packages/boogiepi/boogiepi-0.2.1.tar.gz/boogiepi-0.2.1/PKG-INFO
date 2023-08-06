@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: boogiepi
+Version: 0.2.1
+Summary: Sensor data processing and visualization
+Home-page: https://github.com/BoogieMobile/boogiepi
+Author: Chris Laprade
+Author-email: chris@boogiemobile.net
+License: A-GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
