@@ -1,0 +1,68 @@
+Metadata-Version: 1.1
+Name: chronogram
+Version: 0.1.7
+Summary: Chrono-gram, the diachronic word embedding model based on Word2vec Skip-gram with Chebyshev approximation
+Home-page: https://github.com/bab2min/chronogram
+Author: bab2min
+Author-email: bab2min@gmail.com
+License: MIT License
+Description: Chrono-gram
+        ===========
+        
+        .. image:: https://badge.fury.io/py/chronogram.svg
+            :target: https://pypi.python.org/pypi/chronogram
+        
+        Chrono-gram is a diachronic word embedding model based on
+        SGNS(word2vec Skip-gram with Negative Sampling) with Chebyshev approximation.
+        
+        Getting Started
+        ---------------
+        
+        1. Install using pip
+        
+        .. code::
+        
+            $ pip install chronogram
+        
+        C++11 or later requires a compilable compiler for installation on Linux or macOS.
+        
+        
+        2. Compile from sources
+        
+        Download this repository and run commands following:
+        
+        .. code::
+        
+            $ python setup.py build
+        
+        Eigen 3.0 or later(http://eigen.tuxfamily.org/index.php?title=Main_Page) is needed to compile.
+        
+        Python API
+        ----------
+        
+        Here is a brief sample code. https://github.com/bab2min/chronogram/blob/master/example.py
+        
+        
+        Demo
+        --------
+        Text Dating & Finding similar words using Chrono-gram
+        
+        https://lab.bab2min.pe.kr/chronogram
+        
+Keywords: NLP,Word2vec,Word Embedding
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C++
+Classifier: Operating System :: Microsoft :: Windows :: Windows Vista
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8.1
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX
