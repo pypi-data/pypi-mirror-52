@@ -1,0 +1,8 @@
+pyyaml
+sanic>=19.6.3
+websockets<8.0,>=7.0
+
+[with-router-features]
+janus
+ncclient
+paramiko
