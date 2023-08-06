@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: deep_orderbook
+Version: 0.1.0
+Summary: Transforms orders books in temporally and spatially local-correlated images
+Home-page: https://github.com/gQuantCoder/deep_orderbook
+Author: gQuantCoder
+Author-email: gquantcoder@gmail.com
+License: MIT
+Description: # deep_orderbook
+        orderbooks contain so much more organic informations than moving averages...
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
