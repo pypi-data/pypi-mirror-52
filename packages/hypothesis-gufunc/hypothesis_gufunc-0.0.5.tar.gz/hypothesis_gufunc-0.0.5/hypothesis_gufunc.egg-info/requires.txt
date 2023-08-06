@@ -1,0 +1,6 @@
+hypothesis>=4.13.0
+numpy>=1.16.1
+
+[xarray]
+hypothesis>=4.13.0
+xarray>=0.12.3
