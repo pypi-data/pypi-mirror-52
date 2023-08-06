@@ -1,0 +1,10 @@
+README.md
+setup.py
+rfid_reader/__init__.py
+rfid_reader/exceptions.py
+rfid_reader/reader.py
+uhf_rfid_reader_sdk.egg-info/PKG-INFO
+uhf_rfid_reader_sdk.egg-info/SOURCES.txt
+uhf_rfid_reader_sdk.egg-info/dependency_links.txt
+uhf_rfid_reader_sdk.egg-info/requires.txt
+uhf_rfid_reader_sdk.egg-info/top_level.txt
