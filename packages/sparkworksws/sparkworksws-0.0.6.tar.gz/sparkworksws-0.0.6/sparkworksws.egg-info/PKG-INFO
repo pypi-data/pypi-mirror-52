@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: sparkworksws
+Version: 0.0.6
+Summary: A client library for the sparkworks websocket api
+Home-page: https://www.sparkworks.net/
+Author: SparkWorks ITC
+Author-email: info@sparkwokrs.net
+License: UNKNOWN
+Download-URL: https://github.com/SparkWorksnet/client
+Description: A client library for accessing live data through the SparkWorks Websocket API.
+        
+        Example Application
+        **********************
+        
+        
+            from sparkworksws import SparkWorksWebSocket
+        
+        
+            class MyMessageHandler(SparkWorksWebSocket.SparkWorksWebSocketClientProtocol):
+                def messageReceived(self, message):
+                    print message
+        
+        
+            if __name__ == '__main__':
+                ws = SparkWorksWebSocket(token='your-token', handler=MyMessageHandler)
+        
+                ws.start()
+        
+Keywords: client,sparkworks,websocket
+Platform: UNKNOWN
