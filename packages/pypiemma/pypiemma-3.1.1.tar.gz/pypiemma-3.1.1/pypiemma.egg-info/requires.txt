@@ -1,0 +1,12 @@
+Pygments
+Markdown
+matplotlib
+pandas
+pypiscout>=2.0
+graphviz
+
+[dev]
+gprof2dot
+pylint
+mkdocs
+mkdocs-material
