@@ -1,0 +1,66 @@
+Metadata-Version: 1.1
+Name: binks
+Version: 0.1.4
+Summary: A simple WSGI web server.
+Home-page: https://github.com/Caratpine/binks
+Author: xdd1874
+Author-email: bepox0531@gmail.com
+License: MIT license
+Description: 
+        # binks
+        
+        ![PyPI](https://img.shields.io/pypi/v/binks)
+        ![APM](https://img.shields.io/apm/l/binks)
+        
+                
+        
+        > A simple WSGI web server.
+        
+        ## Prerequisites
+        
+        * Python >= 3.6
+        * werkzeug_raw
+        
+        ## Install
+        
+        ```sh
+        pip install binks
+        ```
+        
+        ## Usage
+        
+        ```sh
+        binks --host 127.0.0.1 --port 8080 -w 5 --app example.wsgi:app
+        ```
+        
+        ## Author
+        👤 *xdd1874*
+        
+        * GitHub: [@Caratpine](https://github.com/Caratpine)
+        
+        ## Show your support
+        Give a ⭐️ if this project helped you!
+        
+        
+        ## 📝 License
+        
+        Copyright © 2019 [xdd1874](https://github.com/Caratpine).<br />
+        This project is [MIT](https://github.com/Caratpine/binks/blob/master/LICENSE) licensed.
+        
+        ## Shout out to
+        
+        * [Gunicorn](https://github.com/benoitc/gunicorn)
+        * [Shadowsocks](https://github.com/shadowsocks/shadowsocks/tree/master)
+        
+        ---
+        _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+        
+        
+Keywords: binks
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

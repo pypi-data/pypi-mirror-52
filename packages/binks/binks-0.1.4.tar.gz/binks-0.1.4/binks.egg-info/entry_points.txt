@@ -1,0 +1,5 @@
+
+
+    [console_scripts]
+    binks=binks.main:main
+    
