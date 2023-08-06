@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hmmviz
+Version: 0.0.6
+Summary: A package for visualizing state transition graphs that often arise in hidden Markov models.
+Home-page: https://github.com/benrussell80/hmmviz
+Author: Benjamin Russell
+License: UNKNOWN
+Description: # hmmviz
+        A package for visualizing state transition graphs that often arise in hidden Markov models.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
