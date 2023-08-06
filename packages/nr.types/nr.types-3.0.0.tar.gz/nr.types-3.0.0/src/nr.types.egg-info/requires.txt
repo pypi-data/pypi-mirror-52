@@ -1,0 +1,9 @@
+six
+typing
+
+[full]
+PyYAML
+
+[test]
+pytest
+pytest-cov
