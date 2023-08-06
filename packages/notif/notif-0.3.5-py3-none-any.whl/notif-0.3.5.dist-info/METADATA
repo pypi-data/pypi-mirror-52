@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: notif
+Version: 0.3.5
+Summary: A package to send notification from a python script.
+Home-page: https://notificationdoc.ca
+Author: David Beauchemin
+Author-email: david.beauchemin.5@ulaval.ca
+License: GPLv3
+Download-URL: https://github.com/davebulaval/notification/archive/v0.3.5.zip
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# Notif - The notification package for every python project
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://travis-ci.com/davebulaval/notification.svg?branch=master)](https://travis-ci.com/davebulaval/notification)
+
+Notif is a easy to use package to send notification from a python script.
+
+Use this package to send during, at the end or when failing of a python script a
+
+    - Slack notification
+    - Email notification
+    - Channel notification
+    - Facebook messenger notification.
+
+> Please be careful with your login credential. Use a .env or any other file not publish by your git (configured in .gitignore). Read the [following](https://stackoverflow.com/questions/2397822/what-is-the-best-practice-for-dealing-with-passwords-in-git-repositories) for best pratices
+
+
+Read the documentation at [notificationdoc.ca](https://notificationdoc.ca).
+
+---------
+
+## Installation
+
+```shell script
+pip install notif
+```
+
+
+--------------
+Unfortunately the `fail_decorator` is not working with the package (for now) with the [Sacred](https://pypi.org/project/sacred/) package.
+
+
+
