@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pip-prometheus
+Version: 1.2.1
+Summary: Exports Pip packages versions for Prometheus.io.
+Home-page: http://github.com/korfuri/pip-prometheus
+Author: Uriel Corfa
+Author-email: uriel@corfa.fr
+License: Apache
+Keywords: python pip monitoring prometheus
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: System :: Monitoring
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: prometheus-client (>=0.7.0)
+Requires-Dist: pip (>=9.0.0)
+
+Pip-Prometheus
+
+This code exports the version of installed Pip packages.
+
+See https://github.com/korfuri/pip-prometheus for usage
+instructions.
+
+
