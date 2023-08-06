@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+bin/comparerr
+comparerr/__init__.py
+comparerr/report_generator.py
+comparerr.egg-info/PKG-INFO
+comparerr.egg-info/SOURCES.txt
+comparerr.egg-info/dependency_links.txt
+comparerr.egg-info/requires.txt
+comparerr.egg-info/top_level.txt
+comparerr/utils/__init__.py
+comparerr/utils/comparerr_pylint_message.py
+comparerr/utils/comparerr_pylint_reporter.py
