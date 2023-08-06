@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: boston-housing-prediction
+Version: 0.2.0
+Summary: Predict housing prices in boston.
+Home-page: https://github.com/LuposX/BostonHousingPrediction
+Author: Lupos
+Author-email: buisnessgithublupos@gmail.com
+License: MIT
+Description: ## Installation
+        You need to have `python >= 3.5` installed.
+        
+        To install the the script do:  
+        
+        ```sh
+        $ pip install boston-housing-prediction
+        ```
+        The script is saved in here: `python_location\Scripts\boston-housing-main.py`.   
+        Alternatively download the latest release of `boston-housing`. Open the zip and in the `code` folder you can see the script and its libaries.
+        
+        ## Usage example
+        
+        You can run the programm with:
+        ```sh
+        $ py boston-housing-main.py model_name
+        ```  
+        To see the help(for extra options) do:
+        ```sh
+        $ py boston-housing-main.py -h
+        ```  
+        
+        If you get a error message like `[Errno 2] No such file or directory`. Navigate to your python folder and go in the `Scripts` folder there you'll find the `boston-housing-main.py`. From that location you can start `boston-housing-main.py`.
+        
+        ## More Infomation
+        
+        For more information please visit my github repository:  
+        [My Github](https://github.com/LuposX/BostonHousingPrediction/)
+Keywords: regression meachine-learning housing_prices_boston learning_purpose
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

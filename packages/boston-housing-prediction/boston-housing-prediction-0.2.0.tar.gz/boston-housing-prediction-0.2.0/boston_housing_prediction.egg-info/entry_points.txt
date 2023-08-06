@@ -1,0 +1,3 @@
+[console_scripts]
+boston-housing-prediction = __main__.py:main
+
