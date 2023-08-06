@@ -1,0 +1,17 @@
+spkit/__init__.py,sha256=j7PL6K-KSo6lNd-RY7_I7aNxUU5H57iVIEaQuwQfCV4,816
+spkit/infotheory.py,sha256=XllP_EcfxYoRENVqCPN2xSg8V-HH3sN8KFHrmn8T4Lc,4243
+spkit/matDecomposition.py,sha256=WyI22ELu7BejYGepRPTM_Jqc1XCd6bLkunJO2Am9lIk,20459
+spkit/pylfsr.py,sha256=6PG-HaV1O-IF5qsPlwSPN9Cf9IPIRDyd2gxAcC6Egoc,9962
+spkit/data/__init__.py,sha256=a8oNdsNcD2fZtooxw4fCpSxqe4rsLt0gJ3wAPuoXyRo,545
+spkit/data/dataGen.py,sha256=ABKBnXavGyeX-2rdfIgLs6Ex645WFDAen2zYvwUmSjw,15118
+spkit/data/load_data.py,sha256=jFP7vj_jSRCYJplc5ehgk1-R0lFFBemRSR1cp9DcN_U,449
+spkit/data/primitive_polynomials_GF2_dict.txt,sha256=iXQO7IrjxXDqchqTulKrY-qfYvJrsOe7JQWZVkKzedU,6402
+spkit/ml/LogisticRegression.py,sha256=19Q5qhYFCIXn8Ar-l6XQnNOudzJDsYB6Iy-K5Oj1FpY,5397
+spkit/ml/Probabilistic.py,sha256=KtEjZUWiftjQpD_eUtoemwJ2HMwEKgGBwMV27aFLGKo,4392
+spkit/ml/Trees.py,sha256=WoNQ8M_vWNCf53gdYHH11eD7SLW_DBhxGH1reWg52v8,19406
+spkit/ml/__init__.py,sha256=exqijE1j59y-zow1Ioal8XDaQVAqN-J9YOeJ4jQpMn4,761
+spkit-0.0.3.dist-info/LICENSE,sha256=man0MlvIllQpvHayBjk2CzKcgC2euN2KvDoHA7HTx6w,1074
+spkit-0.0.3.dist-info/METADATA,sha256=09n_4D8lmTib-Nbc3mSbO7yFdrh7eNYWw5vYWDa5OI0,5622
+spkit-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+spkit-0.0.3.dist-info/top_level.txt,sha256=ouokBkxDXvTQthoSMrbD-aIkNMp2dM88HbMe1AzF-k8,6
+spkit-0.0.3.dist-info/RECORD,,
