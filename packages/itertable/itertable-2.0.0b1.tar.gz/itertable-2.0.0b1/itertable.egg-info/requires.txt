@@ -1,0 +1,14 @@
+requests
+xlrd
+click
+
+[gis]
+Fiona
+geopandas
+
+[pandas]
+pandas
+
+[write]
+xlwt
+xlsxwriter
