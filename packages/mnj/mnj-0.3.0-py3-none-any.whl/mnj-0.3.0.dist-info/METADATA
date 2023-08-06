@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mnj
+Version: 0.3.0
+Summary: Mnj (Mongo Energy) is a helper library to simplify PyMongo interaction
+Home-page: https://github.com/lig/mnj
+Author: Serge Matveenko
+Author-email: s@matveenko.ru
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Typing :: Typed
+Requires-Dist: pymongo
+
+UNKNOWN
+
+
