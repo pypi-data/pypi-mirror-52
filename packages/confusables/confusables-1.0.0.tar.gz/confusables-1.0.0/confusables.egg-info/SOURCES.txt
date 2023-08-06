@@ -1,0 +1,16 @@
+README.md
+setup.py
+confusables/__init__.py
+confusables/config.py
+confusables/parse.py
+confusables/utils.py
+confusables.egg-info/PKG-INFO
+confusables.egg-info/SOURCES.txt
+confusables.egg-info/dependency_links.txt
+confusables.egg-info/top_level.txt
+confusables/assets/confusable_mapping.json
+confusables/assets/confusables.txt
+confusables/assets/custom_confusables.txt
+tests/__init__.py
+tests/confusables/__init__.py
+tests/confusables/test_confusables.py
