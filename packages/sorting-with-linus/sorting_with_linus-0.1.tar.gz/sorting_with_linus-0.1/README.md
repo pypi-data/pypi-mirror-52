@@ -1,0 +1,49 @@
+# Sorting with Linus
+
+This package contains a few sorting methods which you might
+find useful. Check below for proper usage but here is a short
+list of all of them:
+
+1. bubble sort
+2. insertion sort
+3. quick sort
+4. selection sort
+
+Have fun with these methods.
+
+## bubble sort
+
+```python
+alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+print(bubbleSort(alist))
+```
+
+An inefficient but easy to implement sorting algorithm.
+
+## selection sort
+
+```python
+alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+print(selectionSort(alist))
+```
+
+An inefficient but easy to implement sorting algorithm.
+
+## insertion sort
+
+```python
+alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+print(insertionSort(alist))
+```
+
+An inefficient but easy to implement sorting algorithm.
+
+## quick sort
+
+```python
+alist = [54,26,93,17,77,31,44,55,20]
+quick_sort(alist)
+print(alist)
+```
+
+An efficient but hard to implement sorting algorithm. Use this one!
