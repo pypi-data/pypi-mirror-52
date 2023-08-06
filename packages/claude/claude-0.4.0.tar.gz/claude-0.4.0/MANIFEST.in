@@ -1,0 +1,3 @@
+recursive-include claude/static *
+recursive-include claude/templates *.html
+include pyproject.toml

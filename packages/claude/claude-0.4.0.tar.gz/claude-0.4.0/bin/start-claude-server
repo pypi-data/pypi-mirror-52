@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import asyncio
+import logging
+import os
+from argparse import ArgumentParser
+
+import aiohttp
+from aiohttp import web
+
+from claude.app import App
+
+logger = logging.getLogger('claude')
+
+parser = ArgumentParser()
+parser.add_argument('--port', type = int)
+parser.add_argument('--path')
+parser.add_argument('--debug', action = 'store_true', default = False)
+parser.add_argument('--database-file', default = './claude.json')
+
+args = parser.parse_args()
+
+app = App(args.database_file, args.debug)
+
+logger.info("Claude server started. port: %s, path: %s, debug: %s, database file: %s", args.port, args.path, args.debug, args.database_file)
+
+loop = asyncio.get_event_loop()
+web.run_app(app.aio_app, port = args.port, path = args.path)
