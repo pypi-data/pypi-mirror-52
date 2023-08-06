@@ -1,0 +1,16 @@
+README.md
+setup.py
+gemo/__init__.py
+gemo/_version.py
+gemo/camera.py
+gemo/gemo.py
+gemo/geometries.py
+gemo/utils.py
+gemo.egg-info/PKG-INFO
+gemo.egg-info/SOURCES.txt
+gemo.egg-info/dependency_links.txt
+gemo.egg-info/requires.txt
+gemo.egg-info/top_level.txt
+gemo/backends/__init__.py
+gemo/backends/matplotlib.py
+gemo/backends/plotly.py
