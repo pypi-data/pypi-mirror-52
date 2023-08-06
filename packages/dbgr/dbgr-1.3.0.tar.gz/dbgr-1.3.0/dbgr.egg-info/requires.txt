@@ -1,0 +1,15 @@
+aiohttp
+colorama
+argcomplete
+pygments
+dateparser
+
+[test]
+twine
+pytest
+pylint
+pytest-cov
+pytest-asyncio
+codecov
+sphinx
+sphinxcontrib-spelling
