@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: lx_bloomfilter
+Version: 0.1.2
+Summary: Python implementation Bloom filter
+Home-page: https://github.com/lxshen/bloomFilter.git
+Author: lxshen
+Author-email: guanghui2017@outlook.com
+Maintainer: lxshen
+Maintainer-email: guanghui2017@outlook.com
+License: BSD License
+Description: # bloomFilter
+        Python实现布隆过滤器
+        
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown

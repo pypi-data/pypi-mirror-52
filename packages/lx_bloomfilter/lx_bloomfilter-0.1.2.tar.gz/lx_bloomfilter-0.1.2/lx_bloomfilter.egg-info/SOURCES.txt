@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+lx_bloomfilter/__init__.py
+lx_bloomfilter/py_bloomfilter.py
+lx_bloomfilter.egg-info/PKG-INFO
+lx_bloomfilter.egg-info/SOURCES.txt
+lx_bloomfilter.egg-info/dependency_links.txt
+lx_bloomfilter.egg-info/requires.txt
+lx_bloomfilter.egg-info/top_level.txt
