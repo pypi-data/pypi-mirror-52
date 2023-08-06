@@ -1,0 +1,232 @@
+Metadata-Version: 1.2
+Name: xml2rfc
+Version: 2.28.0
+Summary: Xml2rfc generates RFCs and IETF drafts from document source in XML according to the IETF xml2rfc v2 and v3 vocabularies.
+Home-page: https://tools.ietf.org/tools/xml2rfc/trac/
+Author: Henrik Levkowetz, Josh Bothun
+Author-email: tools-discuss@ietf.org
+Maintainer: Henrik Levkowetz
+Maintainer-email: henrik@levkowetz.com
+License: BSD-3-Clause
+Download-URL: https://pypi.python.org/pypi/xml2rfc
+Description: Introduction
+        ============
+        
+        The IETF_ uses a specific format for the standards and other documents it
+        publishes as RFCs_, and for the draft documents which are produced when
+        developing documents for publications.  There exists a number of different
+        tools to facilitate the formatting of drafts and RFCs according to the
+        existing rules, and this tool, **xml2rfc**, is one of them.  It takes as input
+        an xml file which contains the text and meta-information about author names
+        etc., and transforms it into suitably formatted output.  The input xml file
+        should follow the grammars in RFC7749_ (for v2 documents) or RFC7991_ (for 
+        v3 documents). Note that the grammar for v3 is still being refined, and 
+        changes will eventually be captured in the `bis draft for 7991`_. 
+        Changes not yet captured can be seen in the xml2rfc source `v3.rng`_.
+        
+        **xml2rfc** provides a variety of output formats. See the command line
+        help for a full list of formats. It also provides conversion from v2 to
+        v3, and can run the preptool_ on its input.
+        
+        .. _IETF: https://www.ietf.org/
+        .. _RFCs: https://www.rfc-editor.org/
+        .. _RFC7749: https://tools.ietf.org/html/rfc7749
+        .. _RFC7991: https://tools.ietf.org/html/rfc7991
+        .. _bis draft for 7991: https://tools.ietf.org/html/draft-iab-rfc7991bis
+        .. _v3.rng: https://trac.tools.ietf.org/tools/xml2rfc/trac/browser/trunk/cli/xml2rfc/data/v3.rng
+        .. _preptool: https://tools.ietf.org/html/rfc7998
+        
+        Installation
+        ============
+        
+        Installation of the python package is done as usual with 'pip install xml2rfc',
+        using appropriate switches and/or sudo.
+        
+        Installation of support libraries for the PDF-formatter
+        -------------------------------------------------------
+        
+        In order to generate PDFs, xml2rfc uses the WeasyPrint module, which
+        depends on external libaries that must be installed as native packages
+        on your platform, separately from the xml2rfc install.
+        
+        First, install the Cairo, Pango, and GDK-PixBuf library files on your
+        system.  See installation instructions on the WeasyPrint Docs:
+        
+            https://weasyprint.readthedocs.io/en/stable/install.html
+        
+        (Python 3 is not needed if your system Python is 2.7, though).
+        
+        (On some OS X systems with System Integrity Protection active, you may
+        need to create a symlink from your home directory to the library installation
+        directory (often /opt/local/lib):
+        
+            ln -s /opt/local/lib ~/lib
+        
+        in order for weasyprint to find the installed cairo and pango libraries.
+        Whether this is needed or not depends on whether you used macports or homebrew
+        to install cairo and pango, and the homebrew / macport version.)
+        
+        Next, install the pycairo and weasyprint python modules using pip.
+        Depending on your system, you may need to use 'sudo' or install in
+        user-specific directories, using the --user switch.  On OS X in
+        particular, you may also need to install a newer version of setuptools
+        using --user before weasyprint can be installed.  If you install with 
+        the --user switch, you may need to also set PYTHONPATH, e.g.,
+        
+            PYTHONPATH=/Users/henrik/Library/Python/2.7/lib/python/site-packages
+        
+        for Python 2.7.
+        
+        The basic pip commands (modify as needed according to the text above)
+        are:
+        
+            pip install 'pycairo>=1.18' 'weasyprint<=0.42.3'
+        
+        With these installed and available to xml2rfc, the --pdf switch will be
+        enabled.
+        
+        For PDF output, you also need to install the Noto font set.  Download the full
+        set from https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip,
+        and install as appropriate for your platform.
+        
+        Usage
+        =====
+        
+        xml2rfc accepts a single XML document as input and outputs to one or more conversion formats.
+        
+        **Basic Usage**: ``xml2rfc SOURCE [options] FORMATS...``
+        
+        Run ``xml2rfc --help`` for a full listing of command-line options.
+        
+        
+        Changelog
+        =========
+        
+        
+        Version 2.28.0 (15 Sep 2019)
+        ------------------------------------------------
+        
+        
+          * Fixed the handling of empty <workgroup> entries when writing HTML, and 
+            added handling for multiple <workgroup> entries for text output.  Fixes 
+            issue #425.
+        
+          * Fixed an inconsistency in the handling of non-ASCII author initials.
+        
+          * Added some XML cleanup before writing prepped output.
+        
+          * Fixed a case where for instance 'Section b.2' would be emitted instead 
+            of the correct 'Appendix B.2'
+        
+          * Changed the restricted right margin for <dt> terms.
+        
+          * Added a check for conflicting schema information for v3 input files, 
+            and fixed a failure to heed the presence of preptool errors when genreating 
+            v3 format outputs.
+        
+          * Adjusted the library call default value for --legacy-date-format to
+            match the command line setting.
+        
+          * Added a script to minify javascript (through an external service), and 
+            added a javascript minification step to the Makefile.
+        
+          * Added a html <div> for external metadata, and updated metadata.js to 
+            look for online metadata also for documents served from disk.
+        
+          * Fixed a problem with authors without any name, with only organization 
+            information present.
+        
+        
+        
+        
+        
+        
+        
+        Version 2.27.1 (10 Sep 2019)
+        ------------------------------------------------
+        
+        
+          * Refined the preptool code that inserts reference target URLs to use an
+            more appropriate guess at the extension, depending on the base URL.
+        
+          * Corrected a mismatch between the default value for a switch in run.py
+            and base.py.
+        
+          * Changed the code for the --id-is-work-in-progress to avoid duplicate 
+            <refcontent> insertion.
+        
+        
+        
+        
+        
+        
+        
+        Version 2.27.0 (09 Sep 2019)
+        ------------------------------------------------
+        
+        
+          * Added a test for handling of &wj; and &nbsp; during text linebreaking.
+        
+          * Corrected the line break handling for &wj; and &zwsp; and changed to
+            using a unicode private use code for internal "don't break" handling,
+            in order to make use of &wj; possible in the XML source input.
+        
+          * Added country name aliases for South Korea.
+        
+          * In text renderer: Reverted 'Internet Draft' to 'Internet-Draft' for
+            series name rendering.  Stripped empty parts from Updates: and
+            Obsoletes: lists.  Added removal of U+2060 (word joiner) before
+            emitting rendered text.
+        
+          * Adjusted the preptool inserted reference target value for 
+            Internet-Drafts to include a trailing '.txt' to avoid 404s
+        
+          * Added U+2060 (word joiner) to the list of code points that should not
+            trigger non-ASCII warnings
+        
+          * Added an --id-is-work-in-progress switch to let the RPC automatically
+            add a <refcontent> element indicating "Work in Progress" for
+            Internet-Drafts.
+        
+          * In HTML output, removed blank items from Updates and Obsoletes lists, 
+            and reverted 'Internet Draft' in reference rendering to 'Internet-Draft'.
+        
+          * Added entity definitions for &wj; and &zwsp;
+        
+          * Fixed pyflakes issue; a variable name mismatch.
+        
+          * Updated the installation instructions emitted when --pdf is specified 
+            without having the necessary libraries in place to also include 
+            instructions for Noto font installation.
+        
+          * Fixed an issue with the ToC generation where sections without numbers 
+            might still be rendered with the whitespace intended to go between number 
+            and section title.
+        
+          * Fixed an issue with the HTML ToC where sections without numbers might 
+            still be rendered with the whitespace intended to go between number and 
+            section title.
+        
+          * Removed pilcrows from print layout to avoid spurious extra lines for 
+            paragraphs where the pilcrow would not fit at the end of the last line.
+        
+          * Fixed an insufficient test for URL vs. local file when handling the 
+            --metadata-js-url switch.
+        
+          * Tweaked the CSS for print to avoid reference entries beginning on a new 
+            line, below the reference tag.
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: License :: OSI Approved :: BSD License
