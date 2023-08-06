@@ -1,0 +1,3 @@
+include mobypy/words.txt
+include README.rst
+include LICENSE
