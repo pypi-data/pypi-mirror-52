@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: jobsdone
+Version: 0.0.1
+Summary: A little helper to send you a push when your jobfinishes running.
+Home-page: http://packages.python.org/jobsdone
+Author: Tyler Williams
+Author-email: williams.tyler@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: alert commandline tool
+Platform: UNKNOWN
