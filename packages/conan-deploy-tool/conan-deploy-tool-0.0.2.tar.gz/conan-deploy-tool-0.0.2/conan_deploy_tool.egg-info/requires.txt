@@ -1,0 +1,7 @@
+configparser>=3.5.0
+six
+
+[:python_version < "3.0"]
+backports.tempfile
+
+[test]
