@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: CachedMethods
+Version: 0.1.3
+Summary: UNKNOWN
+Home-page: https://github.com/stsouko/CachedMethods
+Author: Dr. Ramil Nugmanov
+Author-email: stsouko@live.ru
+License: LGPLv3
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6.0
+
+CachedMethods
+=============
+
+decorators for class methods results caching
+
+
