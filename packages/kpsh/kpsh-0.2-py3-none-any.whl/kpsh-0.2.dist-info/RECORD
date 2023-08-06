@@ -1,0 +1,17 @@
+kpd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kpd/_version.py,sha256=-QDB6YCvQzFNBgFfzgwWH97oKRoRC0-vj51T85ivt0E,114
+kpd/app.py,sha256=P4cOaLZpVivdyJstb9qFCdGOKlrw6iFjEBR6zfAt1P8,7371
+kpd/commands.py,sha256=xjvae5D8wreRyJoImxgc6VXMOTMxvHpCgtMlYYy_3vE,3492
+kpd/completion.py,sha256=zHECocnPoXXgulbYq_UJCr6zI3JfnTt4YgBBHNl1kaA,2715
+kpd/db.py,sha256=EN4StMwyQqbPoeR6aqPNHqVd-uRz8WE36eRJs1S5l-8,4144
+kpd/utils.py,sha256=M5oirQ3LwYMPojeRWXKJCtnoHt6SND4djCd8xNW_Ilc,165
+kpd/autotype/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kpd/autotype/commands.py,sha256=IyHsdM-LT73STedxdpaGoj9qhthg4wSDw5azuNHRwyk,499
+kpd/autotype/placeholders.py,sha256=-sktJd9vzgkmlpCiBx-hhqOWaYJjCDJ0jnHyqb2jLzI,1103
+kpd/autotype/xdotoolkeys.py,sha256=Kk7_83YdNcmv6Zjv3IZb76t9KvR06yJBr_7ZpARSMHc,1719
+kpsh-0.2.dist-info/LICENSE,sha256=0ElQUwUZZ-vnb7H6zSh9edHtgA2hvnXPUBpVa8OaBHI,32471
+kpsh-0.2.dist-info/METADATA,sha256=JiastDMxlAvXfCDCTAxo3QFHMZt9AyAeqrnYMi3U5wM,849
+kpsh-0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+kpsh-0.2.dist-info/entry_points.txt,sha256=rSRIREgdelv61WKmlKLdE8txVQXYXiWO1nj3X8va-9U,39
+kpsh-0.2.dist-info/top_level.txt,sha256=mH2wJaCXNFCV7qt_4DB1fpUn231qrrDpMsHGQ4dbNhM,4
+kpsh-0.2.dist-info/RECORD,,
