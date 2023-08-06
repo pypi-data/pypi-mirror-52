@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: django-permissions-auditor
+Version: 0.5.1
+Summary: django-permissions-auditor is a tool to audit access control on your django app.
+Home-page: https://github.com/AACEngineering/django-permissions-auditor
+Author: AAC Engineering
+License: MIT
+Description: django-permissions-auditor
+        ==========================
+        
+        [![Build Status](https://travis-ci.com/AACEngineering/django-permissions-auditor.svg?branch=master)](https://travis-ci.com/AACEngineering/django-permissions-auditor)
+        [![codecov](https://codecov.io/gh/AACEngineering/django-permissions-auditor/branch/master/graph/badge.svg)](https://codecov.io/gh/AACEngineering/django-permissions-auditor)
+        [![](https://img.shields.io/pypi/v/django-permissions-auditor.svg)](https://pypi.org/project/django-permissions-auditor/)
+        [![](https://readthedocs.org/projects/django-permissions-auditor/badge/?version=latest&style=flat)](https://django-permissions-auditor.readthedocs.io/en/latest/)
+        
+        
+        https://django-permissions-auditor.readthedocs.io/en/latest/
+        
+        
+        Admin site for auditing and managing permissions for views in your Django app.
+        
+        
+        ![Screenshot](docs/img/admin_views.png?raw=true "Screenshot")
+        
+        
+        Automatically parse Django views in your project and pull out the permissions required to view them. Easily extensible to work with custom permission schemes.
+        
+        
+        ![Screenshot](docs/img/admin_permissions.png?raw=true "Screenshot")
+        
+Keywords: django,admin,permissions,audit,auditor
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
