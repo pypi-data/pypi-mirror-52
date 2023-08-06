@@ -1,0 +1,9 @@
+ftfy
+justext
+lru-dict
+lxml==4.3.4
+requests>=2.19.0
+
+[all]
+cchardet
+langid
