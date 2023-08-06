@@ -1,0 +1,4 @@
+aspy.refactor_imports>=0.5.3
+
+[:python_version == "2.7"]
+typing
