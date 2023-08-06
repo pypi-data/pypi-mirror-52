@@ -1,0 +1,12 @@
+absl-py
+dm_env
+enum34
+matplotlib
+mock
+numpy
+pillow
+scikit-learn
+six
+
+[gym]
+gym
