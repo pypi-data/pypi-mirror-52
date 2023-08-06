@@ -1,0 +1,15 @@
+antidox/__init__.py,sha256=b8sBbt53dor63vA4hjh5r60hamPCtdR_9FcaByWCDXc,1595
+antidox/collector.py,sha256=h45o_YWaH9HVns1P1bimu2as-hgsAXlSDHB6CnFLEgI,1425
+antidox/directives.py,sha256=rDvaq5MrcHZBojAazydCTzzXbaPqVE3Wy2JvLY73kQI,17878
+antidox/doxy.py,sha256=g3EKRfiSCswdx8L0w54GgNy6ELOGumvFW9OVQ_KEhPo,33745
+antidox/nodes.py,sha256=N73J1sM5D6jlUxUfkQEA9N16MIo06BikxIIuMMjCsSk,7946
+antidox/shell.py,sha256=ngqlEbJKFsP75TJ-cb7Sw-bN3iJItf3TZg8psn-fYCA,12004
+antidox/xtransform.py,sha256=p9TI0J3m77yhXQ0RHMhTa9sotaoY4uOBiLuvGBB56zE,4109
+antidox/templates/compound.xsl,sha256=x6yJdoXkO9SCck4VXQ6wckbdudDlyfUUr5VGX33PsGw,18384
+antidox-0.1.3.dist-info/LICENSE,sha256=MMKo7vdUksVC21Mif_yk0MXsAlz5ylJg1Az_3nLcH78,1493
+antidox-0.1.3.dist-info/METADATA,sha256=JOT49FYA_JqWiNGEd-a0zcfGC9GVd8e3fNl5NOTl9gE,3062
+antidox-0.1.3.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+antidox-0.1.3.dist-info/entry_points.txt,sha256=Gebihq1GI3zeRHdpPAbNNAqahcNXIJFNYk6fsEzlDRM,54
+antidox-0.1.3.dist-info/top_level.txt,sha256=DIh7Dv_N7WhnOzX_phNcTxeM4HvqRY33AAnONMupl0g,8
+antidox-0.1.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+antidox-0.1.3.dist-info/RECORD,,

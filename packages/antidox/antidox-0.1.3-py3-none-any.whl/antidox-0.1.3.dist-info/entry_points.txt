@@ -1,0 +1,3 @@
+[console_scripts]
+antidox-shell = antidox.shell:main
+
