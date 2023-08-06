@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: simple-ftp
+Version: 0.2.0
+Summary: a simple ftp script
+Home-page: http://https://pypi.org/project/simple-ftp/
+Author: singein
+Author-email: singein@outlook.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: fire
+
+simple-ftp
+
+python -m sftp 8000
+
+
+
