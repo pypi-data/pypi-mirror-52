@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: kabocha
+Version: 1.0.1
+Summary: JSON error extension to tastypie 
+Home-page: https://github.com/JoshStegmaier/kabocha/
+Author: Josh Stegmaier <jrs@joshstegmaier.com>
+Author-email: jrs@joshstegmaier.com
+License: MIT
+Description: Extension to django-tastypie to help deal with more errors directly with JSON
+Keywords: django,tastypie,json,errors,api,rest
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
