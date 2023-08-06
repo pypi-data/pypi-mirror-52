@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+debts/__init__.py
+debts/cli.py
+debts/solver.py
+debts.egg-info/PKG-INFO
+debts.egg-info/SOURCES.txt
+debts.egg-info/dependency_links.txt
+debts.egg-info/entry_points.txt
+debts.egg-info/not-zip-safe
+debts.egg-info/requires.txt
+debts.egg-info/top_level.txt
+debts/renderers/__init__.py
+debts/renderers/html.py
+debts/renderers/simple_text.py
