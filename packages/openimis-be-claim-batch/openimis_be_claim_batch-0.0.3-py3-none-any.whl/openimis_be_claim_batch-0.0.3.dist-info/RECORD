@@ -1,0 +1,12 @@
+claim_batch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claim_batch/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+claim_batch/apps.py,sha256=opnhHyh_1J8dD9cIN5SNl95PxUHjx2ZhP1GNCgAsTYI,96
+claim_batch/models.py,sha256=aaTpFYjPPXfFPMMUDKOk1HqpR6aXbrH5GfdZ71tfvaw,2155
+claim_batch/schema.py,sha256=nxALXOdBdcxOHjKhFEazy09uh7HTnekf8ToABKpoOEs,3006
+claim_batch/urls.py,sha256=2VZHO_d8F86pUF_4xeyFtSOr6-xpwltmk0L1szOBNEw,16
+claim_batch/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+openimis_be_claim_batch-0.0.3.dist-info/LICENSE.md,sha256=qv829pDgynxCyMDqJP9yACWRxhNQEP7jrTxY8U5m4gY,1852
+openimis_be_claim_batch-0.0.3.dist-info/METADATA,sha256=H1JQt7C-LJp9Zg_aVz4jW56hUzOciuzBs9F-9SbiSKU,840
+openimis_be_claim_batch-0.0.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+openimis_be_claim_batch-0.0.3.dist-info/top_level.txt,sha256=jxITBoJ3r3-Z3HROlUdHyfNa6c1KDfFho720MOioBCg,12
+openimis_be_claim_batch-0.0.3.dist-info/RECORD,,
