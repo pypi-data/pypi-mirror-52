@@ -1,0 +1,13 @@
+numpy
+brian2>=2.2
+setuptools
+nevergrad
+scikit-optimize
+efel
+tqdm
+
+[docs]
+sphinx>=1.8
+
+[test]
+pytest
