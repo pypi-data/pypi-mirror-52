@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: PythonCTP
+Version: 6.3.15.2
+Summary: This is the Python CTP API for trading domestic Futures.
+Home-page: https://github.com/nicai0609/Python-CTPAPI
+Author: jingse
+Author-email: pjjing@foxmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: CTP Python API
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.2
