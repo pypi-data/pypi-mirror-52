@@ -1,0 +1,29 @@
+#!python
+import argcomplete
+import argparse
+import requests
+import pprint
+import os
+from sqlalchemy.orm import sessionmaker
+from ssh_app.models import Base, SSHEntry
+from sqlalchemy import create_engine
+import ssh_app
+main_link = os.path.dirname(os.path.abspath(ssh_app.__file__))
+engine = create_engine('sqlite:///{}/ssh.db'.format(main_link))
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "name", help="name of server")
+parser.add_argument(
+    "--host", '-s', help="name of host")
+parser.add_argument(
+    "--key_path", '-i', help="path of key")
+parser.add_argument(
+    "--user", '-u', help="name of user")
+args = parser.parse_args()
+arg_dic = vars(args)
+new_ssh = SSHEntry(**arg_dic)
+session.add(new_ssh)
+session.commit()

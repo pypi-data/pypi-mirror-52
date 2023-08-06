@@ -1,0 +1,31 @@
+#!python
+# PYTHON_ARGCOMPLETE_OK
+import argcomplete
+import argparse
+import requests
+import pprint
+import os
+from sqlalchemy.orm import sessionmaker
+from ssh_app.models import Base, SSHEntry
+import ssh_app
+from sqlalchemy import create_engine
+main_link = os.path.dirname(os.path.abspath(ssh_app.__file__))
+engine = create_engine('sqlite:///{}/ssh.db'.format(main_link))
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
+# print os.path
+def name_completer(prefix, parsed_args, **kwargs):
+    listt = [i.name for i in  session.query(SSHEntry).all()]
+    return (i for i in listt)
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "name", help="name of server").completer = name_completer
+
+argcomplete.autocomplete(parser)
+args = parser.parse_args()
+q = session.query(SSHEntry).filter_by(name=args.name)
+os.system('ssh -i {key} {user}@{host}'.format(key=q[0].key_path,user=q[0].user,host=q[0].host))
+
