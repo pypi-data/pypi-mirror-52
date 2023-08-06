@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: roax-geo
+Version: 2.0a1
+Summary: Geographic extension for Roax.
+Home-page: https://github.com/roax/roax-geo/
+License: MIT
+Keywords: wsgi,framework,resource,openapi
+Author: Paul Bryan
+Author-email: pbryan@anode.ca
+Requires-Python: >=3.7,<3.8
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Dist: geojson (>=2.5,<3.0)
+Requires-Dist: geomet (>=0.2,<0.3)
+Requires-Dist: roax (>=2.0a3,<3.0)
+Project-URL: Documentation, https://github.com/roax/roax-geo/wiki
+Description-Content-Type: text/markdown
+
+# Roax-Geo
+
+[![PyPI](https://badge.fury.io/py/roax-geo.svg)](https://badge.fury.io/py/roax-geo)
+[![License](https://img.shields.io/github/license/roax/roax-geo.svg)](https://github.com/roax/roax-geo/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/badge/github-master-blue.svg)](https://github.com/roax/roax-geo/)
+[![Travis CI](https://travis-ci.org/roax/roax-geo.svg?branch=master)](https://travis-ci.org/roax/roax-geo)
+[![Codecov](https://codecov.io/gh/roax/roax-geo/branch/master/graph/badge.svg)](https://codecov.io/gh/roax/roax-geo)
+[![Black](https://img.shields.io/badge/code%20style-black-black.svg)](https://github.com/psf/black)
+
+Roax-Geo: Geographical extension for Roax. 
+
+## Develop
+
+```
+poetry install
+poetry run pre-commit install
+```
+
+## Test
+
+```
+poetry run pytest
+```
+
