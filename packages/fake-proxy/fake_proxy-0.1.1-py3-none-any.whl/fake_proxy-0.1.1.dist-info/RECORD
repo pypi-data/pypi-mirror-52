@@ -1,0 +1,17 @@
+fake_proxy/__init__.py,sha256=1y7vqtgtU2rECuU72_li-M0gyVTw1WrS1WAvkUhY9kg,130
+fake_proxy/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fake_proxy/core/api.py,sha256=Xh_PNNpG9aefrsDQNRWWL3daUkPVjImvNosIC1KejP0,3535
+fake_proxy/core/exceptions.py,sha256=xIJG2GsOGNPRQfBTRSBVvNyjk59X_hjdcqhyHpZNin0,216
+fake_proxy/core/proxysource.py,sha256=2Gn_I6jmke0H6aJJA1yz8NN9XuSK6JvGsZNq9WOKgh4,1393
+fake_proxy/core/proxysourcemanager.py,sha256=eSErTbRRzb1LBmXoESfHRi8kV0Hyyp8vGLy7xTvXEJE,4219
+fake_proxy/sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fake_proxy/sources/freeproxylist.py,sha256=wwH4crzoZvLKlmE8nRkLtyPgrdsB1oZZWCQG9BxYrOQ,1002
+fake_proxy/sources/socks-proxy.py,sha256=c2jWcu8xtzny3c0Tx7E4Bjm5L6Q6idz92h56_0U2MjY,960
+fake_proxy/sources/sslproxies.py,sha256=9hFP27Q-rxS1heTCPPtSpVlpUwcmIruJ3U6LWNtt5Ts,945
+test/sample_proxysources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/sample_proxysources/sample_proxy_list.py,sha256=TiiXAbLfN0ZJET_vH2eHoCOrjKdGbapBSFhvK34VWac,44359
+fake_proxy-0.1.1.dist-info/LICENSE,sha256=tos6rCpJS5N5MYolt1qom6hlNwwXTGTPXU6s3Q3kZTg,1065
+fake_proxy-0.1.1.dist-info/METADATA,sha256=0r9AmtrIaaruldlHP6fYMJ2e54lK6mrhlbl9KA46hsU,3851
+fake_proxy-0.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+fake_proxy-0.1.1.dist-info/top_level.txt,sha256=JXvJUQte3YQJ14WI40Aj1LspyA1v3ibPtm38QpPS3OY,16
+fake_proxy-0.1.1.dist-info/RECORD,,
