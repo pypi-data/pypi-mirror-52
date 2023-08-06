@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: fairevaluator
+Version: 1.0.0
+Summary: FAIR Evaluator API
+Home-page: https://github.com/FAIRMetrics/Metrics
+Author: ['Mark Wilkinson', 'Mario Prieto', 'Pablo Alarc\xc3\xb3n']
+Author-email: mark.wilkinson@upm.es
+License: UNKNOWN
+Description:     The FAIR Evaluator - automated testing of Web resources for their compliance with the FAIR Metrics  # noqa: E501
+            
+Keywords: FAIR Evaluator API
+Platform: UNKNOWN
