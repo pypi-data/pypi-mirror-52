@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: proptools-rocket
+Version: 0.0
+Summary: Rocket propulsion design calculation tools.
+Home-page: UNKNOWN
+Author: Matt Vernacchia
+Author-email: mvernacc@mit.edu
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: rocket propulsion engineering aerospace
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: test
+Provides-Extra: docs
