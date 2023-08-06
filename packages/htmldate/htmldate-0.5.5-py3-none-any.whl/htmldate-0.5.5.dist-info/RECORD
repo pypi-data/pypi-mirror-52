@@ -1,0 +1,15 @@
+htmldate/__init__.py,sha256=W9BS-QMef4crZOAXFuIqYnxe0p9vhFZsPLen6wIes1Q,758
+htmldate/cli.py,sha256=Om_xBntmDcZQEif6nvpLfMSA1faBoOB3Bkei9oWVQu8,3062
+htmldate/core.py,sha256=ZOF52DhUrwPBWAvnmgsdLkVRgJxBlGRFypEZq5jHlXU,36488
+htmldate/download.py,sha256=GpbGk4jtTUtbBPuLADlw3agWRl1DztoI0TbVHotv2yw,1989
+htmldate/parsers.py,sha256=3uHiX-seCxpTfsnKQ34EXTZAn4_vUgGj7qK6tIEnXXw,8735
+htmldate/settings.py,sha256=vlT_7DP4aoq-zJSGc2mvZe_YNswvPAx8vmkXIYS1cjA,840
+htmldate/utils.py,sha256=UCHxngAMkTF5nLSH_b7DILSUPpcSKi0uTrVdlclBf-k,4171
+htmldate/validators.py,sha256=KBW4kbIGF-kT1pumnEsLZ5pj5zUPRZxu1fuDwcB9dQI,5003
+htmldate-0.5.5.dist-info/DESCRIPTION.rst,sha256=Gc43ReGrndaj2Z7ubYJYlb0_dT62Z0d0koSGwWCWbnU,8097
+htmldate-0.5.5.dist-info/METADATA,sha256=0HoFBUAGG9Y4pvorInWJV0jfvXC8qG17_XND-OCcZlg,9601
+htmldate-0.5.5.dist-info/RECORD,,
+htmldate-0.5.5.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+htmldate-0.5.5.dist-info/entry_points.txt,sha256=fzeseZNJKiqt6TH6YxT-FHGlALFPwwaFUn9wMbu4joA,48
+htmldate-0.5.5.dist-info/metadata.json,sha256=B14FSSQkWQi-RUBXKmZcua4AX0eqgscl6u_Io87cZR4,1777
+htmldate-0.5.5.dist-info/top_level.txt,sha256=GFImTOY3FZ6KpdZgak4SW7KdhpB42SBD7bepFhBOvqY,9
