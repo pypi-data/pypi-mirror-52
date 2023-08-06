@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: csv2graph2web
+Version: 0.1.0
+Summary: Gnerate graphs from csv fils and upload them to the web server.
+Home-page: https://github.com/mastnk/csv2graph2web
+Author: Masayuki Tanaka
+Author-email: mastnk@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: paramiko
+Requires-Dist: scp
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: requests
+
+Gnerate graphs from csv fils and upload them to the web server.
+
+

@@ -1,0 +1,13 @@
+csv2graph2web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csv2graph2web/cgw.py,sha256=1fUH0KaZSDLg8Ll3bzy550PK8j59OI2T8l4Ry2KbK44,2538
+csv2graph2web/cgw_copy.py,sha256=LLmEE7-ReXp5wPbN4RqLcNuSoMEIWjumICm-z5oRrms,2395
+csv2graph2web/csv2graph2web.py,sha256=qeJo0sTFnUrBzFRfzQkIuf5Lr8FWF6by2pB63khlYTU,1848
+csv2graph2web-0.1.0.dist-info/DESCRIPTION.rst,sha256=YZFCM22B7HcToT1RqQOCXKgIcABVq2p-ic9zcPtc9-s,66
+csv2graph2web-0.1.0.dist-info/METADATA,sha256=L6vHiDZkPE-1E3ZyLzI_i3xEMgHPBtMJdADLGnQ4rf8,588
+csv2graph2web-0.1.0.dist-info/RECORD,,
+csv2graph2web-0.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+csv2graph2web-0.1.0.dist-info/entry_points.txt,sha256=_FFoRVl0V_7su6fw73H_AhnD2Xz4I-ijGkSBYn53kyQ,58
+csv2graph2web-0.1.0.dist-info/metadata.json,sha256=8gXnxFEHv47yb-vfyKqcFGmiRNKe3yvk_8awsOMTsOQ,844
+csv2graph2web-0.1.0.dist-info/top_level.txt,sha256=V1YLI-Ap4YKR6UOmkRe9dB11YWdGnFiuTmvmTBIbfGY,20
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_csv2graph2web.py,sha256=bCJas1Yw0ZHNr0mBKJaP8CFOKmVIMq6nnyWTtuCHG3Y,2539
