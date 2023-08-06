@@ -1,0 +1,3 @@
+[console_scripts]
+mmemoji = mmemoji.cli:cli
+
