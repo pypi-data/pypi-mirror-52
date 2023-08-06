@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tabs-buoys
+Version: 2.3
+Summary: Read in TABS website (and other Texas) data
+Home-page: https://github.com/kthyng/tabs
+Author: Kristen Thyng
+Author-email: kthyng@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: hydrofunctions
+Requires-Dist: pandas
+Requires-Dist: gsw
+
+UNKNOWN
+
+
