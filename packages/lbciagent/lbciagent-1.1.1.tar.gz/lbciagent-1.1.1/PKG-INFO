@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: lbciagent
+Version: 1.1.1
+Summary: LHCb CVMFS lbciagent for build ready messages
+Home-page: https://gitlab.cern.ch/lhcb-core/LbNightliesPriorityGateway
+Author: CERN - LHCb Core Software
+Author-email: lhcb-core-soft@cern.ch
+License: GPL
+Description: LHCb CVMFS lbciagent for build ready messages
+Keywords: LHCb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
