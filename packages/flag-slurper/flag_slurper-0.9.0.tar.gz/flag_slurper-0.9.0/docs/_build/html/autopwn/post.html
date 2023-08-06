@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Post PWN &mdash; Flag Slurper 0.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Flag Slurper
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files.html">Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terms.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Auto PWN</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Post PWN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plugins">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-exfil">SSH Exfil</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-plugins">Custom Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-custom-plugins">Loading Custom Plugins</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Flag Slurper</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Post PWN</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/autopwn/post.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="post-pwn">
+<h1>Post PWN<a class="headerlink" href="#post-pwn" title="Permalink to this headline">¶</a></h1>
+<p>The AutoPWN functionality can be extended through post pwn plugins. These are plugins that run
+against a service <em>after</em> the pwn process (gaining access, checking sudo, capturing flags, etc.).
+At the time of writing there is one built-in post pwn plugin:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh_exfil</span></code></p></li>
+</ul>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Post pwn plugins are configured through the Project File, but they can also be run automatically
+based on decisions made by the plugin. Here is an example configuration for the <code class="docutils literal notranslate"><span class="pre">ssh_exfil</span></code>
+plugin:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">_version</span><span class="p">:</span> <span class="s">&#39;1.0&#39;</span>
+<span class="nt">base</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/home/mattg/cdc/isu1-18</span>
+<span class="nt">project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ISU1-18</span>
+<span class="nt">flags</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">post</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">WWW SSH</span>
+    <span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">ssh_exfil</span><span class="p">:</span>
+        <span class="nt">files</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/root/ToughNut/</span>
+</pre></div>
+</div>
+<p>The above configuration explicitly declares that the service <code class="docutils literal notranslate"><span class="pre">WWW</span> <span class="pre">SSH</span></code> should use the
+<code class="docutils literal notranslate"><span class="pre">ssh_exfil</span></code> plugin, and should look for additional files in the <code class="docutils literal notranslate"><span class="pre">/root/ToughNut</span></code> directory.
+Any additional services exposing SSH will automatically attempt to find any of the default exfil
+files.</p>
+</div>
+<div class="section" id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ssh-exfil">
+<h3>SSH Exfil<a class="headerlink" href="#ssh-exfil" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="flag_slurper.autolib.post.SSHFileExfil">
+<em class="property">class </em><code class="sig-prename descclassname">flag_slurper.autolib.post.</code><code class="sig-name descname">SSHFileExfil</code><a class="headerlink" href="#flag_slurper.autolib.post.SSHFileExfil" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">ssh_exfil</span></code> plugin attempt to find as many <code class="docutils literal notranslate"><span class="pre">SENSITIVE_FILES</span></code> as possible.</p>
+<p>This plugin takes some optional parameters:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">files</span></code>: List[str]</dt><dd><p>A list of files to look for. All entries ending with a <code class="docutils literal notranslate"><span class="pre">/</span></code> are considered directories
+and will be searched.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">merge_files</span></code>: Boolean</dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if you want to merge <code class="docutils literal notranslate"><span class="pre">files</span></code> with <code class="docutils literal notranslate"><span class="pre">SENSITIVE_FILES</span></code>, otherwise
+only <code class="docutils literal notranslate"><span class="pre">files</span></code> will be searched.</p>
+</dd>
+</dl>
+<p>This plugin will run automatically for all services using port 22.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="custom-plugins">
+<h2>Custom Plugins<a class="headerlink" href="#custom-plugins" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../terms.html#term-cdc"><span class="xref std std-term">CDCs</span></a> often have unique elements that AutoPWN doesn’t know how to exploit. Frequently
+this includes services runing in a non-standard way, and interesting ways to gain access to the
+system. For this reason, AutoPWN allows you to write custom Post PWN plugins, to do any post
+actions that are necessary for your targets. To write a plugin, you must subclass
+<a class="reference internal" href="#flag_slurper.autolib.post.PostPlugin" title="flag_slurper.autolib.post.PostPlugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">PostPlugin</span></code></a> and register it with the
+<a class="reference internal" href="#flag_slurper.autolib.post.PluginRegistry" title="flag_slurper.autolib.post.PluginRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">PluginRegistry</span></code></a>.</p>
+<dl class="class">
+<dt id="flag_slurper.autolib.post.PostPlugin">
+<em class="property">class </em><code class="sig-prename descclassname">flag_slurper.autolib.post.</code><code class="sig-name descname">PostPlugin</code><a class="headerlink" href="#flag_slurper.autolib.post.PostPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a post pwn plugin.</p>
+<p>Plugins are configured in the <code class="docutils literal notranslate"><span class="pre">post</span></code> key to a project. For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">_version</span><span class="p">:</span> <span class="s">&quot;0.1&quot;</span>
+<span class="nn">...</span>
+<span class="nt">post</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">WWW SSH</span>
+    <span class="nt">commands</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">&lt;post plugin name&gt;</span><span class="p">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">&lt;arguments&gt;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PostPlugin.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param">config: dict</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#flag_slurper.autolib.post.PostPlugin.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the plugin.</p>
+<p>This provides the base configuration implementation. It
+simply just validates the schema against the given config.
+Plugins that need more involved configuration may override
+this method.</p>
+<p>Plugins must define their own schema by overriding the
+<code class="docutils literal notranslate"><span class="pre">schema</span></code> class variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PostPlugin.predicate">
+<em class="property">abstract </em><code class="sig-name descname">predicate</code><span class="sig-paren">(</span><em class="sig-param">service: flag_slurper.autolib.models.Service</em>, <em class="sig-param">context: flag_slurper.autolib.post.PostContext</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#flag_slurper.autolib.post.PostPlugin.predicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the plugin should be run for the given service,
+context, and configuration. The plugin’s configuration will have
+been validated at this point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service</strong> – The current service to test against</p></li>
+<li><p><strong>context</strong> – The current post context</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if this plugin should run, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PostPlugin.run">
+<em class="property">abstract </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">service: flag_slurper.autolib.models.Service</em>, <em class="sig-param">context: flag_slurper.autolib.post.PostContext</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#flag_slurper.autolib.post.PostPlugin.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the post pwn plugin.</p>
+<p>This is where the plugin will perform any actions it needs. All
+run methods MUST call their super before accessing the given
+context, otherwise it must attempt to safely access context
+entries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service</strong> – The service we are currently attacking</p></li>
+<li><p><strong>context</strong> – The context given to the post plugin</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if successful, False otherwise</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – if the context schema has not been set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PostPlugin.unconfigure">
+<code class="sig-name descname">unconfigure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flag_slurper.autolib.post.PostPlugin.unconfigure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove any previous configuration.</p>
+<p>This is used between post exploits.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="flag_slurper.autolib.post.PluginRegistry">
+<em class="property">class </em><code class="sig-prename descclassname">flag_slurper.autolib.post.</code><code class="sig-name descname">PluginRegistry</code><a class="headerlink" href="#flag_slurper.autolib.post.PluginRegistry" title="Permalink to this definition">¶</a></dt>
+<dd><p>The post pwn plugin registry.</p>
+<p>This handles configuring and figuring out which plugins will
+need to be run.</p>
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PluginRegistry.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param">config: List[dict]</em><span class="sig-paren">)</span><a class="headerlink" href="#flag_slurper.autolib.post.PluginRegistry.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the plugins that will be used for this run.</p>
+<p>This will accept the <code class="docutils literal notranslate"><span class="pre">commands</span></code> section for the current service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> – The post config for the current service.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#KeyError" title="(in Python v3.7)"><strong>KeyError</strong></a> – When a command is specified that doesn’t exist.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – When more than one key in a command entry.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – When a command uses an unknown plugin.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PluginRegistry.post">
+<code class="sig-name descname">post</code><span class="sig-paren">(</span><em class="sig-param">service: flag_slurper.autolib.models.Service</em>, <em class="sig-param">context: flag_slurper.autolib.post.PostContext</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#flag_slurper.autolib.post.PluginRegistry.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs applicable post pwn plugins against the given service,
+with the given context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service</strong> – The service to post pwn</p></li>
+<li><p><strong>context</strong> – The context for the server</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether all post invocation were successful</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="flag_slurper.autolib.post.PluginRegistry.register">
+<code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">plugin: Type[flag_slurper.autolib.post.PostPlugin]</em><span class="sig-paren">)</span><a class="headerlink" href="#flag_slurper.autolib.post.PluginRegistry.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a plugin with the plugin registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>plugin</strong> – The plugin class to register.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the plugin does not subclass <a class="reference internal" href="#flag_slurper.autolib.post.PostPlugin" title="flag_slurper.autolib.post.PostPlugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">PostPlugin</span></code></a>.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – If the plugin name is already taken.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="loading-custom-plugins">
+<h2>Loading Custom Plugins<a class="headerlink" href="#loading-custom-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Currently, post pwn plugins do not have an auto-loading method (i.e. entry points). In order to
+load a custom plugins, you must manually call <a class="reference internal" href="#flag_slurper.autolib.post.PluginRegistry.register" title="flag_slurper.autolib.post.PluginRegistry.register"><code class="xref py py-func docutils literal notranslate"><span class="pre">register()</span></code></a>
+after ensuring your plugin is on the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>. A much better method is planned.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Matt Gerst
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
