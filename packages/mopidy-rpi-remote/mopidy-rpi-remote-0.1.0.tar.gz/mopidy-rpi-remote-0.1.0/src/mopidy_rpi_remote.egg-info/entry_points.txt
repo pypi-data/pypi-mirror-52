@@ -1,0 +1,3 @@
+[console_scripts]
+mopidy_remote = mopidy_rpi_remote.cli:main
+
