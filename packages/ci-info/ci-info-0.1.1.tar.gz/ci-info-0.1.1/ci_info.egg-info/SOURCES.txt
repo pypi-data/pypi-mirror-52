@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+ci/__init__.py
+ci/_version.py
+ci/vendors.json
+ci/tests/__init__.py
+ci/tests/test_travis.py
+ci_info.egg-info/PKG-INFO
+ci_info.egg-info/SOURCES.txt
+ci_info.egg-info/dependency_links.txt
+ci_info.egg-info/requires.txt
+ci_info.egg-info/top_level.txt

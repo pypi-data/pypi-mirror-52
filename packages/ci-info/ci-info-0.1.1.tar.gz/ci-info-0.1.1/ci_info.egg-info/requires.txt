@@ -1,0 +1,10 @@
+future
+
+[all]
+pytest
+
+[test]
+pytest
+
+[tests]
+pytest
