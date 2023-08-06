@@ -1,0 +1,14 @@
+README.md
+setup.py
+COMETSC.egg-info/PKG-INFO
+COMETSC.egg-info/SOURCES.txt
+COMETSC.egg-info/dependency_links.txt
+COMETSC.egg-info/entry_points.txt
+COMETSC.egg-info/requires.txt
+COMETSC.egg-info/top_level.txt
+Comet/__init__.py
+Comet/__main__.py
+Comet/hgmd.py
+Comet/quads.py
+Comet/qvalue.py
+Comet/visualize.py
