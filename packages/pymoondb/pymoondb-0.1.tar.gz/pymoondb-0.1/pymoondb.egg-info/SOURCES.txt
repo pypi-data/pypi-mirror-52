@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+examples/Apollo12_soils.py
+examples/example1.ipynb
+examples/specimen.py
+examples/specimens_weight.py
+moondb/__init__.py
+moondb/core.py
+moondb/helpers.py
+pymoondb.egg-info/PKG-INFO
+pymoondb.egg-info/SOURCES.txt
+pymoondb.egg-info/dependency_links.txt
+pymoondb.egg-info/not-zip-safe
+pymoondb.egg-info/requires.txt
+pymoondb.egg-info/top_level.txt
