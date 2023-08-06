@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: swashbookler
+Version: 1.0.1
+Summary: Allows downloading books from Google Books and converting them to PDFs.
+License: MIT
+Author: Coriander Pines
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: PyYAML (>=5.1,<6.0)
+Requires-Dist: bs4 (>=0.0.1,<0.0.2)
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: img2pdf (>=0.3.3,<0.4.0)
+Requires-Dist: pillow (>=6.1,<7.0)
+Requires-Dist: requests (>=2.22,<3.0)
