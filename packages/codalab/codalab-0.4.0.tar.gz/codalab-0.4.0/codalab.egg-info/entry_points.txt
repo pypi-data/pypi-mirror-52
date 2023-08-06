@@ -1,0 +1,4 @@
+[console_scripts]
+cl = codalab.bin.cl:main
+codalab-service = codalab_service:main
+
