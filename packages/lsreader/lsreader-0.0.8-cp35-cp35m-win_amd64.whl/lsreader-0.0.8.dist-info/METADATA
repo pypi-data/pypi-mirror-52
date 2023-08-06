@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: lsreader
+Version: 0.0.8
+Summary: A reader to extract LS-DYNA results
+Home-page: UNKNOWN
+Author: LS-PrePost
+Author-email: hexi_lstc@outlook.com
+License: UNKNOWN
+Keywords: ls-dyna,d3plot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: C++
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# LS-Reader Project
+
+The LS-Reader is designed to read LS-DYNA results and can extract the data of more than 100 such as stress, strain, id, history variable, effective plastic strain, number of elements and so on now. The LS-Reader provides an uniform interface for getting these data. For convenience, input parameters, like number of state, number of integration point, are designed as keyword arguments.
+
+
+
+## How to use
+
+```python
+from lsreader import D3plotReader
+from lsreader import DataType as dt
+
+data_path = your/d3plot/file/path
+dr = D3plotReader(data_path)
+
+shell_stress = dr.get_data(dt.D3P_SHELL_STRESS, ist=0, ipt=1)
+print(shell_stress[0].x())
+
+shell_eps = dr.get_data(dt.D3P_SHELL_EFFECTIVE_PLASTIC_STRAIN, ist=0, ipt=1)
+print(shell_eps[0])
+
+thickness = dr.get_data(dt.D3P_SHELL_THICKNESS, ist=0, ipt=1)
+print(thickness[0])
+
+num_solid_element = dr.get_data(dt.D3P_NUM_SOLID, ist=0, ipt=1)
+print(num_solid_element)
+```
+
+
+
+[The examples and documents for this project is available here][example].
+
+[example]: <http://ftp.lstc.com/anonymous/outgoing/lsprepost/LS-Reader/>
+
