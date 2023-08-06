@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: tonyfast
+Version: 2019.9.20.13.2
+Summary: UNKNOWN
+Home-page: https://github.com/tonyfast/gists
+Author: tonyfast
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: datasette
+Requires-Dist: sqlite-utils
+Requires-Dist: nbsphinx
+Requires-Dist: black
+Requires-Dist: isort
+Requires-Dist: pandas
+Requires-Dist: nbconvert
+Requires-Dist: jupyter-client
+Requires-Dist: wheel
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tonyfast/gists/master)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tonyfast)
+
+
