@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.cfg
+setup.py
+streamsx.hbase.egg-info/PKG-INFO
+streamsx.hbase.egg-info/SOURCES.txt
+streamsx.hbase.egg-info/dependency_links.txt
+streamsx.hbase.egg-info/requires.txt
+streamsx.hbase.egg-info/top_level.txt
+streamsx/hbase/__init__.py
+streamsx/hbase/_hbase.py
+streamsx/hbase/hbase-site.xml.template
