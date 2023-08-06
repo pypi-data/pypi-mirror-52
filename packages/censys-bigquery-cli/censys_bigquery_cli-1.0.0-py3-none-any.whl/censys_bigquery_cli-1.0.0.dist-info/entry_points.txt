@@ -1,0 +1,3 @@
+[console_scripts]
+censys_bq = censys_bigquery_cli.censys_bq:main
+
