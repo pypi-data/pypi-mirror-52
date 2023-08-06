@@ -1,0 +1,79 @@
+ADVr_SLT,psu.m^3/s,Vertical   Advective Flux of Salinity,
+ADVr_TH,degC.m^3/s,Vertical   Advective Flux of Pot.Temperature,
+ADVxHEFF,m.m^2/s,Zonal      Advective Flux of eff ice thickn,
+ADVxSNOW,m.m^2/s,Zonal      Advective Flux of eff snow thickn,
+ADVx_SLT,psu.m^3/s,Zonal      Advective Flux of Salinity,
+ADVx_TH,degC.m^3/s,Zonal      Advective Flux of Pot.Temperature,
+ADVyHEFF,m.m^2/s,Meridional Advective Flux of eff ice thickn,
+ADVySNOW,m.m^2/s,Meridional Advective Flux of eff snow thickn,
+ADVy_SLT,psu.m^3/s,Meridional Advective Flux of Salinity,
+ADVy_TH,degC.m^3/s,Meridional Advective Flux of Pot.Temperature,
+DETADT2,m^2/s^2,Square of Surface Height Anomaly Tendency,
+DFrE_SLT,psu.m^3/s,Vertical Diffusive Flux of Salinity    (Explicit part),
+DFrE_TH,degC.m^3/s,Vertical Diffusive Flux of Pot.Temperature (Explicit part),
+DFrI_SLT,psu.m^3/s,Vertical Diffusive Flux of Salinity    (Implicit part),
+DFrI_TH,degC.m^3/s,Vertical Diffusive Flux of Pot.Temperature (Implicit part),
+DFxEHEFF,m.m^2/s,Zonal      Diffusive Flux of eff ice thickn,
+DFxESNOW,m.m^2/s,Zonal      Diffusive Flux of eff snow thickn,
+DFxE_SLT,psu.m^3/s,Zonal      Diffusive Flux of Salinity,
+DFxE_TH,degC.m^3/s,Zonal      Diffusive Flux of Pot.Temperature,
+DFyEHEFF,m.m^2/s,Meridional Diffusive Flux of eff ice thickn,
+DFyESNOW,m.m^2/s,Meridional Diffusive Flux of eff snow thickn,
+DFyE_SLT,psu.m^3/s,Meridional Diffusive Flux of Salinity,
+DFyE_TH,degC.m^3/s,Meridional Diffusive Flux of Pot.Temperature,
+DRHODR,kg/m^4,Stratification: d.Sigma/dr (kg/m3/r_unit),
+ETAN,m,Surface Height Anomaly,sea_surface_height
+EVEL,m/s,Eastward Component of Velocity (m/s),eastward_sea_water_velocity
+EVELMASS,m/s,Eastward Geometry-Weighted Comp of Velocity (m/s),
+EVELSTAR,m/s,Eastward Component of Bolus Velocity (m/s),eastward_sea_water_velocity_due_to_parameterized_mesoscale_eddies
+GM_PsiX,m^2/s,GM Bolus transport stream-function : U component,
+GM_PsiY,m^2/s,GM Bolus transport stream-function : V component,
+MXLDEPTH,m,Mixed-Layer Depth (>0),ocean_mixed_layer_thickness
+NVEL,m/s,Northward Component of Velocity (m/s),northward_sea_water_velocity
+NVELMASS,m/s,Northward Geometry-Weighted Comp of Velocity (m/s),
+NVELSTAR,m/s,Northward Component of Bolus Velocity (m/s),northward_sea_water_velocity_due_to_parameterized_mesoscale_eddies
+OBP,m,Ocean Bottom Pressure adjusted for global steric height change,
+PHIBOT,m^2/s^2,Bottom Pressure Pot.(p/rho) Anomaly,
+PHIHYD,m^2/s^2,Hydrostatic Pressure Pot.(p/rho) Anomaly,
+RHOAnoma,kg/m^3,Density Anomaly (=Rho-rhoConst),
+SALT,psu,Salinity,sea_water_salinity
+SFLUX,g/m^2/s,total salt flux (match salt-content variations), >0 increases salt,
+SIacSubl,kg/m^2/s,Actual sublimation freshwater flux, >0 decr. ice,
+SIarea,1,SEAICE fractional ice-covered area [0 to 1],sea_ice_area_fraction
+SIatmFW,kg/m^2/s,Net freshwater flux from atmosphere & land (+=down),
+SIatmQnt,W/m^2,Net atmospheric heat flux, >0 decreases theta,surface_downward_heat_flux_in_air
+SIheff,m,SEAICE effective ice thickness (avg. within grid cell),sea_ice_thickness
+SIhsnow,m,SEAICE effective snow thickness (avg. within grid cell),surface_snow_thickness
+SIsnPrcp,kg/m^2/s,Snow precip. (+=dw) over Sea-Ice (area weighted),snowfall_flux
+SItflux,W/m^2,Same as TFLUX but incl seaice (>0 incr T decr H),
+SIuice,m/s,SEAICE x-dir. ice velocity (m/s),
+SIvice,m/s,SEAICE y-dir. ice velocity (m/s),
+SSH,m,Surface Height Anomaly adjusted with global steric height change and sea-ice load,sea_surface_height
+TFLUX,W/m^2,total heat flux (match heat-content variations), >0 increases theta,
+THETA,degC,Potential Temperature,sea_water_potential_temperature
+UVEL,m/s,Zonal      Comp of Velocity (m/s),
+UVELMASS,m/s,Zonal Geometry-Weighted Comp of Velocity (m/s),
+VVEL,m/s,Meridional Comp of Velocity (m/s),
+VVELMASS,m/s,Meridional Geometry-Weighted Comp of Velocity (m/s),
+WVELMASS,m/s,Vertical Comp of Velocity (m/s),upward_sea_water_velocity
+WVELSTAR,m/s,Vertical Component of Bolus Velocity (r_units/s),upward_sea_water_velocity_due_to_parameterized_mesoscale_eddies
+oceFWflx,kg/m^2/s,net surface Fresh-Water flux into the ocean (+=down), >0 decreases salinity,water_flux_into_sea_water
+oceQnet,W/m^2,net surface heat flux into the ocean (+=down), >0 increases theta,
+oceQsw,W/m^2,net Short-Wave radiation (+=down), >0 increases theta,net_downward_shortwave_flux_at_sea_water_surface
+oceSPDep,m,Salt plume depth based on density criterion (>0),
+oceSPflx,g/m^2/s,net surface Salt flux rejected into the ocean during freezing, (+=down),,
+oceSPtnd,g/m^2/s,salt tendency due to salt plume flux >0 increases salinity,
+oceTAUX,Pa,zonal surface wind stress, >0 increases uVel,surface_downward_x_stress
+oceTAUY,Pa,meridional surface wind stress, >0 increases vVel,surface_downward_y_stress
+sIceLoad,kg/m^2,sea-ice loading (in Mass of ice+snow / area unit),sea_ice_and_surface_snow_amount
+Depth,m,ocean depth,sea_floor_depth
+YC,degrees_north,latitude at center of tracer cell,
+YG,degrees_north,latitude at tracer face,
+XC,degrees_east,longitude at center of tracer cell,
+XG,degrees_east,longitude at tracer face,
+rA,m^2,tracer cell area,
+rAs,m^2,cell area at s location,
+rAw,m^2,cell area at w location,
+rAz,m^2,cell area at z location,
+CS,1,cosine of grid orientation angle,
+SN,1,sine of grid orientation angle,
