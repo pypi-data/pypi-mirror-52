@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ModelicaLanguage
+Version: 0.0.0a5
+Summary: Modelica parser and class representation for Python3.x
+Home-page: https://github.com/ijknabla/ModelicaLanguageForPython
+Author: ijknabla
+Author-email: ijknabla@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: Arpeggio
+Requires-Dist: Numpy
+
+UNKNOWN
+
+
