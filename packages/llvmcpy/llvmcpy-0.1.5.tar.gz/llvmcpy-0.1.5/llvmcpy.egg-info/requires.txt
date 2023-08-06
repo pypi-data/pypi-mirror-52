@@ -1,0 +1,7 @@
+cffi>=1.0.0
+pycparser
+appdirs
+packaging
+
+[:python_version < "3.3"]
+shutilwhich
