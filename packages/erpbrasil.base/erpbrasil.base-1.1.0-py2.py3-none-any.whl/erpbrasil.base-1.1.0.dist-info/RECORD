@@ -1,0 +1,17 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+erpbrasil/__init__.py,sha256=eoZ6GfifbqhMLNzjlqRDVil-yyBkOmVN9ujSgJWNBlY,15
+erpbrasil/base/__init__.py,sha256=b6-WiVk0Li5MaV2rBnHYl104TsouINojSWKqHDas0js,22
+erpbrasil/base/__main__.py,sha256=98jHp8FLOa_NDgHwyDzyGrN6jvFlz14R4rH_b8cnYTQ,397
+erpbrasil/base/cli.py,sha256=svgX2Z51tjY6tYUYkqJuyEdmE8F1gRKINvqqglPFBHM,831
+erpbrasil/base/misc.py,sha256=_dRah0XUrm5les57a_-ZzPIGc71tkvdfMpx2XX3nI1M,792
+erpbrasil/base/fiscal/__init__.py,sha256=7Mp8iqklf3_AKmDXbtfWFufmP2NUURhE5CXW4A0vn-c,22
+erpbrasil/base/fiscal/cnpj_cpf.py,sha256=9F1_gw3DFJzX-hgFyy0Rh6EYPiP63UmsWtWFC9PR5xw,3215
+erpbrasil/base/fiscal/ie.py,sha256=Ue85tqB5hWpbVtKyGIFXj3R5c_QXr8aKPuQunUFXfrE,11285
+erpbrasil/base/fiscal/pis.py,sha256=zVu6RCZSmQWg2AEIlAjqU1WegttwhwXanteGirLA4M0,760
+erpbrasil.base-1.1.0.dist-info/AUTHORS.rst,sha256=1hgm88CRQXaY-r6_SjxFU5K-Ldm63ZOI0FzZGeZZ1as,64
+erpbrasil.base-1.1.0.dist-info/LICENSE,sha256=3LFE3RyKAYbDSyT6-0KtQaokRm8zgtI_JVU77wo-0N0,1074
+erpbrasil.base-1.1.0.dist-info/METADATA,sha256=8IlOn5BY1s3WaNhhNz_hRm66QLkF-LrVf8qi_7oEo2E,1945
+erpbrasil.base-1.1.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+erpbrasil.base-1.1.0.dist-info/entry_points.txt,sha256=MYZG5P-yBokk-uj7v3FdPStdd8oTAbvxsuLch1W54P0,60
+erpbrasil.base-1.1.0.dist-info/top_level.txt,sha256=EvKGm_E0aV6Ab8qiAJH5Jo4v9YdXA1Q3l_ZJ0fwTRm0,19
+erpbrasil.base-1.1.0.dist-info/RECORD,,
