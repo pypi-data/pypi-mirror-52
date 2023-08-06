@@ -1,0 +1,9 @@
+---
+fixes:
+  - Fix the retry backoff mechanism.  With the current mechanism, if a backoff
+    is set, we will retry ad infinitum, leading to inconsistent results when
+    a deletion can happen after the instance as been recreated.  With the new
+    mechanism, retries will occur a maximum number of times, with or without
+    backoff.  A new parameter (connect_backoff, default=0) is added to specify
+    the initial backoff duration.  Also, the default for the parameter for the
+    number of retries (connect_retries) has been increased from 2 to 4.

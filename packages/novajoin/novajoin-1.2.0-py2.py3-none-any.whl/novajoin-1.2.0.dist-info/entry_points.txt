@@ -1,0 +1,17 @@
+[console_scripts]
+novajoin-notify = novajoin.notifications:main
+novajoin-server = novajoin.wsgi:main
+
+[oslo.config.opts]
+novajoin = novajoin.config:list_opts
+novajoin-auth = novajoin.keystone_client:list_keystoneauth_opts
+
+[oslo.config.opts.defaults]
+novajoin = novajoin.middleware.config:set_config_defaults
+
+[oslo.policy.enforcer]
+novajoin = novajoin.policy:get_enforcer
+
+[oslo.policy.policies]
+novajoin = novajoin.policy:list_rules
+
