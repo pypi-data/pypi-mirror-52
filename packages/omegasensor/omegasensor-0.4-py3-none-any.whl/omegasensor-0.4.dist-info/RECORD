@@ -1,0 +1,13 @@
+omegasensor/__init__.py,sha256=HnvJjuBim32ExV4F7VZiCzwEuKduOEWoawRjvWHy00U,300
+omegasensor/bus.py,sha256=kJvZ2UHi0dWADkiO7N-r5ORuqOSGXhUuyTLj3_zwL2k,1224
+omegasensor/bus_i2c.py,sha256=M0zfd4xyOVKt2sljZX6Rc7Ud53dvveOvROXfwDoW4Y4,4297
+omegasensor/bus_modbus.py,sha256=dJRmwkKgYDRl8lrpSpGckyR26t3WFBmaWb_owL6NagE,1748
+omegasensor/interface.py,sha256=Whb25GJXGpzsXC6fzfyllTF1CdynVtgfeco8poyuOFo,8571
+omegasensor/interrupt.py,sha256=CICxJaQsVrwnrV54RtHNnq5-GbXBynF_cwV8gcu5cSk,304
+omegasensor/registers.py,sha256=N2KaKZ3tIp21o6eK4wDgOq0vyJwB46F_2E9-llRh9vE,15688
+omegasensor/smartsensor.py,sha256=Qt7tmne6ISdV8WJmwak8BtPTg0ru8K1PurVyhUak8c4,24453
+omegasensor-0.4.dist-info/LICENSE,sha256=mqkdr2hf3uVnSzIYB-FRo_3fM19n3lEQ_jd2bCsSgTk,1078
+omegasensor-0.4.dist-info/METADATA,sha256=KYc5i2pyiYNoTJ1kRXd48lNzsd5w87xAEHqJy5XxjuM,3752
+omegasensor-0.4.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+omegasensor-0.4.dist-info/top_level.txt,sha256=k8HQ9TMkN9clMXsq8J-92u4Tlz1U0yTHegIj7m7S2kI,12
+omegasensor-0.4.dist-info/RECORD,,
