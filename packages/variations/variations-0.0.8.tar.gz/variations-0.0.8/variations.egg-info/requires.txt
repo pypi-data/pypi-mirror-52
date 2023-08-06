@@ -1,0 +1,5 @@
+Pillow>=5.2.0
+pilkit>=1.1.6
+
+[optional]
+face_recognition
