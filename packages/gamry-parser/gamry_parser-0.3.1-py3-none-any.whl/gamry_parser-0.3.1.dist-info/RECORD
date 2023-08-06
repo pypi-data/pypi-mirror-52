@@ -1,0 +1,16 @@
+gamry_parser/__init__.py,sha256=LYUek6kzSr93JqcAWb7pxmEn31YKlU5v9o-IAajux8g,178
+gamry_parser/chronoa.py,sha256=5EKCRs2LHIICnMv0pDCLtGPmY9izUB2Cd6vwLAm5VuI,2673
+gamry_parser/cv.py,sha256=PEdw6OSUOAhU7HjUh98dEBS_nIc3MFVEifE8ZOqbUkQ,1902
+gamry_parser/eispot.py,sha256=ISTMmvbZR7PBXumdj-ExQEpVkyKwJUdXCVFVt-lPFEc,882
+gamry_parser/gamryparser.py,sha256=V3T5-jyc0MEK1aSTHLlpuWFy3ICcM7mfVIwFqD_I9eI,9569
+gamry_parser/version.py,sha256=klrk_CbXR9--MqcPv5nQNhP7RfxGsKVaWBKjOd3LOXM,23
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_chronoamperometry.py,sha256=mPF6uchppy9DG41ZdhfKGE7W900MiWDEJpSFxSe9ckg,1320
+tests/test_cyclicvoltammetry.py,sha256=PVJqgYCNBCRXoKSH4Raab2L-ANiTeG3wIfE6M9K6iAc,1025
+tests/test_gamryparser.py,sha256=zLyxZ5OrSsoWU2Sl0L3-LMxM52jqaXYH5RrJ82DltPo,5650
+tests/test_impedance.py,sha256=8GofjH9IFf-cFTQi4c0LocDWft_gDW77G4KnF4dUVw8,707
+gamry_parser-0.3.1.dist-info/LICENSE,sha256=FWKmOdeuq0-as6Ji4MlsWTspqZtVAx_R7IOU7m3Xdyc,1078
+gamry_parser-0.3.1.dist-info/METADATA,sha256=oamVwSMa3DsI27BqBoAz4x0opR5RX00rJkcYSoXc5Jg,6327
+gamry_parser-0.3.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+gamry_parser-0.3.1.dist-info/top_level.txt,sha256=1CTw2274yYUJW1r4-Ai-69Tm8SSQyf4f_WGVYe5b-gI,19
+gamry_parser-0.3.1.dist-info/RECORD,,
