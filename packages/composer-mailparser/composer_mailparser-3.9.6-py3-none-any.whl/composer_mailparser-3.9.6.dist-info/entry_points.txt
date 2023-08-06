@@ -1,0 +1,3 @@
+[console_scripts]
+composer_mailparser = composer_mailparser.__main__:main
+

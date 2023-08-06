@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: composer-mailparser
+Version: 3.9.6
+Summary: Composer friendly Wrapper for email standard library
+Home-page: https://github.com/ScaleFactor/composer-mail-parser
+Author: Kevin Liu
+Author-email: kevinliu@scalefactor.com
+Maintainer: Kevin Liu
+Maintainer-email: kevinliu@scalefactor.com
+License: Apache License, Version 2.0
+Keywords: mail,email,parser,wrapper,composer
+Platform: Linux
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ipaddress
+Requires-Dist: six
+
+composer-mail-parser
+====================
+
+Composer friendly
+-----------------
+The original iteration of mail-parser uses the `simplejson` library which causes conflicts in Google Composer.
+This fork serves to replace `simplejson` with the `json` library.
+
+View mail-parser here: https://github.com/SpamScope/mail-parser
+
