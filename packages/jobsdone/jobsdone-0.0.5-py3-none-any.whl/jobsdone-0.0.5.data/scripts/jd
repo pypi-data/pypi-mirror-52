@@ -1,0 +1,96 @@
+#!python
+from __future__ import print_function
+
+import argparse
+import errno
+import fileinput
+import json
+import os
+import platform
+import sys
+import urllib
+
+import appdirs
+import requests
+
+BASEURL = "https://usehyperlink.com/api?"
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+def mkdir_p(path):
+  try:
+    os.makedirs(path)
+  except OSError as exc:  # Python >2.5
+    if exc.errno == errno.EEXIST and os.path.isdir(path):
+      pass
+    else:
+      raise
+
+def keyfile():
+  dirs = appdirs.AppDirs("JobsDone", "TBW")
+  return os.path.join(dirs.user_data_dir, "key.json")
+
+def readkey():
+  try:
+    with open(keyfile(), "r") as kf:
+      return json.load(kf)["key"]
+  except (FileNotFoundError, ValueError, KeyError):
+    return None
+
+def writekey(key):
+  mkdir_p(os.path.dirname(keyfile()))
+  with open(keyfile(), "w") as kf:
+    return json.dump({"key":key}, kf)
+
+def hit_url(key, message):
+  params = {
+    "action": "send",
+    "key": key,
+    "title": "The job on %s in {city}, {region} finished!" % platform.node(),
+    "body": message,
+  }
+  req = BASEURL + urllib.parse.urlencode(params)
+  rsp = requests.get(req)
+
+def read_a_little_stdin():
+  lines = []
+  for i, line in enumerate(fileinput.input()):
+    lines.append(line)
+    # it's gonna be truncated anyway, so just return the first few lines.
+    if i == 2:
+      break
+
+  msg = "\t".join(lines).strip()
+  return msg or None
+
+def main():
+  parser = argparse.ArgumentParser(description="Alert when your job's done.")
+  parser.add_argument("message", type=str, nargs="?",
+                      help="The message to send (if empty: we'll use stdin)")
+  parser.add_argument("--key", dest="key", action="store", default=None,
+                      help="Your private key from the hyperlink app")
+  args = parser.parse_args()
+  if args.key:
+    writekey(args.key)
+
+  key = readkey()
+  if key is None:
+    sys.stderr.write(bcolors.FAIL +
+r"""You need to set --key the first time you call jd, but don't worry; we'll
+remember it thereafter.
+""" + bcolors.ENDC)
+    sys.exit(1)
+
+  message = args.message or read_a_little_stdin() or "Job's done!"
+  hit_url(key, message)
+  sys.exit(0)
+
+if __name__ == "__main__":
+  main()
