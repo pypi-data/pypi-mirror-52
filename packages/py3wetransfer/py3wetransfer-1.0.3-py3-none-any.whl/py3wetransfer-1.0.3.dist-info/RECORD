@@ -1,0 +1,16 @@
+wetransfer/__init__.py,sha256=sw-iZFKzzeaqALhy1XVPAGlV6YJ5e8gizEdxH2lJQeE,85
+wetransfer/base.py,sha256=_AXivG44g96K4ozdMrORUz7pEltCyxqwUhae1ckWfb0,2645
+wetransfer/board.py,sha256=Jz9ReeZF70-jA1aI9mUU_WS0DcZdKP6hBS1tVdkSlvM,3570
+wetransfer/exc.py,sha256=t2X70_3E5Ho29z3RYZBcD6nUSRyU49P5DkVX6rurkkg,44
+wetransfer/file.py,sha256=P7JTGjE_oO_iB4xPmAP3UaJGz3FfcnyJemJIZhRYdS4,325
+wetransfer/http.py,sha256=l3Zh1PC-Ihu_i4XBSCc1t_dh03MCKN-A6d7PYRRZ36c,2715
+wetransfer/transfer.py,sha256=UkyxsuAVFdfJzw7aK15-0yu7Zf9TsNjcBShWQUE0d_s,3777
+wetransfer/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wetransfer/tests/test_authorization.py,sha256=0GP0tKyNrEZGWwAUKZP7HjPs0M99y2Z_AQSmhU2dShw,410
+wetransfer/tests/test_board.py,sha256=CbZjuFYnAEBaTQRg4p4H4YFnCz9u-RHl2sED3vTA2rM,2403
+wetransfer/tests/test_transfer.py,sha256=6YuCVfSRzaO7ZVsnlONAYmd-apPpj0SjiXW0Fq0ihnY,1796
+py3wetransfer-1.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+py3wetransfer-1.0.3.dist-info/METADATA,sha256=6FmuqkHkc7_zuKl6MZgmx04n1LRcH4mpAvRSco-O0Us,4776
+py3wetransfer-1.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+py3wetransfer-1.0.3.dist-info/top_level.txt,sha256=3kbhM6czvYCyA6gL3HwZM2m8UF4uxQDCn4qn7p5HofU,11
+py3wetransfer-1.0.3.dist-info/RECORD,,
