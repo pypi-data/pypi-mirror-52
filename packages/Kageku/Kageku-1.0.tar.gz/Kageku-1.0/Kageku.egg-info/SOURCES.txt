@@ -1,0 +1,11 @@
+README.md
+setup.py
+Kageku.egg-info/PKG-INFO
+Kageku.egg-info/SOURCES.txt
+Kageku.egg-info/dependency_links.txt
+Kageku.egg-info/top_level.txt
+kageku/__init__.py
+kageku/action.py
+kageku/board.py
+kageku/consts.py
+kageku/flags.py
