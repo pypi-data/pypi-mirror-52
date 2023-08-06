@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+src/valgrind_log_parser/__init__.py
+src/valgrind_log_parser/valgrind_log_parser.py
+src/valgrind_log_parser/data/__init__.py
+src/valgrind_log_parser/utils/__init__.py
+src/valgrind_log_parser/utils/decorators.py
+src/valgrind_log_parser/utils/html_converter.py
+src/valgrind_log_parser/utils/json_helper.py
+src/valgrind_parser.egg-info/PKG-INFO
+src/valgrind_parser.egg-info/SOURCES.txt
+src/valgrind_parser.egg-info/dependency_links.txt
+src/valgrind_parser.egg-info/not-zip-safe
+src/valgrind_parser.egg-info/requires.txt
+src/valgrind_parser.egg-info/top_level.txt
