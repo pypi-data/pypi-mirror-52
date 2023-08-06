@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dotGraph-Rhy
+Version: 0.0.7
+Summary: easily draw a picture by using graphviz
+Home-page: https://github.com/Rhythmicc/dotGraph
+Author: RhythmLian
+License: MIT
+Description: # dotGraph
+        
+        ## Setup:
+          `pip3 install dotGrpah_Rhy`
+        
+        ## Usage
+          - run `dotGrpah`:
+          ![dotGraph](./img/1.png)
+          
+          - grammar
+            - All grammar of 'dot' is support!
+        
+Keywords: draw picture!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
