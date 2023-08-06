@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: twelve-step
+Version: 0.0.8
+Summary: A package to analyze project dependencies.
+Home-page: https://github.com/OLBEA20/twelve-step
+Author: Olivier Beaulieu
+Author-email: beaulieu.olivier@hotmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: Dependency,Analysis,Dependencies,Graph
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
