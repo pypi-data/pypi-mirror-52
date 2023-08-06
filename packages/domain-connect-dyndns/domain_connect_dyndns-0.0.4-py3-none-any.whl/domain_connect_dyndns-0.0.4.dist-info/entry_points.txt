@@ -1,0 +1,3 @@
+[console_scripts]
+domain-connect-dyndns = dyndns.command_line:main
+

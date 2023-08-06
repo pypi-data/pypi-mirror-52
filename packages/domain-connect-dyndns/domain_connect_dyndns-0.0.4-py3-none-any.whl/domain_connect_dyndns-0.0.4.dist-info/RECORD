@@ -1,0 +1,11 @@
+dyndns/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dyndns/command_line.py,sha256=uRNL9s8S5xhzcvj7v5q4yh3hBhoHIr9J2acC9gbcEYM,2217
+dyndns/domain_setup.py,sha256=te_FRvhQ9DgzziEX88rdJHW77uqTnAd53TbUSibSNjE,2820
+dyndns/domain_status.py,sha256=ifrD7Xz4qrlQIwSylGI8Y4DzI-sHEd06ZPaHpSxuaYU,1298
+dyndns/domain_update.py,sha256=uEKdCpxmKeZ70jbVE32R0MyLX-ryVAF7vwHZmlYQjjI,4306
+domain_connect_dyndns-0.0.4.dist-info/LICENSE,sha256=DpH5ke9GCu2JomLqQnzq-E58ThUTuVxNkzVsxQx8vHs,1102
+domain_connect_dyndns-0.0.4.dist-info/METADATA,sha256=4EpMpWYoQP6meYRJ-0GKNwYhxa-V_6NKq2-i-Hk02UU,1374
+domain_connect_dyndns-0.0.4.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+domain_connect_dyndns-0.0.4.dist-info/entry_points.txt,sha256=ePtDu3HQY8jd5--X7xSEPco1MXDr1IFx3EmkA7E1o9M,68
+domain_connect_dyndns-0.0.4.dist-info/top_level.txt,sha256=_8EEq2xp_3LjVRkrEGoxJEWn3GbEEvu4l0XLC-9XNSw,7
+domain_connect_dyndns-0.0.4.dist-info/RECORD,,
