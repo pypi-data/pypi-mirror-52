@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: django-shopify-abandoned-checkout
+Version: 0.0.3
+Summary: Send Shopify abandoned checkout emails from Django
+Home-page: https://gitlab.com/thelabnyc/django-shopify-abandoned-checkout
+Author: David Burke
+Author-email: dburke@thelabnyc.com
+License: Apache License
+Description-Content-Type: UNKNOWN
+Keywords: django shopify
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: ShopifyAPI (>=5.0.0)
+
+UNKNOWN
+
+
