@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: drv2605
+Version: 0.0.2
+Summary: Python library for the DRV2605 Haptic Driver
+Home-page: http://www.pimoroni.com
+Author: Philip Howard
+Author-email: phil@pimoroni.com
+License: MIT
+Keywords: Raspberry Pi
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Hardware
+Requires-Dist: i2cdevice (>=0.0.6)
+Requires-Dist: smbus
+
+DRV2605 Haptic Driver
+=====================
+
+`Build Status <https://travis-ci.com/pimoroni/drv2605-python>`__
+`Coverage
+Status <https://coveralls.io/github/pimoroni/drv2605-python?branch=master>`__
+`PyPi Package <https://pypi.python.org/pypi/drv2605>`__ `Python
+Versions <https://pypi.python.org/pypi/drv2605>`__
+
+Installing
+==========
+
+Stable library from PyPi:
+
+-  Just run ``sudo pip install drv2605``
+
+Latest/development library from GitHub:
+
+-  ``git clone https://github.com/pimoroni/drv2605-python``
+-  ``cd drv2605-python``
+-  ``sudo ./install.sh``
+
+Vibration Patterns
+==================
+
+The DRV2605 has a library of built-in vibration patterns great for
+haptic feedback, notifications and more. For the complete list see:
+
+http://www.ti.com/document-viewer/DRV2605/datasheet/waveform-library-effects-list-slos854718
+
+0.0.2
+-----
+
+* Port to i2cdevice>=0.0.6 set/get API
+
+0.0.1
+-----
+
+* Initial Release
+
+
