@@ -1,0 +1,11 @@
+iacs/__init__.py,sha256=6BVk_Z7zH_z5Q97Yf-RY8n9hWCfOoPABGEGe2epRdsg,41
+iacs/csv2md.py,sha256=MxgvmE8jAh6e_1t1WikX_LjYhy-0thWrZLhFvp_Bbrk,1393
+iacs/default_config.py,sha256=3i2xI5VCJFOifvs4Ewgc8X0REfa4HsPEvw7JBev1MF4,1249
+iacs/find_docs.py,sha256=clmpdCl6im41agizD-IMBe3emxtX0Vz7H7kC12OlODY,536
+iacs/iacs_cli.py,sha256=8twA2fvglKSGEtLkPpTCF1KN23E5p--kicheypt-_8E,3936
+iacs/transfer_notebooks.py,sha256=dIm9A460k8ICO6HYKa1cUJGNYHysYhd2GJsbrVzWUi0,315
+iacs_cli-0.11.1.dist-info/METADATA,sha256=nLCmn07r5Oso_F6NmV8oGIdQahTxUuBsFM2DKlMg33M,8444
+iacs_cli-0.11.1.dist-info/RECORD,,
+iacs_cli-0.11.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+iacs_cli-0.11.1.dist-info/entry_points.txt,sha256=ZyjoAl7rc7oH7spAqgIEWx4uhtnOfVwMyycko7NeHCk,45
+iacs_cli-0.11.1.dist-info/top_level.txt,sha256=-MK6_HsodNTyC2SvpSlD7Qfe_1ceiURUjsMU1X7QyrM,5

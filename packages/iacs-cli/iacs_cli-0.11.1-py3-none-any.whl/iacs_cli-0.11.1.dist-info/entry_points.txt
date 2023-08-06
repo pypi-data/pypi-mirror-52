@@ -1,0 +1,3 @@
+[console_scripts]
+iacs = iacs.iacs_cli:main
+
