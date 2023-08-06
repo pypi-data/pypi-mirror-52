@@ -1,0 +1,13 @@
+WordToVec/__init__.py,sha256=MiHFXascKphSa7WbTwF2t7khXe8-28Zvdy0yPZXIl5E,29
+WordToVec/abstractModel.py,sha256=iBaX3Q8QtPKoZXo5EsuiPRYNIFMZvUzT--SZzAFUIpA,253
+WordToVec/abstractVectorizer.py,sha256=iczAGwmvzDME1gdYGICMwmxgRmzkLwz2ZWEzSUzvgkE,271
+WordToVec/anyClassifier.py,sha256=-BEtcXeoE7ls7vdpy7XHL1vPti2kETRQBQvKcONPd9c,1701
+WordToVec/doc_to_vec.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+WordToVec/logisticRegression.py,sha256=En_wCYpoypcIiCNxwyHxVUhJgS_SK2b2RZJ-q0PHthg,3859
+WordToVec/tf_idf.py,sha256=Ia9RKE4YuhRrpGpOSOmGMh1I9Z6RGMPToqrrQOPTwHU,1063
+WordToVec/word_to_vec.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+text_classification_prova_alessandro_artoni-0.0.4.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+text_classification_prova_alessandro_artoni-0.0.4.dist-info/METADATA,sha256=vgoQnj-JKyjJBbAwftjhFoOJ6xlaV2jFrURIQduWkgQ,662
+text_classification_prova_alessandro_artoni-0.0.4.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+text_classification_prova_alessandro_artoni-0.0.4.dist-info/top_level.txt,sha256=rkOx-7LDmSDOrVyU625WVPPnnbUCXJdBkUW6Hu7Tusk,10
+text_classification_prova_alessandro_artoni-0.0.4.dist-info/RECORD,,
