@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: moduledocs
+Version: 0.2.0
+Summary: Static documentation extraction tool for python language
+Home-page: https://github.com/machineandme/moduledocs
+Author: Machine & Me
+Author-email: ceo@machineand.me
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/machineandme/moduledocs/issues
+Project-URL: Funding, https://www.patreon.com/machineandme
+Project-URL: Source, https://github.com/machineandme/moduledocs
+Keywords: generate documentation markdown html static parser
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Documentation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
+Requires-Dist: fire (==0.2.1)
+Requires-Dist: parso (==0.5.1)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: termcolor (==1.1.0)
+
+# moduledocs
+
+[![Build Status](https://travis-ci.org/machineandme/moduledocs.svg?branch=master)](https://travis-ci.org/machineandme/moduledocs)
+
+Static documentation extraction tool for python language.
+
+Supports markdown and html.
+
+
