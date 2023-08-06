@@ -1,0 +1,9 @@
+- project:
+    templates:
+      - tripleo-buildimage-jobs
+      - openstack-python-jobs
+      - openstack-python3-train-jobs
+      - release-notes-jobs-python3
+    post:
+      jobs:
+        - publish-openstack-python-branch-tarball
