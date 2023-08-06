@@ -1,0 +1,7 @@
+pymongo
+Pillow
+requests
+six
+
+[sendmails]
+gymail
