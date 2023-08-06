@@ -1,0 +1,19 @@
+# description
+include README.rst
+
+# version
+include obj_tables/VERSION
+
+# license
+include LICENSE
+
+# requirements
+include requirements.txt
+
+# documentation
+include README.rst
+
+# web app
+include obj_tables/web_app/app.css
+include obj_tables/web_app/app.js
+include obj_tables/web_app/index.html
