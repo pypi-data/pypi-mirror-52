@@ -1,0 +1,9 @@
+SQLAlchemy~=1.2
+bonobo==0.7.0rc3
+
+[dev]
+bonobo[dev]==0.7.0rc3
+coverage~=4.5
+isort
+pytest~=4.6
+pytest-cov~=2.7
