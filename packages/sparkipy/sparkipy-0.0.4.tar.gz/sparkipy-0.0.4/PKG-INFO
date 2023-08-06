@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: sparkipy
+Version: 0.0.4
+Summary: Framework for pyspark jobs
+Home-page: https://github.com/Valuraise/sparkipy
+Author: Wajdi FATHALLAH
+Author-email: wfathallah@valuraise.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
