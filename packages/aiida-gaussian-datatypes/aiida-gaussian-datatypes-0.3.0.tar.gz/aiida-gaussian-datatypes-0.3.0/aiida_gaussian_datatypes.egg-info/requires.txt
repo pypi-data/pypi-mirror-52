@@ -1,0 +1,15 @@
+voluptuous>=0.11.7
+aiida-core>=1.0.0b6
+
+[docs]
+sphinx<2.2.0,>=2.1.0
+sphinx-click>=2.2.0
+
+[pre-commit]
+pre-commit>=1.18.3
+
+[testing]
+pytest>=5.1.2
+pytest-cov>=2.7.1
+codecov>=2.0.15
+pgtest>=1.2.0
