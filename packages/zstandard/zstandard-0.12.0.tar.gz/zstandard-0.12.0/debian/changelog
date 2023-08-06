@@ -1,0 +1,11 @@
+python-zstandard (0.12.0~dev0-1) unstable; urgency=low
+
+  * New version.
+
+ -- Gregory Szorc <gregory.szorc@gmail.com>  Sat, 20 Apr 2019 12:50:58 -0700
+
+python-zstandard (0.9.1-1) unstable; urgency=low
+
+  * Initial Debian packaging definition.
+
+ -- Gregory Szorc <gregory.szorc@gmail.com>  Mon, 04 Jun 2018 17:35:23 -0700
