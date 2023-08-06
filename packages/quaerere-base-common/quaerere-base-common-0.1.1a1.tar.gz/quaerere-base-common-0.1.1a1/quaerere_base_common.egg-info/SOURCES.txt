@@ -1,0 +1,12 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+quaerere_base_common/__init__.py
+quaerere_base_common/schema.py
+quaerere_base_common.egg-info/PKG-INFO
+quaerere_base_common.egg-info/SOURCES.txt
+quaerere_base_common.egg-info/dependency_links.txt
+quaerere_base_common.egg-info/entry_points.txt
+quaerere_base_common.egg-info/requires.txt
+quaerere_base_common.egg-info/top_level.txt
