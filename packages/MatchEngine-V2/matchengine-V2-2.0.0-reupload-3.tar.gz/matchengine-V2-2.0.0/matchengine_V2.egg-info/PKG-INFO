@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: matchengine-V2
+Version: 2.0.0
+Summary: Open source engine for matching cancer patients to precision medicine clinical trials (V2).
+Home-page: UNKNOWN
+Author: Eric Marriott, Ethan Siegel
+Author-email: marriott@ds.dfci.harvard.edu, esiegel@ds.dfci.harvard.edu
+License: UNKNOWN
+Description: # MatchEngine 
+        Welcome to the documentation for the matchengine! The Matchengine is a system designed to match cancer patients to genomically driven clinical trials using Clinical Trial Markup Language (CTML) and patient clinical and genomic data. It utilizes the the MatchminerAPI and MatchminerUI for displaying trial match information.
+        
+        
+        The matchengine can be used on local instances that provide access to private data. If you are interested in the development of new features, or in setting up a local instance of the MatchMiner system, please see the documentation, or contact [matchminer@dfci.harvard.edu](https://app.gitbook.com/@matchminer/s/matchminer)
+        
+        # Documentation
+        [https://app.gitbook.com/@matchminer/s/matchminer](https://app.gitbook.com/@matchminer/s/matchminer)
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
