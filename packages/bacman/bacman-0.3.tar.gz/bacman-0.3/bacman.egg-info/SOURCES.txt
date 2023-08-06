@@ -1,0 +1,16 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bacman/__init__.py
+bacman/bacman.py
+bacman/mysql.py
+bacman/postgres.py
+bacman/utils.py
+bacman.egg-info/PKG-INFO
+bacman.egg-info/SOURCES.txt
+bacman.egg-info/dependency_links.txt
+bacman.egg-info/not-zip-safe
+bacman.egg-info/requires.txt
+bacman.egg-info/top_level.txt
