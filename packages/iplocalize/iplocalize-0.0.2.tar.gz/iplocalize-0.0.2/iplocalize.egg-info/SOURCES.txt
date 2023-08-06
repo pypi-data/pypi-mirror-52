@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+iplocalize/__init__.py
+iplocalize/cmd.py
+iplocalize/localize.py
+iplocalize.egg-info/PKG-INFO
+iplocalize.egg-info/SOURCES.txt
+iplocalize.egg-info/dependency_links.txt
+iplocalize.egg-info/entry_points.txt
+iplocalize.egg-info/requires.txt
+iplocalize.egg-info/top_level.txt
