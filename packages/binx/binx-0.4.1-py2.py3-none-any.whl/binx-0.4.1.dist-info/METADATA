@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: binx
+Version: 0.4.1
+Summary: Interfaces for an in-memory datastore and calc framework using marshmallow + pandas
+Home-page: https://github.com/bsnacks000/binx
+Author: bsnacks000
+Author-email: bsnacks000@gmail.com
+License: MIT license
+Keywords: binx
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pandas
+Requires-Dist: marshmallow (==3.1.1)
+
+====
+binx
+====
+
+
+.. image:: https://img.shields.io/pypi/v/binx.svg
+        :target: https://pypi.python.org/pypi/binx
+
+.. image:: https://circleci.com/gh/bsnacks000/binx.svg?style=svg
+        :target: https://circleci.com/gh/bsnacks000/binx
+
+.. image:: https://readthedocs.org/projects/binx/badge/?version=latest
+        :target: https://binx.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+:version: 0.4.1
+
+
+``binx`` is a small Python framework for application data modeling and transformation. It's API relies heavily on `marshmallow
+<https://marshmallow.readthedocs.io/en/3.0/>`_ for validation, object serialization and storage. It's true purpose however is to expose an API that
+allows developers to model procedural code into directed, acyclic graphs of arbitrary complexity. A user can define an application or library as a
+family of ``binx.Collection`` objects (nodes) and use the ``binx.adapter`` module (edges) to create a network of data transformations while
+guaranteeing data integrity along the way.
+
+The main goal of the project is to provide a simple API for data scientists, engineers or developers who write alot of procedural code
+to be able to organize their projects using a declarative style similar to how one might approach writing a web application using DRY principles.
+
+
+==^..^==
+
+* Free software: MIT license
+* Documentation: https://binx.readthedocs.io
+
+
+Features
+--------
+
+This set of interfaces are designed to help you quickly scale up your notebooks/scripts and create uniformity between your projects!
+
+binx provides:
+
+* A declarative style in memory datastore (collections.py)
+* A declarative ``Adapter`` API that helps model/manage relationships and data transformations between collections (adapter.py)
+* consistent API for moving your data between json, py-objs, and pandas dataframes
+
+
+
+=======
+History
+=======
+
+0.1.2 (2018-05-28)
+------------------
+* Port initial API from bema project
+* Port original unittests
+* change marshmallow api to 2.x
+
+
+0.2.0 (2018-07-03)
+------------------
+* Built adapter module and related functionality
+* removed calc_factory API (possibly will be re-included in a later build)
+* created the CollectionBuilder class
+
+
+0.2.1 (2018-07-12)
+------------------
+* patched issue relating to datetime/datestrings not being parsed by collections
+
+0.2.2 (2018-07-26)
+------------------
+* patched issue relating to introspection of required columns (issue #7-#8)
+
+0.2.3 (2018-10-01)
+------------------
+* clean up and fixes to cli
+
+0.3.0 (2019-07-14)
+------------------
+Fixes some long standing issues and adds some new features.
+
+* adapter.py - kwarg to accumulate optionally accumulate intermediate collections in adapter chain
+* registry.py - A user warning is issued instead of exception if an identical class path name is overwritten
+* collection.py - fixed errors related to creating dataframes from NoneType
+* adapter.py - added a new base class PluggableAdapter to ease development of the adapter chain
+* collection.py - CollectionBuilder.build now excepts an optional name arg. Will attempt to auto-parse name from serializer_class.
+
+
+0.3.1 (2019-07-15)
+------------------
+
+* Adds a context variable to the AdapterChainError that can be accessed if the error is caught
+
+
+0.3.2 (2019-08-21)
+------------------
+Final release that is compatible with marshmallow 2.x
+
+* Pins marshmallow to v0.20.2
+* Final release supporting marshmallow 2.x functionality
+
+
+0.4.0 (2019-08-23)
+------------------
+A minor release that internally breaks backward compatibility with marshmallow-2.x. Adds new feature
+to that allows loading data and setting ma configuration directly from Collection constructor.
+
+* private api changes to Serializer and Collection classes.
+* data can now be loaded via the Collection constructor.
+* kwargs can be passed to the underlying ma schema at runtime.
+
+
