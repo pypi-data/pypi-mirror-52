@@ -1,0 +1,24 @@
+##############################################################################
+# Chrome
+##############################################################################
+
+- name: add apt-key
+  apt_key:
+    url: "{{ chrome_apt_key }}"
+    state: present
+  become: yes
+
+- name: add apt-repository
+  apt_repository:
+    repo: "deb [arch=amd64] {{ chrome_apt_uri }} stable main"
+    state: present
+    filename: google-chrome
+    update_cache: yes  # only triggers if there was a change to the repos
+  become: yes
+
+
+- name: "install/update debs"
+  apt:
+    pkg: "{{ chrome_packages }}"
+    state: latest
+  become: yes

@@ -1,0 +1,48 @@
+#
+# Simple playbook to ensure the ansible framework is installed up to date.
+# This includes:
+#
+# - updating ansible to the latest in the ppa
+# - installing/updating this package
+#
+# This assumes:
+#
+# - you already have ansible (its a dependency of this package!)
+#
+# This is used by:
+#
+# > groot-ansible --update
+#
+---
+- name: Update Groot Ansible Environment
+  hosts:
+    - localhost
+
+  pre_tasks:
+  # TODO: drop this duplicate item and use the snorriheim role as a dependency?
+  - name: add snorriheim ppa
+    apt_repository:
+      repo: "ppa:d-stonier/snorriheim"
+      state: present
+      update_cache: yes  # only triggers if there was a change to the repos
+      filename: snorriheim
+    become: yes
+
+  # In case we didn't apt-get update in the previous step
+  - name: apt update
+    apt:
+      update_cache: yes
+      cache_valid_time: 0
+    become: yes
+
+  - name: update python-groot-ansible to the latest version
+    apt:
+      pkg: python-groot-ansible
+      state: latest
+    become: yes
+
+  - name: update ansible to the latest version
+    apt:
+      pkg: ansible
+      state: latest
+    become: yes
