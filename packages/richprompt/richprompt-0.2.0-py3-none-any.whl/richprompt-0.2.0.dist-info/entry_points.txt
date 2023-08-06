@@ -1,0 +1,3 @@
+[ipython_startup_hook]
+richprompt = richprompt.startup:load
+
