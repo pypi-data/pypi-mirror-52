@@ -1,0 +1,10 @@
+nf_batch_runner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nf_batch_runner/aws.py,sha256=OMnFACeJ_sEC5-r9foObrcMIhZHVFUZelhaKW74lptY,6319
+nf_batch_runner/cli.py,sha256=ANKo0G5IwOOf_oiJJi20Ox2Veung9AapbLvcVrk_ocA,5754
+nf_batch_runner/click_helpers.py,sha256=QbUisvid0eX_MCQm8YIuLyKI3nTFqHZVbrM85s6uUE8,1051
+nf_batch_runner/environment.py,sha256=hiMAc7NyIOVGTwFKLAa81LyK4m3vZeBPaVpkrtVvKJU,2302
+nf_batch_runner-0.0.10.dist-info/METADATA,sha256=Ylah5igqEhHroU9IBkUIJZiZNw4xIfneXRnyXlgZnvs,3016
+nf_batch_runner-0.0.10.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+nf_batch_runner-0.0.10.dist-info/entry_points.txt,sha256=WIYphNVLduERZiBD6EiXSVY5Hvg44eQZ6x0ekmggzQI,79
+nf_batch_runner-0.0.10.dist-info/top_level.txt,sha256=c7R3W4zSuATUxi6jCTHBqJnKJmiLtzmZVKJHHvtAZ-k,32
+nf_batch_runner-0.0.10.dist-info/RECORD,,
