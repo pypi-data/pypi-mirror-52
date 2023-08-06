@@ -1,0 +1,12 @@
+README.md
+setup.py
+simiotics_s3/__init__.py
+simiotics_s3/cli.py
+simiotics_s3/data.py
+simiotics_s3/sources.py
+simiotics_s3.egg-info/PKG-INFO
+simiotics_s3.egg-info/SOURCES.txt
+simiotics_s3.egg-info/dependency_links.txt
+simiotics_s3.egg-info/entry_points.txt
+simiotics_s3.egg-info/requires.txt
+simiotics_s3.egg-info/top_level.txt

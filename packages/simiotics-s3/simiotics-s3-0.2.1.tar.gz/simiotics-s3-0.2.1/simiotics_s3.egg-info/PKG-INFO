@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: simiotics-s3
+Version: 0.2.1
+Summary: Simiotics S3 integration
+Home-page: https://github.com/simiotics/simiotics-s3
+Author: Neeraj Kashyap
+Author-email: neeraj@simiotics.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Version Control
