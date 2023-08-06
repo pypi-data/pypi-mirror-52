@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: ailist
+Version: 0.1.2
+Summary: Python package for Augmented Interval List
+Home-page: https://github.com/kylessmith/ailist
+Author: Kyle S. Smith
+Author-email: kyle.smith@stjude.org
+License: GPL2
+Description: A python package wrapper for a C implementation of an Augmented Interval List.
+Keywords: cython interval skiplist c
+Platform: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides: ailist
