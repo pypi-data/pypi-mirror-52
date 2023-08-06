@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: socks5line
+Version: 0.0.1
+Summary: Helper for socks5-unaware clients
+Home-page: https://github.com/skelsec/socks5line
+Author: Tamas Jos
+Author-email: info@skelsec.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
