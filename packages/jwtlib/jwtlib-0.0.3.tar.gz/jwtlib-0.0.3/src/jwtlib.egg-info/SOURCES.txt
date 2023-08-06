@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/jwtlib/__init__.py
+src/jwtlib/exc.py
+src/jwtlib/flask_support.py
+src/jwtlib/types.py
+src/jwtlib.egg-info/PKG-INFO
+src/jwtlib.egg-info/SOURCES.txt
+src/jwtlib.egg-info/dependency_links.txt
+src/jwtlib.egg-info/requires.txt
+src/jwtlib.egg-info/top_level.txt
