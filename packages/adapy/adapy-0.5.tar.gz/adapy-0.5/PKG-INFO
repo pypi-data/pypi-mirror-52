@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: adapy
+Version: 0.5
+Summary: Library for domain adaptation
+Home-page: https://github.com/GPikra/Adapy
+Author: George Pikramenos, Eleanna Vali
+Author-email: gpik@di.uoa.gr
+License: MIT
+Download-URL: https://github.com/GPikra/Adapy/archive/v_05.tar.gz
+Description: UNKNOWN
+Keywords: domain adaptation,tranfer learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
