@@ -1,0 +1,13 @@
+six>=1.9
+python-slugify>=1.2
+google-api-python-client>=1.5
+unicodecsv>=0.14
+tableschema>=1.0
+tabulator>=1.0
+
+[develop]
+pylama
+pytest
+mock
+tox
+oauth2client
