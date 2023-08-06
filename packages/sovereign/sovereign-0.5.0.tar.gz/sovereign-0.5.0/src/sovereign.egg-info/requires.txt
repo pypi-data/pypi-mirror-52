@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+ujson
+requests
+PyYAML
+jinja2
+structlog
+cryptography
+datadog
+cachelib
+schedule
+glom
+
+[sentry]
+sentry-sdk
+sentry-asgi
