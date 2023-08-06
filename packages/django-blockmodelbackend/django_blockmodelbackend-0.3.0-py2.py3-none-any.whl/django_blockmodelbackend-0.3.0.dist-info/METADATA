@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: django-blockmodelbackend
+Version: 0.3.0
+Summary: Custom model backend for blocking users and ip after several attempts to access wrongly
+Home-page: https://github.com/JavierGonza/django-blockmodelbackend
+Author: Javier González
+Author-email: correo@javier-gonzalez.es
+License: MIT
+Keywords: django-blockmodelbackend
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: Django (<2.3,>=1.11)
+Requires-Dist: django-ipware (==2.1.0)
+
+=============================
+django-blockmodelbackend
+=============================
+
+Custom model backend for blocking users and ip after several attempts to access wrongly
+
+
+Installation
+------------
+
+#. Install django-blockmodelbackend::
+
+    pip install django-blockmodelbackend
+
+
+#. Add ``blockmodelbackend`` to your ``INSTALLED_APPS`` settings::
+
+	INSTALLED_APPS = [
+		...
+		'blockmodelbackend',
+	]
+
+#. Run  ``migrate`` command::
+
+	python manage.py migrate
+
+#. Add the new backend class to your ``AUTHENTICATION_BACKENDS`` settings::
+
+	AUTHENTICATION_BACKENDS = [
+		...
+		'blockmodelbackend.modelbackend.BlockModelBackend',
+	]
+
+Configuration
+-------------
+
+There is some parameters to customize the backend.
+
+. ``MAX_ACCESS_ATTEMPTS``:[ ``3`` ] maximum numbers of wrong authentication attempts before blocking
+
+. ``LOCK_DURATION``:[ ``5`` ] lock duration in minutes
+
+. ``DELTA_LOCK_DURATION``:[ ``1`` ] increase in the lock duration in minutes
+
+. ``USER_PERMANENT_BLOCK``:[ ``False`` ] boolean value
+
+. ``IP_PERMANENT_BLOCK``:[ ``False`` ] boolean value
+
+. ``BLOCK_TYPE``:[ ``both`` ] choice between ``both``, ``user`` or ``ip``
+
+
