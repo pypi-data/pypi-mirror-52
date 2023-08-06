@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: parliament
+Version: 0.0.0
+Summary: parliament audits your AWS IAM policies
+Home-page: https://github.com/duo-labs/parliament
+Author: Duo Security
+Author-email: scott@summitroute.com
+License: BSD 3
+Description: Placeholder
+Keywords: aws parliament iam lint audit
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown
+Provides-Extra: dev

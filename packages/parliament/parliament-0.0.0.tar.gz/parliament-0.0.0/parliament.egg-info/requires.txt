@@ -1,0 +1,7 @@
+
+[dev]
+coverage
+nose
+autoflake
+autopep8
+pylint
