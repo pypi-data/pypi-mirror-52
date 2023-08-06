@@ -1,0 +1,13 @@
+wmc/__init__.py,sha256=1Er_zHDx9-mn0myvvJNKi5MsZA_SA1FjclFuRZ9NngY,231
+wmc/__main__.py,sha256=YCa13_IvBiGR386N_StyLtE0T_lNWy0OgjHs38CwGFY,135
+wmc/cli.py,sha256=-DmOG8kd_Op9CToqVRnfujmTA9dh59NKM1ZjR1B1xGs,2373
+wmc/dispatch.py,sha256=smQV1gZ6w4Ls9aOd23zUIiK-hYz6aKpjjn88yV15RVs,1267
+wmc/utils.py,sha256=0Sn3tU_Wn_UeFWDWI_OAmCxpx7rjJ_UyBKOfLS4vKQs,2718
+wmc/commands/__init__.py,sha256=5iZvWzCqDStmGQGtDb0FaM2KQ1a26wqKLPKfStthtxc,1866
+wmc/commands/record.py,sha256=es08tKbCQKDcVfKdUqZJd9bytIHVf626cORN2Vk-UgU,2762
+wmc-0.3.2.dist-info/LICENSE,sha256=VaHSyuHDerVFfESXCspoAKMQScg7TA3tCtJmFvxvguM,1069
+wmc-0.3.2.dist-info/METADATA,sha256=C2ROfa51gewSRZANjx5YKrxj3y3UVL5saSkkzV7oBQ8,5423
+wmc-0.3.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wmc-0.3.2.dist-info/entry_points.txt,sha256=cdRNaKhyZFqH0BvAJJJSe_KNpGDCLPlBMcA75F3Fq-I,164
+wmc-0.3.2.dist-info/top_level.txt,sha256=ggaIwwyoFuXoMDEAoSvYD9milkzqLgzj0zwCnivpEYE,4
+wmc-0.3.2.dist-info/RECORD,,
