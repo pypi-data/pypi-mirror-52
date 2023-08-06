@@ -1,0 +1,3 @@
+[console_scripts]
+debts = debts.cli:main
+
