@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+BulkSmsZim/__init__.py
+BulkSmsZim/run.py
+BulkSmsZim/text.py
+BulkSmsZim.egg-info/PKG-INFO
+BulkSmsZim.egg-info/SOURCES.txt
+BulkSmsZim.egg-info/dependency_links.txt
+BulkSmsZim.egg-info/requires.txt
+BulkSmsZim.egg-info/top_level.txt
