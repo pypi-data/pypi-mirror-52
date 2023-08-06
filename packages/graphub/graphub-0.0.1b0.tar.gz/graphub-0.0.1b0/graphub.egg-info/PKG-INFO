@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: graphub
+Version: 0.0.1b0
+Summary: Simple GraphQL client for Python
+Home-page: https://github.com/srinivasreddy/graphub
+Author: Srinivas Reddy Thatiparthy
+Author-email: sr.thatiparthy+python@gmail.com
+License: MIT
+Description: # graphub
+        
+        A python library for GraphQL API of Github
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

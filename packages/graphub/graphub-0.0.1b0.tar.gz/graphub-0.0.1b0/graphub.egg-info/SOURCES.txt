@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+graphub/__init__.py
+graphub.egg-info/PKG-INFO
+graphub.egg-info/SOURCES.txt
+graphub.egg-info/dependency_links.txt
+graphub.egg-info/not-zip-safe
+graphub.egg-info/top_level.txt
