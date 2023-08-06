@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+sample_ws_server.egg-info/PKG-INFO
+sample_ws_server.egg-info/SOURCES.txt
+sample_ws_server.egg-info/dependency_links.txt
+sample_ws_server.egg-info/entry_points.txt
+sample_ws_server.egg-info/requires.txt
+sample_ws_server.egg-info/top_level.txt
+ws_server/__init__.py
+ws_server/__main__.py
+ws_server/_version.py
+ws_server/server.py

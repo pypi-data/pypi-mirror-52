@@ -1,0 +1,4 @@
+websockets==8.0.2
+
+[test]
+asynctest==0.13.0
