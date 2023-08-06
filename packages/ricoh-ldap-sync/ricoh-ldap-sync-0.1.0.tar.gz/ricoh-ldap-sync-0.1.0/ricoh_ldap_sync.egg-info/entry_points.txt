@@ -1,0 +1,3 @@
+[console_scripts]
+ricoh-sync = ricoh_ldap_sync.cli:command_line
+
