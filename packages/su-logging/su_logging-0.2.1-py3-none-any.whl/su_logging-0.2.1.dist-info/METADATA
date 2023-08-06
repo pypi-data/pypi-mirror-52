@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: su-logging
+Version: 0.2.1
+Summary: Logging for Stockholm University
+Home-page: https://github.com/stockholmuniversity/su-logging
+License: BSD-3-Clause
+Author: Simon Lundström
+Author-email: simlu+github@su.se
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: structured
+Requires-Dist: logstash_formatter (>=0.5.17,<0.6.0); extra == "structured"
+Project-URL: Repository, https://github.com/stockholmuniversity/su-logging
+Description-Content-Type: text/markdown
+
+# Logging for Stockholm University
+
+Easy to use logging for Stockholm University.
+
+## Usage
+
+```python
+from su.logging import logging
+
+logger = logging.getLogger("myapp")
+logger.info("My INFO message")
+```
+
+For easier developing you can also enable console logging:
+```python
+from su.logging import console, logging
+
+logger = logging.getLogger("myapp")
+logger.info("My INFO message")
+```
+
+### Structured logging
+We use
+[logstash_formatter](https://github.com/ulule/python-logstash-formatter/)'s
+`LogstashFormatterV1` and remove some unused/unnecesary fields.
+
+Depend on `su-logging[structured]` in e.g. your `requirements.txt` and then:
+```python
+from su.logging import structured, logging
+
+logger = logging.getLogger("myapp")
+logger.info("User logged in", extra={"user": "simlu"})
+
+try:
+    raise Exception("User performed illegal activity")
+except Exception as e:
+    logger.exception(e, extra={"user": "simlu"})
+```
+
+## TODO
+* [ ] [Some sort of versioning?](https://github.com/sdispater/poetry/issues/1036#issuecomment-489880822)
+
