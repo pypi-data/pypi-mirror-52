@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: osmosis-ipfs-driver
+Version: 0.0.1
+Summary: 💧 Osmosis IPFS Driver Implementation
+Home-page: https://github.com/oceanprotocol/osmosis-ipfs-driver
+Author: leucothia
+Author-email: devops@oceanprotocol.com
+License: Apache Software License 2.0
+Description: # osmosis-ipfs-driver
+        Osmosis IPFS Driver Implementation
+        
+        
+Keywords: osmosis-ipfs-driver
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+Provides-Extra: docs

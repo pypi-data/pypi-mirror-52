@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+osmosis_ipfs_driver/__init__.py
+osmosis_ipfs_driver/computing_plugin.py
+osmosis_ipfs_driver/data_plugin.py
+osmosis_ipfs_driver.egg-info/PKG-INFO
+osmosis_ipfs_driver.egg-info/SOURCES.txt
+osmosis_ipfs_driver.egg-info/dependency_links.txt
+osmosis_ipfs_driver.egg-info/not-zip-safe
+osmosis_ipfs_driver.egg-info/requires.txt
+osmosis_ipfs_driver.egg-info/top_level.txt
+tests/__init__.py
+tests/test_data_plugin.py
