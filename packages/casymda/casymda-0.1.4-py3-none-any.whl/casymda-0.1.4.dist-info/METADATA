@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: casymda
+Version: 0.1.4
+Summary: A simple DES modeling and simulation environment based on simpy: create models with help of Camunda Modeler; run and debug using a 2D animation based on tkinter and PIL.
+Home-page: UNKNOWN
+Author: FFC
+Author-email: fladdi.mir@gmx.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Pillow
+Requires-Dist: simpy
+Requires-Dist: xmltodict
+
+UNKNOWN
+
+
