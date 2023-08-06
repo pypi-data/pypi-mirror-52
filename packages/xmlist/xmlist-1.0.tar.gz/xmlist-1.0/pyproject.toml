@@ -1,0 +1,23 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "xmlist"
+author = "Joost Molenaar"
+author-email = "j.j.molenaar@gmail.com"
+home-page = "https://github.com/j0057/xmlist"
+classifiers = [
+    "License :: OSI Approved :: MIT License"
+]
+description-file = "README.md"
+
+[tool.flit.metadata.requires-extra]
+dev = [
+    "tox",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-flakes",
+]
