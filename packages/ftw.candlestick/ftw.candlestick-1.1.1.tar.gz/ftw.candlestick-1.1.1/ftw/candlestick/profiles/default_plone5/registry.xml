@@ -1,0 +1,30 @@
+<registry>
+
+    <!--javascript resources-->
+    <records prefix="plone.resources/ftw_candlestick"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++resource++ftw.candlestick/ftw.candlestick.js</value>
+        <value key="deps">jquery</value>
+    </records>
+
+    <records prefix="plone.resources/ftw_candlestick_integration"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++resource++ftw.candlestick/candlestick.integration.js</value>
+        <value key="deps">jquery</value>
+    </records>
+
+    <!--bundling of js resources-->
+    <records prefix="plone.bundles/ftw-candlestick-resources"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+        <value key="resources">
+            <element>ftw_candlestick</element>
+            <element>ftw_candlestick_integration</element>
+        </value>
+        <value key="enabled">True</value>
+        <value key="depends">plone</value>
+        <value key="compile">False</value>
+        <value key="jscompilation">++plone++ftw.candlestick/ftw-candlestick-compiled.js</value>
+        <value key="merge_with">default</value>
+    </records>
+
+</registry>

@@ -1,0 +1,15 @@
+<registry>
+
+    <records prefix="plone.resources/ftw_candlestick"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True" />
+
+    <records prefix="plone.resources/ftw_candlestick_integration"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             remove="True" />
+
+    <records prefix="plone.bundles/ftw-candlestick-resources"
+             interface='Products.CMFPlone.interfaces.IBundleRegistry'
+             remove="True" />
+
+</registry>

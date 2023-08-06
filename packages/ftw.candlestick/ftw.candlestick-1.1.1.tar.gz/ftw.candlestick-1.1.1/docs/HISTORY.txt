@@ -1,0 +1,68 @@
+Changelog
+=========
+
+
+1.1.1 (2019-09-23)
+------------------
+
+- Add profile (and uninstall profile) for Plone 5. [djowett-ftw]
+- Update README.rst to improve English and note Plone5.1 compatibility. [djowett-ftw]
+
+1.1.0 (2019-09-04)
+------------------
+
+- Test against Plone 5.1.x. [mbaechtold]
+- Add HISTORY.txt to long description. [busykoala]
+
+
+1.0.5 (2018-01-11)
+------------------
+
+- Compile javascript sources. [Kevin Bieri]
+
+
+1.0.4 (2017-12-13)
+------------------
+
+- IBAN number are no longer recognized as phone numbers. [Kevin Bieri]
+
+
+1.0.3 (2017-03-23)
+------------------
+
+- Fix parson of phonenumbers.
+
+  - No longer allow too short phonenumbers
+  - Allow phone numbers with varying spaces around number groups
+
+  [Kevin Bieri]
+
+- Move phonenumbers samples to testing section.
+  [Kevin Bieri]
+
+- Fix readme.
+  [Kevin Bieri]
+
+
+1.0.2 (2017-03-10)
+------------------
+
+- Fix parse and replace issues.
+
+  - Parentheses should not be included in the phone links.
+  - Trailing text should not be ignored.
+
+  [Kevin Bieri]
+
+
+1.0.1 (2017-01-13)
+------------------
+
+- Fix error in treeWalker on Internet Explorer >= 9.
+  [Kevin Bieri]
+
+
+1.0.0 (2016-11-30)
+------------------
+
+- Initial implementation
