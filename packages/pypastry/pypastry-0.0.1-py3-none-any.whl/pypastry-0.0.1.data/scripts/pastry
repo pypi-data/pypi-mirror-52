@@ -1,0 +1,44 @@
+#!python
+import argparse
+import os
+import sys
+from pstats import Stats
+
+PROFILE_PATH = '/tmp/pastry.profile'
+
+
+def parse_and_run():
+        parser = argparse.ArgumentParser(
+            description='Run a machine learning experiment',
+            usage='''pastry <command> [<args>]
+
+The command can be:
+   run        Run an experiment
+   print      Print out results from previous experiments
+''')
+        parser.add_argument('command', help='Subcommand to run')
+        args = parser.parse_args(sys.argv[1:2])
+
+        if args.command == 'print':
+            from pypastry.commands.print_ import run
+            run()
+        elif args.command == 'run':
+            from pypastry.commands.run import run
+            run()
+        elif args.command == 'init':
+            from pypastry.commands.init import run
+            run()
+        else:
+            print("Unrecognised command: {}".format(args.command))
+            parser.print_usage()
+            exit(1)
+
+
+if __name__ == "__main__":
+    if os.environ.get('PASTRY_PROFILE'):
+        import cProfile
+        cProfile.run('parse_and_run()', PROFILE_PATH)
+        stats = Stats(PROFILE_PATH)
+        stats.sort_stats('cumulative').print_stats(20)
+    else:
+        parse_and_run()
