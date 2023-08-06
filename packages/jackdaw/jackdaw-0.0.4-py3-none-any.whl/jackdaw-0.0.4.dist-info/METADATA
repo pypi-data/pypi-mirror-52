@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: jackdaw
+Version: 0.0.4
+Summary: Gathering shiny things from your domain
+Home-page: https://github.com/skelsec/jackdaw
+Author: Tamas Jos
+Author-email: info@skelsec.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: aiosmb (>=0.0.3)
+Requires-Dist: msldap (>=0.1.2)
+Requires-Dist: sqlalchemy
+Requires-Dist: dnspython
+Requires-Dist: tqdm
+Requires-Dist: pyvis
+
+UNKNOWN
+
+
