@@ -1,0 +1,10 @@
+README.md
+setup.py
+jsondesign/__init__.py
+jsondesign/entity.py
+jsondesign/schema_store.py
+jsondesign.egg-info/PKG-INFO
+jsondesign.egg-info/SOURCES.txt
+jsondesign.egg-info/dependency_links.txt
+jsondesign.egg-info/requires.txt
+jsondesign.egg-info/top_level.txt
