@@ -1,0 +1,3 @@
+[console_scripts]
+xlsx-split = xlsx_split:main
+
