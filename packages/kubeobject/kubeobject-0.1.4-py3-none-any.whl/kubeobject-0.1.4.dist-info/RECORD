@@ -1,0 +1,14 @@
+kubeobject/__init__.py,sha256=O9CdtKkBbOAonh-zUQC6rAXrY1uU9rzCZSYBtZTb3E0,323
+kubeobject/deployment.py,sha256=ZRV2kWWVdCUj0E5h2PwJRiqEIvK8_AsY5LXMVYUFUa8,1669
+kubeobject/kubeobject.py,sha256=ar3nvbwZk2V7jHz50NSepnLOq-uiDCJC9vr314P3QkI,12261
+kubeobject/role.py,sha256=gx6myd5oMytZoXhcLYDypm_tMmgt3zrn5d4hnGUWpf4,2066
+kubeobject/service.py,sha256=NxnS8OO1XGVlpES7cccH2glrqPHSQw1AOFhiuPMPEwo,945
+kubeobject/serviceaccount.py,sha256=qyReGJRip7r4zsZ5JKHQoc0qCXSgcLtNDuOmXIMWTBA,727
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_custom_object.py,sha256=dsIiRdA-zHHr-LKJjCNlrd0sn5W2EcEGDZ8PK7W2KEU,4769
+tests/test_generate_random_name.py,sha256=0NQrMTfkH4KVbDFSc3n38uq007Y81p0zyhOXROZCxdk,1836
+kubeobject-0.1.4.dist-info/LICENSE,sha256=_m7oOQJ2O5EoyaYZYkvtIoCH3yTFlXHRjdQFVSLbWfc,11343
+kubeobject-0.1.4.dist-info/METADATA,sha256=S7DdxkP7VITre-KW-yOsQRvHs3KG1W0y6cTp50iKXtE,4333
+kubeobject-0.1.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+kubeobject-0.1.4.dist-info/top_level.txt,sha256=OeJb3165ff7ga_P_d6brtrWO4hRbEMe3Xls4P2W-w_8,17
+kubeobject-0.1.4.dist-info/RECORD,,
