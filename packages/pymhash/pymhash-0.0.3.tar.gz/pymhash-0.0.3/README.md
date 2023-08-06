@@ -1,0 +1,1 @@
+Visit the [github](https://github.com/AngeloFrangione/pyhash) for more
