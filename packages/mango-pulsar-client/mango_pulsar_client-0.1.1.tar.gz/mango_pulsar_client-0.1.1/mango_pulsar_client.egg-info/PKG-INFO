@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mango-pulsar-client
+Version: 0.1.1
+Summary: pulsar client base on pulsar official client
+Home-page: https://github.com/DavidCate/pulsar_test
+Author: DavidLiu
+Author-email: 1049698300@qq.com
+License: MIT Licence
+Description: base on pulsar official rest api
+Keywords: pulsar,client
+Platform: any
