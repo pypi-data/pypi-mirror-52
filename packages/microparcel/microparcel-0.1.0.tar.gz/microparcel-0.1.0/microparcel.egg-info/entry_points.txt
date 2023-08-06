@@ -1,0 +1,3 @@
+[console_scripts]
+microparcel = microparcel.cli:main
+
