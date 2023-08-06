@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: travail
+Version: 0.0.1.dev0
+Summary: Pipeline for processing samples in context of rare mendelian diseases
+Home-page: https://github.com/ielis/travail
+Author: Daniel Danis
+Author-email: daniel.gordon.danis@gmail.com
+License: GPLv3
+Keywords: bioinformatics genomics mendelian disease exome genome sequencing
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: toil (>=3.20.0)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: protobuf (>=3.8.0)
+Requires-Dist: pyyaml (>=5.1.2)
+
+# Travail
+Pipeline for processing samples in context of rare mendelian diseases.
+
+## How to install
+
+*Travail* is a Python package that is hosted on PyPi and is meant to be used within a virtual environment, such as Anaconda.
+
+To install *travail* into new *Anaconda* virtual environment named `travail-env`, run  
+```bash
+# create the virtual environment
+conda create -n travail-env python=3.7
+
+# activate the environment after successful creation
+conda activate travail-env
+
+# install travail
+pip install travail
+``` 
+
+## How to run
+
+After installation, `travail` executable should be available in your `$PATH`, when the `travail-env` is activated.
+
+Run 
+```bash
+travail --help
+```  
+
+to see all the available options.
+
+### Check requirements
+
+TODO - write text about the check requirements functionality 
+
