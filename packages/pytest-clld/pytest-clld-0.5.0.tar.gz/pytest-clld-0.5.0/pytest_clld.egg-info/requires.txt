@@ -1,0 +1,9 @@
+pytest>=3.6
+clld
+sqlalchemy>=1.0
+WebTest>=1.3.1
+pyramid>=1.6
+mock
+html5lib
+webob
+selenium>=3.8.1
