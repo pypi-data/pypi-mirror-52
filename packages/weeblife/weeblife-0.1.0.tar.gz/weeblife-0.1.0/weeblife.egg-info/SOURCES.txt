@@ -1,0 +1,15 @@
+README.rst
+setup.py
+weeblife/__init__.py
+weeblife/admin.py
+weeblife/apps.py
+weeblife/models.py
+weeblife/tests.py
+weeblife.egg-info/PKG-INFO
+weeblife.egg-info/SOURCES.txt
+weeblife.egg-info/dependency_links.txt
+weeblife.egg-info/requires.txt
+weeblife.egg-info/top_level.txt
+weeblife/migrations/0001_initial.py
+weeblife/migrations/0002_auto_20190921_1114.py
+weeblife/migrations/__init__.py
