@@ -1,0 +1,2 @@
+include ccm_widgets/dist/bundle.js
+recursive-include ccm_widgets/electron *
