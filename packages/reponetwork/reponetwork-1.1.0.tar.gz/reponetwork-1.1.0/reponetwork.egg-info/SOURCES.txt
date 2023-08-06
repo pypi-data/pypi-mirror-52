@@ -1,0 +1,12 @@
+README.md
+setup.py
+reponetwork/GithubCrawler.py
+reponetwork/GitlabCrawler.py
+reponetwork/__init__.py
+reponetwork/repos.py
+reponetwork.egg-info/PKG-INFO
+reponetwork.egg-info/SOURCES.txt
+reponetwork.egg-info/dependency_links.txt
+reponetwork.egg-info/entry_points.txt
+reponetwork.egg-info/requires.txt
+reponetwork.egg-info/top_level.txt
