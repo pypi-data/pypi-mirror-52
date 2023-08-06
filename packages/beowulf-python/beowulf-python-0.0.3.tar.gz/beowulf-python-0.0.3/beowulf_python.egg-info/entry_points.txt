@@ -1,0 +1,5 @@
+[console_scripts]
+beowulf = beowulf.cli:legacyentry
+beowulftail = beowulf.cli:beowulftailentry
+piston = beowulf.cli:legacyentry
+

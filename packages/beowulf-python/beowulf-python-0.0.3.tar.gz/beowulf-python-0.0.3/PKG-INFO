@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: beowulf-python
+Version: 0.0.3
+Summary: Official python beowulf library.
+Home-page: https://github.com/beowulf-foundation/beowulf-python
+Author: Beowulf Team
+Author-email: contact@beowulfchain.com
+License: MIT
+Description: beowulf-python is the official Beowulf library for Python
+Keywords: beowulf,beowulfchain,cryptocurrency,blockchain
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Development Status :: 4 - Beta
+Provides-Extra: dev
+Provides-Extra: test
+Provides-Extra: build
