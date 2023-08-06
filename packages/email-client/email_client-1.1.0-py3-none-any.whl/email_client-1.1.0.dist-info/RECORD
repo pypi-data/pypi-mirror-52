@@ -1,0 +1,15 @@
+core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core/client.py,sha256=TERwZMXZpnXXp63QoKqBmmE3pFqgMwo6yXN_kqMijuQ,9606
+core/utils.py,sha256=rM4xPp1Eamp55ej5zrA3HWXOevQT0VQJkxq4JSDWBCk,1842
+email_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+email_client/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+email_client/core/client.py,sha256=TERwZMXZpnXXp63QoKqBmmE3pFqgMwo6yXN_kqMijuQ,9606
+email_client/core/utils.py,sha256=rM4xPp1Eamp55ej5zrA3HWXOevQT0VQJkxq4JSDWBCk,1842
+email_client/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+email_client/scripts/clean_email.py,sha256=4u1a0y0ACevoR3ZX1GdiS4yqSFyCkCvjey4MWKHSIXs,1140
+scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scripts/clean_email.py,sha256=4u1a0y0ACevoR3ZX1GdiS4yqSFyCkCvjey4MWKHSIXs,1140
+email_client-1.1.0.dist-info/METADATA,sha256=g3JKQzmkV9Sxcw3mlcsB7QwpHfWcFb7QVKLrJCx1UtM,2458
+email_client-1.1.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+email_client-1.1.0.dist-info/top_level.txt,sha256=CVGSEJ0RIrALXhHil0q3wE1HoTZdqf1DM1PRXhgQTxc,13
+email_client-1.1.0.dist-info/RECORD,,
