@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: gumpy
+Version: 0.1
+Summary: Genetics with Numpy
+Home-page: https://github.com/philipwfowler/gumpy
+Author: Philip W Fowler
+Author-email: philip.fowler@ndm.ox.ac.uk
+License: University of Oxford, see LICENCE.md
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5

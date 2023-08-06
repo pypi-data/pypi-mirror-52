@@ -1,0 +1,16 @@
+README.md
+setup.py
+bin/gumpy-save-genome.py
+gumpy/__init__.py
+gumpy/gene.py
+gumpy/genome.py
+gumpy/genotype.py
+gumpy.egg-info/PKG-INFO
+gumpy.egg-info/SOURCES.txt
+gumpy.egg-info/dependency_links.txt
+gumpy.egg-info/not-zip-safe
+gumpy.egg-info/requires.txt
+gumpy.egg-info/top_level.txt
+gumpy/../config/H37rV_v3.gbk
+gumpy/../config/NC_004148.2.fasta.gz
+gumpy/../config/NC_004148.2.gbk
