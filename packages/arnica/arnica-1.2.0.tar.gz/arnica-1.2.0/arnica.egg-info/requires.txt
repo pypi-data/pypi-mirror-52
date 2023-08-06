@@ -1,0 +1,11 @@
+pytest
+pytest-cov
+pylint
+numpy
+scipy
+sympy
+matplotlib
+pandas
+h5py
+lxml
+pandas
