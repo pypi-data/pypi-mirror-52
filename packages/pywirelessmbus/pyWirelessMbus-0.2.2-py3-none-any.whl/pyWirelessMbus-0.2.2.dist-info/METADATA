@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pyWirelessMbus
+Version: 0.2.2
+Summary: A tool to receive and send Wireless-M-Bus messages.
+Home-page: https://github.com/karlTGA/pyWirelessMbus
+Author: Karl Wolffgang
+Author-email: karlwolffgang@googlemail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+Requires-Dist: pyserial-asyncio
+
+# pyWirelessMbus
+
+This module can decode messages from wireless M-Bus devices. The messages must received from a usb-uart stick. At this moment only the [iM871A-USB from IMST](https://shop.imst.de/wireless-modules/usb-radio-products/10/im871a-usb-wireless-m-bus-usb-adapter-868-mhz) is usable. Maybe somebody can add a alternative.
+
+On the device side pyWirelessMbus reads the messages from the Temp/Hum Sensor [Munia from Weptech](https://www.weptech.de/en/wireless-m-bus/humidity-temperature-sensor-munia.html) and the [EnergyCam from Q-loud](https://www.q-loud.de/energycam).
+
+## Installation
+
+```
+pip install pywirelessmbus
+```
+
+## Development
+
+For testing you can install all deps and start the module with that commands.
+
+```
+pipenv install
+pipenv shell
+python example/monitor.py
+```
+
+## Plans
+
+- Add more devices
+- Add tests
+- Send messages
+
+
