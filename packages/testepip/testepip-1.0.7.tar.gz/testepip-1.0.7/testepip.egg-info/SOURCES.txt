@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pythonpip/__init__.py
+pythonpip/__main__.py
+pythonpip/teste.py
+testepip.egg-info/PKG-INFO
+testepip.egg-info/SOURCES.txt
+testepip.egg-info/dependency_links.txt
+testepip.egg-info/requires.txt
+testepip.egg-info/top_level.txt
