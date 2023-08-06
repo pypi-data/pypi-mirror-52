@@ -1,0 +1,5 @@
+include *.txt
+include tox.ini
+recursive-include bt_flor *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
