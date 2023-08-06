@@ -1,0 +1,9 @@
+README.md
+setup.py
+dockerfile_requirements/__init__.py
+dockerfile_requirements.egg-info/PKG-INFO
+dockerfile_requirements.egg-info/SOURCES.txt
+dockerfile_requirements.egg-info/dependency_links.txt
+dockerfile_requirements.egg-info/entry_points.txt
+dockerfile_requirements.egg-info/requires.txt
+dockerfile_requirements.egg-info/top_level.txt

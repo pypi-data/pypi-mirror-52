@@ -1,0 +1,3 @@
+[console_scripts]
+dockerfile-requirements = dockerfile_requirements:main
+
