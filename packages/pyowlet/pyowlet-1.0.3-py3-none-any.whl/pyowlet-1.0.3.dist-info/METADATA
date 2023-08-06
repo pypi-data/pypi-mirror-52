@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyowlet
+Version: 1.0.3
+Summary: Python client for Owlet monitors
+Home-page: https://github.com/craigjmidwinter/pyowlet
+Author: craigjmidwinter, angel12
+Author-email: craig.j.midwinter@gmail.com
+License: UNKNOWN
+Keywords: owlet baby
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
