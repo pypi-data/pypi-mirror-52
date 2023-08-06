@@ -1,0 +1,100 @@
+{%  for role in vault.roles %}
+"S3VRole{{ role.name|cfsanitize|title }}": {
+    "Type": "AWS::IAM::Role",
+    "Properties": {
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "AWS": { "Fn::Sub": [ "arn:aws:iam::${a}:root", { "a": { "Ref": "AWS::AccountId" } } ] },
+                        "Service": [
+                            "ec2.amazonaws.com"
+                        ]
+                    },
+                    "Action": [
+                        "sts:AssumeRole"
+                    ]
+                }
+            ]
+        },
+        "Policies": [
+            {
+                "PolicyName": "PolicyS3VRole{{ role.name|cfsanitize|title }}",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Action": [
+                                "kms:ListAliases"
+                            ],
+                            "Resource": [
+                                "*"
+                            ],
+                            "Effect": "Allow",
+                            "Sid": "AllowListKMSKeyAliases"
+                        },
+                        {
+                            "Sid": "AllowListKeyMaterialsArtifacts",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:List*"
+                            ],
+                            "Resource": [
+                                "arn:aws:s3:::{{ vault.bucket }}",
+                                {%  for path in role.path %}
+                                "arn:aws:s3:::{{ vault.bucket }}/{{ path }}/*"{{ ',' if not loop.last }}
+                                {% endfor %}
+                            ]
+                        },
+                        {
+                            "Sid": "AllowGetKeyMaterialsArtifacts",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:Get*"
+                            ],
+                            "Resource": [
+                                {%  for path in role.path %}
+                                "arn:aws:s3:::{{ vault.bucket }}/{{ path }}/*"{{ ',' if not loop.last }}
+                                {% endfor %}
+                            ]
+                        }
+                        {% if 'write' in role.privileges %}
+                        ,{
+                            "Sid": "AllowWriteKeyMaterialsArtifacts",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:Put*",
+                                "s3:Delete*"
+                            ],
+                            "Resource": [
+                                "arn:aws:s3:::{{ vault.bucket }}/*",
+                                {%  for path in role.path %}
+                                "arn:aws:s3:::{{ vault.bucket }}/{{ path }}/*"{{ ',' if not loop.last }}
+                                {% endfor %}
+                            ]
+                        }
+                        {% endif %}
+                    ]
+                }
+            }
+        ],
+        "Path": "/",
+        "RoleName": "{{ role.name }}"
+        {%  if role.managed_policies %}
+        ,"ManagedPolicyArns": [
+            {%  for managed_policy in role.managed_policies %}
+            { "Fn::ImportValue": "{{ managed_policy }}" }{{ ',' if not loop.last }}
+            {% endfor %}
+        ]
+        {%  endif %}
+    }
+},
+"S3VInstanceProfile{{ role.name|cfsanitize|title }}": {
+    "Type": "AWS::IAM::InstanceProfile",
+    "Properties": {
+        "Roles": [{ "Ref": "S3VRole{{ role.name|cfsanitize|title }}" }]
+    }
+}{{ ',' if not loop.last }}
+{%  endfor %}

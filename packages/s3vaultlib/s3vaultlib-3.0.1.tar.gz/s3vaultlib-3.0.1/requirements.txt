@@ -1,0 +1,15 @@
+botocore
+requests<3.0.0
+boto3>=1.8.6
+Jinja2>=2.10,<3.0.0
+pyboto3
+python-dateutil>=2.7.5
+pytz>=2018.7
+six>=1.11.0
+python-string-utils==0.6.0
+dpath==1.4.2
+prompt-toolkit==2.0.7
+Pygments==2.2.0
+ruamel.yaml==0.15.85
+colorlog==4.0.2
+
