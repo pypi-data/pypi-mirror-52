@@ -1,0 +1,17 @@
+pyscaffoldext/__init__.py,sha256=vXgXMgYCDkxR9ifnsCGWSHLloiNxhHjy0mpN2L-EspA,80
+pyscaffoldext/dsproject/__init__.py,sha256=UsKRpOAPckk8XYjXorLGiq6w5mHu3mgF75AVf88ItAI,380
+pyscaffoldext/dsproject/extension.py,sha256=Zl2wS_PvfuM8MDfmdUbqr42A7JMe2WFw2MII1MXmqEw,4954
+pyscaffoldext/dsproject/templates/__init__.py,sha256=aaM0Sa-64WYhrgdPHhUzrze6P2HS51OPOiJr-tldZ1g,2665
+pyscaffoldext/dsproject/templates/environment_yaml.template,sha256=Rq4icWQ53jk4FDRcLxVLJI3qZqpnw_ktAHDxlp3JJLU,563
+pyscaffoldext/dsproject/templates/gitignore_all.template,sha256=cdjKhYhi-1WFuTGmpN4dH_94VgUBQFw82S3trzlCFPg,71
+pyscaffoldext/dsproject/templates/gitignore_data.template,sha256=3ZLnvxprrDMm424ESXWQ4vNJYIBYAtrfAvhjGQ3uKho,143
+pyscaffoldext/dsproject/templates/readme_md.template,sha256=GcUy-ymYWI0hRIiiLDXKWLe2YadiX9OAYLqorCevY_w,4701
+pyscaffoldext/dsproject/templates/template_ipynb.template,sha256=Y4cvnNhFoTRv67sZct-yFtxLqGe5hnAk1cFmqWJT5tc,2194
+pyscaffoldext/dsproject/templates/train_model_py.template,sha256=XC9YeE_OoB82jaE5_3Qwpqp_bnteXwp3IxpodFDNPUw,1165
+pyscaffoldext_dsproject-0.4.dist-info/AUTHORS.rst,sha256=V9jcDscckn7iQaiBh8chRsqYnQHh-D9BqokVS9CiaP4,86
+pyscaffoldext_dsproject-0.4.dist-info/LICENSE.txt,sha256=Wdg4lZqfMFh5nu-JRES79xgTOF4PEXBFWuaDBNj4ToQ,1082
+pyscaffoldext_dsproject-0.4.dist-info/METADATA,sha256=p_JuScZupaXJZMtUXHJ6YjSwQe4c_OuBFSGXEMkWG3w,5338
+pyscaffoldext_dsproject-0.4.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+pyscaffoldext_dsproject-0.4.dist-info/entry_points.txt,sha256=TSYhWifL-8m0aR7_qJv7s_C0c5Jp7U7IIvRqE6d7zy4,74
+pyscaffoldext_dsproject-0.4.dist-info/top_level.txt,sha256=zac9JJq83qBJe5oCWbtXhQVr8mJ5TZFW2jCFlSQ6n0Y,14
+pyscaffoldext_dsproject-0.4.dist-info/RECORD,,
