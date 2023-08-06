@@ -1,0 +1,15 @@
+README.md
+setup.py
+qdep/__init__.py
+qdep/qdep.py
+qdep.egg-info/PKG-INFO
+qdep.egg-info/SOURCES.txt
+qdep.egg-info/dependency_links.txt
+qdep.egg-info/entry_points.txt
+qdep.egg-info/requires.txt
+qdep.egg-info/top_level.txt
+qdep/internal/__init__.py
+qdep/internal/cli.py
+qdep/internal/common.py
+qdep/internal/prf.py
+qdep/internal/private.py
