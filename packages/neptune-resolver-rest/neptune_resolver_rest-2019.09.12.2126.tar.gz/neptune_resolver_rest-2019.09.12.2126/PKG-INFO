@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: neptune_resolver_rest
+Version: 2019.09.12.2126
+Summary: HTTP Request based resolver
+Home-page: https://git.best-service.online/yurzs/neptune-resolver-rest
+Author: Yury (Yurzs)
+Author-email: dev@best-service.online
+License: MIT
+Description: UNKNOWN
+Keywords: NEPTUNE,REST,RESOLVER
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
