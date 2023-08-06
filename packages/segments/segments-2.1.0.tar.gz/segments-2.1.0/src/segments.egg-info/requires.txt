@@ -1,0 +1,14 @@
+regex
+csvw>=1.5.6
+clldutils>=1.7.3
+
+[dev]
+flake8
+wheel
+twine
+
+[test]
+pytest>=3.6
+pytest-mock
+mock
+pytest-cov
