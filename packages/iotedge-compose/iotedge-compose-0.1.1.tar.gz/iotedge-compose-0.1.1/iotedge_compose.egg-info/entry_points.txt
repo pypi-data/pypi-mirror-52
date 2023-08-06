@@ -1,0 +1,3 @@
+[console_scripts]
+iotedge-compose = convertor.convertor:main
+
