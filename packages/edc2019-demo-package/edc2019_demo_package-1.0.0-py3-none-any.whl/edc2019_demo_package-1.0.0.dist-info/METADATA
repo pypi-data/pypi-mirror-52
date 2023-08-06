@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: edc2019-demo-package
+Version: 1.0.0
+Summary: my brilliant package
+Home-page: UNKNOWN
+Author: mechazawa
+Author-email: mech@equinor.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+# my-package
+Readme for a fun project!
+
+
