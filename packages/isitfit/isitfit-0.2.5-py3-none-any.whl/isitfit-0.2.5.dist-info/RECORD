@@ -1,0 +1,14 @@
+isitfit/__init__.py,sha256=BqztJmKZ9VvuTtZnC2Ix0p6ZA8khIMc_5S_IisckMwo,24
+isitfit/cli.py,sha256=g5tZMQCAL3nS2CpmbP1mhUH2J65BNJK9HY8eMuNzFWc,1664
+isitfit/cloudtrail_ec2type.py,sha256=9XyBfqXMZpYuiFHaqUL8sMf-jl70yyMj8RLFa3NQ1TA,2927
+isitfit/mainManager.py,sha256=hzeggHI9GaWA08DyqtOiGThDhRwBdaN19mVzLp_2DHg,6705
+isitfit/optimizerListener.py,sha256=UvVy3puHGEI8JcaOYcU8X37CeTNMQHm6KkBOGrPjX54,4001
+isitfit/pull_cloudtrail_lookupEvents.py,sha256=yQVO6LnRZ3TEaArMqX-mdvaidODTX_iUa4Px0b_vMNE,7813
+isitfit/utilizationListener.py,sha256=ibBWwbod9eUsGTpMhpgu83izGEIxuVp35F0xz2PA620,2140
+isitfit/utils.py,sha256=d6Hjt3RqvNoFW3p75QsV2jMT30tMv07CdjCx0N8jrRM,2678
+isitfit-0.2.5.dist-info/LICENSE,sha256=bvZVdPDmx0V0zM7pb9bYztDa0KMF1TvYGxwqWjQzohU,11341
+isitfit-0.2.5.dist-info/METADATA,sha256=oxeWQyfE7O0uFI9Dm2AFCuMYDISiYyGlcytFYpkNjG8,669
+isitfit-0.2.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+isitfit-0.2.5.dist-info/entry_points.txt,sha256=Sxst_UvODNEMsIvYNUf68xpSWHbMf4RUq9S-AWvuFXk,63
+isitfit-0.2.5.dist-info/top_level.txt,sha256=OpYd8yCkmuhAbaWCOLTC4YoqV_y3SR8xrdhl3q83FI0,8
+isitfit-0.2.5.dist-info/RECORD,,
