@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pytiles
+Version: 0.0.2
+Summary: python OGC WMS server
+Home-page: UNKNOWN
+Author: Kobe De Decker
+Author-email: kobededecker@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: rasterio
+
+# pytiles
+python wms implementation for local (or remote) raster files.
+

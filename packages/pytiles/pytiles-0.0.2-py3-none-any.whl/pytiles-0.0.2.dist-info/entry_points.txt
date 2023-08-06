@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pytiles=pytiles.pytiles:pytilesc
+    
