@@ -1,0 +1,3 @@
+[console_scripts]
+text2py = text2py:run
+
