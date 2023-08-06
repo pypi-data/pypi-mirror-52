@@ -1,0 +1,10 @@
+README.md
+setup.py
+scrapyd_egg_checksum/__init__.py
+scrapyd_egg_checksum/eggstorage.py
+scrapyd_egg_checksum/webservice.py
+scrapyd_egg_checksum.egg-info/PKG-INFO
+scrapyd_egg_checksum.egg-info/SOURCES.txt
+scrapyd_egg_checksum.egg-info/dependency_links.txt
+scrapyd_egg_checksum.egg-info/requires.txt
+scrapyd_egg_checksum.egg-info/top_level.txt
