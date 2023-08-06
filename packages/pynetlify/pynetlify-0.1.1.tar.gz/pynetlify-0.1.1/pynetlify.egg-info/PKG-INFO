@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: pynetlify
+Version: 0.1.1
+Summary: Client and library to interact with Netlify API.
+Home-page: https://github.com/toni-sissala/pynetlify
+Author: Toni Sissala
+Author-email: toni.sissala@gmail.com
+License: GPL v3
+Description: PyNetlify
+        =========
+        
+        Python library and simple command line client to interact with Netlify REST API. Tested with Python versions 2.7, 3.5, 3.6, 3.7.
+        
+        Requires Netlify account with an active authentication token. Visit https://www.netlify.com/docs/cli/#authentication for more information.
+        
+        
+        Install
+        -------
+        
+        PyNetlify is available to install from PyPI::
+        
+           pip install pynetlify
+        
+        
+        Use as a command line client
+        ----------------------------
+        
+        Configure by setting your personal Netlify authentication token to pynetlify.ini file at current working directory. Example pynetlify.ini::
+        
+           [netlify]
+           auth-token = <personal-authentication-token>
+        
+        Create a new site
+        
+        .. code-block:: bash
+        
+           python -m pynetlify create_site
+        
+        Deploy folder to a site
+        
+        .. code-block:: bash
+        
+           python -m pynetlify deploy_folder --site-id <site-id> <folder-to-deploy>
+        
+        List sites
+        
+        .. code-block:: bash
+        
+           python -m pynetlify list_sites
+        
+        Delete site
+        
+        .. code-block:: bash
+        
+           python -m pynetlify delete_site <site-id>
+        
+        Print command line help
+        
+        .. code-block:: bash
+        
+           python -m pynetlify --help
+        
+        Print help for specific subcommand
+        
+        .. code-block:: bash 
+        
+           python -m pynetlify <subcommand> --help
+        
+        
+        Use as a Python library
+        -----------------------
+        
+        Import and create APIRequest object.
+        
+        .. code-block:: python
+        
+           from pynetlify import pynetlify
+           api_request = pynetlify.APIRequest('auth_token')
+        
+        Create site.
+        
+        .. code-block:: python
+        
+           newly_created_site = api_request.create_site({'name': 'newly-created-site'})
+        
+        See pynetlify.py source for more.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst
