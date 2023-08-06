@@ -1,0 +1,11 @@
+README.md
+setup.py
+whitening/__init__.py
+whitening/__main__.py
+whitening.egg-info/PKG-INFO
+whitening.egg-info/SOURCES.txt
+whitening.egg-info/dependency_links.txt
+whitening.egg-info/entry_points.txt
+whitening.egg-info/not-zip-safe
+whitening.egg-info/requires.txt
+whitening.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+numpy
+Pillow
+scikit-image
+scipy
+
+[test]
+pytest
