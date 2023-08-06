@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pycorda
+Version: 0.37
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Jamiel Sheikh
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: jaydebeapi
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: datetime
+Requires-Dist: requests
+Requires-Dist: pyjks
+
+UNKNOWN
+
+
