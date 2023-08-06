@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+weld/__init__.py
+weld/bindings.py
+weld/encoders.py
+weld/types.py
+weld/weldobject.py
+weld.egg-info/PKG-INFO
+weld.egg-info/SOURCES.txt
+weld.egg-info/dependency_links.txt
+weld.egg-info/top_level.txt
