@@ -1,0 +1,6 @@
+
+[:python_version < "3.2"]
+pathlib2
+
+[:python_version >= "3.6"]
+makefun
