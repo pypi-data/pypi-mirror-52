@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: trimport
+Version: 0.0.5
+Summary: Directory structure function import
+Home-page: https://github.com/christopherzimmerman/trimport
+Author: Chris Zimmerman
+Author-email: chris@chriszimmerman.me
+Maintainer: Chris Zimmerman
+Maintainer-email: chris@chriszimmerman.me
+License: BSD-3 Clause
+Project-URL: Code, https://github.com/christopherzimmerman/trimport
+Project-URL: Issue tracker, https://github.com/christopherzimmerman/trimport/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+
+UNKNOWN
+
+
