@@ -1,0 +1,6 @@
+include *.css
+include *.js
+include *.jpeg
+include *.png
+include *.gif
+include README-Pypi.md
