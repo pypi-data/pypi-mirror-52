@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+search = mkdocs_localsearch_plugin:SearchPlugin
+
