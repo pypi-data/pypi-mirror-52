@@ -1,0 +1,13 @@
+README.md
+setup.py
+hbrs_grader/__init__.py
+hbrs_grader/core.py
+hbrs_grader.egg-info/PKG-INFO
+hbrs_grader.egg-info/SOURCES.txt
+hbrs_grader.egg-info/dependency_links.txt
+hbrs_grader.egg-info/entry_points.txt
+hbrs_grader.egg-info/requires.txt
+hbrs_grader.egg-info/top_level.txt
+hbrs_grader/template/__init__.py
+hbrs_grader/template/exam_in.csv
+hbrs_grader/template/template.ipynb
