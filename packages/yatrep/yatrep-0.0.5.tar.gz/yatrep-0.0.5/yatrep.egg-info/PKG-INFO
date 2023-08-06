@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: yatrep
+Version: 0.0.5
+Summary: Unity tests results xml parser tool
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: Unity tests results xml parser tool
+Platform: UNKNOWN
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
