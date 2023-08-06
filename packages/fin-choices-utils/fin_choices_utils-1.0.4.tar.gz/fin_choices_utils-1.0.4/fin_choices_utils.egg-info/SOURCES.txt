@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.cfg
+setup.py
+fin_choices_utils/__init__.py
+fin_choices_utils/core.py
+fin_choices_utils.egg-info/PKG-INFO
+fin_choices_utils.egg-info/SOURCES.txt
+fin_choices_utils.egg-info/dependency_links.txt
+fin_choices_utils.egg-info/requires.txt
+fin_choices_utils.egg-info/top_level.txt
+fin_choices_utils/utils/__init__.py
+fin_choices_utils/utils/currency_code.py
