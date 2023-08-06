@@ -1,0 +1,15 @@
+appel/__init__.py,sha256=OCyVGyyeplWjWz0rI4UvWSf3ZlksK8wVAl44PKilCaE,57
+appel/config.py,sha256=EAGkvIemWPomYORx_mV0m3MU31PxsF8-yVwNBIGW1U0,689
+appel/generate_tree.py,sha256=6OMBr0GkFtZvDrDWkifKqgh3MhqqDK_eDDb_cGVllk4,6564
+appel/region.py,sha256=v87aZCuqEaaaNc3E86U0nWK4Qcq8kk4x8-fqHvqDK_k,2709
+appel/searchtree.py,sha256=ysMm_eHvNs2MTcU6MmH7Zj-XYZqyAqkNZo-9yCMUxVE,6708
+appel/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appel/tests/correspondence.py,sha256=TrsbfOXxnOqOKg78wk7j_fAUERabvb7fH2p4i0y8fWk,4475
+appel/tests/generateTestDatasets.py,sha256=QJfyVLLgE98Qrqx6g9vyxlmyD_cl4_mab4Buy8AO4cY,4219
+appel/tests/testparser.py,sha256=wdwBeAC-pixU1s47dgNejCh3hrLiAlXUEUuHexWp0sM,3324
+resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appel_geocode-0.1.2.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+appel_geocode-0.1.2.dist-info/METADATA,sha256=6RpZJk_uzqlFSZTqDdc3oQAK0Ldokt1fflOk_jiL1U0,3857
+appel_geocode-0.1.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+appel_geocode-0.1.2.dist-info/top_level.txt,sha256=rvBdjlRnPlw83fqoS6cikEUEfcZiHWG5iWZsVSTpuec,16
+appel_geocode-0.1.2.dist-info/RECORD,,
