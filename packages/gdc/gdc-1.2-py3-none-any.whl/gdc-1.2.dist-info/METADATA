@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gdc
+Version: 1.2
+Summary: Skills management software for french secondary teachers
+Home-page: https://bitbucket.org/chpalmann/gdc
+Author: Christophe Palmann
+Author-email: cpn.math@gmail.com
+License: BSD-2-Clause
+Platform: UNKNOWN
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: kiwisolver (==1.1.0)
+Requires-Dist: matplotlib (==3.1.1)
+Requires-Dist: numpy (==1.17.0)
+Requires-Dist: Pillow (==6.1.0)
+Requires-Dist: pyparsing (==2.4.2)
+Requires-Dist: PyPDF2 (==1.26.0)
+Requires-Dist: python-dateutil (==2.8.0)
+Requires-Dist: reportlab (==3.5.23)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: xlrd (==1.2.0)
+
+UNKNOWN
+
+
