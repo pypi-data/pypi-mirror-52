@@ -1,0 +1,13 @@
+README.md
+setup.py
+kord/__init__.py
+kord/errors.py
+kord/keys.py
+kord/notes.py
+kord/tunings.py
+kord/universe.py
+kord.egg-info/PKG-INFO
+kord.egg-info/SOURCES.txt
+kord.egg-info/dependency_links.txt
+kord.egg-info/requires.txt
+kord.egg-info/top_level.txt
