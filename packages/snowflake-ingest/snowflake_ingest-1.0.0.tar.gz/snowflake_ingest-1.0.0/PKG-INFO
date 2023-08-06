@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: snowflake_ingest
+Version: 1.0.0
+Summary: Official SnowflakeDB File Ingest SDK
+Home-page: https://www.snowflake.net
+Author: Snowflake Computing
+Author-email: support@snowflake.net
+License: Apache
+Description: This package includes the Snowpipe python SDK
+        
+        Snowflake Documentation is available at:
+        https://docs.snowflake.net/
+        
+        Source code is also available at: https://github.com/snowflakedb/snowflake-ingest-python
+        
+        Release Notes
+        -------------------------------------------------------------------------------
+        
+        - v1.0.0 (September 19, 2018)
+        
+              - Fix typing package issue in python 3.5.0 and 3.5.1
+              - Support key rotation in key pair authentication
+        
+        - v0.9.1 (November 9, 2017)
+        
+              - Public preview release
+        
+Keywords: snowflake ingest sdk copy loading
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Database
