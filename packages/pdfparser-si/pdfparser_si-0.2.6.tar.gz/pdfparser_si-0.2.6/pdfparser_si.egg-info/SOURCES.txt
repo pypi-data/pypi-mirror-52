@@ -1,0 +1,10 @@
+README.md
+setup.py
+pdfparser/__init__.py
+pdfparser/poppler.pyx
+pdfparser_si.egg-info/PKG-INFO
+pdfparser_si.egg-info/SOURCES.txt
+pdfparser_si.egg-info/dependency_links.txt
+pdfparser_si.egg-info/not-zip-safe
+pdfparser_si.egg-info/requires.txt
+pdfparser_si.egg-info/top_level.txt
