@@ -1,0 +1,36 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[[source]]
+url = "https://test.pypi.org/simple"
+verify_ssl = true
+name = "test-pypi"
+
+[dev-packages]
+flake8 = "*"
+pytest = "*"
+tox = "==3.7.0"
+tox-pipenv = "==1.9.0"
+pytest-cov = "*"
+flake8-docstrings = "*"
+pygments = "*"
+docker = "*"
+mypy = "*"
+
+[packages]
+cryptography = "*"
+base58 = "*"
+docker = "*"
+click = "*"
+pyyaml = "*"
+click-log = "*"
+oef = {index = "test-pypi",version = "==0.6.10"}
+colorlog = "*"
+jsonschema = "*"
+protobuf = "*"
+mkdocs = "*"
+
+[requires]
+python_version = "3.7"
