@@ -1,0 +1,3 @@
+[console_scripts]
+virtualscanner = virtualscanner.coms.coms_ui.coms_server_flask:launch_virtualscanner
+
