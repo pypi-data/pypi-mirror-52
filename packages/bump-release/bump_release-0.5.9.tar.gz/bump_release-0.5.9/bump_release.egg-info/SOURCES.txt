@@ -1,0 +1,13 @@
+README.md
+setup.py
+bump_release/__init__.py
+bump_release/__main__.py
+bump_release/helpers.py
+bump_release.egg-info/PKG-INFO
+bump_release.egg-info/SOURCES.txt
+bump_release.egg-info/dependency_links.txt
+bump_release.egg-info/entry_points.txt
+bump_release.egg-info/requires.txt
+bump_release.egg-info/top_level.txt
+tests/__init__.py
+tests/test_updater.py
