@@ -1,0 +1,13 @@
+pentapy/__init__.py,sha256=qMzD20HMmaHX4P0fNuNfa3zzCjc3DcXUCbVOfj8KSVw,761
+pentapy/_version.py,sha256=8hJ4gQdL45JSm6ZsTZtu4hpknqjcdwmr7XJoyBEyU5I,59
+pentapy/core.py,sha256=bjRfZ4NiQ0eXuA-mRoQS6I1IUq0I2hpm_mJmeLnX3cA,6283
+pentapy/py_solver.py,sha256=PwGDyIHNTbGqiCSrt5dkXNFyi3QoKF9upHZmFefHzS8,6626
+pentapy/solver.c,sha256=mnfv9AFq83ZC6jPwIPa7DokN4FcZAyuPEevEBCQn8E8,1014655
+pentapy/solver.pyx,sha256=bAnEIy0UPohTffBa3us-86HI6-fqdEY044JkwcU-3N4,4468
+pentapy/solver.so,sha256=52GCmEwPmt19q3fief85HB1Y_9NZg0C9RoMoJmt-WyQ,425932
+pentapy/tools.py,sha256=mpX5MKSfFyWxgRD0vK2qjX0m9t2rdDuUCziu8rZAGeg,8921
+pentapy-1.0.0rc1.dist-info/LICENSE,sha256=vOo3O6GKxA1CqeOszlMRBuvqf8geUqbgG60H7hNj8MA,1084
+pentapy-1.0.0rc1.dist-info/METADATA,sha256=rmps-gaxrAuu4cAm7_Rg9uimFz3wJkmL6yQKYe80NtU,4872
+pentapy-1.0.0rc1.dist-info/WHEEL,sha256=JtYdWnlubjOFYQUDSGSzTyeGdf0eN5ZvaSYK2oKlNiM,109
+pentapy-1.0.0rc1.dist-info/top_level.txt,sha256=goRKLgOhKlpDiqNg4mHFXb3VhVOqmC4jnJFNPOzI-Qo,8
+pentapy-1.0.0rc1.dist-info/RECORD,,
