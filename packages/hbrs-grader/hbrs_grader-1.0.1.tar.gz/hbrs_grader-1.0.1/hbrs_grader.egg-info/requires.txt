@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+jupyter
+IPython
+nbformat
+nbconvert
+hide_code
+click
+
+[:python_version < "3.7"]
+importlib_resources

@@ -1,0 +1,3 @@
+[console_scripts]
+hbrs-grader = hbrs_grader.core:cli
+
