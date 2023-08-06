@@ -1,0 +1,9 @@
+[console_scripts]
+wmc = wmc.cli:main
+
+[wmc.register_cls]
+info = wmc.commands:Info
+link = wmc.commands:Link
+record = wmc.commands:Record
+setup = wmc.commands:Setup
+

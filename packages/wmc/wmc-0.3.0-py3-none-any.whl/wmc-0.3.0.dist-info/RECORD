@@ -1,0 +1,15 @@
+wmc/__init__.py,sha256=1Er_zHDx9-mn0myvvJNKi5MsZA_SA1FjclFuRZ9NngY,231
+wmc/__main__.py,sha256=jzUP926c0zYCfKqkoRuYz2nVKg3ihvqdoOPqXFbIV-w,134
+wmc/assemble.py,sha256=stn-0BH67c_WzggOJxArLYwKpkw9-eVSF392XZTNh-k,3451
+wmc/cli.py,sha256=n_HlyPm8P8-ngWEnQjbAw8cGeit_4RRJ6tSESOPdhEE,2321
+wmc/commands.py,sha256=MLMQrahldvjyRNEXqDTrKnNFqygjgsZiVSL5Gx-uci8,3380
+wmc/default.py,sha256=DYpq3FJiKR2xZ2Oz87oAStgWbfICUVJY8H_A-0LIhsQ,3266
+wmc/dispatch.py,sha256=t7y0RPOR69Y8iF9sZG2qm7DytgZo4NHbZvSlOfQWTnE,1359
+wmc/project.py,sha256=RHVL_zp7scsq_uznlB8Du48T1zc5iAD8wdBuq10UT3E,4274
+wmc/utils.py,sha256=9JtF-3WzvbOud_PgmzfInqVmJzp-1UC2IitlULkwe-M,2729
+wmc-0.3.0.dist-info/LICENSE,sha256=VaHSyuHDerVFfESXCspoAKMQScg7TA3tCtJmFvxvguM,1069
+wmc-0.3.0.dist-info/METADATA,sha256=xkwjLiEouRmph-xkIWc371Nw4wjYzqUjHoG86qxzyHE,3488
+wmc-0.3.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wmc-0.3.0.dist-info/entry_points.txt,sha256=cdRNaKhyZFqH0BvAJJJSe_KNpGDCLPlBMcA75F3Fq-I,164
+wmc-0.3.0.dist-info/top_level.txt,sha256=ggaIwwyoFuXoMDEAoSvYD9milkzqLgzj0zwCnivpEYE,4
+wmc-0.3.0.dist-info/RECORD,,
