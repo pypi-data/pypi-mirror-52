@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:15+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: models.py:22
+msgid "Name"
+msgstr ""
+
+#: models.py:33
+msgid "Ordering"
+msgstr ""
+
+#: templates/django_privacy_mgmt/banner.html:56
+msgid ""
+"<a href=\"#\" class=\"btn btn-default btn-xs js-cookie-accept pull-right"
+"\">Accept</a> This website uses cookies to help ensure that you enjoy the "
+"best experience.<br/> If you do not consent to our use of cookies, please "
+"adjust your <a href=\"#\" class=\"js-cookie-settings\">privacy settings</a> "
+"accordingly."
+msgstr ""
+"<a href=\"#\" class=\"btn btn-default btn-xs js-cookie-accept pull-right"
+"\">Accepter</a> Ce site Web utilise des cookies pour offrir une meilleure "
+"expérience de navigation aux utilisateurs.<br/> Si vous ne souhaitez pas que "
+"les cookies soient activés, adapte S.V.P. les <a href=\"#\" class=\"js-"
+"cookie-settings\">réglages de protection des données</a>."
+
+#: templates/django_privacy_mgmt/link.html:1
+#: templates/django_privacy_mgmt/popup.html:49
+msgid "Privacy Settings"
+msgstr "Gestion de la sphère privée"
+
+#: templates/django_privacy_mgmt/popup.html:53
+msgid ""
+"Websites do not have full control over cookies that may set by various third-"
+"party scripts. To see detailed information about and to manage cookies in "
+"your browser, please check its privacy settings."
+msgstr ""
+"Les sites Web ne disposent pas d’un contrôle total sur les cookies pouvant "
+"être installés par différents scripts de tiers. Pour obtenir des "
+"informations détaillées sur l’administration des cookies dans votre "
+"navigateur, vérifiez S.V.P. vos réglages de protection des données."
+
+#: templates/django_privacy_mgmt/popup.html:62
+msgid "Essentials"
+msgstr "Important"
+
+#: templates/django_privacy_mgmt/popup.html:63
+msgid ""
+"These cookies and scripts cannot be deactivated as they are needed to "
+"correctly render this website."
+msgstr ""
+"Ces cookies et scripts ne peuvent pas être désactivés, car ils servent à "
+"l’affichage correct de ce site Web."
+
+#: templates/django_privacy_mgmt/popup.html:73
+#: templates/django_privacy_mgmt/popup.html:104
+#: templates/django_privacy_mgmt/popup.html:129
+msgid "Currently none in use."
+msgstr ""
+
+#: templates/django_privacy_mgmt/popup.html:81
+msgid "Statistics"
+msgstr "Important"
+
+#: templates/django_privacy_mgmt/popup.html:89
+msgid ""
+"These tools are used to collect statistics about user behaviour that helps "
+"us to improve our website and services. No personal data are collected."
+msgstr ""
+"Ces outils sont utilisés pour collecter des statistiques sur les habitudes "
+"des utilisateurs, ce qui nous aide à améliorer notre site Web et nos "
+"prestations. Aucune donnée personnelle n’est collectée."
+
+#: templates/django_privacy_mgmt/popup.html:112
+msgid "Personalisation"
+msgstr "Personnalisation"
+
+#: templates/django_privacy_mgmt/popup.html:119
+msgid ""
+"In order to improve your experience of our services, we will customise your "
+"experience based upon your usage."
+msgstr ""
+"Pour améliorer votre expérience de navigation avec nos services, nous "
+"adaptons celle-ci en nous basant sur vos habitudes d’utilisation."
+
+#: templates/django_privacy_mgmt/popup.html:134
+msgid "Accept"
+msgstr "Accepter"
