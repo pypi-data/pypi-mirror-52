@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: mlnx-switchdev-mode
+Version: 0.0.1.dev7
+Summary: Utility to switch Mellanox ConnectX network cards into switchdev mode
+Home-page: http://github.com/openstack-charmers/mlnx-switchdev-mode
+Author: OpenStack Charmers Team, William Grant
+Author-email: william.grant@canonical.com
+License: UNKNOWN
+Description: # Mellanox Switchdev Mode
+        
+        A simple utility that switches Mellanox ConnectX 5/6 cards that support
+        switchdev mode into switchdev mode on boot for use in hardware offload
+        scenarios such as Open vSwitch.
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

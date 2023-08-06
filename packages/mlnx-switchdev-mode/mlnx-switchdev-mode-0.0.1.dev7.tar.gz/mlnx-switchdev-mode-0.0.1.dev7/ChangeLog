@@ -1,0 +1,11 @@
+CHANGES
+=======
+
+* Drop Environment from setup
+* Update project information
+* Update systemd unit to run after charmed openstack sriov configuration
+* Comments and help
+* Misc tidy
+* more py3 typing
+* py3 typing
+* Baseline commit
