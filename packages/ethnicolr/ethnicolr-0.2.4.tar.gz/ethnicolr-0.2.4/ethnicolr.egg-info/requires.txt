@@ -1,0 +1,11 @@
+pandas==0.19.2
+h5py==2.7.0
+Keras==2.2.0
+numpy==1.14.5
+tensorflow==1.12.3
+
+[dev]
+check-manifest
+
+[test]
+coverage
