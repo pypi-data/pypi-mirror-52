@@ -1,0 +1,6 @@
+upstream {{ name }} {
+    zone {{ name }}_service 64k;
+{% for server in servers %}
+    server {{ server }};
+{% endfor %}
+}
