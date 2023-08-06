@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: gallerist-azurestorage
+Version: 0.0.3
+Summary: Azure Storage file store for Gallerist
+Home-page: https://github.com/RobertoPrevato/Gallerist-AzureStorage
+Author: RobertoPrevato
+Author-email: roberto.prevato@gmail.com
+License: MIT
+Keywords: pictures images web azure storage
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: gallerist
+Requires-Dist: azure-storage-blob
+
+[![Build Status](https://dev.azure.com/robertoprevato/Nest/_apis/build/status/RobertoPrevato.Gallerist-AzureStorage?branchName=master)](https://dev.azure.com/robertoprevato/Nest/_build/latest?definitionId=27&branchName=master) [![pypi](https://img.shields.io/pypi/v/gallerist-azurestorage.svg?color=blue)](https://pypi.org/project/gallerist-azurestorage/)
+
+# Gallerist-AzureStorage
+Gallerist classes for Azure Storage: implements reading image files from Azure Blob Service, and writing of resized pictures to the same.
+
+```bash
+$ pip install gallerist-azurestorage
+```
+
+This library is used in [Gallerist-AzureFunctions](https://github.com/RobertoPrevato/Gallerist-AzureFunctions), an Azure Functions front-end that uses [`Gallerist`](https://github.com/RobertoPrevato/Gallerist) library, to resize pictures
+in Azure Storage Blob Service.
+
+
