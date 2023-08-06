@@ -1,0 +1,66 @@
+Metadata-Version: 1.2
+Name: url2tree
+Version: 0.1.0
+Summary: Python package that analysis url visiting log by using tree structure.
+Home-page: https://github.com/xodhx4/url2tree
+Author: Taeoh Kim
+Author-email: kimtaeoh95@gmail.com
+License: MIT license
+Description: ========
+        url2tree
+        ========
+        
+        
+        .. image:: https://img.shields.io/pypi/v/url2tree.svg
+                :target: https://pypi.python.org/pypi/url2tree
+        
+        .. image:: https://img.shields.io/travis/xodhx4/url2tree.svg
+                :target: https://travis-ci.org/xodhx4/url2tree
+        
+        .. image:: https://readthedocs.org/projects/url2tree/badge/?version=latest
+                :target: https://url2tree.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Python package that analysis url visiting log by using tree structure.
+        
+        
+        * Free software: MIT license
+        * Documentation: https://url2tree.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-09-18)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: url2tree
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*
