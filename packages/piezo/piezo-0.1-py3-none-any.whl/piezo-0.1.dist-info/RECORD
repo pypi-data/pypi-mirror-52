@@ -1,0 +1,14 @@
+config/CRYPTICv1.0-RSU-catalogue-H37rV_v3.csv,sha256=N6VvLYk5yQ4R0vAva3Ky2w5SPyzB9EfbgRq5QNLS9zY,213440
+config/H37rV_v3.gbk,sha256=4YEgawLTwP7cwO9EoeVPomxJIHgC7XP4ZhK7wpVCe9w,10273374
+config/LID2015-RSU-catalogue-v1.0-H37rV_v2.csv,sha256=i3v7Cy2KynCos4PmUNdPVCaOvWxMYX7PXYFbZMLhaqA,167206
+config/NC_004148.2.gbk,sha256=6pEdxr8qbOjTjhQ_w7D_yFhu__gFkpljOShbG-HdA6k,30806
+config/NC_004148.2_RSU_catalogue.csv,sha256=xJQn-4iaZ5oKQZGxPRfQhRpvtR2M7Bdu1I-U0xf7Mjg,719
+config/NEJM2018-RSU-catalogue-H37rV_v3.csv,sha256=hy0i7R17mKLiyfjoCDhdd3ozbel4rCc-jYhS6GdpAgw,59169
+piezo/__init__.py,sha256=YyiuyS9-9OZngz2hvYQSFqlUlenVuJ28CwSwWPFuo1o,111
+piezo/catalogue.py,sha256=OOUOud2t_lIDTu2xneZo-Q2S7vqCfcUQP8TKb1D3mDQ,23102
+piezo-0.1.data/scripts/piezo-vcf-parse.py,sha256=nVgnwRYZho57WxfG31CPq8B2mqSRcLswqG39prG117I,14623
+piezo-0.1.dist-info/LICENSE,sha256=hVSCV_kpb-vc0bR4VCaKssjFEYBqn_rTCH7JOey6FKA,5874
+piezo-0.1.dist-info/METADATA,sha256=5ySHtjiRziVFNUNdAPVF0OgQgtLtYAzweMDo9ZXkkTo,510
+piezo-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+piezo-0.1.dist-info/top_level.txt,sha256=j9fUlwm-cQidEc01z9v-3LTVUPW80fm_dYLHBS3F6VU,6
+piezo-0.1.dist-info/RECORD,,

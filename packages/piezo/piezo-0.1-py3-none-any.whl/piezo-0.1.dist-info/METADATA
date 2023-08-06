@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: piezo
+Version: 0.1
+Summary: Antibiotic suscetibility predictions from a VCF file.
+Home-page: https://github.com/philipwfowler/piezo
+Author: Philip W Fowler
+Author-email: philip.fowler@ndm.ox.ac.uk
+License: University of Oxford, see LICENSE.md
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: pandas (>=0.23.1)
+Requires-Dist: gumpy (>=0.1)
+
+UNKNOWN
+
+
