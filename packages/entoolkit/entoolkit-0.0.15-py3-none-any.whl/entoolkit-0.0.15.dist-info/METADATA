@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: entoolkit
+Version: 0.0.15
+Summary: Epanet Toolkit Wrapper for Python
+Home-page: https://github.com/andresgciamtez/entoolkit
+Author: Andrés García Martínez
+Author-email: ppnoptimizer@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Epanet Toolkit Wrapper for Python
+https://www.epa.gov/water-research/epanet
+
+# Source
+
+Adapted from https://github.com/USEPA/WNTR and others
+
+## Install
+
+```console
+> pip install entoolkit
+```
+## Load module
+
+```python
+from entoolkit import toolkit as et
+```
+
+## Help
+https://www.epa.gov/water-research/epanet
+
+
+

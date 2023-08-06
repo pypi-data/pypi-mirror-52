@@ -1,0 +1,16 @@
+entoolkit/__init__.py,sha256=iyO8etp1nKEcKRxv5U44qYH9pITaqyYC5fT_HsWEXWE,23
+entoolkit/toolkit.py,sha256=sKE-BkXa6IIpoyd3uxINt3KRVuz0YpWaH-jA3WATIdQ,31566
+entoolkit/epanet/Darwin/libepanet.dylib,sha256=4I0ciQ1Lyd3LFK1_C7l_i55Lz_vqd-c8sZYOssI1IwI,302216
+entoolkit/epanet/Linux/libepanet2_amd64.so,sha256=8zuvt7AfCfmtRhw2_GJeoGdFEP6Zu52ZsQH9Cu0XK_E,505379
+entoolkit/epanet/Windows/EN2setup.exe,sha256=LDAvFtyebgmWI5gnAoCAZNN0ZdMitj-HRaOZppREsN0,1584021
+entoolkit/epanet/Windows/epanet2.bas,sha256=xO4iuYeDFCTaRkpLUplSETHkn2Fvy8KyaG3FYx6Iwvs,8758
+entoolkit/epanet/Windows/epanet2.def,sha256=QGMcOV2_wVZYbEAROkn-4Ef2lPFr7aHMCOpZ4I19Di4,4106
+entoolkit/epanet/Windows/epanet2.dll,sha256=C7V_M1u2rAwF507IR-_yiRoZTuhvbDbX53uNZKaTYlQ,217088
+entoolkit/epanet/Windows/epanet2.lib,sha256=ojw7uhMWebb0r6aT5CSRHbUaqyCyspSDsf4eUddbyKI,22614
+entoolkit/epanet/Windows/epanet2.pas,sha256=rc-3OesJKUk4BkTlxGCzgTp73yfXJX66PBealilZxRQ,9910
+entoolkit/epanet/Windows/epanet2_amd64.dll,sha256=TwgslhIBPoOQyBOwwGCkEltDXe7Qeq-i7xILJvj8iHU,315904
+entoolkit-0.0.15.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+entoolkit-0.0.15.dist-info/METADATA,sha256=us9FHA-3pITXZfRl2nXOQ8IcV54_fv0TcD4pJm4MX14,786
+entoolkit-0.0.15.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+entoolkit-0.0.15.dist-info/top_level.txt,sha256=ZdXiFs2eYcExE0lkjYd2LOoRYxfj1NuLMw7Gf8mjZIg,10
+entoolkit-0.0.15.dist-info/RECORD,,
