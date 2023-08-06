@@ -1,0 +1,3 @@
+[console_scripts]
+qcenter = qcenter.cli:main
+
