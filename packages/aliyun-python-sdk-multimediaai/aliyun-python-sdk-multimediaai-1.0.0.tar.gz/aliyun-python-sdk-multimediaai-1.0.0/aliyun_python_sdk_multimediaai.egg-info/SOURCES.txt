@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+aliyun_python_sdk_multimediaai.egg-info/PKG-INFO
+aliyun_python_sdk_multimediaai.egg-info/SOURCES.txt
+aliyun_python_sdk_multimediaai.egg-info/dependency_links.txt
+aliyun_python_sdk_multimediaai.egg-info/requires.txt
+aliyun_python_sdk_multimediaai.egg-info/top_level.txt
+aliyunsdkmultimediaai/__init__.py
+aliyunsdkmultimediaai/endpoint.py
+aliyunsdkmultimediaai/request/__init__.py
+aliyunsdkmultimediaai/request/v20190810/CreateCoverTaskRequest.py
+aliyunsdkmultimediaai/request/v20190810/CreateGifTaskRequest.py
+aliyunsdkmultimediaai/request/v20190810/CreateLabelTaskRequest.py
+aliyunsdkmultimediaai/request/v20190810/GetTaskResultRequest.py
+aliyunsdkmultimediaai/request/v20190810/GetTaskStatusRequest.py
+aliyunsdkmultimediaai/request/v20190810/__init__.py
