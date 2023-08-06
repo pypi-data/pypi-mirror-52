@@ -1,0 +1,27 @@
+name::enviro
+description::environment data from sensors and weather net
+sys_time::2019-08-20,02-22-57.940529
+ntp_time::2019-08-20,02-22-57.884367
+hostname::raspberrypi
+loc_ip::192.168.86.37
+pub_ip::67.246.22.12
+geo_location::42.4501,-73.2454
+geo_place::Pittsfield,Massachusetts,US
+weather::mist
+wthr_temperature::67.78F
+wthr_humidity::93%RH
+wthr_pressure::1016hPa
+wthr_wind::wind NNW 1.31mph
+wthr_clouds::1%
+uv_index::7.74
+uv_risk::high
+wthr_rain::no rain
+wthr_snow::no snow
+snsr_temperature::76.78F
+snsr_humidity::66.007%RH
+snsr_pressure::982.53hPa
+snsr_vo2_gas::255559.9317559575ohms
+pi_speed::1400mhz
+pi_temperature::47.2C
+odroid_speed::700mhz
+odroid_temperature::49.0C

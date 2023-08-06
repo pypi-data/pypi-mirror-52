@@ -1,0 +1,1012 @@
+2019-08-20 03:57:24,873 - touch_phat - INFO - Touch detected: D
+2019-08-20 03:57:25,034 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 03:57:25,159 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 03:57:25,288 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 03:57:25,415 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 03:57:26,088 - touch_phat - DEBUG - turned screen off
+2019-08-20 03:57:26,127 - touch_phat - DEBUG - turned leds off
+2019-08-20 03:57:26,127 - touch_phat - DEBUG - Performed cleanup.
+2019-08-20 03:59:45,541 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 03:59:45,668 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 03:59:45,792 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 03:59:45,921 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 03:59:46,050 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 03:59:46,720 - touch_phat - DEBUG - turned screen off
+2019-08-20 03:59:46,759 - touch_phat - DEBUG - turned leds off
+2019-08-20 03:59:46,760 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:01:31,510 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:01:31,574 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:01:31,701 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:01:31,840 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:01:31,969 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:01:32,621 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:01:32,638 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:01:32,638 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:05:46,312 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:05:46,449 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:05:46,602 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:05:46,811 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:05:47,095 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:05:48,184 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:05:48,212 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:05:48,213 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:08:40,147 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:08:40,340 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:08:40,466 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:08:40,596 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:08:40,724 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:08:41,379 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:08:41,395 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:08:41,395 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:08:54,800 - touch_phat - INFO - Touch detected: A
+2019-08-20 04:08:54,931 - touch_phat - INFO - Clearing modules.
+2019-08-20 04:08:55,060 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:08:55,188 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:08:55,322 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:08:55,974 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:08:55,991 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:08:55,991 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:09:19,266 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:09:19,393 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:09:19,513 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:09:19,641 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:09:19,768 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:09:20,420 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:09:20,436 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:09:20,436 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:11:44,596 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:11:44,764 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:11:44,888 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:11:45,022 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:11:45,149 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:11:45,799 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:11:45,816 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:11:45,816 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:13:30,149 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:13:30,307 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:13:30,441 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:13:30,577 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:13:30,703 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:13:31,353 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:13:31,369 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:13:31,370 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:14:00,848 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:14:01,010 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:14:01,146 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:14:01,281 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:14:01,411 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:14:02,062 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:14:02,078 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:14:02,078 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:15:05,575 - touch_phat - INFO - Touch detected: D
+2019-08-20 04:15:05,700 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 04:15:05,827 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:15:05,955 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:15:06,084 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:15:06,735 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:15:06,752 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:15:06,752 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:15:45,962 - touch_phat - INFO - Touch detected: A
+2019-08-20 04:15:46,092 - touch_phat - INFO - Clearing modules.
+2019-08-20 04:15:46,221 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:15:46,352 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:15:46,482 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:15:47,135 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:15:47,152 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:15:47,152 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:16:09,631 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:16:09,691 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:16:09,813 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:16:09,944 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:16:10,074 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:16:10,725 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:16:10,742 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:16:10,742 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:19:39,756 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:19:39,917 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:19:40,051 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:19:40,181 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:19:40,310 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:19:40,979 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:19:41,018 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:19:41,019 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:20:11,008 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:20:11,139 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:20:11,274 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:20:11,405 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:20:11,536 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:20:12,188 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:20:12,204 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:20:12,205 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:24:21,837 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:24:21,962 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:24:22,091 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:24:22,232 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:24:22,361 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:24:23,013 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:24:23,029 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:24:23,030 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:26:07,667 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:26:07,733 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:26:07,854 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:26:07,987 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:26:08,119 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:26:08,770 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:26:08,787 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:26:08,787 - touch_phat - INFO - Performed cleanup.
+2019-08-20 04:31:45,183 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 04:31:45,247 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 04:31:45,373 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 04:31:45,505 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 04:31:45,634 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 04:31:46,287 - touch_phat - DEBUG - turned screen off
+2019-08-20 04:31:46,303 - touch_phat - DEBUG - turned leds off
+2019-08-20 04:31:46,304 - touch_phat - INFO - Performed cleanup.
+2019-08-20 05:15:37,566 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 05:15:37,696 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 05:15:37,829 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 05:15:37,968 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 05:15:38,104 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 05:15:38,757 - touch_phat - DEBUG - turned screen off
+2019-08-20 05:15:38,774 - touch_phat - DEBUG - turned leds off
+2019-08-20 05:15:38,774 - touch_phat - INFO - Performed cleanup.
+2019-08-20 05:16:47,874 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 05:16:47,929 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 05:16:48,063 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 05:16:48,199 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 05:16:48,328 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 05:16:48,980 - touch_phat - DEBUG - turned screen off
+2019-08-20 05:16:48,996 - touch_phat - DEBUG - turned leds off
+2019-08-20 05:16:48,996 - touch_phat - INFO - Performed cleanup.
+2019-08-20 05:18:07,290 - touch_phat - INFO - Touch detected: D
+2019-08-20 05:18:07,606 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 05:18:07,738 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 05:18:07,867 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 05:18:08,519 - touch_phat - DEBUG - turned screen off
+2019-08-20 05:18:08,536 - touch_phat - DEBUG - turned leds off
+2019-08-20 05:18:08,536 - touch_phat - INFO - Performed cleanup.
+2019-08-20 05:18:08,538 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 15:37:40,375 - touch_phat - INFO - Touch detected: D
+2019-08-20 15:37:40,672 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 15:37:40,797 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 15:37:40,920 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 15:37:41,571 - touch_phat - DEBUG - turned screen off
+2019-08-20 15:37:41,587 - touch_phat - DEBUG - turned leds off
+2019-08-20 15:37:41,588 - touch_phat - INFO - Performed cleanup.
+2019-08-20 15:37:41,588 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-20 15:37:52,621 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 15:37:52,752 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 15:37:52,876 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 15:37:53,000 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 15:37:53,124 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 15:37:53,776 - touch_phat - DEBUG - turned screen off
+2019-08-20 15:37:53,793 - touch_phat - DEBUG - turned leds off
+2019-08-20 15:37:53,793 - touch_phat - INFO - Performed cleanup.
+2019-08-20 15:39:52,347 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 15:39:52,431 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 15:39:52,561 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 15:39:52,688 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 15:39:52,816 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 15:39:53,468 - touch_phat - DEBUG - turned screen off
+2019-08-20 15:39:53,484 - touch_phat - DEBUG - turned leds off
+2019-08-20 15:39:53,484 - touch_phat - INFO - Performed cleanup.
+2019-08-20 22:54:41,052 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 22:54:41,183 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 22:54:41,359 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 22:54:41,489 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 22:54:41,618 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 22:54:42,290 - touch_phat - DEBUG - turned screen off
+2019-08-20 22:54:42,307 - touch_phat - DEBUG - turned leds off
+2019-08-20 22:54:42,307 - touch_phat - INFO - Performed cleanup.
+2019-08-20 22:57:30,790 - touch_phat - INFO - Touch detected: Enter
+2019-08-20 22:57:30,916 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-20 22:57:31,047 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-20 22:57:31,200 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-20 22:57:31,333 - touch_phat - DEBUG - killed flashlight.py
+2019-08-20 22:57:31,984 - touch_phat - DEBUG - turned screen off
+2019-08-20 22:57:32,001 - touch_phat - DEBUG - turned leds off
+2019-08-20 22:57:32,001 - touch_phat - INFO - Performed cleanup.
+2019-08-21 01:49:10,159 - touch_phat - INFO - Touch detected: D
+2019-08-21 01:49:10,614 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 01:49:10,883 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 01:49:11,163 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 01:49:11,967 - touch_phat - DEBUG - turned screen off
+2019-08-21 01:49:11,984 - touch_phat - DEBUG - turned leds off
+2019-08-21 01:49:11,984 - touch_phat - INFO - Performed cleanup.
+2019-08-21 01:49:11,985 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 13:15:47,375 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 13:15:47,507 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 13:15:47,631 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 13:15:47,760 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 13:15:47,892 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 13:15:48,947 - touch_phat - DEBUG - turned screen off
+2019-08-21 13:15:48,975 - touch_phat - DEBUG - turned leds off
+2019-08-21 13:15:48,976 - touch_phat - INFO - Performed cleanup.
+2019-08-21 15:51:58,127 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 15:51:58,190 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 15:51:58,317 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 15:51:58,453 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 15:51:58,588 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 15:51:59,242 - touch_phat - DEBUG - turned screen off
+2019-08-21 15:51:59,259 - touch_phat - DEBUG - turned leds off
+2019-08-21 15:51:59,259 - touch_phat - INFO - Performed cleanup.
+2019-08-21 15:53:16,474 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 15:53:16,573 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 15:53:16,698 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 15:53:16,839 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 15:53:16,973 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 15:53:17,626 - touch_phat - DEBUG - turned screen off
+2019-08-21 15:53:17,643 - touch_phat - DEBUG - turned leds off
+2019-08-21 15:53:17,643 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:13:51,182 - touch_phat - INFO - Touch detected: D
+2019-08-21 17:13:51,398 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:13:51,535 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:13:51,668 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:13:52,320 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:13:52,336 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:13:52,337 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:13:52,337 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 17:13:56,364 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 17:13:56,524 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 17:13:56,653 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:13:56,784 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:13:56,915 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:13:57,568 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:13:57,585 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:13:57,585 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:14:11,642 - touch_phat - INFO - Touch detected: D
+2019-08-21 17:14:12,000 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:14:12,303 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:14:12,582 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:14:13,504 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:14:13,520 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:14:13,520 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:14:13,522 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 17:51:45,997 - touch_phat - INFO - Touch detected: D
+2019-08-21 17:51:46,218 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:51:46,349 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:51:46,483 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:51:47,134 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:51:47,150 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:51:47,151 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:51:47,151 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 17:51:50,844 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 17:51:50,977 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 17:51:51,101 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:51:51,233 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:51:51,370 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:51:52,022 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:51:52,038 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:51:52,039 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:53:02,313 - touch_phat - INFO - Touch detected: D
+2019-08-21 17:53:02,554 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:53:02,690 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:53:02,824 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:53:03,480 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:53:03,497 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:53:03,497 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:53:03,498 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 17:53:25,251 - touch_phat - INFO - Touch detected: D
+2019-08-21 17:53:25,476 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 17:53:25,613 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 17:53:25,745 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 17:53:26,399 - touch_phat - DEBUG - turned screen off
+2019-08-21 17:53:26,416 - touch_phat - DEBUG - turned leds off
+2019-08-21 17:53:26,416 - touch_phat - INFO - Performed cleanup.
+2019-08-21 17:53:26,418 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 19:27:43,966 - touch_phat - INFO - Touch detected: D
+2019-08-21 19:27:44,275 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 19:27:44,407 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 19:27:44,541 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 19:27:45,575 - touch_phat - DEBUG - turned screen off
+2019-08-21 19:27:45,603 - touch_phat - DEBUG - turned leds off
+2019-08-21 19:27:45,604 - touch_phat - INFO - Performed cleanup.
+2019-08-21 19:27:45,605 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 21:09:32,550 - touch_phat - INFO - Touch detected: D
+2019-08-21 21:09:32,901 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:09:33,039 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:09:33,173 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:09:33,825 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:09:33,842 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:09:33,842 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:09:33,844 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 21:29:34,173 - touch_phat - INFO - Touch detected: D
+2019-08-21 21:29:34,428 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:29:34,646 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:29:34,925 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:29:36,015 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:29:36,042 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:29:36,043 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:29:36,046 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 21:30:36,488 - touch_phat - INFO - Touch detected: A
+2019-08-21 21:30:36,650 - touch_phat - INFO - Cleaning modules.
+2019-08-21 21:30:36,785 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:30:36,924 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:30:37,151 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:30:38,240 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:30:38,267 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:30:38,267 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:34:04,248 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 21:34:04,348 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 21:34:04,477 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:34:04,610 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:34:04,743 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:34:05,396 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:34:05,413 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:34:05,413 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:35:07,477 - touch_phat - INFO - Touch detected: A
+2019-08-21 21:35:07,638 - touch_phat - INFO - Cleaning modules.
+2019-08-21 21:35:07,767 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:35:07,901 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:35:08,044 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:35:08,717 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:35:08,756 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:35:08,756 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:35:11,714 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 21:35:11,847 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 21:35:11,976 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:35:12,118 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:35:12,252 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:35:12,905 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:35:12,921 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:35:12,922 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:50:32,891 - touch_phat - INFO - Touch detected: D
+2019-08-21 21:50:33,389 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:50:33,568 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:50:33,716 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:50:34,390 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:50:34,428 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:50:34,429 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:50:34,429 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 21:50:37,388 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 21:50:37,549 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 21:50:37,841 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:50:38,127 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:50:38,425 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:50:39,521 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:50:39,538 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:50:39,538 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:50:53,059 - touch_phat - INFO - Touch detected: D
+2019-08-21 21:50:53,381 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:50:53,677 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:50:53,978 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:50:55,070 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:50:55,097 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:50:55,098 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:50:55,099 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 21:57:02,105 - touch_phat - INFO - Touch detected: D
+2019-08-21 21:57:02,399 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 21:57:02,524 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 21:57:02,652 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 21:57:03,337 - touch_phat - DEBUG - turned screen off
+2019-08-21 21:57:03,376 - touch_phat - DEBUG - turned leds off
+2019-08-21 21:57:03,377 - touch_phat - INFO - Performed cleanup.
+2019-08-21 21:57:03,377 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-21 22:06:01,303 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 22:06:01,387 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 22:06:01,603 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 22:06:01,730 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 22:06:01,855 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 22:06:02,521 - touch_phat - DEBUG - turned screen off
+2019-08-21 22:06:02,538 - touch_phat - DEBUG - turned leds off
+2019-08-21 22:06:02,538 - touch_phat - INFO - Performed cleanup.
+2019-08-21 22:38:09,755 - touch_phat - INFO - Touch detected: Enter
+2019-08-21 22:38:09,881 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-21 22:38:10,008 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 22:38:10,126 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 22:38:10,244 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 22:38:10,897 - touch_phat - DEBUG - turned screen off
+2019-08-21 22:38:10,914 - touch_phat - DEBUG - turned leds off
+2019-08-21 22:38:10,914 - touch_phat - INFO - Performed cleanup.
+2019-08-21 23:32:03,196 - touch_phat - INFO - Touch detected: D
+2019-08-21 23:32:03,390 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-21 23:32:03,514 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-21 23:32:03,630 - touch_phat - DEBUG - killed flashlight.py
+2019-08-21 23:32:04,284 - touch_phat - DEBUG - turned screen off
+2019-08-21 23:32:04,300 - touch_phat - DEBUG - turned leds off
+2019-08-21 23:32:04,300 - touch_phat - INFO - Performed cleanup.
+2019-08-21 23:32:04,301 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-24 22:50:14,445 - touch_phat - INFO - Touch detected: A
+2019-08-24 22:50:14,452 - touch_phat - INFO - Touch detected: A
+2019-08-24 22:50:14,606 - touch_phat - INFO - Cleaning modules.
+2019-08-24 22:50:14,609 - touch_phat - INFO - Cleaning modules.
+2019-08-24 22:50:14,738 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-24 22:50:14,738 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-24 22:50:14,873 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-24 22:50:14,873 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-24 22:50:15,008 - touch_phat - DEBUG - killed flashlight.py
+2019-08-24 22:50:15,008 - touch_phat - DEBUG - killed flashlight.py
+2019-08-24 22:50:16,251 - touch_phat - DEBUG - turned screen off
+2019-08-24 22:50:16,263 - touch_phat - DEBUG - turned screen off
+2019-08-24 22:50:16,335 - touch_phat - DEBUG - turned leds off
+2019-08-24 22:50:16,336 - touch_phat - INFO - Performed cleanup.
+2019-08-24 22:50:16,336 - touch_phat - DEBUG - turned leds off
+2019-08-24 22:50:16,336 - touch_phat - INFO - Performed cleanup.
+2019-08-24 22:50:50,406 - touch_phat - INFO - Touch detected: A
+2019-08-24 22:50:50,466 - touch_phat - INFO - Cleaning modules.
+2019-08-24 22:50:50,579 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-24 22:50:50,696 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-24 22:50:50,819 - touch_phat - DEBUG - killed flashlight.py
+2019-08-24 22:50:51,489 - touch_phat - DEBUG - turned screen off
+2019-08-24 22:50:51,527 - touch_phat - DEBUG - turned leds off
+2019-08-24 22:50:51,528 - touch_phat - INFO - Performed cleanup.
+2019-08-24 22:50:52,461 - touch_phat - INFO - Touch detected: D
+2019-08-24 22:50:52,731 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-24 22:50:52,858 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-24 22:50:52,977 - touch_phat - DEBUG - killed flashlight.py
+2019-08-24 22:50:53,629 - touch_phat - DEBUG - turned screen off
+2019-08-24 22:50:53,645 - touch_phat - DEBUG - turned leds off
+2019-08-24 22:50:53,645 - touch_phat - INFO - Performed cleanup.
+2019-08-24 22:50:53,651 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-24 22:54:39,988 - touch_phat - INFO - Touch detected: A
+2019-08-24 22:54:40,207 - touch_phat - INFO - Cleaning modules.
+2019-08-24 22:54:40,325 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-24 22:54:40,443 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-24 22:54:40,558 - touch_phat - DEBUG - killed flashlight.py
+2019-08-24 22:54:41,213 - touch_phat - DEBUG - turned screen off
+2019-08-24 22:54:41,230 - touch_phat - DEBUG - turned leds off
+2019-08-24 22:54:41,230 - touch_phat - INFO - Performed cleanup.
+2019-08-25 00:22:47,852 - touch_phat - INFO - Touch detected: D
+2019-08-25 00:22:48,135 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-25 00:22:48,256 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 00:22:48,375 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 00:22:49,029 - touch_phat - DEBUG - turned screen off
+2019-08-25 00:22:49,045 - touch_phat - DEBUG - turned leds off
+2019-08-25 00:22:49,045 - touch_phat - INFO - Performed cleanup.
+2019-08-25 00:22:49,046 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-25 00:23:19,314 - touch_phat - INFO - Touch detected: D
+2019-08-25 00:23:19,516 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-25 00:23:19,644 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 00:23:19,766 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 00:23:20,418 - touch_phat - DEBUG - turned screen off
+2019-08-25 00:23:20,434 - touch_phat - DEBUG - turned leds off
+2019-08-25 00:23:20,435 - touch_phat - INFO - Performed cleanup.
+2019-08-25 00:23:20,435 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-25 00:24:05,753 - touch_phat - INFO - Touch detected: D
+2019-08-25 00:24:06,029 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-25 00:24:06,149 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 00:24:06,269 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 00:24:06,922 - touch_phat - DEBUG - turned screen off
+2019-08-25 00:24:06,938 - touch_phat - DEBUG - turned leds off
+2019-08-25 00:24:06,938 - touch_phat - INFO - Performed cleanup.
+2019-08-25 00:24:06,939 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-25 18:56:21,185 - touch_phat - INFO - Touch detected: A
+2019-08-25 18:56:21,251 - touch_phat - INFO - Touch detected: B
+2019-08-25 18:56:21,284 - touch_phat - INFO - Cleaning modules.
+2019-08-25 18:56:21,436 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-25 18:56:21,556 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 18:56:21,674 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 18:56:22,354 - touch_phat - DEBUG - turned screen off
+2019-08-25 18:56:22,370 - touch_phat - DEBUG - turned leds off
+2019-08-25 18:56:22,370 - touch_phat - INFO - Performed cleanup.
+2019-08-25 18:56:22,486 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 18:56:22,609 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 18:56:23,261 - touch_phat - DEBUG - turned screen off
+2019-08-25 18:56:23,261 - touch_phat - INFO - Performed cleanup.
+2019-08-25 18:56:23,262 - touch_phat - INFO - Displaying Plex server readings.
+2019-08-25 18:56:26,759 - touch_phat - INFO - Touch detected: A
+2019-08-25 18:56:26,937 - touch_phat - INFO - Cleaning modules.
+2019-08-25 18:56:27,061 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-25 18:56:27,183 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 18:56:27,306 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 18:56:28,557 - touch_phat - DEBUG - turned screen off
+2019-08-25 18:56:28,610 - touch_phat - DEBUG - turned leds off
+2019-08-25 18:56:28,611 - touch_phat - INFO - Performed cleanup.
+2019-08-25 20:27:02,785 - touch_phat - INFO - Touch detected: D
+2019-08-25 20:27:03,080 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-25 20:27:03,207 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-25 20:27:03,332 - touch_phat - DEBUG - killed flashlight.py
+2019-08-25 20:27:03,991 - touch_phat - DEBUG - turned screen off
+2019-08-25 20:27:04,007 - touch_phat - DEBUG - turned leds off
+2019-08-25 20:27:04,008 - touch_phat - INFO - Performed cleanup.
+2019-08-25 20:27:04,009 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-26 12:43:51,334 - touch_phat - INFO - Touch detected: Enter
+2019-08-26 12:43:51,431 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-26 12:43:51,560 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-26 12:43:51,698 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-26 12:43:51,825 - touch_phat - DEBUG - killed flashlight.py
+2019-08-26 12:43:52,496 - touch_phat - DEBUG - turned screen off
+2019-08-26 12:43:52,513 - touch_phat - DEBUG - turned leds off
+2019-08-26 12:43:52,513 - touch_phat - INFO - Performed cleanup.
+2019-08-26 16:55:23,421 - touch_phat - INFO - Touch detected: D
+2019-08-26 16:55:23,639 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-26 16:55:23,764 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-26 16:55:23,890 - touch_phat - DEBUG - killed flashlight.py
+2019-08-26 16:55:24,552 - touch_phat - DEBUG - turned screen off
+2019-08-26 16:55:24,568 - touch_phat - DEBUG - turned leds off
+2019-08-26 16:55:24,569 - touch_phat - INFO - Performed cleanup.
+2019-08-26 16:55:24,569 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-27 12:45:22,724 - touch_phat - INFO - Touch detected: D
+2019-08-27 12:45:23,017 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-27 12:45:23,153 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-27 12:45:23,281 - touch_phat - DEBUG - killed flashlight.py
+2019-08-27 12:45:23,935 - touch_phat - DEBUG - turned screen off
+2019-08-27 12:45:23,952 - touch_phat - DEBUG - turned leds off
+2019-08-27 12:45:23,952 - touch_phat - INFO - Performed cleanup.
+2019-08-27 12:45:23,953 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-27 22:46:23,257 - touch_phat - INFO - Touch detected: Enter
+2019-08-27 22:46:23,351 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-27 22:46:23,517 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-27 22:46:23,639 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-27 22:46:23,761 - touch_phat - DEBUG - killed flashlight.py
+2019-08-27 22:46:24,435 - touch_phat - DEBUG - turned screen off
+2019-08-27 22:46:24,451 - touch_phat - DEBUG - turned leds off
+2019-08-27 22:46:24,452 - touch_phat - INFO - Performed cleanup.
+2019-08-28 00:23:38,613 - touch_phat - INFO - Touch detected: D
+2019-08-28 00:23:38,932 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-28 00:23:39,062 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-28 00:23:39,186 - touch_phat - DEBUG - killed flashlight.py
+2019-08-28 00:23:39,854 - touch_phat - DEBUG - turned screen off
+2019-08-28 00:23:39,870 - touch_phat - DEBUG - turned leds off
+2019-08-28 00:23:39,871 - touch_phat - INFO - Performed cleanup.
+2019-08-28 00:23:39,871 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 00:59:15,445 - touch_phat - INFO - Touch detected: D
+2019-08-30 00:59:15,631 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-30 00:59:15,774 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 00:59:15,899 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 00:59:16,572 - touch_phat - DEBUG - turned screen off
+2019-08-30 00:59:16,611 - touch_phat - DEBUG - turned leds off
+2019-08-30 00:59:16,611 - touch_phat - INFO - Performed cleanup.
+2019-08-30 00:59:16,612 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 01:00:23,459 - touch_phat - INFO - Touch detected: C
+2019-08-30 01:00:23,650 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 01:00:23,782 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 01:00:24,487 - touch_phat - DEBUG - turned screen off
+2019-08-30 01:00:24,488 - touch_phat - INFO - Performed cleanup.
+2019-08-30 01:00:24,488 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 01:01:43,593 - touch_phat - INFO - Touch detected: C
+2019-08-30 01:01:43,963 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 01:01:44,236 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 01:01:46,355 - touch_phat - DEBUG - turned screen off
+2019-08-30 01:01:46,355 - touch_phat - INFO - Performed cleanup.
+2019-08-30 01:01:46,358 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 01:01:56,048 - touch_phat - INFO - Touch detected: D
+2019-08-30 01:01:56,295 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-30 01:01:56,429 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 01:01:56,557 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 01:01:57,599 - touch_phat - DEBUG - turned screen off
+2019-08-30 01:01:57,652 - touch_phat - DEBUG - turned leds off
+2019-08-30 01:01:57,653 - touch_phat - INFO - Performed cleanup.
+2019-08-30 01:01:57,654 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 01:02:00,227 - touch_phat - INFO - Touch detected: C
+2019-08-30 01:02:00,413 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 01:02:00,550 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 01:02:01,854 - touch_phat - DEBUG - turned screen off
+2019-08-30 01:02:01,855 - touch_phat - INFO - Performed cleanup.
+2019-08-30 01:02:01,855 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 01:02:39,052 - touch_phat - INFO - Touch detected: C
+2019-08-30 01:02:39,265 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 01:02:39,402 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 01:02:40,104 - touch_phat - DEBUG - turned screen off
+2019-08-30 01:02:40,104 - touch_phat - INFO - Performed cleanup.
+2019-08-30 01:02:40,106 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 01:30:04,382 - touch_phat - INFO - Touch detected: C
+2019-08-30 01:30:04,589 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 01:30:04,720 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 01:30:05,425 - touch_phat - DEBUG - turned screen off
+2019-08-30 01:30:05,426 - touch_phat - INFO - Performed cleanup.
+2019-08-30 01:30:05,427 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 05:45:59,313 - touch_phat - INFO - Touch detected: C
+2019-08-30 05:45:59,628 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 05:45:59,764 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 05:46:01,102 - touch_phat - DEBUG - turned screen off
+2019-08-30 05:46:01,102 - touch_phat - INFO - Performed cleanup.
+2019-08-30 05:46:01,105 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 05:46:05,350 - touch_phat - INFO - Touch detected: D
+2019-08-30 05:46:05,616 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-30 05:46:05,745 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 05:46:05,872 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 05:46:07,751 - touch_phat - DEBUG - turned screen off
+2019-08-30 05:46:07,869 - touch_phat - DEBUG - turned leds off
+2019-08-30 05:46:07,869 - touch_phat - INFO - Performed cleanup.
+2019-08-30 05:46:07,870 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 12:39:51,038 - touch_phat - INFO - Touch detected: C
+2019-08-30 12:39:51,301 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 12:39:51,429 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 12:39:53,320 - touch_phat - DEBUG - turned screen off
+2019-08-30 12:39:53,321 - touch_phat - INFO - Performed cleanup.
+2019-08-30 12:39:53,321 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 12:40:43,911 - touch_phat - DEBUG - killed ledshim_cpu_temp.py
+2019-08-30 12:40:44,045 - touch_phat - DEBUG - killed luma_clock.py
+2019-08-30 12:40:44,174 - touch_phat - DEBUG - killed flashlight.py
+2019-08-30 12:40:47,901 - touch_phat - DEBUG - turned screen off
+2019-08-30 12:40:48,054 - touch_phat - DEBUG - turned leds off
+2019-08-30 12:40:48,054 - touch_phat - INFO - Performed cleanup.
+2019-08-30 12:40:48,057 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 22:39:00,298 - touch_phat - INFO - Touch detected: D
+2019-08-30 22:39:00,455 - touch_phat - ERROR - Could not kill process named ledshim_cpu_temp
+2019-08-30 22:39:00,456 - touch_phat - ERROR - Could not kill process named luma_clock
+2019-08-30 22:39:00,457 - touch_phat - ERROR - Could not kill process named flashlight
+2019-08-30 22:39:00,458 - touch_phat - ERROR - Could not kill process named luma_sensors
+2019-08-30 22:39:01,129 - touch_phat - DEBUG - turned screen off
+2019-08-30 22:39:01,168 - touch_phat - DEBUG - turned leds off
+2019-08-30 22:39:01,168 - touch_phat - INFO - Performed cleanup.
+2019-08-30 22:39:01,169 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 22:39:36,694 - touch_phat - INFO - Touch detected: D
+2019-08-30 22:39:36,821 - touch_phat - ERROR - Could not kill process named ledshim_cpu_temp
+2019-08-30 22:39:36,822 - touch_phat - ERROR - Could not kill process named luma_clock
+2019-08-30 22:39:36,823 - touch_phat - ERROR - Could not kill process named flashlight
+2019-08-30 22:39:37,491 - touch_phat - DEBUG - turned screen off
+2019-08-30 22:39:37,531 - touch_phat - DEBUG - turned leds off
+2019-08-30 22:39:37,531 - touch_phat - INFO - Performed cleanup.
+2019-08-30 22:39:37,532 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 22:59:08,385 - touch_phat - INFO - Touch detected: D
+2019-08-30 22:59:08,513 - touch_phat - ERROR - Could not open pid file for ledshim_cpu_temp
+2019-08-30 22:59:08,514 - touch_phat - ERROR - Could not kill process named ledshim_cpu_temp
+2019-08-30 22:59:08,515 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 22:59:08,515 - touch_phat - ERROR - Could not kill process named luma_clock
+2019-08-30 22:59:08,516 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 22:59:08,517 - touch_phat - ERROR - Could not kill process named flashlight
+2019-08-30 22:59:08,517 - touch_phat - ERROR - Could not kill process named luma_sensors
+2019-08-30 22:59:09,187 - touch_phat - DEBUG - turned screen off
+2019-08-30 22:59:09,226 - touch_phat - DEBUG - turned leds off
+2019-08-30 22:59:09,226 - touch_phat - INFO - Performed cleanup.
+2019-08-30 22:59:09,227 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 22:59:16,607 - touch_phat - INFO - Touch detected: D
+2019-08-30 22:59:16,671 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 22:59:16,672 - touch_phat - ERROR - Could not kill process named luma_clock
+2019-08-30 22:59:16,673 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 22:59:16,674 - touch_phat - ERROR - Could not kill process named flashlight
+2019-08-30 22:59:16,675 - touch_phat - ERROR - Could not kill process named luma_sensors
+2019-08-30 22:59:17,327 - touch_phat - DEBUG - turned screen off
+2019-08-30 22:59:17,343 - touch_phat - DEBUG - turned leds off
+2019-08-30 22:59:17,344 - touch_phat - INFO - Performed cleanup.
+2019-08-30 22:59:17,344 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:03:57,398 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:03:57,531 - touch_phat - ERROR - Could not kill process named ledshim_cpu_temp
+2019-08-30 23:03:57,532 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:03:57,533 - touch_phat - ERROR - Could not kill process named luma_clock
+2019-08-30 23:03:57,533 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:03:57,534 - touch_phat - ERROR - Could not kill process named flashlight
+2019-08-30 23:03:57,534 - touch_phat - ERROR - Could not kill process named luma_sensors
+2019-08-30 23:03:58,201 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:03:58,240 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:03:58,245 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:03:58,246 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:04:57,021 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:04:57,087 - touch_phat - ERROR - Could not kill process named ledshim_cpu_temp
+2019-08-30 23:04:57,089 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:04:57,089 - touch_phat - ERROR - Could not kill process named luma_clock
+2019-08-30 23:04:57,090 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:04:57,090 - touch_phat - ERROR - Could not kill process named flashlight
+2019-08-30 23:04:57,091 - touch_phat - ERROR - Could not kill process named luma_sensors
+2019-08-30 23:04:58,115 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:04:58,142 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:04:58,143 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:04:58,144 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:06:14,548 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:08:03,392 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:08:03,586 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:09:33,901 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:09:34,000 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:09:34,001 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:09:34,003 - touch_phat - WARNING - The process luma_sensors(6203) is not running.
+2019-08-30 23:09:34,671 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:09:34,710 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:09:34,710 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:09:34,711 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:12:14,842 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:12:14,969 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:12:14,970 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:12:14,971 - touch_phat - WARNING - The process luma_sensors(6203) is not running.
+2019-08-30 23:12:15,640 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:12:15,679 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:12:15,680 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:12:15,680 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:13:20,758 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:13:20,886 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:13:20,887 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:13:20,888 - touch_phat - ERROR - Could not read pid file for luma_sensors
+2019-08-30 23:13:21,561 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:13:21,599 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:13:21,600 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:13:21,600 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:15:22,349 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:15:22,577 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:15:22,578 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:15:22,579 - touch_phat - WARNING - The process luma_sensors(6203) is not running.
+2019-08-30 23:15:23,248 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:15:23,287 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:15:23,287 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:15:23,288 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:15:53,398 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:15:53,528 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:15:53,529 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:15:53,530 - touch_phat - WARNING - The process luma_sensors(6203) is not running.
+2019-08-30 23:15:54,624 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:15:54,651 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:15:54,652 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:15:54,653 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:15:59,493 - touch_phat - INFO - Touch detected: C
+2019-08-30 23:15:59,528 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:15:59,529 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:15:59,530 - touch_phat - WARNING - The process luma_sensors(6203) is not running.
+2019-08-30 23:16:00,234 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:16:00,234 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:16:00,235 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 23:16:05,397 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:16:05,514 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:16:05,515 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:16:06,611 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:16:06,639 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:16:06,640 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:16:06,641 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:16:22,533 - touch_phat - INFO - Touch detected: Enter
+2019-08-30 23:16:22,663 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-30 23:16:22,665 - touch_phat - ERROR - Could not open pid file for luma_clock
+2019-08-30 23:16:22,665 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:16:23,321 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:16:23,337 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:16:23,338 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:16:35,706 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:16:35,865 - touch_phat - ERROR - Could not open pid file for flashlight
+2019-08-30 23:16:35,867 - touch_phat - WARNING - The process luma_sensors(1848) is not running.
+2019-08-30 23:16:36,519 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:16:36,535 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:16:36,536 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:16:36,536 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:18:44,304 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:18:44,398 - touch_phat - DEBUG - The process luma_clock(2437) is not running.
+2019-08-30 23:18:44,399 - touch_phat - DEBUG - The process luma_sensors(1848) is not running.
+2019-08-30 23:18:45,404 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:18:45,467 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:18:45,468 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:18:45,469 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:25:12,335 - touch_phat - INFO - Touch detected: D
+2019-08-30 23:25:12,465 - touch_phat - DEBUG - The process luma_clock(2437) is not running.
+2019-08-30 23:25:12,466 - touch_phat - DEBUG - The process luma_sensors(1848) is not running.
+2019-08-30 23:25:13,142 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:25:13,180 - touch_phat - DEBUG - turned leds off
+2019-08-30 23:25:13,181 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:25:13,182 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-30 23:25:16,900 - touch_phat - INFO - Touch detected: C
+2019-08-30 23:25:16,993 - touch_phat - DEBUG - The process luma_clock(2437) is not running.
+2019-08-30 23:25:16,994 - touch_phat - DEBUG - The process luma_sensors(1848) is not running.
+2019-08-30 23:25:17,707 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:25:17,708 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:25:17,708 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 23:27:07,867 - touch_phat - INFO - Touch detected: C
+2019-08-30 23:27:07,941 - touch_phat - DEBUG - The process luma_clock(2437) is not running.
+2019-08-30 23:27:08,793 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:27:08,793 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:27:08,794 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-30 23:36:19,650 - touch_phat - INFO - Touch detected: C
+2019-08-30 23:36:19,750 - touch_phat - DEBUG - The process luma_clock(2437) is not running.
+2019-08-30 23:36:19,751 - touch_phat - DEBUG - The process luma_sensors(18815) is not running.
+2019-08-30 23:36:20,420 - touch_phat - DEBUG - turned screen off
+2019-08-30 23:36:20,421 - touch_phat - INFO - Performed cleanup.
+2019-08-30 23:36:20,422 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-31 00:12:15,820 - touch_phat - INFO - Touch detected: D
+2019-08-31 00:12:16,059 - touch_phat - DEBUG - The process ledshim_cpu_temp(16313) is not running.
+2019-08-31 00:12:16,060 - touch_phat - DEBUG - The process luma_clock(2437) is not running.
+2019-08-31 00:12:16,061 - touch_phat - DEBUG - The process flashlight(5673) is not running.
+2019-08-31 00:12:16,714 - touch_phat - DEBUG - turned screen off
+2019-08-31 00:12:16,753 - touch_phat - DEBUG - turned leds off
+2019-08-31 00:12:16,754 - touch_phat - INFO - Performed cleanup.
+2019-08-31 00:12:16,754 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:20:12,110 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 17:20:12,113 - touch_phat - DEBUG - The process id of touch-phat is 945
+2019-08-31 17:20:20,033 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:20:20,204 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:20:23,894 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:20:24,004 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:20:25,275 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:20:25,481 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:20:29,004 - touch_phat - INFO - Touch detected: Enter
+2019-08-31 17:20:29,075 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-08-31 17:20:43,894 - touch_phat - INFO - Touch detected: Back
+2019-08-31 17:20:43,946 - touch_phat - INFO - Running module shutdown scripts.
+2019-08-31 17:26:26,506 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:26:26,626 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:34:15,250 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 17:34:15,251 - touch_phat - DEBUG - The process id of touch-phat is 17183
+2019-08-31 17:34:21,223 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:34:21,390 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:34:25,398 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:34:25,481 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:34:31,244 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:34:31,374 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:34:33,843 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:34:33,972 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:34:35,420 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:34:35,548 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:34:37,333 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:34:37,443 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:34:39,886 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:34:40,026 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:37:13,382 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 17:37:13,383 - touch_phat - DEBUG - The process id of touch-phat is 24477
+2019-08-31 17:37:19,331 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:37:19,492 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:37:28,133 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:37:28,347 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:37:30,124 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:37:30,317 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:37:31,698 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:37:31,888 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:37:32,858 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:37:33,015 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:37:34,277 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:37:34,397 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:37:35,875 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:37:36,040 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:37:37,377 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:37:37,535 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:37:39,712 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:37:39,872 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:37:42,846 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:37:43,010 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:46:22,688 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 17:46:22,689 - touch_phat - DEBUG - The process id of touch-phat is 29467
+2019-08-31 17:46:27,524 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:46:27,660 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:46:30,672 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:46:30,833 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:46:34,154 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:46:34,269 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:46:45,230 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:46:45,410 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:50:05,225 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 17:50:05,226 - touch_phat - DEBUG - The process id of touch-phat is 2991
+2019-08-31 17:50:12,012 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:50:12,115 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:50:17,636 - touch_phat - INFO - Touch detected: B
+2019-08-31 17:50:18,570 - touch_phat - INFO - Displaying flashlight.
+2019-08-31 17:50:29,470 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:50:29,664 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:51:25,433 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 17:51:25,434 - touch_phat - DEBUG - The process id of touch-phat is 3795
+2019-08-31 17:51:30,371 - touch_phat - INFO - Touch detected: B
+2019-08-31 17:51:30,955 - touch_phat - INFO - Displaying flashlight.
+2019-08-31 17:51:36,169 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:51:36,311 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 17:51:45,981 - touch_phat - INFO - Touch detected: C
+2019-08-31 17:51:46,557 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-31 17:52:18,372 - touch_phat - INFO - Touch detected: C
+2019-08-31 17:52:19,387 - touch_phat - INFO - Displaying Sensor readings.
+2019-08-31 17:52:25,293 - touch_phat - INFO - Touch detected: A
+2019-08-31 17:52:25,343 - touch_phat - INFO - Cleaning modules.
+2019-08-31 17:52:34,695 - touch_phat - INFO - Touch detected: D
+2019-08-31 17:52:34,841 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 18:21:57,592 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 18:21:57,593 - touch_phat - DEBUG - The process id of touch-phat is 21620
+2019-08-31 18:22:02,088 - touch_phat - INFO - Touch detected: D
+2019-08-31 18:22:02,290 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 18:30:54,658 - touch_phat - DEBUG - touch-phat process started.
+2019-08-31 18:30:54,660 - touch_phat - DEBUG - The process id of touch-phat is 4128
+2019-08-31 18:31:09,896 - touch_phat - INFO - Touch detected: D
+2019-08-31 18:31:10,039 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-08-31 18:31:22,978 - touch_phat - INFO - Touch detected: A
+2019-08-31 18:31:23,077 - touch_phat - INFO - Cleaning modules.
+2019-08-31 18:31:26,801 - touch_phat - INFO - Touch detected: D
+2019-08-31 18:31:26,982 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-01 06:23:13,877 - touch_phat - INFO - Touch detected: A
+2019-09-01 06:23:15,414 - touch_phat - INFO - Cleaning modules.
+2019-09-03 01:09:58,167 - touch_phat - DEBUG - touch-phat process started.
+2019-09-03 01:09:58,171 - touch_phat - DEBUG - The process id of touch-phat is 11288
+2019-09-03 01:10:02,895 - touch_phat - INFO - Touch detected: C
+2019-09-03 01:10:03,785 - touch_phat - INFO - Displaying Sensor readings.
+2019-09-03 01:10:12,464 - touch_phat - INFO - Touch detected: D
+2019-09-03 01:10:12,873 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-03 02:22:46,343 - touch_phat - INFO - Touch detected: A
+2019-09-03 02:22:46,599 - touch_phat - INFO - Cleaning modules.
+2019-09-03 02:22:48,406 - touch_phat - INFO - Touch detected: D
+2019-09-03 02:22:48,646 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-03 16:32:17,541 - touch_phat - DEBUG - touch-phat process started.
+2019-09-03 16:32:17,552 - touch_phat - DEBUG - The process id of touch-phat is 617
+2019-09-03 22:41:53,688 - touch_phat - INFO - Touch detected: D
+2019-09-03 22:41:55,260 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-03 22:41:59,374 - touch_phat - INFO - Touch detected: A
+2019-09-03 22:41:59,481 - touch_phat - INFO - Cleaning modules.
+2019-09-03 22:42:01,046 - touch_phat - INFO - Touch detected: D
+2019-09-03 22:42:01,163 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-04 01:51:49,919 - touch_phat - INFO - Touch detected: A
+2019-09-04 01:51:50,047 - touch_phat - INFO - Cleaning modules.
+2019-09-04 02:37:34,930 - touch_phat - INFO - Touch detected: A
+2019-09-04 02:37:35,057 - touch_phat - INFO - Cleaning modules.
+2019-09-04 11:21:31,848 - touch_phat - INFO - Touch detected: D
+2019-09-04 11:21:32,032 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 11:39:18,516 - touch_phat - INFO - Touch detected: D
+2019-09-05 11:39:18,663 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 11:42:25,884 - touch_phat - INFO - Touch detected: D
+2019-09-05 11:42:26,093 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 11:46:03,525 - touch_phat - INFO - Touch detected: D
+2019-09-05 11:46:03,707 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 11:46:06,392 - touch_phat - INFO - Touch detected: A
+2019-09-05 11:46:06,551 - touch_phat - INFO - Cleaning modules.
+2019-09-05 11:46:09,063 - touch_phat - INFO - Touch detected: A
+2019-09-05 11:46:09,231 - touch_phat - INFO - Cleaning modules.
+2019-09-05 11:48:07,041 - touch_phat - INFO - Touch detected: D
+2019-09-05 11:48:07,224 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 11:48:09,779 - touch_phat - INFO - Touch detected: A
+2019-09-05 11:48:09,941 - touch_phat - INFO - Cleaning modules.
+2019-09-05 11:48:28,438 - touch_phat - INFO - Touch detected: A
+2019-09-05 11:48:28,500 - touch_phat - INFO - Cleaning modules.
+2019-09-05 11:48:30,911 - touch_phat - INFO - Touch detected: D
+2019-09-05 11:48:31,063 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 11:48:34,068 - touch_phat - INFO - Touch detected: A
+2019-09-05 11:48:34,224 - touch_phat - INFO - Cleaning modules.
+2019-09-05 11:48:36,188 - touch_phat - INFO - Touch detected: D
+2019-09-05 11:48:36,307 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-05 15:43:58,677 - touch_phat - INFO - Touch detected: Enter
+2019-09-05 15:43:58,806 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-09-05 15:44:10,738 - touch_phat - INFO - Touch detected: A
+2019-09-05 15:44:10,804 - touch_phat - INFO - Cleaning modules.
+2019-09-05 15:44:12,894 - touch_phat - INFO - Touch detected: D
+2019-09-05 15:44:12,952 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 00:59:39,956 - touch_phat - INFO - Touch detected: D
+2019-09-06 00:59:40,120 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 00:59:44,296 - touch_phat - INFO - Touch detected: A
+2019-09-06 00:59:44,489 - touch_phat - INFO - Cleaning modules.
+2019-09-06 00:59:45,716 - touch_phat - INFO - Touch detected: A
+2019-09-06 00:59:45,906 - touch_phat - INFO - Cleaning modules.
+2019-09-06 00:59:47,129 - touch_phat - INFO - Touch detected: D
+2019-09-06 00:59:47,311 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 00:59:49,290 - touch_phat - INFO - Touch detected: A
+2019-09-06 00:59:49,451 - touch_phat - INFO - Cleaning modules.
+2019-09-06 12:10:01,138 - touch_phat - INFO - Touch detected: D
+2019-09-06 12:10:01,306 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 12:10:09,090 - touch_phat - INFO - Touch detected: A
+2019-09-06 12:10:09,215 - touch_phat - INFO - Cleaning modules.
+2019-09-06 12:12:56,444 - touch_phat - INFO - Touch detected: D
+2019-09-06 12:12:56,603 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 12:13:00,148 - touch_phat - INFO - Touch detected: A
+2019-09-06 12:13:00,311 - touch_phat - INFO - Cleaning modules.
+2019-09-06 13:56:28,987 - touch_phat - DEBUG - touch-phat process started.
+2019-09-06 13:56:28,990 - touch_phat - DEBUG - The process id of touch-phat is 28189
+2019-09-06 13:56:39,998 - touch_phat - INFO - Touch detected: D
+2019-09-06 13:56:40,139 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 13:56:44,991 - touch_phat - INFO - Touch detected: A
+2019-09-06 13:56:45,087 - touch_phat - INFO - Cleaning modules.
+2019-09-06 13:56:46,959 - touch_phat - INFO - Touch detected: A
+2019-09-06 13:56:47,089 - touch_phat - INFO - Cleaning modules.
+2019-09-06 13:56:47,701 - touch_phat - INFO - Touch detected: A
+2019-09-06 13:56:47,829 - touch_phat - INFO - Cleaning modules.
+2019-09-06 13:56:48,696 - touch_phat - INFO - Cleaning modules.
+2019-09-06 13:56:49,886 - touch_phat - INFO - Cleaning modules.
+2019-09-06 14:06:22,339 - touch_phat - INFO - Touch detected: D
+2019-09-06 14:06:22,455 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 14:06:26,690 - touch_phat - INFO - Touch detected: A
+2019-09-06 14:06:26,786 - touch_phat - INFO - Cleaning modules.
+2019-09-06 14:07:45,317 - touch_phat - DEBUG - touch-phat process started.
+2019-09-06 14:07:45,322 - touch_phat - DEBUG - The process id of touch-phat is 633
+2019-09-06 19:21:04,155 - touch_phat - DEBUG - touch-phat process started.
+2019-09-06 19:21:04,157 - touch_phat - DEBUG - The process id of touch-phat is 9513
+2019-09-06 19:21:08,997 - touch_phat - INFO - Touch detected: D
+2019-09-06 19:21:09,138 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 19:26:15,569 - touch_phat - DEBUG - touch-phat process started.
+2019-09-06 19:26:15,570 - touch_phat - DEBUG - The process id of touch-phat is 18332
+2019-09-06 19:41:07,419 - touch_phat - DEBUG - touch-phat process started.
+2019-09-06 19:41:07,420 - touch_phat - DEBUG - The process id of touch-phat is 23013
+2019-09-06 19:41:14,401 - touch_phat - INFO - Touch detected: A
+2019-09-06 19:41:14,500 - touch_phat - INFO - Cleaning modules.
+2019-09-06 19:41:17,076 - touch_phat - INFO - Touch detected: D
+2019-09-06 19:41:17,223 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 19:52:23,452 - touch_phat - DEBUG - touch-phat process started.
+2019-09-06 19:52:23,453 - touch_phat - DEBUG - The process id of touch-phat is 31967
+2019-09-06 19:52:28,434 - touch_phat - INFO - Touch detected: D
+2019-09-06 19:52:28,610 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 19:53:57,385 - touch_phat - INFO - Touch detected: D
+2019-09-06 19:53:57,536 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-06 20:00:41,220 - touch_phat - INFO - Touch detected: D
+2019-09-06 20:00:41,434 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-08 17:23:42,603 - touch_phat - INFO - Touch detected: D
+2019-09-08 17:23:44,402 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-08 17:37:27,149 - touch_phat - INFO - Touch detected: Enter
+2019-09-08 17:37:27,244 - touch_phat - INFO - Showing clock-sensor and Plex-temperature-led modules.
+2019-09-08 21:22:23,931 - touch_phat - INFO - Touch detected: D
+2019-09-08 21:22:24,200 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-08 21:22:28,112 - touch_phat - INFO - Touch detected: A
+2019-09-08 21:22:28,299 - touch_phat - INFO - Cleaning modules.
+2019-09-08 21:22:29,595 - touch_phat - INFO - Touch detected: D
+2019-09-08 21:22:29,743 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-09 18:51:04,295 - touch_phat - INFO - Touch detected: D
+2019-09-09 18:51:04,499 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-09 18:51:08,420 - touch_phat - INFO - Touch detected: A
+2019-09-09 18:51:08,611 - touch_phat - INFO - Cleaning modules.
+2019-09-10 05:17:35,261 - touch_phat - INFO - Touch detected: C
+2019-09-10 05:17:35,266 - touch_phat - INFO - Touch detected: D
+2019-09-10 05:17:36,424 - touch_phat - INFO - Displaying Sensor readings.
+2019-09-10 05:17:36,991 - touch_phat - INFO - Showing Plex-temperature-led module.
+2019-09-10 05:17:38,716 - touch_phat - INFO - Touch detected: D
+2019-09-10 05:17:39,062 - touch_phat - INFO - Showing Plex-temperature-led module.
