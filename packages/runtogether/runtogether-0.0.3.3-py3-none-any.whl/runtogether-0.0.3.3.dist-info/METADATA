@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: runtogether
+Version: 0.0.3.3
+Summary: 多端口代理/类gunicorn
+Home-page: https://github.com/Coxhuang/get_time
+Author: 成少阳
+Author-email: 499938136@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: psutil
+Requires-Dist: argparse
+
+UNKNOWN
+
+
