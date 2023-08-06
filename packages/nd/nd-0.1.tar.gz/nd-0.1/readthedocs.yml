@@ -1,0 +1,19 @@
+version: 2
+
+sphinx:
+  configuration: doc/conf.py
+
+formats: all
+
+build:
+  image: latest
+
+conda:
+  environment: doc/environment.yml
+
+python:
+  version: 3.7
+  install:
+    - requirements: doc/requirements.txt
+    - method: pip
+      path: .
