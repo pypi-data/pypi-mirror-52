@@ -1,0 +1,13 @@
+README.md
+setup.py
+dl_analytics.egg-info/PKG-INFO
+dl_analytics.egg-info/SOURCES.txt
+dl_analytics.egg-info/dependency_links.txt
+dl_analytics.egg-info/requires.txt
+dl_analytics.egg-info/top_level.txt
+dlanalytics/__init__.py
+dlanalytics/client.py
+dlanalytics/telegram.py
+dlanalytics/utils.py
+test/__init__.py
+test/simple_test.py
