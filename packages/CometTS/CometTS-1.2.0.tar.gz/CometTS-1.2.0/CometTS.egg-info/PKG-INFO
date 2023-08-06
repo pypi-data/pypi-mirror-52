@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: CometTS
+Version: 1.2.0
+Summary: Time series trend analysis tools for user defined polygons in any time series of overhead imagery
+Home-page: https://github.com/CosmiQ/CometTS
+Author: Jake Shermeyer
+Author-email: jss5102@gmail.com
+License: Apache-2.0
+Description: UNKNOWN
+Keywords: time series,VIIRS,Landsat,GIS,raster,remote sensing
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: GIS
+Provides-Extra: test

@@ -1,0 +1,5 @@
+[console_scripts]
+CometTS = CometTS.CometTS:main
+CometTS.ARIMA = CometTS.ARIMA:main
+CometTS.csv_it = CometTS.csv_it:main
+
