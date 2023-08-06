@@ -1,0 +1,3 @@
+[console_scripts]
+labelseg = labelseg.app:main
+

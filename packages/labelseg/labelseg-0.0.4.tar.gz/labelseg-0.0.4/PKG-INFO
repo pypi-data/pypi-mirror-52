@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: labelseg
+Version: 0.0.4
+Summary: label tool for semantic segmentation
+Home-page: UNKNOWN
+Author: Frederic
+Author-email: fk1010098686@outlook.com
+License: MIT
+Description: # Labelseg
+        labelseg is a tool for annotating medical images.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
