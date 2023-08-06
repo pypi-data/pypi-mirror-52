@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: bpfeeder
+Version: 0.0.1
+Summary: Datafeeder for Financidal Data Collection
+Home-page: https://github.com/blackpaper9973/bpfeeder
+Author: Kim jinho
+Author-email: blackpaper9973@gmail.com
+License: UNKNOWN
+Download-URL: https://githur.com/blackpaper9973/bpfeeder/archive/master.gz
+Keywords: financial data,quant
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: investpy
+Requires-Dist: yahoofinancials
+
+UNKNOWN
+
+
