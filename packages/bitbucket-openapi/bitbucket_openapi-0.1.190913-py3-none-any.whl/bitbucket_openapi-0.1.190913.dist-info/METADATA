@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: bitbucket-openapi
+Version: 0.1.190913
+Summary: Bitbucket API
+Home-page: https://pypi.org/project/bitbucket-openapi/
+Author: UNKNOWN
+Author-email: support@bitbucket.org
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Bitbucket API
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: six (>=1.10)
+Requires-Dist: urllib3 (>=1.15)
+
+Code against the Bitbucket API to automate simple tasks, embed Bitbucket data into your own site, build mobile or desktop apps, or even add custom UI add-ons into Bitbucket itself using the Connect framework.  # noqa: E501
+
+
