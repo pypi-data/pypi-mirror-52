@@ -1,0 +1,51 @@
+{% overextends "admin/base_site.html" %}
+
+{% block javascripts %}
+	{{ block.super }}
+	<script>
+		var MEDIA_URL = '{{ MEDIA_URL }}'
+		var altTextUrl = '{% url "admin:get_or_create_alttext" %}'
+
+		// Determine the admin link to edit alttext based on a link to an image
+		function getHref(imgLink) {
+			// Disable the alttext link if the image is not part of MEDIA_URL
+			// This is the case for empty or invalid image fields
+			var path = imgLink.getAttribute('href')
+			if (path.indexOf(MEDIA_URL) !== 0) return ''
+
+			path = path.replace(MEDIA_URL, '')
+			return altTextUrl + '?path=' + encodeURIComponent(path) + '&_popup=1'
+		}
+
+		jQuery(function($) {
+			try {
+				// Django 1.8 and later
+				var popupFunction = showRelatedObjectPopup
+			} catch {
+				// Django 1.7 and earlier
+				var popupFunction = showRelatedObjectLookupPopup
+			}
+
+			// Add a link to edit alt text after each FileBrowser thumbnail
+			$('.mezz-fb-thumbnail a').each(function(i, imgLink) {
+				$('<a href="#">Edit Alt Text</a>')
+					.attr('id', imgLink.id + '-alttext') // Required to close popups
+					.addClass('alttext-link')
+					.insertAfter(imgLink)
+			})
+
+			// Use a delegated click handler to catch all alttext links
+			// even the ones dynamically inserted by inlines
+			$(document).on('click', '.alttext-link', function(event) {
+				var imgLink = this.previousElementSibling
+				event.preventDefault()
+				this.setAttribute('href', getHref(imgLink))
+				if (this.getAttribute('href')) {
+					popupFunction(this) // Open popup, provided by Django
+				} else {
+					alert('Select an image first to edit alt text')
+				}
+			})
+		})
+	</script>
+{% endblock javascripts %}
