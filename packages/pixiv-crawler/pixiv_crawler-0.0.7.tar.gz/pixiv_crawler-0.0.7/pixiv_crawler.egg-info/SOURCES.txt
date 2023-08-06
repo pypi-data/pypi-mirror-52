@@ -1,0 +1,11 @@
+README.md
+setup.py
+pixiv_crawler/__init__.py
+pixiv_crawler/login_sim.py
+pixiv_crawler/myconfig.py
+pixiv_crawler/scraper_manga.py
+pixiv_crawler.egg-info/PKG-INFO
+pixiv_crawler.egg-info/SOURCES.txt
+pixiv_crawler.egg-info/dependency_links.txt
+pixiv_crawler.egg-info/requires.txt
+pixiv_crawler.egg-info/top_level.txt
