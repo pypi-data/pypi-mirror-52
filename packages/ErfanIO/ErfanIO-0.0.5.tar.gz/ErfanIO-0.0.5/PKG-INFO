@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: ErfanIO
+Version: 0.0.5
+Summary: Simple and painless IO library
+Home-page: https://gitlab.com/Azadeh-Afzar/Utility-Development/ErfanIO
+Author: Mohammad Mahdi Baghbani Pourvahid
+Author-email: MahdiBaghbani@protonmail.com
+License: AGPL-3.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
