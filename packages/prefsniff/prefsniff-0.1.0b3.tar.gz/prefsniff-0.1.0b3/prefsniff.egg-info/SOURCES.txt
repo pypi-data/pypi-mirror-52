@@ -1,0 +1,13 @@
+README.md
+setup.py
+prefsniff/__about__.py
+prefsniff/__init__.py
+prefsniff/prefsniff.py
+prefsniff/prefsniff_main.py
+prefsniff/version.py
+prefsniff.egg-info/PKG-INFO
+prefsniff.egg-info/SOURCES.txt
+prefsniff.egg-info/dependency_links.txt
+prefsniff.egg-info/entry_points.txt
+prefsniff.egg-info/requires.txt
+prefsniff.egg-info/top_level.txt
