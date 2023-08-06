@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+pyacvd/__init__.py
+pyacvd/_version.py
+pyacvd/clustering.py
+pyacvd.egg-info/PKG-INFO
+pyacvd.egg-info/SOURCES.txt
+pyacvd.egg-info/dependency_links.txt
+pyacvd.egg-info/requires.txt
+pyacvd.egg-info/top_level.txt
+pyacvd/cython/_clustering.pyx
