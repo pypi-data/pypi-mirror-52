@@ -1,0 +1,14 @@
+nimi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nimi/cli.py,sha256=HlCE78eIwluwqUESofIRA1EtFgmwdwpwqw8dMQcJWVA,6221
+nimi/client.py,sha256=U67v0-C-nSJf6eFiu_x5PEvv5-Cs8meTcaljyuNW5dk,635
+nimi/dyndns.py,sha256=_BMKLQ9yg5XI2DuZqemIQm-hNTJSS845e0xr-1KSxeQ,1907
+nimi/function.py,sha256=EGINPZepqzWAevSMGZVqDU8aQctAJXOvAyPQz-5gPvI,983
+nimi/handler.py,sha256=2jmf1iJ80OkpWnAFv-I2Mrnau3bgzKDv3i1fU_aIcrA,4095
+nimi/route53.py,sha256=gCeDbTmWeXAkAt-fpT3pacnWNPtiP2c92K4iZNrydRU,3760
+nimi/scheduler.py,sha256=UVfkJpp0vjIsyTRSH5XLlrG_r4DO1DKzhIeHqnho4VQ,463
+nimi/stack.py,sha256=q5i0b1U8yuI-pu4Dw6qtYY1c8btaSLepHUR3AA3qTC0,3373
+nimi/template.yml,sha256=GBz5cIvRH50s8JAZC5QhSCZZfFgcD2eIkDwUi0q6I2w,2875
+nimi-0.2.0.dist-info/entry_points.txt,sha256=rVT9QzTk_mieX6Q8rZA3IMEzC387f1GcEyrxinlfxik,37
+nimi-0.2.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+nimi-0.2.0.dist-info/METADATA,sha256=68UYVNaggtYlJC4hOxVjnSS9lw610jGN0iMW5g3FElE,6821
+nimi-0.2.0.dist-info/RECORD,,
