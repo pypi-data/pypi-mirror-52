@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pythaisa
+Version: 0.2.1
+Summary: Python Thai Sentiment Analysis
+Home-page: https://github.com/PyThaiNLP/thai_sentiment_analysis
+Author: wannaphong
+Author-email: wannaphong@kkumail.com
+License: Apache Software License 2.0
+Keywords: NLP,natural language processing,text analytics,ThaiNLP,text processing,localization
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: Thai
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pythainlp
+Requires-Dist: nltk
+
+# Python Thai Sentiment Analysis (PyThaiSA)
+
+[![Build Status](https://travis-ci.org/PyThaiNLP/thai-sentiment-analysis.svg?branch=master)](https://travis-ci.org/PyThaiNLP/thai-sentiment-analysis)
+[![Coverage Status](https://coveralls.io/repos/github/PyThaiNLP/thai-sentiment-analysis/badge.svg?branch=master)](https://coveralls.io/github/PyThaiNLP/thai-sentiment-analysis?branch=master)
+
+
+Python Thai sentiment analysis **(For Dev only)**
+
+## Install
+
+```
+$ pip install https://github.com/PyThaiNLP/thai_sentiment_analysis/archive/master.zip
+```
+
+## Use
+
+Google Colab : https://colab.research.google.com/drive/17y4tc69O6Z-dr1LbgR5FlPYZK46xCKbY
+
+```python
+from pythaisa import *
+datatrain=[("ฉันรักคุณ","love"),("ผมก็รักคุณเหมือนกัน","love"),("เกลียดคุณ","neg"),("เกลียดเหมือนกัน","neg")]
+m=model(name="test",train_dataset=datatrain)
+m.train()
+print(m.predict("ฉันรักคุณ"))
+```
+
+
+
