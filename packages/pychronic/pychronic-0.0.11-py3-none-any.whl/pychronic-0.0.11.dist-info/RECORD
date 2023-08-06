@@ -1,0 +1,16 @@
+pychronic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pychronic/enums.py,sha256=9hQ2H6xVgeA27ioDfPsT-7YvcC9vI3ePL8wkA5VBjB0,2043
+pychronic/tagger.py,sha256=hTPTJKItq4aHnp3TCY6AQ6nkUH63gkys1u-L-7EEeUY,4050
+pychronic/utils.py,sha256=IWYOGovriWMQp7mfB0dRhtJO28FifjxGWlo7ZN1nROg,3196
+pychronic/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pychronic/models/data_types.py,sha256=3zo1erQko341RvsaGPgj_acVQZGMyQ46H9-yReoQepw,214
+pychronic/models/parse_pattern.py,sha256=PXYRwVVhuHb4adGOkxWneHOqEaCwxLzHcfwB32IsLsc,3735
+pychronic/models/parsed_input.py,sha256=LxpeuGBbNJm82hzUxcphxcZKnkfXgAT_6VunFGCenbc,1048
+pychronic/models/tagged_word.py,sha256=wWP5pmHnLVq_re4MrtWJeW-ASxsIFJySpT4LYngaaV8,237
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_tagger.py,sha256=nYe3i9-PXkIFrlgVSaPS2ycDIpHiyVfF3Atz4jHWvJQ,1173
+tests/test_utils.py,sha256=HEWYr0-HmVsSjvs-o6pn72r6Ub5JF7jghUH4gOw_RyQ,3718
+pychronic-0.0.11.dist-info/METADATA,sha256=YB7-0--3PcxBzI7JumC9NJGtc-WA-1xaZBvWCIkC_1c,615
+pychronic-0.0.11.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pychronic-0.0.11.dist-info/top_level.txt,sha256=zlyNcPQ2FgiBMP3tyf1HPB7bPau6fvG24VRzYo6fG2Q,16
+pychronic-0.0.11.dist-info/RECORD,,
