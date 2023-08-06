@@ -1,0 +1,12 @@
+celespy/__init__.py,sha256=M72JBG-bKaA2pk9dzq4d7Ihnfil5wptRYCSJA1r3ItE,98
+celespy/astro/__init__.py,sha256=131wpLWFq99mSwvPor0Ad7JCcy6L_9yldovrvpMGg_U,68
+celespy/astro/astrofunc.py,sha256=H-dsE3osstFK_5U4Hi5-nSyNphyjCZGhdr58wjMWVTI,44817
+celespy/astro/astrosource.py,sha256=Cwpc0fu8BCnJAhhC6IgVU19vhQ5TyjoDXtBw09MmqlY,727
+celespy/astro/other/gaia_medium.fits,sha256=rpLQvbI2vtrEeyM8_QkKnLiupMZ8N8lDyVCmFrSYEEw,3153600
+celespy/image/__init__.py,sha256=pgOg-RtNhbfOFK3FQLRoTPtUWphjxj1sQyF1nsBhAZw,241
+celespy/image/data.py,sha256=mGFP9_F5wTHbpdHADQjZi3EqmBGnU10_eXi3FQbXG34,3080
+celespy/image/image.py,sha256=Dchg-k14qsdkms3NfvkYj8Q_7lJi8_PIv0SKO-X-osQ,6088
+celespy-0.0.5.dist-info/METADATA,sha256=76bRDR3ddmZQMDU2COEG9t6YVPq4mAruL1lfsd3-Nt0,296
+celespy-0.0.5.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+celespy-0.0.5.dist-info/top_level.txt,sha256=qlbgpDZ3jIBmDp4ttrpiO6bt6Aj27htfd_zSjbEepJo,8
+celespy-0.0.5.dist-info/RECORD,,

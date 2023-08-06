@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: celespy
+Version: 0.0.5
+Summary: Generic astronomy functions
+Home-page: https://github.com/AlanLoh/celespy.git
+Author: Alan Loh
+Author-email: alan.loh@obspm.fr
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: astropy
+Requires-Dist: geopy
+
+UNKNOWN
+
+
