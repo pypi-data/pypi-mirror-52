@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pypcc
+Version: 0.0.4
+Summary: Semi-supervised method particle competition and cooperation
+Home-page: https://github.com/caiocarneloz/pycc
+Author: Caio Carneloz
+Author-email: caiocarneloz@gmail.com
+License: MIT License
+Keywords: Semi-supervised
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+UNKNOWN
+
+
