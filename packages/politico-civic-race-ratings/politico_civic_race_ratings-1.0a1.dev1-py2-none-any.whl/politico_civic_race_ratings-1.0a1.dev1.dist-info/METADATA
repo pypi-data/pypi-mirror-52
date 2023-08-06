@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: politico-civic-race-ratings
+Version: 1.0a1.dev1
+Summary: Manage electoral race ratings, the POLITICO way.
+Home-page: https://github.com/The-Politico/politico-civic-race-ratings/
+Author: POLITICO Interactive News
+Author-email: interactives@politico.com
+License: MIT
+Download-URL: https://github.com/The-Politico/politico-civic-race-ratings/archive/1.0a1.dev1.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
+Requires-Dist: celery
+Requires-Dist: django
+Requires-Dist: djangorestframework
+Requires-Dist: psycopg2-binary
+Requires-Dist: politico-civic-utils
+Requires-Dist: politico-civic-entity
+Requires-Dist: politico-civic-geography
+Requires-Dist: politico-civic-election
+Requires-Dist: politico-civic-government
+Requires-Dist: openpyxl
+Requires-Dist: tqdm
+Requires-Dist: us
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# politico-civic-race-ratings
+
+
+## Ratings scheme
+
+##### Party direction (2018 and incument position)
+- Safe Republican
+- Likely Republican
+- Lean Republican
+- Toss-up
+- Lean Democratic
+- Likely Democratic
+- Safe Democratic
+
+##### Race features
+
+- Trump bump
+- Trump burn
+- Party cash splash
+- Star candidate
+- Dead-weight candidate
+- Made Candidate (endrosements)
+
+
+## Page structure
+
+#### Home page
+
+- Balance of Power by rating
+- Modeler
+- Filtered table
+- Activity feed
+
+#### Race page
+
+- Current rating
+- Shift
+- Activity feed
+- Candidate info
+
+## Historical Data
+#### Where I got the data
+- Senate results: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/PEJ5QU
+- House results: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2
+- President results (by state): https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX
+
+#### How to process the data
+- First, run `python manage.py bootstrap_ratings` to create the DataProfile object
+- [ ] Something funky is going on w/ the South Dakota Governor Data Profile ... it isn't generated automatically when you run `bootstrap_ratings`, which then crashes `bootstrap_historical`, so create that first.
+- Then, run `python manage.py bootstrap_historical` to get historical race data for corresponding seat.
+- [ ] PA data ... not currently including: https://docs.google.com/spreadsheets/d/1ztOyo95AVogMPltQxkJGsM4o42H7yzxqfIC5AwiFpkk/edit#gid=1739606676
+
+#### Notes on the data
+- [ ] Something is weird in House FL-24 in 2016 ... Frederica S. Wilson got 0 votes ...
+
+
