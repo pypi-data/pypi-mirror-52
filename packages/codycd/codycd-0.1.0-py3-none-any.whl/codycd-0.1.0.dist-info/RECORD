@@ -1,0 +1,15 @@
+codycd-0.1.0.dist-info/RECORD,,
+codycd-0.1.0.dist-info/metadata.json,sha256=vYWZctTMxXT_vyjfyvU-DRdnbNGS2HczjHfP2bsTvhc,976
+codycd-0.1.0.dist-info/WHEEL,sha256=-aSo8rHuuPDEFzkcqqQ55pDyCjy25bYMLxSiHWKAOTc,92
+codycd-0.1.0.dist-info/entry_points.txt,sha256=nlkCiG0FdXM1c5AGxR00Cgwnx6Kk2m-8nfEEPzJqM2M,41
+codycd-0.1.0.dist-info/DESCRIPTION.rst,sha256=3ANDbRrwNvF8ask5j0It0tGIb9dRrWlX12IDSvr9ysA,949
+codycd-0.1.0.dist-info/top_level.txt,sha256=GwrGHx_dcjsZg3TZpsqrlX64LOcOhz8dBCk5tfpnpvQ,5
+codycd-0.1.0.dist-info/METADATA,sha256=kl-FVbOdoJsMFPE8LsUjSBj0ldgQ7s2BHhJ2BiAvoMY,1646
+cody/tasks.py,sha256=gXDyZpWP6rMqz0Q4XAc6rlYmNYTCLmCZNGDFbGrZaqY,754
+cody/config.py,sha256=1xMxwPUYac95QPQDDl-Xi6Q2FPliGOhjobSWnZv4KY0,1115
+cody/__init__.py,sha256=ZKxTSr__RoA8hhnx5-K2SkL_cufny1PpOsepBJM1ZZo,21
+cody/main.py,sha256=zPyscRqRgjCwCdFRBsCppJCiODx45fr4hQUylbeeyRM,2451
+cody/shell/shell.py,sha256=iYasBl-D7DWeTXpDAHUoZpMdoa5C15od00-vruhow_Y,598
+cody/shell/__init__.py,sha256=CsGmiQ803LRTnyCDHwnCj9qCuFqYLjCZjNs46h8bKEA,36
+cody/api/__init__.py,sha256=qhaVLevLflIZa8DZE52GJxYeHfheGIpTC9ZRRV7lhI8,22
+cody/api/routes.py,sha256=zKqxPte2SUip67zbcG-6ZJCYcHuiOjbAWIF7CA386T0,602
