@@ -1,0 +1,359 @@
+basePath: '/api/experimental'
+swagger: '2.0'
+info:
+  title: CWL-Airflow Workflow Execution Service
+  version: 1.0.0
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+
+
+paths:
+
+  /dags:
+    get:
+      summary: Returns list of dags by dag_ids.
+      description: Runs `airflow list_tasks` for every dag_id in dag_ids. If dag_ids is None, process all dags.
+      operationId: get_dags
+      responses:
+        '200':
+          description: Filtered by dag_ids list of dags.
+          schema:
+            $ref: '#/definitions/GetDagsResponse'
+        '400':
+          description: The request is malformed.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: The requester is not authorized to perform this action.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: An unexpected error occurred.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      parameters:
+        - name: dag_ids
+          description: Dag identifiers
+          in: query
+          required: false
+          type: array
+          items:
+            type: string
+    post:
+      summary: Creates new dag with dag_id from the attached workflow.cwl file.
+      description: Creates new dag with dag_id from the attached workflow.cwl file.
+      operationId: post_dag
+      responses:
+        '200':
+          description: dag_id, py and cwl file locations of a created dag.
+          schema:
+            $ref: '#/definitions/PostDagsResponse'
+        '400':
+          description: The request is malformed.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: The requester is not authorized to perform this action.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: An unexpected error occurred.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      consumes:
+         - multipart/form-data
+      parameters:
+        - name: dag_id
+          description: Dag identifier
+          in: query
+          required: false
+          type: string
+        - name: workflow
+          description: CWL workflow file with embedded tools and all other dependencies
+          in: formData
+          required: true
+          type: file
+
+  /dag_runs:
+    get:
+      summary: Returns list of dag_runs by dag_id, run_id, execution_date, state.
+      description: Runs `airflow task_state dag_id, task_id, execution_date` for every task of dag_run from `airflow list_dag_runs dag_id`
+      operationId: get_dag_runs
+      responses:
+        '200':
+          description: Filtered by dag_id, run_id, execution_date, state list of dag_runs.
+          schema:
+            $ref: '#/definitions/GetDagRunsResponse'
+        '400':
+          description: The request is malformed.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: The requester is not authorized to perform this action.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: An unexpected error occurred.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      parameters:
+        - name: dag_id
+          description: Dag identifier
+          in: query
+          required: false
+          type: string
+        - name: run_id
+          description: Run identifier
+          in: query
+          required: false
+          type: string
+        - name: execution_date
+          description: Execution date
+          in: query
+          required: false
+          type: string
+          format: date-time
+        - name: state
+          description: Dag run state
+          in: query
+          required: false
+          type: string
+          enum:
+            - running
+            - success
+            - failed
+    post:
+      summary: Creates new dag_run for dag_id with optional run_id and conf
+      description: Creates new_dag run for dag_id with optional run_id and conf
+      operationId: post_dag_runs
+      responses:
+        '200':
+          description: Reference information about created dag_run.
+          schema:
+            $ref: '#/definitions/PostDagRunsResponse'
+        '400':
+          description: The request is malformed.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: The requester is not authorized to perform this action.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: An unexpected error occurred.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      parameters:
+        - name: dag_id
+          description: Dag identifier
+          in: query
+          required: true
+          type: string
+        - name: run_id
+          description: Run identifier
+          in: query
+          required: false
+          type: string
+        - name: conf
+          description: Run configuration (JSON-formatted string)
+          in: query
+          required: false
+          type: string
+
+  # delete this path if not actively used 
+  /dags/{dag_id}/dag_runs:
+    post:
+      summary: Creates new dag_run for dag_id with optional run_id and conf
+      description: Creates new dag_run for dag_id with optional run_id and conf. Corresponds to the original Airflow API to trigger dag_run
+      operationId: post_dag_runs_legacy
+      responses:
+        '200':
+          description: Reference information about created dag_run.
+          schema:
+            $ref: '#/definitions/PostDagRunsResponse'
+        '400':
+          description: The request is malformed.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '401':
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: The requester is not authorized to perform this action.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: An unexpected error occurred.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+      parameters:
+        - name: dag_id
+          description: Dag identifier
+          in: path
+          required: true
+          type: string
+        - name: data
+          description: Run identifier and configuration
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              run_id:
+                type: string
+              conf:
+                type: string
+
+                
+definitions:
+
+  GetDagsResponse:
+    type: object
+    properties:
+      dags:
+        type: array
+        items:
+          type: object
+          properties:
+            dag_id:
+              type: string
+            tasks:
+              type: array
+              items:
+                type: string
+    description: Filtered by dag_ids list of dags.
+
+  PostDagsResponse:
+    type: object
+    required:
+     - dag_id
+     - dag_path
+     - cwl_path
+    properties:
+      dag_id:
+        type: string
+      dag_path:
+        type: string
+      cwl_path:
+        type: string
+    description: dag_id, py and cwl file locations of a created dag.
+
+  GetDagRunsResponse:
+    type: object
+    properties:
+      dag_runs:
+        type: array
+        items:
+          $ref: '#/definitions/DagRunInfo'
+    description: Filtered by dag_id, run_id, execution_date and state list of dag_runs.
+
+  PostDagRunsResponse:
+    type: object
+    required:
+     - dag_id
+     - run_id
+     - execution_date
+     - state
+     - start_date
+    properties:
+      dag_id:
+        type: string
+      run_id:
+        type: string
+      execution_date:
+        type: string
+        format: date-time
+      start_date:
+        type: string
+        format: date-time
+      state:
+        $ref: '#/definitions/DagRunState'
+    description: Reference information about created dag_run.
+
+  DagRunInfo:
+    type: object
+    required:
+     - dag_id
+     - run_id
+     - execution_date
+     - start_date
+     - state
+     - tasks
+    properties:
+      dag_id:
+        type: string
+      run_id:
+        type: string
+      execution_date:
+        type: string
+        format: date-time
+      start_date:
+        type: string
+        format: date-time
+      state:
+        $ref: '#/definitions/DagRunState'
+      tasks:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+            state:
+              $ref: '#/definitions/TaskState'
+    description: Dag run info
+
+  DagRunState:
+    type: string
+    enum:
+      - running
+      - success
+      - failed
+    description: Dag run state
+
+  TaskState:
+    type: string
+    enum:
+      - scheduled
+      - queued
+      - running
+      - success
+      - failed
+      - up_for_retry
+      - up_for_reschedule
+      - upstream_failed
+      - skipped
+      - none
+    description: Task state
+
+  ErrorResponse:
+    type: object
+    properties:
+      msg:
+        type: string
+        description: A detailed error message.
+      status_code:
+        type: integer
+        description: The integer representing the HTTP status code (e.g. 200, 404).
+    description: An object that can optionally include information about the error.
