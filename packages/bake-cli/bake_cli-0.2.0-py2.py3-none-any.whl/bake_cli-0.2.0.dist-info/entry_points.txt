@@ -1,0 +1,3 @@
+[console_scripts]
+bake = bake.cli:entrypoint
+
