@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: weather-santhu
+Version: 0.0.2
+Summary: Web scrapping for weather.com
+Home-page: https://github.com/Santhu195/
+Author: Santhosh R
+Author-email: santhoshgowda.ec@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: bs4
+
+UNKNOWN
+
+
