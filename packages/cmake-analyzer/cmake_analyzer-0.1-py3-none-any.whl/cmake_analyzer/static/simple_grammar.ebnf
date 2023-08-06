@@ -1,0 +1,114 @@
+@@grammar     :: CMake
+@@parseinfo   :: True
+
+# bracket_argument is removed due to difficulty to implement it in these rules;
+# unquoted_legacy is also removed because I don't want to spend time on it;
+
+# file_element        =  command:command_invocation line_ending | {bracket_comment|space}* line_ending;
+# argument            =  bracket_argument | quoted_argument | unquoted_argument;
+# bracket_comment     =  '#' bracket_argument;
+# bracket_argument    =  bracket_open bracket_content bracket_close;
+# bracket_content     =  /[A-z0-9_]+/;
+# bracket_open        =  '[' {'='}* '[';
+# bracket_close       =  ']' {'='}* ']';
+
+file
+    = 
+    {file_element}* $
+    ;
+
+file_element
+    =
+    | @:command_invocation {line_comment}
+    | line_comment
+    ;
+
+command_invocation
+    = 
+    name:identifier "(" args:arguments ")"
+    ;
+
+# optimized it a bit to avoid splitting args into head/tail structure instead of having just an array;
+# arguments           =  [argument] {separated_arguments}*;
+# separated_arguments =  [arg:argument] | '(' args:arguments ')';
+arguments
+    =
+    {separated_arguments}*
+    ;
+
+separated_arguments
+    =
+    | '(' args:arguments ')'
+    | [arg:argument]
+    ;
+
+argument
+    =
+    | quoted_argument
+    | unquoted_argument
+    | line_comment
+    ;
+
+unquoted_argument
+    =
+    unquoted_element
+    ;
+
+# this is different that the one on CMake website because unquoted args can contain "" symbols but not at the beginning;
+# like -DTEST="SOMETHING";
+unquoted_element
+    =
+    | /[^ \t\n\(\)#\\]+/
+    | escape_sequence
+    ;
+
+quoted_argument
+    =
+    '"' ~{quoted_element}* '"'
+    ;
+
+quoted_element
+    =
+    | /[^\\\"]+/
+    | escape_sequence
+    | quoted_continuation
+    ;
+
+quoted_continuation
+    =
+    '\'
+    ;
+
+escape_sequence
+    =
+    | escape_identity
+    | escape_encoded
+    | escape_semicolon
+    ;
+
+escape_identity
+    =
+    '\\' /[^A-Za-z0-9;]/
+    ;
+
+escape_encoded
+    =
+    | '\\t'
+    | '\\r'
+    | '\\n'
+    ;
+
+escape_semicolon
+    =
+    ';'
+    ;
+
+identifier
+    =
+    /[A-Za-z_][A-Za-z0-9_]*/
+    ;
+
+line_comment
+    =
+    /#.*$/
+    ;
