@@ -1,0 +1,17 @@
+# Common requirements for all platforms
+numpy>=1.15.4
+pandas
+scipy
+netcdf4
+pyresample
+xarray
+cdsapi
+ecmwf-api-client
+datedown>=0.3
+pygeobase
+pygeogrids
+repurpose
+pynetcf
+configobj
+requests
+more_itertools
