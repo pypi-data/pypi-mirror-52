@@ -1,0 +1,17 @@
+billiard
+click
+patool
+python-dateutil
+python-hglib
+retrying
+sqlitedict
+vcversioner
+swh.model>=0.0.27
+swh.storage>=0.0.114
+swh.scheduler>=0.0.39
+swh.loader.core>=0.0.43
+
+[testing]
+pytest
+swh.core[http]>=0.0.61
+swh.scheduler[testing]
