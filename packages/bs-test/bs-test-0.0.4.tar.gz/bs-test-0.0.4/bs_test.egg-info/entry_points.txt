@@ -1,0 +1,4 @@
+[console_scripts]
+get_time = get_time:get_time
+get_timestamp = get_time:get_timestamp
+
