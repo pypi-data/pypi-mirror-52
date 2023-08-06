@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: dylog
+Version: 0.0.1
+Summary: Python centralized logging using DynamoDB
+Home-page: https://github.com/vgmartinez/dylog
+Author: Victor M
+Author-email: viktor.manuel.garcia@gmail.com
+Maintainer: Victor M
+Maintainer-email: viktor.manuel.garcia@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/vgmartinez/dylog/tarball/0.0.1
+Description: UNKNOWN
+Keywords: dylog,logging,dynamo,dynamodb
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Database
