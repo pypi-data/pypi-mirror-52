@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+pyconfigloader.egg-info/PKG-INFO
+pyconfigloader.egg-info/SOURCES.txt
+pyconfigloader.egg-info/dependency_links.txt
+pyconfigloader.egg-info/requires.txt
+pyconfigloader.egg-info/top_level.txt
+src/pyconfigloader/__init__.py
