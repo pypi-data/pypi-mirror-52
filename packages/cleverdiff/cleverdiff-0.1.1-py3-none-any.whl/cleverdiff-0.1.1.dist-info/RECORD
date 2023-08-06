@@ -1,0 +1,16 @@
+cleverdiff/__init__.py,sha256=QWgzCijUR0dmhKLcnc-p98EoOdBLDiFj7fOP9JK11GM,89
+cleverdiff/__main__.py,sha256=IEmLJWWG-h0jVENomUMB26WMQwMR1oWU05ydeQvvjnk,72
+cleverdiff/cleverdiff.py,sha256=htl7lMAq5ZOPN7bER-3gK0880zRbx1juzo7A00y7jTE,3210
+cleverdiff/diffhunk.py,sha256=Y90lVU6pq0XrCE7S-4DaMdMlfW7qpihg0Q5yEcBHOuY,2056
+cleverdiff/difflist.py,sha256=HboSh4sOVpe0AowgDgZq-X9eRpiQlGNYDzkXaSiRAsA,4992
+cleverdiff/test_diffhunk.py,sha256=xw7vOZhbaBEpLM18MAmjPB3KRvXMDg6cXFTfrEeDtwM,4542
+cleverdiff/test_difflist.py,sha256=8ukOLjeG_8sR6hSXnk_1I8pNjygfuX2-aMRXk2-uTp4,11348
+cleverdiff/test_data/new.def,sha256=jptKvID4PSOc5ua_BkoTEGuufD9-1PpkrRWMLVI0ZOo,19865
+cleverdiff/test_data/new2.def,sha256=jptKvID4PSOc5ua_BkoTEGuufD9-1PpkrRWMLVI0ZOo,19865
+cleverdiff/test_data/ref.def,sha256=MRwxZTmfC9hamFmHIpIfA70dYHWM8OexGozlwSZOgFs,19843
+cleverdiff/test_data/ref2.def,sha256=MRwxZTmfC9hamFmHIpIfA70dYHWM8OexGozlwSZOgFs,19843
+cleverdiff-0.1.1.dist-info/entry_points.txt,sha256=vu02IX4UXrTCpDFP_ECR9JEPq1qcCdiIWQG8uPX-RZc,57
+cleverdiff-0.1.1.dist-info/LICENSE,sha256=0SAgqCl8RI6Vm7Rv5YC6CPyLA2MXedQM9tq17WMXl-o,33041
+cleverdiff-0.1.1.dist-info/WHEEL,sha256=JXk7EE_UnY8Q4113Zu8f6SlrMizLH61VvvtIzqzkSKE,79
+cleverdiff-0.1.1.dist-info/METADATA,sha256=vgi9fDO1sCpxorUkydgWjCma5thgeUcMfs3MR7dOBn4,2083
+cleverdiff-0.1.1.dist-info/RECORD,,
