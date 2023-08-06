@@ -1,0 +1,20 @@
+
+/*.mdc-drawer-app-content {*/
+  /*flex: auto;*/
+  /*overflow: auto;*/
+/*}*/
+
+/*.main-content {*/
+  /*overflow: auto;*/
+  /*height: 100%;*/
+/*}*/
+
+/*.app-bar {*/
+  /*position: absolute;*/
+/*}*/
+
+
+/*.mdc-text-field--fullwidth:not(.mdc-text-field--textarea) {*/
+     /*display: unset !important; */
+/*}*/
+

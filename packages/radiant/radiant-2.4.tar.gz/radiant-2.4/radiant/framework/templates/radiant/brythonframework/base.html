@@ -1,0 +1,44 @@
+{% load compile_static %}
+{% load static %}
+{% load custom_include %}
+
+<html class="mdc-typography">
+  <head>
+  {% csrf_token %}
+
+    {% if show_splash %}
+      <div class="splash_loading">
+        {% include splash_name %}
+      </div>
+    {% endif %}
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>{{title_page}}</title>
+
+    {% try_to_include "header.html" %}
+
+
+    <!--Include default material and touchsupport, this include JQuery too-->
+    {% include "radiant/mdc.html" with scripts=False %}
+    {% include "radiant/brython.html" with debug=0 %}
+
+    <script type="text/python">
+    import sys
+    sys.path.append("{% static '' %}")
+    sys.path.append("{% static 'radiant/brython/Lib' %}")
+    </script>
+
+    <script type="text/python" src="{% static brython_template %}"></script>
+    <script type="text/python" src="{% static "radiant/scripts/main.py" %}"></script>
+
+  </head>
+  <body>
+
+
+
+
+  </body>
+</html>
+
