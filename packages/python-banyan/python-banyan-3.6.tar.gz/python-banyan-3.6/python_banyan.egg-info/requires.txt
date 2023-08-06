@@ -1,0 +1,7 @@
+pyzmq
+msgpack-python
+numpy>=1.9
+msgpack-numpy
+psutil
+apscheduler
+websockets
