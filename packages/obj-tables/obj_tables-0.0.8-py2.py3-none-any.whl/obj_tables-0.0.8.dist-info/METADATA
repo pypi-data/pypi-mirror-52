@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: obj-tables
+Version: 0.0.8
+Summary: Database-independent Django-like object model
+Home-page: https://github.com/KarrLab/obj_tables
+Author: Karr Lab
+Author-email: info@karrlab.org
+License: MIT
+Download-URL: https://github.com/KarrLab/obj_tables
+Keywords: object model,schema
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development :: Object Brokering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: all
+Provides-Extra: rest_api
+Provides-Extra: tests
+Provides-Extra: docs
+Requires-Dist: biopython
+Requires-Dist: bpforms
+Requires-Dist: gitpython
+Requires-Dist: inflect
+Requires-Dist: natsort
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pint (>=0.9)
+Requires-Dist: pronto
+Requires-Dist: python-dateutil
+Requires-Dist: pyyaml (>=5.1)
+Requires-Dist: scipy
+Requires-Dist: setuptools
+Requires-Dist: six
+Requires-Dist: stringcase
+Requires-Dist: sympy
+Requires-Dist: validate-email
+Requires-Dist: weakreflist
+Provides-Extra: all
+Requires-Dist: abduct; extra == 'all'
+Requires-Dist: attrdict; extra == 'all'
+Requires-Dist: configobj; extra == 'all'
+Requires-Dist: flask; extra == 'all'
+Requires-Dist: flask-cors; extra == 'all'
+Requires-Dist: flask-restplus; extra == 'all'
+Requires-Dist: mock; extra == 'all'
+Requires-Dist: objsize; extra == 'all'
+Requires-Dist: openpyxl; extra == 'all'
+Requires-Dist: psutil; extra == 'all'
+Requires-Dist: pygithub; extra == 'all'
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: sphinx (>=1.8); extra == 'all'
+Requires-Dist: sphinx-fontawesome; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.4.2); extra == 'all'
+Requires-Dist: sphinxcontrib-addmetahtml (>=0.1.1); extra == 'all'
+Requires-Dist: sphinxcontrib-bibtex; extra == 'all'
+Requires-Dist: sphinxcontrib-googleanalytics (>=0.1.1); extra == 'all'
+Requires-Dist: sphinxcontrib-spelling; extra == 'all'
+Requires-Dist: sphinxprettysearchresults; extra == 'all'
+Requires-Dist: wc-onto; extra == 'all'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=1.8); extra == 'docs'
+Requires-Dist: sphinx-fontawesome; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (>=0.4.2); extra == 'docs'
+Requires-Dist: sphinxcontrib-addmetahtml (>=0.1.1); extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex; extra == 'docs'
+Requires-Dist: sphinxcontrib-googleanalytics (>=0.1.1); extra == 'docs'
+Requires-Dist: sphinxcontrib-spelling; extra == 'docs'
+Requires-Dist: sphinxprettysearchresults; extra == 'docs'
+Provides-Extra: rest_api
+Requires-Dist: flask; extra == 'rest_api'
+Requires-Dist: flask-cors; extra == 'rest_api'
+Requires-Dist: flask-restplus; extra == 'rest_api'
+Provides-Extra: tests
+Requires-Dist: abduct; extra == 'tests'
+Requires-Dist: attrdict; extra == 'tests'
+Requires-Dist: configobj; extra == 'tests'
+Requires-Dist: mock; extra == 'tests'
+Requires-Dist: objsize; extra == 'tests'
+Requires-Dist: openpyxl; extra == 'tests'
+Requires-Dist: psutil; extra == 'tests'
+Requires-Dist: pygithub; extra == 'tests'
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: wc-onto; extra == 'tests'
+
+|PyPI package| |Documentation| |Test results| |Test coverage| |Code
+analysis| |License| |Analytics|
+
+Database-independent Django-like object model
+=============================================
+
+This module allows developers to define standalone (separate from
+databases) schemas using a syntax similar to Django. The ``io`` module
+provides methods to serialize and deserialize schema objects to/from
+Excel, csv, and tsv file(s).
+
+Installation
+------------
+
+-  Latest release from PyPI ``pip install obj_tables``
+
+-  Latest revision from GitHub
+   ``pip install git+https://github.com/KarrLab/wc_utils.git#egg=wc_utils   pip install git+https://github.com/KarrLab/obj_tables.git#egg=obj_tables``
+
+Example usage
+-------------
+
+Documentation
+-------------
+
+Please see the `documentation <http://docs.karrlab.org/obj_tables>`__.
+
+License
+-------
+
+The software is released under the `MIT license <LICENSE>`__.
+
+Development team
+----------------
+
+This package was developed by the `Karr Lab <http://www.karrlab.org>`__
+at the Icahn School of Medicine at Mount Sinai in New York, USA.
+
+-  Jonathan Karr
+-  Arthur Goldberg
+
+Questions and comments
+----------------------
+
+Please contact the `Karr Lab <http://www.karrlab.org>`__ with any
+questions or comments.
+
+.. |PyPI package| image:: https://img.shields.io/pypi/v/obj_tables.svg
+   :target: https://pypi.python.org/pypi/obj_tables
+.. |Documentation| image:: https://readthedocs.org/projects/obj-tables/badge/?version=latest
+   :target: http://docs.karrlab.org/obj_tables
+.. |Test results| image:: https://circleci.com/gh/KarrLab/obj_tables.svg?style=shield
+   :target: https://circleci.com/gh/KarrLab/obj_tables
+.. |Test coverage| image:: https://coveralls.io/repos/github/KarrLab/obj_tables/badge.svg
+   :target: https://coveralls.io/github/KarrLab/obj_tables
+.. |Code analysis| image:: https://api.codeclimate.com/v1/badges/2c4b64abc8bef2ea4e22/maintainability
+   :target: https://codeclimate.com/github/KarrLab/obj_tables
+.. |License| image:: https://img.shields.io/github/license/KarrLab/obj_tables.svg
+   :target: LICENSE
+.. |Analytics| image:: https://ga-beacon.appspot.com/UA-86759801-1/obj_tables/README.md?pixel
+
+
+
