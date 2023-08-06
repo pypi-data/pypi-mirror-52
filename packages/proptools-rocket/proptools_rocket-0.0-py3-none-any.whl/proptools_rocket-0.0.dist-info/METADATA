@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: proptools-rocket
+Version: 0.0
+Summary: Rocket propulsion design calculation tools.
+Home-page: UNKNOWN
+Author: Matt Vernacchia
+Author-email: mvernacc@mit.edu
+License: UNKNOWN
+Keywords: rocket propulsion engineering aerospace
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-aero
+Requires-Dist: scipy
+Provides-Extra: docs
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: numpy ; extra == 'docs'
+Requires-Dist: matplotlib ; extra == 'docs'
+Requires-Dist: scikit-aero ; extra == 'docs'
+Requires-Dist: scipy ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: numpy ; extra == 'test'
+Requires-Dist: matplotlib ; extra == 'test'
+Requires-Dist: scikit-aero ; extra == 'test'
+Requires-Dist: scipy ; extra == 'test'
+
+UNKNOWN
+
+
