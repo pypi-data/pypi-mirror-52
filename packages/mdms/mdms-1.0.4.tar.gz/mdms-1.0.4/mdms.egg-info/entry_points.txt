@@ -1,0 +1,3 @@
+[console_scripts]
+mdms_menu = mdms.mdms_menu:menu
+
