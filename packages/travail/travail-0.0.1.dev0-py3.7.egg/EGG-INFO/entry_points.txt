@@ -1,0 +1,3 @@
+[console_scripts]
+travail = travail.main:main
+
