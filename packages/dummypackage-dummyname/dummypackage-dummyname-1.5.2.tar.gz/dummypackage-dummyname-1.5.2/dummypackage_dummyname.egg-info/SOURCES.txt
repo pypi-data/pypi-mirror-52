@@ -1,0 +1,11 @@
+README.md
+setup.py
+dummypackage/__init__.py
+dummypackage/bar_module.py
+dummypackage/foo_module.py
+dummypackage/nested/__init__.py
+dummypackage/nested/baz_module.py
+dummypackage_dummyname.egg-info/PKG-INFO
+dummypackage_dummyname.egg-info/SOURCES.txt
+dummypackage_dummyname.egg-info/dependency_links.txt
+dummypackage_dummyname.egg-info/top_level.txt
