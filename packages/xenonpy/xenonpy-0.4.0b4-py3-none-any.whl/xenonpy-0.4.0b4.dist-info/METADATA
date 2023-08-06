@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: xenonpy
+Version: 0.4.0b4
+Summary: material descriptor library
+Home-page: https://github.com/yoshida-lab/xenonpy
+Author: ['TsumiNa']
+Author-email: liu.chang.1865@gmail.com
+Maintainer: ['TsumiNa']
+Maintainer-email: liu.chang.1865@gmail.com
+License: BSD (3-clause)
+Download-URL: https://github.com/yoshida-lab/xenonpy/archive/v0.4.0.beta4.tar.gz
+Platform: Windows
+Platform: MacOS
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: ~=3.6
+Requires-Dist: tqdm
+Requires-Dist: seaborn
+Requires-Dist: plotly
+Requires-Dist: requests
+Requires-Dist: mordred
+Requires-Dist: Python-Deprecated
+Requires-Dist: numpy (>=1.16.*)
+Requires-Dist: pandas (>=0.24.*)
+Requires-Dist: pymatgen (>=2019.5.*)
+Requires-Dist: scikit-learn (>=0.21.*)
+Requires-Dist: scipy (>=1.2.*)
+Requires-Dist: ruamel.yaml
+Requires-Dist: torch (==1.*)
+Requires-Dist: joblib (>=0.13.*)
+
+UNKNOWN
+
+
