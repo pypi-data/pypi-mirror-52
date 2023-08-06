@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: im2txt
+Version: 0.0.2
+Summary: Encode images in form of text and decode again!!
+Home-page: https://github.com/rrayes3110
+Author: Rafael Rayes
+Author-email: rafa@rayes.com.br
+License: UNKNOWN
+Description: 
+        first import the package on your terminal with pip:
+        ```
+        pip3 install im2txt
+        ```
+        next you import the module:
+        ```
+        import im2txt
+        ```
+        now you just need to encode the image of your preference:
+        ```
+        im2txt.encode('/path/to/image/pooptest.jpg')
+        ```
+        you will receive a ```pooptest.txt``` file.
+        This file will have the pixel value of all pixels on the image.
+        
+        To decode the .txt file back to an image we use:
+        ```
+        im2txt.decode('path/to/txtfile/pooptest.txt')
+        ```
+        you will receive the encoded image back again in form of .png!
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
