@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: update-repo
+Version: 0.0.2
+Summary: clone/pull a repo
+Home-page: http://github.com/ffreemt/update-repo
+Author: mikeee
+License: MIT License
+Download-URL: https://github.com/ffreemt/update-repo/archive/v_0.0.2.tar.gz
+Description: # update-repo
+        
+        Update git repo: clone if the repo does not exist; pull if the repo already exist.
+        
+        ### Installation
+        
+        ```pip install update-repo``` (```!pip install update-repo``` in jupyter notebook)
+        
+        ### Usage
+        
+        ```
+        from upate_repo import update_repo
+        update_repo(repo_name)
+        ```
+        
+Keywords: git,colab
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
