@@ -1,0 +1,37 @@
+name: Publish Python package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 2.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 2.7
+    - uses: dschep/install-pipenv-action@v1
+    - name: Install dependencies
+      run: |
+        pipenv install --dev
+    - name: generate code
+      run: |
+        make api
+    - name: Build package
+      run: |
+        pipenv run python api/setup.py sdist bdist_wheel
+    - name: Publish package to Test PyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.test_pypi_password }}
+        repository_url: https://test.pypi.org/legacy/
+    - name: Publish package
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
