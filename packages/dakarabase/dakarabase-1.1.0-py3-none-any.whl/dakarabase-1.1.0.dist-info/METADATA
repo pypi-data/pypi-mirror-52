@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: dakarabase
+Version: 1.1.0
+Summary: Collecion of helper modules for the Dakara Project
+Home-page: https://github.com/DakaraProject/dakara-base
+Author: Flore <flore.love@gmail.com>, Neraste <neraste.herr10@gmail.com>
+License: MIT
+Project-URL: Bug tracker, https://github.com/DakaraProject/dakara-base/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML (<5.2,>=5.1)
+Requires-Dist: coloredlogs (<10.1,>=10.0)
+Requires-Dist: furl (<2.1,>=2.0)
+Requires-Dist: path.py (<12.1,>=12.0)
+Requires-Dist: progressbar2 (<3.44,>=3.43)
+Requires-Dist: requests (<2.23,>=2.22)
+Requires-Dist: websocket-client (<0.57,>=0.56)
+Provides-Extra: tests
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: codecov ; extra == 'tests'
+Requires-Dist: black ; (python_version >= "3.6") and extra == 'tests'
+
+# Dakara Base
+
+<!-- Badges are displayed for the develop branch -->
+[![Travis CI Build Status](https://travis-ci.org/DakaraProject/dakara-base.svg?branch=develop)](https://travis-ci.org/DakaraProject/dakara-base)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/50fay6bhsgxispcw/branch/develop?svg=true)](https://ci.appveyor.com/project/neraste/dakara-base/branch/develop)
+[![Codecov coverage analysis](https://codecov.io/gh/DakaraProject/dakara-base/branch/develop/graph/badge.svg)](https://codecov.io/gh/DakaraProject/dakara-base)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+This project is a collection of tools and helper modules for the Dakara Project.
+
+## Modules available
+
+* `config`: a configuration helper that can load an YAML file and manage loggers;
+* `exceptions`: a base class for exceptions;
+* `http_client`: an HTTP client dedicated to be used with an API;
+* `progress_bar`: a collection of progress bars;
+* `resources_manager`: a helper for retreiving static files with module-like naming;
+* `safe_workers`: a library to facilitate the manipulation of threads;
+* `utils`: other various helpers;
+* `websocket_client`: a Websocket client.
+
+## Install
+
+Install the package with:
+
+```sh
+pip install dakarabase
+```
+
+If you have downloaded the repo, you can install the package directly with:
+
+```sh
+python setup.py install
+```
+
+## Developpment
+
+### Install dependencies
+
+Please ensure you have a recent enough version of `setuptools`:
+
+```sh
+pip install --upgrade "setuptools>=40.0"
+```
+
+Install the dependencies with:
+
+```sh
+pip install -e ".[tests]"
+```
+
+This installs the normal dependencies of the package plus the dependencies for tests.
+
+### Run tests
+
+Run tests simply with:
+
+```sh
+python setup.py test
+```
+
+To check coverage, use the `coverage` command:
+
+```sh
+coverage run setup.py test
+coverage report -m
+```
+
+MIT License
+
+Copyright (c) 2019 Dakara Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
