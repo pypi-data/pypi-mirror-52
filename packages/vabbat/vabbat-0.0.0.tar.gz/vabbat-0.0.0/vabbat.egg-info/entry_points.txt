@@ -1,0 +1,3 @@
+[console_scripts]
+vabbat = vabbat.main:cmd_entry
+
