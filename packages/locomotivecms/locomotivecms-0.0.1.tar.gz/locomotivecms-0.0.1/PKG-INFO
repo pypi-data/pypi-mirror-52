@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: locomotivecms
+Version: 0.0.1
+Summary: Client for locomotivecms
+Home-page: https://github.com/akretion/locomotivecms_python_client/
+Author: Akretion
+Author-email: contact@akretion.com
+License: AGPLv3+
+Description: Python client for locomotivecms
+        ==================================
+        
+        Python client for locomotivecms : https://www.locomotivecms.com/
+        
+        Roadmap
+        =======
+        
+        - add test
+        - add documentation
+        
+Platform: UNKNOWN
