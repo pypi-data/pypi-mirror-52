@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: torchcoder
+Version: 0.0.4
+Summary: A package for autoencoder
+Home-page: https://github.com/YIN95/TorchCoder
+Author: Wenjie Yin
+Author-email: yinwenjie159@hotmail.com
+License: MIT license
+Description: # TorchCoder
+        A PyTorch library for AutoEncoder. 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
