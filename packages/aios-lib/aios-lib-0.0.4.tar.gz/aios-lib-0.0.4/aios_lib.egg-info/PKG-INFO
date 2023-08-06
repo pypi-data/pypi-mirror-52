@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: aios-lib
+Version: 0.0.4
+Summary: aios lib package
+Home-page: https://www.clustarai.com
+Author: Zhang Manni
+Author-email: mandy.zhang@clustar.ai
+License: UNKNOWN
+Description: ## AIOS LIB
+        
+        Library for AIOS program
+        
+        #### Build
+        
+        ~~~python
+        python3 setup.py sdist bdist_wheel
+        ~~~
+        
+        #### Intallation
+        
+        ~~~shell
+        pip3 install wheel_file_path
+        ~~~
+        
+        #### Usage
+        
+        ~~~python
+        from aios-lib.utils import *
+        
+        # Obtain data directory from environment variables
+        data_dir = get_data_dir()
+        # Obtain model directory from environment variables
+        model_dir = get_model_dir()
+        # Report model score to clustar aios server
+        score = 1
+        report_score(score)
+        ~~~
+        
+        #### Acknowledge
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python 
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
