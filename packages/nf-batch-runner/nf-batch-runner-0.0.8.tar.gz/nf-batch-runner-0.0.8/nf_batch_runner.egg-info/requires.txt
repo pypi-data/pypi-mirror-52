@@ -1,0 +1,4 @@
+boto3>=1.9.227
+bcrypt>=3.1.7
+Click>=7.0
+PyYAML>=5.1.2

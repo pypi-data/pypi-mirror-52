@@ -1,0 +1,13 @@
+README.md
+setup.py
+nf_batch_runner/__init__.py
+nf_batch_runner/aws.py
+nf_batch_runner/cli.py
+nf_batch_runner/click_helpers.py
+nf_batch_runner/environment.py
+nf_batch_runner.egg-info/PKG-INFO
+nf_batch_runner.egg-info/SOURCES.txt
+nf_batch_runner.egg-info/dependency_links.txt
+nf_batch_runner.egg-info/entry_points.txt
+nf_batch_runner.egg-info/requires.txt
+nf_batch_runner.egg-info/top_level.txt
