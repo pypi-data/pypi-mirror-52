@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: beams
+Version: 0.1.0
+Summary: Simple beam calculator.
+Home-page: UNKNOWN
+Author: Adam J. Plowman
+Author-email: adam.plowman@manchester.ac.uk
+License: UNKNOWN
+Project-URL: Github, https://github.com/aplowman/beams
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: plotly
+Requires-Dist: notebook (>=5.3)
+Requires-Dist: ipywidgets (==7.5)
+
+[![PyPI version](https://badge.fury.io/py/beams.svg)](https://badge.fury.io/py/beams)
+
+# beams
+
+Simple beam calculator.
+
+## Installation
+
+`pip install beams`
+
+
+
