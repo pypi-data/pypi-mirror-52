@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: py934
+Version: 0.0.1
+Summary: Python library for Ethereum 9 3/4
+Home-page: https://github.com/ethereum/eth-mimblewimble
+Author: Wanseob Lim
+Author-email: email@wanseob.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: ethsnarks (==0.0.1)
+Requires-Dist: web3 (==5.0.1)
+Requires-Dist: docker (==4.0.2)
+
+# Mimblewimble on Ethereum with zk SNARKs
+
+## Structure
+- `circuits/`: Circuits
+- `test/`: Test cases
+- `Dockerfile`: Docker file to test Zokrates circuits
+
+## Pre-requisite
+Install docker and GNU Make
+
+## Command
+
+#### Circuit Test
+This will run tests/circuits/unitTest.code
+```shell
+make test
+```
+
+#### Python library Test
+This will run `python -m unittest tests/test*.py`
+```shell
+make pytest
+```
+
+#### Make verifier contract
+
+```shell
+# Specify the circuit path to compile and export the verifier contract
+make verifier circuit=YOUR_CIRCUIT_PATH
+
+# Specify the output path
+make verifier circuit=YOUR_CIRCUIT_PATH output=MyVerifier.sol
+```
+#### Make proof
+
+```shell
+# Specify the circuit path and arguments
+make proof circuit=YOUR_CIRCUIT_PATH args='0 0 0 .. 0'
+
+# Specify the output path
+make proof circuit=YOUR_CIRCUIT_PATH args='0 0 0 .. 0' output=myProof.json
+```
+
+
