@@ -1,0 +1,5 @@
+Rx>=3.0.0a3
+grpcio>=1.22.0
+grpcio-tools>=1.22.0
+pandas>=0.24.2
+filestack-python>=3.0.1
