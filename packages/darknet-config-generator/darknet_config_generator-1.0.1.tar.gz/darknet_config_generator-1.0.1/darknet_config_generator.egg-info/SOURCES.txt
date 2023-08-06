@@ -1,0 +1,14 @@
+README.md
+setup.py
+darknet_config_generator/__init__.py
+darknet_config_generator/common.py
+darknet_config_generator/yolo_connections.py
+darknet_config_generator/yolo_darknet.py
+darknet_config_generator/yolo_layers.py
+darknet_config_generator/yolo_network.py
+darknet_config_generator/yolo_optimizers.py
+darknet_config_generator/yolo_preprocess.py
+darknet_config_generator.egg-info/PKG-INFO
+darknet_config_generator.egg-info/SOURCES.txt
+darknet_config_generator.egg-info/dependency_links.txt
+darknet_config_generator.egg-info/top_level.txt
