@@ -1,0 +1,14 @@
+apidaora/__init__.py,sha256=zCVPmamLjXDIObEDnmO3jXTsoQhSYPStLfqgpQOAtzQ,407
+apidaora/app.py,sha256=7wCfgD42gST89pK94JAum_NzVYoUt_UtfI2U8ZfrcVU,3579
+apidaora/exceptions.py,sha256=uz78Vdh7MP5K7PEHVytvV-ExnkWGwr5FpW96UoxtTto,145
+apidaora/headers.py,sha256=fVl8E8cCBwpDbtGnaHkapYXswWLvEwj6mRg4OmT6phU,151
+apidaora/method.py,sha256=_4BZmLkC00yO7ZavBkYBH_W9KFQ8XFF_FzTFCgCy_d8,226
+apidaora/request.py,sha256=k716TvPY0lZL_l7sWfHp0jdupJ18IifDCAOBBpHzWbs,2326
+apidaora/response.py,sha256=4dF-aEUsmJ2zeNUqjdPOXY9dgFnfjpoGT7gVlqY1uvw,1597
+apidaora/router.py,sha256=PAmrbwhvqyvN1p9V3dXuAma790Dsg5PkydLeWjZh1fY,2784
+apidaora/tests/test_app.py,sha256=w5j4D0I8MPcJyOAW5JH2ThXxfbv1S1I5K00Qlloz6ME,4445
+apidaora/tests/test_router.py,sha256=XOqqZCAKRjG8chD_mIqJQ-3BM6j0TeFwVHT7wCmofgI,5649
+apidaora-0.4.1.dist-info/LICENSE,sha256=35kdDnpbs20OVMmUCDov0bMUTKFfdZ-nWgDHcho4ov8,1068
+apidaora-0.4.1.dist-info/WHEEL,sha256=JXk7EE_UnY8Q4113Zu8f6SlrMizLH61VvvtIzqzkSKE,79
+apidaora-0.4.1.dist-info/METADATA,sha256=a-USq21jRVAJm3EYfVKKU9kArQs3vC6UDGz3JEgTMB8,6330
+apidaora-0.4.1.dist-info/RECORD,,
