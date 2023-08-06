@@ -1,0 +1,53 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* modify setup.cfg to comply with pypi
+* add pycache to dockerignore
+* update dockerfile
+* add docker files
+* add package config files
+* fix path in examples
+* rename license file
+* fix moving/dynamic points bug in de evaluation
+* minor example update
+* license and readme update
+* minor changes
+* docstring update + randomization modified in GA
+* fix imports and parameter names in examples
+* updates in de algorithm + some docstrings
+* first working version of DE + usage example
+* de initial commit
+* minor fixes
+* pso fixes + now fitness function corresponds to Mondada 1994
+* stop condition interface modification, run function moved to base algorithm class
+* mutation bug fix
+* clipping params and velocities, fix in moving particles
+* updates in examples
+* pso algorithm
+* changes in ga params and individual
+* ga example fix
+* ga individual and population main parts moved to commons
+* fitness function moved from example to utils
+* controller class main part moved to commons, fix in crossing
+* to\_str func
+* include starting positions in Reporter
+* worlds update
+* roulette wheel selection added
+* new testing procedure
+* add setting seed, SimList interface improvements
+* Update README.md
+* saving result
+* example of ga usage
+* genetic algorithm module created
+* simulation list rename
+* license
+* code structure change, minor changes and licence
+* Update README.md
+* Update README.md
+* progress reporter and timestamp utilities
+* class docstrings, interface improvements in simulation.py
+* initial commit with core simulation wrapper components
+* Initial commit
