@@ -1,0 +1,7 @@
+Markdown
+docutils
+simplenote>=2.1.2
+
+[dev]
+mock
+yapf
