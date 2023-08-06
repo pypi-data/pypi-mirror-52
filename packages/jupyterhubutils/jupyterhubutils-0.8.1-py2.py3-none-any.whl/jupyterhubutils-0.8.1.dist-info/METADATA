@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jupyterhubutils
+Version: 0.8.1
+Summary: UNKNOWN
+Home-page: https://github.com/sqre-lsst/jupyterhubutils
+Author: Adam Thornton
+Author-email: athornton@lsst.org
+License: MIT
+Keywords: lsst
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests (<3.0.0,>=2.0.0)
+Requires-Dist: kubernetes (<11.0.0,>=9.0.0)
+Requires-Dist: semver (<3.0.0,>=2.0.0)
+
+# Utilities for SQuaRE Jupyter Server Environment
+
+
