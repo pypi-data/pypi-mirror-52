@@ -1,0 +1,13 @@
+README.md
+setup.py
+uwtools/Coordinates.file
+uwtools/__init__.py
+uwtools/parse_buildings.py
+uwtools/parse_courses.py
+uwtools/parse_schedules.py
+uwtools.egg-info/PKG-INFO
+uwtools.egg-info/SOURCES.txt
+uwtools.egg-info/dependency_links.txt
+uwtools.egg-info/not-zip-safe
+uwtools.egg-info/requires.txt
+uwtools.egg-info/top_level.txt
