@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bugcatcher/__init__.py
+bugcatcher/ftl.py
+bugcatcher.egg-info/PKG-INFO
+bugcatcher.egg-info/SOURCES.txt
+bugcatcher.egg-info/dependency_links.txt
+bugcatcher.egg-info/entry_points.txt
+bugcatcher.egg-info/requires.txt
+bugcatcher.egg-info/top_level.txt

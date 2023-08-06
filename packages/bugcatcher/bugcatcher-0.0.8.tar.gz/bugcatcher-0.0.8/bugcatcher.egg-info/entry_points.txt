@@ -1,0 +1,6 @@
+[console_scripts]
+ftl = bugcatcher.ftl:main
+
+[pytest11]
+ftl = bugcatcher.ftl:main
+
