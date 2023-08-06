@@ -1,0 +1,14 @@
+gaitpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gaitpy/gait.py,sha256=SuWd7kSob0f_JZJrSWzcQr6Ls--6XMMdA_hIOM3_bws,16588
+gaitpy/signal_features.py,sha256=BhjW0oE-H5hUn8q7OtTcBRbWhEVSJE7oQyoX0M7KNGM,5752
+gaitpy/util.py,sha256=-Qc9ceqaWT_TvbeK4XMWKgKKSont-_fPxHr9NGqpFq4,16844
+gaitpy/demo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gaitpy/demo/demo.py,sha256=Eru5x2rc2ADv_rsIof_4YpRLaTvCDNFDDuiQ38uHfSE,2987
+gaitpy/demo/demo_classify_bouts.h5,sha256=Kil1eZWndckvTmUTnQkxV5NJWcrihMi-ZyKqgBXnYuI,8080
+gaitpy/demo/demo_data.csv,sha256=j-wXddN62k-c1Ci3i_EVCxiEBy1nlBbDThKvSUXJin0,483946
+gaitpy/demo/demo_plot_contacts.html,sha256=ZpcnhuzHXQfZspmF4t1WgQfywoUYdw-Xhh7k5BIs2zM,202433
+gaitpy-1.4.dist-info/LICENSE,sha256=xo4x6OlhWBvnob1WcbnH-NUGwR48SRjQcnkecA3GYUA,1061
+gaitpy-1.4.dist-info/METADATA,sha256=ErHwslWlZ5GapeZSnNjdmcVMGuGH7AuWYyBEeFxcjFU,6027
+gaitpy-1.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gaitpy-1.4.dist-info/top_level.txt,sha256=_N-p1vD_t3kVae29mszStG3YqG_GsRBQaPCdsKfbCKk,7
+gaitpy-1.4.dist-info/RECORD,,
