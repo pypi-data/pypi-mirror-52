@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: django-cepfield
+Version: 0.3.0
+Summary: Django CepField
+Home-page: https://github.com/mbodock/django-cepfield/
+Author: Marcus Bodock
+Author-email: mbodock@gmail.com
+License: MIT
+Keywords: Django,CEP,Address,Brazil
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: lxml (<4.5)
+Requires-Dist: requests (<2.21)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+Auto fill address using brasizilian CEP number.
+
+
