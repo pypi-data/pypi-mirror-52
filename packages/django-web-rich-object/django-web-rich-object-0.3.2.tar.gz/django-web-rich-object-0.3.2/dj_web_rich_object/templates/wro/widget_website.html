@@ -1,0 +1,27 @@
+{% extends "wro/base.html" %}
+
+{% block content %}
+ <a href="{{ obj.url }}" target="_blank">
+  {% if obj.video and obj.is_iframe %}
+   <iframe width="{{ video_width|default:"" }}" height="{{ video_height|default:"" }}" src="{{ obj.video }}{{ url_suffix|default:"" }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  {% elif obj.video %}
+  <video height="{{ video_height|default:"" }}" width="{{ video_width|default:"" }}">
+      <source src="{{ obj.video }}{{ url_suffix|default:"" }}">
+  </video>
+  {% elif obj.image %}
+   <div class="wro-image-container">
+    <img src="{{ obj.image }}"/>
+   </div>
+  {% endif %}
+  <h3>{{ obj.title }}</h3>
+  {% if obj.description %}
+   <p class="wro-description">{{ obj.description }}</p>
+  {% endif %}
+  <p class="wro-site-name">{{ obj.site_name }}</p>
+ </a>
+ {% if obj.audio %}
+ <audio>
+     <source src="{{ obj.audio }}"></source>
+ </audio>
+ {% endif %}
+{% endblock %}

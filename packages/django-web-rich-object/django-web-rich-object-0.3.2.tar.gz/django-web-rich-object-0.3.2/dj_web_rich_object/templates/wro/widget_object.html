@@ -1,0 +1,16 @@
+{% extends "wro/base.html" %}
+
+{% block content %}
+ <a href="{{ obj.url }}" target="_blank">
+  {% if obj.image %}
+   <div class="wro-image-container">
+    <img src="{{ obj.image }}"/>
+   </div>
+  {% endif %}
+  <h3>{{ obj.title }}</h3>
+  {% if obj.description %}
+   <p class="wro-description">{{ obj.description }}</p>
+  {% endif %}
+  <p class="wro-site-name">{{ obj.site_name }}</p>
+ </a>
+{% endblock %}

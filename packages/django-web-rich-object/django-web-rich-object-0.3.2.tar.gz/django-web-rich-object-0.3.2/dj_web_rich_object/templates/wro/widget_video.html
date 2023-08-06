@@ -1,0 +1,18 @@
+{% extends "wro/base.html" %}
+
+{% block content %}
+<div class="wro-iframe-container">
+ {% if obj.type == 'video' %}
+ <video width="{{ video_width|default:"" }}" height="{{ video_height|default:"" }}" controls>
+     <source src="{{ obj.video }}{{ url_suffix|default:"" }}" type="video/{{ obj.subtype }}">
+ </video>
+ {% else %}
+ <iframe width="{{ video_width|default:"" }}" height="{{ video_height|default:"" }}" src="{{ obj.video }}{{ url_suffix|default:"" }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ {% endif %}
+</div>
+
+<a href="{{ obj.url }}" target="_blank">
+ <h3>{{ obj.title }}</h3>
+ {% if obj.description %}<p class="wro-description">{{ obj.description }}</p>{% endif %}
+</a>
+{% endblock %}
