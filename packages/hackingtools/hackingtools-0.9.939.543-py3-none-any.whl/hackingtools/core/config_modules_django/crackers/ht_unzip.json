@@ -1,0 +1,33 @@
+{
+    "__gui_label__": "Unzip",
+    "django_form_main_function": {
+        "__function__": "extractFile",
+        "zipFile": {
+            "__type__": "file",
+            "label_desc": "File to extract",
+            "required": true
+        },
+        "passwordFile": {
+            "__type__": "password",
+            "label_desc": "Password to unzip",
+            "required": true
+        }
+    },
+    "django_form_module_function": {
+        "extractFile": {
+            "__function__": "extractFile",
+            "__async__": false,
+            "__return__": "text",
+            "zipFile": {
+                "__type__": "file",
+                "label_desc": "File to extract",
+                "required": true
+            },
+            "passwordFile": {
+                "__type__": "password",
+                "label_desc": "Password to unzip",
+                "required": true
+            }
+        }
+    }
+}
