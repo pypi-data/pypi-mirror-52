@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: splunk-cloud-sdk
+Version: 1.0.0b7
+Summary: SDK for the Splunk Developer Cloud platform
+Home-page: UNKNOWN
+Author: Splunk
+Author-email: dev@splunk.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Provides-Extra: dev
+Provides-Extra: test
