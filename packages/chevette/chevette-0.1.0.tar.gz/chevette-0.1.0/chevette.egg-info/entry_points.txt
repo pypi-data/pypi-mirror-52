@@ -1,0 +1,3 @@
+[console_scripts]
+chevette = chevette.cli:chevette
+
