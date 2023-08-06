@@ -1,0 +1,5 @@
+colorama
+pyhcl
+
+[aws]
+pretf.aws==0.6.0
