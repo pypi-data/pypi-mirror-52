@@ -1,0 +1,6 @@
+graft src/collective
+graft docs
+prune .cache
+include *.rst LICENSE.GPL
+global-exclude *.pyc
+exclude .gitlab-ci.yml Makefile constraints.txt constraints_plone52.txt requirements.txt tox.ini .readthedocs.yml
