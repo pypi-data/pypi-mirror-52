@@ -1,0 +1,3 @@
+REDDIT_CLIENT_ID='jYXvhs3VBC52tw'
+REDDIT_CLIENT_SECRET='MnqJS9zHP_YaXek--KSwp8mK0KA'
+REDDIT_USER_AGENT='Comment Cloud (by /u/chmeycom)'
