@@ -1,0 +1,8 @@
+MANIFEST.in
+README.rst
+minibelt.py
+setup.py
+minibelt.egg-info/PKG-INFO
+minibelt.egg-info/SOURCES.txt
+minibelt.egg-info/dependency_links.txt
+minibelt.egg-info/top_level.txt
