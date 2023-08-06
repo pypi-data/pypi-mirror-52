@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+mobypy/__init__.py
+mobypy/thesaurus.py
+mobypy/words.txt
+mobypy.egg-info/PKG-INFO
+mobypy.egg-info/SOURCES.txt
+mobypy.egg-info/dependency_links.txt
+mobypy.egg-info/top_level.txt
