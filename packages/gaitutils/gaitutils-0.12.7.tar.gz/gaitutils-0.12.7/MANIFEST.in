@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include gaitutils/default.cfg
+graft gaitutils/gui
+graft gaitutils/assets
+graft gaitutils/data
+graft gaitutils/thirdparty
+global-exclude *.py[co]
+global-exclude __pycache__
