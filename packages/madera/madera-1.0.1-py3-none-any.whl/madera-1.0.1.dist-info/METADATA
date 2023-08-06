@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: madera
+Version: 1.0.1
+Summary: Distributed logging with Kafka
+Home-page: https://github.com/DavidMChan/madera
+Author: David Chan
+Author-email: davidchan@berkeley.edu
+License: GPL-v3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: confluent-kafka
+Requires-Dist: msgpack
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: tinydb
+
+# Madera
+
+Distributed Logging System
+
