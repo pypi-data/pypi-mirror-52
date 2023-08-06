@@ -1,0 +1,8 @@
+pandas>=0.22
+numpy>=1.14.6
+plotly>=3.6.1
+tb-nightly
+torch>=1.2
+torchvision>=0.4
+tqdm>=4.29.1
+scikit-learn>=0.20
