@@ -1,0 +1,8 @@
+
+[dev]
+ipython
+mypy
+flake8
+tox
+twine
+wheel
