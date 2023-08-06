@@ -1,0 +1,21 @@
+{
+    "name": "example-segm-annot",
+    "overwrite": true,
+    "datasets": {
+        "OUTPUT_FOLDER_NAME": {
+            "type": "thelper.data.ImageDataset",
+            "params": {
+                "root": "PATH_TO_IMAGE_FOLDER_TO_ANNOTATE"
+            }
+        }
+    },
+    "annotator": {
+        "type": "thelper.gui.ImageSegmentAnnotator",
+        "params": {
+            "sample_input_key": "image",
+            "labels": [
+                {"id": 255, "name": "foreground", "color": [0, 0, 255]}
+            ]
+        }
+    }
+}
