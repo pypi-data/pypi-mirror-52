@@ -1,0 +1,12 @@
+pymonads/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pymonads/applicative.py,sha256=TSDNa65SxHc50Xh1eAk60JaT0SLw5-Z7pAENMpxT2xE,1270
+pymonads/either.py,sha256=ZNNNTHWiplIPlKlPSiQiDyUGVuQULBX0bXyPhgJhXS4,2250
+pymonads/functor.py,sha256=OzPoTk4r-81W5xgELcZHhOd_Sglp3wiifPF51HCP8aE,556
+pymonads/monad.py,sha256=lJUhQycrEFEsbpCPbEdzw-kKOFe6DnO1xh5w3ByjP3A,1188
+pymonads/utils.py,sha256=5etxyeEe9iNaD4uFSZspoU_KRtIgStl1bO6awlunWAE,923
+pymonads-0.1.1.dist-info/LICENSE,sha256=DzL8EHVJeZxsnsJ1SbEFJSKsz-pKXGq-FRQSUZPyVbc,1073
+pymonads-0.1.1.dist-info/METADATA,sha256=aoRz72NIep4MYvh6OmBiDzk-nSXwwhizq8lDGmfnFr0,274
+pymonads-0.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pymonads-0.1.1.dist-info/top_level.txt,sha256=4EQNKIuDNfMpxUlIk-4kZUH7udbt-ncVRgTvW5kXeWw,9
+pymonads-0.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pymonads-0.1.1.dist-info/RECORD,,
