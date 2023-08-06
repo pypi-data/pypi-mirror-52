@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: lomapy
+Version: 0.3
+Summary: Lomapy
+Home-page: https://github.com/AlanTaranti/Lomapy
+Author: Alan Taranti
+Author-email: alan.taranti@gmail.com
+License: MIT
+Description: Biblioteca Python para API do Lomadee
+Keywords: lomapy,lomadee
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Provides-Extra: testing
