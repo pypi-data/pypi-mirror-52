@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+lightpivot/__init__.py
+lighttable.egg-info/PKG-INFO
+lighttable.egg-info/SOURCES.txt
+lighttable.egg-info/dependency_links.txt
+lighttable.egg-info/not-zip-safe
+lighttable.egg-info/top_level.txt
