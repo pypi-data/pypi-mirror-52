@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: guess_logo
+Version: 0.0.4
+Summary: Detect logo url for any website.
+Home-page: UNKNOWN
+Author: Kehao Wu
+Author-email: kehao.wu@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: guess logo website selenium
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database
