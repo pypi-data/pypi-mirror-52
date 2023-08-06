@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: vampireanalysis
+Version: 3.2.1
+Summary: Vampire Image Analysis Package
+Home-page: https://wirtzlab.johnshopkins.edu
+Author: Kyu Sang Han
+Author-email: khan21@jhu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Description-Content-Type: text/markdown
+Requires-Dist: scipy (==1.2.1)
+Requires-Dist: pandas (==0.24.1)
+Requires-Dist: numpy (==1.16.2)
+Requires-Dist: pillow (==5.4.1)
+Requires-Dist: matplotlib (==2.2.4)
+Requires-Dist: scikit-learn (==0.20.3)
+Requires-Dist: scikit-image (==0.14.2)
+Requires-Dist: opencv-python (==4.0.0.21)
+
+# Vampire Analysis
+
+Vampire analysis is built to better understand the morphological features of the cells.
+
