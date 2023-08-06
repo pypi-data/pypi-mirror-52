@@ -1,0 +1,3 @@
+[pytest11]
+stoq = pytest_stoq.plugin
+
