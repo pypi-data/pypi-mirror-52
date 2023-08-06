@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pycrunch-engine
+Version: 0.6
+Summary: Automatic Test Runner Engine
+Home-page: http://github.com/gleb-sevruk/pycrunch-engine
+Author: Gleb Sevruk
+Author-email: support@pycrunch.com
+License: libpng
+Download-URL: https://github.com/gleb-sevruk/pycrunch-engine/archive/v0.6.tar.gz
+Platform: UNKNOWN
+Requires-Dist: pytest (==4.6.3)
+Requires-Dist: coverage (==4.5.3)
+Requires-Dist: PyYAML
+Requires-Dist: watchgod
+Requires-Dist: python-socketio
+Requires-Dist: aiohttp
+
+UNKNOWN
+
+
