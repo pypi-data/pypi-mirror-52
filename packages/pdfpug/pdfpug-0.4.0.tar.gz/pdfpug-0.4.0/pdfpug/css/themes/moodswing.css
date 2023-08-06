@@ -1,0 +1,19 @@
+@page {
+    background: linear-gradient(-45deg, #c6ffdd, #fbd786, #f7797d);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ui.progress .bar {
+    background-color: white;
+}
+
+.ui.table {
+    background: transparent;
+    border-color: white;
+}
+
+.ui.segment {
+    background: transparent;
+    border-color: white;
+}
