@@ -1,0 +1,25 @@
+@echo off
+
+{%- if ml_data_b64 %}
+    md c:\root\.MissingLinkAI | cd .
+    IF NOT EXIST c:\root\.MissingLinkAI\{{ ml_file_name }} (
+        md c:\\ml_t | cd .
+        echo {{ ml_data_b64 }} > c:\ml_t\ml_data_b64
+        certutil -decode c:\ml_t\ml_data_b64 c:\root\.MissingLinkAI\{{ ml_file_name }}
+    )
+{%- endif %}
+
+{%- if ssh_identity_b64 %}
+    md c:\root\.ssh | cd .
+
+    md c:\\ml_t | cd .
+    echo {{ ssh_identity_b64 }} > c:\ml_t\ssh_id
+    echo {{ ssh_identity_pub_b64 }} > c:\ml_t\ssh_id_pub
+    certutil -decode c:\ml_t\ssh_id c:\root\.ssh\id_rsa
+    certutil -decode c:\ml_t\ssh_id_pub c:\root\.ssh\id_rsa.pub
+    echo Skipping StrictHostKeyChecking
+    echo Host * > c:\root\.ssh\config
+    echo    StrictHostKeyChecking=no >> c:\root\.ssh\config
+    echo    IdentityFile=C:\Users\ContainerAdministrator\.ssh\id_rsa >> c:\root\.ssh\config
+
+{%- endif %}
