@@ -1,0 +1,66 @@
+Metadata-Version: 1.1
+Name: scientpyfic
+Version: 0.0.1
+Summary: Latest science news from ScienceDaily.
+Home-page: https://github.com/monzita/scientpyfic
+Author: Monika Ilieva
+Author-email: hidden@hidden.com
+License: MIT
+Description: ScientPYfic
+        ---------------
+        
+        .. image:: https://github.com/monzita/scientpyfic/scientpyfic.png
+        
+        Get the latest news from ScienceDaily. .. image: https://github.githubassets.com/images/icons/emoji/unicode/1f4f0.png
+        
+        Installation
+        **********************
+        
+          >>> pip install scientpyfic
+        
+        Documentation
+        **********************
+        
+          Can be seen `here <https://github.com/monzita/scientpyfic/wiki>`_
+        
+        Example usage
+        **********************
+          
+          >>> from scientpyfic.client import ScientPyClient
+          >>>
+          >>>
+          >>> client = ScientPyClient()
+          >>>
+          >>> all = client.all.all()
+          >>>
+          >>> for news in all:
+          >>>   # news.title
+          >>>   # news.description
+          >>>   # news.pub_date
+          >>>
+          >>> 
+          >>> top = client.top.top(body=True, journals=True)
+          >>>
+          >>> for news in top:
+          >>>   # news.title
+          >>>   # news.description
+          >>>   # news.pub_date
+          >>>   # news.body
+          >>>   # news.journals
+        
+        Licence
+        **********************
+        
+          `MIT <https://github.com/monzita/scientpyfic/LICENSE>`_
+Keywords: scientpyfic science daily python beautifulsoup
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
