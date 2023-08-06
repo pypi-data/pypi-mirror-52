@@ -1,0 +1,13 @@
+README.md
+setup.py
+aicorn/__init__.py
+aicorn/__main__.py
+aicorn.egg-info/PKG-INFO
+aicorn.egg-info/SOURCES.txt
+aicorn.egg-info/dependency_links.txt
+aicorn.egg-info/top_level.txt
+aicorn/aeon/__init__.py
+aicorn/client/__init__.py
+aicorn/server/__init__.py
+aicorn/vendor/__init__.py
+aicorn/vendor/options.py
