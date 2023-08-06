@@ -1,0 +1,14 @@
+README.md
+setup.py
+typecats/__about__.py
+typecats/__init__.py
+typecats/attrs_shim.py
+typecats/cats_mypy_plugin.py
+typecats/py.typed
+typecats/tc.py
+typecats/wildcat.py
+typecats.egg-info/PKG-INFO
+typecats.egg-info/SOURCES.txt
+typecats.egg-info/dependency_links.txt
+typecats.egg-info/requires.txt
+typecats.egg-info/top_level.txt
