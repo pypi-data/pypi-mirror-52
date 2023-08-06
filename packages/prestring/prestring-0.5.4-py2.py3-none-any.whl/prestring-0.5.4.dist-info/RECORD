@@ -1,0 +1,16 @@
+prestring/__init__.py,sha256=cyaG1-Jz89IFs6fw2yE9TueTOm94T-vqCseTDfhsoFg,7949
+prestring/compat.py,sha256=n6Ex6N_zfMniok7v-O5JbvqN16nafjZbRwnskTmJ61E,1229
+prestring/go.py,sha256=nCKTZYIcV4eBIR7crphiov7RcB7A0WdlyadpWPjyOnA,6659
+prestring/naming.py,sha256=ExBWuO8p3Qd0dgzhZfNULTdL6nyjbszlThoSn2JuUR0,861
+prestring/output.py,sha256=ZiDBe8OyNa9dPgMHZOaHon_D7i0SObBmN4vj28TTDxs,1624
+prestring/utils.py,sha256=1K_1X8CE-qKalFOhganEwYF7qaVyzZjp03KyGuIseCI,5845
+prestring/go/__init__.py,sha256=_-PN0O2TkxJKVG0j0e3wDxu-0zM5zxs-53GAEbNNJqg,6638
+prestring/python/__init__.py,sha256=hHkO-NjjDYum317z3f5Z9cRoTnCxIEkwcMGTiObv994,9263
+prestring/python/parse.py,sha256=zgfLIwuFu2SQXAHdIXBzfHxs6SKVR24qW0lMogIZJHo,3976
+prestring/python/transform.py,sha256=tVyFz0O4JuwZZgmwQpOSw7THPT5NWb9X5mNe5EKRsY0,14521
+prestring-0.5.4.dist-info/LICENSE,sha256=ArKJ6vd71OK2zFlsfz4LRbJdtoykP2NiukxUYQm5vj0,1063
+prestring-0.5.4.dist-info/METADATA,sha256=AdDZzeA6Z0mZBFlAXCFH1n-qcF8nZDaQ5JEfSzVKMy8,2735
+prestring-0.5.4.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+prestring-0.5.4.dist-info/entry_points.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+prestring-0.5.4.dist-info/top_level.txt,sha256=cEgR1GZXvEgz-tdeTipTTXvKJAsac5L62pYM5-oZxsg,10
+prestring-0.5.4.dist-info/RECORD,,
