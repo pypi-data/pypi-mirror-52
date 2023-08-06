@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_object_status.egg-info/PKG-INFO
+django_object_status.egg-info/SOURCES.txt
+django_object_status.egg-info/dependency_links.txt
+django_object_status.egg-info/top_level.txt
+object_status/__init__.py
+object_status/admin.py
+object_status/apps.py
+object_status/models.py
+object_status/tests.py
+object_status/utils.py
+object_status/static/object_status/js/status_color.js
+object_status/templates/admin/change_form.html
+object_status/templates/admin/change_list.html
