@@ -1,0 +1,46 @@
+#!/bin/bash
+
+SHOW_HELP=
+while getopts ":h" OPTION
+do
+    case $OPTION in
+        #--help | -h)
+        -h)
+            SHOW_HELP=y
+            shift
+            ;;
+    esac
+done
+
+# DOCK_USER=ubuntu register-dock 10.92.128.111 <moniker>
+DOCK_USER=${DOCK_USER:-ubuntu}
+IP=${1:-none}
+MONIKER=${2:-none}
+
+if [ $IP == "none" ] || [ "$IP" == "-h" ] || [ "$IP" == "--help" ]; then
+  echo "This script will register an ec2 instance that has been configured using Service Catalog"
+  echo "to allow easy interfacing using docker and other tools."
+  echo
+  echo "NOTE: This script is potentially destructive:"
+  echo "  - On the client it will overwrite certificates in ~/.docker/"
+  echo
+  echo "Usage:"
+  echo "    $ DOCK_USER=<username> register-dock [-f] <IP> [moniker]"
+  echo "        - 'DOCK_USER' is an env that defaults to ubuntu but can be explicitly set if needed"
+  echo "        - 'IP' is the hostname or ip address of the created instance"
+  echo "        - 'moniker' is an optional name that can be used to refer to this instance in scripts"
+  echo
+  echo "    Examples:"
+  echo "    $ DOCK_USER=admin register-dock 10.93.133.6"
+  echo "    $ register-dock 10.92.128.33"
+  echo "    $ register-dock 10.92.128.44 project-dev"
+  exit 1
+fi
+
+echo "DOCK_USER:$DOCK_USER"
+echo "MONIKER:$MONIKER"
+echo "HOSTNAME:$IP"
+
+mkdir -p ~/.docker/${IP}
+
+printf "DOCK_USER=$DOCK_USER\nDOCK_MONIKER=$MONIKER\nDOCK_HOSTNAME=$IP\nDOCK_IP=$IP\n" > $HOME/.docker/${IP}/connection_config.txt
