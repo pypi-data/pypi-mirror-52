@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyaem2
+Version: 2.0.1
+Summary: Python client for Adobe Experience Manager (AEM) API
+Home-page: http://github.com/aem-design/pyaem2/
+Author: Max Barrass
+Author-email: max.barrass@gmail.com
+License: Apache 2.0
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: BeautifulSoup4 (>=4.6.0)
+Requires-Dist: pycurl (>=7.43.0)
+Requires-Dist: xmltodict (>=0.10.2)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+
+Python client for Adobe Experience Manager (AEM) API
+
+
