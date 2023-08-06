@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+flake8_spellcheck/__init__.py
+flake8_spellcheck/python.txt
+flake8_spellcheck/technical.txt
+flake8_spellcheck/words.txt
+flake8_spellcheck.egg-info/PKG-INFO
+flake8_spellcheck.egg-info/SOURCES.txt
+flake8_spellcheck.egg-info/dependency_links.txt
+flake8_spellcheck.egg-info/entry_points.txt
+flake8_spellcheck.egg-info/requires.txt
+flake8_spellcheck.egg-info/top_level.txt
