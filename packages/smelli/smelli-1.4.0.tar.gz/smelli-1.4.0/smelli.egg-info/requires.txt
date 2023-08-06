@@ -1,0 +1,6 @@
+flavio~=1.6.0
+multipledispatch
+pandas
+
+[testing]
+nose
