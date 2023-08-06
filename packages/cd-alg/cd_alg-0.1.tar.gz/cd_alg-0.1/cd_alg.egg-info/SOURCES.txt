@@ -1,0 +1,11 @@
+setup.py
+cd_alg.egg-info/PKG-INFO
+cd_alg.egg-info/SOURCES.txt
+cd_alg.egg-info/dependency_links.txt
+cd_alg.egg-info/not-zip-safe
+cd_alg.egg-info/top_level.txt
+cdreek_algorithms/__init__.py
+cdreek_algorithms/bubble.py
+cdreek_algorithms/insertion.py
+cdreek_algorithms/quick.py
+cdreek_algorithms/selection.py
