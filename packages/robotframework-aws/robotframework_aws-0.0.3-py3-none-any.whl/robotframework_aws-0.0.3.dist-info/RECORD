@@ -1,0 +1,16 @@
+AWSLibrary/__init__.py,sha256=0BEMRgeEbOgd6KhhWFCy1e-Dn_fD0_q6AOhxzoEl5oY,1185
+AWSLibrary/version.py,sha256=6CGcnak4UQzQ28lXLl_BHziN9Aqm37WodbEZwxAuNLw,96
+AWSLibrary/base/__init__.py,sha256=iiLroBQqNwGKlKNSGQ8DZtli3j2HgNNZNCaAGH-1p_w,425
+AWSLibrary/base/exceptions.py,sha256=wHiqvUeySN9Jc62RM8f_VoIJaVxRKj15fgKpHpmZGUw,1221
+AWSLibrary/base/librarycomponent.py,sha256=0k_ySkqytR7sLNK86jsNRQnEykzX71PXkqbEGR8Pi5w,300
+AWSLibrary/base/robotlibcore.py,sha256=L8qw877yNKetawJ1GEIiRA_re9M3gM5izAOpNNCWWzA,5298
+AWSLibrary/keywords/__init__.py,sha256=nFA1VN7so85ccYYhB8ycJYRG0_9GIJR0zoIVajdoaN8,299
+AWSLibrary/keywords/rds.py,sha256=D5JazUUsXC7uMg-kRZ9OvGjBdFywdwcHUwTPZ-4sYA8,316
+AWSLibrary/keywords/resource.py,sha256=p12sgPAH6MhGXKtc-QBGm5mRQacknn1LDMwhLrIcduU,1371
+AWSLibrary/keywords/s3.py,sha256=wuStb_VMd8og6SraKHyefdz2eDSV6naOuuMsRJyofTc,5284
+AWSLibrary/keywords/session.py,sha256=rAOztHd68dVkVPsrpXH1nFAXe9uDOo7ThG5e9gFeNrc,2410
+robotframework_aws-0.0.3.dist-info/LICENSE,sha256=566LXaF3CUdLolMWRBvAZBSIQc8QHn7vMYw8PuWggns,34499
+robotframework_aws-0.0.3.dist-info/METADATA,sha256=hhKGeEEdz5ONwe3m1oJ7HLWrI8xAg9QQgjyPSvxhJdQ,3360
+robotframework_aws-0.0.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+robotframework_aws-0.0.3.dist-info/top_level.txt,sha256=LVXz6ypvPmc1S5A9eAnZaD129jQ5pXGHKANgJAeygbU,11
+robotframework_aws-0.0.3.dist-info/RECORD,,
