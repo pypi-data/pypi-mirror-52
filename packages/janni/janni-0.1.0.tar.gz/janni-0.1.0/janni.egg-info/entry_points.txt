@@ -1,0 +1,3 @@
+[console_scripts]
+janni_denoise.py = janni.jmain:_main_
+

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: janni
+Version: 0.1.0
+Summary: noise 2 noise for cryo em data
+Home-page: https://github.com/MPI-Dortmund/sphire-janni
+Author: Thorsten Wagner
+Author-email: thorsten.wagner@mpi-dortmund.mpg.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >3.4.0
+Provides-Extra: gpu
+Provides-Extra: cpu
