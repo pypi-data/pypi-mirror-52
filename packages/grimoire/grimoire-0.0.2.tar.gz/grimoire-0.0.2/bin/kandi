@@ -1,0 +1,594 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+import os
+import curses
+import curses.textpad
+
+from grimoire.toolbox import translate_str
+from grimoire.sequence import DNA
+from grimoire.io import FASTA_stream, GFF_file
+from grimoire.genome import gff_to_feature
+from grimoire.feature import Gene, mRNA, Feature, FeatureTable
+
+## Command line stuff ##
+
+extended_help = """
+%(prog)s is a very simple terminal-based genome browser designed for testing
+and debugging seqeunce analysis algorithms. It loads all of the
+sequences and features into memory and doesn't do any coordinate
+indexing. It is therefore not suitable for complete genomes.
+"""
+
+parser = argparse.ArgumentParser(
+	description='Terminal-based genome browser.',
+	formatter_class=argparse.RawDescriptionHelpFormatter,
+	epilog=extended_help)
+parser.add_argument('fasta', nargs=1, help='a fasta file')
+parser.add_argument('gff', nargs='+', help='some gff (or other) files')
+arg = parser.parse_args()
+
+#############
+## Globals ##
+#############
+
+class KandiError(Exception): pass
+
+D = []  # dnas: indexed in order of FASTA file, GFFs attached as ftable
+G = []  # genes: indexed by fasta# then gene#
+F = []  # files: annotation file name
+B = { # browser state
+	'idx':None,  # current dna object number
+	'dna':None,  # current dna object
+	'beg':None,  # begin coordinate of viewer window
+	'end':None,  # end coordinate of viewer window
+	'mode':None, # gene|mRNA|feature
+	'mat':None,  # matrix of screen contents
+	'row':None,  # next plottable row
+	'update':False,  # update view required
+	'x':None,    # cursor x position
+	'y':None,    # cursor y position
+	'z':None,    # size of cursor (in letters)
+	'h':None,    # last height of terminal
+	'w':None,    # last width of terminal
+	'pb':None, # previous begin
+	'pe':None, # previous end
+	'px':None,
+	'py':None,
+	#'debug':[],   # internal debugging stuff
+	#'bug': open('_kandi_debug.txt', 'w+'),
+}
+
+KANDI_HELP = """
+ Top line shows location and information. Bottom line shows menu options.
+ 
+ Cursor Movement
+ * arrow keys or vi keys (h, j, k, l, ^, $, m)
+ * using the 'shift' key makes larger movements
+ 
+ Display
+ * 'space' centers the view on the cursor without zooming
+ * '+' and '-' keys zoom in and out (shift for larger zooms)
+ * 'return' zooms in on a feature
+ * 'd' key toggles zoom to DNA level and back
+ * '0-9' set the cursor size to 10**n bp
+ * 'g', 't', 'f' switch between gene, transcript, and feature views
+ * 'r' reverse-complements the sequence
+ """
+
+def help_screen(stdscr):
+	curses.curs_set(0)
+
+	while True:
+		stdscr.clear()
+		H, W = stdscr.getmaxyx()
+		
+		# content
+		stdscr.addstr(1, 1, KANDI_HELP)
+	
+		# location & menu
+		loc = '{}:{}-{}'.format(B['dna'].name, B['beg'], B['end'])
+		stdscr.addstr(0, 0, loc, curses.color_pair(1))
+		stdscr.addstr(H-1, 0, '(s)elect DNA (v)iewer (q)uit',
+			curses.color_pair(1))
+
+		# action
+		k = stdscr.getch()
+		if   k == ord('s'): select_screen(stdscr)
+		elif k == ord('v'): view_screen(stdscr)
+		elif k == ord('q'): sys.exit(0)
+		else: curses.flash()
+
+def select_screen(stdscr):
+	H, W = stdscr.getmaxyx()
+	curses.curs_set(2)
+	stdscr.clear()
+	B['y'], B['x'] = 3, 3
+	stdscr.move(B['y'], B['x'])
+	k = None
+
+	# content
+	split = B['h'] - 6
+	for i in range (len(D)):
+		col = int(i / split)
+		row = i - (col * split)
+		tab = 4 + col * 20
+		if tab > W: break
+		stdscr.addstr(3 + row, tab, D[i].name[0:15])
+	
+	# location & menu
+	loc = '{}:{}-{}'.format(B['dna'].name, B['beg'], B['end'])
+	stdscr.addstr(0, 0, loc, curses.color_pair(1))
+	stdscr.addstr(H-1, 0, '(v)iewer (return) to choose (?)help (q)uit',
+		curses.color_pair(1))
+	
+	while True:
+		# action
+		if   k == ord('?'): help_screen(stdscr)
+		elif k == ord('v'): view_screen(stdscr)
+		elif k == ord('q'): sys.exit(0)
+		elif k == 258 or k == ord('j'): B['y'] += 1  # down
+		elif k == 259 or k == ord('k'): B['y'] -= 1  # up
+		elif k == 261 or k == ord('l'): B['x'] += 20 # right
+		elif k == 260 or k == ord('h'): B['x'] -= 20 # left
+		elif k == 10:
+			row = B['y'] -3
+			col = B['x'] -3
+			idx = int(col/20) * split + row
+			if idx < len(D):
+				init_chrom(idx)
+				view_screen(stdscr)
+		
+		# limits
+		if B['y'] < 3: B['y'] = 3
+		if B['y'] > H -4: B['y'] = H -4
+		if B['x'] < 3: B['x'] = 3
+		if B['x'] >= W: B['x'] = 3
+		stdscr.move(B['y'], B['x'])
+		k = stdscr.getch()
+
+def terminal_changed(stdscr):
+	h, w = stdscr.getmaxyx()
+	if w != B['w'] or h != B['h']: return True
+	elif B['update']: return True
+	else: return False
+
+def find_clear_row():
+	for y in range(len(B['mat'])):
+		all_clear = True
+		for x in range(B['w']):
+			if B['mat'][y][x]:
+				all_clear = False
+				break
+		if all_clear:
+			return y
+	return None
+
+def find_clear_slot(fx1, fx2):
+	mat = B['mat']
+	if B['row'] == None: return
+	for y in range(B['row'], len(mat)):
+		clear = True
+		for x in range(fx1, fx2+1):
+			if mat[y][x]:
+				clear = False
+				break
+		if clear:
+			return y
+	return None
+
+def text_at_cursor():
+	if B['mat']:
+		thing = B['mat'][B['y']-1][B['x']]
+		if thing == None: return
+		elif isinstance(thing, str): return thing
+		elif isinstance(thing, Gene): return thing.id
+		elif isinstance(thing, mRNA): return thing.id
+		elif isinstance(thing, Feature):
+			return '{}:{}-{}'.format(thing.type, thing.beg, thing.end)
+	else: return None
+
+def plot_filename(stdscr, text, color):
+	mat = B['mat']
+	B['row'] = find_clear_row()
+	if B['row'] == None: return
+	stdscr.addstr(B['row'] +1, 0, text, curses.color_pair(color))
+	B['mat'][B['row']][0] = True
+	B['row'] += 1
+
+def gcolor(f):
+	if f.type == 'gene' or f.type == 'mRNA' or f.type == 'intron':
+		if f.strand == '+': return curses.color_pair(5) # cyan
+		else:               return curses.color_pair(7) # magenta
+	elif f.type == 'CDS':   return curses.color_pair(4) # green
+	elif f.type == 'exon':  return curses.color_pair(3) # yellow
+	else:                   return curses.color_pair(2) # red
+
+def plot_feature(stdscr, f, y):
+	rx1 = int(B['beg'] / B['z'])
+	rx2 = int(B['end'] / B['z'])
+	fx1 = int(f.beg / B['z']) - rx1
+	fx2 = int(f.end / B['z']) - rx1
+	
+	min = 0
+	max = B['w'] -1
+
+	if fx1 < min and fx2 < min: return # don't plot out-of-bounds features
+	if fx1 > max and fx2 > max: return
+
+	compL = True
+	compR = True
+	if fx1 < min:
+		fx1 = 0
+		compL = False
+	if fx2 > max:
+		fx2 = max
+		compR = False
+	
+	if y == None:
+		y = find_clear_slot(fx1, fx2)
+	if y == None: return
+	
+	text = ''
+	if isinstance(f, mRNA):
+		for intron in f.introns:
+			plot_feature(stdscr, intron, y)
+		for u5 in f.utr5s:
+			plot_feature(stdscr, u5, y)
+		for u3 in f.utr3s:
+			plot_feature(stdscr, u3, y)
+		for exon in f.exons:
+			plot_feature(stdscr, exon, y)
+		for cds in f.cdss:
+			plot_feature(stdscr, cds, y)
+	elif isinstance(f, Gene):
+		for i in range(fx1, fx2+1):
+			if f.strand == '+':
+				text += '>'
+			elif f.strand == '-':
+				text += '<'
+		if compL: text = '[' + text[1:]
+		if compR: text = text[:-1] + ']'
+		if fx1 == fx2: text = '|'
+		stdscr.addstr(y+1, fx1, text, gcolor(f))
+	elif f.type == 'intron':
+		for i in range(fx1, fx2+1):	text += '-'
+		stdscr.addstr(y+1, fx1, text, gcolor(f))
+	else:
+		for i in range(fx1, fx2+1):
+			if f.strand == '+':
+				text += '>'
+			elif f.strand == '-':
+				text += '<'
+			else:
+				text += '='
+		if compL: text = '[' + text[1:]
+		if compR: text = text[:-1] + ']'
+		if fx1 == fx2: text = '|'
+		stdscr.addstr(y+1, fx1, text, gcolor(f))
+	
+	for x in range(fx1, fx2+1): B['mat'][y][x] = f
+
+def plot_ticks(stdscr):
+	B['row'] = find_clear_row()
+	ticks = 10
+	for i in range(ticks):
+		x = int(i * B['w'] / ticks)
+		p = B['beg'] + int(x * B['z'] + B['z']/2) 
+		s = '{} {}'.format('|', p)
+		stdscr.addstr(1 + B['row'], x, s, curses.color_pair(0))
+	B['mat'][B['row']][0] = True
+	B['row'] += 1
+
+def plot_sequence1(stdscr):
+	B['row'] = find_clear_row()
+	seq = B['dna'].seq[B['beg'] -1:B['end']]
+	stdscr.addstr(1 + B['row'], 0, seq, curses.color_pair(0))
+	B['mat'][B['row']][0] = True
+	for i in range(3):
+		aa = translate_str(seq[i:])
+		trans = ' ' * i 
+		for j in range(len(aa)):
+			trans += ' ' + aa[j:j+1] + ' '
+		trans = trans[0:B['w']]
+		stdscr.addstr(2 + i + B['row'], 0, trans, curses.color_pair(0))
+		B['mat'][B['row'] +i + 1][0] = True
+	B['row'] += 4
+
+def plot_glyphs(stdscr):
+	H, W = stdscr.getmaxyx()
+	stdscr.clear()
+	region = Feature(B['dna'], B['beg'], B['end'], '.', 'region')
+	
+	# reset the plotting matrix
+	B['mat'] = []
+	for y in range(B['h'] - B['row'] -1):
+		B['mat'].append([])
+		for x in range(W):
+			B['mat'][y].append([])
+			B['mat'][y][x] = None
+
+	# plot coordinates and high-res text if necessary
+	plot_ticks(stdscr)
+	if B['z'] == 1:
+		plot_sequence1(stdscr)
+
+	# main plotting loop
+	for i in range(len(F)):
+		plot_filename(stdscr, F[i], 4)
+		if B['mode'] == 'gene':
+			for genes in G[i][B['idx']]:
+				for gene in genes:
+					plot_feature(stdscr, gene, None)
+		elif B['mode'] == 'feature':
+			for f in B['dna'].ftable.features:
+				if f.type == 'mRNA' or f.type == 'gene': continue
+				plot_feature(stdscr, f, None)
+		elif B['mode'] == 'mRNA':
+			for genes in G[i][B['idx']]:
+				for gene in genes:
+					for mRNA in gene.transcripts():
+						plot_feature(stdscr, mRNA, None)
+
+	B['update'] = False
+
+def atcursor():
+	x1 = int(B['beg'] + B['x'] * B['z'])
+	x2 = int(B['beg'] + (B['x']+1) * B['z'] -1)
+	m = int((x1 + x2)/2)
+	return x1, x2, m
+
+def toggle_hires():
+	if B['pb'] == None:
+		if B['z'] == 1: return
+		B['pb'] = B['beg']
+		B['pe'] = B['end']
+		B['px'] = B['x']
+		B['py'] = B['y']
+		b, e, m = atcursor()
+		B['beg'] = int(m - B['w']/2)
+		B['end'] = B['beg'] + B['w'] -1
+		B['x'] = int(B['w']/2)
+		B['update'] = True
+	else:
+		B['beg'] = B['pb']
+		B['end'] = B['pe']
+		B['x'] = B['px']
+		B['y'] = B['py']
+		B['pb'] = None
+		B['update'] = True
+
+def zoom_on_focus():
+	if B['mat']:
+		f = B['mat'][B['y']-1][B['x']]
+		beg, end = None, None
+		if isinstance(f, Gene) or isinstance(f, mRNA) or isinstance(f, Feature):
+			length = f.end - f.beg + 1
+			padding = int(length / 10)
+			beg = f.beg - padding
+			end = f.end + padding
+		else:
+			beg = B['beg'] + B['x'] * B['z']
+			end = beg + B['z'] -1
+	
+	B['beg'] = int(beg)
+	B['end'] = int(end)
+	B['z'] = B['end'] - B['beg'] +1
+	B['x'] = int(B['w'] / 2)
+	zoom(1)
+
+def zoomN(n):
+	n -= 48
+	b, e, m = atcursor()
+	B['z'] = 10 ** n
+	b = int(m - B['z'] * B['w'] / 2)
+	e = int(m + B['z'] * B['w'] / 2) -1
+	if b < 1:
+		b = 1
+	if e > len(B['dna'].seq):
+		e = len(B['dna'].seq)	
+	B['beg'], B['end'] = b, e
+	B['update'] = True
+
+def zoom(scale):
+	B['update'] = True # will force replotting of genes
+		
+	min = 1
+	max = len(B['dna'].seq)
+	
+	# center on cursor
+	b1 = B['beg'] + (B['x'] - int(B['w']/2)) * B['z']
+	e1 = B['end'] + (B['x'] - int(B['w']/2)) * B['z']
+	
+	# change coordinates by scale
+	L = e1 - b1 + 1
+	M = L / 2
+	b2 = b1 + M - scale * M
+	e2 = e1 - M + scale * M
+	
+	# constrain by min/max
+	if b2 < 1:   b2 = 1
+	if e2 > max: e2 = max
+	L = e1 - b1 + 1
+	M = L / 2
+
+	B['beg'] = int(b2)
+	B['end'] = int(e2)
+	B['z'] = (B['end'] - B['beg'] + 1) / B['w']
+	B['x'] = int(B['w'] / 2)
+
+	b3, e3 = None, None
+	if B['z'] <= 1: # too small, expand to fit window
+
+		mid = (b2 + e2) / 2
+		b3 = int(mid - B['w']/2)
+		e3 = int(mid + B['w']/2) -1
+		if b3 < min:
+			b3 = min
+			e3 = B['w']
+		elif e3 > max:
+			e3 = max
+			b3 = max - B['w'] + 1
+		B['beg'] = b3
+		B['end'] = e3
+		B['z'] = 1
+		B['x'] = int(B['w'] / 2)
+
+def plot_header(stdscr):
+	H, W = stdscr.getmaxyx()
+	B['w'] = W
+	B['h'] = H
+	L = B['end'] - B['beg'] + 1
+	B['z'] = L / W
+	
+	# location and focus
+	B['row'] = 0 # by definition
+	stdscr.addstr(B['row'], 0, ' ' * int(B['w']), curses.color_pair(0))
+	loc = '{}:{}-{} ({} bp)'.format(B['dna'].name, B['beg'], B['end'],
+		B['end'] - B['beg'] + 1)
+	stdscr.addstr(0, 0, loc, curses.color_pair(1))
+	foc = None
+	if B['z'] == 1:
+		foc = '{} : {}'.format(B['beg'] + B['x'], text_at_cursor())
+	else:
+		b, e, m = atcursor()
+		foc = '{}-{} ({:.1f} bp) : {}'.format(
+			b, e, B['z'], text_at_cursor())	
+	stdscr.addstr(0, int(B['w']/2), foc, curses.color_pair(1))
+	B['row'] += 1
+	
+def view_screen(stdscr):
+
+	# initial settings
+	H, W = stdscr.getmaxyx()
+	B['beg'] = 1
+	B['end'] = len(B['dna'].seq)
+	B['x'] = int(W/2)
+	B['y'] = int(H/4)
+	B['w'] = W
+	B['h'] = H
+	stdscr.clear()
+	curses.curs_set(2)
+	plot_header(stdscr)
+	plot_glyphs(stdscr)
+	
+	k = 0	
+	while True:
+		# zooms
+		if   k == 10: zoom_on_focus()      # zooms on feature
+		elif k >= 48 and k <= 57: zoomN(k) # zoom to magnitude
+		elif k == ord('-'): zoom(2)        # zoom out
+		elif k == ord('_'): zoom(8)        # zoom out a lot
+		elif k == ord('='): zoom(1/2)      # zoom in
+		elif k == ord('+'): zoom(1/8)      # zoom in a lot
+		elif k == ord('d'): toggle_hires() # zoom to dna view and back
+		# cursor
+		elif k == 258 or k == ord('j'): B['y'] += 1             # down
+		elif k == 259 or k == ord('k'): B['y'] -= 1             # up
+		elif k == 261 or k == ord('l'): B['x'] += 1             # right
+		elif k == 260 or k == ord('h'): B['x'] -= 1             # left
+		elif k == ord('J'): B['y'] += int(B['h']/4)             # big down
+		elif k == ord('K'): B['y'] -= int(B['h']/4)             # big up
+		elif k == 402 or k == ord('L'): B['x'] += int(B['w']/4) # big right
+		elif k == 393 or k == ord('H'): B['x'] -= int(B['w']/4) # big left
+		elif k == ord('^'): B['x'] = 0                          # start
+		elif k == ord('$'): B['x'] = B['w'] -1                  # end
+		elif k == ord('m'): B['x'] = int(B['w'] / 2)            # middle
+		elif k == 32: zoom(1)                                   # center
+		# transforms
+		elif k == ord('g'):
+			B['mode'] = 'gene'
+			B['update'] = True
+		elif k == ord('t'):
+			B['mode'] = 'mRNA'
+			B['update'] = True
+		elif k == ord('f'):
+			B['mode'] = 'feature'
+			B['update'] = True
+		elif k == ord('r'):
+			# B['dna'].revcomp()
+			raise KandiError('reverse-complement not implemented yet')
+			B['update'] = True
+		# menu
+		elif k == ord('?'): help_screen(stdscr)
+		elif k == ord('s'): select_screen(stdscr)
+		elif k == ord('q'): sys.exit(0)
+
+		# re-center when cursor exceeds window
+		if B['x'] < 0:
+			B['x'] = 0
+			zoom(1)
+		elif B['x'] > B['w'] -1:
+			B['x'] = B['w'] -1
+			zoom(1)
+		if B['y'] < 1:
+			B['y'] = 1
+		elif B['y'] > B['h'] -2:
+			B['y'] = B['h'] -2
+		
+		# determine if we need to reconfigure viewing pane
+		if terminal_changed(stdscr):
+			stdscr.clear()
+			plot_header(stdscr)
+			plot_glyphs(stdscr)
+				
+		# menu
+		menu = '(s)elect DNA (?)help (q)uit'
+		stdscr.addstr(B['h']-1, 0, menu, curses.color_pair(1))
+		plot_header(stdscr)
+		stdscr.move(B['y'], B['x'])
+		k = stdscr.getch()
+
+def init_browser(stdscr):
+
+	# initialize curses	and begin on the help page
+	curses.start_color()
+	curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE)
+	curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
+	curses.init_pair(3, curses.COLOR_YELLOW, curses.COLOR_BLACK)
+	curses.init_pair(4, curses.COLOR_GREEN, curses.COLOR_BLACK)
+	curses.init_pair(5, curses.COLOR_CYAN, curses.COLOR_BLACK)
+	curses.init_pair(6, curses.COLOR_BLUE, curses.COLOR_BLACK)
+	curses.init_pair(7, curses.COLOR_MAGENTA, curses.COLOR_BLACK)
+	view_screen(stdscr)
+
+def init_chrom(idx):
+
+	# when a new chromosome is chosen, reset browser state
+	B['idx'] = idx
+	B['dna'] = D[idx]
+	B['beg'] = 1
+	B['end'] = len(D[idx].seq)
+	B['mode'] = 'gene'
+
+if __name__ == '__main__':
+
+	# read sequences
+	fasta = FASTA_stream(arg.fasta[0])
+	for entry in fasta:
+		D.append(DNA(name=entry.id, seq=entry.seq))
+	
+	# read features and build genes
+	for i in range(len(arg.gff)):
+		G.append([])
+		F.append(arg.gff[i])
+		gf = GFF_file(file=arg.gff[i])
+		for j in range(len(D)):
+			dna = D[j]
+			G[i].append([])
+			gffs = gf.get(chrom=dna.name)
+			features = []
+			for gff in gffs:
+				features.append(gff_to_feature(dna, gff))	
+			ft = FeatureTable(dna=dna, features=features)
+			dna.ftable = ft
+			genes = ft.build_genes()
+			G[i][j].append(genes)
+
+	# initialize for first sequence
+	init_chrom(0)
+
+	# start the curses session
+	curses.wrapper(init_browser)
+

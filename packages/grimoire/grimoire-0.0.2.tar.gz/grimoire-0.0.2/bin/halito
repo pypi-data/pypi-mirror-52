@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+
+import argparse
+from multiprocessing import Pool
+import time
+import random
+import sys
+
+from grimoire.io import FASTA_stream
+from grimoire.sequence import DNA
+import grimoire.hmm as hmm
+
+## Command line stuff ##
+
+extended_help = """
+%(prog)s is used to decode sequences given an HMM using the standard Viterbi
+algorithm. Input is FASTA, output is GFF. %(prog)s can parallelize jobs.
+"""
+
+parser = argparse.ArgumentParser(
+	description='Sequence decoder.',
+	formatter_class=argparse.RawDescriptionHelpFormatter,
+	epilog=extended_help)
+parser.add_argument('--hmm', required=True, type=str,
+	metavar='<path>', help='path to input HMM file')
+parser.add_argument('--fasta', required=True, type=str,
+	metavar='<path>', help='path to input fasta file')
+parser.add_argument('--jobs', required=False, type=int, default=1,
+	metavar='<int>', help='processor pool size [%(default)d]')
+arg = parser.parse_args()
+
+Model = None
+
+def work(entry):
+	dna = DNA(seq=entry.seq, name=entry.id)
+	v = hmm.Viterbi(model=Model, dna=dna)
+	return v.generate_path()
+
+if __name__ == '__main__':
+	Model = hmm.HMM.read(arg.hmm)
+	Model.convert2log()
+	fasta = FASTA_stream(arg.fasta)
+	if arg.jobs == 1:
+		for entry in fasta:
+			parse = work(entry)
+			for f in parse.features():
+				print(f)
+	else:
+		with Pool(arg.jobs) as proc:
+			jobs = proc.map(work, fasta)
+			for parse in jobs:
+				for f in parse.features():
+					print(f)
+	
