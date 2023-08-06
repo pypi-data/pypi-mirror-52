@@ -1,0 +1,16 @@
+cylc/uiserver/__init__.py,sha256=FlwNLrTSIYqRPHmx7XeywrUmsrkcbmd8y6GiWy20lWE,728
+cylc/uiserver/data_mgr.py,sha256=774wav4bm6P2YFuzwEwG6QXBT5dHfzn3vB4mwD50ZQY,3360
+cylc/uiserver/handlers.py,sha256=RcEJ3QKhAPqrhLNDyUf2KqOQXEj2hJUkFKFiHVfhtjY,4899
+cylc/uiserver/logging_config.json,sha256=T7S6yoJc1ZpqNO8Y8Psmb6m-fGLg0aIpUM-hTDOlH8E,968
+cylc/uiserver/main.py,sha256=1dOuSl2tlKKymVDKUnjBIT4MtOTVSGhzQMJlLp3uQwY,7135
+cylc/uiserver/resolvers.py,sha256=Wg08RuQEeEgJy78usSxnQfiIVrWEL9KGfigH53B1YrA,2526
+cylc/uiserver/workflows_mgr.py,sha256=ZcDVCdTucEgsc5-LVJ_5nRZnnhbBLuXHzHgEJ-OXspc,5509
+cylc/uiserver/tests/__init__.py,sha256=Gh70JuT7rVJ7hbKT--GN4sk-e7RIE3o2i4QyrG1qV-o,707
+cylc/uiserver/tests/test_handlers.py,sha256=iIWLfCHNoO33aWshQaBJhlGXCZYqfsNWhIAIr6bytb4,2732
+cylc/uiserver/tests/test_uiserver.py,sha256=ShJB5jfxjC6Gnsf_KxcHtmXpYTfLmwr4AxtVeR22AmI,1817
+cylc_uiserver-0.1.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+cylc_uiserver-0.1.dist-info/METADATA,sha256=mG5SFe0ZEiT-4KV4eRHHDTyvCozT9fVveOA3IHlTq0E,2187
+cylc_uiserver-0.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+cylc_uiserver-0.1.dist-info/entry_points.txt,sha256=lD9MHR-JoftEnvMAEEyuvB9A_Y3cOhQWQLAw6DKOnsg,59
+cylc_uiserver-0.1.dist-info/top_level.txt,sha256=eNbW1Cse9bmMNz1aVuBWzgwUv_rp6B2gli0lvaCGung,5
+cylc_uiserver-0.1.dist-info/RECORD,,

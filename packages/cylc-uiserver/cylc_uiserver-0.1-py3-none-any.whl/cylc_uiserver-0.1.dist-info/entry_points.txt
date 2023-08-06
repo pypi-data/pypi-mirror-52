@@ -1,0 +1,3 @@
+[console_scripts]
+cylc-uiserver = cylc.uiserver.main:main
+
