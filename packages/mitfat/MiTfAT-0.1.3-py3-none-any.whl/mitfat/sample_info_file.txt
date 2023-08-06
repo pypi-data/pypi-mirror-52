@@ -1,0 +1,51 @@
+## This is a template for input files for the MiTfAT library,
+#  				a pyhton-based fMRI analysis tool.
+# In which line you write the info is irrelevant.
+# every line not starting with a valid keyword is ignored.
+# There should be at least one blank space between the keyword and the following input values.
+# The only obligatory keywords are the DATA_FILE and MASK_FILE. 
+# The rest will be assigned default values or just ignored if not defined. 
+
+# REQUIRED keywords are:
+# 'DATA_FILE:' -> (REQUIRED) name of the nifty data files
+# 'MASK_FILE:' -> (REQUIRED) nifty file including the mask file.
+                   0 elements in this file means ignore the voxel, non-zero means read the voxel.
+
+# OPTIONAL Keywords:
+# 'TIME_FILE:' -> file including time points for each data point.
+                  If left blank, indices of data points are used as time-steps, starting from 1.
+# 'EVENT_TIMES' -> can be any events of interest.
+                    should be numbers (float or integer), comma separated.
+                    They'd be irrelevant if TIME_FILE does not exist.
+                    They do not need to match exact values of time steps.
+# 'DIR_SOURCE:' -> Absolute or relative path to source directory.
+                   default is 'datasets' subfolder inside the folder in which this file exists.
+# 'DIR_SAVE' -> Absolute or relative path to directory used to save the outputs.
+                default is used: 'output' subfolder inside the current python folder,
+		(not necessarily folder containing this file).
+# 'MOL_NAME:' -> Molecule name. Used in molecular fMRI experiments.
+                 If not left blank will be used to establish DIR_SAVE name.
+# 'EXP_NAME:' -> Experiment name.
+                 If not left blank will be used to establish DIR_SAVE name.
+# 'DESC:'-> A free style text with info about the dataset.
+# 'DS_NO:' -> An integer number assigned to identify the dataset.
+             If not left blank will be used to establish DIR_SAVE name.
+# 'SIGNAL_NAME:' -> can be T1w, FISP, T2* or any arbitrary string.
+
+## Here is a sample info file:
+# obligatiry info:
+DATA_FILE: sample_data_T1w.nii.gz
+MASK_FILE: sample_data_mask.nii.gz
+
+# optional time file, and event times
+TIME_FILE: sample_data_time_T1w.txt
+EVENT_TIMES: 123,181
+
+# other optional info
+MOL_NAME: SCA
+SIGNAL_NAME: T1w
+DS_NO: 1
+EXP_NAME: Exp1
+DESC: Just a sample dataset.
+
+

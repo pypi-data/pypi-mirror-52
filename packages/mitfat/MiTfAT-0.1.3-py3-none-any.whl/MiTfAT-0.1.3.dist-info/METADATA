@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: MiTfAT
+Version: 0.1.3
+Summary: A python-based fMRI Analysis Tool. 
+Home-page: https://gitlab.tuebingen.mpg.de/vbokharaie/mitfat/
+Author: Vahid Samadi Bokharaie
+Author-email: vahid.bokharaie@tuebingen.mpg.de
+License: GNU Version 3
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: seaborn (==0.9.0)
+Requires-Dist: pandas (==0.25.0)
+Requires-Dist: numpy (==1.16.4)
+Requires-Dist: scipy (==1.3.0)
+Requires-Dist: matplotlib (==3.1.1)
+Requires-Dist: nibabel (==2.5.0)
+Requires-Dist: nilearn (==0.5.2)
+Requires-Dist: scikit-learn (==0.21.3)
+Requires-Dist: openpyxl
+
+MiTfAT
+======
+
+.. image:: https://img.shields.io/pypi/v/MiTfAT.svg
+    :target: https://pypi.python.org/pypi/MiTfAT
+    :alt: Latest PyPI version
+.. image:: https://zenodo.org/badge/203363866.svg
+   :target: https://zenodo.org/badge/latestdoi/203363866
+.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0
+
+
+Installation
+------------
+in your command prompt or bash, simply type:
+
+ .. code-block:: bash
+
+    pip install mitfat
+
+If you are using Anaconda on Windows, better to open an Anaconda command prompt
+and then type the above.
+
+Or if you want to work with the latest beta-release, you can find it in:
+
+https://gitlab.tuebingen.mpg.de/vbokharaie/mitfat
+
+
+    **If you don't know anything about Python:**
+
+    then you should not worry. In order to use this code, you do not need to know anything about python. You just need to install it and then follow the instructions in the Usage Section to be able to run the code. But you need to install Python first. Python is just a programming language and unlike Matlab is not owned by a company or organization, hence you do not need to bu a license to use it. There are various ways to install Python, but the easiest is to go `here <https://docs.conda.io/en/latest/miniconda.html>`_ and install Miniconda Python 3.x (3.7 at the time of writing). This will install Python and a minimal set of commonly used libraries (Libraries in Python are equivalent to toolboxes in Matlab). A little detail to keep in mind for Windows users is that you need to open an Anaconda Prompt (which you can find in your Start menu) and then type ``pip install mitfat`` to install the MitfAT library. Typing it in a normal windows command prompt (which you can open by typing ``cmd`` in 'Search program or file' in Start menu) might not work properly.
+
+    When Python is installed, then follow the instructions below to use this code to analyse your fMRI data. I should add though, that I sincerely hope using this code can motivate you to learn a bit about Python. I learned how to use Matlab 20 years ago and still use it to this day. But as I learn more about Python and what is available in this ecosystem, I use Matlab less and Python more and more everyday. Python provides powerful tools for you that you did not know you are missing when you were writing programs in Matlab. If you want to learn the basics of Python, I can suggest this `online book <https://jakevdp.github.io/PythonDataScienceHandbook/>`_ to start with.
+
+
+Usage
+-----
+
+In the 'docs' folder of the repository, you can find the `User Manual <docs/mitfat.pdf>`_, which includes the latest version of the manual.
+
+
+
+Requirements
+^^^^^^^^^^^^
+
+ .. code-block:: python
+
+    seaborn==0.9.0
+    pandas==0.25.0
+    numpy==1.16.4
+    scipy==1.3.0
+    matplotlib==3.1.1
+    nibabel==2.5.0
+    nilearn==0.5.2
+    scikit_learn==0.21.3
+    openpyxl  # this is a pandas dependency
+
+
+Compatibility
+-------------
+
+This code is tested under Python 3.7, and should work well for all current version of Python 3.
+
+Licence
+-------
+GNU General Public License (Version 3).
+
+Citation
+--------
+Please use the CITATION.cff file.
+
+This code was originally developed for a collaboration which led to the following publications:
+
+Savić T. , Gambino G., Bokharaie V. S., Noori H. R., Logothetis N.K., Angelovski G., "Early detection and monitoring of cerebral ischemia using calcium-responsive MRI probes", PNAS, 2019.
+
+Authors
+-------
+
+`MiTfAT` is maintained by `Vahid Samadi Bokharaie <vahid.bokharaie@tuebingen.mpg.de>`_.
+
+
