@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: neptune-dnsoverhttps-protocol
+Version: 2019.9.16.1005
+Summary: DNS OVER HTTPS PROTOCOL FOR NEPTUNE DNS SERVER
+Home-page: https://git.best-service.online/yurzs/neptune-resolver-rest
+Author: Yury (Yurzs)
+Author-email: dev@best-service.online
+License: MIT
+Description: # Neptune DNS-over-HTTPS protocol
+        This is a DNS over HTTPS protocol module for Neptune DNS server
+        ## Installation
+        ```pip3 install neptune_dnsoverhttps_protocol```
+        
+Keywords: NEPTUNE,DNS,DNSoverHTTPS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
