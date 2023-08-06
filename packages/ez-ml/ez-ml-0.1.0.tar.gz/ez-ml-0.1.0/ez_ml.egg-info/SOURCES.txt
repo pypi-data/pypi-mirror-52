@@ -1,0 +1,17 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ez_ml.egg-info/PKG-INFO
+ez_ml.egg-info/SOURCES.txt
+ez_ml.egg-info/dependency_links.txt
+ez_ml.egg-info/entry_points.txt
+ez_ml.egg-info/top_level.txt
+ezml/__init__.py
+ezml/__main__.py
+ezml/interpreting.py
+ezml/preprocessing.py
+tests/__init__.py
+tests/test_myclass.py
+tests/test_mysecondclass.py
