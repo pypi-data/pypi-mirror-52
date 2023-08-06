@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: network_extensions
+Version: 0.9.6.6
+Summary: Managing multilayer graphs with igraph
+Home-page: UNKNOWN
+Author: dwinter
+Author-email: dwinter@mpiwg-berlin.mpg.de
+License: UNKNOWN
+Description: # network_extensions
+        
+        
+        A collections of tools to handle networks changing in time as well as different types of multilayer networks.
+        The project is still only beta. 
+        
+        I am working on a improved documentation. See the progress at:
+        
+        
+        https://readthedocs.org/projects/network-extension/
+        
+        If you install it via pypi:
+        
+            pip install network-extensions
+        
+        there might be missing dependencies. Not all requirements are added to the setup.py file, yet.
+        
+        The source code is at 
+        
+        https://gitlab.gwdg.de/dirk.wintergruen/network_extensions.git
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
