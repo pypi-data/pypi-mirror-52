@@ -1,0 +1,17 @@
+numpy
+pyserial
+
+[capture]
+imageio
+imageio-ffmpeg
+netifaces
+pyqt5
+
+[export]
+laspy
+uuid
+plyfile
+
+[plot]
+pyqt5
+vispy
