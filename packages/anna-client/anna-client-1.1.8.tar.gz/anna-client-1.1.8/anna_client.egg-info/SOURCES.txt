@@ -1,0 +1,10 @@
+README.md
+setup.py
+anna_client/__init__.py
+anna_client/client.py
+anna_client/graphql.py
+anna_client.egg-info/PKG-INFO
+anna_client.egg-info/SOURCES.txt
+anna_client.egg-info/dependency_links.txt
+anna_client.egg-info/requires.txt
+anna_client.egg-info/top_level.txt
