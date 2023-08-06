@@ -1,0 +1,21 @@
+#!python
+import sys
+
+from qurry import run
+
+usage = '''
+================================================================================
+This script compiles and runs a .lisp (qurry) file.
+Its usage is ./compile [filename]
+An auxilary quil file will be output to [filename].quil
+By default, this script uses the 'examples' directory, but can point elsewhere.
+================================================================================
+'''
+
+def main(args):
+    assert len(args) > 0, usage
+    filename = args[0]
+    run(filename)
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
