@@ -1,0 +1,12 @@
+include LICENSE
+include README.rst
+include setup.py
+include tox.ini
+include Makefile
+
+recursive-include doc *
+recursive-include tests *
+recursive-include example *
+
+recursive-include pyloco/templates *
+
