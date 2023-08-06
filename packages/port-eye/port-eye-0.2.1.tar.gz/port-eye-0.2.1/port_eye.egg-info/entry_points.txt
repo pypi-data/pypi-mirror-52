@@ -1,0 +1,3 @@
+[console_scripts]
+port-eye = port_eye.main:main
+
