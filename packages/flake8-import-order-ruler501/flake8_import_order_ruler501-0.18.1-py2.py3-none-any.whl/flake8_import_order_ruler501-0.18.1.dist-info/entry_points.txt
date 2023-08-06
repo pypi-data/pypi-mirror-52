@@ -1,0 +1,3 @@
+[flake8_import_order.styles]
+ruler501 = flake8_import_order_ruler501:Ruler501ImportOrderStyle
+
