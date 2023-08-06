@@ -1,0 +1,7 @@
+requests>=2.4.0
+
+[:python_version < "3.5"]
+typing
+
+[aio]
+aiohttp>=3.5.0
