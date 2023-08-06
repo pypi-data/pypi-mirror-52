@@ -1,0 +1,52 @@
+Metadata-Version: 2.0
+Name: streamsx.hbase
+Version: 1.4.0
+Summary: IBM Streams HBASE integration
+Home-page: https://github.com/IBMStreams/streamsx.hbase
+Author: IBM Streams @ github.com
+Author-email: ahmad.nouri@de.ibm.com
+License: Apache License - Version 2.0
+Keywords: streams,ibmstreams,streaming,analytics,streaming-analytics,hbase
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: streamsx
+Requires-Dist: streamsx.toolkits
+
+Overview
+========
+
+Provides functions to access HBASE. For example, connect to Hortonworks (HDP).
+This package exposes the `com.ibm.streamsx.hbase` toolkit as Python methods.
+
+
+Sample
+======
+
+A simple Streams application that scans a HBASE table and prints
+the scanned rows::
+
+    from streamsx.topology.topology import *
+    from streamsx.topology.schema import CommonSchema, StreamSchema
+    from streamsx.topology.context import submit
+    import streamsx.hbase as hbase
+
+    topo = Topology('hbase_scan_sample')
+
+    scanned_rows = hbase.scan(topo, table_name='sample', max_versions=1 , init_delay=2)
+    scanned_rows.print()
+
+    cfg = {}
+    cfg[streamsx.topology.context.ConfigParams.SSL_VERIFY] = False     
+    submit ('DISTRIBUTED', topo, cfg) 
+
+
+Documentation
+=============
+
+* `streamsx.hbase package documentation <http://streamsxhbase.readthedocs.io/>`_
+
+
