@@ -1,0 +1,90 @@
+_have crossroad &&
+__crossroad ()
+{
+    local cur
+
+    COMPREPLY=()
+    cur=${COMP_WORDS[COMP_CWORD]}
+    prev=${COMP_WORDS[COMP_CWORD-1]}
+
+    if [[ -v CROSSROAD_PLATFORM ]]; then
+        if [[ "$COMP_CWORD" -eq 1 ]]; then
+            COMPREPLY=( $( compgen -W '$( crossroad -h | sed -e "s/^[^-].*$//" -e "s/^- \([a-zA-Z_-]\+\) .*$/\1/" ) --help -h --version -v' -- $cur ) )
+        else
+            command=${COMP_WORDS[1]}
+            # XXX can I `configure -h` to see all available actions?
+            if [[ "$command" == "configure" ||
+                  "$command" == "cmake"     ||
+                  "$command" == "ccmake"    ||
+                  "$command" == "prefix"    ]]; then
+                COMPREPLY=()
+            elif [[ "$command" == "install"    ||
+                    "$command" == "info"       ||
+                    "$command" == "list-files" ||
+                    "$command" == "uninstall"  ]]; then
+                if [[ x"$CROSSROAD_PLATFORM" == "xw64" ||
+                      x"$CROSSROAD_PLATFORM" == "xw32" ]]; then
+                    COMPREPLY=( $( compgen -W '$( crossroad -h $command 2>/dev/null |grep --colour=NEVER -o "\--[-a-zA-Z]\+=\?" | sort -u )
+                                               $(cat ${XDG_CACHE_HOME:-$HOME/.cache}/crossroad/repository/${CROSSROAD_PLATFORM}/*primary.xml 2>/dev/null |
+                                                 grep "<name>mingw[^<]*</name>" | sed "s@^.*<name>ming${CROSSROAD_PLATFORM}-\([^<]\+\)</name>.*\$@\1@")
+                                              ' -- $cur ) )
+                    # alternative but slower: cat repository/w64/*filelists.xml |grep '<package[^>]*>' |sed 's/^.*name="mingw[36][24]\([^"]*\)".*$/\1/'
+                else
+                    COMPREPLY=( $( compgen -W '$( crossroad -h $command 2>/dev/null |grep --colour=NEVER -o "\--[-a-zA-Z]\+=\?" | sort -u )
+                                              ' -- $cur ) )
+                fi
+            else
+                COMPREPLY=( $( compgen -W '$( crossroad -h $command 2>/dev/null |grep --colour=NEVER -o "\--[-a-zA-Z]\+=\?" | sort -u )
+                                          ' -- $cur ) )
+            fi
+        fi
+    else
+        if [[ "$COMP_CWORD" -eq 1 ]]; then
+            COMPREPLY=( $( compgen -W '$( crossroad --list-targets | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\) .*$/\1/" )
+                        $( crossroad -h | grep --colour=NEVER -o " -[-a-zA-Z]\+=\?" )
+                        ' -- $cur ) )
+        elif [[ "$COMP_CWORD" -eq 2 ]] && [[ x"${prev:0:1}" != x"-" ]]; then
+            COMPREPLY=( $( compgen -W '$( crossroad --list-projects=$prev 2>/dev/null | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\)$/\1/" )
+                        ' -- $cur ) )
+        elif [[ "$COMP_CWORD" -gt 1 ]]; then
+            if [[ x${COMP_WORDS[1]} == x"--reset" ]]; then
+                if [[ $(($COMP_CWORD % 2)) -eq 1 ]]; then
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-projects=$prev 2>/dev/null | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\)$/\1/" )
+                                ' -- $cur ) )
+                else
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-targets | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\) .*$/\1/" )
+                            ' -- $cur ) )
+                fi
+            elif [[ x${COMP_WORDS[1]} == x"--symlink" ]] || [[ x${COMP_WORDS[1]} == x"-s" ]]; then
+                if [[ "$COMP_CWORD" -eq 2 ]]; then
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-targets | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\) .*$/\1/" )
+                            ' -- $cur ) )
+                elif [[ "$COMP_CWORD" -eq 3 ]]; then
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-projects=$prev 2>/dev/null | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\)$/\1/" )
+                                ' -- $cur ) )
+                fi
+            elif [[ x${COMP_WORDS[1]} == x"--compress" ]] && [[ "$COMP_CWORD" -gt 3 ]]; then
+                if [[ $(($COMP_CWORD %2)) -eq 0 ]]; then
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-targets | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\) .*$/\1/" )
+                            ' -- $cur ) )
+                else
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-projects=$prev 2>/dev/null | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\)$/\1/" )
+                                ' -- $cur ) )
+                fi
+            elif [[ x${COMP_WORDS[1]} == x"-c" ]] && [[ "$COMP_CWORD" -gt 2 ]]; then
+                if [[ $(($COMP_CWORD %2)) -eq 1 ]]; then
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-targets | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\) .*$/\1/" )
+                            ' -- $cur ) )
+                else
+                    COMPREPLY=( $( compgen -W '$( crossroad --list-projects=$prev 2>/dev/null | sed -e "s/^[^-].*$//" -e "s/^- \([0-9a-zA-Z_-]\+\)$/\1/" )
+                                ' -- $cur ) )
+                fi
+            fi
+        fi
+    fi
+
+}
+#complete -F __crossroad -o default -o nospace crossroad
+complete -F __crossroad -o default crossroad
+COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+
