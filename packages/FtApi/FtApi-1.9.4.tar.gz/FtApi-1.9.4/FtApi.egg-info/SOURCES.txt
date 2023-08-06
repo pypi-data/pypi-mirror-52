@@ -1,0 +1,13 @@
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+FtApi/FtApi.py
+FtApi/__init__.py
+FtApi.egg-info/PKG-INFO
+FtApi.egg-info/SOURCES.txt
+FtApi.egg-info/dependency_links.txt
+FtApi.egg-info/requires.txt
+FtApi.egg-info/top_level.txt
