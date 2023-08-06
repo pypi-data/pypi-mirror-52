@@ -1,0 +1,3 @@
+[console_scripts]
+pycirk = pycirk.cli:main
+
