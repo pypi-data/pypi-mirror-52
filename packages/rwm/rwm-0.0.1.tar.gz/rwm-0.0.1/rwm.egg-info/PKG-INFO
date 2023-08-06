@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rwm
+Version: 0.0.1
+Summary: RWM stands for Repository Webhook Manager.
+Home-page: https://github.com/geraldo-labs/rwm
+Author: Geraldo Andrade
+Author-email: geraldo@geraldoandrade.com
+License: MIT
+Description: # RWM [![Build Status](https://travis-ci.org/geraldo-labs/rwm.svg?branch=master)](https://travis-ci.org/geraldo-labs/rwm)
+        
+        RWM stands for Repository Webhoook Manager
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
