@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: for.py
+Version: 1.0.2
+Summary: An async Python API wrapper for the Fortnite API
+Home-page: https://github.com/Akhil2149/forpy
+Author: Akhil
+Author-email: akhilaug2003@gmail.com
+License: MIT
+Description: <h1 align="center">Forpy</h1>
+        
+        <div align="center">
+          <strong><i>Asynchronous Fortnite API wrapper</i></strong>
+          <br>
+          <br>
+        <a href="https://github.com/akhil2149/forpy/LICENSE">
+            <img src="https://img.shields.io/github/license/akhil2149/forpy.svg?style=for-the-badge&colorB=7289DA" alt="LICENSE" />
+          </a>
+        
+        
+        <a href="https://pypi.org/project/for.py/">
+            <img src="https://img.shields.io/pypi/v/for.py.svg?style=for-the-badge&colorB=61829F" alt="PyPi" />
+          </a>
+        </div>
+        <br>
+        
+        ## Overview
+        Forpy is an asynchronous library which allows you to receive Fortnite Stats data from 
+        [FortniteTracker](https://fortnitetracker.com). Synchronous usage is not currently supported.Forpy requires python 3.5.3 or above. Support for earlier versions of python is not provided.
+        
+        ## Installation
+        You can install this using pip
+        ```commandline
+        pip install for.py
+        ```
+        ## Documentation
+        Documentation can be found [here](https://akhil2149.github.io/forpy-docs)
+        ## License
+        This is licensed under MIT
+        ## Contributing
+        Feel free to contribute to this project, a helping hand is always appreciated.
+        ## Author(s)
+        [Akhil](https://github.com/akhil2149)
+        
+Keywords: fortnite, forpy, api-wrapper, async
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
