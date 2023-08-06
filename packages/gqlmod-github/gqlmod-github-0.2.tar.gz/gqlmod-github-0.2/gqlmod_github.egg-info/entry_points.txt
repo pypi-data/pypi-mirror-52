@@ -1,0 +1,3 @@
+[graphql_providers]
+github = gqlmod_github:GitHubProvider
+
