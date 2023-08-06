@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: falibrary
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/kemingy/falibrary
+Author: Keming Yang
+Author-email: kemingy94@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: falcon (>=2.0.0)
+
+# falibrary
+
+Falcon add-on for API specification and validation.
+
+
