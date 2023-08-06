@@ -1,0 +1,10 @@
+README.md
+setup.py
+custom_color_palette/__init__.py
+custom_color_palette/creates_custom_palette.py
+custom_color_palette.egg-info/PKG-INFO
+custom_color_palette.egg-info/SOURCES.txt
+custom_color_palette.egg-info/dependency_links.txt
+custom_color_palette.egg-info/requires.txt
+custom_color_palette.egg-info/top_level.txt
+test/test_creates_custom_palette.py
