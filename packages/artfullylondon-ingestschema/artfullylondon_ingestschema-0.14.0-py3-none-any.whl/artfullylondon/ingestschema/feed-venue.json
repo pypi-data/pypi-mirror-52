@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schemas.artfully.london/v1/feed-venue.json",
+    "type": "object",
+    "properties": {
+        "entity": {
+            "title": "Entity Type",
+            "const": "venue"
+        },
+        "venueId": {
+            "title": "Venue ID",
+            "allOf": [
+                {
+                    "$ref": "basic-types.json#/definitions/componentId"
+                }
+            ]
+        },
+        "venueEntityId": {
+            "title": "Venue Entity ID",
+            "allOf": [
+                {
+                    "$ref": "basic-types.json#/definitions/componentId"
+                }
+            ]
+        },
+        "version": {
+            "title": "Venue Version",
+            "allOf": [
+                {
+                    "$ref": "basic-types.json#/definitions/version"
+                }
+            ]
+        },
+        "watchedContent": {
+            "title": "Watched Content",
+            "allOf": [
+                {
+                    "$ref": "basic-types.json#/definitions/watchedContent"
+                }
+            ]
+        }
+    },
+    "required": [
+        "entity",
+        "venueId",
+        "venueEntityId",
+        "version",
+        "watchedContent"
+    ]
+}
