@@ -1,0 +1,17 @@
+shallow_backup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shallow_backup/__main__.py,sha256=GELvGirO-U7G3NTiIpW94b_KiXL0NcOQ_2Q2uHgUK_8,7202
+shallow_backup/backup.py,sha256=jB3nm5fJDSZU4vmpnd-BYAo7dPG-1FrsV8hoGBv_288,6336
+shallow_backup/compatibility.py,sha256=9YpMRbWQ4frtZVPLIowhu7a8tfDCvQ1jxy8AUTBVQzQ,2039
+shallow_backup/config.py,sha256=xbgoC8XDE7-F7bZr9CyQlP5gbvuLZmsW-Y_AQtu-hGg,2778
+shallow_backup/constants.py,sha256=tScn63S73ZCvrSzXHLowb-7t4yi_xPHrMGmtgk2suJ4,1296
+shallow_backup/git_wrapper.py,sha256=IjHDjzqjeuuI6vJnfWrrBzrZbYdGTkKkxbQqlwyIXFI,3360
+shallow_backup/printing.py,sha256=amuCdHxfYVdmRplny8XB3fdP-j4mPWnYlG4IPzkwhVo,2893
+shallow_backup/prompts.py,sha256=2IpLMFFzfW_vBsZci4b17E6k2dWt8SrYgv08zhka1rs,6005
+shallow_backup/reinstall.py,sha256=cYzSuMvPfuv_8csVIq0X5qFngy1vFyXG18EQ9s72xFs,4425
+shallow_backup/utils.py,sha256=B_j5Es2fBkJKmHiYpkEB2Pp3yMRoKQE6uPDSfNFdFuI,4551
+shallow_backup-2.5b0.dist-info/LICENSE,sha256=QU1ghW4HFZeg-aDj0tTSQiU2KRA7HGyTfinxJZ1JowE,1071
+shallow_backup-2.5b0.dist-info/METADATA,sha256=kTCrTRRNU7cKmhoyO2VWjTasbftxqw8de3T_zST6Zzo,9237
+shallow_backup-2.5b0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+shallow_backup-2.5b0.dist-info/entry_points.txt,sha256=bWLrPYmfiqm6QmaC_NJbkku_NA0M5XM83ed9Z7wjkkA,62
+shallow_backup-2.5b0.dist-info/top_level.txt,sha256=TowY9DW3pP4gHaE0tOl1TYbD2oJnfMnd_W6cEnVRtYM,15
+shallow_backup-2.5b0.dist-info/RECORD,,
