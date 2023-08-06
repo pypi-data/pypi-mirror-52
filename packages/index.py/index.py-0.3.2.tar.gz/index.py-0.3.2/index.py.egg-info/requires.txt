@@ -1,0 +1,9 @@
+uvicorn
+starlette
+aiofiles
+jinja2
+watchdog
+python-multipart
+
+[:sys_platform != "win32" and sys_platform != "cygwin" and sys_platform != "cli"]
+gunicorn
