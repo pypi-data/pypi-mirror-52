@@ -1,0 +1,6 @@
+prawcore<2.0,>=1.0.1
+update_checker>=0.16
+websocket-client>=0.54.0
+
+[dev]
+pre-commit
