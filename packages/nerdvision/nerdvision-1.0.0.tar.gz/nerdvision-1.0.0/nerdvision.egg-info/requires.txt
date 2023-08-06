@@ -1,0 +1,5 @@
+psutil
+netifaces
+grpcio-tools
+nerdvision_grpc_api==1.0.0
+requests
