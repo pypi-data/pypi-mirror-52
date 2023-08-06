@@ -1,0 +1,7 @@
+requests[security,socks]
+click
+python-dotenv
+python-dateutil
+
+[:platform_system == "Windows"]
+pyreadline
