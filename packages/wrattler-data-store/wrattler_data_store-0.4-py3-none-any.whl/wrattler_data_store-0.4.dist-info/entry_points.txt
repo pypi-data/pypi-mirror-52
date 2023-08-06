@@ -1,0 +1,3 @@
+[console_scripts]
+wrattler-data-store = app:main
+
