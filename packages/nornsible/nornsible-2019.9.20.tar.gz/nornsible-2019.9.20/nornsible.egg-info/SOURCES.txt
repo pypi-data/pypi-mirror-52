@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+nornsible/__init__.py
+nornsible/nornsible.py
+nornsible.egg-info/PKG-INFO
+nornsible.egg-info/SOURCES.txt
+nornsible.egg-info/dependency_links.txt
+nornsible.egg-info/requires.txt
+nornsible.egg-info/top_level.txt
