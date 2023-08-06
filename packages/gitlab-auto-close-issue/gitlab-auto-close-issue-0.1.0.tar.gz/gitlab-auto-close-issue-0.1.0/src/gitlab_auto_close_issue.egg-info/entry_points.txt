@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab_auto_close_issue = gitlab_auto_close_issue.cli:cli
+
