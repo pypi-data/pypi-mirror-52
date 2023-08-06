@@ -1,0 +1,3 @@
+[console_scripts]
+google-oauth-tokens = google_oauth2_desktop_flow.cli:main
+
