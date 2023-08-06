@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: nanome-chemical-properties
+Version: 0.0.1
+Summary: Nanome Plugin displaying chemical properties for selected complex using rdkit
+Home-page: https://github.com/nanome-ai/plugin-chemical-properties
+Author: Nanome
+Author-email: hello@nanome.ai
+License: MIT
+Keywords: virtual-reality,chemistry,python,api,plugin
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: nanome
+
+# Nanome - Chemical Properties
+
+Displays chemical properties for selected complex using rdkit.
+
+### Installation
+
+```sh
+$ pip install nanome-chemical-properties
+```
+
+This plugin requires `rdkit` to be installed and in the `PATH` variable.
+
+### Usage
+
+To start the plugin:
+
+```sh
+$ nanome-chemical-properties -a plugin_server_address
+```
+
+In Nanome:
+
+- Activate Plugin
+- Select Complex
+- Select Properties
+- View Results
+
+### License
+
+MIT
+
+
