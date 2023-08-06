@@ -1,0 +1,109 @@
+package:
+  name: scaffan
+  version: "0.15.0"
+
+source:
+# this is used for build from git hub
+  git_rev: 0.15.0
+  git_url: https://github.com/mjirik/scaffan.git
+
+# this is used for pypi
+  # fn: io3d-1.0.30.tar.gz
+  # url: https://pypi.python.org/packages/source/i/io3d/io3d-1.0.30.tar.gz
+  # md5: a3ce512c4c97ac2410e6dcc96a801bd8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+build:
+  ignore_prefix_files:
+    - devel
+    - examples
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - scaffan = scaffan:main
+    #
+    # Would create an entry point called io3d that calls scaffan.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python=3
+    - setuptools
+#    - io3d
+    - {{ pin_compatible('io3d', max_pin='x') }}
+    - {{ pin_compatible('imma', max_pin='x') }}
+    - lxml
+    - pandas
+    - openpyxl
+    - morphsnakes
+    - pyqt  # =5.9.2 # tested
+    - pyqtgraph
+    - click
+    - pywin32 # [win]
+    - loguru
+
+  run:
+    - python=3,<3.6.7
+    #     # maybe dont work with -convert option
+#    - python=3 # [not win]
+#    - python=3.6.6 # [win]
+#    - io3d>=1.21
+    - {{ pin_compatible('io3d', max_pin='x', min_pin="x.x") }}
+    - {{ pin_compatible('imma', max_pin='x', min_pin="x.x") }}
+    - lxml
+    - lxml=4.3.0 # [win]
+#    - pandas
+    - {{ pin_compatible('pandas', max_pin='x', min_pin="x.x") }}
+#    - openpyxl
+    - {{ pin_compatible('openpyxl', max_pin='x', min_pin="x.x") }}
+    - morphsnakes
+#    - pyqt>=5.0
+    - {{ pin_compatible('pyqt', max_pin='x', min_pin="x.x") }}
+#    - pyqt=5.9.2 # tested
+    - pyqtgraph
+    - {{ pin_compatible('pyqtgraph', max_pin='x', min_pin="x.x") }}
+#    - {{ pin_compatible('pyqtgraph', max_pin='x.x') }}
+#    - click
+    - {{ pin_compatible('click', max_pin='x') }}
+    - pywin32 # [win]
+    # - numpy
+    # - pyqt 4.11.*
+#    - xlwings
+    - xlrd
+    - loguru
+    - openslide-python # [not win]
+
+test:
+  # Python imports
+  imports:
+    - scaffan
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/mjirik/scaffan
+  license: BSD License
+  summary: 'distribution to pypi and conda'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
