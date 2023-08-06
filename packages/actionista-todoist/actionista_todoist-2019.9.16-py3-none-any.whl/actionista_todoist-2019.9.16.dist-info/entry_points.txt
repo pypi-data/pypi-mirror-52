@@ -1,0 +1,9 @@
+[console_scripts]
+actionista-todoist = actionista.todoist.action_cli:action_cli
+actionista-todoist-config = actionista.todoist.config_cli:todoist_config_cli
+todoist-action-cli = actionista.todoist.action_cli:action_cli
+todoist-action-config = actionista.todoist.config_cli:todoist_config_cli
+todoist-add-task = actionista.todoist.todoist_cli:add_task_cli
+todoist-adhoc-cli = actionista.todoist.adhoc_cli:main
+todoist-cli = actionista.todoist.todoist_cli:todoist_cli
+
