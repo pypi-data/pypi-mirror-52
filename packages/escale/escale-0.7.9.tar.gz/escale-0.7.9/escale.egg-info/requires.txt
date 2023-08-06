@@ -1,0 +1,12 @@
+python-daemon
+requests
+
+[Blowfish]
+cryptography
+
+[Fernet]
+cryptography
+
+[WebDAV]
+pyopenssl
+requests
