@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: coocop
+Version: 0.1.dev2
+Summary: Copyout and CopyPaiting
+Home-page: https://github.com/t-systems-on-site-services-gmbh/coocop
+Author: Philip May
+Author-email: pm@eniak.de
+Maintainer: Philip May
+License: UNKNOWN
+Keywords: augmentation CNN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# COOCOP - Copyout and CopyPaiting implementation
+This is an implementation of the Copyout and CopyPairing image augmentation techniques. The paper about this can be found here: [Improved Image Augmentation for Convolutional Neural Networks by Copyout and CopyPairing](https://arxiv.org/abs/1909.00390)
+
+## Citation / BibTeX
+This is how you can cite this work with LaTeX / BibTeX:
+```
+@article{Copyout,
+title = "{Improved Image Augmentation for Convolutional Neural Networks by Copyout and CopyPairing}",
+author = {Philip May},
+journal = {arXiv.org},
+year = "2019",
+archivePrefix = {arXiv},
+eprint = {arXiv:1909.00390 [cs.CV]},
+url = {https://arxiv.org/abs/1909.00390},
+}
+```
+
+
