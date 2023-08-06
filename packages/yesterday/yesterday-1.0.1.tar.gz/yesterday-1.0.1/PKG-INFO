@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: yesterday
+Version: 1.0.1
+Summary: A minimal jounaling system.
+Home-page: https://gitlab.com/raiyanyahya/yesterday
+Author: Raiyan Yahya
+Author-email: raiyanyahyadeveloper@gmail.com
+License: GPL3
+Description: "# today" 
+        
+Keywords: cli
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: test
