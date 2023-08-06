@@ -1,0 +1,13 @@
+tinydb
+pyyaml
+
+[docs]
+sphinx
+sphinx_rtd_theme
+
+[tests]
+pytest
+pytest-pylint
+pytest-runner
+pylint
+python-coveralls
