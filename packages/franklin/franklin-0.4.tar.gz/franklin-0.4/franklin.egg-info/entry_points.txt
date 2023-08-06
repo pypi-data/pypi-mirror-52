@@ -1,0 +1,3 @@
+[console_scripts]
+fetch-doi = franklin.fetch_doi:main
+

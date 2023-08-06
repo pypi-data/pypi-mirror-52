@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+franklin/__init__.py
+franklin/article.py
+franklin/exceptions.py
+franklin/fetch_doi.py
+franklin/publishers.py
+franklin/version.py
+franklin.egg-info/PKG-INFO
+franklin.egg-info/SOURCES.txt
+franklin.egg-info/dependency_links.txt
+franklin.egg-info/entry_points.txt
+franklin.egg-info/requires.txt
+franklin.egg-info/top_level.txt
