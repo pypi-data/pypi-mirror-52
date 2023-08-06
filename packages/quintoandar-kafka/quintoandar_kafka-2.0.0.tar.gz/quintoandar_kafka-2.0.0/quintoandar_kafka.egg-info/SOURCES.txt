@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+quintoandar_kafka/__init__.py
+quintoandar_kafka/consumer.py
+quintoandar_kafka/idempotence_client.py
+quintoandar_kafka.egg-info/PKG-INFO
+quintoandar_kafka.egg-info/SOURCES.txt
+quintoandar_kafka.egg-info/dependency_links.txt
+quintoandar_kafka.egg-info/not-zip-safe
+quintoandar_kafka.egg-info/requires.txt
+quintoandar_kafka.egg-info/top_level.txt
