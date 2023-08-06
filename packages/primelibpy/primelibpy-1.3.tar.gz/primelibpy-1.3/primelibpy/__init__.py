@@ -1,0 +1,1 @@
+from primelibpy import Prime

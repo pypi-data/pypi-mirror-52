@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+primelibpy/Prime.py
+primelibpy/RandomFun.py
+primelibpy/__init__.py
+primelibpy.egg-info/PKG-INFO
+primelibpy.egg-info/SOURCES.txt
+primelibpy.egg-info/dependency_links.txt
+primelibpy.egg-info/top_level.txt
