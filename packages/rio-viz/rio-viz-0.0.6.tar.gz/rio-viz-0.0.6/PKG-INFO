@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rio-viz
+Version: 0.0.6
+Summary: Visualize Cloud Optimized GeoTIFF in browser
+Home-page: https://github.com/developmentseed/rio-viz
+Author: Vincent Sarago
+Author-email: vincent@developmentseed.org
+License: MIT
+Description: UNKNOWN
+Keywords: COG COGEO Rasterio GIS MVT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3
+Provides-Extra: dev
+Provides-Extra: test
