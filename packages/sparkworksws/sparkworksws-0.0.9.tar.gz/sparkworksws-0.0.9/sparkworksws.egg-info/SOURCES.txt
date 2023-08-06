@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+sparkworksws/__init__.py
+sparkworksws/sparkworksws.py
+sparkworksws.egg-info/PKG-INFO
+sparkworksws.egg-info/SOURCES.txt
+sparkworksws.egg-info/dependency_links.txt
+sparkworksws.egg-info/requires.txt
+sparkworksws.egg-info/top_level.txt
