@@ -1,0 +1,16 @@
+Click>=6.0
+numpy
+pandas
+rasterio
+scipy
+h5py
+numba
+lsdtt_xtensor_python
+
+[fastscapelib_ultimate_binding_lsdtt]
+fastscapelib-fortran
+
+[shapefile_tools]
+fiona
+shapely
+geopandas
