@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: reliesl
+Version: 0.1.0
+Summary: Reliesl is a tool for automatic release managment using the Gitlab CI.
+Home-page: https://gitlab.com/luminovo/public/reliesl
+Author: Benedikt Wiberg
+Author-email: benedikt@luminovo.ai
+Keywords: gitlab,release,continuous,integration
+Requires-Python: >=3.7,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: semver (>=2.8,<3.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Project-URL: Repository, https://gitlab.com/luminovo/public/reliesl
