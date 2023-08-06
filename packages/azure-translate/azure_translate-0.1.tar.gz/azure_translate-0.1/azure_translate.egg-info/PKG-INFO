@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: azure-translate
+Version: 0.1
+Summary: Azure translate engine
+Home-page: https://github.com/user/reponame
+Author: ShinSheel
+Author-email: wladgavrilov@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: ```
+        # 
+        key = "<your_azure_translation_key>"
+        text="Сьешь же ещё этих мягких французских булочек да выпей же чаю"
+        treanslator = Translator(key)
+        print(treanslator.translate(text))
+        print(treanslator.translate(text,target='en',source='ru'))
+        
+        ```
+        
+Keywords: Qwant,search,engine
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
