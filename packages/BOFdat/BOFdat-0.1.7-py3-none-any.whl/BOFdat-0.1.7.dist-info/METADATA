@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: BOFdat
+Version: 0.1.7
+Summary: Package to generate biomass objective function stoichiometric coefficients from experimental data
+Home-page: https://github.com/jclachance/BOFdat/
+Author: Jean-Christophe Lachance
+Author-email: jelachance@eng.ucsd.edu
+License: MIT
+Download-URL: https://github.com/peterldowns/mypackage/archive/0.1.7.tar.gz
+Platform: UNKNOWN
+Requires-Dist: cobra (>=0.11.0)
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: BioPython
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn (>=0.18)
+Requires-Dist: scipy
+Requires-Dist: deap
+Requires-Dist: pebble
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
