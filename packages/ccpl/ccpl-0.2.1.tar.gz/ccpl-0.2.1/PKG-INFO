@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ccpl
+Version: 0.2.1
+Summary: ColorfulCore Python Library - CCPL for short.
+Home-page: http://www.jakubwilk.me
+Author: Rainbow Doge
+Author-email: realrainbowdoge@gmail.com
+License: UNKNOWN
+Description: # CCPL - ColorfulCore Python Library
+        
+        This is a library used by some ColorfulCore projects. It contains some useful commands and scripts.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
