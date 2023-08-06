@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: fsText
+Version: 0.4
+Summary: Few Shot Text Classification
+Home-page: https://github.com/maelfabien/fsText
+Author: André, Matyas, Maël
+Author-email: mael.fabien@gmail.com
+License: MIT
+Download-URL: https://github.com/maelfabien/fsText/archive/v_04.tar.gz
+Description: UNKNOWN
+Keywords: Few,Shot,Text,Classification
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
