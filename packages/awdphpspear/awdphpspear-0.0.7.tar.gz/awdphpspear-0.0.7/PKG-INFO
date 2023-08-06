@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: awdphpspear
+Version: 0.0.7
+Summary: A tools for AWD attack.
+Home-page: https://github.com/ZacharyZcR/AWD
+Author: ZacharyZcR
+Author-email: 2903735704@qq.com
+Maintainer: Mystery Security
+Maintainer-email: zacharyzcr@hi-ourlife.com
+License: MIT License
+Description: UNKNOWN
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
