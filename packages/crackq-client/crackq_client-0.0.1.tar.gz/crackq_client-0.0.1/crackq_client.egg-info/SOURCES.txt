@@ -1,0 +1,11 @@
+README.md
+setup.py
+crackq_client/__init__.py
+crackq_client/client.py
+crackq_client/client_rest.py
+crackq_client.egg-info/PKG-INFO
+crackq_client.egg-info/SOURCES.txt
+crackq_client.egg-info/dependency_links.txt
+crackq_client.egg-info/entry_points.txt
+crackq_client.egg-info/requires.txt
+crackq_client.egg-info/top_level.txt
