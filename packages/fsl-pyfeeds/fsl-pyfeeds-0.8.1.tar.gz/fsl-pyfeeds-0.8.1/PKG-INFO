@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: fsl-pyfeeds
+Version: 0.8.1
+Summary: FSL testing framework
+Home-page: https://git.fmrib.ox.ac.uk/fsl/pyfeeds
+Author: Paul McCarthy
+Author-email: pauldmccarthy@gmail.com
+License: Apache License Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free for non-commercial use
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
