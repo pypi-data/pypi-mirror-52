@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: dislib
+Version: 0.4.0
+Summary: The distributed computing library on top of PyCOMPSs
+Home-page: http://dislib.bsc.es
+Author: Barcelona Supercomputing Center
+Author-email: javier.alvarez@bsc.es
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
