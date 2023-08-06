@@ -1,0 +1,16 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+columbia_common/__init__.py
+columbia_common/schemas/__init__.py
+columbia_common/schemas/api_v1/__init__.py
+columbia_common/schemas/api_v1/common_crawl.py
+columbia_common/schemas/api_v1/mixins/__init__.py
+columbia_common/schemas/api_v1/mixins/common_crawl.py
+quaerere_columbia_common.egg-info/PKG-INFO
+quaerere_columbia_common.egg-info/SOURCES.txt
+quaerere_columbia_common.egg-info/dependency_links.txt
+quaerere_columbia_common.egg-info/entry_points.txt
+quaerere_columbia_common.egg-info/requires.txt
+quaerere_columbia_common.egg-info/top_level.txt
