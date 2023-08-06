@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: extools
+Version: 0.1.0
+Summary: Tools for Orchid Extender
+Home-page: https://2665093.ca
+Author: Chris Binckly, 2665092 Ontario Inc.
+Author-email: cbinckly@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: sage orchid extender
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.4
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
