@@ -1,0 +1,16 @@
+phial/__init__.py,sha256=soYzzEO8Q8oAjnRs5AnGBCnKUEl5ixBA72qfAwpeBpw,291
+phial/_reloader.py,sha256=b3cn039_FwQaHiz3XRhY44PhgxhN-qH0uNbd8-0ttbI,13485
+phial/bot.py,sha256=O8MwF-cq8LLvJ9S3WpkZlB_mis4-DmbgpyxUJ9XzXW8,20618
+phial/commands.py,sha256=SXfbHV0H3T7h_KhjL6V65qFL8osRxeEzN9HyzcSmMY0,858
+phial/errors.py,sha256=HMt_IVpW047LxjqFhA1Hz4e58CP7y2PdRSRFshCdttc,299
+phial/globals.py,sha256=s2HiMLlEPxBAbCpQHJTOP9__UsSdmq8WnTKVvB3YXfc,513
+phial/py.typed,sha256=hGbC-_uwOiR9TLncY_h2wKcbcfgWyvKjCei9e4D-Axk,66
+phial/scheduler.py,sha256=rWCA7BXvx8bzypKftlz7xLtBMr-peNFDTtOFhkfPmiI,7527
+phial/types.py,sha256=aDlF7o8S9ZCI5_5jUhWHxX4dhPW6Nc_1MLsYacYq20k,283
+phial/utils.py,sha256=uimyDaWmmMBX1A6PZMcf5XMpSetVO6Aqub13q_DEEZM,2685
+phial/wrappers.py,sha256=QYULWpVdjo24Dr6Io1CAN_e7tcWAOm6BU8foKxryC_U,7833
+phial_slack-0.10.0.dist-info/LICENSE,sha256=G4yiqRgDSBV64gsLjIP2ScKGAcd6C5KALs-1-mNU1xI,1095
+phial_slack-0.10.0.dist-info/METADATA,sha256=0TOcKWbupmn2-_NEMvtOSlQNgBep7nTUR1Uhbh13YFA,3189
+phial_slack-0.10.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+phial_slack-0.10.0.dist-info/top_level.txt,sha256=VSAMtl8y4MzUfBmKSj0a4CbPHbttlldVk75OC7aOSZk,6
+phial_slack-0.10.0.dist-info/RECORD,,
