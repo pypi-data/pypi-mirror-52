@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: docker-image-size-limit
+Version: 0.2.0
+Summary: 
+Home-page: https://github.com/wemake-services/docker-image-size-limit
+Author: Nikita Sobolev
+Author-email: mail@sobolevn.me
+Keywords: docker,docker image,size limit,wemake.services,code quality
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: docker (>=3.7,<5.0)
+Requires-Dist: humanfriendly (>=4.18,<5.0)
+Project-URL: Repository, https://github.com/wemake-services/docker-image-size-limit
