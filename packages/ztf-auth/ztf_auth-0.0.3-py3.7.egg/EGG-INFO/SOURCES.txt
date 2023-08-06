@@ -1,0 +1,10 @@
+README.md
+setup.py
+ztf_auth/__init__.py
+ztf_auth/auth.py
+ztf_auth/version.py
+ztf_auth.egg-info/PKG-INFO
+ztf_auth.egg-info/SOURCES.txt
+ztf_auth.egg-info/dependency_links.txt
+ztf_auth.egg-info/requires.txt
+ztf_auth.egg-info/top_level.txt
