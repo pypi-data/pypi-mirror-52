@@ -1,0 +1,211 @@
+Metadata-Version: 2.1
+Name: jsoncsv
+Version: 2.2.1
+Summary: A command tool easily convert json file to csv or xlsx.
+Home-page: https://github.com/alingse/jsoncsv
+Author: alingse
+Author-email: alingse@foxmail.com
+License: Apache 2.0
+Keywords: jsontocsv,jsoncsv,json,csv,xlsconvert,command
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: unicodecsv
+Requires-Dist: xlwt
+Requires-Dist: click
+
+
+jsoncsv : easily convert json to csv or xls[x]
+==============================================
+
+.. image:: https://img.shields.io/pypi/v/jsoncsv.svg
+    :target: https://pypi.python.org/pypi/jsoncsv
+
+.. image:: https://api.travis-ci.org/alingse/jsoncsv.svg?branch=master
+
+.. image:: https://coveralls.io/repos/github/alingse/jsoncsv/badge.svg
+    :target: https://coveralls.io/github/alingse/jsoncsv
+
+
+jsoncsv && mkexcel is a command tool to convert json file to csv/xlsx file.
+
+It's simple, and no need user to specify the keys. :)
+
+Quick Start :
+=================
+
+cat the raw.json to csv/xls use command line tool
+
+each line of raw json text file is a json object.
+
+.. code-block:: bash
+
+    # raw json text,(each line is a json object)
+    # {"id":1, "name":"A"}
+    # {"id":2, "name":"S"}
+    cat raw.json | jsoncsv | mkexcel > output.csv
+    cat raw.json | jsoncsv | mkexcel -t xls > output.xls
+
+a another example
+
+.. code-block:: bash
+
+    echo '{"user":{"id":1,"name":"A"},"week":52}\n{"user":{"id":1,"name":"S"}, "year":2015}'|jsoncsv
+    # {"user.id": 1, "user.name": "A", "week": 52}
+    # {"user.id": 1, "user.name": "S", "year": 2015}
+    echo '{"user":{"id":1,"name":"A"},"week":52}\n{"user":{"id":1,"name":"S"}, "year":2015}'|jsoncsv|mkexcel
+    # user.id,user.name,week,year
+    # 1,A,52,
+    # 1,S,,2015
+
+or
+
+.. code-block:: bash
+
+    jsoncsv raw.json expand.json
+    mkexcel expand.json -t xls output.xls
+
+more options see `--help`.
+
+.. code-block:: bash
+
+    jsoncsv --help
+    mkexcel --help
+
+Install
+================
+
+.. code-block:: bash
+
+    pip install jsoncsv
+
+
+Usage
+=================
+just expand/restore the json, the expand json is one layer json.
+
+.. code-block:: bash
+
+    jsoncsv raw.json expand.json
+    jsoncsv -r expand.json raw.json
+    cat raw.json|jsoncsv |jsoncsv -r > raw2.json
+
+mkexcel the expanded json (one layer)
+
+.. code-block:: bash
+
+    mkexcel expand.json output.csv
+    mkexcel -t xls expand.json > output.xls
+    mkexcel -t csv expand.json > output.csv
+
+
+jsoncsv
+>>>>>>>>
+
+use jsoncsv to expand json files to 1 layer json
+
+.. code-block:: bash
+
+    jsoncsv raw.json expand.json
+
+-e, --expand
+-------------
+
+expand json, 展开 json
+
+.. code-block:: bash
+
+    jsoncsv -e raw.json expand.json
+    cat raw.json expand.json
+    {"s":[1,2,{"w":1}]}
+    {"s.2.w": 1,"s.0": 1,"s.1": 2}
+
+
+{"s":[1,2,{"w":1}]} transformed to {"s.2.w": 1,"s.0": 1,"s.1": 2}
+
+expand.json is only one layer json, it can be easy change to csv or xlsx
+
+-r,--restore
+---------------
+restore the expanded json 重构被展开的json
+
+.. code-block:: bash
+
+    jsoncsv -r expand.json raw.json
+    cat expand.json raw.json
+    {"s.2.w": 1,"s.0": 1,"s.1": 2}
+    {"s": [1, 2, {"w": 1}]}
+
+{"s.2.w": 1,"s.0": 1,"s.1": 2} change to {"s":[1,2,{"w":1}]}
+
+-s,--separator
+---------------
+
+separator used for combine the keys in the tree
+
+default separator is **.**
+
+--safe
+---------
+on safe mode, use escape separator to avoid confilct
+
+expand:
+
+['aa', 'bb', 'www.xxx.com'] --> 'aa\\.bb\\.www.xxx.com'
+
+restore:
+
+'aa\\.bb\\.www.xxx.com' --> ['aa', 'bb', 'www.xxx.com']
+
+
+mkexcel
+>>>>>>>>>>>
+
+dump expanded (by **jsoncsv**) json file to csv or xls file
+
+.. code-block:: bash
+
+    mkexcel expand.json output.csv
+
+-t,--type
+--------------
+
+chose dump type in ['csv', 'xls'] default is 'csv'
+
+.. code-block:: bash
+
+    cat expand.json|mkexcel -t csv > output.csv
+    cat expand.json|mkexcel -t xls > output.xls
+
+
+NOTE/TODO
+>>>>>>>>>
+
+1. dict keys can't be  just array indexes
+--------------------------------------------
+
+example:
+
+.. code-block:: bash
+
+	echo '{"0":1,"1":[1,2]}'|jsoncsv -e| jsoncsv -r
+	[1, [1, 2]]
+
+
+2. mkexcel enable hooks
+-----------------------------------------
+
+wait next version
+
+
+3. unicodecsv is not good enough
+-----------------------------------------
+
+but better than python strand library csv.
+
+
