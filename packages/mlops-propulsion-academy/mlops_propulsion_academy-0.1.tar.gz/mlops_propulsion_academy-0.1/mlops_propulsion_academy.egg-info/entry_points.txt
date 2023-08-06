@@ -1,0 +1,5 @@
+[console_scripts]
+mlops_install = mlops_propulsion_academy.command_line:install
+mlops_start = mlops_propulsion_academy.command_line:start
+mlops_update = mlops_propulsion_academy.command_line:update
+
