@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: wyliozero
+Version: 0.0.26
+Summary: Library for Wyliodrin Lab
+Home-page: https://github.com/Wyliodrin/wyliozero
+Author: Serban Razvan
+Author-email: razvan.serban@wyliodrin.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Unix
+Classifier: Topic :: Education
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gpiozero
+Requires-Dist: Adafruit-DHT
+Requires-Dist: pymata-aio
+Requires-Dist: RPi.GPIO
+Requires-Dist: Adafruit-CharLCD
+
+# wyliozero
+Wyliodrin Pi Zero is a library for Wyliodrin Lab
+
+
