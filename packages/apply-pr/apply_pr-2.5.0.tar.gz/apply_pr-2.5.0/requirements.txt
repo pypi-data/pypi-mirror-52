@@ -1,0 +1,7 @@
+fabric<2.0
+osconf
+python-slugify
+requests
+click
+tqdm
+packaging
