@@ -1,0 +1,12 @@
+#!/home/fuzzyfroghunter/dev/simiotics-s3/.dev/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'simiotics-s3==0.2.0','console_scripts','simiotics_s3'
+__requires__ = 'simiotics-s3==0.2.0'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('simiotics-s3==0.2.0', 'console_scripts', 'simiotics_s3')()
+    )
