@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: waky
+Version: 0.0.2
+Summary: Waky is a web application to manage Wake-On-Lan supporting devices
+Home-page: https://github.com/landier/waky
+Author: Nicolas Landier
+Author-email: nicolas.landier@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+[![Build Status](https://travis-ci.com/landier/waky.svg?branch=master)](https://travis-ci.com/landier/waky)
+
+# Waky
+Waky is a web application to manage Wake-On-Lan supporting devices
+
+## To do
+### Features
+* Web server
+* Wake up feature
+* Healthcheck feature
+* Suspend feature
+* Telegram integration
+
+### Tooling
+* Travis
+* PyPI
+
+
