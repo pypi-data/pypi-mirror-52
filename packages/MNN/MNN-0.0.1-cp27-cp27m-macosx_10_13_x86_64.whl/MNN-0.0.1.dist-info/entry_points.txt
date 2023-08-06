@@ -1,0 +1,6 @@
+[console_scripts]
+mnnconvert = MNNTools.Convert.mnnconvert:main
+mnnops = MNNTools.Ops.mnnops:main
+mnnquant = MNNTools.Quant.mnnquant:main
+mnnvisual = MNNTools.Visual.mnnvisual:main
+
