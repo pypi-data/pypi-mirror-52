@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: python-velbus
+Version: 2.0.28
+Summary: Python Library for the Velbus protocol
+Home-page: https://github.com/thomasdelaet/python-velbus
+Author: Thomas Delaet
+Author-email: thomas@delaet.org
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: any
+Requires-Dist: pyserial (==3.3)
+
+UNKNOWN
+
+
