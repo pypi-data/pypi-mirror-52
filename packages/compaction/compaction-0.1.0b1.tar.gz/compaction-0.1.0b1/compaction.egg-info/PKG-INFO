@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: compaction
+Version: 0.1.0b1
+Summary: Compact sediment
+Home-page: http://csdms.colorado.edu
+Author: Eric Hutton
+Author-email: huttone@colorado.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Physics
