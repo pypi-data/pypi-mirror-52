@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+coocop/__init__.py
+coocop/coocop.py
+coocop.egg-info/PKG-INFO
+coocop.egg-info/SOURCES.txt
+coocop.egg-info/dependency_links.txt
+coocop.egg-info/requires.txt
+coocop.egg-info/top_level.txt
