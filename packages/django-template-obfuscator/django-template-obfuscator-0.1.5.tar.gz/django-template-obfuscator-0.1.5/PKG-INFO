@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: django-template-obfuscator
+Version: 0.1.5
+Summary: Obfuscates desired content in a Django template in order to be difficult to scrape
+Home-page: https://github.com/rafahuelin/django-template-obfuscator
+Author: Rafa Huelin
+Author-email: rafahuelin@gmail.com
+License: MIT
+Description: =============================
+        django-template-obfuscator
+        =============================
+        
+        .. image:: https://badge.fury.io/py/django-template-obfuscator.svg
+            :target: https://badge.fury.io/py/django-template-obfuscator
+        
+        .. image:: https://travis-ci.org/rafahuelin/django-template-obfuscator.svg?branch=master
+            :target: https://travis-ci.org/rafahuelin/django-template-obfuscator
+        
+        .. image:: https://codecov.io/gh/rafahuelin/django-template-obfuscator/branch/master/graph/badge.svg
+            :target: https://codecov.io/gh/rafahuelin/django-template-obfuscator
+        
+        Obfuscates desired content in a Django template in order to be difficult to scrape
+        
+        Documentation
+        -------------
+        
+        The full documentation is at https://django-template-obfuscator.readthedocs.io.
+        
+        Quickstart
+        ----------
+        
+        Install django-template-obfuscator::
+        
+            pip install django-template-obfuscator
+        
+        Add it to your `INSTALLED_APPS`:
+        
+        .. code-block:: django
+        
+            INSTALLED_APPS = (
+                ...
+                'django_template_obfuscator.apps.DjangoTemplateObfuscatorConfig',
+                ...
+            )
+        
+        How to use django-template-obfuscator's template tags:
+        ------------------------------------------------------
+        
+        .. code-block:: django
+        
+            {% load static %}
+            {% load obfuscator %}
+        
+            <!-- Place text to encode in between the {% obfuscate %} and {% endobfuscate %} template
+            tags, then embed it into an Html element with the "obfuscated" class, that will will be
+            "deobfuscated" using Javascript  -->
+        
+            <!-- CSS file that will avoid the user to copy the content in obfuscated class -->
+            <link rel="stylesheet" href="{% static 'css/django_template_obfuscator.css' %}">
+        
+            <p class="obfuscated">
+                {% obfuscate %}
+                Text difficult to scrape.
+                {% endobfuscate %}
+            </p>
+        
+            <p class="obfuscated">
+                {% obfuscate %}
+                This text as well.
+                {% endobfuscate %}
+            </p>
+        
+            <!-- JS in charge of deobfuscation, making the content understandable to the web's user -->
+            <script src="{% static 'js/django_template_obfuscator.js' %}"></script>
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Running Tests
+        -------------
+        
+        Does the code actually work?
+        
+        ::
+        
+            source <YOURVIRTUALENV>/bin/activate
+            (myenv) $ pip install selenium
+            (myenv) $ python django_template_obfuscator/tests.py
+        
+        
+        Credits
+        -------
+        
+        Tools used in rendering this package:
+        
+        *  Cookiecutter_
+        *  `cookiecutter-djangopackage`_
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+        
+        
+        
+        
+        History
+        -------
+        
+        0.1.5 (2019-09-17)
+        ++++++++++++++++++
+        
+        * Tests
+        * updated docs
+        
+        0.1.4 (2019-09-05)
+        ++++++++++++++++++
+        
+        * Improve docs.
+        
+        0.1.3 (2019-09-04)
+        ++++++++++++++++++
+        
+        * Fix small errors.
+        
+        0.1.2 (2019-09-04)
+        +++++++++++++++++++
+        
+        **Improvements**
+        -CSS copy prevention
+        
+        
+        0.1.0 (2019-09-02)
+        ++++++++++++++++++
+        
+        * First release on PyPI.
+        
+Keywords: django-template-obfuscator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
