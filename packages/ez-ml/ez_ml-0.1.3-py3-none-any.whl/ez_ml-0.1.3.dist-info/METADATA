@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ez-ml
+Version: 0.1.3
+Summary: Most useful ML lib
+Home-page: http://www.github.com/ghazibendahmen/ez-ml
+Author: Ghazi Ben Dahmen
+Author-email: ghazi.ben.dahmen3@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: matplotlib
+
+# EZML
+
+EZ ML or Easy ML , is a ready to use collection of functions and classes frequently used in machine learning projects and kaggle competitions .
+
+## Important Note 
+
+This project is still in beta , docstrings exist inside the lib but no official documentation has been created yet .
+
+Any contribution is welcome as long as it fits the spirit of the package.
+
+## Getting Started
+
+To start kicking ass you just need to install the library
+
+```
+pip install ezml
+```
+
+## Authors
+
+* **Ghazi Ben Dahmen** - *Initial work* - [GhaziBenDahmen](https://github.com/GhaziBenDahmen)   
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+
