@@ -1,0 +1,38 @@
+group: travis_latest
+language: python
+group: travis_latest
+git:
+  depth: 1
+python:
+  - 2.7
+  - 3.5
+  - 3.6
+  - 3.7
+  - pypy
+  - pypy3
+
+env:
+  global:
+    - PYTHONWARNINGS="ignore:'U' mode is deprecated:DeprecationWarning::"
+
+before_install:
+  - python --version
+
+install:
+  - pip install -U pip setuptools
+  - pip install -U coverage coveralls pylint
+  - pip install -U -e .[test]
+
+script:
+  - pylint -r no src/sphinxcontrib
+  - coverage run setup.py test
+after_success:
+  - coveralls
+notifications:
+  email: false
+
+
+cache: pip
+
+before_cache:
+    - rm -f $HOME/.cache/pip/log/debug.log
