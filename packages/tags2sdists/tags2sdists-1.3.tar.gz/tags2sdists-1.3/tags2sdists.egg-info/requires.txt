@@ -1,0 +1,6 @@
+pkginfo
+setuptools>=16.0
+zest.releaser>=4.0
+
+[test]
+pytest
