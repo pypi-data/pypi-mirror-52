@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: jwtlib
+Version: 0.0.2
+Summary: library
+Home-page: https://github.com/novopl/jwtlib
+Author: Mateusz Klos
+Author-email: novopl@gmail.com
+License: Apache 2.0
+Description: ###########
+        jwtlib
+        ###########
+        
+        .. readme_inclusion_marker
+        
+        
+        Dev setup
+        ~~~~~~~~~
+        
+        Initialize local repository
+        ---------------------------
+        
+        .. code-block:: bash
+        
+            $ pipenv install -d                     # Install all dependencies
+            $ pipenv run python setup.py develop    # Setup the pkg for local development
+            $ pipenv shell                          # Open shell within the virtualenv
+        
+        
+        Available commands
+        ------------------
+        
+        .. code-block:: bash
+        
+            $ peltak --help     # Show the list of available commands
+            $ peltak test       # Run tests
+            $ peltak lint       # Run code checks
+            $ peltak docs       # Build documentation using Sphinx
+        
+Keywords: library
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
