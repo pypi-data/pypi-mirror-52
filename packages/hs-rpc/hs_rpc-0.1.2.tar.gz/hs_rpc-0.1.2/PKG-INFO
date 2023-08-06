@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: hs_rpc
+Version: 0.1.2
+Summary: rpc服务打包
+Home-page: UNKNOWN
+Author: huansi_mes_team
+Author-email: 751995207@qq.com
+License: UNKNOWN
+Description: # hello 环思
+        # 2019/8/1 增加了g.user的赋值操作
+        # 2019/8/2 增加了g.user的赋值操作,并兼容原来user_id的赋值
+        # 2019/8/13 token装饰器认证错误从exception改为Unauthorized，返回状态码从500改为401
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
