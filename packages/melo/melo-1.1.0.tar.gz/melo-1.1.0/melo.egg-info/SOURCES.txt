@@ -1,0 +1,11 @@
+README.rst
+setup.py
+melo/__init__.py
+melo/dist.py
+melo/melo.py
+melo/nfl.dat
+melo.egg-info/PKG-INFO
+melo.egg-info/SOURCES.txt
+melo.egg-info/dependency_links.txt
+melo.egg-info/requires.txt
+melo.egg-info/top_level.txt
