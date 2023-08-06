@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyuni10
+Version: 2.1.2
+Summary: Python Wrapper for Uni10
+Home-page: https://uni10.gitlab.io
+Maintainer: Ying-Jer Kao et al.
+Maintainer-email: yingjerkao@gmail.com
+License: GNU LGPL
+Platform: POSIX
+Platform: MacOS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+
+This package provides python wrapper for the Universal Tensor Network Library (Uni10).
+Uni10 is a powerful open-source library for the tensor network alogirthms. 
+
