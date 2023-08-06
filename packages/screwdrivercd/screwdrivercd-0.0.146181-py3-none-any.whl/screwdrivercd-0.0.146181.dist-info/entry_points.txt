@@ -1,0 +1,3 @@
+[console_scripts]
+screwdrivercd_version = screwdrivercd.version.cli:main
+
