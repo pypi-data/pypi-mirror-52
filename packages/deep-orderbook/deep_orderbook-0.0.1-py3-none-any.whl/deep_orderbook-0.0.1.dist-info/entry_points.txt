@@ -1,0 +1,3 @@
+[console_scripts]
+deepbook = deep_orderbook.__main__:main
+
