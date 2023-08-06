@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+moreman/__init__.py
+moreman/arghex.py
+moreman/main.py
+moreman.egg-info/PKG-INFO
+moreman.egg-info/SOURCES.txt
+moreman.egg-info/dependency_links.txt
+moreman.egg-info/entry_points.txt
+moreman.egg-info/not-zip-safe
+moreman.egg-info/requires.txt
+moreman.egg-info/top_level.txt
