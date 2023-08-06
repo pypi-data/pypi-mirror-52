@@ -1,0 +1,11 @@
+[console_scripts]
+summaryclassification = cli.summaryclassification:main
+summaryclean = cli.summaryclean:main
+summarycombine = cli.summarycombine:main
+summarycombine_metafiles = cli.summarycombine_metafiles:main
+summaryconvert = pesummary.gw.file.one_format:main
+summarypages = cli.summarypages:main
+summaryplots = cli.summaryplots:main
+summarypublication = cli.summarypublication:main
+summaryreview = cli.summaryreview:main
+
