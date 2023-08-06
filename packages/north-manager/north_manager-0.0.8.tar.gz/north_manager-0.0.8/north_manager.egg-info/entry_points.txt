@@ -1,0 +1,3 @@
+[console_scripts]
+north = north_manager.north_manager:run
+
