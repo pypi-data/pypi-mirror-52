@@ -1,0 +1,15 @@
+lumigo_log_shipper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lumigo_log_shipper/lumigo_shipper.py,sha256=4rjjmEoDNQ0Dq6bCshj_2vZYgTj9r4Z5rzVca1rdTos,731
+lumigo_log_shipper/models.py,sha256=ukSMPcCInxZcm1qReJ94pnScgXyaRAN900MJ_O4gTIM,764
+lumigo_log_shipper/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lumigo_log_shipper/utils/aws_utils.py,sha256=8qlZPwAtJZw5pEFW_dt4ymRrrSXBktsm060FTuPl9cg,1413
+lumigo_log_shipper/utils/consts.py,sha256=sgMxO-HOgZS8-QUKL3RH0TnQNuCc0YKm2z8qdyfs1MA,242
+lumigo_log_shipper/utils/encoder.py,sha256=hgokpsn8i3MjSxnU9PxGqOTx_f1CxJPsHLyk5wcvTzY,225
+lumigo_log_shipper/utils/firehose_dal.py,sha256=FUgzs8kTj4WXfHI9_3VksgHEwjhBbLHt7vbyskS_XtU,4267
+lumigo_log_shipper/utils/model_builder.py,sha256=QNrDcEfB3GHLAf0_s2iXB-LKxVg0G5HcZK9v1qWAJ04,884
+lumigo_log_shipper/utils/utils.py,sha256=DBCFXLHXXrWeTM2JBqagoFwhrzEKPivqg9qdEPquhMI,304
+lumigo_log_shipper-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+lumigo_log_shipper-1.0.0.dist-info/METADATA,sha256=cccPTf53bPwQgkOwWHoJMe6s9YP7psBNxWmK-5bR4VM,551
+lumigo_log_shipper-1.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+lumigo_log_shipper-1.0.0.dist-info/top_level.txt,sha256=M5jFKVYd5872RMp8a2OKTP7EuvhdR5PC5Y_mref8tB0,19
+lumigo_log_shipper-1.0.0.dist-info/RECORD,,
