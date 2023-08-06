@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: tebetebe
+Version: 0.0.1
+Summary: routing analysis with OSRM
+Home-page: https://github.com/1papaya/tebetebe
+Author: 1papaya
+Author-email: 1love1papaya@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: osrm
+Requires-Dist: geojson
+Requires-Dist: geopandas
+Requires-Dist: overpass
+Requires-Dist: sh
+
+routing analysis with OSRM
+
+
