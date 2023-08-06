@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: sciexp2-expdef
+Version: 2.0.0
+Summary: Experiment definition framework for SciExp²
+Home-page: https://sciexp2-expdef.readthedocs.io/
+Author: Lluís Vilanova
+Author-email: llvilanovag@gmail.com
+License: GNU General Public License (GPL) version 3 or later
+Description: SciExp²-ExpDef provides a framework for easing the workflow of creating and
+        executing experiments, focused on *design-space exploration*.
+        
+        It is divided into the following main pieces:
+        
+        - Launchgen: Aids in defining experiments as a permutation of different
+          parameters in the design space. It creates the necessary files to run these
+          experiments (configuration files, scripts, etc.), which you define as
+          templates that get substituted with the specific parameter values of each
+          experiment.
+        
+        - Launcher: Takes the files of launchgen and runs these experiments on different
+          execution platforms like regular local scripts or cluster jobs. It takes care
+          of tracking their correct execution, and allows selecting which experiments to
+          run (e.g., those with specific parameter values, or those that were not
+          successfully run yet).
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires: ipython
+Requires: numpy
+Requires: pystache
+Requires: six
+Requires: tqdm
