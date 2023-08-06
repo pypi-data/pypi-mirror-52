@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: cekit
+Version: 3.3.2
+Summary: Containers creator
+Home-page: https://github.com/cekit/cekit
+Author: CEKit team
+Author-email: cekit@cekit.io
+License: MIT
+Download-URL: https://github.com/cekit/cekit/archive/3.3.2.tar.gz
+Description: CEKit
+        =====
+        
+        .. image:: docs/_static/logo-wide.png
+        
+        About
+        -----
+        
+        Container image creation tool.
+        
+        CEKit helps to build container images from image definition files with strong
+        focus on modularity and code reuse.
+        
+        Features
+        --------
+        
+        * Building container images  from YAML image definitions
+        * Integration/unit testing of images
+        
+        Documentation
+        -------------
+        
+        `Documentation is available here <http://cekit.readthedocs.io/>`_.
+        
+Platform: UNKNOWN
