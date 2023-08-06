@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: drf-tools
+Version: 0.9.33
+Summary: Multiple extensions and test utilities for Django REST Framework 3
+Home-page: https://github.com/seebass/drf-tools
+Author: Sebastian Bredehöft
+Author-email: bredehoeft.sebastian@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: django (>=1.10)
+Requires-Dist: djangorestframework (>=3.4.0)
+Requires-Dist: drf-nested-fields (>=0.9.5)
+Requires-Dist: drf-hal-json (>=0.9.0)
+Requires-Dist: drf-enum-field (>=0.9.0)
+Requires-Dist: drf-nested-routing (>=0.9.6)
+Requires-Dist: django-filter (>=0.10.0)
+Requires-Dist: openpyxl (>=2.6.3)
+Requires-Dist: chardet (>=2.3.0)
+
+UNKNOWN
+
+
