@@ -1,0 +1,14 @@
+djangoldp_circle/__init__.py,sha256=uBOjFIeqy0z7_H-IDxL9iuVe5mGszgzGzF8JIjNc8cw,48
+djangoldp_circle/apps.py,sha256=sAlj3qvlZCDaAYZ7fCGqk3b3IBN0oW6taa63Yob2oso,235
+djangoldp_circle/factories.py,sha256=xebQv5ONHN67FIWHhFAX3feG1YjDmjRDkzphCJikw80,704
+djangoldp_circle/models.py,sha256=FWN0vJznZMXj2ZOZh9mGp2H6YxZqrrxgepcKHm0xY-o,871
+djangoldp_circle/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoldp_circle/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoldp_circle/management/commands/mock_circle.py,sha256=z2gnAlnT4GRfo_8YpdReAD9qSSi2TIBbxvFZCTxa7Pg,893
+djangoldp_circle/migrations/0001_initial.py,sha256=T98QN21Scv51q36aU5NklKqrljdLuc7X_U-qI1klZI4,1162
+djangoldp_circle/migrations/0002_circle_urlid.py,sha256=_ROIIReApfQgF9-ZcmnYT9y5gYvJzGn_Nl3haqPA4rI,493
+djangoldp_circle/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoldp_circle-0.1.1.dist-info/METADATA,sha256=Db-9WvzLQ9oRPMW1WtW9LDI2sFkIyZL_En_EovPM6-I,441
+djangoldp_circle-0.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+djangoldp_circle-0.1.1.dist-info/top_level.txt,sha256=8qBsKodrrR8RaByCKJ9XTPoeZDTTaBeaJQNeq5n-VCg,17
+djangoldp_circle-0.1.1.dist-info/RECORD,,
