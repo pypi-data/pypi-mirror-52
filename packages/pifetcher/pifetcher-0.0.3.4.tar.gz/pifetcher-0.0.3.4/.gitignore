@@ -1,0 +1,16 @@
+*.pyc
+.idea
+.cache
+.DS_Store
+/.idea
+src/pifetcher/__pycache__/
+src/pifetcher/data_fetchers/__pycache__/
+src/pifetcher/work_queue/__pycache__/
+src/pifetcher/debug.log
+src/pifetcher/utilities/__pycache__/
+src/pifetcher/core/__pycache__/
+src/integration_tests/__pycache__/
+pifetcher.egg-info/
+build/
+dist/
+src/integration_tests/debug.log
