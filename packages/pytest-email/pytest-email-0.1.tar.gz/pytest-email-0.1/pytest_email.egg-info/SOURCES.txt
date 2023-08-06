@@ -1,0 +1,10 @@
+setup.py
+pytest_email/__init__.py
+pytest_email/plugin.py
+pytest_email.egg-info/PKG-INFO
+pytest_email.egg-info/SOURCES.txt
+pytest_email.egg-info/dependency_links.txt
+pytest_email.egg-info/entry_points.txt
+pytest_email.egg-info/requires.txt
+pytest_email.egg-info/top_level.txt
+pytest_email.egg-info/zip-safe

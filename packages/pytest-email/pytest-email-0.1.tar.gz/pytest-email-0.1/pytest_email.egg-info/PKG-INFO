@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pytest-email
+Version: 0.1
+Summary: Send execution result email
+Home-page: https://github.com/adiralashiva8/pytest-email
+Author: Shiva Adirala
+Author-email: adiralashiva8@gmail.com
+License: MIT license
+Description: Send email with execution result once execution is completed
+Keywords: pytest,py.test,email
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
