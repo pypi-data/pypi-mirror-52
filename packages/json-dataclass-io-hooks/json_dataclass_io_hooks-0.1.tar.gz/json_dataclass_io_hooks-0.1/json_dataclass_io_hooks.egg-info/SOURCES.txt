@@ -1,0 +1,10 @@
+README.md
+setup.py
+json_dataclass_io_hooks/__init__.py
+json_dataclass_io_hooks/json_dataclass_io_hooks.py
+json_dataclass_io_hooks.egg-info/PKG-INFO
+json_dataclass_io_hooks.egg-info/SOURCES.txt
+json_dataclass_io_hooks.egg-info/dependency_links.txt
+json_dataclass_io_hooks.egg-info/top_level.txt
+json_dataclass_io_hooks/tests/__init__.py
+json_dataclass_io_hooks/tests/test_json_dataclass_io_hooks.py
