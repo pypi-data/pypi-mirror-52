@@ -1,0 +1,17 @@
+acccmip6/__init__.py,sha256=5xakCVS8jgGoSG8Gp2B4ikGOiEO0EHsjf8Dr32cZ3RA,158
+acccmip6/access_cm.py,sha256=ocGLsbKO_yRT7Ga2c1_qT7eqYphThVbqBJSh0Tanxqs,3924
+acccmip6/cli.py,sha256=kD4RLa9GlQqOU3CIY7ey5l5CrbKdOQREj-Ze5l9N5n0,1423
+acccmip6/download_dat.py,sha256=EOdRlF47Dyj-2XE8b9ziCu6dj6cXL01bAdJXkkt8I5g,5196
+acccmip6/utilities/CMIP6_database.py,sha256=TsTdLMt9vZRg02Jgur4FCAW7k37DVgQUL3B7wtHoNtg,5287
+acccmip6/utilities/__init__.py,sha256=5xakCVS8jgGoSG8Gp2B4ikGOiEO0EHsjf8Dr32cZ3RA,158
+acccmip6/utilities/c6db.py,sha256=inoMAlzBsRI8JFYZXA9Ol1pFgEdCi_6xVUs5FNof-ZQ,3361
+acccmip6/utilities/checkers.py,sha256=T6qKPt24L2Pzw-1CW9S142S3zqI5c29_i8plADNFhug,4259
+acccmip6/utilities/util.py,sha256=HdO5_9POIOQrx1jJ69T7Ul5S1B8w9d9NvfeBrr7yo0Q,7301
+acccmip6/utilities/data/__init__.py,sha256=5xakCVS8jgGoSG8Gp2B4ikGOiEO0EHsjf8Dr32cZ3RA,158
+acccmip6-1.0.2.dist-info/DESCRIPTION.rst,sha256=LRZOM167yikp6TMU861oJCHANeyeXuOT1Os_lV4bkyk,2118
+acccmip6-1.0.2.dist-info/METADATA,sha256=R_sNDeKOrFHNOv-S6LZ9wuQYLXhgi4kl2pfV-DgHtLs,2698
+acccmip6-1.0.2.dist-info/RECORD,,
+acccmip6-1.0.2.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+acccmip6-1.0.2.dist-info/entry_points.txt,sha256=ITMZcu8kaPYSPcHYX_c7EOK5SMtB6CbrjpjSwc5hO88,48
+acccmip6-1.0.2.dist-info/metadata.json,sha256=zHtqJ7q2gbAjD-RkN36dMR44SZN_NvthFD8qvrd7j4Q,953
+acccmip6-1.0.2.dist-info/top_level.txt,sha256=DM3pr-3xxTQl38NLcSqmwq5yC-3Wk-jfeVi7y0_6els,9
