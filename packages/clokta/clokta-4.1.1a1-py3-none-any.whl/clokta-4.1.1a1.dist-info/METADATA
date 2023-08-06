@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: clokta
+Version: 4.1.1a1
+Summary: UNKNOWN
+Home-page: https://github.com/washingtonpost/clokta
+Author: Robert Antonucci and the WaPo platform tools team
+Author-email: opensource@washingtonpost.com
+License: UNKNOWN
+Download-URL: https://github.com/washingtonpost/clokta/tarball/4.1.0
+Keywords: okta,clokta,aws,cli
+Platform: UNKNOWN
+Requires-Dist: beautifulsoup4
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: configparser
+Requires-Dist: enum-compat
+Requires-Dist: keyring
+Requires-Dist: requests
+
+UNKNOWN
+
+

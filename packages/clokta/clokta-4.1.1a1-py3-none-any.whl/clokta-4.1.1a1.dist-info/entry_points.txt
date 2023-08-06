@@ -1,0 +1,3 @@
+[console_scripts]
+clokta = clokta.cloktacli:assume_role
+
