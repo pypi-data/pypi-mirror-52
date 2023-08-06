@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pando
+Version: 0.47
+Summary: Pando is a Python web framework. Simplates are the main attraction.
+Home-page: http://aspen.io/
+Author: Chad Whitacre et al.
+Author-email: team@aspen.io
+License: UNKNOWN
+Description: Pando is a Python web framework. Simplates are the main attraction.
+        
+        Installation, Testing, and License
+        ==================================
+        
+        ``pando`` is available on `GitHub`_ and on `PyPI`_::
+        
+            $ pip install pando
+        
+        We test against 64-bit Python 2.7 on Linux: |travis|
+        
+        And we test against 32- and 64-bit Python 2.7 on Windows: |appveyor|
+        
+        ``pando`` is MIT-licensed.
+        
+        
+        .. _GitHub: https://github.com/AspenWeb/pando.py
+        .. _PyPI: https://pypi.python.org/pypi/pando
+        .. |travis| image:: https://img.shields.io/travis/AspenWeb/pando.py/master.svg
+           :target: https://travis-ci.org/AspenWeb/pando.py
+           :alt: Linux build status
+        .. |appveyor| image:: https://img.shields.io/appveyor/ci/AspenWeb/pando-py/master.svg
+           :target: https://ci.appveyor.com/project/AspenWeb/pando-py
+           :alt: Windows build status
+        
+        
+        Documentation and further information
+        =====================================
+        
+        on the main `site`_ : http://aspen.io/
+        
+        .. _site: http://aspen.io/
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Provides-Extra: fcgi
