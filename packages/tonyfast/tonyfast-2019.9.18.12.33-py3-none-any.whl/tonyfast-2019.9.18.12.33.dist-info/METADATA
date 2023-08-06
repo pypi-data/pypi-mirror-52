@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: tonyfast
+Version: 2019.9.18.12.33
+Summary: build/readme.md
+Home-page: https://github.com/tonyfast/gists
+Author: tonyfast
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Requires-Dist: wheel
+Requires-Dist: rdflib
+Requires-Dist: requests
+Requires-Dist: notebook
+Requires-Dist: rfc3986
+Requires-Dist: webcolors
+Requires-Dist: networkx
+Requires-Dist: isort
+Requires-Dist: nbconvert
+Requires-Dist: black
+Requires-Dist: jsonpointer
+Requires-Dist: hvplot
+Requires-Dist: aiohttp
+Requires-Dist: nbval
+Requires-Dist: strict-rfc3339
+Requires-Dist: nbsphinx
+Requires-Dist: matplotlib
+Requires-Dist: jsonschema
+Requires-Dist: pyld
+Requires-Dist: datasette
+Requires-Dist: nest-asyncio
+Requires-Dist: sqlite-utils
+Requires-Dist: toolz
+Requires-Dist: requests-cache
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: rfc3987
+Requires-Dist: pytest
+Requires-Dist: gidgethub
+Requires-Dist: rdflib-jsonld
+Requires-Dist: importnb
+Requires-Dist: idna
+
+UNKNOWN
+
+
