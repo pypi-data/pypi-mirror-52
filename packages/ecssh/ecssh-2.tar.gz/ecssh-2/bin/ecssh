@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+import ecssh
+import boto3
+import yaml
+import sys
+import os
+import subprocess
+import shlex
+import json
+
+def loadConfig(CLUSTER):
+    with open((os.getenv("HOME") + "/.config/ecssh.yml"), 'r') as stream:
+        try:
+            RAW_CONFIG = yaml.safe_load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+            sys.exit(1)
+
+    PROFILE_CONFIG = RAW_CONFIG.get(AWS_PROFILE)
+    CONFIG = PROFILE_CONFIG.get(CLUSTER)
+    if CONFIG.get("ssh_key"):
+        CONFIG["ssh_key"] = "-i " + CONFIG.get("ssh_key")
+    return CONFIG
+
+def help():
+    print(""" 
+USAGE:        
+AWS_PROFILE=<ENV> ecssh <CLUSTER NANE>
+AWS_PROFILE=<ENV> ecssh <CLUSTER NANE> <N>
+    """)
+
+
+AWS_PROFILE = os.getenv("AWS_PROFILE", "default")
+session = boto3.Session(profile_name=AWS_PROFILE)
+ECS = session.client('ecs')
+EC2 = session.client('ec2')
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        if sys.argv[1] in ["--help", "-h"]:
+            help()
+        elif sys.argv[1] in ["--version", "-v"]:
+            print("2")
+        else:
+            CLUSTER = sys.argv[1]
+            CONFIG = loadConfig(CLUSTER)
+            ecssh.ecssh(CONFIG=CONFIG, ECS=ECS,
+                        EC2=EC2, CLUSTER=CLUSTER, N=None)
+    elif len(sys.argv) == 3:
+        CLUSTER = sys.argv[1]
+        N = int(sys.argv[2])
+        CONFIG = loadConfig(CLUSTER)
+        subprocess.check_call(shlex.split(ecssh.ecssh(
+            CONFIG=CONFIG, ECS=ECS, EC2=EC2, CLUSTER=CLUSTER, N=N)))
+    else:
+        ecssh.listClusters(ECS=ECS)
+        

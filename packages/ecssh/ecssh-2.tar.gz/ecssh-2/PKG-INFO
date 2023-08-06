@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ecssh
+Version: 2
+Summary: accessing aws ecs instances
+Home-page: https://git.osuv.de/m/ecssh
+Author: Markus Bergholz
+Author-email: markuman@gmail.com  
+License: WTFPL
+Description: # ecssh
+        
+        fill out `~/.config/ecssh.yml`
+        
+        ```yaml
+        test:
+          some_cluster_name:
+            ssh_user: ec2-user
+        prod: # AWS ENVIRONMENT
+          public_prod: # ECS CLUSTER NAME
+            ssh_user: ec2-user
+            ssh_key: ~/.ssh/aws.pem
+          internal_one:
+            ssh_user: ec2-user
+            ssh_key: ~/.ssh/id_ed25519
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

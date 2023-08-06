@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/ecssh
+ecssh/__init__.py
+ecssh.egg-info/PKG-INFO
+ecssh.egg-info/SOURCES.txt
+ecssh.egg-info/dependency_links.txt
+ecssh.egg-info/top_level.txt
+ecssh.egg-info/zip-safe
