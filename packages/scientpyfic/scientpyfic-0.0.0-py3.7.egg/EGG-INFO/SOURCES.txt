@@ -1,0 +1,15 @@
+README.rst
+setup.py
+scientpyfic/__init__.py
+scientpyfic/cli.py
+scientpyfic/random_user_agent.py
+scientpyfic/url_from_type.py
+scientpyfic.egg-info/PKG-INFO
+scientpyfic.egg-info/SOURCES.txt
+scientpyfic.egg-info/dependency_links.txt
+scientpyfic.egg-info/entry_points.txt
+scientpyfic.egg-info/requires.txt
+scientpyfic.egg-info/top_level.txt
+scientpyfic.egg-info/zip-safe
+scientpyfic/commands/__init__.py
+scientpyfic/commands/all.py
