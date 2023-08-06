@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+scrapy_new/__init__.py
+scrapy_new/new.py
+scrapy_new.egg-info/PKG-INFO
+scrapy_new.egg-info/SOURCES.txt
+scrapy_new.egg-info/dependency_links.txt
+scrapy_new.egg-info/entry_points.txt
+scrapy_new.egg-info/top_level.txt
