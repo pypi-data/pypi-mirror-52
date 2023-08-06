@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: aiohttp-oauth-client
+Version: 0.1.1
+Summary: OAuth 1.0, OAuth 2.0 and Assertion OAuth Client for aiohttp
+Home-page: https://github.com/authlib/aiohttp-oauth-client
+Author: Hsiaoming Yang
+Author-email: me@lepture.com
+License: BSD-3-Clause
+Project-URL: Website, https://authib.org/
+Project-URL: Blog, https://blog.authlib.org/
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Authlib (==0.12)
+Requires-Dist: aiohttp
+
+OAuth Clients for aiohttp
+=========================
+
+OAuth 1.0, OAuth 2.0 and Assertion OAuth Client for aiohttp, powered by Authlib_.
+
+
+Useful Links
+------------
+
+1. Homepage: https://authlib.org/.
+2. Documentation: https://docs.authlib.org/.
+3. Blog: https://blog.authlib.org/.
+4. Repository: https://github.com/authlib/aiohttp-oauth-client.
+5. Twitter: https://twitter.com/authlib.
+6. Donate: https://www.patreon.com/lepture.
+
+
+License
+-------
+
+This library is licensed under BSD. Please see LICENSE for licensing details.
+
+.. _Authlib: https://authlib.org/
+
+
