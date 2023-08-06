@@ -1,0 +1,12 @@
+genice_svg/__init__.py,sha256=55Y49YEOgCs9iGrvzevkq2Qqwv85hSyXbtFICclh4r4,73
+genice_svg/hooks.py,sha256=XlQjaIcACAt9RYFBq-3Ff0KCwUOwjP9UbcdXqelmJo8,10265
+genice_svg/render_png.py,sha256=3_pnJVT2Wx6RMPNTzyy3lQ8Fz9-MbHchaG-QZR92KIE,4284
+genice_svg/render_svg.py,sha256=yTOX2_HRS01tzE9EwdOA4kzIEusREYxSGpoi3uEGJKU,5499
+genice_svg/formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+genice_svg/formats/png.py,sha256=s9OjJukHSZZExEOBsUvuoxH0GaJKXlx3l6y91tXnt9A,3924
+genice_svg/formats/svg.py,sha256=VTOf9NBkFTLKg2x3U1IKS87DdzIr42oeDQezhfQzLt8,4589
+genice_svg-0.5.dist-info/METADATA,sha256=wWCfkc7ahKEbSyMKv9WkXwujLnvNUntbFwCLDOEIaTs,1994
+genice_svg-0.5.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+genice_svg-0.5.dist-info/entry_points.txt,sha256=H6PZ3G2NOqSgwQaUVEOmB47upTazt3eZ_UwKgJgBT3Q,75
+genice_svg-0.5.dist-info/top_level.txt,sha256=jR16gTU_9WctmgK6e3p3t9VkdD36r0kBeh4qfuT3j64,11
+genice_svg-0.5.dist-info/RECORD,,
