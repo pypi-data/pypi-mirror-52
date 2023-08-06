@@ -1,0 +1,3 @@
+[datamaestro.repositories]
+ml = datamaestro_ml:Repository
+
