@@ -1,0 +1,4561 @@
+0ad:
+  name: sourceforge
+  project: zero-ad
+  path: releases/${latest:0ad-(\d+\.\d+\.\d+)-}
+4kslideshowmaker: 4k
+4kstogram: 4k
+4kvideodownloader: 4k
+4kvideotomp3: 4k
+4kyoutubetomp3: 4k
+6tunnel:
+  name: github
+  project: wojtekka
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+7zip:
+  spider:
+    name: sourceforge
+    project: sevenzip
+    path: "${latest:^7z\\d{4}}"
+  formatter: "(\\d{2})(\\d{2})"
+abiword:
+  name: http
+  url: http://www.abiword.org/downloads/abiword/latest/source/${latest:^abiword-(\d+(?:\.\d+)+)}
+about-distro: kdegit
+accountsservice:
+  name: http
+  url: https://www.freedesktop.org/software/accountsservice/${latest:accountsservice-(\d+(?:\.\d+)+)}
+acetoneiso:
+  spider:
+    name: xpath
+    url: https://bazaar.launchpad.net/~andrikos/acetoneiso/acetoneiso/view/head:/CHANGELOG
+    base: //td[contains(@class, "viewCont")]/pre
+  formatter:
+  - "Version (\\d+(?:\\.\\d+)*)"
+  - "(?P<d>\\d{2})/(?P<m>\\d{2})/(?P<y>\\d{4})"
+ack:
+  name: github
+  project: petdance
+  repository: ack2
+  tag: "^(\\d+\\.\\d+)$"
+acpi-eeepc-generic:
+  name: github
+  project: nbigaouette
+  tag: "^v(\\d+(?:\\.\\d+)+)"
+acpiclient:
+  name: sourceforge
+  path: "${latest}/${latest}/"
+acpid:
+  name: sourceforge
+  project: acpid2
+  path: "${latest:acpid-(\\d+(?:\\.\\d+)+)}"
+aften:
+  name: sourceforge
+  path: aften/${latest}/${latest:aften-(\d+(?:\.\d+)+)}
+aircrack-ng:
+  name: github
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+akonadi:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:akonadi-(\d+(?:\.\d+)+)}
+akonadi-calendar:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:akonadi-calendar-(\d+(?:\.\d+)+)}
+akonadi-contacts:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:akonadi-contacts-(\d+(?:\.\d+)+)}
+akonadi-git-resource:
+  name: kdegit
+  tag: "^v([^-]*)"
+akonadi-mime:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:akonadi-mime-(\d+(?:\.\d+)+)}
+akonadi-notes:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:akonadi-notes-(\d+(?:\.\d+)+)}
+akonadi-search:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:akonadi-search-(\d+(?:\.\d+)+)}
+akunambol: kdegit
+alkimia: kdegit
+allegro:
+  name: http
+  url: http://download.gna.org/allegro/allegro/${latest}/
+allegro4:
+  name: sourceforge
+  project: alleg
+  path: allegro/${latest:^(4\.\d+(\.\d+)*)$}
+amarok:
+  name: http
+  url: https://download.kde.org/stable/amarok/${latest:^(\d+\.\d+(\.([0-5]\d+|\d)(\.\d+)?)?)$}/src/${latest:^amarok-(\d+(?:\.\d+)+)}
+amor: kdegit
+amule:
+  name: github
+  project: amule-project
+analitza:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:analitza-(\d+(?:\.\d+)+)}
+android-file-transfer-linux:
+  name: github
+  project: whoozle
+android-qt: kdegit
+android-qt-creator: kdegit
+android-qt-mobility:
+  name: kdegit
+  tag: "^n(.*)$"
+anki:
+  spider:
+    name: xpath
+    url: https://apps.ankiweb.net/docs/changes.html
+    base: "//h2[contains(@id, 'latest')]/"
+    version: text()
+    date: following-sibling::div//p[1]/text()
+  formatter:
+  - n.n
+  - "\\d+-\\d+-\\d+"
+apc:
+  name: xpath
+  url: https://pecl.php.net/package/apc
+  base: "//table[@cellpadding='2']//tr/td[1][contains(text(), 'stable')]"
+  version: "/preceding-sibling::th/a"
+  date: "/following-sibling::td"
+  url-xpath: "/preceding-sibling::th/a/@href"
+apertium:
+  name: sourceforge
+  path: apertium/${latest}/
+appdirs: pypi
+apper:
+  spider:
+    name: kdegit
+    tag: "^APPER_(.*)$"
+  formatter: n_n
+appmenu-qt: launchpad
+apsw:
+  spider: pypi
+  formatter: n.n
+apt:
+aqbanking:
+  name: aqbanking
+  package: '03'
+aqemu:
+  name: github
+  project: tobimensch
+ardentryst:
+  spider:
+    name: sourceforge
+    path: ardentryst/${latest}
+  formatter: "(\\d)\\.(\\d)(\\d)"
+ardour:
+  name: github
+  project: Ardour
+  tag: "^\\d+(?:\\.\\d+)*$"
+arduino:
+  name: github
+  repository: Arduino
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+  ignore-latest: true
+aria2:
+  name: github
+  tag: "^release-(.*)"
+ark:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ark-(\d+(?:\.\d+)+)}
+artikulate:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:artikulate-(\d+(?:\.\d+)+)}
+aseman-qt-tools:
+  name: github
+  project: Aseman-Land
+  tag: "^v(\\d+(?:\\.\\d+)+)(-stable)?$"
+assaultcube:
+  name: sourceforge
+  project: actiongame
+  path: "${latest:AssaultCube Version (\\d+(?:\\.\\d+)+)}"
+assemblygen: kdegit
+atlas_cpp:
+  name: sourceforge
+  project: worldforge
+  path: Atlas-C%2B%2B (protocol lib)
+attica: kdegit
+audacity:
+  name: github
+  tag: "^Audacity-(\\d+(?:\\.\\d+)+)$"
+  ignore-latest: true
+audex:
+  name: github
+  project: KDE
+audiere:
+  name: sourceforge
+  path: audiere
+audiocd-kio:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:audiocd-kio-(\d+(?:\.\d+)+)}
+aur: pypi
+automoc: kdegit
+autossh:
+  spider:
+    name: xpath
+    url: http://www.harding.motd.ca/autossh/
+    base: "//a/@href[re:test(., '\\d+\\.\\d+\\w+')]"
+    date-url: ''
+  formatter: "\\d+\\.\\d+\\w*"
+autowikibrowser:
+  spider:
+    name: sourceforge
+    path: autowikibrowser/${latest}/${latest:^AutoWikiBrowser(\d+)\.zip$}
+  formatter: "(\\d)(\\d)(\\d)(\\d)"
+avidemux:
+  name: sourceforge
+  path: avidemux/${latest:^\d+\.\d+\.\d+(.\d+)?$}/${latest:avidemux_(\d+(?:\.\d+)+)}
+avogadro:
+  name: sourceforge
+  path: avogadro/${latest}/${latest:avogadro-(\d+(?:\.\d+)+)}
+avoision:
+  name: sourceforge
+  project: avsn
+  path: "${latest:avoision-(\\d+(?:\\.\\d+)+)\\.tar}"
+awstats:
+  name: sourceforge
+  path: AWStats/${latest:\d+(?:\.\d+)+}/${latest:awstats-(\d+(?:\.\d+)+)}
+babl:
+  spider:
+    name: gitlab
+    url: https://gitlab.gnome.org/GNOME/babl
+  formatter: n_n
+backintime: launchpad
+backports_abc: pypi
+baloo: kdegit
+baloo-widgets:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:baloo-widgets-(\d+(?:\.\d+)+)}
+bangarang: kdegit
+bash:
+  spider:
+    name: http
+    url: https://ftp.gnu.org/gnu/bash/${latest:bash-\d.\d-patches}/${highest:bash(\d+-\d+)}
+  formatter: "^(\\d)(\\d)-0*(\\d+?)$"
+bcg729:
+  name: http
+  url: http://download-mirror.savannah.gnu.org/releases/linphone/plugins/sources/${latest:bcg729-(\d+(?:\.\d+)+)}
+beaker:
+  name: pypi
+  package: Beaker
+beautifulsoup4: pypi
+belle-sip:
+  name: http
+  url: http://download-mirror.savannah.gnu.org/releases/linphone/belle-sip/${latest:belle-sip-(\d+(?:\.\d+)+)}
+berry:
+  name: github
+  project: JLErvin
+bgcycler:
+  spider:
+    name: xpath
+    url: https://www.hoopajoo.net/projects/bgcycler.html
+    base: "//div[@id='content']"
+    version: "//tr[2]//a"
+    date: "//tr[1]/td[1]"
+  formatter: n.n
+bibletime:
+  name: github
+  tag: "^v(\\d+(?:\\.\\d+)+)$"
+binary: hackage
+bitcoin:
+  name: github
+  tag: "^v(\\d+(?:\\.\\d+)+)$"
+bitlbee:
+  name: http
+  url: https://get.bitlbee.org/src/
+blender:
+  name: http
+  url: http://download.blender.org/source/${latest:blender-(\d+\.\d+[a-z]*)\.}
+blinken:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:blinken-(\d+(?:\.\d+)+)}
+bluedevil: kdegit
+bluegriffon:
+  name: github
+  project: therealglazou
+  tag: "^\\d+(?:\\.\\d+)*$"
+bluez-qt: kdegit
+bodega-client:
+  name: kdegit
+  tag: "^Active/(.*)$"
+boinc:
+  name: github
+  project: BOINC
+  tag: "^client_release/\\d+\\.\\d*[02468]/(\\d+\\.\\d*[02468]\\.\\d+)$"
+bomber:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:bomber-(\d+(?:\.\d+)+)}
+bomi:
+  name: github
+  project: xylosper
+bookmanager: kdegit
+boost-build:
+  name: github
+  project: boostorg
+  repository: build
+bovo:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:bovo-(\d+(?:\.\d+)+)}
+box2d:
+  name: github
+  project: erincatto
+  repository: Box2D
+breeze: kdegit
+breeze-grub: kdegit
+breeze-gtk: kdegit
+breeze-icons: kdegit
+breeze-plymouth: kdegit
+brewtarget:
+  name: github
+  project: Brewtarget
+brise:
+  name: github
+  project: rime
+  tag: "^brise-(\\d+(?:\\.\\d+)+)$"
+builder:
+  name: github
+  project: jimweirich
+bullet:
+  name: github
+  project: bulletphysics
+  repository: bullet3
+bumblebee-indicator:
+  name: opendesktop
+  project: '998890'
+  site: kde-look
+bup:
+  name: github
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+bytestring-show: hackage
+bzr-explorer: launchpad
+bzrtp:
+  name: http
+  url: http://download-mirror.savannah.gnu.org/releases/linphone/bzrtp/${latest:bzrtp-(\d+(?:\.\d+)+)}
+c-ares:
+  spider:
+    name: github
+    tag: "^cares-\\d+(?:_\\d+)*$"
+  formatter: n_n
+cabal-install: hackage
+cagibi: kdegit
+cal3d:
+  name: http
+  url: http://download.gna.org/cal3d/sources/${latest:cal3d-(\d+(?:\.\d+)+)}
+calamares: github
+calendarsupport:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:calendarsupport-(\d+(?:\.\d+)+)}
+calf:
+  name: github
+  project: calf-studio-gear
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+calibre:
+  name: github
+  project: kovidgoyal
+calligra:
+  name: http
+  url: https://download.kde.org/stable/calligra/${latest}/${latest:calligra-(\d+(?:\.\d+)+)}
+calligra-history: kdegit
+cantata:
+  name: github
+  project: CDrummond
+cantor:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:cantor-(\d+(?:\.\d+)+)}
+capicity:
+  name: sourceforge
+  project: capitalism
+cb2bib:
+  spider:
+    name: xpath
+    url: http://www.molspaces.com/d_cb2bib-download.php
+    base: "//article//a/@href[re:test(., '^/dl/progs/cb2bib-(\\d+(?:\\.\\d+)+)\\.tar\\.gz$')]"
+    date-url: ''
+  formatter: n.n
+ccid:
+  name: github
+  project: LudovicRousseau
+cegui-0.7:
+  name: sourceforge
+  project: crayzedsgui
+  path: CEGUI Mk-2/${latest:(0\.7\.\d+(\.\d+)?)}
+cegui-0.8:
+  name: sourceforge
+  project: crayzedsgui
+  path: CEGUI Mk-2/0.8
+celestia:
+  name: sourceforge
+  path: Celestia-source
+ceph:
+  name: github
+  tag: "^v(\\d+\\.2\\.\\d+(\\.\\d+)?)$"
+cervisia:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:cervisia-(\d+(?:\.\d+)+)}
+cffi: pypi
+cgal:
+  name: github
+  project: CGAL
+  tag: "^releases/CGAL-(\\d+(?:\\.\\d+)+)$"
+cgdb: github
+chardet: pypi
+chaser:
+  name: github
+  project: ccr-tools
+check:
+  name: github
+  project: libcheck
+cheeselab:
+  spider:
+    name: xpath
+    url: https://www.hoopajoo.net/projects/cheeselab3.html
+    base: "//div[@id='content']"
+    version: "//tr[2]//a"
+    date: "//tr[1]/td[1]"
+  formatter: n.n
+chemical-mime-data:
+  name: sourceforge
+  project: chemical-mime
+  path: chemical-mime-data/${latest}/${latest:chemical-mime-data-(\d+(?:\.\d+)+)}
+cherokee:
+  name: github
+  repository: webserver
+cherrypy:
+  name: pypi
+  package: CherryPy
+chkrootkit:
+  spider:
+    name: xpath
+    url: http://www.chkrootkit.org/
+    base: "//h3/text()[re:test(., 'What.s New')]/../following-sibling::p/b"
+    version: "/a/text()"
+    date: "/text()"
+  formatter:
+  - n.n
+  - "\\w+ \\d+ \\d{4}"
+chocolate-doom: github
+choqok:
+  name: sourceforge
+  path: Choqok/${latest:choqok-(\d+(?:\.\d+)+)}
+chromium:
+  spider:
+    name: xpath
+    url: http://chromium.woolyss.com/
+    base: "//div[@id='linux']//small"
+    date: "/text()[2]"
+  formatter:
+  - n.n
+  - "\\d+ \\w+ \\d{4}"
+chromium-bsu:
+  name: sourceforge
+  path: Chromium B.S.U. source code/${latest:chromium-bsu-(\d+(?:\.\d+)+)}
+cipra: sourceforge
+cirkuit:
+  spider:
+    name: xpath
+    url: http://wwwu.uni-klu.ac.at/magostin/cirkuit.html
+    base: "//div[@id='sidebar']//a/@href[re:test(., '^\\./src/cirkuit-\\d+(?:\\.\\d+)+\\.tar\\.bz2$')]"
+    date-url: ''
+  formatter: n.n
+cksfv:
+  name: http
+  url: http://zakalwe.fi/~shd/foss/cksfv/files/${latest:cksfv-(\d+(?:\.\d+)+)}
+clamav:
+  spider:
+    name: xpath
+    url: http://www.clamav.net/downloads
+    base: "//*/table/tbody/tr/td/a[re:test(text(), '^clamav-\\d+(?:\\.\\d+)+\\.tar\\.gz$')]"
+    date: "/parent::td//following-sibling::td"
+  formatter: n.n
+clanlib:
+  name: github
+  project: sphair
+  repository: ClanLib
+clementine:
+  name: github
+  project: clementine-player
+  repository: Clementine
+clipgrab:
+  spider:
+    name: xpath
+    url: http://clipgrab.org/
+    base: "//a/@href[re:test(., '/clipgrab-\\d+(?:\\.\\d+)+\\.tar\\.gz$')]"
+    date-url: ''
+  formatter: n.n
+cocoon: kdegit
+colibri: kdegit
+colord-kde:
+  spider:
+    name: kdegit
+    tag: "^COLORD_KDE_(.*)$"
+  formatter: n_n
+colordiff:
+  name: http
+  url: http://www.colordiff.org/archive/${latest:colordiff-(\d+(?:\.\d+)+)}
+com.librehat.yahooweather:
+  name: github
+  project: librehat
+comme-font:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/vernnobile/commeFont/master/CMakeLists.txt
+    no-date: true
+  formatter: ecm_setup_version\((\d+(?:\.\d+)+)
+conky:
+  name: github
+  project: brndnmtthws
+connectagram:
+  name: github
+  project: gottcode
+conquirere: kdegit
+contour:
+  name: kdegit
+  tag: "^Active/(.*)$"
+converseen:
+  name: github
+  project: Faster3ck
+  repository: Converseen
+convertall:
+  name: sourceforge
+  path: "${latest}/${latest:^convertall-(\\d+(?:\\.\\d+)+)\\.tar\\.gz$}"
+corsix-th:
+  name: github
+  project: CorsixTH
+  repository: CorsixTH
+  tag: "^v(\\d+\\.\\d+)$"
+cpptest:
+  name: sourceforge
+  path: cpptest/${latest:cpptest-(\d+(?:\.\d+)+)}
+cppunit:
+  name: http
+  url: http://dev-www.libreoffice.org/src/${latest:cppunit-(\d+(?:\.\d+)+)}
+craft: kdegit
+crypto++:
+  spider:
+    name: github
+    project: weidai11
+    repository: cryptopp
+  # 7_0_0 → 7.0, 7_0_1 → 7.0.1
+  formatter: "^CRYPTOPP_(\\d+)_(\\d+)_(?:(\\d*[1-9]\\d*)|0)$"
+cryptography: pypi
+cssselect: pypi
+ctags:
+  name: sourceforge
+  path: ctags/${latest}/${latest:^ctags-(\d+(?:\.\d+)+).tar.gz$}
+ctemplate:
+  name: github
+  project: OlafvdSpek
+  tag: "^ctemplate-(\\d+(?:\\.\\d+)+)$"
+cubosphere:
+  name: sourceforge
+  path: "${latest:cubosphere_\\w*(\\d+(?:\\.\\d+)+)}"
+cuda:
+  name: http
+  url: http://developer.download.nvidia.com/compute/cuda/opensource/${highest}/${latest:cuda-gdb-(\d+(?:\.\d+)+)\.src\.tar\.gz$}
+cuetools:
+  name: github
+  project: svend
+cuneiform:
+  name: launchpad
+  project: cuneiform-linux
+cutegram:
+  name: github
+  project: Aseman-Land
+  tag: "^v?(\\d+(?:\\.\\d+)+)(?:-stable)?$"
+cutemaze:
+  name: github
+  project: gottcode
+cvswatch:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=cvswatch&full=0
+    base: "//a[contains(@href, 'tgz/cvswatch-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+cycler:
+  name: pypi
+  package: Cycler
+cyphesis:
+  name: github
+  project: worldforge
+darcs:
+  name: http
+  url: http://darcs.net/releases/${latest:darcs-(\d+(?:\.\d+)+)}
+darktable:
+  name: github
+  project: darktable-org
+dataenc: hackage
+dblatex:
+  name: sourceforge
+  path: dblatex/${latest}/
+dc3dd:
+  name: sourceforge
+  path: dc3dd/${latest:\d+(?:\.\d+)+}/${latest:dc3dd \d+(?:\.\d+)+}/
+dcaenc:
+  name: gitlab
+  project: patrakov
+dconf:
+  name: gitlab
+  url: https://gitlab.gnome.org/GNOME/dconf
+ddclient:
+  name: sourceforge
+  path: ddclient/${latest}/${latest:ddclient-(\d+(?:\.\d+)+)}
+ddd:
+  name: http
+  url: http://ftp.gnu.org/gnu/ddd/${latest:ddd-(\d+(?:\.\d+)+)}
+debian:
+  spider:
+    name: text
+    url: http://ftp.nl.debian.org/debian/dists/stable/Release
+  formatter:
+  - |2
+
+    Version: (\d+(?:\.\d+)+)
+  - |2
+
+    Date: (.*)
+debianutils:
+  name: http
+  url: http://ftp.gul.uc3m.es/debian/pool/main/d/debianutils/${latest:debianutils_(\d+(?:\.\d+)+)}
+declarative-plasmoids:
+  name: kdegit
+  tag: "^Active/(.*)$"
+decorator: pypi
+deepseq: hackage
+dekorator: kdegit
+dependencies:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=dependencies&full=0
+    base: "//a[contains(@href, 'tgz/dependencies-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+deutex:
+  name: http
+  url: http://www.teaser.fr/~amajorel/deutex/fungus/${latest:deutex-(\d+(?:\.\d+)+)}
+dev86:
+  name: github
+  project: lkundrak
+devil:
+  name: sourceforge
+  project: openil
+  path: DevIL
+dianara:
+  name: http
+  url: http://download.savannah.gnu.org/releases/dianara/${latest:dianara-v(\d+(?:\.\d+)+)}
+digikam: kdegit
+discover: kdegit
+django: github
+dnetstats:
+  name: opendesktop
+  project: '1128334'
+dnspython:
+  name: http
+  url: http://www.dnspython.org/kits/${latest:^\d+(\.\d+)+$}/${latest:^dnspython-(\d+(?:\.\d+)+)\.tar\.gz$}
+dnt:
+  name: sourceforge
+  path: dnt/current/${latest:(\d+(?:\.\d+)+)}
+dolphin:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:dolphin-(\d+(?:\.\d+)+)}
+dolphin-emu:
+  name: github
+  repository: dolphin
+dolphin-plugins:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:dolphin-plugins-(\d+(?:\.\d+)+)}
+dos2unix:
+  name: sourceforge
+  path: dos2unix
+dosbox:
+  name: sourceforge
+  path: dosbox
+dpic:
+  spider:
+    name: xpath
+    url: https://ece.uwaterloo.ca/~aplevich/dpic/
+    base: "//h3[re:test(., ' \\d{4}\\.\\d{2}.\\d{2}:')]"
+  formatter:
+  - "\\d{4}\\.\\d{2}.\\d{2}"
+  - "\\d{4}\\.\\d{2}.\\d{2}"
+dragon:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:dragon-(\d+(?:\.\d+)+)}
+dropbox-desktop-client:
+  spider:
+    name: xpath
+    url: https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016
+    base: "//*[re:test(text(),'Stable Build (\\d+(?:\\.\\d+)+)')]"
+    date: "/preceding::*[contains(@class, 'cThreadInfoColumn')]//*[contains(@class, 'DateTime')]//@title"
+    url-xpath: "/@href"
+  formatter: n.n
+drumstick: sourceforge
+dssi:
+  name: sourceforge
+  path: dssi/${latest}/
+dunelegacy:
+  name: sourceforge
+  path: dunelegacy/${latest:^(\d+(?:\.\d+)+)$}
+dustrac:
+  name: github
+  project: juzzlin
+  repository: DustRacing2D
+dvd-slideshow:
+  name: sourceforge
+  path: dvd-slideshow/${latest}/
+dvdauthor: sourceforge
+ebookreader: kdegit
+ecdsa: pypi
+eclipse:
+  name: xpath
+  url: http://download.eclipse.org/eclipse/downloads/
+  base: "(//*/tr[@id='Latest_Release']/parent::table/following-sibling::table//tr)[2]/td"
+  version: "[@class='name']/a"
+  date: "[@class='date']"
+ed:
+  name: http
+  url: http://ftp.gnu.org/gnu/ed
+elinks:
+  name: http
+  url: http://elinks.or.cz/download/${latest:elinks-(\d+\.\d+\.\d+(\.\d+)?)}
+elogbook:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=elogbook&full=0
+    base: "//a[contains(@href, 'tgz/elogbook-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+emacs:
+  name: http
+  url: http://ftp.gnu.org/gnu/emacs/${latest:emacs-(\d+(?:\.\d+)+)}
+ember:
+  name: sourceforge
+  project: worldforge
+  path: Ember (OGRE client)/${latest}/${latest:ember-(\d+(?:\.\d+)+)}
+ember-media:
+  name: sourceforge
+  project: worldforge
+  path: Ember (OGRE client)/${latest}/${latest:ember-media-(\d+(?:\.\d+)+)}
+emerge-history: kdegit
+emovix:
+  name: sourceforge
+  project: movix
+  path: eMoviX/${latest}/${latest:emovix-(\d+(?:\.\d+)+)}
+enet:
+  name: http
+  url: http://enet.bespin.org/download/${latest:enet-(\d+(?:\.\d+)+)}
+entropy: hackage
+epiar:
+  name: sourceforge
+  path: "${latest:epiar-(\\d+(?:\\.\\d+)+)}"
+epydoc:
+  name: sourceforge
+  path: epydoc
+eris:
+  name: sourceforge
+  project: worldforge
+  path: Eris 1.4 (client lib)/${latest}/
+eventviews:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:eventviews-(\d+(?:\.\d+)+)}
+everpad:
+  spider:
+    name: xpath
+    url: https://launchpad.net/~nvbn-rm/+archive/ubuntu/ppa/+packages
+    base: "//table[@id='packages_list']/tbody/tr[re:test(@class, '\\barchive_package_row\\b')]/td[1]"
+    version: "/a/text()[contains(., 'everpad')]"
+    date: "[a[text()[contains(., 'everpad')]]]/following-sibling::td/following-sibling::td/@title"
+  formatter: n.n
+exiftool:
+  name: http
+  url: http://backpan.perl.org/authors/id/E/EX/EXIFTOOL/${latest:\d+(?:\.\d+)*}
+extensible-exceptions: hackage
+extra-cmake-modules: kdegit
+extremetuxracer:
+  name: sourceforge
+  path: releases/${latest:(\d+(?:\.\d+)+)}
+extundelete:
+  name: sourceforge
+  path: extundelete
+fcitx:
+  name: http
+  url: https://download.fcitx-im.org/fcitx/
+fcitx-anthy:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-anthy/
+fcitx-chewing:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-chewing/
+fcitx-cloudpinyin:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-cloudpinyin/
+fcitx-googlepinyin:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-googlepinyin/
+fcitx-hangul:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-hangul/
+fcitx-kkc:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-kkc/
+fcitx-libpinyin:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-libpinyin/
+fcitx-m17n:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-m17n/
+fcitx-mozc:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-mozc/
+fcitx-qt5:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-qt5/
+fcitx-rime:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-rime/
+fcitx-sayura:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-sayura/
+fcitx-sunpinyin:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-sunpinyin/
+fcitx-table-extra:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-table-extra/
+fcitx-table-other:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-table-other/
+fcitx-ui-light:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-ui-light/
+fcitx-unikey:
+  name: http
+  url: https://download.fcitx-im.org/fcitx-unikey/
+fdesktoprecorder:
+  name: opendesktop
+  project: '1126753'
+fdupes:
+  name: github
+  project: adrianlopezroche
+feedparser: pypi
+feh:
+  spider:
+    name: xpath
+    url: http://feh.finalrewind.org/
+    base: "//div[re:test(@class, '\\binlinepage\\b')]"
+    version: "//h1/a"
+    date: "//span[re:test(@class, '\\bdate\\b')]"
+  formatter: n.n
+ffmpegthumbs:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ffmpegthumbs-(\d+(?:\.\d+)+)}
+fife:
+  name: sourceforge
+  path: active/src/${latest:fife_(\d+(?:\.\d+)+)}
+file-next:
+  name: http
+  url: http://www.cpan.org/authors/id/P/PE/PETDANCE/${highest:File-Next-(\d+(?:\.\d+)*)}
+filelight:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:filelight-(\d+(?:\.\d+)+)}
+filezilla:
+  spider:
+    name: xpath
+    url: https://filezilla-project.org/
+    base: //h3[re:test(text(), "^\d{4}-\d{2}-\d{2}\s+-\s+FileZilla\s+Client\s+\d+(\.\d+)*\s+released$")]
+  formatter:
+  - "FileZilla\\s+Client\\s+(\\d+(?:\\.\\d+)*)"
+  - "\\d{4}-\\d{2}-\\d{2}"
+finetune:
+  spider:
+    name: xpath
+    url: http://flavio.tordini.org/on/finetune
+    base: "//div[@class='post item']//a[1][contains(text(), 'Finetune')]"
+    date: "/ancestor::div/div[@class='postmetadata']/a[1]"
+    url-xpath: "/@href"
+  formatter: n.n
+fingerprint-gui:
+  spider:
+    name: xpath
+    url: http://www.ullrich-online.cc/fingerprint/downloads.php
+    base: "//table//td//h2"
+  formatter:
+  - n.n
+  - "(?P<d>\\d{2})\\.(?P<m>\\d{2})\\.(?P<y>\\d{4})"
+firefox:
+  name: xpath
+  url: https://www.mozilla.org/en-US/firefox/latest/releasenotes/
+  base: "//div[@class='version']"
+  version: "/h2"
+  date: "/p"
+flacon: github
+flare-engine:
+  name: github
+  project: clintbellanger
+  ignore-latest: true
+flare-game:
+  name: github
+  project: clintbellanger
+  ignore-latest: true
+flashplayer-npapi:
+  name: xpath
+  url: https://www.adobe.com/software/flash/about/
+  base: "//strong[re:test(text(), '^Linux$')]/ancestor::tr"
+  version: "/td[3]"
+  no-date: true
+flashplayer-ppapi:
+  name: xpath
+  url: https://www.adobe.com/software/flash/about/
+  base: "//strong[re:test(text(), '^Linux$')]/ancestor::tr"
+  version: "/following-sibling::tr/td[2]"
+  no-date: true
+flask:
+  name: github
+  project: pallets
+flightgear:
+  name: sourceforge
+  path: "${latest:release-\\d+(?:\\.\\d+)+}/${latest:flightgear-(\\d+(?:\\.\\d+)+)\\.tar\\.bz2}"
+focuswriter:
+  name: github
+  project: gottcode
+fontforge: github
+fotowall:
+  name: github
+  project: enricoros
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+frameworkintegration: kdegit
+freecad:
+  name: github
+  project: FreeCAD
+  repository: FreeCAD
+freeciv: sourceforge
+freecol:
+  name: sourceforge
+  path: freecol/${latest:freecol-(\d+(?:\.\d+)+)}
+freedoom: github
+freedroid:
+  name: gitlab
+  repository: freedroid-src
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+freeimage:
+  name: sourceforge
+  path: Source Distribution
+freeorion:
+  name: sourceforge
+  path: FreeOrion/${latest:FreeOrion Version (\d+(?:\.\d+)+)}/${latest:^FreeOrion_v(\d+(?:\.\d+)*)_\d{4}-\d{2}-\d{2}.[0-9a-f]{7}_Source\.tar\.gz$}
+freepascal:
+  name: sourceforge
+  path: Source/${latest}/
+freerdp: github
+freexl:
+  name: http
+  url: http://www.gaia-gis.it/gaia-sins/freexl-sources/
+freshplayerplugin:
+  name: github
+  project: i-rinat
+fretsonfire:
+  name: sourceforge
+  path: fretsonfire/${latest:(\d+(?:\.\d+)+)}
+fritzing:
+  name: github
+  repository: fritzing-app
+frogatto: github
+frostwire-desktop:
+  name: sourceforge
+  project: frostwire
+  path: ${latest}/${latest:(\d+(?:\.\d+)+)}
+frozen-bubble:
+  spider:
+    name: xpath
+    url: http://www.frozen-bubble.org/downloads/
+    base: "//a/@href[re:test(., '^/data/frozen-bubble-\\d+(?:\\.\\d+)+\\.tar\\.bz2$')]"
+    date-url: ''
+  formatter: n.n
+fsarchiver:
+  name: github
+  project: fdupoux
+ftjam:
+  name: sourceforge
+  project: freetype
+  path: ftjam
+funcsigs: pypi
+furniture-library-editor:
+  name: sourceforge
+  project: sweethome3d
+  path: FurnitureLibraryEditor/
+futures: pypi
+gammaray:
+  name: github
+  project: KDAB
+  repository: GammaRay
+gammu:
+  name: http
+  url: http://dl.cihar.com/gammu/releases/
+gcompris:
+  name: http
+  url: http://gcompris.net/download/qt/src/
+gconf:
+  name: gitlab
+  url: https://gitlab.gnome.org/Archive/gconf
+gedit:
+  name: http
+  url: https://download.gnome.org/sources/gedit/${latest:^\d+\.\d*[02468]$}/${latest:^gedit-(\d+(?:\.\d+)+)\.tar\.xz$}
+gegl:
+  spider:
+    name: gitlab
+    url: https://gitlab.gnome.org/GNOME/gegl
+  formatter: n_n
+gendesk:
+  name: github
+  project: xyproto
+geogebra:
+  name: http
+  url: http://www.geogebra.net/linux/pool/main/g/${latest:^geogebra\d+$}/${latest:^geogebra\d+_(\d+(?:\.\d+)*)-\d+_amd64\.deb$}
+getmediumurl:
+  name: pypi
+  package: GetMediumURL
+ghc:
+  name: http
+  url: http://downloads.haskell.org/~ghc/latest/
+gigi:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/freeorion/freeorion/master/GG/CMakeLists.txt
+    no-date: true
+  formatter: GIGI_VERSION (\d+(?:\.\d+)+)
+gimp:
+  spider:
+    name: gitlab
+    url: https://gitlab.gnome.org/GNOME/gimp
+  formatter: n_n
+gimp-help:
+  name: http
+  url: http://download.gimp.org/pub/gimp/help/${latest:^gimp-help-(\d+(?:\.\d+)+)\.tar}
+gist:
+  name: github
+  project: defunkt
+git:
+  name: github
+  tag: "^v(\\d+(?:\\.\\d+)+)$"
+glade:
+  spider:
+    name: gitlab
+    url: https://gitlab.gnome.org/GNOME/glade
+  formatter: n_n
+glfw:
+  name: sourceforge
+  path: glfw/${latest:(\d+(?:\.\d+)+)}
+glfw2:
+  name: sourceforge
+  project: glfw
+  path: glfw/${latest:^(2\.\d+(\.\d+)*)$}
+globulation2:
+  name: http
+  url: http://download.savannah.gnu.org/releases/glob2/${latest}/${latest:glob2-(\d+(?:\.\d+)+)}
+glog:
+  name: github
+  project: google
+gloox:
+  name: http
+  url: http://camaya.net/download/${latest:gloox-(\d+(?:\.\d+)+)}
+gluon:
+  name: http
+  url: https://download.kde.org/unstable/gluon/${latest}/src
+glusterfs:
+  name: http
+  url: http://download.gluster.org/pub/gluster/glusterfs/LATEST/
+gmail-feed:
+  name: opendesktop
+  project: '998911'
+  site: kde-look
+gnome:
+  name: gitlab
+  url: https://gitlab.gnome.org/GNOME/gnome-shell
+  tag: ^\d+\.\d*[02468](?:\.\d+)*$
+gnucap:
+  name: cgit
+  url: http://git.savannah.gnu.org/cgit/gnucap.git/
+gnuchess:
+  name: http
+  url: http://ftp.gnu.org/gnu/chess/${latest:gnuchess-(\d+(?:\.\d+)+)}
+go:
+  name: github
+  project: golang
+  tag: go(\d+(?:\.\d+)+)
+goldendict:
+  name: github
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+google-talk-plugin:
+  spider:
+    name: xpath
+    url: http://google-talk-plugin.updatestar.com/en/technical
+    base: "//div[@id='reviewtab']"
+    version: "//tr[1]/td[2]"
+    date: "//tr[4]/td[2]"
+  formatter: n.n
+googletest:
+  name: github
+  project: google
+  tag: release-(\d+(?:\.\d+)+)
+gottet:
+  name: github
+  project: gottcode
+gpgmepp: kdegit
+gpsd:
+  name: http
+  url: http://download-mirror.savannah.gnu.org/releases/gpsd/
+gr-lida:
+  name: github
+  project: Monthy
+granatier:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:granatier-(\d+(?:\.\d+)+)}
+grantlee:
+  name: github
+  project: steveire
+grantleetheme:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:grantleetheme-(\d+(?:\.\d+)+)}
+graphscan:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=graphscan&full=0
+    base: "//a[contains(@href, 'tgz/graphscan-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+graphviz:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/ellson/graphviz/master/ChangeLog
+  formatter:
+  - "(?:^|\n)\\w+ \\d+, \\d{4}\n\\s+- Release (.*)"
+  - "(?:^|\n)(\\w+ \\d+, \\d{4})\n\\s+- Release .*"
+grass:
+gridftp:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=gridftp&full=0
+    base: "//a[contains(@href, 'tgz/gridftp-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+gridwatch:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=gridwatch&full=0
+    base: "//a[contains(@href, 'tgz/gridwatch-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+grub2-editor:
+  name: github
+  project: maz-1
+gsoap:
+  name: sourceforge
+  project: gsoap2
+gtk+:
+  name: http
+  url: https://download.gnome.org/sources/gtk+/${latest:^\d+\.\d*[02468]$}/${latest:^gtk\+-(\d+(?:\.\d+)+)\.tar\.xz$}
+gwenhywfar:
+  name: aqbanking
+  package: '01'
+gwenview:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:gwenview-(\d+(?:\.\d+)+)}
+hale:
+  name: sourceforge
+  path: "${latest:hale-(\\d+(?:\\.\\d+)+)}"
+handbrake:
+  name: github
+  project: HandBrake
+  repository: HandBrake
+happy: hackage
+hashed-storage: hackage
+haskeline: hackage
+hasktags: hackage
+hedgewars:
+  name: http
+  url: http://download.gna.org/hedgewars/${latest:hedgewars-src-(\d+(?:\.\d+)+)}
+hexalate:
+  name: github
+  project: gottcode
+higan:
+  name: github
+  project: byuu
+homechat:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=homechat&full=0
+    base: "//a[contains(@href, 'tgz/homechat-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+homerun: kdegit
+hslogger: hackage
+html: hackage
+html2text: pypi
+html5lib: pypi
+htmlcxx:
+  name: sourceforge
+  path: htmlcxx
+htop:
+  name: github
+  project: hishamhm
+http:
+  name: hackage
+  package: HTTP
+httpbin: pypi
+httplib2: pypi
+hugin:
+  name: sourceforge
+  path: hugin
+hummstrumm:
+  name: sourceforge
+  path: Source/${latest:hummstrummengine-(\d+(?:\.\d+)+)}
+hupnp:
+  name: sourceforge
+  path: hupnp
+hurd:
+  name: http
+  url: http://ftp.gnu.org/gnu/hurd/${latest:^hurd-(\d+(?:\.\d+)+)\.tar}
+hydrogen:
+  name: sourceforge
+  path: "Hydrogen/${latest:^(\\d+(?:\\.\\d+)+) Sources$}/${latest:^hydrogen-(\\d+(?:\\.\\d+)+)\\.tar\\.gz$}"
+ibus: github
+ibus-libzhuyin:
+  name: github
+  project: libzhuyin
+ibus-m17n:
+  name: github
+  project: ibus
+ibus-qt:
+  name: github
+  project: ibus
+icc_examin:
+  name: sourceforge
+  project: oyranos
+  path: ICC Examin/${latest}/${latest:^icc_examin-(\d+(?:\.\d+)+)\.tar}
+icedtea-web:
+  name: http
+  url: http://icedtea.wildebeest.org/download/source/${latest:^icedtea-web-(\d+(?:\.\d+)+)\.tar}
+icoutils:
+  name: http
+  url: http://download.savannah.gnu.org/releases/icoutils/
+ifuse:
+  name: github
+  project: libimobiledevice
+imagewriter:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/openSUSE/imagewriter/master/imagewriter.pro
+    no-date: true
+  formatter: VERSION=(\d+(?:\.\d+)+)
+incidenceeditor:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:incidenceeditor-(\d+(?:\.\d+)+)}
+inflection: pypi
+injeqt:
+  name: github
+  project: vogel
+inkscape: launchpad
+inotify-tools:
+  name: github
+  project: rvoicilas
+inxi:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/smxi/inxi/master/inxi
+  formatter:
+  - "\\bmy \\$self_version='(\\d+(?:\\.\\d+)+)';\\n"
+  - "\\bmy \\$self_date='(\\d{4}-\\d{2}-\\d{2})';\\n"
+iotop:
+  name: gitweb
+  url: http://repo.or.cz/iotop.git
+  tag: "^iotop-(\\d+(?:\\.\\d+)+)"
+ipykernel: pypi
+ipython:
+  name: github
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+irrlicht:
+  name: sourceforge
+  path: Irrlicht SDK/${latest}/${latest:(\d+(?:\.\d+)+)}
+irssi: github
+itsdangerous: pypi
+jamin:
+  name: sourceforge
+  path: jamin/${latest}/
+jhead:
+  spider:
+    name: text
+    url: http://www.sentex.net/~mwandel/jhead/
+  formatter:
+  - 'Current release version: ([^ ]+) \([^)]+\)'
+  - 'Current release version: [^ ]+ \(([^)]+)\)'
+joomla:
+  name: github
+  repository: joomla-cms
+jovie: kdegit
+jreen:
+  name: github
+  project: euroelessar
+json: hackage
+json-glib:
+  name: http
+  url: https://download.gnome.org/sources/json-glib/${latest}/${latest:^json-glib-(\d+(?:\.\d+)+)\.tar\.xz$}
+jsonschema: pypi
+juk:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:juk-(\d+(?:\.\d+)+)}
+jupyter:
+  name: github
+  repository: jupyter_core
+jupyter-notebook:
+  name: github
+  project: jupyter
+  repository: notebook
+k3b:
+  name: http
+  url: https://download.kde.org/stable/k3b/${latest:k3b-(\d+(?:\.\d+)+)}
+kaccessible: kdegit
+kaccounts-integration:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kaccounts-integration-(\d+(?:\.\d+)+)}
+kaccounts-providers:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kaccounts-providers-(\d+(?:\.\d+)+)}
+kactivities: kdegit
+kactivities-stats: kdegit
+kactivitymanagerd: kdegit
+kadu:
+  name: gitlab
+  tag: ^\d+(?:\.\d+)+$
+kaffeine: kdegit
+kajongg:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kajongg-(\d+(?:\.\d+)+)}
+kalarmcal:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kalarmcal-(\d+(?:\.\d+)+)}
+kalgebra:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kalgebra-(\d+(?:\.\d+)+)}
+kalternatives: kdegit
+kalzium:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kalzium-(\d+(?:\.\d+)+)}
+kamera:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kamera-(\d+(?:\.\d+)+)}
+kamerka:
+  name: github
+  project: dos1
+kamoso:
+  name: http
+  url: https://download.kde.org/stable/kamoso/${latest}/src/
+kanagram:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kanagram-(\d+(?:\.\d+)+)}
+kannasaver: kdegit
+kapidox: kdegit
+kapman:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kapman-(\d+(?:\.\d+)+)}
+kapow:
+  name: github
+  project: gottcode
+kapptemplate:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kapptemplate-(\d+(?:\.\d+)+)}
+karchive: kdegit
+kastling:
+  name: sourceforge
+  path: "${latest:kastling-(\\d+(?:\\.\\d+)+)}"
+kate:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kate-(\d+(?:\.\d+)+)}
+katomic:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:katomic-(\d+(?:\.\d+)+)}
+kaudiocreator:
+  name: opendesktop
+  project: '1127508'
+kauth: kdegit
+kaya:
+  name: github
+  project: pcapriotti
+kbackgammon:
+  name: opendesktop
+  project: '1109441'
+kbackup:
+  name: opendesktop
+  project: '1131684'
+kbibtex: kdegit
+kblackbox:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kblackbox-(\d+(?:\.\d+)+)}
+kblocks:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kblocks-(\d+(?:\.\d+)+)}
+kblog:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kblog-(\d+(?:\.\d+)+)}
+kbookmarks: kdegit
+kbounce:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kbounce-(\d+(?:\.\d+)+)}
+kbreakout:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kbreakout-(\d+(?:\.\d+)+)}
+kbruch:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kbruch-(\d+(?:\.\d+)+)}
+kcachegrind:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcachegrind-(\d+(?:\.\d+)+)}
+kcalc:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcalc-(\d+(?:\.\d+)+)}
+kcalcore:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcalcore-(\d+(?:\.\d+)+)}
+kcalutils:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcalutils-(\d+(?:\.\d+)+)}
+kcharselect:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcharselect-(\d+(?:\.\d+)+)}
+kchildlock:
+  name: sourceforge
+  path: kchildlock
+kchmviewer:
+  name: sourceforge
+  path: kchmviewer
+kcm-fcitx:
+  name: github
+  project: fcitx
+kcm-grub2: kdegit
+kcm-pacman-repoeditor:
+  name: cgit
+  url: https://chakralinux.org/code/kcm-pacman-repoeditor.git/
+kcm-userconfig: kdegit
+kcmgrub2: kdegit
+kcmutils: kdegit
+kcodecs: kdegit
+kcolorchooser:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcolorchooser-(\d+(?:\.\d+)+)}
+kcoloredit: kdegit
+kcompletion: kdegit
+kconfig: kdegit
+kconfigwidgets: kdegit
+kcontacts:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcontacts-(\d+(?:\.\d+)+)}
+kcoreaddons: kdegit
+kcrash: kdegit
+kcron:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kcron-(\d+(?:\.\d+)+)}
+kdb: kdegit
+kdbg:
+  name: sourceforge
+  path: Source Code
+kdbusaddons: kdegit
+kde-apk-thumbnailer:
+  name: opendesktop
+  project: '1081013'
+  site: store.kde
+kde-baseapps: kdegit
+kde-cli-tools: kdegit
+kde-dev-scripts:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kde-dev-scripts-(\d+(?:\.\d+)+)}
+kde-dev-utils:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kde-dev-utils-(\d+(?:\.\d+)+)}
+kde-gtk-config: kdegit
+kde-l10n-ar:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ar-(\d+(?:\.\d+)+)}
+kde-l10n-ast:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ast-(\d+(?:\.\d+)+)}
+kde-l10n-bg:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-bg-(\d+(?:\.\d+)+)}
+kde-l10n-bs:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-bs-(\d+(?:\.\d+)+)}
+kde-l10n-ca:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ca-(\d+(?:\.\d+)+)}
+kde-l10n-ca@valencia:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ca@valencia-(\d+(?:\.\d+)+)}
+kde-l10n-cs:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-cs-(\d+(?:\.\d+)+)}
+kde-l10n-da:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-da-(\d+(?:\.\d+)+)}
+kde-l10n-de:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-de-(\d+(?:\.\d+)+)}
+kde-l10n-el:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-el-(\d+(?:\.\d+)+)}
+kde-l10n-en_GB:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-en_GB-(\d+(?:\.\d+)+)}
+kde-l10n-eo:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-eo-(\d+(?:\.\d+)+)}
+kde-l10n-es:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-es-(\d+(?:\.\d+)+)}
+kde-l10n-et:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-et-(\d+(?:\.\d+)+)}
+kde-l10n-eu:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-eu-(\d+(?:\.\d+)+)}
+kde-l10n-fa:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-fa-(\d+(?:\.\d+)+)}
+kde-l10n-fi:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-fi-(\d+(?:\.\d+)+)}
+kde-l10n-fr:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-fr-(\d+(?:\.\d+)+)}
+kde-l10n-ga:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ga-(\d+(?:\.\d+)+)}
+kde-l10n-gl:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-gl-(\d+(?:\.\d+)+)}
+kde-l10n-he:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-he-(\d+(?:\.\d+)+)}
+kde-l10n-hi:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-hi-(\d+(?:\.\d+)+)}
+kde-l10n-hr:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-hr-(\d+(?:\.\d+)+)}
+kde-l10n-hu:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-hu-(\d+(?:\.\d+)+)}
+kde-l10n-ia:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ia-(\d+(?:\.\d+)+)}
+kde-l10n-id:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-id-(\d+(?:\.\d+)+)}
+kde-l10n-is:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-is-(\d+(?:\.\d+)+)}
+kde-l10n-it:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-it-(\d+(?:\.\d+)+)}
+kde-l10n-ja:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ja-(\d+(?:\.\d+)+)}
+kde-l10n-kk:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-kk-(\d+(?:\.\d+)+)}
+kde-l10n-km:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-km-(\d+(?:\.\d+)+)}
+kde-l10n-ko:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ko-(\d+(?:\.\d+)+)}
+kde-l10n-lt:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-lt-(\d+(?:\.\d+)+)}
+kde-l10n-lv:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-lv-(\d+(?:\.\d+)+)}
+kde-l10n-mr:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-mr-(\d+(?:\.\d+)+)}
+kde-l10n-nb:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-nb-(\d+(?:\.\d+)+)}
+kde-l10n-nds:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-nds-(\d+(?:\.\d+)+)}
+kde-l10n-nl:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-nl-(\d+(?:\.\d+)+)}
+kde-l10n-nn:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-nn-(\d+(?:\.\d+)+)}
+kde-l10n-pa:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-pa-(\d+(?:\.\d+)+)}
+kde-l10n-pl:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-pl-(\d+(?:\.\d+)+)}
+kde-l10n-pt:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-pt-(\d+(?:\.\d+)+)}
+kde-l10n-pt_BR:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-pt_BR-(\d+(?:\.\d+)+)}
+kde-l10n-ro:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ro-(\d+(?:\.\d+)+)}
+kde-l10n-ru:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ru-(\d+(?:\.\d+)+)}
+kde-l10n-sk:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-sk-(\d+(?:\.\d+)+)}
+kde-l10n-sl:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-sl-(\d+(?:\.\d+)+)}
+kde-l10n-sr:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-sr-(\d+(?:\.\d+)+)}
+kde-l10n-sv:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-sv-(\d+(?:\.\d+)+)}
+kde-l10n-tr:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-tr-(\d+(?:\.\d+)+)}
+kde-l10n-ug:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-ug-(\d+(?:\.\d+)+)}
+kde-l10n-uk:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-uk-(\d+(?:\.\d+)+)}
+kde-l10n-wa:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-wa-(\d+(?:\.\d+)+)}
+kde-l10n-zh_CN:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-zh_CN-(\d+(?:\.\d+)+)}
+kde-l10n-zh_TW:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/kde-l10n/${latest:kde-l10n-zh_TW-(\d+(?:\.\d+)+)}
+kde-runtime: kdegit
+kde-workspace: kdegit
+kdeadmin-strigi-analyzers: kdegit
+kdebugsettings:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdebugsettings-(\d+(?:\.\d+)+)}
+kdeclarative: kdegit
+kdeconnect:
+  name: http
+  url: https://download.kde.org/unstable/kdeconnect/${latest}/src/${latest:kdeconnect-kde-(\d+\.[\da-z]+(\.\d+)*)}
+kdeconnect-android: kdegit
+kdeconnect-kde: kdegit
+kdecoration: kdegit
+kded: kdegit
+kdeedu-data:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdeedu-data-(\d+(?:\.\d+)+)}
+kdegraphics: kdegit
+kdegraphics-mobipocket:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdegraphics-mobipocket-(\d+(?:\.\d+)+)}
+kdegraphics-strigi-analyzer: kdegit
+kdegraphics-thumbnailers:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdegraphics-thumbnailers-(\d+(?:\.\d+)+)}
+kdelibs: kdegit
+kdelibs4support: kdegit
+kdenetwork-filesharing:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdenetwork-filesharing-(\d+(?:\.\d+)+)}
+kdenetwork-strigi-analyzers: kdegit
+kdenlive:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdenlive-(\d+(?:\.\d+)+)}
+kdepim:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdepim-(\d+(?:\.\d+)+)}
+kdepim-addons:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdepim-addons-(\d+(?:\.\d+)+)}
+kdepim-apps-libs:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdepim-apps-libs-(\d+(?:\.\d+)+)}
+kdepim-runtime:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdepim-runtime-(\d+(?:\.\d+)+)}
+kdepimlibs: kdegit
+kdeplasma-addons: kdegit
+kdesdk-kioslaves:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdesdk-kioslaves-(\d+(?:\.\d+)+)}
+kdesdk-strigi-analyzers: kdegit
+kdesdk-thumbnailers:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdesdk-thumbnailers-(\d+(?:\.\d+)+)}
+kdesignerplugin: kdegit
+kdesrc-build: kdegit
+kdesu: kdegit
+kdesvn:
+  name: http
+  url: https://download.kde.org/stable/kdesvn/${latest}/
+kdev-executebrowser: kdegit
+kdev-krazy2: kdegit
+kdev-php:
+  name: http
+  url: https://download.kde.org/stable/kdevelop/${latest:^\d+(?:\.\d+)+$}/src/${latest:kdev-php-(\d+(?:\.\d+)+)}
+kdev-python:
+  name: http
+  url: https://download.kde.org/stable/kdevelop/${latest:^\d+(?:\.\d+)+$}/src/${latest:kdev-python-(\d+(?:\.\d+)+)\.}
+kdev-qmljs: kdegit
+kdev-sql: kdegit
+kdev-upload: kdegit
+kdev-valgrind: kdegit
+kdev-xdebug: kdegit
+kdevelop: kdegit
+kdevelop-pg-qt:
+  name: http
+  url: https://download.kde.org/stable/kdevelop-pg-qt/${latest}/src
+kdewebkit: kdegit
+kdewin: kdegit
+kdewin-installer: kdegit
+kdf:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdf-(\d+(?:\.\d+)+)}
+kdgantt2: kdegit
+kdiamond:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kdiamond-(\d+(?:\.\d+)+)}
+kdiff3:
+  name: sourceforge
+  path: kdiff3
+kdnssd: kdegit
+kdoctools: kdegit
+kdots: kdegit
+kdstatemachineeditor:
+  name: github
+  project: KDAB
+  repository: KDStateMachineEditor
+keepassx:
+  name: http
+  url: https://www.keepassx.org/releases/${latest}/
+kemoticons: kdegit
+keyboardctl:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/manjaro/packages-community/master/keyboardctl/PKGBUILD
+    no-date: true
+  formatter: pkgver=(.*)
+keyring: pypi
+keystate:
+  name: opendesktop
+  project: '998903'
+  site: kde-look
+kfilebox:
+  name: github
+  project: gtgt
+kfilemetadata: kdegit
+kfloppy:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kfloppy-(\d+(?:\.\d+)+)}
+kfoldersync:
+  name: opendesktop
+  project: '1127677'
+kfourinline:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kfourinline-(\d+(?:\.\d+)+)}
+kfritz: kdegit
+kgamma5: kdegit
+kgeography:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kgeography-(\d+(?:\.\d+)+)}
+kget:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kget-(\d+(?:\.\d+)+)}
+kglobalaccel: kdegit
+kgoldrunner:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kgoldrunner-(\d+(?:\.\d+)+)}
+kgpg:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kgpg-(\d+(?:\.\d+)+)}
+kgraphviewer: kdegit
+kguiaddons: kdegit
+khangman:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:khangman-(\d+(?:\.\d+)+)}
+khelpcenter:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:khelpcenter-(\d+(?:\.\d+)+)}
+kholidays: kdegit
+khotkeys: kdegit
+khtml: kdegit
+ki18n: kdegit
+kiconthemes: kdegit
+kid3:
+  name: sourceforge
+  path: kid3/${latest:^\d+(?:\.\d+)+$}/
+kidentitymanagement:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kidentitymanagement-(\d+(?:\.\d+)+)}
+kidletime: kdegit
+kig:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kig-(\d+(?:\.\d+)+)}
+kigo:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kigo-(\d+(?:\.\d+)+)}
+kile:
+  name: sourceforge
+  path: stable/${latest}/
+killbots:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:killbots-(\d+(?:\.\d+)+)}
+kim:
+  spider:
+    name: opendesktop
+    project: '1126887'
+  formatter: "\\d+(?:\\.\\d+)+"
+kimageformats: kdegit
+kimap:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kimap-(\d+(?:\.\d+)+)}
+kimono: kdegit
+kinfocenter: kdegit
+kinit: kdegit
+kio: kdegit
+kio-extras:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kio-extras-(\d+(?:\.\d+)+)}
+kio-gdrive: kdegit
+kio-gopher: kdegit
+kio-mtp: kdegit
+kipi-plugins:
+  name: http
+  url: https://download.kde.org/stable/kipi-plugins/
+kirigami: kdegit
+kiriki:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kiriki-(\d+(?:\.\d+)+)}
+kitemmodels: kdegit
+kitemviews: kdegit
+kiten:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kiten-(\d+(?:\.\d+)+)}
+kiwix: sourceforge
+kjobwidgets: kdegit
+kjots:
+  name: http
+  url: https://download.kde.org/stable/kjots/${latest}/src
+kjs: kdegit
+kjsembed: kdegit
+kjumpingcube:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kjumpingcube-(\d+(?:\.\d+)+)}
+kldap:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kldap-(\d+(?:\.\d+)+)}
+kleopatra:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kleopatra-(\d+(?:\.\d+)+)}
+klettres:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:klettres-(\d+(?:\.\d+)+)}
+klickety:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:klickety-(\d+(?:\.\d+)+)}
+klines:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:klines-(\d+(?:\.\d+)+)}
+kmag:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmag-(\d+(?:\.\d+)+)}
+kmahjongg:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmahjongg-(\d+(?:\.\d+)+)}
+kmailtransport:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmailtransport-(\d+(?:\.\d+)+)}
+kmbox:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmbox-(\d+(?:\.\d+)+)}
+kmediaplayer: kdegit
+kmenuedit: kdegit
+kmid2: sourceforge
+kmime:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmime-(\d+(?:\.\d+)+)}
+kmines:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmines-(\d+(?:\.\d+)+)}
+kmix:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmix-(\d+(?:\.\d+)+)}
+kmousetool:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmousetool-(\d+(?:\.\d+)+)}
+kmouth:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmouth-(\d+(?:\.\d+)+)}
+kmplayer: kdegit
+kmplot:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kmplot-(\d+(?:\.\d+)+)}
+kmymoney:
+  name: http
+  url: https://download.kde.org/stable/kmymoney/${latest}/src
+knavalbattle:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:knavalbattle-(\d+(?:\.\d+)+)}
+knemo:
+  name: opendesktop
+  project: '1128337'
+knetwalk:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:knetwalk-(\d+(?:\.\d+)+)}
+knewstuff: kdegit
+knights:
+  name: opendesktop
+  project: '1109460'
+knightsgame:
+  spider:
+    name: xpath
+    url: http://www.knightsgame.org.uk/archives.html
+    base: "//h2/text()[re:test(., '^\\s*Knights:\\s*Version\\s*\\d+')]"
+  formatter:
+  - n
+  - "\\((.*)\\)"
+knoppix:
+  name: http
+  url: http://ftp.uni-kl.de/pub/linux/knoppix/
+knotifications: kdegit
+knotifyconfig: kdegit
+kodi:
+  name: github
+  project: xbmc
+  repository: xbmc
+  tag: "(\\d+(?:\\.\\d+)+)"
+koffice: kdegit
+kolf:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kolf-(\d+(?:\.\d+)+)}
+kollision:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kollision-(\d+(?:\.\d+)+)}
+kolor-manager: kdegit
+kolourpaint:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kolourpaint-(\d+(?:\.\d+)+)}
+kompare:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kompare-(\d+(?:\.\d+)+)}
+konqueror: kdegit
+konquest:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:konquest-(\d+(?:\.\d+)+)}
+konsole:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:konsole-(\d+(?:\.\d+)+)}
+kontactinterface:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kontactinterface-(\d+(?:\.\d+)+)}
+kontaminuti: kdegit
+konversation:
+  name: http
+  url: https://download.kde.org/stable/konversation/${latest}/src
+kooka: kdegit
+kopete:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kopete-(\d+(?:\.\d+)+)}
+korundum: kdegit
+kpackage: kdegit
+kparts: kdegit
+kpaste: kdegit
+kpat:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kpat-(\d+(?:\.\d+)+)}
+kpeople: kdegit
+kphotoalbum: kdegit
+kpimtextedit:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kpimtextedit-(\d+(?:\.\d+)+)}
+kplayer: kdegit
+kplotting: kdegit
+kpmcore:
+  name: http
+  url: https://download.kde.org/stable/kpmcore/${latest}/src
+kppp: kdegit
+kprinter4:
+  name: kdegit
+  tag: "^v(.*)$"
+kproperty: kdegit
+kpty: kdegit
+kqtquickcharts:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kqtquickcharts-(\d+(?:\.\d+)+)}
+kradio:
+  name: sourceforge
+  path: kradio/${latest}/${latest:kradio\d+-(\d+(?:\.\d+)+)\.tar}
+kraft:
+  name: sourceforge
+  path: ''
+krdc:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:krdc-(\d+(?:\.\d+)+)}
+krecipes:
+  name: http
+  url: https://download.kde.org/stable/krecipes/${latest}/src
+kregexpeditor: kdegit
+kremotecontrol: kdegit
+krename:
+  name: sourceforge
+  path: KDE4 krename-stable
+kreport: kdegit
+kreversi:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kreversi-(\d+(?:\.\d+)+)}
+krfb:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:krfb-(\d+(?:\.\d+)+)}
+krita: kdegit
+krita-humanbody: kdegit
+kronometer:
+  name: http
+  url: https://download.kde.org/stable/kronometer/${latest}/src
+kross: kdegit
+kross-interpreters:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kross-interpreters-(\d+(?:\.\d+)+)}
+kruler:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kruler-(\d+(?:\.\d+)+)}
+krunner: kdegit
+krusader:
+  name: sourceforge
+  path: krusader/${latest:^\d+(?:\.\d+)+$}/${latest:krusader-(\d+(?:\.\d+)+)\.tar}
+ksaneplugin: kdegit
+kscd: kdegit
+kscreen: kdegit
+kscreenlocker: kdegit
+ksecrets: kdegit
+kservice: kdegit
+kshisen:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kshisen-(\d+(?:\.\d+)+)}
+kshutdown:
+  name: sourceforge
+  path: KShutdown/${latest:^\d+(?:\.\d+)+$}/${latest:kshutdown-source-(\d+(?:\.\d+)+)}
+ksirk:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ksirk-(\d+(?:\.\d+)+)}
+ksnakeduel:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ksnakeduel-(\d+(?:\.\d+)+)}
+ksnapshot: kdegit
+ksokoban: kdegit
+kspaceduel:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kspaceduel-(\d+(?:\.\d+)+)}
+ksquares:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ksquares-(\d+(?:\.\d+)+)}
+ksshaskpass: kdegit
+kst-plot: kdegit
+kstars: kdegit
+kstreamripper:
+  name: opendesktop
+  project: '1126631'
+ksudoku:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ksudoku-(\d+(?:\.\d+)+)}
+ksuperkey:
+  name: github
+  project: hanschen
+ksvnupdater:
+  spider:
+    name: xpath
+    url: http://www.eloihr.net/ksvnupdater/index.php?page=descarga
+    base: "//a/@href[re:test(., '^files/ksvnupdater-\\d+(?:\\.\\d+)+')]"
+    date-url: ''
+  formatter: n.n
+ksysguard: kdegit
+ksystemlog:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ksystemlog-(\d+(?:\.\d+)+)}
+kte-collaborative: kdegit
+kteatime:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kteatime-(\d+(?:\.\d+)+)}
+ktexteditor: kdegit
+ktextwidgets: kdegit
+ktimer:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktimer-(\d+(?:\.\d+)+)}
+ktnef:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktnef-(\d+(?:\.\d+)+)}
+ktoblzcheck: sourceforge
+ktorrent:
+  name: http
+  url: https://download.kde.org/stable/ktorrent/${latest}/${latest:^ktorrent-(\d+(?:\.\d+)+)\.tar}
+ktouch:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktouch-(\d+(?:\.\d+)+)}
+ktp-accounts-kcm:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-accounts-kcm-(\d+(?:\.\d+)+)}
+ktp-approver:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-approver-(\d+(?:\.\d+)+)}
+ktp-auth-handler:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-auth-handler-(\d+(?:\.\d+)+)}
+ktp-call-ui:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-call-ui-(\d+(?:\.\d+)+)}
+ktp-common-internals:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-common-internals-(\d+(?:\.\d+)+)}
+ktp-contact-list:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-contact-list-(\d+(?:\.\d+)+)}
+ktp-contact-runner:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-contact-runner-(\d+(?:\.\d+)+)}
+ktp-desktop-applets:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-desktop-applets-(\d+(?:\.\d+)+)}
+ktp-filetransfer-handler:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-filetransfer-handler-(\d+(?:\.\d+)+)}
+ktp-kded-module:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-kded-module-(\d+(?:\.\d+)+)}
+ktp-presence-dataengine: kdegit
+ktp-send-file:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-send-file-(\d+(?:\.\d+)+)}
+ktp-text-ui:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktp-text-ui-(\d+(?:\.\d+)+)}
+ktuberling:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:ktuberling-(\d+(?:\.\d+)+)}
+kturtle:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kturtle-(\d+(?:\.\d+)+)}
+ktutorial: kdegit
+ktux: kdegit
+kubeplayer: kdegit
+kubrick:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kubrick-(\d+(?:\.\d+)+)}
+kubuntu-driver-kcm:
+  name: kdegit
+  tag: ".*"
+kunitconversion: kdegit
+kup:
+  name: github
+  project: spersson
+  repository: Kup
+  tag: "^kup-(\\d+(?:\\.\\d+)+)$"
+kuser: kdegit
+kvirc:
+  name: github
+  repository: KVIrc
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+kwallet: kdegit
+kwallet-pam: kdegit
+kwalletmanager:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kwalletmanager-(\d+(?:\.\d+)+)}
+kwave:
+  name: sourceforge
+  path: kwave
+kwayland: kdegit
+kwayland-integration: kdegit
+kwebkitpart:
+  name: github
+  project: KDE
+kwidgetsaddons: kdegit
+kwin: kdegit
+kwindowsystem: kdegit
+kwooty:
+  name: opendesktop
+  project: '1128174'
+kwordquiz:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:kwordquiz-(\d+(?:\.\d+)+)}
+kwrited: kdegit
+kxmlgui: kdegit
+kxmlrpcclient: kdegit
+kxstitch: kdegit
+kyotocabinet:
+  name: http
+  url: http://fallabs.com/kyotocabinet/pkg/
+labplot:
+  name: http
+  url: https://download.kde.org/stable/labplot/${latest}/
+lash:
+  name: http
+  url: http://download.savannah.gnu.org/releases/lash/${latest:(\d+(?:\.\d+)+)\.tar}
+lazarus:
+  name: sourceforge
+  path: Lazarus Zip _ GZip/${latest}/
+lcov:
+  name: sourceforge
+  project: ltp
+  path: Coverage Analysis/${latest:^LCOV-\d+(?:\.\d+)+$}/
+lemonpos:
+  name: sourceforge
+  path: real
+leocad:
+  name: github
+  project: leozide
+leptonica:
+  name: github
+  project: DanBloomberg
+lesspipe:
+  name: github
+  project: wofr06
+  tag: "^(\\d+(?:\\.\\d+)+)$"
+lftp:
+  name: http
+  url: http://lftp.yar.ru/ftp/
+libaccounts-glib:
+  name: gitlab
+  project: accounts-sso
+  commit: "^Version (\\d+(?:\\.\\d+)+)$"
+libaccounts-qt:
+  name: gitlab
+  project: accounts-sso
+  commit: "^Version (\\d+(?:\\.\\d+)+)$"
+libalkimia:
+  name: http
+  url: https://download.kde.org/stable/alkimia/${latest}/src
+libbluedevil: kdegit
+libcacard:
+  name: http
+  url: http://www.spice-space.org/download/libcacard
+libcanberra:
+  spider:
+    name: xpath
+    url: http://0pointer.de/lennart/projects/libcanberra/
+    version: "//p[re:test(@class, '\\bnews-text\\b')][1]//a/text()"
+    date: "//div[re:test(@class, '\\bnews-date\\b')][1]//text()"
+  formatter:
+  - n.n
+  - d mmm y
+libcap-ng:
+  spider:
+    name: text
+    url: http://people.redhat.com/sgrubb/libcap-ng/
+  formatter:
+  - "(\\d+(?:\\.\\d+)+)<br>\\w+ \\d{1,2}, \\d{4}"
+  - "\\d+(?:\\.\\d+)+<br>(\\w+ \\d{1,2}, \\d{4})"
+libcdio-paranoia:
+  name: http
+  url: http://ftp.gnu.org/gnu/libcdio/${latest:^libcdio-paranoia-(\d+(?:\.\d+)+\+\d+(?:\.\d+)+(\+\d+)?)}
+libcec:
+  name: github
+  project: Pulse-Eight
+  tag: "^libcec-(\\d+(?:\\.\\d+)+)$"
+libchardet:
+  name: github
+  project: Joungkyun
+libdbusmenu-qt: launchpad
+libdebconf-kde: kdegit
+libdmtx:
+  name: sourceforge
+  path: libdmtx
+libechonest:
+  name: github
+  project: lfranchi
+libfastjson:
+  name: github
+  project: rsyslog
+libfilezilla:
+  name: sourceforge
+  project: filezilla
+  path: libfilezilla/${latest}/
+libfprint:
+  name: http
+  url: https://people.freedesktop.org/~hadess/${latest:^libfprint-(\d+(?:\.\d+)+)}
+libgee:
+  name: http
+  url: https://download.gnome.org/sources/libgee/${latest:^\d+\.\d*[02468]$}/${latest:^libgee-(\d+(?:\.\d+)+)\.tar\.xz$}
+libgnomecanvas:
+  name: http
+  url: http://ftp.gnome.org/pub/gnome/sources/libgnomecanvas/${highest:^\d+(\.\d+)*$}/${latest:^libgnomecanvas-(\d+(?:\.\d+)*)\.tar\.bz2$}
+libgnomecanvasmm:
+  name: http
+  url: http://ftp.gnome.org/pub/gnome/sources/libgnomecanvasmm/${highest:^\d+(\.\d+)*$}/${latest:^libgnomecanvasmm-(\d+(?:\.\d+)*)\.tar\.bz2$}
+libgravatar:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libgravatar-(\d+(?:\.\d+)+)}
+libguess:
+  name: github
+  project: kaniini
+  commit: "(?i)version to (\\d+(?:\\.\\d+)+)"
+libicns:
+  name: sourceforge
+  project: icns
+libindi:
+  spider:
+    name: github
+    project: indilib
+    repository: indi
+libircclient:
+  name: sourceforge
+  path: libircclient/${latest}/${latest:(\d+(?:\.\d+)+)}
+libiscsi:
+  name: github
+  project: sahlberg
+libkcddb:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkcddb-(\d+(?:\.\d+)+)}
+libkcompactdisc:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkcompactdisc-(\d+(?:\.\d+)+)}
+libkdcraw:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkdcraw-(\d+(?:\.\d+)+)}
+libkdeaccessibilityclient: kdegit
+libkdeedu: kdegit
+libkdegames:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkdegames-(\d+(?:\.\d+)+)}
+libkdepim:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkdepim-(\d+(?:\.\d+)+)}
+libkeduvocdocument:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkeduvocdocument-(\d+(?:\.\d+)+)}
+libkexiv2:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkexiv2-(\d+(?:\.\d+)+)}
+libkface: kdegit
+libkfbapi:
+  name: http
+  url: https://download.kde.org/stable/libkfbapi/${latest}/src/${latest:libkfbapi-(\d+(?:\.\d+)+)}
+libkgapi:
+  name: http
+  url: https://download.kde.org/stable/libkgapi/${latest}/src/
+libkgeomap:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkgeomap-(\d+(?:\.\d+)+)}
+libkipi:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkipi-(\d+(?:\.\d+)+)}
+libkkc:
+  name: github
+  project: ueno
+libkleo:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkleo-(\d+(?:\.\d+)+)}
+libkmahjongg:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkmahjongg-(\d+(?:\.\d+)+)}
+libkolab:
+  name: cgit
+  url: http://cgit.kolab.org/libkolab
+  tag: "^libkolab-([1-9]\\d*(\\.\\d+)+)$"
+libkolabxml:
+  name: cgit
+  url: http://cgit.kolab.org/libkolabxml
+libkomparediff2:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libkomparediff2-(\d+(?:\.\d+)+)}
+libkoralle: kdegit
+libksane:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libksane-(\d+(?:\.\d+)+)}
+libkscreen: kdegit
+libksieve:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:libksieve-(\d+(?:\.\d+)+)}
+libksysguard: kdegit
+libktorrent:
+  name: http
+  url: https://download.kde.org/stable/ktorrent/${latest}/${latest:^libktorrent-(\d+(?:\.\d+)+)}
+libkvkontakte:
+  name: http
+  url: https://download.kde.org/stable/libkvkontakte/${latest}/src/
+libmemcached: launchpad
+libmowgli:
+  name: github
+  project: atheme
+  repository: libmowgli-2
+libmpdclient:
+  name: github
+  project: MusicPlayerDaemon
+libmusicbrainz:
+  name: github
+  project: metabrainz
+  tag: release-(\d+(?:\.\d+)+)
+libmygpo-qt:
+  name: github
+  project: gpodder
+libnfs:
+  name: github
+  project: sahlberg
+libofx:
+  name: sourceforge
+  path: libofx
+libopenshot: launchpad
+libopenshot-audio:
+  spider:
+    name: xpath
+    url: https://code.launchpad.net/~openshot.code/libopenshot/libopenshot-audio
+    base: "//div[@id='recent-revisions']//dd/p[contains(text(), 'Bumping version')]"
+    date: "/parent::dd/preceding-sibling::dt/span/@title"
+  formatter: n.n
+libpinyin: github
+libpwquality: github
+libqapt: kdegit
+libqgit2: kdegit
+libqinfinity: kdegit
+libqtelegram-aseman-edition:
+  name: github
+  project: Aseman-Land
+  tag: "^v(\\d+(?:\\.\\d+)+)(-stable)?$"
+libqzeitgeist: kdegit
+librecad:
+  name: github
+  project: LibreCAD
+  repository: LibreCAD
+librelp:
+  name: http
+  url: http://download.rsyslog.com/librelp/
+libreoffice:
+  spider:
+    name: xpath
+    url: https://www.libreoffice.org/download/release-notes
+    base: "//h4[descendant::a/@name='Fresh']"
+  formatter:
+  - n.n
+  - "\\((.*)\\)"
+librevenge:
+  name: sourceforge
+  project: libwpd
+  path: librevenge/
+librime:
+  name: github
+  project: rime
+  tag: rime-(\d+(?:\.\d+)+)
+libsbsms:
+  name: sourceforge
+  project: sbsms
+  path: sbsms/${latest}/
+libsignon-glib:
+  name: gitlab
+  project: accounts-sso
+libspatialindex: github
+libspatialite:
+  name: http
+  url: http://www.gaia-gis.it/gaia-sins/libspatialite-sources/${latest:libspatialite-(\d+\.\d+(\.\d+(\w+)?)?)\.tar}
+libspiro:
+  name: github
+  project: fontforge
+libsquish: sourceforge
+libstreamanalyzer: kdegit
+libstreams: kdegit
+libtorrent-rasterbar:
+  spider:
+    name: github
+    project: arvidn
+    repository: libtorrent
+  formatter: n_n
+libvisio:
+  name: github
+  project: LibreOffice
+  tag: libvisio-(\d+(?:\.\d+)+)
+libwebp:
+  name: github
+  project: webmproject
+  tag: "^v(\\d+(?:\\.\\d+)+)$"
+libwfut:
+  name: github
+  project: worldforge
+libwlocate:
+  name: github
+  project: openwifi-su
+  repository: lwlocate
+libwps:
+  name: sourceforge
+  path: libwps
+libwww:
+  name: http
+  url: http://www.w3.org/Library/Distribution/${latest:w3c-libwww-(\d+(?:\.\d+)+)}
+libxdg-basedir:
+  name: github
+  project: devnev
+libzhuyin:
+  name: sourceforge
+  path: libzhuyin
+lightdm: kdegit
+lighttpd:
+  name: xpath
+  url: https://www.lighttpd.net/download/
+  base: "//div[@class='entrytitle']"
+  version: "//a"
+  date: "//h3"
+  url-xpath: "//a/@href"
+lilypond:
+  name: http
+  url: http://lilypond.org/download/source/${latest}/
+lincity-ng:
+  name: sourceforge
+  project: lincity-ng.berlios
+  path: "${latest:lincity-ng-(\\d+(?:\\.\\d+)+)\\.tar\\.(bz2|xz)}"
+linkchecker:
+  spider:
+    name: github
+    project: wummel
+  formatter: upstream/(\d+(?:\.\d+)*)
+links:
+  spider:
+    name: text
+    url: http://links.twibright.com/download/ChangeLog
+  formatter:
+  - n.n
+  - "(?m)^(\\w.*)\\s+\\w+:$"
+linphone:
+  name: github
+  project: BelledonneCommunications
+  ignore-latest: true
+lipsofsuna:
+  name: sourceforge
+  path: lipsofsuna/${latest}/${latest:(\d+(?:\.\d+)+)}
+lmms:
+  name: github
+  project: LMMS
+lockdev:
+  name: http
+  url: http://ftp.debian.org/debian/pool/main/l/lockdev/${latest:lockdev_(\d+(?:\.\d+)+)}
+log4c:
+  name: sourceforge
+  path: log4c
+logrotate: github
+loiq:
+  name: sourceforge
+  project: salix-sbo
+  path: "${latest}/loiq/${latest:\\d+(?:\\.\\d+)+\\w*}"
+lokalize:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:lokalize-(\d+(?:\.\d+)+)}
+lrzip:
+  name: github
+  project: ckolivas
+lskat:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:lskat-(\d+(?:\.\d+)+)}
+lua-expat:
+  spider:
+    name: xpath
+    url: https://matthewwild.co.uk/projects/luaexpat/
+    base: "//dl[@class='history']/dt[1]"
+    version: "/strong"
+  formatter:
+  - n.n
+  - "\\[(.*)\\]"
+luasocket:
+  spider:
+    name: text
+    url: http://files.luaforge.net/releases/luasocket/luasocket
+  formatter:
+  - "luasocket-(\\d+(?:\\.\\d+)*)</a></td><td class='right'>\\d+-\\d+-\\d+"
+  - "luasocket-\\d+(?:\\.\\d+)*</a></td><td class='right'>(\\d+-\\d+-\\d+)"
+luabind:
+  name: sourceforge
+  path: luabind/${latest}/${latest:(\d+(?:\.\d+)+)}
+luafilesystem:
+  spider:
+    name: github
+    project: keplerproject
+    tag: v_\d+(?:_\d+)*
+  formatter: n_n
+lucene++:
+  spider:
+    name: github
+    project: luceneplusplus
+    repository: LucenePlusPlus
+  formatter: n.n
+lynx:
+  name: http
+  url: http://invisible-mirror.net/archives/lynx/tarballs/${latest:^lynx(\d+(?:\.\d+)*)rel\.\d+\.tar\.gz$}
+lyx:
+  spider:
+    name: xpath
+    url: https://www.lyx.org/News
+    base: "//h2[re:test(text(), 'LyX \\d+(\\.\\d+)* released')]"
+    version: "/text()"
+    date: "/following-sibling::h3/text()"
+  formatter: LyX (\d+(?:\.\d+)*) released
+m64py: sourceforge
+macaw-movies: kdegit
+mailcommon:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:mailcommon-(\d+(?:\.\d+)+)}
+mailimporter:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:mailimporter-(\d+(?:\.\d+)+)}
+mangonel: kdegit
+marble:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:marble-(\d+(?:\.\d+)+)}
+markdown:
+  spider:
+    name: xpath
+    url: https://daringfireball.net/projects/markdown/
+    base: "//div[@id='Main']//p[1]"
+    version: "/a"
+  formatter:
+  - n.n
+  - d mmm y
+massif-visualizer: kdegit
+masterpdfeditor:
+  spider:
+    name: xpath
+    url: https://code-industry.net/get-masterpdfeditor/
+    version: "//i[contains(@class, 'fa-linux')]//following-sibling::h3"
+  formatter: n.n
+mathjax:
+  name: github
+  repository: MathJax
+matplotlib:
+  name: pypi
+  version: "^\\d+(\\.\\d+)*$"
+maven:
+  name: http
+  url: http://ftp.cixug.es/apache/maven/${highest:^maven-\d+$}/${latest}/source/${latest:^apache-maven-(\d+(?:\.\d+)+)-src\.tar\.gz$}
+mbedtls:
+  name: github
+  project: ARMmbed
+  tag: "^mbedtls-(\\d(?:\\.\\d+)+)$"
+mc:
+  name: github
+  project: MidnightCommander
+meandmyshadow:
+  name: sourceforge
+  path: "${latest}/${latest:(\\d+(?:\\.\\d+)+)}"
+mechanize: pypi
+media-player-info:
+  name: http
+  url: https://www.freedesktop.org/software/media-player-info/${latest:\d+}
+mediadownloader:
+  name: sourceforge
+  project: googleimagedown
+  path: project/
+mediastreamer:
+  spider:
+    name: github
+    project: BelledonneCommunications
+    repository: mediastreamer2
+  formatter: n.n
+memcached: github
+memtest86+:
+  name: http
+  url: http://www.memtest.org/download/${highest:^\d}/
+mendeleydesktop:
+  spider:
+    name: xpath
+    url: https://www.mendeley.com/release-notes/
+    base: "//h3[contains(text(), 'Stable Releases')]/following-sibling::div//a[1]"
+    url-xpath: "/@href"
+    no-date: true
+  formatter: n.n
+mercator:
+  name: sourceforge
+  project: worldforge
+  path: Mercator (terrain lib)/${latest}/${latest:(\d+(?:\.\d+)+)}
+merkaartor:
+  name: github
+  project: openstreetmap
+  tag: "^\\d+(?:\\.\\d+)*$"
+messagelib:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:messagelib-(\d+(?:\.\d+)+)}
+milou:
+  name: http
+  url: https://download.kde.org/stable/plasma/${latest}/${latest:milou-(\d+(?:\.\d+)+)}
+mime-types:
+  name: xpath
+  url: https://packages.gentoo.org/packages/app-misc/mime-types
+  version: "//a[@class='kk-ebuild-link']"
+  no-date: true
+mimetic:
+  spider:
+    name: xpath
+    url: http://www.codesink.org/mimetic_mime_library.html
+    base: "//a[contains(@href, 'download/')]"
+    date-url: "/@href"
+  formatter: n.n
+minimize-all:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/bvbfan/Minimize-All/master/package/metadata.desktop
+    no-date: true
+  formatter: X-KDE-PluginInfo-Version=(.*)
+ministro: kdegit
+minitube:
+  spider:
+    name: xpath
+    url: http://flavio.tordini.org/on/minitube
+    base: "//div[@class='post item']//a[1][contains(text(), 'Minitube')]"
+    date: "/ancestor::div/div[@class='postmetadata']/a[1]"
+    url-xpath: "/@href"
+  formatter: n.n
+miniupnp:
+  spider: github
+  formatter: n_n
+minix:
+  name: http
+  url: http://download.minix3.org/iso/${latest:minix_R(\d+(?:\.\d+)+)}
+minuet:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:minuet-(\d+(?:\.\d+)+)}
+miro:
+  name: http
+  url: http://ftp.osuosl.org/pub/pculture.org/miro/src/
+mistune: pypi
+mixxx:
+  name: github
+  project: mixxxdj
+mkvtoolnix:
+  spider:
+    name: github
+    project: mbunkus
+  formatter: n.n
+mmap: hackage
+mock: pypi
+modemmanager-qt: kdegit
+modern-chakra-curie-splash:
+  name: opendesktop
+  project: '1000544'
+  site: store.kde
+monotonic: pypi
+moodle:
+  spider:
+    name: xpath
+    url: https://download.moodle.org/releases/latest/
+    base: "//table[1]//tr[last()]//td[1]"
+    version: "/strong"
+  formatter:
+  - n.n
+  - d mmm y
+mozc:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/google/mozc/master/src/data/version/mozc_version_template.bzl
+    no-date: true
+  formatter: |-
+    MAJOR=(\d+)
+    MINOR=(\d+)
+    BUILD=(\d+)
+    REVISION=(\d+)
+mozjs:
+  name: xpath
+  url: https://www.mozilla.org/en-US/firefox/latest/releasenotes/
+  base: "//div[@class='version']"
+  version: "/h2"
+  date: "/p"
+mp3diags:
+  name: sourceforge
+  path: mp3diags-src/${latest:^MP3Diags-(\d+(?:\.\d+)+)\.tar\.gz$}
+mp3gain:
+  spider:
+    name: sourceforge
+    path: mp3gain/${latest}/${latest:^mp3gain-(\d+(?:_\d+)+)-src\.zip$}
+  formatter: n_n
+mpc:
+  spider:
+    name: github
+    project: MusicPlayerDaemon
+  formatter: n.n
+mpd:
+  spider:
+    name: github
+    project: MusicPlayerDaemon
+  formatter: n.n
+mpg321:
+  name: sourceforge
+  path: mpg321
+mplayer:
+  name: http
+  url: http://svn.mplayerhq.hu/MPlayer/releases/${latest:^MPlayer-(\d+(?:\.\d+)+)\.tar}
+mplayerthumbs: kdegit
+mpmath: pypi
+mpv:
+  name: github
+  project: mpv-player
+mtl: hackage
+mtools:
+  name: http
+  url: http://ftp.gnu.org/gnu/mtools/${latest:^mtools-(\d+(?:\.\d+)+)\.tar\.bz2$}
+mumble:
+  name: github
+  project: mumble-voip
+muon: kdegit
+muparser:
+  name: github
+  project: beltoforion
+mupen64plus:
+  name: github
+  repository: mupen64plus-core
+murrine:
+  spider:
+    name: murrine
+    url: https://gitlab.gnome.org/Archive/murrine
+  formatter: n_n
+musescore: github
+musictube:
+  spider:
+    name: xpath
+    url: http://flavio.tordini.org/on/musictube
+    base: "//div[@class='post item']//a[1][contains(text(), 'Musictube')]"
+    date: "/ancestor::div/div[@class='postmetadata']/a[1]"
+    url-xpath: "/@href"
+  formatter: n.n
+musique:
+  spider:
+    name: xpath
+    url: http://flavio.tordini.org/on/musique
+    base: "//div[@class='post item']//a[1][contains(text(), 'Musique')]"
+    date: "/ancestor::div/div[@class='postmetadata']/a[1]"
+    url-xpath: "/@href"
+  formatter: n.n
+mxml:
+  name: http
+  url: http://www.msweet.org/files/project3/${latest:^mxml-(\d(?:\.\d+)+)\.tar\.gz$}
+mysql-connector-c++:
+  spider:
+    name: xpath
+    url: https://dev.mysql.com/downloads/connector/cpp/
+    version: "//div[@id='ga']/h1"
+  formatter: n.n
+mysql-workbench:
+  spider:
+    name: xpath
+    url: https://dev.mysql.com/downloads/workbench/
+    version: "//div[@id='ga']/h1"
+  formatter: n.n
+mythtv:
+  name: github
+  tag: "^v(\\d+(?:\\.\\d+)*)$"
+naev:
+  name: sourceforge
+  path: "${latest:naev-(\\d+(?:\\.\\d+)+)}"
+namcap:
+  name: http
+  url: https://sources.archlinux.org/other/namcap/${latest:^namcap-(\d+(?:\.\d+)*)\.tar\.gz$}
+nano:
+  name: http
+  url: http://www.nano-editor.org/dist/${latest:^v\d+(\.\d+)*$}/${latest:^nano-(\d+(?:\.\d+)*)\.tar\.gz$}
+natron:
+  name: github
+  project: MrKepzie
+  repository: Natron
+necessitas-installer-framework: kdegit
+nepomuk-core: kdegit
+nepomuk-webminer: kdegit
+nepomuk-widgets: kdegit
+nepomukshell: kdegit
+nepomuktvnamer: kdegit
+netbeans:
+  name: github
+  project: apache
+netbsd:
+  name: http
+  url: http://ftp.netbsd.org/pub/NetBSD/images/${latest}/${latest:^NetBSD-(\d+(?:\.\d+)+)-amd64\.iso$}
+netcat:
+  name: sourceforge
+  path: netcat
+nethack:
+  name: sourceforge
+  path: nethack/${latest:(\d+(?:\.\d+)+)}
+netifaces: pypi
+network: hackage
+network-uri: hackage
+networkmanagement: kdegit
+networkmanager-qt: kdegit
+neverball:
+  name: github
+  project: Neverball
+nmap:
+  spider:
+    name: xpath
+    url: https://nmap.org/changelog.html
+    base: "//h3[@class='nmap-version'][re:test(text(), '\\d{2} \\[')]"
+    url-xpath: "/a/@href"
+  formatter:
+  - n.n
+  - "\\[(.*)\\]"
+nodejs:
+  spider:
+    name: xpath
+    url: https://nodejs.org/en/
+    version: "//div[@class='home-downloadblock'][2]/a/@data-version"
+  formatter: n.n
+notably: kdegit
+notepad++:
+  name: http
+  url: https://notepad-plus-plus.org/repository/${latest}/${latest:^(\d+(?:\.\d+)+)$}
+novprog:
+  name: github
+  project: gottcode
+now-dock:
+  name: opendesktop
+  project: '1151047'
+  site: kde-look
+npapi-sdk:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/mozilla/npapi-sdk/master/headers/npapi.h
+    no-date: true
+  formatter: |-
+    #define NP_VERSION_MAJOR (\d+)
+    #define NP_VERSION_MINOR (\d+)
+npm: github
+nvidia:
+nvidia-cg-toolkit:
+  spider:
+    name: xpath
+    url: https://developer.nvidia.com/cg-toolkit-download
+    base: "//h3[1]"
+  formatter:
+  - "\\((.*)\\)"
+  - "- (.*) \\("
+nvidia-texture-tools:
+  name: github
+  project: castano
+nx-libs:
+  name: http
+  url: http://code.x2go.org/releases/source/nx-libs/${latest:nx-libs-(\d+(?:\.\d+)+)}
+obs-studio:
+  name: github
+  project: jp9000
+ocenaudio:
+  spider:
+    name: xpath
+    url: http://www.ocenaudio.com/changelog
+    version: "//div[@id='changelog_text']//p"
+    no-date: true
+  formatter: n.n
+octave:
+  name: http
+  url: http://ftp.gnu.org/gnu/octave/${latest:^octave-(\d+(?:\.\d+)+)\.tar}
+octopi:
+  name: github
+  project: aarnt
+odamex:
+  name: sourceforge
+  path: Odamex/${latest}/${latest:(\d+(?:\.\d+)+)}
+ode:
+  name: sourceforge
+  project: opende
+  path: ODE/${latest}/${latest:(\d+(?:\.\d+)+)}
+ogre:
+  spider:
+    name: bitbucket
+    project: sinbad
+    tag: "^v(\\d+(?:-\\d+)+)$"
+  formatter: "(\\d+)(?:-(\\d+))?(?:-(\\d+))?(?:-(\\d+))?"
+ois:
+  spider:
+    name: sourceforge
+    project: wgois
+    path: Source Release/${latest}/${latest:\d+(?:-\d+)*}
+  formatter: "(\\d+)(?:-(\\d+))?(?:-(\\d+))?(?:-(\\d+))?"
+okteta: kdegit
+okular:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:okular-(\d+(?:\.\d+)+)}
+old-locale: hackage
+opal:
+  name: sourceforge
+  project: opalvoip
+  path: "${latest:(?i)^v(\\d+(\\.\\d+)*) \\w+$}/${latest}/${latest:^opal-(\\d+(?:\\.\\d+)*)\\.tar\\.bz2$}"
+openarena:
+  name: sourceforge
+  project: oarena
+  path: "${latest:openarena-(\\d+(?:\\.\\d+)+)}"
+openbsd:
+openbsd-netcat:
+  spider:
+    name: http
+    url: http://ftp.debian.org/debian/pool/main/n/netcat-openbsd/${latest:netcat-openbsd_(.*)\.debian\.tar\.gz}
+  formatter: "(\\d+)(?:\\.(\\d+))?(?:\\.(\\d+))?(?:\\.(\\d+))?(?:-(\\d+))?"
+opencascade:
+  spider:
+    name: xpath
+    url: https://www.opencascade.com/content/latest-release
+    base: "//div[@class='main-content-main']"
+    version: "/h1[@id='page-title']"
+    date: "//p[1]"
+  formatter:
+  - n.n
+  - "\\d+\\s+\\w+\\s+\\d{4}"
+opencc:
+  spider:
+    name: github
+    project: BYVoid
+  formatter: n.n
+opencl-headers:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/KhronosGroup/OpenCL-Headers/master/cl.h
+    no-date: true
+  formatter: "#define CL_VERSION_(\\d+)(?:_(\\d+))?(?:_(\\d+))?(?:_(\\d+))?\\s+1\n\n"
+opencollada:
+  name: github
+  project: KhronosGroup
+  repository: OpenCOLLADA
+opencolorio:
+  name: github
+  project: imageworks
+opendvdproducer:
+  name: github
+  project: jonata
+opengfx:
+  name: http
+  url: http://bundles.openttdcoop.org/opengfx/releases/${latest:^\d+(\.\d+)*$}/${latest:^opengfx-(\d+(?:\.\d+)*)-source\.tar\.xz$}
+opengoo:
+  spider:
+    name: github
+    project: Mandarancio
+    repository: OpenGOO
+  formatter: n.n
+openimageio:
+  name: github
+  project: OpenImageIO
+  repository: oiio
+  tag: "^Release-(\\d+(?:\\.\\d+)*)$"
+openmortal:
+  name: sourceforge
+  path: openmortal/${latest}/${latest:(\d+(?:\.\d+)+)}
+openmsx:
+  spider:
+    name: xpath
+    url: https://www.openttd.org/en/download-openmsx
+    base: "//div[@class='section-item'][2]//p[1]"
+  formatter:
+  - n.n
+  - "\\d{4}-\\d{2}-\\d{2}"
+openoffice:
+  name: sourceforge
+  project: openofficeorg.mirror
+  path: "${latest:\\d+(?:\\.\\d+)+}/source/${latest:^apache-openoffice-(\\d+(?:\\.\\d+)+)-r\\d+-src\\.tar\\.gz$}"
+opensc:
+  name: sourceforge
+  path: OpenSC
+openscenegraph:
+  spider:
+    name: xpath
+    url: http://www.openscenegraph.org/index.php/download-section/stable-releases
+    base: "//div[contains(@class, 'contentpaneopen')]"
+    version: "//a"
+    date: "//dd[contains(@class, 'published')]/span"
+    url-xpath: "//a/@href"
+  formatter: n.n
+opensfx:
+  spider:
+    name: xpath
+    url: https://www.openttd.org/en/download-opensfx
+    base: "//div[@class='section-item'][2]//p[1]"
+  formatter:
+  - n.n
+  - "\\d{4}-\\d{2}-\\d{2}"
+openshot: launchpad
+openssh-askpass:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=openssh-askpass&full=0
+    base: "//a[contains(@href, 'tgz/openssh-askpass-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+opensubdiv:
+  spider:
+    name: github
+    project: PixarAnimationStudios
+  formatter: n_n
+opensuse:
+  name: http
+  url: http://download.opensuse.org/distribution/openSUSE-current/iso/${latest:^openSUSE-Leap-(\d+(?:\.\d+)+)-NET-x86_64\.iso$}
+  table: 2
+openttd:
+  name: http
+  url: http://fr.binaries.openttd.org/binaries/releases/${latest:(\d+\.\d+(\.\d+)?)}
+openworldsoccer:
+  name: sourceforge
+  path: openworldsoccer
+optipng:
+  name: sourceforge
+  path: OptiPNG
+opusfile:
+  name: github
+  project: xiph
+orion:
+  name: github
+  project: shimmerproject
+  repository: Orion
+ortp:
+  name: http
+  url: http://download-mirror.savannah.gnu.org/releases/linphone/ortp/sources/${latest:ortp-(\d+(?:\.\d+)+)}
+otter-browser:
+  name: github
+  project: OtterBrowser
+owncloud:
+  name: github
+  repository: core
+  tag: ^v(\d+(?:\.\d+)*)$
+owncloud-client:
+  spider:
+    name: github
+    project: owncloud
+    repository: client
+oxygen: kdegit
+oxygen-fonts: kdegit
+oxygen-gtk: kdegit
+oxygen-gtk-icons:
+  name: sourceforge
+  project: chakra
+  path: Tools/Oxygen-Gtk-Icons/${latest:\d+(?:\.\d+)*}
+oxygen-gtk2:
+  name: http
+  url: https://download.kde.org/stable/oxygen-gtk2/${latest}/src/
+oxygen-gtk3:
+  name: http
+  url: https://download.kde.org/stable/oxygen-gtk3/${latest}/src/
+oxygen-icons5: kdegit
+oyranos:
+  name: sourceforge
+  path: Oyranos/${latest}/${latest:^oyranos-(\d+(?:\.\d+)+)\.tar}
+packabei:
+  name: sourceforge
+  path: packabei
+pacman-log-viewer:
+  name: opendesktop
+  project: '1131723'
+paintown:
+  name: sourceforge
+  path: paintown
+pairs: kdegit
+palapeli:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:palapeli-(\d+(?:\.\d+)+)}
+pandas:
+  name: pypi
+  version: "^\\d+(?:\\.\\d+)*$"
+par2cmdline:
+  name: github
+  project: Parchive
+  ignore-latest: true
+paramiko: pypi
+parley:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:parley-(\d+(?:\.\d+)+)}
+parsec: hackage
+partclone:
+  name: sourceforge
+  path: stable
+partitionmanager:
+  name: http
+  url: https://download.kde.org/stable/partitionmanager/${latest}/src/${latest:partitionmanager-(\d+(?:\.\d+)+)}
+passenger:
+  spider:
+    name: github
+    project: phusion
+  formatter: n.n
+patchutils:
+  name: github
+  project: twaugh
+path-py:
+  name: pypi
+  package: path.py
+pbr: pypi
+pcsclite:
+  name: github
+  project: LudovicRousseau
+  repository: pcsc
+pdf2svg:
+  name: github
+  project: dawbarton
+peazip: sourceforge
+peg-e:
+  name: github
+  project: gottcode
+performous: github
+perlkde: kdegit
+perlqt: kdegit
+peruse: kdegit
+pexpect: pypi
+phonon: kdegit
+phonon-directshow: kdegit
+phonon-gstreamer: kdegit
+phonon-mmf: kdegit
+phonon-quicktime: kdegit
+phonon-vlc: kdegit
+phonon-waveout: kdegit
+phonon-xine: kdegit
+phpbb:
+  name: github
+  tag: "^release-(\\d+(?:\\.\\d+)+)$"
+phppgadmin:
+  name: sourceforge
+  path: "phpPgAdmin [stable]/${latest:^phpPgAdmin-\\d+(?:\\.\\d+)+$}/${latest:^phpPgAdmin-(\\d+(?:\\.\\d+)+)\\.tar\\.gz$}"
+physfs:
+  spider:
+    name: xpath
+    url: https://icculus.org/physfs/
+    base: "//center/font"
+    version: "/a"
+    date: "/text()[1]"
+    url-xpath: "/a/@href"
+  formatter:
+  - n.n
+  - "(.*):"
+picard:
+  name: http
+  url: http://ftp.musicbrainz.org/pub/musicbrainz/picard/${latest:^picard-(\d+(?:\.\d+)*)\.tar\.gz$}
+picmi:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:picmi-(\d+(?:\.\d+)+)}
+pidgin:
+  name: sourceforge
+  path: Pidgin
+pillow:
+  name: pypi
+  package: Pillow
+pimcommon:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:pimcommon-(\d+(?:\.\d+)+)}
+pingus:
+  name: github
+  project: pingus
+pink-pony:
+  name: github
+  project: ginkgo
+plasma-active-kickstart:
+  name: kdegit
+  tag: "^Active/(.*)$"
+plasma-active-maliit:
+  name: kdegit
+  tag: "^Active/(.*)$"
+plasma-applet-redshift-control:
+  name: github
+  project: kotelnik
+plasma-applet-thermal-monitor:
+  name: github
+  project: kotelnik
+plasma-applet-weather-widget:
+  name: github
+  project: kotelnik
+plasma-desktop: kdegit
+plasma-framework: kdegit
+plasma-integration: kdegit
+plasma-maliit-plugins: kdegit
+plasma-mediacenter: kdegit
+plasma-mobile:
+  name: kdegit
+  tag: "^Active/(.*)$"
+plasma-mobile-config:
+  name: kdegit
+  tag: "^Active/(.*)$"
+plasma-nm: kdegit
+plasma-pa: kdegit
+plasma-sdk: kdegit
+plasma-workspace: kdegit
+plasma-workspace-wallpapers: kdegit
+platform:
+  spider:
+    name: github
+    project: Pulse-Eight
+  formatter: n.n
+playbar2:
+  name: github
+  project: audoban
+  repository: PlayBar2
+playonlinux:
+  name: github
+  project: PlayOnLinux
+  repository: POL-POM-4
+plib:
+  name: sourceforge
+  path: plib
+ply: pypi
+poco:
+  name: http
+  url: https://pocoproject.org/releases/${latest}/${latest:^poco-(\d(?:\.\d+)*)\.tar\.bz2$}
+podofo:
+  name: sourceforge
+  path: podofo
+pokerth:
+  name: sourceforge
+  path: pokerth
+polkit:
+  name: http
+  url: https://www.freedesktop.org/software/polkit/releases/${latest:\d+(?:\.\d+)+}
+polkit-kde-agent-1: kdegit
+polkit-qt-1: kdegit
+pology:
+  name: http
+  url: http://pology.nedohodnik.net//release/${latest:\d+(?:\.\d+)+}
+portsmf:
+  spider:
+    name: text
+    url: https://sourceforge.net/p/portmedia/code/HEAD/tree/portsmf/trunk/configure?format=raw
+    no-date: true
+  formatter: PACKAGE_VERSION='(.*)'
+postgis:
+  name: github
+  tag: "^\\d+(?:\\.\\d+)*$"
+powerdevil: kdegit
+powertop:
+  name: github
+  project: fenrus75
+  tag: "^v(\\d+(?:\\.\\d+)*)$"
+powwow:
+  spider:
+    name: xpath
+    url: https://www.hoopajoo.net/projects/powwow.html
+    base: "//div[@id='content']"
+    version: "//tr[2]//a"
+    date: "//tr[1]/td[1]"
+  formatter: n.n
+powwow-perl:
+  spider:
+    name: xpath
+    url: https://www.hoopajoo.net/projects/powwow-perl.html
+    base: "//div[@id='content']"
+    version: "//tr[2]//a"
+    date: "//tr[1]/td[1]"
+  formatter: n.n
+poxml:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:poxml-(\d+(?:\.\d+)+)}
+prboom:
+  name: sourceforge
+  path: prboom stable
+premake: sourceforge
+primitive: hackage
+print-manager:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:print-manager-(\d+(?:\.\d+)+)}
+printer-applet: kdegit
+prison: kdegit
+privoxy:
+  name: http
+  url: https://www.privoxy.org/sf-download-mirror/Sources/${latest:stable}/${latest:\d+(?:\.\d+)+}
+profile-sync-daemon:
+  name: github
+  project: graysky2
+proftpd: github
+progressbar2: pypi
+prompt_toolkit: pypi
+protobuf:
+  name: github
+  project: google
+psi:
+  name: sourceforge
+  path: Psi
+psutil: pypi
+psycopg2: pypi
+ptex:
+  name: github
+  project: wdas
+ptlib:
+  name: sourceforge
+  project: opalvoip
+  path: "${latest:(?i)^v(\\d+(\\.\\d+)*) \\w+$}/${latest}/${latest:^ptlib-(\\d+(?:\\.\\d+)*)\\.tar\\.bz2$}"
+ptyprocess: pypi
+publictransport:
+  name: kdegit
+  tag: "^stable-(.*)$"
+pumpa:
+  name: gitweb
+  url: http://source.pumpa.branchable.com/?p=source.git
+purpose: kdegit
+py:
+  name: pypi
+  version: "^\\d+(?:\\.\\d+)+$"
+py-oauth2: pypi
+pyalpm:
+  name: http
+  url: https://sources.archlinux.org/other/pyalpm/${latest:\d+(?:\.\d+)+}
+pycountry: pypi
+pycparser: pypi
+pycurl: pypi
+pyelftools: pypi
+pygame:
+  name: http
+  url: http://pygame.org/ftp/${latest:^pygame-(\d+(?:\.\d+)*)release\.tar\.gz$}
+pygtk:
+  name: pypi
+  package: PyGTK
+pykde4:
+  name: http
+  url: https://download.kde.org/stable/${latest:^\d+(?:\.\d+)+$}/src/${latest:pykde4-(\d+(?:\.\d+)+)}
+pylibacl: pypi
+pyopenssl:
+  name: pypi
+  package: pyOpenSSL
+pyparsing: pypi
+pypdf2: pypi
+pyside:
+  name: pypi
+  package: PySide
+pyside-tools:
+  name: github
+  project: PySide
+  repository: Tools
+pyspatialite:
+  spider: pypi
+  formatter: n.n
+pytest: pypi
+pytest-httpbin: pypi
+pytest-runner: pypi
+python-bugzilla: pypi
+python-ccr:
+  name: github
+  project: ccr-tools
+python-dateutil: pypi
+python-distutils-extra: launchpad
+python-fuse:
+  name: github
+  project: libfuse
+python-gnupg: pypi
+python-magic:
+  spider:
+    name: github
+    project: file
+    repository: file
+  formatter: n_n
+python-oauth2:
+  name: github
+  project: joestump
+  tag: "^v(\\d+(?:\\.\\d+)*)$"
+python-xlib: pypi
+python3-xlib: pypi
+pyxattr: pypi
+pyyaml:
+  name: pypi
+  package: PyYAML
+pyzmq: pypi
+q4wine:
+  name: sourceforge
+  path: q4wine
+qbittorrent:
+  name: sourceforge
+  path: qbittorrent
+qbs:
+  name: http
+  url: http://download.qt.io/official_releases/qbs/${latest}/
+qbzr: launchpad
+qca: kdegit
+qcomicbook:
+  name: github
+  project: stolowski
+  repository: QComicBook
+qedit:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=qedit&full=0
+    base: "//a[contains(@href, 'tgz/qedit-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+qemu:
+  name: gitweb
+  url: http://git.qemu.org/qemu.git
+  tag: "^v(\\d+(?:\\.\\d+)*)$"
+qftp:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=qftp&full=0
+    base: "//a[contains(@href, 'tgz/qftp-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+qgis:
+  name: http
+  url: http://qgis.org/downloads/${highest:^qgis-(\d+(?:\.\d+)*)\.tar\.bz2$}
+qgit:
+  name: gitweb
+  url: http://repo.or.cz/w/qgit4/redivivus.git
+qhull:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/qhull/qhull/master/README.txt
+  formatter:
+  - n.n
+  - "\\d{4}/\\d{2}/\\d{2}"
+qiviewer: launchpad
+qjackctl:
+  name: sourceforge
+  path: qjackctl
+qjson:
+  name: sourceforge
+  path: qjson
+qmapshack:
+  spider:
+    name: bitbucket
+    project: maproom
+  formatter: n.n
+qmc2:
+  name: sourceforge
+  path: qmc2
+qmidictl:
+  name: sourceforge
+  path: qmidictl
+qmidinet:
+  name: sourceforge
+  path: qmidinet
+qmmp:
+  name: http
+  url: http://qmmp.ylsoftware.com/files/${latest:-((?:[1-9]|\d{2,})(?:\.\d+)*)}
+qrencode:
+  name: github
+  project: fukuchi
+  repository: libqrencode
+  ignore-latest: true
+qssh:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=qssh&full=0
+    base: "//a[contains(@href, 'tgz/qssh-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+qstardict: github
+qsyncthingtray:
+  name: github
+  project: sieren
+  repository: QSyncthingTray
+qsynth:
+  name: sourceforge
+  path: qsynth
+qt:
+  name: http
+  url: http://download.qt.io/archive/qt/${highest:\d+(?:\.\d+)+}/${latest}/${latest:^qt-opensource-linux-x64-(\d+(?:\.\d+)+)\.run$}
+qt-creator:
+  name: github
+  project: qtproject
+  tag: "^v(\\d+(?:\\.\\d+)*)$"
+qt-mobility:
+  name: github
+  project: qtproject
+qt5-fsarchiver:
+  spider:
+    name: xpath
+    url: https://launchpad.net/~dieterbaum/+archive/ubuntu/qt5-fsarchiver-64-bit
+    base: "//table[@id='packages_list']/tbody/tr"
+    version: "/td[2]"
+    date: "/td[3]/text()[2]"
+  formatter:
+  - n.n
+  - "\\((.*)\\)"
+qtadb:
+  spider:
+    name: text
+    url: https://bitbucket.org/michalmotyczko/qtadb/raw/master/main.cpp
+    no-date: true
+  formatter: QCoreApplication::setApplicationVersion\("(.*?)"\);
+qtatspi: kdegit
+qtcurve: kdegit
+qtfm:
+  name: opendesktop
+  project: '1131642'
+qtjolie: kdegit
+qtkeychain:
+  name: github
+  project: frankosterfeld
+qtractor:
+  name: sourceforge
+  path: qtractor
+qtruby: kdegit
+quanta: kdegit
+quassel: github
+quazip:
+  name: sourceforge
+  path: quazip
+qucs:
+  name: sourceforge
+  path: qucs/${latest:^\d+(\.\d+)*$}/
+quesoglc: sourceforge
+quick-usb-formatter:
+  spider:
+    name: text
+    url: https://chakralinux.org/code/quick-usb-formatter.git/plain/src/main.cpp
+    no-date: true
+  formatter: static const char version\[\] = "(.*)";
+quiterss: github
+qupzilla: github
+qwinff:
+  name: sourceforge
+  path: release
+qxmpp:
+  name: github
+  project: qxmpp-project
+qyoto: kdegit
+r:
+  name: http
+  url: https://cran.cnr.berkeley.edu/src/base/${latest:^R-\d+$}/
+rack: github
+radius-engine: sourceforge
+ragel:
+  name: http
+  url: http://www.colm.net/files/ragel/${latest:^ragel-(\d+(?:\.\d+)+)\.tar\.gz$}
+random: hackage
+rbtools:
+  spider:
+    name: github
+    project: reviewboard
+  formatter: n.n
+reactos:
+  name: sourceforge
+  path: ReactOS
+redeclipse:
+  spider:
+    name: xpath
+    url: http://redeclipse.net/
+    base: "//p[@class='version']"
+  formatter:
+  - n.n
+  - "\\d+\\w+ \\w+ \\d{4}"
+redis:
+  name: github
+  project: antirez
+redshift:
+  name: github
+  project: jonls
+regex: pypi
+regex-base: hackage
+regex-compat: hackage
+regex-posix: hackage
+rekollect: kdegit
+rekonq: sourceforge
+releaseme: kdegit
+requests: pypi
+ring-kde: kdegit
+rkhunter:
+  name: sourceforge
+  path: rkhunter
+rkward:
+  spider:
+    name: http
+    url: https://download.kde.org/stable/rkward/${latest}/src/
+  formatter: n.n
+rocs:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:rocs-(\d+(?:\.\d+)+)}
+rosegarden:
+  name: sourceforge
+  path: rosegarden
+routino:
+  spider:
+    name: xpath
+    url: https://www.routino.org/
+    base: "//dt/b[contains(text(), 'of Routino released')]"
+  formatter:
+  - n.n
+  - "\\d+\\w+ \\w+ \\d{4}"
+rpy2: pypi
+rsibreak: kdegit
+rssnow-plasma5-applet:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/Misenko/rssnow-plasma5-applet/master/plasmoid/metadata.desktop
+    no-date: true
+  formatter: X-KDE-PluginInfo-Version=(.*)
+rstudio: github
+rsyslog: github
+sagemath:
+  name: cgit
+  url: https://git.sagemath.org/sage.git/
+  tag: "^\\d+(?:\\.\\d+)*$"
+samba:
+  name: http
+  url: https://download.samba.org/pub/samba/${latest:^LATEST-IS-SAMBA-(\d+(?:\.\d+)+)$}
+samsung-unified-linux-driver:
+  spider:
+    name: xpath
+    url: http://www.bchemnet.com/suldr/suld.html
+    version: "//li//a"
+  formatter: n.n
+scilab:
+  name: github
+  project: opencollab
+  tag: "^\\d+(?:\\.\\d+)*$"
+scipy: pypi
+screen:
+  name: http
+  url: https://ftp.gnu.org/gnu/screen/
+scribo: kdegit
+scribus:
+  name: sourceforge
+  path: scribus/${latest}/${latest:^scribus-(\d+(?:\.\d+)+)\.dmg}
+scummvm:
+  name: http
+  url: https://de1.eu.scummvm.net/scummvm/${latest:^\d+(\.\d+)*$}/${latest:^scummvm-(\d+(?:\.\d+)*)\.tar\.xz$}
+sddm-kcm: kdegit
+seabios:
+  name: http
+  url: https://code.coreboot.org/p/seabios/downloads/${latest:^seabios-(\d+(?:\.\d+)*)}
+semantik:
+  name: github
+  project: ita1024
+sentinella: sourceforge
+separator:
+  name: opendesktop
+  project: '998907'
+  site: kde-look
+serverlog:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=serverlog&full=0
+    base: "//a[contains(@href, 'tgz/serverlog-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+setconf: pypi
+sfcgal:
+  name: github
+  project: Oslandia
+  repository: SFCGAL
+sflphone-kde: kdegit
+sfml: github
+sgmllib3k: pypi
+sha:
+  name: hackage
+  package: SHA
+shapelib:
+  name: http
+  url: http://download.osgeo.org/shapelib/${latest:^shapelib-(\d+(?:\.\d+)*)\.tar\.gz$}
+share-like-connect:
+  name: kdegit
+  tag: "^Active/(.*)$"
+shared-desktop-ontologies:
+  name: sourceforge
+  project: oscaf
+shedskin: github
+shiboken:
+  name: github
+  project: PySide
+  repository: Shiboken
+shntool:
+  spider:
+    name: http
+    url: http://www.etree.org/shnutils/shntool/dist/src/${latest}
+  formatter: n.n
+shove: pypi
+sigil:
+  name: github
+  project: Sigil-Ebook
+  repository: Sigil
+signon: launchpad
+signon-kwallet-extension:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:signon-kwallet-extension-(\d+(?:\.\d+)+)}
+signon-plugin-oauth2:
+  name: gitlab
+  project: accounts-sso
+  commit: "^Version (\\d+(?:\\.\\d+)+)$"
+signon-ui:
+  spider:
+    name: gitlab
+    project: accounts-sso
+  formatter: "\\d+(?:\\.\\d+)*\\+\\d+(?:\\.\\d+)*"
+silc-toolkit:
+  name: sourceforge
+  project: silc
+  path: silc/toolkit/sources/${latest:-(\d+(?:\.\d+)*)\.tar\.bz2$}
+silly: pypi
+simgear:
+  name: sourceforge
+  project: flightgear
+  path: "${latest:release-\\d+(?:\\.\\d+)+}/${latest:simgear-(\\d+(?:\\.\\d+)+)\\.tar\\.bz2}"
+simon: kdegit
+simpleaudioplayer:
+  name: opendesktop
+  project: '1126543'
+  site: kde-look
+simplejson: pypi
+simplemenu:
+  spider:
+    name: cgit
+    url: https://cgit.kde.org/scratch/hein/simplemenu.git/
+simsu:
+  name: github
+  project: gottcode
+singledispatch: pypi
+sintel: launchpad
+six: pypi
+skanlite: kdegit
+skrooge:
+  name: http
+  url: https://download.kde.org/stable/skrooge/${latest:^skrooge-(\d+(?:\.\d+)*)\.tar\.xz$}
+skstream:
+  name: github
+  project: worldforge
+skype:
+  spider:
+    name: xpath
+    url: https://blogs.skype.com/tag/linux/
+    base: "//h2[@class='card-title']/a[re:test(text(), 'Skype( for Linux)? \\d+\\.\\d+')]"
+    date: "//preceding::div//time/text()"
+    url-xpath: "/@href"
+  formatter: n.n
+slackware:
+  spider:
+    name: text
+    url: http://ftp.slackware.com/pub/slackware/slackware-current/RELEASE_NOTES
+  formatter:
+  - Slackware\s+(\d+(?:\.\d+)+)\s+release\s+notes
+  - Slackware\s+\d+(?:\.\d+)+\s+release\s+notes\s*\.\s+(.*)
+slang:
+  spider:
+    name: xpath
+    url: http://www.jedsoft.org/releases/slang/
+    version: "//dt/a/text()"
+    date: "//tt/text()"
+  formatter: slang-(.*)\.tar
+smaragd: kdegit
+smb4k:
+  name: sourceforge
+  path: "${latest:^\\d+(\\.\\d+)*$}/"
+smokegen: kdegit
+smokekde: kdegit
+smokeqt: kdegit
+smplayer:
+  name: sourceforge
+  path: SMPlayer
+smtube:
+  name: sourceforge
+  path: SMTube/${latest:^\d+(\.\d+)*$}/
+snapper:
+  name: github
+  project: openSUSE
+sni-qt: launchpad
+snorenotify: kdegit
+snoretoast: kdegit
+socat:
+  name: http
+  url: http://www.dest-unreach.org/socat/download/${latest:^socat-(\d+(?:\.\d+)*)\.tar}
+socnetv: sourceforge
+sofia-sip:
+  name: sourceforge
+  path: sofia-sip
+soil:
+  name: github
+  project: roots
+solid: kdegit
+sonnet: kdegit
+sopcast:
+  spider:
+    name: xpath
+    url: http://www.sopcast.org/download/linux.html
+    version: "//div[@class='ct1 t2']"
+    date-url: "//a[contains(@href, 'download/sp-auth.tgz')]/@href"
+  formatter: n.n
+soprano: kdegit
+soqt:
+  spider:
+    name: bitbucket
+    project: Coin3D
+  formatter: n.n
+sound-theme-freedesktop:
+  name: http
+  url: https://people.freedesktop.org/~mccann/dist/${latest:^sound-theme-freedesktop-(\d+(?:\.\d+)+)\.tar}
+soundkonverter:
+  name: github
+  project: HessiJames
+sparsehash: github
+spectacle:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:spectacle-(\d+(?:\.\d+)+)}
+speed-dreams: sourceforge
+speedcrunch: github
+sphinxbase:
+  name: sourceforge
+  project: cmusphinx
+  path: sphinxbase/${latest:\d$}/${latest:\d+(?:\.\d+)+}
+spice:
+  name: cgit
+  url: https://cgit.freedesktop.org/spice/spice
+spice-protocol:
+  name: cgit
+  url: https://cgit.freedesktop.org/spice/spice-protocol
+spideroak:
+  spider:
+    name: xpath
+    url: https://spideroak.com/resources/release-notes
+    base: "//a[contains(@class, 'h5')][re:test(text(), '(?i)\\bOne\\b')]"
+    url-xpath: "/@href"
+  formatter:
+  - n.n
+  - "(\\w+\\s*\\d+\\w{0,2},\\s*\\d{4}|\\d{4}-\\d{2}-\\d{2})"
+spotify:
+  name: http
+  url: http://repository.spotify.com/pool/non-free/s/spotify-client/${latest:^spotify-client_(\d+(?:\.\d+)*)\..*-\d+_amd64\.deb$}
+spring: github
+spun:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/rshipp/spun/master/spun
+    no-date: true
+  formatter: v(\d+(?:\.\d+)+)
+sqlalchemy:
+  name: pypi
+  package: SQLAlchemy
+  version: "^\\d+(?:\\.\\d+)*$"
+sqlcipher: github
+sqliteman:
+  name: sourceforge
+  path: sqliteman
+stapler:
+  name: github
+  project: hellerbarde
+  tag: "^(0\\.(?:[4-9]|\\{2,})(?:\\.\\d+)*|(?:[1-9]|\\d{2,})(?:\\.\\d+)*)$"
+startactive:
+  name: kdegit
+  tag: "^Active/(.*)$"
+steam:
+  name: http
+  url: http://repo.steampowered.com/steam/pool/steam/s/steam/${latest:^steam_(\d+(?:\.\d+)*)\.tar\.gz$}
+stellarium:
+  name: sourceforge
+  path: Stellarium-sources
+step:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:step-(\d+(?:\.\d+)+)}
+stk:
+  name: github
+  project: thestk
+stm: hackage
+strace:
+  name: sourceforge
+  path: strace
+streamripper:
+  name: sourceforge
+  path: streamripper (current)
+strigi: kdegit
+strigi-multimedia: kdegit
+strigiclient: kdegit
+strigidaemon: kdegit
+strigiutils: kdegit
+subtitlecomposer:
+  name: github
+  project: maxrd2
+suil:
+  name: http
+  url: http://download.drobilla.net/${latest:^suil-(\d+(?:\.\d+)*)}
+sunpinyin: github
+superkaramba: kdegit
+supertux:
+  name: github
+  project: SuperTux
+supertuxkart:
+  name: sourceforge
+  path: SuperTuxKart
+svgpart:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:svgpart-(\d+(?:\.\d+)+)}
+sweeper:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:sweeper-(\d+(?:\.\d+)+)}
+sweethome3d:
+  name: sourceforge
+  path: SweetHome3D
+sweethome3d-models:
+  spider:
+    name: sourceforge
+    project: sweethome3d
+    path: SweetHome3D-models/${latest}
+  formatter: n.n
+sword:
+  name: http
+  url: http://www.crosswire.org/ftpmirror/pub/sword/source/${latest}/${latest:^sword-(\d+(?:\.\d+)*)\.tar\.gz$}
+swt-extra:
+  spider:
+    name: xpath
+    url: http://archive.eclipse.org/eclipse/downloads/drops4/
+    base: "//a[re:test(text(), 'R-(\\d+(\\.\\d+))-\\d{12}')][last()]"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})(?P<m>\\d{2})(?P<d>\\d{2})"
+syb: hackage
+symboleditor: kdegit
+symphytum:
+  name: github
+  project: giowck
+sympy: pypi
+syncthing: github
+syndication: kdegit
+synergy:
+  spider:
+    name: github
+    project: symless
+    tag: ".*-stable$"
+  formatter: n.n
+syslog-ng:
+  name: github
+  project: balabit
+system-config-printer:
+  name: http
+  url: http://cyberelk.net/tim/data/system-config-printer/${latest:^\d+(\.\d+)*$}/${latest:^system-config-printer-(\d+(?:\.\d+)*)\.tar\.xz$}
+systemd-kcm:
+  name: opendesktop
+  project: '1127873'
+systemd-swap:
+  name: github
+  project: Nefelim4ag
+systemsettings: kdegit
+tanglet:
+  name: github
+  project: gottcode
+tar: hackage
+taskbar:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=taskbar&full=0
+    base: "//a[contains(@href, 'tgz/taskbar-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+tbb:
+  spider:
+    name: github
+    project: 01org
+  formatter: "^(\\d+)(?:_U(\\d+))?$"
+tdesktop:
+  name: github
+  project: telegramdesktop
+teeworlds:
+  name: http
+  url: https://downloads.teeworlds.com/${latest:^teeworlds-(\d+(?:\.\d+)*)-src\.tar\.gz$}
+telegramqml:
+  spider:
+    name: github
+    project: Aseman-Land
+    repository: TelegramQML
+  formatter: n.n
+telepathy-accounts-signon:
+  name: gitlab
+  project: accounts-sso
+telepathy-logger-qt: kdegit
+tellico:
+  name: kdegit
+  tag: "^v(\\d+(?:\\.(?:\\d|[0-8]\\d+))*)$"
+termcolor: pypi
+terminado: pypi
+terminfo: hackage
+tesseract:
+  name: github
+  project: tesseract-ocr
+tetzle:
+  name: github
+  project: gottcode
+texinfo:
+  name: http
+  url: https://ftp.gnu.org/gnu/texinfo/${latest:texinfo-(\d+(?:\.\d+)+)}
+texmacs: sourceforge
+texmaker:
+  spider:
+    name: xpath
+    url: http://www.xm1math.net/texmaker/download.html
+    base: "//h1[contains(./text(), 'Sources')]/following-sibling::div/a[1]"
+    date-url: "/@href"
+  formatter: n.n
+text: hackage
+textool:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=textool&full=0
+    base: "//a[contains(@href, 'tgz/textool-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+threadweaver: kdegit
+thunderbird:
+  spider:
+    name: xpath
+    url: https://www.mozilla.org/en-US/thunderbird/latest/releasenotes/
+    base: "//article[@id='main-content']//h2"
+  formatter:
+  - n.n
+  - "\\w+ \\d+, \\d{4}"
+tiger:
+  name: http
+  url: http://download.savannah.gnu.org/releases/tiger/${latest:^tiger-(\d+(?:\.\d+)*)\.tar\.gz$}
+tinyxml:
+  spider:
+    name: sourceforge
+    path: tinyxml/${latest:^\d+(\.\d+)+$}/${latest:\d+(?:_\d+)+}
+  formatter: n_n
+tlp:
+  name: github
+  project: linrunner
+  repository: TLP
+tmux: github
+toluapp:
+  spider:
+    name: github
+    project: LuaDist
+  formatter: n.n
+tomahawk:
+  name: github
+  project: tomahawk-player
+toohardforyou:
+  name: sourceforge
+  path: 2H4U
+toolame: sourceforge
+top-hugo:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=Top&full=0
+    base: "//a[contains(@href, 'tgz/Top-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+toposort: pypi
+tor:
+  name: cgit
+  url: https://gitweb.torproject.org/tor.git
+  tag: ^tor-(\d+(\.\d+)*)$
+torcs:
+  name: sourceforge
+  path: torcs-src
+tornado: pypi
+tqdm: pypi
+transformers: hackage
+transifex-client:
+  name: github
+  project: transifex
+transmission: github
+transparency:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=transparency&full=0
+    base: "//a[contains(@href, 'tgz/transparency-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+trash-cli:
+  name: github
+  project: andreafrancia
+traverso:
+  spider:
+    name: http
+    url: http://ftp.debian.org/debian/pool/main/t/traverso/${latest:^traverso_(\d+(?:\.\d+)*)\.orig\.tar\.gz$}
+  formatter: n.n
+tree: launchpad
+trigger-rally: sourceforge
+trojita: kdegit
+trollius: pypi
+tsf:
+  name: sourceforge
+  path: tsf/${latest}
+tuxguitar:
+  name: sourceforge
+  path: TuxGuitar
+tuxpaint:
+  name: sourceforge
+  path: tuxpaint
+tvtime:
+  name: sourceforge
+  path: tvtime
+uchardet:
+  name: github
+  project: BYVoid
+ucl:
+  name: http
+  url: http://www.oberhumer.com/opensource/ucl/download/${latest:^ucl-(\d+(?:\.\d+)*)\.tar\.gz$}
+ufoai:
+  name: sourceforge
+  path: ${latest:^UFO_AI \d\.x$}/${latest:^\d+(?:\.\d+)+$}/${latest:^ufoai-(\d+(?:\.\d+)+)-source\.tar\.bz2$}
+ufw: launchpad
+ufw-kcm:
+  name: opendesktop
+  project: '1127851'
+umbrello:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:umbrello-(\d+(?:\.\d+)+)}
+unarj:
+  name: http
+  url: http://www.ibiblio.org/pub/Linux/utils/compress/${latest:^unarj-(.*)\.tar\.gz}
+unetbootin: launchpad
+unidecode:
+  name: pypi
+  package: Unidecode
+unipath:
+  name: pypi
+  package: Unipath
+unittest-cpp: github
+unknown-horizons: github
+unvanquished:
+  name: github
+  project: Unvanquished
+  repository: Unvanquished
+upx: github
+urlgrabber:
+  spider:
+    name: github
+    project: rpm-software-management
+  formatter: n-n
+urllib3: pypi
+urlobject:
+  name: pypi
+  package: URLObject
+urlreader:
+  name: pypi
+  package: URLReader
+usb-modeswitch:
+  spider:
+    name: xpath
+    url: http://www.draisberghof.de/usb_modeswitch/
+    base: "//a[re:test(@href, '^usb-modeswitch-\\d+(\\.\\d+)*\\.tar\\.bz2$')]"
+    date: "/parent::li/text()[contains(., 'release dated')]"
+  formatter:
+  - n.n
+  - "\\d{4}-\\d{2}-\\d{2}"
+usbredir:
+  name: github
+  project: SPICE
+user-manager: kdegit
+userspace-rcu-0.8:
+  name: github
+  project: urcu
+  repository: userspace-rcu
+  tag: "^v(0\\.8\\.\\d+(\\.\\d+)?)$"
+utf8-string: hackage
+v4l2capture: pypi
+v4l2ucp:
+  name: sourceforge
+  path: v4l2ucp
+valyria-tear:
+  name: github
+  project: ValyriaTear
+  repository: ValyriaTear
+  tag: "^\\d+(?:\\.\\d+)*$"
+varconf:
+  name: github
+  project: worldforge
+vde2:
+  name: sourceforge
+  project: vde
+  path: vde2/${latest:^\d+(?:\.\d+)*$}/${latest:^vde2-(\d+(?:\.\d+)*)}
+vector: hackage
+veracrypt: sourceforge
+veusz:
+  spider: launchpad
+  formatter: n.n
+videocatcher:
+  name: opendesktop
+  project: '1126681'
+vim: github
+violetland:
+  name: github
+  project: ooxi
+virtualbox:
+  name: http
+  url: http://download.virtualbox.org/virtualbox/${highest:^\d+(\.\d+)*$}/${latest:(\d+(?:\.\d+)+)\.tar\.bz2$}
+vlc:
+  name: http
+  url: http://get.videolan.org/vlc/
+vmpk:
+  name: sourceforge
+  path: vmpk
+vokoscreen:
+  name: github
+  project: vkohaupt
+vsqlite++:
+  name: github
+  project: vinzenz
+  repository: vsqlite--
+vym: sourceforge
+w3m:
+  name: sourceforge
+  path: w3m
+wacomtablet: kdegit
+waf:
+  name: github
+  project: waf-project
+warsow:
+  name: http
+  url: https://slice.sh/warsow/${latest:^warsow-(\d+(?:\.\d+)*)\.tar\.gz$}
+warzone2100:
+  name: sourceforge
+  path: releases
+watchvideo:
+  spider:
+    name: opendesktop
+    project: '1128042'
+  formatter: n.n
+wcslib:
+  spider:
+    name: xpath
+    url: http://www.atnf.csiro.au/people/mcalabre/WCS/
+    base: "//b[re:test(text(), 'Software &c\\.')]/../..//font"
+    version: "/following-sibling::a/b/text()"
+    date: "/b/text()"
+  formatter:
+  - n.n
+  - "\\((.*)\\)"
+wcwidth: pypi
+webslice-plasmoid:
+  name: github
+  project: Cqoicebordel
+websocketpp:
+  name: github
+  project: zaphoyd
+welcome-plasmoid:
+  name: cgit
+  url: https://chakralinux.org/code/welcome-plasmoid.git/
+werkzeug:
+  name: pypi
+  package: Werkzeug
+wesnoth:
+  name: github
+  tag: ^\d+\.\d*[02468](?:\.\d+)*$
+  ignore-latest: true
+wfmath:
+  name: github
+  project: worldforge
+wget: pypi
+whois:
+  name: http
+  url: http://ftp.debian.org/debian/pool/main/w/whois/${latest:^whois_(\d+(?:\.\d+)*)\.tar\.xz$}
+wicd-kde: kdegit
+widelands:
+  spider: launchpad
+  formatter: n
+wiiuse:
+  name: github
+  project: rpavlik
+  tag: "^\\d+(?:\\.\\d+)*$"
+wine:
+  name: gitweb
+  url: https://source.winehq.org/git/wine.git
+  branch: stable
+wine-mono:
+  name: http
+  url: http://dl.winehq.org/wine/wine-mono/${latest:^\d+(\.\d+)*$}/${latest:^wine-mono-(\d(?:\.\d+)*)\.tar\.gz$}
+wine_gecko:
+  name: http
+  url: http://dl.winehq.org/wine/wine-gecko/${latest:^\d+(\.\d+)*$}/${latest:^wine_gecko-(\d(?:\.\d+)*)-x86_64-unstripped\.tar\.bz2$}
+winetricks:
+  name: github
+  project: Winetricks
+winff:
+  spider:
+    name: text
+    url: https://raw.githubusercontent.com/WinFF/winff/0aa001b9c8ebbf2e8bac4c5e7e501de09c80c3b7/winff/winff.rc
+    no-date: true
+  formatter: VALUE "FileVersion", "(\d+(?:\.\d+)*)\\000"
+wireshark:
+  spider:
+    name: xpath
+    url: https://www.wireshark.org/news/
+    base: //a[re:test(text(), "^Wireshark\s+\d+(\.\d+)+(\s*,\s+\d+(\.\d+)+)*\s+and\s+\d+(\.\d+)+\s+Released$")]
+    version: /text()
+    date: /@href
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})(?P<m>\\d{2})(?P<d>\\d{2})"
+wizznic:
+  spider:
+    name: github
+    project: DusteDdk
+    repository: Wizznic
+    tag: "^StableB\\d+$"
+  formatter: "(\\d)(\\d)(\\d)?(\\d)?"
+wordpress:
+  spider:
+    name: xpath
+    url: https://wordpress.org/download/release-archive/
+    base: "//a/@href[re:test(., 'wordpress-\\d+(?:\\.\\d+)+\\.tar\\.gz')]"
+    date-url: ''
+  formatter: n.n
+wput:
+  name: sourceforge
+  path: wput
+wxmaxima:
+  spider:
+    name: github
+    project: wxMaxima-developers
+  formatter: n.n
+wxpython:
+  spider:
+    name: github
+    project: wxWidgets
+    repository: wxPython
+  formatter: n.n
+wxwidgets:
+  name: github
+  project: wxWidgets
+  repository: wxWidgets
+x2goclient:
+  name: http
+  url: http://code.x2go.org/releases/source/x2goclient/${latest:x2goclient-(\d+(?:\.\d+)+)\.tar\.gz$}
+xalan-c:
+  spider:
+    name: http
+    url: http://apache.rediris.es/xalan/xalan-c/sources/${latest}
+  formatter: n.n
+xautomation:
+  spider:
+    name: xpath
+    url: https://www.hoopajoo.net/projects/xautomation.html
+    base: "//div[@id='content']"
+    version: "//tr[2]//a"
+    date: "//tr[1]/td[1]"
+  formatter: n.n
+xcalib:
+  name: sourceforge
+  path: xcalib/${latest:^\d(?:\.\d+)*$}/${latest:^xcalib-source-(\d(?:\.\d+)*)\.tar\.gz$}
+xchat:
+  name: http
+  url: http://xchat.org/files/source/${latest}/
+xclip:
+  name: sourceforge
+  path: xclip
+xdebug:
+  spider: github
+  formatter: n_n
+xdgurl:
+  spider: github
+  formatter: n.n
+xfce:
+  name: http
+  url: http://archive.xfce.org/xfce/${latest:^(\d+\.\d*[02468](\.\d+)*)$}
+xfce4-whiskermenu-plugin:
+  name: github
+  project: gottcode
+xgrabcolor:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=xgrabcolor&full=0
+    base: "//a[contains(@href, 'tgz/xgrabcolor-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+xgrabwindow:
+  spider:
+    name: xpath
+    url: http://hugo.pereira.free.fr/software/index.php?page=package&package_list=software_list_qt4&package=xgrabwindow&full=0
+    base: "//a[contains(@href, 'tgz/xgrabwindow-')]"
+    date: "/parent::td//following-sibling::td"
+  formatter:
+  - n.n
+  - "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})"
+xine-ui:
+  name: sourceforge
+  project: xine
+  path: xine-ui/${latest}
+xmind:
+  spider:
+    name: xpath
+    url: http://www.xmind.net/download/linux/
+    base: "//@href[re:test(., '/downloads/xmind-.*?-linux\\.zip')]"
+    no-date: true
+  formatter: "(\\d+)(?:-update(\\d+))?"
+xmldiff: pypi
+xmoto:
+  name: http
+  url: http://download.tuxfamily.org/xmoto/xmoto/${latest:^\d+(\.\d+)*$}/${latest:^xmoto-(\d+(?:\.\d+)*)-src\.tar\.gz$}
+xneur:
+  spider:
+    name: xpath
+    url: https://launchpad.net/~andrew-crew-kuznetsov/+archive/ubuntu/xneur-stable/+packages
+    base: "//table[@id='packages_list']/tbody/tr[re:test(@class, '\\barchive_package_row\\b')]/td[1]"
+    version: "/a/text()[re:test(., '\\bxneur')]"
+    date: "[a[text()[re:test(., '\\bxneur')]]]/following-sibling::td/following-sibling::td/@title"
+  formatter: n.n
+xonotic:
+  spider: github
+  formatter: n.n
+xrestop:
+  name: cgit
+  url: https://cgit.freedesktop.org/xorg/app/xrestop
+xsd:
+  name: http
+  url: http://codesynthesis.com/download/xsd/${latest:^\d+(\.\d+)*$}/${latest:^xsd-(\d+(?:\.\d+)+)\.tar\.bz2$}
+xsel:
+  spider:
+    name: http
+    url: http://www.vergenet.net/~conrad/software/xsel/download/${latest}
+  formatter: n.n
+xsettings-kde: kdegit
+xterm:
+  spider:
+    name: xpath
+    url: http://invisible-island.net/xterm/xterm.log.html
+    base: "//h2/a"
+  formatter:
+  - "#(\\d+)"
+  - "\\d{4}/\\d{2}/\\d{2}"
+yagf:
+  name: sourceforge
+  project: yagf-ocr
+yakuake:
+  name: opendesktop
+  project: '1127876'
+yaml-cpp:
+  name: github
+  project: jbeder
+yarock: launchpad
+yate:
+  name: http
+  url: http://voip.null.ro/tarballs/${highest:^yate\d+$}/${latest:^yate-(\d+(?:\.\d+)*)-\d+\.tar\.gz$}
+youtube-dl:
+  name: github
+  project: rg3
+zanshin: kdegit
+zaz: sourceforge
+zeitgeist: launchpad
+zeroconf-ioslave:
+  name: http
+  url: https://download.kde.org/stable/applications/${latest}/src/${latest:zeroconf-ioslave-(\d+(?:\.\d+)+)}
+zinnia:
+  name: sourceforge
+  path: zinnia
+zint:
+  name: sourceforge
+  path: zint
+zlib: hackage
+zsh:
+  name: sourceforge
+  path: zsh
+zsnes:
+  spider:
+    name: sourceforge
+    path: "zsnes/${latest:\\d+}/${latest:\\d+}"
+  formatter: "(\\d)(\\d+)"
+zynaddsubfx:
+  name: sourceforge
+  path: zynaddsubfx

@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: versiontracker
+Version: 2.1.4.20190921
+Summary: Web scrapping software to keep track of the latest stable version of different software.
+Home-page: http://version-tracker.rtfd.io/
+Author: Adrián Chaves (Gallaecio)
+Author-email: adriyetichaves@gmail.com
+License: AGPLv3+
+Download-URL: https://gitlab.com/gallaecio/versiontracker/repository/archive.tar.gz?ref=v2.1.4.20190921
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving :: Packaging
+Requires-Dist: argcomplete
+Requires-Dist: chardet
+Requires-Dist: cryptography (<2)
+Requires-Dist: dateparser
+Requires-Dist: pyasn1
+Requires-Dist: pyOpenSSL (<17.5.0)
+Requires-Dist: pyxdg
+Requires-Dist: PyYAML
+Requires-Dist: Scrapy
+Requires-Dist: sphinx-argparse
+Requires-Dist: termcolor
+
+Version Tracker
+===============
+
+`Version Tracker <https://gitlab.com/gallaecio/versiontracker>`_ is a project
+that provides both a command-line tool and a Python library to query the latest
+stable versions of different software products using web scrapping.
+
+For example::
+
+    $ versiontracker vlc
+    vlc: 2.2.2 (2016-07-06) @ http://get.videolan.org/vlc/
+
+Requirements
+------------
+
+Version Tracker requires `Python 3 <https://docs.python.org/3/>`_ and the
+following Python packages:
+
+- `python-dateutil <https://labix.org/python-dateutil>`_
+
+- `pyxdg <https://www.freedesktop.org/wiki/Software/pyxdg/>`_
+
+- `Scrapy <https://doc.scrapy.org/en/latest/>`_
+
+- `termcolor <https://pypi.python.org/pypi/termcolor>`_
+
+To build the offline documentation, you also need:
+
+- `sphinx-argparse <https://sphinx-argparse.readthedocs.io/en/latest/>`_
+
+
+Installation
+------------
+
+Use `pip <https://pip.pypa.io/en/stable/quickstart/>`_ to install::
+
+    pip install versiontracker
+
+
+Basic Command-Line Usage
+------------------------
+
+To use the versiontracker command-line application pass
+it a list of software IDs::
+
+    $ versiontracker vlc xfce
+    vlc: 2.2.2 (2016-07-06) @ http://get.videolan.org/vlc/
+    xfce: 4.12 (2015-02-28) @ http://archive.xfce.org/xfce/
+
+You can use the `-l` option to get a list of supported software IDs::
+
+    $ versiontracker -l
+    0ad
+    4kslideshowmaker
+    …
+
+.. _library-usage:
+
+Basic Library Usage
+-------------------
+
+Use :code:`version_info()` to get information
+about the latest stable version of a single product::
+
+    >>> from pprint import pprint
+    >>> from versiontracker import version_info
+    >>> pprint(version_info('vlc'))
+    {'id': 'vlc',
+     'date': datetime.datetime(2016, 7, 6, 10, 10),
+     'url': 'http://get.videolan.org/vlc/',
+     'version': '2.2.2'}
+
+Use :code:`iter_version_info()` to iterate
+through the version information of several products::
+
+    >>> from versiontracker import iter_version_info
+    >>> for version_data in iter_version_info(('vlc', 'xfce')):
+    ...     pprint(version_data)
+    ...
+    {'id': 'vlc',
+     'date': datetime.datetime(2016, 7, 6, 10, 10),
+     'url': 'http://get.videolan.org/vlc/',
+     'version': '2.2.2'}
+    {'id': 'xfce',
+     'date': datetime.datetime(2015, 2, 28, 21, 7),
+     'url': 'http://archive.xfce.org/xfce/',
+     'version': '4.12'}
+
+Use :code:`supported_software()` to get a
+list of supported software IDs::
+
+    >>> from versiontracker import supported_software
+    >>> supported_software()
+    ['kde-l10n-ca', 'kdiamond', 'kontactinterface', 'entropy', …]
+
+
+
+Documentation
+-------------
+
+See the complete documentation at
+`Read the Docs <https://version-tracker.readthedocs.io/en/latest/>`_.
+
+

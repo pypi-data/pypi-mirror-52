@@ -1,0 +1,5 @@
+#!python
+# PYTHON_ARGCOMPLETE_OK
+
+from versiontracker.cli import main
+main()
