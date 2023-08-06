@@ -1,0 +1,2 @@
+include *.rst *.txt AUTHORS CHANGELOG
+recursive-include pyphs *.py *.net *.template
