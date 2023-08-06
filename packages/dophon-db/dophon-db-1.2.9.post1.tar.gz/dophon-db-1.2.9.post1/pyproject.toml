@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dophon-db"
+version = "1.2.9r1"
+description = "dophon database module"
+authors = ["CallMeE <ealohu@163.com>"]
+license='Apache 2.0'
+url='https://github.com/Ca11MeE/dophon-db'
+
+[tool.poetry.dependencies]
+python = "^3.6"
+dophon-logger="*"
+dophon-properties="*"
+urllib3="*"
+schedule="*"
+
+[tool.poetry.dev-dependencies]
+#python = "^3.6"
