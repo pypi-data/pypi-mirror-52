@@ -1,0 +1,13 @@
+README.md
+setup.py
+ais_service_discovery/__init__.py
+ais_service_discovery/call_service.py
+ais_service_discovery.egg-info/PKG-INFO
+ais_service_discovery.egg-info/SOURCES.txt
+ais_service_discovery.egg-info/dependency_links.txt
+ais_service_discovery.egg-info/requires.txt
+ais_service_discovery.egg-info/top_level.txt
+ais_service_discovery/functions/__init__.py
+ais_service_discovery/services/__init__.py
+ais_service_discovery/services/cloudmap.py
+ais_service_discovery/services/helpers.py
