@@ -1,0 +1,9 @@
+pyvcf
+pysam
+numpy
+scipy
+pandas
+joblib
+seaborn
+statsmodels
+editdistance
