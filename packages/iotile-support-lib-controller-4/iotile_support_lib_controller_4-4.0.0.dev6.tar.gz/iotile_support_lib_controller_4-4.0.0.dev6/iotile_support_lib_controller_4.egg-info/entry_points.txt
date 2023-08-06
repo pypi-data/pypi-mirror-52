@@ -1,0 +1,10 @@
+[iotile.proxy_plugin]
+configmanager = iotile_support_lib_controller_4.configmanager
+controllertest = iotile_support_lib_controller_4.controllertest
+remotebridge = iotile_support_lib_controller_4.remotebridge
+sensorgraph = iotile_support_lib_controller_4.sensorgraph
+tilemanager = iotile_support_lib_controller_4.tilemanager
+
+[iotile.type_package]
+lib_controller_types = iotile_support_lib_controller_4.lib_controller_types
+
