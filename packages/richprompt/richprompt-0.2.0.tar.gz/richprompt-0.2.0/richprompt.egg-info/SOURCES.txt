@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+richprompt/__init__.py
+richprompt/magic.py
+richprompt/prompts.py
+richprompt/startup.py
+richprompt/timer.py
+richprompt.egg-info/PKG-INFO
+richprompt.egg-info/SOURCES.txt
+richprompt.egg-info/dependency_links.txt
+richprompt.egg-info/entry_points.txt
+richprompt.egg-info/requires.txt
+richprompt.egg-info/top_level.txt
