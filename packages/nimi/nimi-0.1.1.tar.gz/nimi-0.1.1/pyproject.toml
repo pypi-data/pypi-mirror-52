@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "nimi"
+version = "0.1.1"
+description = "Dynamic DNS on AWS"
+authors = ["Martin Raag <hi@mraag.xyz>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/martinraag/nimi"
+keywords = [
+  "AWS",
+  "DNS",
+  "dynamic",
+  "Lambda",
+  "Route53"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Topic :: Utilities",
+  "Topic :: Internet :: Name Service (DNS)"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+boto3 = "^1.9"
+click = "^7.0"
+jinja2 = "^2.10"
+requests = "^2.22"
+terminaltables = "^3.1"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^18.3-alpha.0", allows-prereleases = true}
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+nimi = "nimi:cli.cli"
