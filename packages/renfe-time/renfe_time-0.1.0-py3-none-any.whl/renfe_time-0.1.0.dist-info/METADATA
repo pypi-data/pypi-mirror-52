@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: renfe-time
+Version: 0.1.0
+Summary: Simple package to obtain and parse train schedules from RENFE
+Home-page: https://github.com/rmon-vfer/renfe_time
+Author: Ramón Vila Ferreres
+Author-email: ramon.vila@the-cocktail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Renfe Time
+renfe-time scrapes and parses train schedules for RENFE trains in Spain. At the moment, only Asturias is supported
+
+### Usage
+```python
+from renfe_time import RenfeTime as rt
+from datetime import datetime
+import pprint
+
+table = rt.getTimeTable(
+    rt.getStationCode( "Gijón" ),
+    rt.getStationCode( "Oviedo" ),
+    datetime.now(), "00", "26", False
+)
+
+pprint.pprint( table, indent = 4 )
+```
+
+
