@@ -1,0 +1,3 @@
+[console_scripts]
+slov-ctl = slovnet.ctl:main
+
