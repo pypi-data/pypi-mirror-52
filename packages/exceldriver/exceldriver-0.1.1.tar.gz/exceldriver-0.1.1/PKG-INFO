@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: exceldriver
+Version: 0.1.1
+Summary: Tool for automating excel actions on Windows
+Home-page: https://github.com/whoopnip/py-excel-driver/
+Author: Nick DeRobertis
+Author-email: whoopnip@gmail.com
+License: MIT
+Project-URL: Code, https://github.com/whoopnip/py-excel-driver/
+Project-URL: Documentation, https://whoopnip.github.io/py-excel-driver/
+Description: 
+        This is a tool used to work with Excel from Python. It currently mainly handles starting and stopping
+        excel, and getting the active excel instance and workbook so that COM commands can be run on them.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
