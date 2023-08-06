@@ -1,0 +1,5 @@
+recursive-include pynclose *.py
+recursive-include inclose_package *.cpp *.h *.py
+include MANIFEST.in
+exclude *.mkd Makefile
+prune run_test_dir

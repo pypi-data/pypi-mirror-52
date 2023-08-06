@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: pynclose
+Version: 0.0.6
+Summary: wrapper around an in-close implementation
+Home-page: https://github.com/aluriak/pynclose
+Author: Lucas Bourneuf
+Author-email: lucas.bourneuf@laposte.net
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: # Pynclose
+        Python wrapper around the [In-Close algorithm implementation by Simon Andrews](https://sourceforge.net/projects/inclose/), Sheffield Hallam University, UK, Conceptual Structures Research Group.
+        
+        
+        ## In-Close sources
+        Version of 18/07/2017 retrieved from
+        [the project page](https://sourceforge.net/projects/inclose/),
+        and slightly changed to remove non-necessary parts (see 468fad66 and 04c00c47).
+        
+        ### Features
+        - [X] make the sources really wrappable and usable as a lib, notability by crushing the main into a function with lots of parameters instead of waiting for them in the standard input.
+        - [ ] fix the C global variable bug, as found by [run_test_dir/test_reusability_of_search.py](run_test_dir/test_reusability_of_search.py)
+        - [ ] Unit tests.
+        - [ ] Better file path management (python side, probably).
+        - [ ] Packaging is currently a mess ; notabily becauses C package is not properly integrated into the package itself. Compilation may or may not be working when installing from pypi.
+        
+Keywords: Formal Concept Analysis,Answer Set Programming
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
