@@ -1,0 +1,4 @@
+[console_scripts]
+paradrop = paradrop:main
+pdconfd = paradrop:run_pdconfd
+
