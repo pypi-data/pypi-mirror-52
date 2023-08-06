@@ -1,0 +1,7 @@
+xcffib<1.0,>=0.6.0
+click<7.0,>=6.7
+cffi<2.0,>=1.11
+xpybutil<1.0,>=0.0.6
+marshmallow<4.0,>=2.15
+pyyaml<6.0,>=5.1
+i3ipc<3.0,>=2.1.1
