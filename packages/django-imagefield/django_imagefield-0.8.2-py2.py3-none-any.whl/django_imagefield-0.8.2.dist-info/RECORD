@@ -1,0 +1,17 @@
+django_imagefield-0.8.2.dist-info/DESCRIPTION.rst,sha256=fVK0dI_pATOmxShG8QG6y4BnUwY-PrfEh7gG6cqWtYM,8462
+django_imagefield-0.8.2.dist-info/METADATA,sha256=AEofj_xzGoWqiIT7tFh_g03Mpj82pOVayWcq041LBOA,9342
+django_imagefield-0.8.2.dist-info/RECORD,,
+django_imagefield-0.8.2.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_imagefield-0.8.2.dist-info/metadata.json,sha256=UKw6WnKNmIRZFt0f06248X5T6OO28B9dmK19XTu16UM,1034
+django_imagefield-0.8.2.dist-info/top_level.txt,sha256=pYlp1kLaJjVwQBnFe09OpUOmgqsBo5KwgeLmSTIpsLU,11
+imagefield/__init__.py,sha256=okVS8tm5dqy1bs8fFybHMYyJ0wse3IJn_kMTg4njsP8,62
+imagefield/fields.py,sha256=g7XDdQu8BrcJtotZxEJsCNbuOaCAzGiGf-TnVHqt3Q8,13509
+imagefield/processing.py,sha256=1Bqq-IGeT9beVvr6R7QfBfJRYIvywi6bLWwyFmEKK8c,5300
+imagefield/widgets.py,sha256=6lkSnmkULP86CaAfTDN3mqRWjrIqdCmaImcDKXrfl7k,2598
+imagefield/locale/de/LC_MESSAGES/django.mo,sha256=DxLhgdwbR235hCaHNieDPQRaBJOqjjA_bjszrGHxXSI,774
+imagefield/locale/de/LC_MESSAGES/django.po,sha256=nnqx_V-AUHvSdUBSG5pELAY-PnmxAgZRyEQXLtSkX8U,1105
+imagefield/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imagefield/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imagefield/management/commands/process_imagefields.py,sha256=sAWyI11-NmGesmpM0Z-eXrUbYlfn41aTd8fP9X-YYGo,3915
+imagefield/static/imagefield/ppoi.css,sha256=qOy3ijSxTyPl2iGnpMbdeKiRVqQwgglGs7ikld5QAuw,515
+imagefield/static/imagefield/ppoi.js,sha256=orQ6RBm5gmF-O9KIVCC2f-G2_NOboBW8ROL3dW_Mhno,1835
