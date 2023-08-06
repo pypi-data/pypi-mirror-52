@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: mflux-ai
+Version: 0.5.3
+Summary: The Python client for MFlux.ai
+Home-page: https://github.com/AIAScience/mflux-ai-python
+Author: AIA Science AS
+Author-email: mflux.ai@aiascience.com
+License: Apache License 2.0
+Keywords: mflux_ai mlflow ml tracking ai workflow machine learning object storage dataset versioning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Version Control
+Requires-Python: >=3.5, <4
+Requires-Dist: joblib (<1)
+Requires-Dist: minio (<5,>=4)
+Requires-Dist: requests
+
+========
+mflux-ai
+========
+
+.. image:: https://img.shields.io/pypi/v/mflux_ai.svg
+        :target: https://pypi.python.org/pypi/mflux_ai
+
+.. image:: https://img.shields.io/travis/AIAScience/mflux-ai-python.svg?branch=master
+        :target: https://travis-ci.org/AIAScience/mflux-ai-python
+
+This is the official :code:`mflux-ai` python library for `MFlux.ai
+<https://www.mflux.ai>`_
+
+Features
+--------
+- Fetch connection strings and tell MLflow how to connect with MFlux.ai
+- Download and upload objects/datasets from/to the MFlux.ai cloud service
+
+Quickstart
+----------
+Installation
+
+    pip install mflux-ai
+
+Basic usage
+
+.. code:: python
+
+    import mflux_ai
+
+    mflux_ai.init("INSERT_YOUR_PROJECT_TOKEN_HERE")
+
+    # MLflow now knows how to connect with your project server, hosted on MFlux.ai
+
+Store and retrieve datasets
+
+.. code:: python
+
+    my_dataset = np.zeros(shape=(10000, 100), dtype=np.float32)
+    dataset_filename = "my-dataset.pkl"
+
+    mflux_ai.put_dataset(my_dataset, dataset_filename)
+
+    my_loaded_dataset = mflux_ai.get_dataset(dataset_filename)
+
+    assert_array_equal(my_dataset, my_loaded_dataset)
+
+
+=======
+History
+=======
+
+v0.5.3 (2019-09-23)
+-------------------
+
+* Improve the performance and the support for special characters in object names in :code:`mflux_ai.get_dataset` by unpickling in memory instead of using a temporary file on disk.
+* Don't expose non-public variables and imports on the top-level package
+
+v0.5.2 (2019-09-20)
+-------------------
+
+* Improve the performance of :code:`mflux_ai.put_dataset` by pickling in memory instead of using a temporary file on disk.
+
+v0.5.1 (2019-09-12)
+-------------------
+
+* Add support for MLflow authentication
+* Improve the performance of :code:`mflux_ai.put_dataset`
+* Correctly reset the MinIO client when :code:`init` completes successfully
+* Specify the desired API version and let the user know if an upgrade is needed
+
+v0.4.0 (2019-09-01)
+-------------------
+
+* Mark :code:`mflux_ai.set_env_vars()` as deprecated. Use :code:`mflux_ai.init()` instead.
+* Remove support for Python 3.4
+* Add support for secure MinIO connections
+
+v0.3.0 (2019-08-16)
+-------------------
+
+* Add a function :code:`init` that will eventually replace :code:`set_env_vars`
+* Check if the provided project token is valid.
+
+v0.2.1 (2019-08-16)
+-------------------
+
+* Set licence to Apache License 2.0
+* Transition from pre-alpha to alpha.
+
+v0.2.0 (2019-08-14)
+-------------------
+
+* Add convenience functions for storing and retrieving datasets
+
+v0.1.1 (2019-08-14)
+-------------------
+
+* First release on PyPI. Has support for setting environment variables for MLflow based on an MFlux.ai project token.
+
+
