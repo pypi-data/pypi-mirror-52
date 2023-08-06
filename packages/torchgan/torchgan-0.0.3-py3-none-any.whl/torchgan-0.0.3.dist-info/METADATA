@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: torchgan
+Version: 0.0.3
+Summary: Research Framework for easy and efficient training of GANs based on Pytorch
+Home-page: https://github.com/torchgan/torchgan
+Author: Avik Pal & Aniket Das
+Author-email: avikpal@cse.iitk.ac.in
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pillow (==5.3.0)
+Requires-Dist: fastprogress
+
+UNKNOWN
+
+
