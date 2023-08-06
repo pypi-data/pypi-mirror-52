@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        oauth-ssh=oauth_ssh.oauth_ssh:oauth_ssh
+        oauth-ssh-token=oauth_ssh.oauth_ssh_token:oauth_ssh_token
+    
