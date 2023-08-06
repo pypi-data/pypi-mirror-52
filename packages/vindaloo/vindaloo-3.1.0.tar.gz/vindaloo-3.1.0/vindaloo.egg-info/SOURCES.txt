@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+vindaloo/__init__.py
+vindaloo/examples.py
+vindaloo/objects.py
+vindaloo/utils.py
+vindaloo/vindaloo.py
+vindaloo.egg-info/PKG-INFO
+vindaloo.egg-info/SOURCES.txt
+vindaloo.egg-info/dependency_links.txt
+vindaloo.egg-info/entry_points.txt
+vindaloo.egg-info/requires.txt
+vindaloo.egg-info/top_level.txt
