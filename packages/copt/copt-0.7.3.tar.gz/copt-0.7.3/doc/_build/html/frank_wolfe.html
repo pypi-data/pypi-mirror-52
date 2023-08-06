@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Frank-Wolfe &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="copt.minimize_frank_wolfe" href="generated/copt.minimize_frank_wolfe.html" />
+    <link rel="prev" title="copt.minimize_three_split" href="generated/copt.minimize_three_split.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="frank-wolfe">
+<span id="id1"></span><h1>Frank-Wolfe<a class="headerlink" href="#frank-wolfe" title="Permalink to this headline">¶</a></h1>
+<p>This section describes the implementation of the Frank-Wolfe and other projection-free algorithms</p>
+<div class="section" id="id2">
+<h2>Frank-Wolfe<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>The Frank-Wolfe (FW) or conditional gradient algorithm <a class="reference internal" href="#j2003" id="id3"><span>[J2003]</span></a>, <a class="reference internal" href="#p2018" id="id4"><span>[P2018]</span></a>, <a class="reference internal" href="#panj2018" id="id5"><span>[PANJ2018]</span></a> is a method for constrained optimization. It can solve problems of the form</p>
+<div class="math notranslate nohighlight">
+\[\argmin_{\bs{x} \in \mathcal{D}} f(\bs{x})\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is a differentiable function for which we have access to its gradient and <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is a compact set for which we have access to its linear minimization oracle (lmo). This is a routine that given a vector <span class="math notranslate nohighlight">\(\bs{u}\)</span> returns a solution to</p>
+<div class="math notranslate nohighlight">
+\[\argmin_{\bs{x} \in D}\, \langle\bs{u}, \bs{x}\rangle~.\]</div>
+<p>Contrary to other constrained optimization algorithms like projected gradient descent, the Frank-Wolfe algorithm does not require access to a projection, hence why it is sometimes referred to as a projection-free algorithm. It instead relies exclusively on the linear minimization oracle described above.</p>
+<p>The Frank-Wolfe algorithm is implemented in this library in the method <a class="reference internal" href="generated/copt.minimize_frank_wolfe.html#copt.minimize_frank_wolfe" title="copt.minimize_frank_wolfe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copt.minimize_frank_wolfe()</span></code></a>. As most other methods it takes as argument an objective function to minimize, but unlike most other methods, it requires access to a <em>linear minimization oracle</em>, which is a routine that for a given $d$-dimensional vector <span class="math notranslate nohighlight">\(\bs{u}\)</span> solves the linear problems  <span class="math notranslate nohighlight">\(\argmin_{\bs{z} \in D}\, \langle \nabla u, \bs{z}\rangle\)</span>.</p>
+<p>At each iteration, the Frank-Wolfe algorithm uses the linear minimization oracle to identify the vertex <span class="math notranslate nohighlight">\(\bs{s}_t\)</span>boldsymbol{x}^+` is constructed as a convex combination of the current iterate <span class="math notranslate nohighlight">\(\boldsymbol{x}\)</span> and the newly acquired vertex <span class="math notranslate nohighlight">\(\boldsymbol{s}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{x}^+ = (1 - \gamma)\boldsymbol{x} + \gamma \boldsymbol{s}\]</div>
+<p>The step-size <span class="math notranslate nohighlight">\(\gamma\)</span> can be chosen by different strategies:</p>
+<blockquote>
+<div><ul>
+<li><p><strong>Inexact line-search</strong>. This is the default option and corresponds to the keyword argument <code class="code docutils literal notranslate"><span class="pre">step_size=&quot;adaptive&quot;</span></code> This is typically the fastest and simplest method, if unsure, use this option.</p></li>
+<li><p><strong>Demyanov-Rubinov step-size</strong>. This is a step-size of the form</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \langle \nabla f(\bs{x}), \bs{s} - \bs{x}\rangle / (L \|\bs{s} - \bs{x}\|^2)~.\]</div>
+<p>This step-size typically performs well but has the drawback that it requires knowledge of the Lipschitz constant of <span class="math notranslate nohighlight">\(\nabla f\)</span>. This step-size can be used with the keyword argument <code class="code docutils literal notranslate"><span class="pre">step_size=&quot;DR&quot;</span></code>. In this case the Lipschitz
+constant <span class="math notranslate nohighlight">\(L\)</span> needs to be specified through the keyword argument <code class="code docutils literal notranslate"><span class="pre">lipschitz</span></code>. For example, if the lipschitz constant is 0.1, then the signature should include <code class="code docutils literal notranslate"><span class="pre">step_size=&quot;DR&quot;,</span> <span class="pre">lipschitz=0.1</span></code>.</p>
+</li>
+<li><p><strong>Oblivious step-size</strong>. This is the very simple step-size of the form</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{2}{t+2}~,\]</div>
+<p>where <span class="math notranslate nohighlight">\(t\)</span> is the number of iterations. This step-size is oblivious since it doesn’t use any previous information of the objective. It typically performs worst than the alternatives, but is simple to implement and can be competitive in the case in the case of noisy objectives.</p>
+</li>
+</ul>
+</div></blockquote>
+<p>Below is an illustration of the iterates generated by the Frank-Wolfe algorithkm on a toy 2-dimensional problem, in which the triangle is the domain  <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> and the level curves represent values of the objective function  <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<img alt="FW iterates" class="align-center" src="http://fa.bianp.net/images/2018/FW_iterates.png" />
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/copt.minimize_frank_wolfe.html#copt.minimize_frank_wolfe" title="copt.minimize_frank_wolfe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copt.minimize_frank_wolfe</span></code></a>(f_grad, x0, lmo[, …])</p></td>
+<td><p>Frank-Wolfe algorithm.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="auto_examples/frank_wolfe/plot_sparse_benchmark.html#sphx-glr-auto-examples-frank-wolfe-plot-sparse-benchmark-py"><span class="std std-ref">Benchmark of Frank-Wolfe variants for sparse logistic regression</span></a></p></li>
+<li><p><a class="reference internal" href="auto_examples/frank_wolfe/plot_vertex_overlap.html#sphx-glr-auto-examples-frank-wolfe-plot-vertex-overlap-py"><span class="std std-ref">Update Direction Overlap in Frank-Wolfe</span></a></p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">References:</p>
+<dl class="citation">
+<dt class="label" id="j2003"><span class="brackets"><a class="fn-backref" href="#id3">J2003</a></span></dt>
+<dd><p>Jaggi, Martin. <a class="reference external" href="http://proceedings.mlr.press/v28/jaggi13-supp.pdf">“Revisiting Frank-Wolfe: Projection-Free Sparse Convex Optimization.”</a> ICML 2013.</p>
+</dd>
+<dt class="label" id="p2018"><span class="brackets"><a class="fn-backref" href="#id4">P2018</a></span></dt>
+<dd><p>Pedregosa, Fabian <a class="reference external" href="http://fa.bianp.net/blog/2018/notes-on-the-frank-wolfe-algorithm-part-i/">“Notes on the Frank-Wolfe Algorithm”</a>, 2018</p>
+</dd>
+<dt class="label" id="panj2018"><span class="brackets"><a class="fn-backref" href="#id5">PANJ2018</a></span></dt>
+<dd><p>Pedregosa, Fabian, Armin Askari, Geoffrey Negiar, and Martin Jaggi. <a class="reference external" href="https://arxiv.org/pdf/1806.05123.pdf">“Step-Size Adaptivity in Projection-Free Optimization.”</a> arXiv:1806.05123 (2018).</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="pairwise-frank-wolfe">
+<h2>Pairwise Frank-Wolfe<a class="headerlink" href="#pairwise-frank-wolfe" title="Permalink to this headline">¶</a></h2>
+<p>As the Frank-Wolfe algorithm, the Pairwise Frank-Wolfe <a class="reference internal" href="#lj2015" id="id6"><span>[LJ2015]</span></a> solves problems of the form</p>
+<div class="math notranslate nohighlight">
+\[\argmin_{\bs{x} \in \mathcal{D}} f(\bs{x})\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span>. is differentiable and the domain <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is a convex and compart set.</p>
+<p>Although the algorithm is more broadly applicable, this library’s implementation, <a class="reference internal" href="generated/copt.minimize_pairwise_frank_wolfe.html#copt.minimize_pairwise_frank_wolfe" title="copt.minimize_pairwise_frank_wolfe"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copt.minimize_pairwise_frank_wolfe()</span></code></a>, assumes that the domain <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is the <span class="math notranslate nohighlight">\(\ell_1\)</span> ball, that is, <span class="math notranslate nohighlight">\(\mathcal{D} = \{x : \sum_i |x| \leq \alpha\}\)</span>, where <span class="math notranslate nohighlight">\(\alpha\)</span> is a user-defined parameter.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/copt.minimize_pairwise_frank_wolfe.html#copt.minimize_pairwise_frank_wolfe" title="copt.minimize_pairwise_frank_wolfe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copt.minimize_pairwise_frank_wolfe</span></code></a>(f_grad, …)</p></td>
+<td><p>Pairwise FW on the L1 ball.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="auto_examples/frank_wolfe/plot_sparse_benchmark_pairwise.html#sphx-glr-auto-examples-frank-wolfe-plot-sparse-benchmark-pairwise-py"><span class="std std-ref">Benchmark of Pairwise Frank-Wolfe variants for sparse logistic regression</span></a></p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">References:</p>
+<dl class="citation">
+<dt class="label" id="lj2015"><span class="brackets"><a class="fn-backref" href="#id6">LJ2015</a></span></dt>
+<dd><p>Lacoste-Julien, Simon, and Martin Jaggi. <a class="reference external" href="https://arxiv.org/pdf/1511.05932.pdf">“On the global linear convergence of Frank-Wolfe optimization variants.”</a> Advances in Neural Information Processing Systems. 2015.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frank-Wolfe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Frank-Wolfe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pairwise-frank-wolfe">Pairwise Frank-Wolfe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/frank_wolfe.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

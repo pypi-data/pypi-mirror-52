@@ -1,0 +1,87 @@
+\documentclass[twoside,11pt]{article}
+
+\usepackage[nohyperref, preprint]{jmlr2e}
+
+\usepackage{amsmath}
+% \usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{empheq}
+\usepackage{xcolor, color, colortbl}
+\usepackage{mdframed}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{enumitem}
+% For figures
+\usepackage{graphicx} % more modern
+
+
+\newcommand{\blue}{\color{blue}}
+
+\definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+\usepackage[colorlinks=true,
+    linkcolor=mydarkblue,
+    citecolor=mydarkblue,
+    filecolor=mydarkblue,
+    urlcolor=mydarkblue,
+    pdfview=FitH]{hyperref}
+
+\graphicspath{{./figures/}}
+
+
+\jmlrheading{1}{2019}{1-48}{4/00}{10/00}{X}{Authors}
+
+% Short headings should be running head and authors last names
+
+\ShortHeadings{C-OPT: Composite Optimization in Python}{Pedregosa}
+\firstpageno{1}
+
+
+\begin{document}
+
+\title{C-OPT: Composite Optimization in Python}
+\author{\name Fabian Pedregosa \email pedregosa@google.com \\
+       \addr Google Research\\
+}
+\editor{}
+
+
+\maketitle
+
+
+\begin{abstract}
+\emph{copt} is a Python library integrating a wide range of classical optimization algorithm for medium-scale problems. By packaging a wide array of optimization algorithms into a consistent API, this package focuses on brining optimization algorithms to practitioners. Emphasis is on robustness, doocumentation, performance and API consistency. It has minimal dependencies and is distributed under the Apache-2.0 license, encouraging its use in both academic and commercial settings.
+\end{abstract}
+
+\begin{keywords}
+  optimization, python
+\end{keywords}
+
+\section{Introduction}
+
+{\blue Big environment Python for scientific computing. \newcommand{\blue}{\color{blue}}
+}
+
+\section{Project Vision}
+
+\paragraph{Code quality.}
+
+\paragraph{Bare-bones design and API.}
+
+\paragraph{Documentation.}
+
+\paragraph{Apache license.}
+
+
+\section{Underlying Technologies}
+
+\citep{virtanen2019scipy}
+
+\citep{pedregosa2011scikit}
+
+\section{Computational}
+
+\bibliography{biblio}
+
+
+\end{document}

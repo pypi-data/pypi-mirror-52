@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>copt.minimize_proximal_gradient &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="copt.minimize_primal_dual" href="copt.minimize_primal_dual.html" />
+    <link rel="prev" title="Gradient-based methods" href="../proximal_gradient.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="copt-minimize-proximal-gradient">
+<h1>copt.minimize_proximal_gradient<a class="headerlink" href="#copt-minimize-proximal-gradient" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="copt.minimize_proximal_gradient">
+<code class="sig-prename descclassname">copt.</code><code class="sig-name descname">minimize_proximal_gradient</code><span class="sig-paren">(</span><em class="sig-param">f_grad</em>, <em class="sig-param">x0</em>, <em class="sig-param">prox=None</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">max_iter=500</em>, <em class="sig-param">verbose=0</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">step_size='adaptive'</em>, <em class="sig-param">accelerated=False</em>, <em class="sig-param">max_iter_backtracking=1000</em>, <em class="sig-param">backtracking_factor=0.6</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/9fc2dcc/copt/proximal_gradient.py#L10"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.minimize_proximal_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proximal gradient descent.</p>
+<p>Solves problems of the form</p>
+<blockquote>
+<div><p>minimize_x f(x) + g(x)</p>
+</div></blockquote>
+<p>where we have access to the gradient of f and the proximal operator of g.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f_grad</strong> – callable.
+Value and gradient of f: <code class="docutils literal notranslate"><span class="pre">f_grad(x)</span> <span class="pre">-&gt;</span> <span class="pre">float,</span> <span class="pre">array-like</span></code>.</p></li>
+<li><p><strong>x0</strong> – array-like of size n_features
+Initial guess of solution.</p></li>
+<li><p><strong>prox</strong> – callable, optional.
+Proximal operator g.</p></li>
+<li><p><strong>tol</strong> – float</p></li>
+<li><p><strong>max_iter</strong> – int, optional.
+Maximum number of iterations.</p></li>
+<li><p><strong>verbose</strong> – int, optional.
+Verbosity level, from 0 (no output) to 2 (output on each iteration)</p></li>
+<li><p><strong>callback</strong> – callable.
+callback function (optional). Takes a single argument (x) with the
+current coefficients in the algorithm. The algorithm will exit if
+callback returns False.</p></li>
+<li><p><strong>step_size</strong> – float or “adaptive” or (float, “adaptive”).
+Step-size value and/or strategy.</p></li>
+<li><p><strong>accelerated</strong> – boolean
+Whether to use the accelerated variant of the algorithm.</p></li>
+<li><p><strong>max_iter_backtracking</strong> – int</p></li>
+<li><p><strong>backtracking_factor</strong> – float</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The optimization result represented as a</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scipy.optimize.OptimizeResult</span></code> object. Important attributes are:
+<code class="docutils literal notranslate"><span class="pre">x</span></code> the solution array, <code class="docutils literal notranslate"><span class="pre">success</span></code> a Boolean flag indicating if
+the optimizer exited successfully and <code class="docutils literal notranslate"><span class="pre">message</span></code> which describes
+the cause of the termination. See <cite>scipy.optimize.OptimizeResult</cite>
+for a description of other attributes.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>res</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Beck, Amir, and Marc Teboulle. “Gradient-based algorithms with applications
+to signal recovery.” Convex optimization in signal processing and
+communications (2009)</p>
+<p class="rubric">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../auto_examples/plot_group_lasso.html#sphx-glr-auto-examples-plot-group-lasso-py"><span class="std std-ref">Group Lasso regularization</span></a></p></li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../proximal_gradient.html">Gradient-based methods</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../proximal_gradient.html#id1">Proximal-Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../proximal_gradient.html#primal-dual-hybrid-gradient">Primal-dual hybrid gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../proximal_gradient.html#three-operator-splitting">Three-operator splitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/generated/copt.minimize_proximal_gradient.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

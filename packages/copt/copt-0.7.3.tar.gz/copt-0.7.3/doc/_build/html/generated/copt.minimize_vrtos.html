@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>copt.minimize_vrtos &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Loss and regularization functions" href="../loss_functions.html" />
+    <link rel="prev" title="copt.minimize_svrg" href="copt.minimize_svrg.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="copt-minimize-vrtos">
+<h1>copt.minimize_vrtos<a class="headerlink" href="#copt-minimize-vrtos" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="copt.minimize_vrtos">
+<code class="sig-prename descclassname">copt.</code><code class="sig-name descname">minimize_vrtos</code><span class="sig-paren">(</span><em class="sig-param">f_deriv</em>, <em class="sig-param">A</em>, <em class="sig-param">b</em>, <em class="sig-param">x0</em>, <em class="sig-param">step_size</em>, <em class="sig-param">prox_1=None</em>, <em class="sig-param">prox_2=None</em>, <em class="sig-param">alpha=0</em>, <em class="sig-param">max_iter=500</em>, <em class="sig-param">tol=1e-06</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/9fc2dcc/copt/randomized.py#L415"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.minimize_vrtos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variance-reduced three operator splitting (VRTOS) algorithm.</p>
+<p>The VRTOS algorithm can solve optimization problems of the form</p>
+<blockquote>
+<div><p>argmin_{x in R^p} sum_{i}^n_samples f(A_i^T x, b_i) + alpha *
+||x||_2^2 +</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>pen1(x) + pen2(x)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f_deriv</strong> – derivative of f</p></li>
+<li><p><strong>x0</strong> (<em>np.ndarray</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a><em>, </em><em>optional</em>) – Starting point for optimization.</p></li>
+<li><p><strong>step_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a><em>, </em><em>optional</em>) – Step size for the optimization. If None is given, this will be
+estimated from the function f.</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Number of threads to use in the optimization. A number higher than 1
+will use the Asynchronous SAGA optimization method described in
+[Pedregosa et al., 2017]</p></li>
+<li><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Maximum number of passes through the data in the optimization.</p></li>
+<li><p><strong>tol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – Tolerance criterion. The algorithm will stop whenever the norm of the
+gradient mapping (generalization of the gradient for nonsmooth
+optimization)
+is below tol.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Verbosity level. True might print some messages.</p></li>
+<li><p><strong>trace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Whether to trace convergence of the function, useful for plotting and/or
+debugging. If ye, the result will have extra members trace_func,
+trace_time.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>opt</strong> – The optimization result represented as a
+<code class="docutils literal notranslate"><span class="pre">scipy.optimize.OptimizeResult</span></code> object. Important attributes are:
+<code class="docutils literal notranslate"><span class="pre">x</span></code> the solution array, <code class="docutils literal notranslate"><span class="pre">success</span></code> a Boolean flag indicating if
+the optimizer exited successfully and <code class="docutils literal notranslate"><span class="pre">message</span></code> which describes
+the cause of the termination. See <cite>scipy.optimize.OptimizeResult</cite>
+for a description of other attributes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>OptimizeResult</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Pedregosa, Fabian, Kilian Fatras, and Mattia Casotto. “Variance Reduced
+Three Operator Splitting.” arXiv preprint arXiv:1806.07294 (2018).</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../stochastic.html">Stochastic methods</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="copt.minimize_saga.html">copt.minimize_saga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.minimize_svrg.html">copt.minimize_svrg</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">copt.minimize_vrtos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/generated/copt.minimize_vrtos.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

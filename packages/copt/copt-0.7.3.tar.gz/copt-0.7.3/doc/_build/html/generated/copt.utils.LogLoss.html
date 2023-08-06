@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>copt.utils.LogLoss &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="copt.utils.SquareLoss" href="copt.utils.SquareLoss.html" />
+    <link rel="prev" title="Loss and regularization functions" href="../loss_functions.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="copt-utils-logloss">
+<h1>copt.utils.LogLoss<a class="headerlink" href="#copt-utils-logloss" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="copt.utils.LogLoss">
+<em class="property">class </em><code class="sig-prename descclassname">copt.utils.</code><code class="sig-name descname">LogLoss</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">b</em>, <em class="sig-param">alpha=0.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/336fb7c/copt/utils.py#L130"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.utils.LogLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logistic loss function.</p>
+<p>The logistic loss function is defined as</p>
+<div class="math notranslate nohighlight">
+\[-\frac{1}{n}\sum_{i=1}^n b_i \log(\sigma(\bs{a}_i^T \bs{x}))
+   + (1 - b_i) \log(1 - \sigma(\bs{a}_i^T \bs{x}))\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the sigmoid function
+<span class="math notranslate nohighlight">\(\sigma(t) = 1/(1 + e^{-t})\)</span>.</p>
+<p>The input vector b verifies <span class="math notranslate nohighlight">\(0 \leq b_i \leq 1\)</span>. When it comes from
+class labels, it should have the values 0 or 1.</p>
+<p class="rubric">References</p>
+<p><a class="reference external" href="http://fa.bianp.net/drafts/derivatives_logistic.html">http://fa.bianp.net/drafts/derivatives_logistic.html</a></p>
+<dl class="method">
+<dt id="copt.utils.LogLoss.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">b</em>, <em class="sig-param">alpha=0.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/336fb7c/copt/utils.py#L149"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.utils.LogLoss.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#copt.utils.LogLoss.Hessian" title="copt.utils.LogLoss.Hessian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Hessian</span></code></a>(x)</p></td>
+<td><p>Return a callable that performs dot products with the Hessian.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#copt.utils.LogLoss.__init__" title="copt.utils.LogLoss.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(A, b[, alpha])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">f_grad</span></code>(x[, return_gradient])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">lipschitz</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_lipschitz</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">partial_deriv</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="copt.utils.LogLoss.Hessian">
+<code class="sig-name descname">Hessian</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/336fb7c/copt/utils.py#L220"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.utils.LogLoss.Hessian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a callable that performs dot products with the Hessian.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="copt.utils.LogLoss.expit_b">
+<code class="sig-name descname">expit_b</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/336fb7c/copt/utils.py#L185"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.utils.LogLoss.expit_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute sigmoid(x) - b.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="copt.utils.LogLoss.logsig">
+<code class="sig-name descname">logsig</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/336fb7c/copt/utils.py#L172"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.utils.LogLoss.logsig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute log(1 / (1 + exp(-t))) component-wise.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../loss_functions.html">Loss and regularization functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">copt.utils.LogLoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.SquareLoss.html">copt.utils.SquareLoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.HuberLoss.html">copt.utils.HuberLoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.L1Norm.html">copt.utils.L1Norm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.L1Ball.html">copt.utils.L1Ball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.GroupL1.html">copt.utils.GroupL1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.TraceNorm.html">copt.utils.TraceNorm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.TraceBall.html">copt.utils.TraceBall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copt.utils.TotalVariation2D.html">copt.utils.TotalVariation2D</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/generated/copt.utils.LogLoss.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,112 @@
+
+
+Examples using ``copt.utils.LogLoss``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Speed of convergence comparison between gradient descent and Nesterov acceleration on a logisti...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_accelerated_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_accelerated.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_plot_accelerated.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="A comparison between two variance-reduced stochastic gradient methods: SAGA (implemented in cop...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_saga_vs_svrg_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_saga_vs_svrg.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_plot_saga_vs_svrg.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Speed of convergence of different Frank-Wolfe variants on various problems with a logistic regr...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/frank_wolfe/images/thumb/sphx_glr_plot_sparse_benchmark_thumb.png
+
+        :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Speed of convergence of different Frank-Wolfe variants on various problems with a logistic regr...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/frank_wolfe/images/thumb/sphx_glr_plot_sparse_benchmark_pairwise_thumb.png
+
+        :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark_pairwise.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark_pairwise.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example quantifies how many times the Frank-Wolfe algorithm selects the same extremal vert...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/frank_wolfe/images/thumb/sphx_glr_plot_vertex_overlap_thumb.png
+
+        :ref:`sphx_glr_auto_examples_frank_wolfe_plot_vertex_overlap.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_frank_wolfe_plot_vertex_overlap.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Comparison of solvers for a least squares with overlapping group lasso regularization.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/proximal_splitting/images/thumb/sphx_glr_plot_overlapping_group_lasso_thumb.png
+
+        :ref:`sphx_glr_auto_examples_proximal_splitting_plot_overlapping_group_lasso.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_proximal_splitting_plot_overlapping_group_lasso.py`

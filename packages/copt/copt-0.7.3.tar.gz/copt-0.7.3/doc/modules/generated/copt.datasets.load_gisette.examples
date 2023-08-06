@@ -1,0 +1,58 @@
+
+
+Examples using ``copt.datasets.load_gisette``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Speed of convergence of different Frank-Wolfe variants on various problems with a logistic regr...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/frank_wolfe/images/thumb/sphx_glr_plot_sparse_benchmark_thumb.png
+
+        :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Speed of convergence of different Frank-Wolfe variants on various problems with a logistic regr...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/frank_wolfe/images/thumb/sphx_glr_plot_sparse_benchmark_pairwise_thumb.png
+
+        :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark_pairwise.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_frank_wolfe_plot_sparse_benchmark_pairwise.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example quantifies how many times the Frank-Wolfe algorithm selects the same extremal vert...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/frank_wolfe/images/thumb/sphx_glr_plot_vertex_overlap_thumb.png
+
+        :ref:`sphx_glr_auto_examples_frank_wolfe_plot_vertex_overlap.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_frank_wolfe_plot_vertex_overlap.py`

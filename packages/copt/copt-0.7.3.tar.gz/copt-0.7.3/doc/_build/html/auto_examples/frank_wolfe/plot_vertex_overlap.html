@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Update Direction Overlap in Frank-Wolfe &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Estimating a sparse and low rank matrix" href="../proximal_splitting/plot_sparse_nuclear_norm.html" />
+    <link rel="prev" title="Benchmark of Pairwise Frank-Wolfe variants for sparse logistic regression" href="plot_sparse_benchmark_pairwise.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-frank-wolfe-plot-vertex-overlap-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="update-direction-overlap-in-frank-wolfe">
+<span id="sphx-glr-auto-examples-frank-wolfe-plot-vertex-overlap-py"></span><h1>Update Direction Overlap in Frank-Wolfe<a class="headerlink" href="#update-direction-overlap-in-frank-wolfe" title="Permalink to this headline">¶</a></h1>
+<p>This example quantifies how many times the Frank-Wolfe algorithm selects
+the same extremal vertex (which will determine the update direction) twice
+in a row. Selecting the same vertex twice in a row is symptomatic of a poor
+step-size, as it implies that the last two updates could have been replaced
+by a single update with larger step-size.</p>
+<img alt="../../_images/sphx_glr_plot_vertex_overlap_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_vertex_overlap_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Running on the Gisette dataset
+Running Frank-Wolfe adaptive step-size variant
+
+  0%|          | 0/50 [00:00&lt;?, ?it/s]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=842, iter=0, tol=778]
+  2%|2         | 1/50 [00:00&lt;00:05,  8.52it/s, L_t=842, iter=0, tol=778]
+  2%|2         | 1/50 [00:00&lt;00:05,  8.52it/s, L_t=841, iter=1, tol=778]
+  2%|2         | 1/50 [00:00&lt;00:05,  8.52it/s, L_t=840, iter=2, tol=778]
+  6%|6         | 3/50 [00:00&lt;00:04, 10.05it/s, L_t=840, iter=2, tol=778]
+  6%|6         | 3/50 [00:00&lt;00:04, 10.05it/s, L_t=840, iter=3, tol=777]
+  6%|6         | 3/50 [00:00&lt;00:04, 10.05it/s, L_t=839, iter=4, tol=777]
+ 10%|#         | 5/50 [00:00&lt;00:03, 11.47it/s, L_t=839, iter=4, tol=777]
+ 10%|#         | 5/50 [00:00&lt;00:03, 11.47it/s, L_t=838, iter=5, tol=777]
+ 10%|#         | 5/50 [00:00&lt;00:03, 11.47it/s, L_t=837, iter=6, tol=777]
+ 14%|#4        | 7/50 [00:00&lt;00:03, 12.73it/s, L_t=837, iter=6, tol=777]
+ 14%|#4        | 7/50 [00:00&lt;00:03, 12.73it/s, L_t=836, iter=7, tol=777]
+ 14%|#4        | 7/50 [00:00&lt;00:03, 12.73it/s, L_t=835, iter=8, tol=776]
+ 18%|#8        | 9/50 [00:00&lt;00:02, 13.86it/s, L_t=835, iter=8, tol=776]
+ 18%|#8        | 9/50 [00:00&lt;00:02, 13.86it/s, L_t=834, iter=9, tol=776]
+ 18%|#8        | 9/50 [00:00&lt;00:02, 13.86it/s, L_t=834, iter=10, tol=776]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 14.76it/s, L_t=834, iter=10, tol=776]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 14.76it/s, L_t=833, iter=11, tol=776]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 14.76it/s, L_t=832, iter=12, tol=775]
+ 26%|##6       | 13/50 [00:00&lt;00:02, 15.44it/s, L_t=832, iter=12, tol=775]
+ 26%|##6       | 13/50 [00:00&lt;00:02, 15.44it/s, L_t=831, iter=13, tol=775]
+ 26%|##6       | 13/50 [00:00&lt;00:02, 15.44it/s, L_t=830, iter=14, tol=775]
+ 30%|###       | 15/50 [00:00&lt;00:02, 15.96it/s, L_t=830, iter=14, tol=775]
+ 30%|###       | 15/50 [00:00&lt;00:02, 15.96it/s, L_t=829, iter=15, tol=775]
+ 30%|###       | 15/50 [00:01&lt;00:02, 15.96it/s, L_t=829, iter=16, tol=775]
+ 34%|###4      | 17/50 [00:01&lt;00:02, 16.38it/s, L_t=829, iter=16, tol=775]
+ 34%|###4      | 17/50 [00:01&lt;00:02, 16.38it/s, L_t=828, iter=17, tol=774]
+ 34%|###4      | 17/50 [00:01&lt;00:02, 16.38it/s, L_t=827, iter=18, tol=774]
+ 38%|###8      | 19/50 [00:01&lt;00:01, 16.67it/s, L_t=827, iter=18, tol=774]
+ 38%|###8      | 19/50 [00:01&lt;00:01, 16.67it/s, L_t=826, iter=19, tol=774]
+ 38%|###8      | 19/50 [00:01&lt;00:01, 16.67it/s, L_t=825, iter=20, tol=774]
+ 42%|####2     | 21/50 [00:01&lt;00:01, 16.91it/s, L_t=825, iter=20, tol=774]
+ 42%|####2     | 21/50 [00:01&lt;00:01, 16.91it/s, L_t=825, iter=21, tol=774]
+ 42%|####2     | 21/50 [00:01&lt;00:01, 16.91it/s, L_t=824, iter=22, tol=773]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 17.07it/s, L_t=824, iter=22, tol=773]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 17.07it/s, L_t=823, iter=23, tol=773]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 17.07it/s, L_t=822, iter=24, tol=773]
+ 50%|#####     | 25/50 [00:01&lt;00:01, 17.17it/s, L_t=822, iter=24, tol=773]
+ 50%|#####     | 25/50 [00:01&lt;00:01, 17.17it/s, L_t=821, iter=25, tol=773]
+ 50%|#####     | 25/50 [00:01&lt;00:01, 17.17it/s, L_t=820, iter=26, tol=773]
+ 54%|#####4    | 27/50 [00:01&lt;00:01, 17.17it/s, L_t=820, iter=26, tol=773]
+ 54%|#####4    | 27/50 [00:01&lt;00:01, 17.17it/s, L_t=820, iter=27, tol=772]
+ 54%|#####4    | 27/50 [00:01&lt;00:01, 17.17it/s, L_t=819, iter=28, tol=772]
+ 58%|#####8    | 29/50 [00:01&lt;00:01, 17.21it/s, L_t=819, iter=28, tol=772]
+ 58%|#####8    | 29/50 [00:01&lt;00:01, 17.21it/s, L_t=818, iter=29, tol=772]
+ 58%|#####8    | 29/50 [00:01&lt;00:01, 17.21it/s, L_t=817, iter=30, tol=772]
+ 62%|######2   | 31/50 [00:01&lt;00:01, 17.17it/s, L_t=817, iter=30, tol=772]
+ 62%|######2   | 31/50 [00:01&lt;00:01, 17.17it/s, L_t=816, iter=31, tol=772]
+ 62%|######2   | 31/50 [00:01&lt;00:01, 17.17it/s, L_t=815, iter=32, tol=771]
+ 66%|######6   | 33/50 [00:01&lt;00:00, 17.17it/s, L_t=815, iter=32, tol=771]
+ 66%|######6   | 33/50 [00:02&lt;00:00, 17.17it/s, L_t=815, iter=33, tol=771]
+ 66%|######6   | 33/50 [00:02&lt;00:00, 17.17it/s, L_t=814, iter=34, tol=771]
+ 70%|#######   | 35/50 [00:02&lt;00:00, 17.19it/s, L_t=814, iter=34, tol=771]
+ 70%|#######   | 35/50 [00:02&lt;00:00, 17.19it/s, L_t=813, iter=35, tol=771]
+ 70%|#######   | 35/50 [00:02&lt;00:00, 17.19it/s, L_t=812, iter=36, tol=771]
+ 74%|#######4  | 37/50 [00:02&lt;00:00, 17.19it/s, L_t=812, iter=36, tol=771]
+ 74%|#######4  | 37/50 [00:02&lt;00:00, 17.19it/s, L_t=811, iter=37, tol=770]
+ 74%|#######4  | 37/50 [00:02&lt;00:00, 17.19it/s, L_t=811, iter=38, tol=770]
+ 78%|#######8  | 39/50 [00:02&lt;00:00, 17.21it/s, L_t=811, iter=38, tol=770]
+ 78%|#######8  | 39/50 [00:02&lt;00:00, 17.21it/s, L_t=810, iter=39, tol=770]
+ 78%|#######8  | 39/50 [00:02&lt;00:00, 17.21it/s, L_t=809, iter=40, tol=770]
+ 82%|########2 | 41/50 [00:02&lt;00:00, 17.25it/s, L_t=809, iter=40, tol=770]
+ 82%|########2 | 41/50 [00:02&lt;00:00, 17.25it/s, L_t=808, iter=41, tol=769]
+ 82%|########2 | 41/50 [00:02&lt;00:00, 17.25it/s, L_t=807, iter=42, tol=769]
+ 86%|########6 | 43/50 [00:02&lt;00:00, 17.21it/s, L_t=807, iter=42, tol=769]
+ 86%|########6 | 43/50 [00:02&lt;00:00, 17.21it/s, L_t=807, iter=43, tol=769]
+ 86%|########6 | 43/50 [00:02&lt;00:00, 17.21it/s, L_t=806, iter=44, tol=769]
+ 90%|######### | 45/50 [00:02&lt;00:00, 17.16it/s, L_t=806, iter=44, tol=769]
+ 90%|######### | 45/50 [00:02&lt;00:00, 17.16it/s, L_t=805, iter=45, tol=769]
+ 90%|######### | 45/50 [00:02&lt;00:00, 17.16it/s, L_t=804, iter=46, tol=768]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 17.09it/s, L_t=804, iter=46, tol=768]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 17.09it/s, L_t=803, iter=47, tol=768]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 17.09it/s, L_t=803, iter=48, tol=768]
+ 98%|#########8| 49/50 [00:02&lt;00:00, 17.15it/s, L_t=803, iter=48, tol=768]
+ 98%|#########8| 49/50 [00:02&lt;00:00, 17.15it/s, L_t=802, iter=49, tol=768]
+100%|##########| 50/50 [00:02&lt;00:00, 16.91it/s, L_t=802, iter=49, tol=768]
+Running adaptive++ step-size variant
+Running Lipschitz step-size variant
+Running on the RCV1 dataset
+Running Frank-Wolfe adaptive step-size variant
+
+  0%|          | 0/50 [00:00&lt;?, ?it/s]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=0.00607, iter=0, tol=176]
+  2%|2         | 1/50 [00:00&lt;00:28,  1.74it/s, L_t=0.00607, iter=0, tol=176]
+  2%|2         | 1/50 [00:00&lt;00:28,  1.74it/s, L_t=0.00607, iter=1, tol=159]
+  4%|4         | 2/50 [00:00&lt;00:23,  2.03it/s, L_t=0.00607, iter=1, tol=159]
+  4%|4         | 2/50 [00:01&lt;00:23,  2.03it/s, L_t=0.00606, iter=2, tol=144]
+  6%|6         | 3/50 [00:01&lt;00:20,  2.30it/s, L_t=0.00606, iter=2, tol=144]
+  6%|6         | 3/50 [00:01&lt;00:20,  2.30it/s, L_t=0.00606, iter=3, tol=131]
+  8%|8         | 4/50 [00:01&lt;00:18,  2.55it/s, L_t=0.00606, iter=3, tol=131]
+  8%|8         | 4/50 [00:01&lt;00:18,  2.55it/s, L_t=0.00605, iter=4, tol=119]
+ 10%|#         | 5/50 [00:01&lt;00:16,  2.75it/s, L_t=0.00605, iter=4, tol=119]
+ 10%|#         | 5/50 [00:02&lt;00:16,  2.75it/s, L_t=0.00604, iter=5, tol=115]
+ 12%|#2        | 6/50 [00:02&lt;00:15,  2.90it/s, L_t=0.00604, iter=5, tol=115]
+ 12%|#2        | 6/50 [00:02&lt;00:15,  2.90it/s, L_t=0.00604, iter=6, tol=111]
+ 14%|#4        | 7/50 [00:02&lt;00:14,  3.02it/s, L_t=0.00604, iter=6, tol=111]
+ 14%|#4        | 7/50 [00:02&lt;00:14,  3.02it/s, L_t=0.00603, iter=7, tol=108]
+ 16%|#6        | 8/50 [00:02&lt;00:13,  3.11it/s, L_t=0.00603, iter=7, tol=108]
+ 16%|#6        | 8/50 [00:02&lt;00:13,  3.11it/s, L_t=0.00603, iter=8, tol=105]
+ 18%|#8        | 9/50 [00:02&lt;00:12,  3.17it/s, L_t=0.00603, iter=8, tol=105]
+ 18%|#8        | 9/50 [00:03&lt;00:12,  3.17it/s, L_t=0.00602, iter=9, tol=101]
+ 20%|##        | 10/50 [00:03&lt;00:12,  3.22it/s, L_t=0.00602, iter=9, tol=101]
+ 20%|##        | 10/50 [00:03&lt;00:12,  3.22it/s, L_t=0.00601, iter=10, tol=100]
+ 22%|##2       | 11/50 [00:03&lt;00:11,  3.25it/s, L_t=0.00601, iter=10, tol=100]
+ 22%|##2       | 11/50 [00:03&lt;00:11,  3.25it/s, L_t=0.00601, iter=11, tol=96.7]
+ 24%|##4       | 12/50 [00:03&lt;00:11,  3.28it/s, L_t=0.00601, iter=11, tol=96.7]
+ 24%|##4       | 12/50 [00:04&lt;00:11,  3.28it/s, L_t=0.006, iter=12, tol=93.4]
+ 26%|##6       | 13/50 [00:04&lt;00:11,  3.27it/s, L_t=0.006, iter=12, tol=93.4]
+ 26%|##6       | 13/50 [00:04&lt;00:11,  3.27it/s, L_t=0.006, iter=13, tol=90.5]
+ 28%|##8       | 14/50 [00:04&lt;00:10,  3.28it/s, L_t=0.006, iter=13, tol=90.5]
+ 28%|##8       | 14/50 [00:04&lt;00:10,  3.28it/s, L_t=0.00599, iter=14, tol=89.4]
+ 30%|###       | 15/50 [00:04&lt;00:10,  3.27it/s, L_t=0.00599, iter=14, tol=89.4]
+ 30%|###       | 15/50 [00:05&lt;00:10,  3.27it/s, L_t=0.00598, iter=15, tol=86.4]
+ 32%|###2      | 16/50 [00:05&lt;00:10,  3.26it/s, L_t=0.00598, iter=15, tol=86.4]
+ 32%|###2      | 16/50 [00:05&lt;00:10,  3.26it/s, L_t=0.00598, iter=16, tol=83.6]
+ 34%|###4      | 17/50 [00:05&lt;00:10,  3.25it/s, L_t=0.00598, iter=16, tol=83.6]
+ 34%|###4      | 17/50 [00:05&lt;00:10,  3.25it/s, L_t=0.00597, iter=17, tol=81.8]
+ 36%|###6      | 18/50 [00:05&lt;00:09,  3.26it/s, L_t=0.00597, iter=17, tol=81.8]
+ 36%|###6      | 18/50 [00:06&lt;00:09,  3.26it/s, L_t=0.00597, iter=18, tol=81.9]
+ 38%|###8      | 19/50 [00:06&lt;00:09,  3.26it/s, L_t=0.00597, iter=18, tol=81.9]
+ 38%|###8      | 19/50 [00:06&lt;00:09,  3.26it/s, L_t=0.00596, iter=19, tol=80.7]
+ 40%|####      | 20/50 [00:06&lt;00:09,  3.26it/s, L_t=0.00596, iter=19, tol=80.7]
+ 40%|####      | 20/50 [00:06&lt;00:09,  3.26it/s, L_t=0.00595, iter=20, tol=79.2]
+ 42%|####2     | 21/50 [00:06&lt;00:08,  3.26it/s, L_t=0.00595, iter=20, tol=79.2]
+ 42%|####2     | 21/50 [00:06&lt;00:08,  3.26it/s, L_t=0.00595, iter=21, tol=78.6]
+ 44%|####4     | 22/50 [00:06&lt;00:08,  3.27it/s, L_t=0.00595, iter=21, tol=78.6]
+ 44%|####4     | 22/50 [00:07&lt;00:08,  3.27it/s, L_t=0.00594, iter=22, tol=76.6]
+ 46%|####6     | 23/50 [00:07&lt;00:08,  3.25it/s, L_t=0.00594, iter=22, tol=76.6]
+ 46%|####6     | 23/50 [00:07&lt;00:08,  3.25it/s, L_t=0.00594, iter=23, tol=77.7]
+ 48%|####8     | 24/50 [00:07&lt;00:07,  3.27it/s, L_t=0.00594, iter=23, tol=77.7]
+ 48%|####8     | 24/50 [00:07&lt;00:07,  3.27it/s, L_t=0.00593, iter=24, tol=75.2]
+ 50%|#####     | 25/50 [00:07&lt;00:07,  3.28it/s, L_t=0.00593, iter=24, tol=75.2]
+ 50%|#####     | 25/50 [00:08&lt;00:07,  3.28it/s, L_t=0.00592, iter=25, tol=75]
+ 52%|#####2    | 26/50 [00:08&lt;00:07,  3.28it/s, L_t=0.00592, iter=25, tol=75]
+ 52%|#####2    | 26/50 [00:08&lt;00:07,  3.28it/s, L_t=0.00592, iter=26, tol=73.4]
+ 54%|#####4    | 27/50 [00:08&lt;00:06,  3.29it/s, L_t=0.00592, iter=26, tol=73.4]
+ 54%|#####4    | 27/50 [00:08&lt;00:06,  3.29it/s, L_t=0.00591, iter=27, tol=72.4]
+ 56%|#####6    | 28/50 [00:08&lt;00:06,  3.29it/s, L_t=0.00591, iter=27, tol=72.4]
+ 56%|#####6    | 28/50 [00:09&lt;00:06,  3.29it/s, L_t=0.00591, iter=28, tol=72.5]
+ 58%|#####8    | 29/50 [00:09&lt;00:06,  3.29it/s, L_t=0.00591, iter=28, tol=72.5]
+ 58%|#####8    | 29/50 [00:09&lt;00:06,  3.29it/s, L_t=0.0059, iter=29, tol=71]
+ 60%|######    | 30/50 [00:09&lt;00:06,  3.29it/s, L_t=0.0059, iter=29, tol=71]
+ 60%|######    | 30/50 [00:09&lt;00:06,  3.29it/s, L_t=0.00589, iter=30, tol=70.1]
+ 62%|######2   | 31/50 [00:09&lt;00:05,  3.29it/s, L_t=0.00589, iter=30, tol=70.1]
+ 62%|######2   | 31/50 [00:09&lt;00:05,  3.29it/s, L_t=0.00589, iter=31, tol=69.9]
+ 64%|######4   | 32/50 [00:09&lt;00:05,  3.29it/s, L_t=0.00589, iter=31, tol=69.9]
+ 64%|######4   | 32/50 [00:10&lt;00:05,  3.29it/s, L_t=0.00588, iter=32, tol=68.4]
+ 66%|######6   | 33/50 [00:10&lt;00:05,  3.29it/s, L_t=0.00588, iter=32, tol=68.4]
+ 66%|######6   | 33/50 [00:10&lt;00:05,  3.29it/s, L_t=0.00588, iter=33, tol=68.5]
+ 68%|######8   | 34/50 [00:10&lt;00:04,  3.27it/s, L_t=0.00588, iter=33, tol=68.5]
+ 68%|######8   | 34/50 [00:10&lt;00:04,  3.27it/s, L_t=0.00587, iter=34, tol=67.1]
+ 70%|#######   | 35/50 [00:10&lt;00:04,  3.28it/s, L_t=0.00587, iter=34, tol=67.1]
+ 70%|#######   | 35/50 [00:11&lt;00:04,  3.28it/s, L_t=0.00587, iter=35, tol=66.4]
+ 72%|#######2  | 36/50 [00:11&lt;00:04,  3.28it/s, L_t=0.00587, iter=35, tol=66.4]
+ 72%|#######2  | 36/50 [00:11&lt;00:04,  3.28it/s, L_t=0.00586, iter=36, tol=66.3]
+ 74%|#######4  | 37/50 [00:11&lt;00:03,  3.27it/s, L_t=0.00586, iter=36, tol=66.3]
+ 74%|#######4  | 37/50 [00:11&lt;00:03,  3.27it/s, L_t=0.00585, iter=37, tol=64.4]
+ 76%|#######6  | 38/50 [00:11&lt;00:03,  3.28it/s, L_t=0.00585, iter=37, tol=64.4]
+ 76%|#######6  | 38/50 [00:12&lt;00:03,  3.28it/s, L_t=0.00585, iter=38, tol=64.5]
+ 78%|#######8  | 39/50 [00:12&lt;00:03,  3.28it/s, L_t=0.00585, iter=38, tol=64.5]
+ 78%|#######8  | 39/50 [00:12&lt;00:03,  3.28it/s, L_t=0.00584, iter=39, tol=64.1]
+ 80%|########  | 40/50 [00:12&lt;00:03,  3.29it/s, L_t=0.00584, iter=39, tol=64.1]
+ 80%|########  | 40/50 [00:12&lt;00:03,  3.29it/s, L_t=0.00584, iter=40, tol=62.9]
+ 82%|########2 | 41/50 [00:12&lt;00:02,  3.29it/s, L_t=0.00584, iter=40, tol=62.9]
+ 82%|########2 | 41/50 [00:13&lt;00:02,  3.29it/s, L_t=0.00583, iter=41, tol=63.2]
+ 84%|########4 | 42/50 [00:13&lt;00:02,  3.27it/s, L_t=0.00583, iter=41, tol=63.2]
+ 84%|########4 | 42/50 [00:13&lt;00:02,  3.27it/s, L_t=0.00582, iter=42, tol=62.2]
+ 86%|########6 | 43/50 [00:13&lt;00:02,  3.28it/s, L_t=0.00582, iter=42, tol=62.2]
+ 86%|########6 | 43/50 [00:13&lt;00:02,  3.28it/s, L_t=0.00582, iter=43, tol=61.9]
+ 88%|########8 | 44/50 [00:13&lt;00:01,  3.28it/s, L_t=0.00582, iter=43, tol=61.9]
+ 88%|########8 | 44/50 [00:13&lt;00:01,  3.28it/s, L_t=0.00581, iter=44, tol=61.7]
+ 90%|######### | 45/50 [00:13&lt;00:01,  3.28it/s, L_t=0.00581, iter=44, tol=61.7]
+ 90%|######### | 45/50 [00:14&lt;00:01,  3.28it/s, L_t=0.00581, iter=45, tol=60.6]
+ 92%|#########2| 46/50 [00:14&lt;00:01,  3.27it/s, L_t=0.00581, iter=45, tol=60.6]
+ 92%|#########2| 46/50 [00:14&lt;00:01,  3.27it/s, L_t=0.0058, iter=46, tol=60.1]
+ 94%|#########3| 47/50 [00:14&lt;00:00,  3.28it/s, L_t=0.0058, iter=46, tol=60.1]
+ 94%|#########3| 47/50 [00:14&lt;00:00,  3.28it/s, L_t=0.0058, iter=47, tol=60]
+ 96%|#########6| 48/50 [00:14&lt;00:00,  3.27it/s, L_t=0.0058, iter=47, tol=60]
+ 96%|#########6| 48/50 [00:15&lt;00:00,  3.27it/s, L_t=0.00579, iter=48, tol=59.8]
+ 98%|#########8| 49/50 [00:15&lt;00:00,  3.23it/s, L_t=0.00579, iter=48, tol=59.8]
+ 98%|#########8| 49/50 [00:15&lt;00:00,  3.23it/s, L_t=0.00578, iter=49, tol=59]
+100%|##########| 50/50 [00:15&lt;00:00,  3.24it/s, L_t=0.00578, iter=49, tol=59]
+Running adaptive++ step-size variant
+Running Lipschitz step-size variant
+Running on the Madelon dataset
+Running Frank-Wolfe adaptive step-size variant
+
+  0%|          | 0/50 [00:00&lt;?, ?it/s]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.98e+7, iter=0, tol=2.09e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.97e+7, iter=1, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.97e+7, iter=2, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.97e+7, iter=3, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.96e+7, iter=4, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.96e+7, iter=5, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.96e+7, iter=6, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.96e+7, iter=7, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.95e+7, iter=8, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.95e+7, iter=9, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.95e+7, iter=10, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.94e+7, iter=11, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.94e+7, iter=12, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.94e+7, iter=13, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.93e+7, iter=14, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.93e+7, iter=15, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.93e+7, iter=16, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.93e+7, iter=17, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.92e+7, iter=18, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.92e+7, iter=19, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.92e+7, iter=20, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.91e+7, iter=21, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.91e+7, iter=22, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.91e+7, iter=23, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.91e+7, iter=24, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.9e+7, iter=25, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.9e+7, iter=26, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.9e+7, iter=27, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.89e+7, iter=28, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.89e+7, iter=29, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.89e+7, iter=30, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.88e+7, iter=31, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.88e+7, iter=32, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.88e+7, iter=33, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.88e+7, iter=34, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.87e+7, iter=35, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.87e+7, iter=36, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.87e+7, iter=37, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.86e+7, iter=38, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.86e+7, iter=39, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.86e+7, iter=40, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.86e+7, iter=41, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.85e+7, iter=42, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.85e+7, iter=43, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.85e+7, iter=44, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.84e+7, iter=45, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.84e+7, iter=46, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.84e+7, iter=47, tol=2.08e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.84e+7, iter=48, tol=2.07e+3]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=2.83e+7, iter=49, tol=2.07e+3]
+100%|##########| 50/50 [00:00&lt;00:00, 855.76it/s, L_t=2.83e+7, iter=49, tol=2.07e+3]
+Running adaptive++ step-size variant
+Running Lipschitz step-size variant
+Running on the Covtype dataset
+Running Frank-Wolfe adaptive step-size variant
+
+  0%|          | 0/50 [00:00&lt;?, ?it/s]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=0.785, iter=0, tol=0.734]
+  0%|          | 0/50 [00:00&lt;?, ?it/s, L_t=0.784, iter=1, tol=0.718]
+  4%|4         | 2/50 [00:00&lt;00:03, 14.97it/s, L_t=0.784, iter=1, tol=0.718]
+  4%|4         | 2/50 [00:00&lt;00:03, 14.97it/s, L_t=0.783, iter=2, tol=0.702]
+  4%|4         | 2/50 [00:00&lt;00:03, 14.97it/s, L_t=0.782, iter=3, tol=0.687]
+  4%|4         | 2/50 [00:00&lt;00:03, 14.97it/s, L_t=0.782, iter=4, tol=0.672]
+ 10%|#         | 5/50 [00:00&lt;00:02, 16.59it/s, L_t=0.782, iter=4, tol=0.672]
+ 10%|#         | 5/50 [00:00&lt;00:02, 16.59it/s, L_t=0.781, iter=5, tol=0.658]
+ 10%|#         | 5/50 [00:00&lt;00:02, 16.59it/s, L_t=0.78, iter=6, tol=0.644]
+ 10%|#         | 5/50 [00:00&lt;00:02, 16.59it/s, L_t=0.779, iter=7, tol=0.63]
+ 16%|#6        | 8/50 [00:00&lt;00:02, 17.98it/s, L_t=0.779, iter=7, tol=0.63]
+ 16%|#6        | 8/50 [00:00&lt;00:02, 17.98it/s, L_t=0.778, iter=8, tol=0.624]
+ 16%|#6        | 8/50 [00:00&lt;00:02, 17.98it/s, L_t=0.778, iter=9, tol=0.616]
+ 16%|#6        | 8/50 [00:00&lt;00:02, 17.98it/s, L_t=0.777, iter=10, tol=0.603]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 19.09it/s, L_t=0.777, iter=10, tol=0.603]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 19.09it/s, L_t=0.776, iter=11, tol=0.59]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 19.09it/s, L_t=0.775, iter=12, tol=0.578]
+ 22%|##2       | 11/50 [00:00&lt;00:02, 19.09it/s, L_t=0.775, iter=13, tol=0.566]
+ 28%|##8       | 14/50 [00:00&lt;00:01, 19.95it/s, L_t=0.775, iter=13, tol=0.566]
+ 28%|##8       | 14/50 [00:00&lt;00:01, 19.95it/s, L_t=0.774, iter=14, tol=0.554]
+ 28%|##8       | 14/50 [00:00&lt;00:01, 19.95it/s, L_t=0.773, iter=15, tol=0.546]
+ 28%|##8       | 14/50 [00:00&lt;00:01, 19.95it/s, L_t=0.772, iter=16, tol=0.542]
+ 34%|###4      | 17/50 [00:00&lt;00:01, 20.57it/s, L_t=0.772, iter=16, tol=0.542]
+ 34%|###4      | 17/50 [00:00&lt;00:01, 20.57it/s, L_t=0.771, iter=17, tol=0.539]
+ 34%|###4      | 17/50 [00:00&lt;00:01, 20.57it/s, L_t=0.771, iter=18, tol=0.531]
+ 34%|###4      | 17/50 [00:00&lt;00:01, 20.57it/s, L_t=0.77, iter=19, tol=0.529]
+ 40%|####      | 20/50 [00:00&lt;00:01, 21.06it/s, L_t=0.77, iter=19, tol=0.529]
+ 40%|####      | 20/50 [00:00&lt;00:01, 21.06it/s, L_t=0.769, iter=20, tol=0.523]
+ 40%|####      | 20/50 [00:01&lt;00:01, 21.06it/s, L_t=0.768, iter=21, tol=0.528]
+ 40%|####      | 20/50 [00:01&lt;00:01, 21.06it/s, L_t=0.768, iter=22, tol=0.523]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 21.29it/s, L_t=0.768, iter=22, tol=0.523]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 21.29it/s, L_t=0.767, iter=23, tol=0.516]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 21.29it/s, L_t=0.766, iter=24, tol=0.514]
+ 46%|####6     | 23/50 [00:01&lt;00:01, 21.29it/s, L_t=0.765, iter=25, tol=0.505]
+ 52%|#####2    | 26/50 [00:01&lt;00:01, 21.45it/s, L_t=0.765, iter=25, tol=0.505]
+ 52%|#####2    | 26/50 [00:01&lt;00:01, 21.45it/s, L_t=0.765, iter=26, tol=0.505]
+ 52%|#####2    | 26/50 [00:01&lt;00:01, 21.45it/s, L_t=0.764, iter=27, tol=0.496]
+ 52%|#####2    | 26/50 [00:01&lt;00:01, 21.45it/s, L_t=0.763, iter=28, tol=0.496]
+ 58%|#####8    | 29/50 [00:01&lt;00:00, 21.58it/s, L_t=0.763, iter=28, tol=0.496]
+ 58%|#####8    | 29/50 [00:01&lt;00:00, 21.58it/s, L_t=0.762, iter=29, tol=0.51]
+ 58%|#####8    | 29/50 [00:01&lt;00:00, 21.58it/s, L_t=0.762, iter=30, tol=0.492]
+ 58%|#####8    | 29/50 [00:01&lt;00:00, 21.58it/s, L_t=0.761, iter=31, tol=0.49]
+ 64%|######4   | 32/50 [00:01&lt;00:00, 21.66it/s, L_t=0.761, iter=31, tol=0.49]
+ 64%|######4   | 32/50 [00:01&lt;00:00, 21.66it/s, L_t=0.76, iter=32, tol=0.482]
+ 64%|######4   | 32/50 [00:01&lt;00:00, 21.66it/s, L_t=0.759, iter=33, tol=0.481]
+ 64%|######4   | 32/50 [00:01&lt;00:00, 21.66it/s, L_t=0.758, iter=34, tol=0.476]
+ 70%|#######   | 35/50 [00:01&lt;00:00, 21.73it/s, L_t=0.758, iter=34, tol=0.476]
+ 70%|#######   | 35/50 [00:01&lt;00:00, 21.73it/s, L_t=0.758, iter=35, tol=0.481]
+ 70%|#######   | 35/50 [00:01&lt;00:00, 21.73it/s, L_t=0.757, iter=36, tol=0.476]
+ 70%|#######   | 35/50 [00:01&lt;00:00, 21.73it/s, L_t=0.756, iter=37, tol=0.469]
+ 76%|#######6  | 38/50 [00:01&lt;00:00, 21.72it/s, L_t=0.756, iter=37, tol=0.469]
+ 76%|#######6  | 38/50 [00:01&lt;00:00, 21.72it/s, L_t=0.755, iter=38, tol=0.468]
+ 76%|#######6  | 38/50 [00:01&lt;00:00, 21.72it/s, L_t=0.755, iter=39, tol=0.462]
+ 76%|#######6  | 38/50 [00:01&lt;00:00, 21.72it/s, L_t=0.754, iter=40, tol=0.46]
+ 82%|########2 | 41/50 [00:01&lt;00:00, 21.78it/s, L_t=0.754, iter=40, tol=0.46]
+ 82%|########2 | 41/50 [00:01&lt;00:00, 21.78it/s, L_t=0.753, iter=41, tol=0.459]
+ 82%|########2 | 41/50 [00:01&lt;00:00, 21.78it/s, L_t=0.752, iter=42, tol=0.453]
+ 82%|########2 | 41/50 [00:02&lt;00:00, 21.78it/s, L_t=0.752, iter=43, tol=0.454]
+ 88%|########8 | 44/50 [00:02&lt;00:00, 21.79it/s, L_t=0.752, iter=43, tol=0.454]
+ 88%|########8 | 44/50 [00:02&lt;00:00, 21.79it/s, L_t=0.751, iter=44, tol=0.448]
+ 88%|########8 | 44/50 [00:02&lt;00:00, 21.79it/s, L_t=0.75, iter=45, tol=0.448]
+ 88%|########8 | 44/50 [00:02&lt;00:00, 21.79it/s, L_t=0.749, iter=46, tol=0.446]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 21.78it/s, L_t=0.749, iter=46, tol=0.446]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 21.78it/s, L_t=0.749, iter=47, tol=0.439]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 21.78it/s, L_t=0.748, iter=48, tol=0.438]
+ 94%|#########3| 47/50 [00:02&lt;00:00, 21.78it/s, L_t=0.747, iter=49, tol=0.431]
+100%|##########| 50/50 [00:02&lt;00:00, 21.73it/s, L_t=0.747, iter=49, tol=0.431]
+Running adaptive++ step-size variant
+Running Lipschitz step-size variant
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copt</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># datasets and their respective loading functions</span>
+<span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Gisette&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_gisette.html#copt.datasets.load_gisette" title="View documentation for copt.datasets.load_gisette"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_gisette</span></a><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;RCV1&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_rcv1.html#copt.datasets.load_rcv1" title="View documentation for copt.datasets.load_rcv1"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_rcv1</span></a><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Madelon&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_madelon.html#copt.datasets.load_madelon" title="View documentation for copt.datasets.load_madelon"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_madelon</span></a><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Covtype&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_covtype.html#copt.datasets.load_covtype" title="View documentation for copt.datasets.load_covtype"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_covtype</span></a><span class="p">)</span>
+    <span class="p">]</span>
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="View documentation for matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="p">(</span><span class="n">dataset_title</span><span class="p">,</span> <span class="n">load_data</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">datasets</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running on the </span><span class="si">%s</span><span class="s2"> dataset&quot;</span> <span class="o">%</span> <span class="n">dataset_title</span><span class="p">)</span>
+
+  <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>
+  <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+
+  <span class="n">l1_ball</span> <span class="o">=</span> <a href="../../generated/copt.utils.L1Ball.html#copt.utils.L1Ball" title="View documentation for copt.utils.L1Ball"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">L1Ball</span></a><span class="p">(</span><span class="n">n_features</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">)</span>
+  <span class="n">f</span> <span class="o">=</span> <a href="../../generated/copt.utils.LogLoss.html#copt.utils.LogLoss" title="View documentation for copt.utils.LogLoss"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">LogLoss</span></a><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+  <span class="n">x0</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">step_size</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">marker</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span>
+      <span class="p">[</span><span class="s2">&quot;adaptive&quot;</span><span class="p">,</span> <span class="s2">&quot;Frank-Wolfe adaptive step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;^&quot;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s2">&quot;adaptive3&quot;</span><span class="p">,</span> <span class="s2">&quot;adaptive++ step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">],</span>
+      <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Lipschitz step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+      <span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running </span><span class="si">%s</span><span class="s2"> variant&quot;</span> <span class="o">%</span> <span class="n">label</span><span class="p">)</span>
+    <span class="n">dt_prev</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">overlap</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">trace</span><span class="p">(</span><span class="n">kw</span><span class="p">):</span>
+      <span class="sd">&quot;&quot;&quot;Store vertex overlap during execution of the algorithm.&quot;&quot;&quot;</span>
+      <span class="n">s_t</span> <span class="o">=</span> <span class="n">kw</span><span class="p">[</span><span class="s2">&quot;update_direction&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">kw</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">]</span>
+      <span class="k">if</span> <span class="n">dt_prev</span><span class="p">:</span>
+        <span class="c1"># check if the vertex of this and the previous iterate</span>
+        <span class="c1"># coincide. Since these might be sparse vectors, we use</span>
+        <span class="c1"># sparse.linalg.norm to make the comparison</span>
+        <span class="n">prev_overlap</span> <span class="o">=</span> <span class="n">overlap</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="View documentation for numpy.linalg.norm"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">dt_prev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">s_t</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="n">overlap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prev_overlap</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+          <span class="n">overlap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prev_overlap</span><span class="p">)</span>
+        <span class="n">dt_prev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">s_t</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">overlap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">dt_prev</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s_t</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">label</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Frank-Wolfe&quot;</span><span class="p">):</span>
+      <a href="../../generated/copt.minimize_frank_wolfe.html#copt.minimize_frank_wolfe" title="View documentation for copt.minimize_frank_wolfe"><span class="n">cp</span><span class="o">.</span><span class="n">minimize_frank_wolfe</span></a><span class="p">(</span>
+          <span class="n">f</span><span class="o">.</span><span class="n">f_grad</span><span class="p">,</span>
+          <span class="n">x0</span><span class="p">,</span>
+          <span class="n">l1_ball</span><span class="o">.</span><span class="n">lmo</span><span class="p">,</span>
+          <span class="n">callback</span><span class="o">=</span><span class="n">trace</span><span class="p">,</span>
+          <span class="n">max_iter</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+          <span class="n">step_size</span><span class="o">=</span><span class="n">step_size</span><span class="p">,</span>
+          <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+          <span class="n">lipschitz</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">lipschitz</span><span class="p">,</span>
+      <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">label</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Pairwise&quot;</span><span class="p">):</span>
+      <span class="k">pass</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">overlap</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span> <span class="n">markevery</span><span class="o">=</span><span class="mi">7</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;number of iterations&quot;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;LMO overlap&quot;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">dataset_title</span><span class="p">)</span>
+  <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># otherwise the right y-label is slightly clipped</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="c1"># plt.legend()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  50.215 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  1898 MB</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-frank-wolfe-plot-vertex-overlap-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/eb11ed479e64ebf003385632134f0b19/plot_vertex_overlap.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_vertex_overlap.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/84cf0b4d5bf86fe00f67abc2f3471066/plot_vertex_overlap.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_vertex_overlap.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#miscellaneous-examples">Miscellaneous examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#frank-wolfe">Frank-Wolfe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#proximal-splitting">Proximal Splitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/auto_examples/frank_wolfe/plot_vertex_overlap.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

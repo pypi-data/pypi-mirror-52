@@ -1,0 +1,22 @@
+
+
+Examples using ``copt.minimize_saga``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="A comparison between two variance-reduced stochastic gradient methods: SAGA (implemented in cop...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_saga_vs_svrg_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_saga_vs_svrg.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_plot_saga_vs_svrg.py`

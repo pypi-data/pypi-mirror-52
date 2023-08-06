@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>copt.datasets.load_madelon &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="copt.utils.Trace" href="copt.utils.Trace.html" />
+    <link rel="prev" title="copt.datasets.load_gisette" href="copt.datasets.load_gisette.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="copt-datasets-load-madelon">
+<h1>copt.datasets.load_madelon<a class="headerlink" href="#copt-datasets-load-madelon" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="copt.datasets.load_madelon">
+<code class="sig-prename descclassname">copt.datasets.</code><code class="sig-name descname">load_madelon</code><span class="sig-paren">(</span><em class="sig-param">md5_check=True</em>, <em class="sig-param">subset='full'</em>, <em class="sig-param">standardize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/c2a06cc/copt/datasets.py#L24"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.datasets.load_madelon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download and return the madelon dataset.</p>
+<dl class="simple">
+<dt>Properties:</dt><dd><p>n_samples: 2600
+n_features: 500</p>
+</dd>
+</dl>
+<p>This is the binary classification version of the dataset as found in the
+LIBSVM dataset project:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#madelon">https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#madelon</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>md5_check</strong> – bool
+Whether to do an md5 check on the downloaded files.</p></li>
+<li><p><strong>subset</strong> – string
+Can be one of ‘full’ for full dataset, ‘train’ for only the train set
+or ‘test’ for only the test set.</p></li>
+<li><p><strong>standardize</strong> – boolean
+If True, each feature will have zero mean and unit variance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>scipy.sparse CSR</dt><dd><p>Return data as CSR sparse matrix of shape=(2600, 500).</p>
+</dd>
+<dt>target: array of shape 2600</dt><dd><p>Labels, only takes values 0 or 1.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../auto_examples/frank_wolfe/plot_sparse_benchmark.html#sphx-glr-auto-examples-frank-wolfe-plot-sparse-benchmark-py"><span class="std std-ref">Benchmark of Frank-Wolfe variants for sparse logistic regression</span></a></p></li>
+<li><p><a class="reference internal" href="../auto_examples/frank_wolfe/plot_vertex_overlap.html#sphx-glr-auto-examples-frank-wolfe-plot-vertex-overlap-py"><span class="std std-ref">Update Direction Overlap in Frank-Wolfe</span></a></p></li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../utils.html">Utility functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../utils.html#datasets">Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils.html#misc">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/generated/copt.datasets.load_madelon.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

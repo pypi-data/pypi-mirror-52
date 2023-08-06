@@ -1,0 +1,58 @@
+
+
+Examples using ``copt.minimize_proximal_gradient``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how `JAX &lt;https://github.com/google/jax&gt;`_ can be used within COPT to comput...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_jax_copt_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_jax_copt.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_plot_jax_copt.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Speed of convergence comparison between gradient descent and Nesterov acceleration on a logisti...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_accelerated_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_accelerated.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_plot_accelerated.py`
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Comparison of solvers for problems with a group lasso regularization.">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_plot_group_lasso_thumb.png
+
+        :ref:`sphx_glr_auto_examples_plot_group_lasso.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_plot_group_lasso.py`

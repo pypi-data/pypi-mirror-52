@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Benchmark of Pairwise Frank-Wolfe variants for sparse logistic regression &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Update Direction Overlap in Frank-Wolfe" href="plot_vertex_overlap.html" />
+    <link rel="prev" title="Benchmark of Frank-Wolfe variants for sparse logistic regression" href="plot_sparse_benchmark.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-frank-wolfe-plot-sparse-benchmark-pairwise-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="benchmark-of-pairwise-frank-wolfe-variants-for-sparse-logistic-regression">
+<span id="sphx-glr-auto-examples-frank-wolfe-plot-sparse-benchmark-pairwise-py"></span><h1>Benchmark of Pairwise Frank-Wolfe variants for sparse logistic regression<a class="headerlink" href="#benchmark-of-pairwise-frank-wolfe-variants-for-sparse-logistic-regression" title="Permalink to this headline">¶</a></h1>
+<p>Speed of convergence of different Frank-Wolfe variants on various
+problems with a logistic regression loss (<a class="reference internal" href="../../generated/copt.utils.LogLoss.html#copt.utils.LogLoss" title="copt.utils.LogLoss"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copt.utils.LogLoss()</span></code></a>)
+and a L1 ball constraint (<a class="reference internal" href="../../generated/copt.utils.L1Ball.html#copt.utils.L1Ball" title="copt.utils.L1Ball"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copt.utils.L1Ball()</span></code></a>).</p>
+<ul class="sphx-glr-horizontal">
+<li><img alt="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_001.png" class="sphx-glr-multi-img" src="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_001.png" />
+</li>
+<li><img alt="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_002.png" class="sphx-glr-multi-img" src="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_002.png" />
+</li>
+<li><img alt="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_003.png" class="sphx-glr-multi-img" src="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_003.png" />
+</li>
+<li><img alt="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_004.png" class="sphx-glr-multi-img" src="../../_images/sphx_glr_plot_sparse_benchmark_pairwise_004.png" />
+</li>
+</ul>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Running on the Gisette dataset
+/usr/local/google/home/pedregosa/dev/copt/copt/frank_wolfe.py:115: RuntimeWarning: Exhausted line search iterations in minimize_frank_wolfe
+  &quot;Exhausted line search iterations in minimize_frank_wolfe&quot;, RuntimeWarning
+Sparsity of solution: 0.0666
+Running on the RCV1 dataset
+Sparsity of solution: 0.0042763993564230674
+Running on the Madelon dataset
+/usr/local/google/home/pedregosa/dev/copt/copt/frank_wolfe.py:115: RuntimeWarning: Exhausted line search iterations in minimize_frank_wolfe
+  &quot;Exhausted line search iterations in minimize_frank_wolfe&quot;, RuntimeWarning
+Sparsity of solution: 0.002
+Running on the Covtype dataset
+Sparsity of solution: 0.037037037037037035
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">copt</span> <span class="k">as</span> <span class="nn">cp</span>
+
+<span class="c1"># .. datasets and their loading functions ..</span>
+<span class="c1"># .. last value si the regularization parameter ..</span>
+<span class="c1"># .. which has been chosen to give 10% feature sparsity ..</span>
+<span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Gisette&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_gisette.html#copt.datasets.load_gisette" title="View documentation for copt.datasets.load_gisette"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_gisette</span></a><span class="p">,</span> <span class="mf">1e4</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;RCV1&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_rcv1.html#copt.datasets.load_rcv1" title="View documentation for copt.datasets.load_rcv1"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_rcv1</span></a><span class="p">,</span> <span class="mf">1e3</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Madelon&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_madelon.html#copt.datasets.load_madelon" title="View documentation for copt.datasets.load_madelon"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_madelon</span></a><span class="p">,</span> <span class="mf">1e3</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;Covtype&quot;</span><span class="p">,</span> <a href="../../generated/copt.datasets.load_covtype.html#copt.datasets.load_covtype" title="View documentation for copt.datasets.load_covtype"><span class="n">cp</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_covtype</span></a><span class="p">,</span> <span class="mf">1e3</span><span class="p">),</span>
+<span class="p">]</span>
+
+
+<span class="n">variants_fw</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;adaptive&quot;</span><span class="p">,</span> <span class="s2">&quot;adaptive step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">],</span>
+    <span class="c1"># [&quot;adaptive2+&quot;, &quot;linesearch+ step-size&quot;, &quot;s&quot;],</span>
+    <span class="c1"># [&quot;adaptive3&quot;, &quot;adaptive3 step-size&quot;, &quot;+&quot;],</span>
+    <span class="c1"># [&quot;adaptive4&quot;, &quot;adaptive4 step-size&quot;, &quot;x&quot;],</span>
+    <span class="p">[</span><span class="s2">&quot;panj&quot;</span><span class="p">,</span> <span class="s2">&quot;panj step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;DR&quot;</span><span class="p">,</span> <span class="s2">&quot;Lipschitz step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;adaptive_scipy&quot;</span><span class="p">,</span> <span class="s2">&quot;scipy linesearch step-size&quot;</span><span class="p">,</span> <span class="s2">&quot;^&quot;</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">dataset_title</span><span class="p">,</span> <span class="n">load_data</span><span class="p">,</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="View documentation for matplotlib.pyplot.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running on the </span><span class="si">%s</span><span class="s2"> dataset&quot;</span> <span class="o">%</span> <span class="n">dataset_title</span><span class="p">)</span>
+
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>
+    <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+
+    <span class="n">l1_ball</span> <span class="o">=</span> <a href="../../generated/copt.utils.L1Ball.html#copt.utils.L1Ball" title="View documentation for copt.utils.L1Ball"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">L1Ball</span></a><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <a href="../../generated/copt.utils.LogLoss.html#copt.utils.LogLoss" title="View documentation for copt.utils.LogLoss"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">LogLoss</span></a><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">x0</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>
+    <span class="n">x0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">alpha</span>
+    <span class="n">active_set</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="n">n_features</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">active_set</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">step_size</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">marker</span> <span class="ow">in</span> <span class="n">variants_fw</span><span class="p">:</span>
+
+        <span class="n">cb</span> <span class="o">=</span> <a href="../../generated/copt.utils.Trace.html#copt.utils.Trace" title="View documentation for copt.utils.Trace"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">Trace</span></a><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">sol</span> <span class="o">=</span> <a href="../../generated/copt.minimize_pairwise_frank_wolfe.html#copt.minimize_pairwise_frank_wolfe" title="View documentation for copt.minimize_pairwise_frank_wolfe"><span class="n">cp</span><span class="o">.</span><span class="n">minimize_pairwise_frank_wolfe</span></a><span class="p">(</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">f_grad</span><span class="p">,</span>
+            <span class="n">x0</span><span class="p">,</span>
+            <span class="n">active_set</span><span class="p">,</span>
+            <span class="n">l1_ball</span><span class="o">.</span><span class="n">lmo_pairwise</span><span class="p">,</span>
+            <span class="n">callback</span><span class="o">=</span><span class="n">cb</span><span class="p">,</span>
+            <span class="n">step_size</span><span class="o">=</span><span class="n">step_size</span><span class="p">,</span>
+            <span class="n">lipschitz</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">lipschitz</span><span class="p">,</span>
+            <span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+            <span class="n">tol</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="View documentation for matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cb</span><span class="o">.</span><span class="n">trace_time</span><span class="p">,</span> <span class="n">cb</span><span class="o">.</span><span class="n">trace_fx</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span> <span class="n">markevery</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sparsity of solution: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html#numpy.mean" title="View documentation for numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">1e-8</span><span class="p">))</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" title="View documentation for matplotlib.pyplot.legend"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">()</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="View documentation for matplotlib.pyplot.xlabel"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s2">&quot;Time (in seconds)&quot;</span><span class="p">)</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="View documentation for matplotlib.pyplot.ylabel"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s2">&quot;Objective function&quot;</span><span class="p">)</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="View documentation for matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="n">dataset_title</span><span class="p">)</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="View documentation for matplotlib.pyplot.tight_layout"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>  <span class="c1"># otherwise the right y-label is slightly clipped</span>
+    <span class="c1">#    plt.xlim((0, 0.7 * cb.trace_time[-1]))  # for aesthetics</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="View documentation for matplotlib.pyplot.grid"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">()</span>
+    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 100 minutes  34.233 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  1595 MB</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-frank-wolfe-plot-sparse-benchmark-pairwise-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/f79d5c2099e3f54db5ae9aade8943623/plot_sparse_benchmark_pairwise.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_sparse_benchmark_pairwise.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/8f6281a7d9b38b9cf3d58570bb3d353b/plot_sparse_benchmark_pairwise.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_sparse_benchmark_pairwise.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#miscellaneous-examples">Miscellaneous examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#frank-wolfe">Frank-Wolfe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#proximal-splitting">Proximal Splitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/auto_examples/frank_wolfe/plot_sparse_benchmark_pairwise.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

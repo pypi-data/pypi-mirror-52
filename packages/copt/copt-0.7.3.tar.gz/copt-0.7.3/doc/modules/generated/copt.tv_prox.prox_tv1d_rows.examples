@@ -1,0 +1,22 @@
+
+
+Examples using ``copt.tv_prox.prox_tv1d_rows``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Comparison of solvers with total variation regularization. ">
+
+.. only:: html
+
+    .. figure:: /auto_examples/proximal_splitting/images/thumb/sphx_glr_plot_tv_deblurring_thumb.png
+
+        :ref:`sphx_glr_auto_examples_proximal_splitting_plot_tv_deblurring.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_proximal_splitting_plot_tv_deblurring.py`

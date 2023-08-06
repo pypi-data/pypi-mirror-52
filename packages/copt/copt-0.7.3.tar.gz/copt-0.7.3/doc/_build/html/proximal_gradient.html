@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gradient-based methods &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="copt.minimize_proximal_gradient" href="generated/copt.minimize_proximal_gradient.html" />
+    <link rel="prev" title="Welcome to copt!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="gradient-based-methods">
+<span id="proximal-gradient"></span><h1>Gradient-based methods<a class="headerlink" href="#gradient-based-methods" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Proximal-Gradient<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The proximal-gradient method <a class="reference internal" href="#bt2009" id="id2"><span>[BT2009]</span></a>, <a class="reference internal" href="#n2013" id="id3"><span>[N2013]</span></a> is a method to solve problems of the form</p>
+<div class="math notranslate nohighlight">
+\[\argmin_{\bs{x} \in \mathbb{R}^d} f(\bs{x}) + g(\bs{x})\]</div>
+<p>where $f$ is a differentiable function for which we have access to its gradient and $g$ is a potentially non-smooth function for which we have access to its proximal operator.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/copt.minimize_proximal_gradient.html#copt.minimize_proximal_gradient" title="copt.minimize_proximal_gradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copt.minimize_proximal_gradient</span></code></a>(f_grad, x0)</p></td>
+<td><p>Proximal gradient descent.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="auto_examples/plot_group_lasso.html#sphx-glr-auto-examples-plot-group-lasso-py"><span class="std std-ref">Group Lasso regularization</span></a></p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">References</p>
+<dl class="citation">
+<dt class="label" id="bt2009"><span class="brackets"><a class="fn-backref" href="#id2">BT2009</a></span></dt>
+<dd><p>Beck, Amir, and Marc Teboulle. <a class="reference external" href="https://pdfs.semanticscholar.org/e7a7/5a379a515197e058102d985cd80f4f047c04.pdf">“Gradient-based algorithms with applications to signal recovery.”</a> Convex optimization in signal processing and communications (2009)</p>
+</dd>
+<dt class="label" id="n2013"><span class="brackets"><a class="fn-backref" href="#id3">N2013</a></span></dt>
+<dd><p>Nesterov, Yu. <a class="reference external" href="https://doi.org/10.1007/s10107-012-0629-5">“Gradient methods for minimizing composite functions.”</a> Mathematical Programming 140.1 (2013): 125-161.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="primal-dual-hybrid-gradient">
+<h2>Primal-dual hybrid gradient<a class="headerlink" href="#primal-dual-hybrid-gradient" title="Permalink to this headline">¶</a></h2>
+<p>The primal-dual hybrid gradient method <a class="reference internal" href="#c2013" id="id4"><span>[C2013]</span></a> <a class="reference internal" href="#v2013" id="id5"><span>[V2013]</span></a> <a class="reference internal" href="#cp2016" id="id6"><span>[CP2016]</span></a> is a method to solve problems of the form</p>
+<div class="math notranslate nohighlight">
+\[\argmin_{\bs{x} \in \mathbb{R}^d} f(\bs{x}) + g(\bs{x}) + h(\bs{A}\bs{x})\]</div>
+<p>where $f$ is a differentiable function for which we have access to its gradient and $g$ and $h$ are potentially non-smooth functions for which we have access to their proximal operator.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/copt.minimize_primal_dual.html#copt.minimize_primal_dual" title="copt.minimize_primal_dual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copt.minimize_primal_dual</span></code></a>(f_grad, x0[, …])</p></td>
+<td><p>Primal-dual hybrid gradient splitting method.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="auto_examples/proximal_splitting/plot_tv_deblurring.html#sphx-glr-auto-examples-proximal-splitting-plot-tv-deblurring-py"><span class="std std-ref">Total variation regularization</span></a></p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">References</p>
+<dl class="citation">
+<dt class="label" id="c2013"><span class="brackets"><a class="fn-backref" href="#id4">C2013</a></span></dt>
+<dd><p>Condat, Laurent. “A primal–dual splitting method for convex optimization involving Lipschitzian, proximable and linear composite terms.” Journal of Optimization Theory and Applications 158.2 (2013): 460-479.</p>
+</dd>
+<dt class="label" id="v2013"><span class="brackets"><a class="fn-backref" href="#id5">V2013</a></span></dt>
+<dd><p>Vũ, Bằng Công. “A splitting algorithm for dual monotone inclusions involving cocoercive operators.” Advances in Computational Mathematics 38.3 (2013)</p>
+</dd>
+<dt class="label" id="cp2016"><span class="brackets"><a class="fn-backref" href="#id6">CP2016</a></span></dt>
+<dd><p>Chambolle, Antonin, and Thomas Pock. “An introduction to continuous optimization for imaging.” Acta Numerica 25 (2016)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="three-operator-splitting">
+<h2>Three-operator splitting<a class="headerlink" href="#three-operator-splitting" title="Permalink to this headline">¶</a></h2>
+<p>The three operator splitting <a class="reference internal" href="#dy2017" id="id7"><span>[DY2017]</span></a> <a class="reference internal" href="#pg2018" id="id8"><span>[PG2018]</span></a> is a method to solve problems of the form</p>
+<div class="math notranslate nohighlight">
+\[\argmin_{\bs{x} \in \mathbb{R}^d} f(\bs{x}) + g(\bs{x}) + h(\bs{x})\]</div>
+<p>where $f$ is a differentiable function for which we have access to its gradient and $g$ and $h$ are potentially non-smooth functions for which we have access to their proximal operator.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/copt.minimize_three_split.html#copt.minimize_three_split" title="copt.minimize_three_split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copt.minimize_three_split</span></code></a>(f_grad, x0[, …])</p></td>
+<td><p>Davis-Yin three operator splitting method.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="auto_examples/proximal_splitting/plot_sparse_nuclear_norm.html#sphx-glr-auto-examples-proximal-splitting-plot-sparse-nuclear-norm-py"><span class="std std-ref">Estimating a sparse and low rank matrix</span></a></p></li>
+<li><p><a class="reference internal" href="auto_examples/proximal_splitting/plot_tv_deblurring.html#sphx-glr-auto-examples-proximal-splitting-plot-tv-deblurring-py"><span class="std std-ref">Total variation regularization</span></a></p></li>
+<li><p><a class="reference internal" href="auto_examples/proximal_splitting/plot_overlapping_group_lasso.html#sphx-glr-auto-examples-proximal-splitting-plot-overlapping-group-lasso-py"><span class="std std-ref">Group lasso with overlap</span></a></p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">References</p>
+<dl class="citation">
+<dt class="label" id="dy2017"><span class="brackets"><a class="fn-backref" href="#id7">DY2017</a></span></dt>
+<dd><p>Davis, Damek, and Wotao Yin. <a class="reference external" href="https://doi.org/10.1007/s11228-017-0421-z">“A three-operator splitting scheme and
+its optimization applications.”</a> Set-Valued and Variational
+Analysis, 2017.</p>
+</dd>
+<dt class="label" id="pg2018"><span class="brackets"><a class="fn-backref" href="#id8">PG2018</a></span></dt>
+<dd><p>Pedregosa, Fabian, and Gauthier Gidel. <a class="reference external" href="https://arxiv.org/abs/1804.02339">“Adaptive Three Operator
+Splitting.”</a> Proceedings of the 35th
+International Conference on Machine Learning, 2018.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gradient-based methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Proximal-Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#primal-dual-hybrid-gradient">Primal-dual hybrid gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#three-operator-splitting">Three-operator splitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/proximal_gradient.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

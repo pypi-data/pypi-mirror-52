@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>copt.minimize_pairwise_frank_wolfe &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stochastic methods" href="../stochastic.html" />
+    <link rel="prev" title="copt.minimize_frank_wolfe" href="copt.minimize_frank_wolfe.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="copt-minimize-pairwise-frank-wolfe">
+<h1>copt.minimize_pairwise_frank_wolfe<a class="headerlink" href="#copt-minimize-pairwise-frank-wolfe" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="copt.minimize_pairwise_frank_wolfe">
+<code class="sig-prename descclassname">copt.</code><code class="sig-name descname">minimize_pairwise_frank_wolfe</code><span class="sig-paren">(</span><em class="sig-param">f_grad</em>, <em class="sig-param">x0</em>, <em class="sig-param">active_set</em>, <em class="sig-param">lmo_pairwise</em>, <em class="sig-param">step_size=None</em>, <em class="sig-param">lipschitz=None</em>, <em class="sig-param">max_iter=200</em>, <em class="sig-param">tol=1e-12</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/openopt/copt/blob/c2a06cc/copt/frank_wolfe.py#L351"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#copt.minimize_pairwise_frank_wolfe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pairwise FW on the L1 ball.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<blockquote>
+<div><p>This feature is experimental, API is likely to change.</p>
+</div></blockquote>
+<p>Design: LMO takes as input the active set (an array of shape
+n_vertices).</p>
+<p>should return d_t, certificate, and both indices of the selected vertices.</p>
+<p>How to pass the initialization of vertices?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Args</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>f_grad: callable</dt><dd><p>Takes as input the current iterate (a vector of same size as x0) and
+returns the function value and gradient of the objective function.
+It should accept the optional argument return_gradient, and when False
+it should return only the function value.</p>
+</dd>
+<dt>x0: array-like</dt><dd><p>Initial guess for solution.</p>
+</dd>
+<dt>lmo_pairwise: callable</dt><dd><p>Takes as input a vector u of same size as x0 and returns a solution to
+the pairwise linear minimization oracle (see doc).</p>
+</dd>
+<dt>step_size: None or “adaptive” or “adaptive2” or callable</dt><dd><p>Step-size step_size to use. If None is used and keyword lipschitz
+is not given or None, then it will use a decreasing step-size of the
+form 2/(k+1) (described in [1]). If None is used and keyword lipschitz
+is not None, then it will use the Demyanov-Rubinov step-size step_size
+(variant 1 in [2]).</p>
+</dd>
+<dt>lipschitz: None or float.</dt><dd><p>Estimate for the Lipschitz constant of the gradient.</p>
+</dd>
+<dt>max_iter: integer</dt><dd><p>Maximum number of iterations.</p>
+</dd>
+<dt>tol: float</dt><dd><p>Tolerance of the stopping criterion. The algorithm will stop whenever
+the Frank-Wolfe gap is below tol or the maximum number of iterations
+is exceeded.</p>
+</dd>
+<dt>callback: callable</dt><dd><p>Callback to execute at each iteration. If the callable returns False
+then the algorithm with immediately return.</p>
+</dd>
+<dt>verbose: int</dt><dd><p>Verbosity level.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>res<span class="classifier">scipy.optimize.OptimizeResult</span></dt><dd><p>The optimization result represented as a
+<code class="docutils literal notranslate"><span class="pre">scipy.optimize.OptimizeResult</span></code> object. Important attributes are:
+<code class="docutils literal notranslate"><span class="pre">x</span></code> the solution array, <code class="docutils literal notranslate"><span class="pre">success</span></code> a Boolean flag indicating if
+the optimizer exited successfully and <code class="docutils literal notranslate"><span class="pre">message</span></code> which describes
+the cause of the termination. See <cite>scipy.optimize.OptimizeResult</cite>
+for a description of other attributes.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>res<span class="classifier">scipy.optimize.OptimizeResult</span></dt><dd><p>The optimization result represented as a
+<code class="docutils literal notranslate"><span class="pre">scipy.optimize.OptimizeResult</span></code> object. Important attributes are:
+<code class="docutils literal notranslate"><span class="pre">x</span></code> the solution array, <code class="docutils literal notranslate"><span class="pre">success</span></code> a Boolean flag indicating if
+the optimizer exited successfully and <code class="docutils literal notranslate"><span class="pre">message</span></code> which describes
+the cause of the termination. See <cite>scipy.optimize.OptimizeResult</cite>
+for a description of other attributes.</p>
+</dd>
+</dl>
+</dd>
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="../auto_examples/frank_wolfe/plot_sparse_benchmark_pairwise.html#sphx-glr-auto-examples-frank-wolfe-plot-sparse-benchmark-pairwise-py"><span class="std std-ref">Benchmark of Pairwise Frank-Wolfe variants for sparse logistic regression</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../frank_wolfe.html">Frank-Wolfe</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../frank_wolfe.html#id2">Frank-Wolfe</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../frank_wolfe.html#pairwise-frank-wolfe">Pairwise Frank-Wolfe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/generated/copt.minimize_pairwise_frank_wolfe.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

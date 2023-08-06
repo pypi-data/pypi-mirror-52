@@ -1,0 +1,22 @@
+
+
+Examples using ``copt.utils.HuberLoss``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Estimating a sparse and low rank matrix">
+
+.. only:: html
+
+    .. figure:: /auto_examples/proximal_splitting/images/thumb/sphx_glr_plot_sparse_nuclear_norm_thumb.png
+
+        :ref:`sphx_glr_auto_examples_proximal_splitting_plot_sparse_nuclear_norm.py`
+
+.. raw:: html
+
+    </div>
+
+.. only:: not html
+
+    * :ref:`sphx_glr_auto_examples_proximal_splitting_plot_sparse_nuclear_norm.py`

@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>SAGA vs SVRG &#8212; copt  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"argmin": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,min}}", "argmax": "\\DeclareMathOperator*{\\argmin}{\\mathbf{arg\\,max}}", "bs": "\\newcommand{\\bs}[1]{\\boldsymbol{#1}}"}}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Group Lasso regularization" href="plot_group_lasso.html" />
+    <link rel="prev" title="Accelerated gradient descent" href="plot_accelerated.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-plot-saga-vs-svrg-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="saga-vs-svrg">
+<span id="sphx-glr-auto-examples-plot-saga-vs-svrg-py"></span><h1>SAGA vs SVRG<a class="headerlink" href="#saga-vs-svrg" title="Permalink to this headline">¶</a></h1>
+<p>A comparison between two variance-reduced stochastic gradient methods:
+SAGA (implemented in <a class="reference internal" href="../generated/copt.minimize_saga.html#copt.minimize_saga" title="copt.minimize_saga"><code class="xref py py-func docutils literal notranslate"><span class="pre">copt.minimize_saga()</span></code></a>) and SVRG (implemented in
+<a class="reference internal" href="../generated/copt.minimize_svrg.html#copt.minimize_svrg" title="copt.minimize_svrg"><code class="xref py py-func docutils literal notranslate"><span class="pre">copt.minimize_svrg()</span></code></a>). The problem solved in this case is the sum of a
+logistic regression and an L1 norm (sometimes referred to as sparse logistic)</p>
+<img alt="../_images/sphx_glr_plot_saga_vs_svrg_001.png" class="sphx-glr-single-img" src="../_images/sphx_glr_plot_saga_vs_svrg_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/100 [00:00&lt;?, ?it/s]
+SAGA:   0%|          | 0/100 [00:00&lt;?, ?it/s]
+SAGA:   0%|          | 0/100 [00:00&lt;?, ?it/s, tol=5.67]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=5.67]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=3.23]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=1.93]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.911]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.538]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.258]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.146]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.0786]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.0433]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.0254]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.0152]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.00925]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.0058]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.00354]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.00246]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.00159]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.00111]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.000722]
+SAGA:   1%|1         | 1/100 [00:00&lt;01:12,  1.37it/s, tol=0.000518]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=0.000518]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=0.000328]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=0.000246]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=0.000153]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=0.000112]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=7.76e-5]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=5.33e-5]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=3.79e-5]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=2.58e-5]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=1.78e-5]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=1.18e-5]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=8.51e-6]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=5.81e-6]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=4.23e-6]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=2.88e-6]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=2.02e-6]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=1.31e-6]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=9.87e-7]
+SAGA:  19%|#9        | 19/100 [00:00&lt;00:41,  1.95it/s, tol=6.8e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=6.8e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=4.69e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=3.4e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=2.38e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=1.65e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=1.09e-7]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=7.98e-8]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=5.6e-8]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=3.94e-8]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=2.78e-8]
+SAGA:  37%|###7      | 37/100 [00:00&lt;00:22,  2.77it/s, tol=1.96e-8]
+SAGA:  37%|###7      | 37/100 [00:01&lt;00:22,  2.77it/s, tol=1.35e-8]
+SAGA:  37%|###7      | 37/100 [00:01&lt;00:22,  2.77it/s, tol=9.65e-9]
+SAGA:  37%|###7      | 37/100 [00:01&lt;00:22,  2.77it/s, tol=6.77e-9]
+SAGA:  37%|###7      | 37/100 [00:01&lt;00:22,  2.77it/s, tol=4.92e-9]
+SAGA:  37%|###7      | 37/100 [00:01&lt;00:22,  2.77it/s, tol=3.35e-9]
+SAGA:  37%|###7      | 37/100 [00:01&lt;00:22,  2.77it/s, tol=2.46e-9]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=2.46e-9]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=1.67e-9]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=1.19e-9]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=8.81e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=5.85e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=4.32e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=2.98e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=2.08e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=1.55e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=1.03e-10]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=7.4e-11]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=5.27e-11]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=3.69e-11]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=2.71e-11]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=1.87e-11]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=1.33e-11]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=9.27e-12]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=6.86e-12]
+SAGA:  53%|#####3    | 53/100 [00:01&lt;00:11,  3.93it/s, tol=4.53e-12]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=4.53e-12]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=3.4e-12]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=2.25e-12]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=1.66e-12]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=1.17e-12]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=7.93e-13]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=6.04e-13]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=4.1e-13]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=2.93e-13]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=2.01e-13]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=1.4e-13]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=9.91e-14]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=6.67e-14]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=4.82e-14]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=3.04e-14]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=1.96e-14]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=1.21e-14]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=7.27e-15]
+SAGA:  71%|#######1  | 71/100 [00:01&lt;00:05,  5.56it/s, tol=3.61e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=3.61e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=1.97e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=1.42e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=1.06e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=1.03e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=1.1e-15]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=9.91e-16]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=7.85e-16]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=9.36e-16]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=8.42e-16]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=7.54e-16]
+SAGA:  89%|########9 | 89/100 [00:01&lt;00:01,  7.83it/s, tol=6.67e-16]
+SAGA: 100%|##########| 100/100 [00:01&lt;00:00, 75.86it/s, tol=6.67e-16]
+/usr/local/google/home/pedregosa/anaconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py:3449: MatplotlibDeprecationWarning:
+The `ymin` argument was deprecated in Matplotlib 3.0 and will be removed in 3.2. Use `bottom` instead.
+  alternative=&#39;`bottom`&#39;, obj_type=&#39;argument&#39;)
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copt</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># .. construct (random) dataset ..</span>
+<span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">200</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
+
+<span class="c1"># .. objective function and regularizer ..</span>
+<span class="n">f</span> <span class="o">=</span> <a href="../generated/copt.utils.LogLoss.html#copt.utils.LogLoss" title="View documentation for copt.utils.LogLoss"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">LogLoss</span></a><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <a href="../generated/copt.utils.L1Norm.html#copt.utils.L1Norm" title="View documentation for copt.utils.L1Norm"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">L1Norm</span></a><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">n_samples</span><span class="p">)</span>
+
+<span class="c1"># .. callbacks to track progress ..</span>
+<span class="n">cb_saga</span> <span class="o">=</span> <a href="../generated/copt.utils.Trace.html#copt.utils.Trace" title="View documentation for copt.utils.Trace"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">Trace</span></a><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">cb_svrg</span> <span class="o">=</span> <a href="../generated/copt.utils.Trace.html#copt.utils.Trace" title="View documentation for copt.utils.Trace"><span class="n">cp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">Trace</span></a><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># .. run the SAGA and SVRG algorithms ..</span>
+<span class="n">step_size</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">f</span><span class="o">.</span><span class="n">max_lipschitz</span><span class="p">)</span>
+<span class="n">result_saga</span> <span class="o">=</span> <a href="../generated/copt.minimize_saga.html#copt.minimize_saga" title="View documentation for copt.minimize_saga"><span class="n">cp</span><span class="o">.</span><span class="n">minimize_saga</span></a><span class="p">(</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">partial_deriv</span><span class="p">,</span>
+    <span class="n">X</span><span class="p">,</span>
+    <span class="n">y</span><span class="p">,</span>
+    <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="n">n_features</span><span class="p">),</span>
+    <span class="n">prox</span><span class="o">=</span><span class="n">g</span><span class="o">.</span><span class="n">prox_factory</span><span class="p">(</span><span class="n">n_features</span><span class="p">),</span>
+    <span class="n">step_size</span><span class="o">=</span><span class="n">step_size</span><span class="p">,</span>
+    <span class="n">callback</span><span class="o">=</span><span class="n">cb_saga</span><span class="p">,</span>
+    <span class="n">tol</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">max_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">result_svrg</span> <span class="o">=</span> <a href="../generated/copt.minimize_svrg.html#copt.minimize_svrg" title="View documentation for copt.minimize_svrg"><span class="n">cp</span><span class="o">.</span><span class="n">minimize_svrg</span></a><span class="p">(</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">partial_deriv</span><span class="p">,</span>
+    <span class="n">X</span><span class="p">,</span>
+    <span class="n">y</span><span class="p">,</span>
+    <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="n">n_features</span><span class="p">),</span>
+    <span class="n">prox</span><span class="o">=</span><span class="n">g</span><span class="o">.</span><span class="n">prox_factory</span><span class="p">(</span><span class="n">n_features</span><span class="p">),</span>
+    <span class="n">step_size</span><span class="o">=</span><span class="n">step_size</span><span class="p">,</span>
+    <span class="n">callback</span><span class="o">=</span><span class="n">cb_svrg</span><span class="p">,</span>
+    <span class="n">tol</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">max_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="c1"># .. plot the result ..</span>
+<span class="n">fmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">cb_saga</span><span class="o">.</span><span class="n">trace_fx</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">cb_svrg</span><span class="o">.</span><span class="n">trace_fx</span><span class="p">))</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="View documentation for matplotlib.pyplot.title"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s2">&quot;Comparison of full gradient optimizers&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="View documentation for matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">cb_saga</span><span class="o">.</span><span class="n">trace_fx</span> <span class="o">-</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;SAGA&quot;</span><span class="p">)</span>
+<span class="c1"># .. for SVRG we multiply the number of iterations by two to ..</span>
+<span class="c1"># .. account for computation of the snapshot gradient ..</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="View documentation for matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+    <span class="mi">2</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cb_svrg</span><span class="o">.</span><span class="n">trace_fx</span><span class="p">)),</span> <span class="n">cb_svrg</span><span class="o">.</span><span class="n">trace_fx</span> <span class="o">-</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;SVRG&quot;</span>
+<span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="View documentation for matplotlib.pyplot.ylabel"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s2">&quot;Function suboptimality&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="View documentation for matplotlib.pyplot.xlabel"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s2">&quot;number of gradient evaluations&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.yscale.html#matplotlib.pyplot.yscale" title="View documentation for matplotlib.pyplot.yscale"><span class="n">plt</span><span class="o">.</span><span class="n">yscale</span></a><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylim.html#matplotlib.pyplot.ylim" title="View documentation for matplotlib.pyplot.ylim"><span class="n">plt</span><span class="o">.</span><span class="n">ylim</span></a><span class="p">(</span><span class="n">ymin</span><span class="o">=</span><span class="mf">1e-16</span><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlim.html#matplotlib.pyplot.xlim" title="View documentation for matplotlib.pyplot.xlim"><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span></a><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" title="View documentation for matplotlib.pyplot.legend"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="View documentation for matplotlib.pyplot.grid"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.468 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  99 MB</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-plot-saga-vs-svrg-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/bd296c6d451c031032fcf5edf57d559c/plot_saga_vs_svrg.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_saga_vs_svrg.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/5e86bb845827b2b3712f06df17586ce0/plot_saga_vs_svrg.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_saga_vs_svrg.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">copt</a></h1>
+
+
+
+<p class="blurb">Optimization in Python</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../proximal_gradient.html">Gradient-based methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frank_wolfe.html">Frank-Wolfe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stochastic.html">Stochastic methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loss_functions.html">Loss and regularization functions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Example Gallery</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#miscellaneous-examples">Miscellaneous examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#frank-wolfe">Frank-Wolfe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#proximal-splitting">Proximal Splitting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">Utility functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, <a href="https://github.com/openopt/copt/graphs/contributors">COPT developers</a>. Updated on September 02, 2019 | <a href="https://storage.googleapis.com/copt/index.html">Development version</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/auto_examples/plot_saga_vs_svrg.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/openopt/copt" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
