@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: toop
+Version: 0.2
+Summary: A Site Connectivity Checker for Mac
+Home-page: https://github.com/Genza999/toop
+Author: Kisekk David
+Author-email: cartpix@gmail.com
+License: UNKNOWN
+Keywords: python requests monitor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs (==1.4.3)
+Requires-Dist: astroid (==2.2.5)
+Requires-Dist: autopep8 (==1.4.4)
+Requires-Dist: certifi (==2019.6.16)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: idna (==2.8)
+Requires-Dist: isort (==4.3.21)
+Requires-Dist: lazy-object-proxy (==1.4.2)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: pycodestyle (==2.5.0)
+Requires-Dist: pydbus (==0.6.0)
+Requires-Dist: pylint (==2.3.1)
+Requires-Dist: pynotify (==0.1.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: ruamel.yaml (==0.16.5)
+Requires-Dist: ruamel.yaml.clib (==0.1.2)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: typed-ast (==1.4.0)
+Requires-Dist: urllib3 (==1.25.3)
+Requires-Dist: wrapt (==1.11.2)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: pyfiglet (==0.8.post1)
+
+# toop
+
+Toop is a Python library that monitors that status of a site on Mac
+
+
