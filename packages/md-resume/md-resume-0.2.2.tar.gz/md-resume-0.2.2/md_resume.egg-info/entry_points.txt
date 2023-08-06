@@ -1,0 +1,3 @@
+[console_scripts]
+generate-resume-pdf = md_resume:main
+
