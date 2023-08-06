@@ -1,0 +1,16 @@
+README.md
+README.rst
+setup.py
+google_search_results.egg-info/PKG-INFO
+google_search_results.egg-info/SOURCES.txt
+google_search_results.egg-info/dependency_links.txt
+google_search_results.egg-info/not-zip-safe
+google_search_results.egg-info/requires.txt
+google_search_results.egg-info/top_level.txt
+serpapi/__init__.py
+serpapi/baidu_search_results.py
+serpapi/bing_search_results.py
+serpapi/google_search_results.py
+serpapi/serp_api_client.py
+tests/__init__.py
+tests/testwrapper.py
