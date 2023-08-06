@@ -1,0 +1,13 @@
+Biopython
+pysam
+bcbio-gff
+coverage
+jenkspy
+matplotlib
+pandas
+#heatmapcluster>=0.1.2
+pyaml
+networkx
+nose
+# for readthedocs
+sphinxcontrib-napoleon
