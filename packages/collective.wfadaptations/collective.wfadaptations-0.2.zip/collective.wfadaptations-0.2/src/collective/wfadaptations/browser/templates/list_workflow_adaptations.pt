@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      i18n:domain="collective.wfadaptations" tal:omit-tag="">
+
+  <div tal:condition="not:view/adaptations">
+    <p i18n:translate="">There is no applied workflow adaptations for now.</p>
+  </div>
+  <table id="applied-adaptations" class="listing" tal:condition="view/adaptations">
+    <thead>
+      <tr>
+        <th>Workflow</th>
+        <th>Adaptation</th>
+        <th>Parameters</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr tal:repeat="info view/adaptations">
+        <td tal:content="info/workflow"></td>
+        <td tal:content="info/adaptation"></td>
+        <td>
+          <p tal:repeat="key info/parameters">
+            <label><span tal:replace="key" /> :</label> <span tal:replace="python:info['parameters'][key]" />
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</html>

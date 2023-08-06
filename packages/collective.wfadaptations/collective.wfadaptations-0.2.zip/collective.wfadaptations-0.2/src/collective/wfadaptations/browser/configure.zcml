@@ -1,0 +1,38 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.wfadaptations">
+
+    <include package="Products.CMFCore" />
+
+    <!-- Publish static files -->
+    <browser:resourceDirectory
+        name="collective.wfadaptations"
+        directory="static"
+        />
+
+    <browser:page
+        name="associate_workflow_adaptation"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".settings.AssociateWorkflowAdaptation"
+        template="templates/associate_workflow_adaptation.pt"
+        permission="cmf.ManagePortal"
+        />
+
+    <browser:page
+        name="list_workflow_adaptations"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".settings.ListWorkflowAdaptations"
+        template="templates/list_workflow_adaptations.pt"
+        permission="cmf.ManagePortal"
+        />
+
+    <browser:page
+        name="manage_workflow_adaptations"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        template="templates/manage_workflow_adaptations.pt"
+        permission="cmf.ManagePortal"
+        />
+
+</configure>

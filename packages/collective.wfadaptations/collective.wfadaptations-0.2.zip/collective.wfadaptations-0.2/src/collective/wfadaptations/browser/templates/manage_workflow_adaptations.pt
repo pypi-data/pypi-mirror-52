@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.wfadaptations">
+<body>
+
+  <div metal:fill-slot="main">
+    <tal:block define="step_one python:'form.widgets.adaptation' not in request">
+
+      <tal:block condition="step_one">
+        <a tal:attributes="href string:${request/URL}/#add-new" i18n:translate="">Add a new workflow adaptation</a>
+
+        <h1 i18n:translate="">Manage workflow adaptations</h1>
+
+        <h2 i18n:translate="">Already applied workflow adaptations</h2>
+        <table tal:replace="structure context/@@list_workflow_adaptations" />
+      </tal:block>
+
+      <tal:block define="associate_view nocall:context/@@associate_workflow_adaptation">
+        <h2 id="add-new" i18n:translate="" tal:content="associate_view/form/label" />
+        <form tal:replace="structure context/@@associate_workflow_adaptation" />
+      </tal:block>
+
+    </tal:block>
+
+  </div>
+
+</body>
+</html>

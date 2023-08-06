@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel" meta_type="Plone Control Panel Tool"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+   i18n:domain="plone">
+ <configlet title="Manage Workflow Adaptations" action_id="manage_workflow_adaptations"
+    appId="None" category="Products" condition_expr="" icon_expr=""
+    url_expr="string:${portal_url}/@@manage_workflow_adaptations" visible="True"
+    i18n:translate="title">
+  <permission>Manage portal</permission>
+ </configlet>
+</object>

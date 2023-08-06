@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.wfadaptations\n"
+"POT-Creation-Date: 2017-02-15 14:42+0000\n"
+"PO-Revision-Date: 2015-06-03 16:20+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Language: fr\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../browser/settings.py:123
+msgid "${message} ${additional}"
+msgstr "${message} ${additional}"
+
+#: ../browser/templates/manage_workflow_adaptations.pt:14
+msgid "Add a new workflow adaptation"
+msgstr "Ajouter une nouvelle adaptation à un workflow"
+
+#: ../browser/templates/manage_workflow_adaptations.pt:18
+msgid "Already applied workflow adaptations"
+msgstr "Adaptations de workflow déjà appliquées"
+
+#: ../browser/settings.py:46
+msgid "Associate an adaptation to a workflow"
+msgstr "Associer une adaptation à un workflow"
+
+#: ../browser/settings.py:74
+msgid "Choose parameters for your workflow adaptation"
+msgstr "Choisissez les paramètres pour votre adaptation de workflow"
+
+#: ../configure.zcml:21
+msgid "Installs the collective.wfadaptations add-on."
+msgstr ""
+
+#: ../browser/templates/manage_workflow_adaptations.pt:16
+msgid "Manage workflow adaptations"
+msgstr "Gestion des adaptations de workflow"
+
+#: ../browser/settings.py:119
+msgid "The workflow adaptation has been successfully applied."
+msgstr "L'adaptation de workflow a été appliquée avec succès."
+
+#: ../browser/settings.py:104
+msgid "The workflow adaptation has not been successfully applied."
+msgstr "L'adaptation de workflow n'a pas pu être appliquée."
+
+#: ../wfadaptation.py:18
+msgid "The workflow id '${id}' (${title}) doesn't contain the state '${state}'."
+msgstr "Le workflow '${id}' (${title}) ne contient pas l'état '${state}'."
+
+#: ../wfadaptation.py:27
+msgid "The workflow id '${id}' (${title}) doesn't contain the transition '${transition}'."
+msgstr "Le workflow '${id}' (${title}) ne contient pas la transition '${transition}'."
+
+#: ../browser/templates/list_workflow_adaptations.pt:8
+msgid "There is no applied workflow adaptations for now."
+msgstr "Il n'y a aucune adaptation de workflow."
+
+#: ../browser/settings.py:111
+msgid "This adaptation is already applied on this workflow."
+msgstr "Cette adaptation a déjà été appliquée sur ce workflow."
+
+#: ../browser/settings.py:31
+msgid "Workflow"
+msgstr "Workflow"
+
+#: ../browser/settings.py:36
+msgid "Workflow adaptation"
+msgstr "Adaptation de workflow"
+
+#: ../browser/settings.py:37
+msgid "Workflow adaptation to execute on this workflow"
+msgstr "Adaptation de workflow à exécuter sur ce workflow"
+
+#: ../configure.zcml:21
+msgid "collective.wfadaptations"
+msgstr ""

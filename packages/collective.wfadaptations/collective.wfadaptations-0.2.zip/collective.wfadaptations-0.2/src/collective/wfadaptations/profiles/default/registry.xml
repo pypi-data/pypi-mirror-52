@@ -1,0 +1,23 @@
+<registry>
+  <record name="collective.wfadaptations.applied_adaptations">
+    <field type="plone.registry.field.List">
+      <required>False</required>
+      <title>Applied workflow adaptations</title>
+      <description>Workflow adaptations that are applied on workflows.</description>
+      <value_type type="plone.registry.field.Dict">
+        <title>Workflow adaptation</title>
+        <key_type type="plone.registry.field.TextLine">
+          <title>workflow</title>
+        </key_type>
+        <value_type type="plone.registry.field.TextLine">
+          <title>adaptation</title>
+        </value_type>
+        <value_type type="plone.registry.field.TextLine">
+          <title>parameters</title>
+        </value_type>
+      </value_type>
+    </field>
+    <value purge="false">
+    </value>
+  </record>
+</registry>

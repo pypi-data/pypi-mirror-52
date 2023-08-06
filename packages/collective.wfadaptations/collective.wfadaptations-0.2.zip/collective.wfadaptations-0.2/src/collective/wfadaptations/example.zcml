@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.wfadaptations">
+
+  <utility
+      name="collective.wfadaptations.example"
+      provides=".interfaces.IWorkflowAdaptation"
+      factory=".example.ExampleWorkflowAdaptation"
+      />
+
+</configure>
