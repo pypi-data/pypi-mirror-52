@@ -1,0 +1,11 @@
+kombu
+arangodb
+auth
+brotli
+eventlet
+gevent
+librabbitmq
+pymongo
+msgpack
+redis
+sqlalchemy
