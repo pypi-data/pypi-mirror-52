@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+Makefile
+README.rst
+setup.py
+kaiterra_async_client/__init__.py
+kaiterra_async_client/client.py
+kaiterra_async_client/dateutil.py
+kaiterra_async_client.egg-info/PKG-INFO
+kaiterra_async_client.egg-info/SOURCES.txt
+kaiterra_async_client.egg-info/dependency_links.txt
+kaiterra_async_client.egg-info/requires.txt
+kaiterra_async_client.egg-info/top_level.txt
+kaiterra_async_client/tests/__init__.py
+kaiterra_async_client/tests/test_sensors.py
+kaiterra_async_client/tests/online_tests/__init__.py
+kaiterra_async_client/tests/online_tests/test_sensors.py
