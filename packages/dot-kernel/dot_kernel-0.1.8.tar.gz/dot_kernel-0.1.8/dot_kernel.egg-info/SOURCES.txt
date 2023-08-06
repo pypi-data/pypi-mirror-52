@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+bin/install-dot-kernel
+dot_kernel/__init__.py
+dot_kernel/__main__.py
+dot_kernel/imgsize.py
+dot_kernel/kernel.py
+dot_kernel.egg-info/PKG-INFO
+dot_kernel.egg-info/SOURCES.txt
+dot_kernel.egg-info/dependency_links.txt
+dot_kernel.egg-info/requires.txt
+dot_kernel.egg-info/top_level.txt
+dot_kernel_spec/__init__.py
+dot_kernel_spec/kernel.json
