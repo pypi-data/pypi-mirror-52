@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bash.py
+Version: 0.4.1
+Summary: An inline Bash script runner, for Python.
+Home-page: https://github.com/jpetrucciani/bash.py
+Author: Kenneth Reitz, Jacobi Petrucciani
+Author-email: jacobi@mimirhq.com
+License: MIT
+Description: An inline Bash script runner, for Python.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
