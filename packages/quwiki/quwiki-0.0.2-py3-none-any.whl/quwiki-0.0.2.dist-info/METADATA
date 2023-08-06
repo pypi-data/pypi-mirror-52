@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: quwiki
+Version: 0.0.2
+Summary: Configurable, extendable and minimalistic wiki for your team generated from multiple sources, e.g. Google Drive, Github and many more.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache
+Platform: noarch
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: pyyaml
+Requires-Dist: gitpython
+Requires-Dist: markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: python-slugify
+Requires-Dist: jinja2
+
+UNKNOWN
+
+
