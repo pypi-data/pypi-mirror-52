@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+src/zope.prometheus.egg-info/PKG-INFO
+src/zope.prometheus.egg-info/SOURCES.txt
+src/zope.prometheus.egg-info/dependency_links.txt
+src/zope.prometheus.egg-info/not-zip-safe
+src/zope.prometheus.egg-info/requires.txt
+src/zope.prometheus.egg-info/top_level.txt
+src/zope/prometheus/configure.zcml

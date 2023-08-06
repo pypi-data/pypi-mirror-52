@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: zope.prometheus
+Version: 1.0
+Summary: Prometheus integration for Zope/Plone.
+Home-page: TBD
+Author: Rob McBroom
+Author-email: rob@sixfeetup.com
+License: GPL
+Description: 
+        
+Keywords: plone zope prometheus monitoring
+Platform: Any
+Classifier: Programming Language :: Python
+Classifier: Framework :: Plone
+Classifier: Framework :: ZODB
+Classifier: Framework :: Zope2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test

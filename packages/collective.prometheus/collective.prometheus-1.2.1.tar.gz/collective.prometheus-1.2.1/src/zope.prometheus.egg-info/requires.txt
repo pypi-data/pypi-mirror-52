@@ -1,0 +1,5 @@
+setuptools
+Products.ZServerViews>=0.2
+
+[test]
+plone.app.testing
