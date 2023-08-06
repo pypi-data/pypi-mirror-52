@@ -1,0 +1,3 @@
+include x16rv2.h
+include LICENSE
+graft sha3
