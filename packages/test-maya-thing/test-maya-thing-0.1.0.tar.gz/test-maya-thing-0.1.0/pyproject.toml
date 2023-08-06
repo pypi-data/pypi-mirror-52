@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "test-maya-thing"
+version = "0.1.0"
+description = "Maya Boilerplate contains all the boilerplate you need to create a Maya Python package."
+authors = ["Mitchell Coote <mitchellcoote@gmail.com>"]
+packages = [
+    { include = "testmayathing" },
+]
+
+[tool.poetry.dependencies]
+python = "^2.7.9 || ^3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+pytest-cov = "^2.7"
+mkdocs = "^1.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
