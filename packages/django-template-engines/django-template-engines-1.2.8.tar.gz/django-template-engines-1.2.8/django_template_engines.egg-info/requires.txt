@@ -1,0 +1,7 @@
+Django>=2.1.0
+Pillow>=5.4.1
+
+[dev]
+flake8
+coverage
+codecov
