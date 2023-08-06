@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyzure
+Version: 0.0.25
+Summary: Easily send data to Microsoft Azure SQL DB
+Home-page: https://github.com/dacker-team/pyzure
+Author: Dacker
+Author-email: hello@dacker.co
+License: UNKNOWN
+Keywords: send data microsoft azure sql db easy
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: pyodbc (>=4.0.17)
+Requires-Dist: sshtunnel (==0.1.4)
+Requires-Dist: pandas (>=0.24.2)
+
+#pyzure
+
+
+
