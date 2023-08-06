@@ -1,0 +1,12 @@
+README.md
+setup.py
+collectiondbf/__init__.py
+collectiondbf/__main__.py
+collectiondbf/command_line.py
+collectiondbf/config.py
+collectiondbf/ui.py
+collectiondbf.egg-info/PKG-INFO
+collectiondbf.egg-info/SOURCES.txt
+collectiondbf.egg-info/dependency_links.txt
+collectiondbf.egg-info/requires.txt
+collectiondbf.egg-info/top_level.txt
