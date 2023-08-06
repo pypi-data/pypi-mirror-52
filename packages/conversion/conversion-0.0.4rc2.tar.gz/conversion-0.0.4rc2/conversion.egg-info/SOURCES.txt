@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+conversion/__init__.py
+conversion/boolean.py
+conversion/delta.py
+conversion.egg-info/PKG-INFO
+conversion.egg-info/SOURCES.txt
+conversion.egg-info/dependency_links.txt
+conversion.egg-info/top_level.txt
+tests/test_boolean.py
+tests/test_delta.py
