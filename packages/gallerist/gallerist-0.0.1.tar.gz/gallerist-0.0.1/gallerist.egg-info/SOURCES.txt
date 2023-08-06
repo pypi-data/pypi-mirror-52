@@ -1,0 +1,12 @@
+README.md
+setup.py
+gallerist/__init__.py
+gallerist/abc.py
+gallerist/core.py
+gallerist/fs.py
+gallerist.egg-info/PKG-INFO
+gallerist.egg-info/SOURCES.txt
+gallerist.egg-info/dependency_links.txt
+gallerist.egg-info/not-zip-safe
+gallerist.egg-info/requires.txt
+gallerist.egg-info/top_level.txt
