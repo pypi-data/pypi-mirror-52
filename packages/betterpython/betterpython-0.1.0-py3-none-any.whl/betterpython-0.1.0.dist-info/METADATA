@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: betterpython
+Version: 0.1.0
+Summary: Improves on the behavior of python
+Home-page: https://github.com/jmfernandes/pyLINQ
+Author: Josh Fernandes
+Author-email: joshfernandes@mac.com
+License: MIT
+Description-Content-Type: text/x-rst
+Keywords: LINQ,better,python
+Platform: UNKNOWN
+Requires-Python: >=3.4
+
+This makes python better
+
+
