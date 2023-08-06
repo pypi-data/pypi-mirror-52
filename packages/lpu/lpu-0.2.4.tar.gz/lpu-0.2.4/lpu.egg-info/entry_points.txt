@@ -1,0 +1,12 @@
+[console_scripts]
+lpu-abspath = lpu.commands.abspath:main
+lpu-clean-parallel = lpu.commands.clean_parallel:main
+lpu-dialog = lpu.commands.prompt:main
+lpu-exec-parallel = lpu.commands.exec_parallel:main
+lpu-guess-langcode = lpu.commands.guess_langcode:main
+lpu-progress = lpu.commands.progress:main
+lpu-random-split = lpu.commands.random_split:main
+lpu-wait-files = lpu.commands.wait_files:main
+lpu-word-align-score = lpu.smt.align.ibm_models:main_score
+lpu-word-align-train = lpu.smt.align.ibm_models:main_train
+
