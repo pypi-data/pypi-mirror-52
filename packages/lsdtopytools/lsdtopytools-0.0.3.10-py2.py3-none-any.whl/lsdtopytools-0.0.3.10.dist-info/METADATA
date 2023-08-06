@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: lsdtopytools
+Version: 0.0.3.10
+Summary: High-level interface to LSDTopoTools in python. Include as much tools as we can port in python, for the rest see our docker solutions
+Home-page: https://github.com/bgailleton/lsdtopytools
+Author: Boris Gailleton
+Author-email: b.gailleton@sms.ed.ac.uk
+License: GNU General Public License v3
+Keywords: lsdtopytools
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=6.0)
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: rasterio
+Requires-Dist: scipy
+Requires-Dist: h5py
+Requires-Dist: numba
+Requires-Dist: lsdtt-xtensor-python
+Provides-Extra: fastscapelib_ultimate_binding_lsdtt
+Requires-Dist: fastscapelib-fortran ; extra == 'fastscapelib_ultimate_binding_lsdtt'
+Provides-Extra: shapefile_tools
+Requires-Dist: fiona ; extra == 'shapefile_tools'
+Requires-Dist: shapely ; extra == 'shapefile_tools'
+Requires-Dist: geopandas ; extra == 'shapefile_tools'
+
+UNKNOWN
+
+

@@ -1,0 +1,11 @@
+[console_scripts]
+lsdtt-burn2csv = scripts_for_lsdtopytools.lsdtt_csv_operations:burn_rast_val_to_csv
+lsdtt-chi-tools = scripts_for_lsdtopytools.lsdtt_chi_ksn_knickoint_tools:chi_mapping_tools
+lsdtt-concavity-tools = scripts_for_lsdtopytools.lsdtt_concavity_tools:main_concavity
+lsdtt-depressions = scripts_for_lsdtopytools.lsdtt_basic_operations:PreProcess
+lsdtt-hypsometry = scripts_for_lsdtopytools.lsdtt_hypsometry:hypsometry_tools_general
+lsdtt-plotalltifs = scripts_for_lsdtopytools.lsdtt_autoplot_tools:plot_all_tif_of_folder
+lsdtt-polyfits = scripts_for_lsdtopytools.lsdtt_basic_operations:Polyfit_Metrics
+lsdtt-remove-seas = scripts_for_lsdtopytools.lsdtt_basic_operations:remove_seas
+lsdtt-topomap = scripts_for_lsdtopytools.lsdtt_basic_operations:topomap
+
