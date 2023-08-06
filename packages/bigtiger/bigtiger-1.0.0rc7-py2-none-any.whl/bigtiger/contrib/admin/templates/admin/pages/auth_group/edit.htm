@@ -1,0 +1,41 @@
+{% extends "admin/baseedit.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+	.field-PermissionIds {
+		height: 300px;
+		overflow-y: auto;
+	}
+</style>
+{% endblock %}
+
+{% block bottom_script %}
+{{ block.super }}
+<script type="text/javascript">
+	var easyTree = new EasyTree('#id_permissions', {
+		url: '/admin/pages/auth_permission/tree/json/',
+		onLoadSuccess: function (node, data) {
+			easyTree.loadViewState();
+		}
+	});
+	
+	function validate () {
+		easyTree.saveViewState(false, ['checked','indeterminate']);
+
+		var groupName = $('#id_name').val();
+		if (groupName == '') {
+			messager.toast('角色名称不能为空，请填写。');
+			$('#id_name').focus();
+			return false;
+		}
+		
+		var id_permissions = $('#id_permissions').val();
+		if (id_permissions == '') {
+			messager.toast('角色权限不能为空，请勾选。');
+			return false;
+		}
+		return true;
+	}
+</script>
+{% endblock %}

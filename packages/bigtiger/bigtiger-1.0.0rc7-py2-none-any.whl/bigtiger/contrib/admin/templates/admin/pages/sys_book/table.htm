@@ -1,0 +1,76 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.class_code.label_tag }}
+{{ form.class_code }}
+</div>
+<div class="form-group">
+{{ form.code.label_tag }}
+{{ form.code }}
+</div>
+<div class="form-group">
+{{ form.text.label_tag }}
+{{ form.text }}
+</div>
+<div class="form-group">
+{{ form.remark.label_tag }}
+{{ form.remark }}
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'class_code',width:60">分类编码</th>
+	        	<th data-options="field:'code',width:60">字典编码</th>
+	        	<th data-options="field:'text',width:60">字典名称</th>
+	        	<th data-options="field:'order_number',width:45, align:'right'">排序号</th>
+	        	<th data-options="field:'is_enable',width:45, formatter:humanize.formatYesNoImg, align:'center'">启用状态</th>
+	        	<th data-options="field:'remark',width:200">备注</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search', 'insert', 'update', 'delete'],
+			gridOptions: {'fitColumns': true},
+			// detailColumn: 'Id',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {
+					'class_code': $('#id_class_code').val(),
+					'code': $('#id_code').val(),
+					'text': $('#id_text').val(),
+					'remark': $('#id_remark').val(),
+				};
+		    		return q;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

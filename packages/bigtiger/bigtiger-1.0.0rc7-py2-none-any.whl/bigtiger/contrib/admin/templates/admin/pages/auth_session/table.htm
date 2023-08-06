@@ -1,0 +1,74 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block btns %}
+{{ block.super }}
+{% ifnotequal user.is_read 1 %}
+<button id="btn_clear_expired" class="btn btn-default btn-xs "><i class="glyphicon glyphicon glyphicon-trash"></i>清除过期</button>
+{% endifnotequal %}
+{% endblock %}
+
+{% block toolbarWrapper %}
+<div id="zssly_report_dg_toolbar">
+	<div class="searchWrapper">
+		<form id="searchform" class="form-inline" action="" method="get">{% csrf_token %}
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'_link',formatter:humanize.formatDetailInfo,width:10,align:'center'"></th>
+	        	<th data-options="field:'session_key',width:75">会话Key</th>
+	        <th data-options="field:'expire_date',width:60,formatter:humanize.formatDateTime">到期时间</th>
+        	</tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			btns: ['search', 'delete', 'clear_expired'],
+			gridOptions: {'fitColumns': true},
+			detailColumn: '_link',
+			getRowKey: function (row) {
+				var keys = [row['session_key']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				return null;
+			},
+			clear_expired: function () {
+				var t = _.template('<%= pageUrl %>clear_expired/?ref=<%= pageUrl %>'),
+		    			url =  t({'pageUrl': this.pageUrl}),
+    					csrf = $("input[name='csrfmiddlewaretoken']").val();
+				
+			    	$.post(url, {'csrfmiddlewaretoken': csrf}, function (data) {
+			    		messager.toast(data.message);
+			    		if (data.success) {
+			    			self.dataGrid.reload();
+			    		}
+			    	});
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

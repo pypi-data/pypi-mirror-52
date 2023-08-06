@@ -1,0 +1,74 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block searchField %}
+<div class="form-group">
+{{ form.roles.label }}
+{{ form.roles }}
+</div>
+<div class="form-group">
+{{ form.user_name.label }}
+{{ form.user_name }}
+</div>
+{% endblock %}
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+        	<th data-options="field:'ck',checkbox:true"></th>
+        	<th data-options="field:'_link',formatter:humanize.formatDetailInfo,align:'center'"></th>
+        	<th data-options="field:'login_name',width:45">登陆用户名</th>
+        	<th data-options="field:'user_name',width:40">姓名</th>
+        	<th data-options="field:'sex',width:30,formatter:humanize.formatSex">性别</th>
+        	<th data-options="field:'phone_number',width:50">手机号码</th>
+        	<!-- <th data-options="field:'email',width:60">邮箱</th> -->
+        	<th data-options="field:'roles_name',width:100,formatter:humanize.formatTip">所属角色</th>
+        	<th data-options="field:'is_active',width:40,align:'center',formatter:humanize.formatYesNoImg">是否激活</th>
+        	<th data-options="field:'is_read',width:40,align:'center',formatter:humanize.formatYesNoImg">只读用户</th>
+        	<th data-options="field:'is_leader',width:40,align:'center',formatter:humanize.formatYesNoImg">是否为领导</th>
+        	<th data-options="field:'create_date',width:50,formatter:humanize.formatDate">创建时间</th>
+        	<!--
+        	<th data-options="field:'last_login_date',width:90">最后登陆时间</th>
+        	<th data-options="field:'last_login_ip',width:90">最后登陆IP</th>
+        	-->
+        </tr>
+    </thead>
+</table>
+
+<!--
+data-options="field:'Is_Active',width:40,formatter:humanize.formatYesNo,sortable:true"
+-->
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+	// var humanize = humanize || {};
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			toolbarId: '#zssly_report_dg_toolbar',
+			btns: ['search', 'insert', 'update', 'delete'],
+			gridOptions: {'fitColumns': true, 'is_cross': true},
+			detailColumn: '_link',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				var q = {
+					'roles': $('#id_roles').val(),
+					'user_name': $('#id_user_name').val()
+				};
+		    	return q;
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

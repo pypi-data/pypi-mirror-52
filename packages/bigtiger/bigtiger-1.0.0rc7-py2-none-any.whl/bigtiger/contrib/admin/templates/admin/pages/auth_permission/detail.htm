@@ -1,0 +1,101 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 12em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>用户管理|权限信息</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-id">
+					<td class="field-t">菜单id：</td>
+					<td class="field-c">{{ object.id }}</td>
+				</tr>
+				<tr class="field field-menu_name">
+					<td class="field-t">菜单名称：</td>
+					<td class="field-c">{{ object.menu_name }}</td>
+				</tr>
+				<tr class="field field-menu_url">
+					<td class="field-t">菜单url：</td>
+					<td class="field-c">{{ object.menu_url }}</td>
+				</tr>
+				<tr class="field field-menu_url_alias">
+					<td class="field-t">菜单url别名：</td>
+					<td class="field-c">{{ object.menu_url_alias }}</td>
+				</tr>
+				<tr class="field field-menu_url_debug">
+					<td class="field-t">菜单url调试：</td>
+					<td class="field-c">{{ object.menu_url_debug }}</td>
+				</tr>
+				<tr class="field field-menu_target">
+					<td class="field-t">菜单目标：</td>
+					<td class="field-c">{{ object.menu_target }}</td>
+				</tr>
+				<tr class="field field-fast_url">
+					<td class="field-t">快捷url：</td>
+					<td class="field-c">{{ object.fast_url }}</td>
+				</tr>
+				<tr class="field field-big_icon">
+					<td class="field-t">大图标：</td>
+					<td class="field-c">{{ object.big_icon }}</td>
+				</tr>
+				<tr class="field field-small_icon">
+					<td class="field-t">小图标：</td>
+					<td class="field-c">{{ object.small_icon }}</td>
+				</tr>
+				<tr class="field field-is_important">
+					<td class="field-t">是否重要：</td>
+					<td class="field-c">{% ifequal object.is_important 0 %}否{% else %}是{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_open">
+					<td class="field-t">是否展开：</td>
+					<td class="field-c">{% ifequal object.is_open 0 %}否{% else %}是{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_enable">
+					<td class="field-t">是否启用：</td>
+					<td class="field-c">{% ifequal object.is_enable 0 %}否{% else %}是{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_cache">
+					<td class="field-t">是否缓存：</td>
+					<td class="field-c">{% ifequal object.is_cache 0 %}否{% else %}是{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_cache">
+					<td class="field-t">是否调试：</td>
+					<td class="field-c">{% ifequal object.is_debug 0 %}否{% else %}是{% endifequal %}</td>
+				</tr>
+				<tr class="field field-order_number">
+					<td class="field-t">显示模式：</td>
+					<td class="field-c">{% ifequal object.status 0 %}隐藏{% else %}显示{% endifequal %}</td>
+				</tr>
+				<tr class="field field-badge">
+					<td class="field-t">徽章：</td>
+					<td class="field-c">{{ object.badge }}</td>
+				</tr>
+				<tr class="field field-order_number">
+					<td class="field-t">排序号：</td>
+					<td class="field-c">{{ object.order_number }}</td>
+				</tr>
+				<tr class="field field-remark">
+					<td class="field-t">备注：</td>
+					<td class="field-c">{{ object.remark }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

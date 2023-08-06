@@ -1,0 +1,124 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 12em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+
+{% block box_content %}
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed" style="word-wrap:break-word; word-break:break-all;">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>用户基本信息</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-id hide">
+					<td class="field-t">Id：</td>
+					<td class="field-c">{{ object.id }}</td>
+				</tr>
+				<tr class="field field-login_name">
+					<td class="field-t">登陆用户名：</td>
+					<td class="field-c">{{ object.login_name }}</td>
+				</tr>
+				<tr class="field field-login_password hide">
+					<td class="field-t">登陆密码：</td>
+					<td class="field-c">{{ object.login_password }}</td>
+				</tr>
+				<tr class="field field-user_name">
+					<td class="field-t">姓名：</td>
+					<td class="field-c">{{ object.user_name }}</td>
+				</tr>
+				<tr class="field field-sex">
+					<td class="field-t">性别：</td>
+					<td class="field-c">{% ifequal object.sex 1 %}男{% else %}女{% endifequal %}</td>
+				</tr>
+				<tr class="field field-phone_number">
+					<td class="field-t">手机号码：</td>
+					<td class="field-c">{{ object.phone_number }}</td>
+				</tr>
+				<tr class="field field-email">
+					<td class="field-t">邮箱：</td>
+					<td class="field-c">{{ object.email }}</td>
+				</tr>
+				<tr class="field field-is_active">
+					<td class="field-t">是否激活：</td>
+					<td class="field-c">{% ifequal object.is_active 1 %}是{% else %}否{% endifequal %}</td>
+				</tr>
+				<tr class="field field-create_date">
+					<td class="field-t">创建时间：</td>
+					<td class="field-c">{{ object.create_date }}</td>
+				</tr>
+				<tr class="field field-last_login_date hide">
+					<td class="field-t">最后登陆时间：</td>
+					<td class="field-c">{{ object.last_login_date }}</td>
+				</tr>
+				<tr class="field field-last_login_ip hide">
+					<td class="field-t">最后登陆IP：</td>
+					<td class="field-c">{{ object.last_login_ip }}</td>
+				</tr>
+				<tr class="field field-wechat_json hide">
+					<td class="field-t">微信信息：</td>
+					<td class="field-c">{{ object.wechat_json }}</td>
+				</tr>
+				<tr class="field field-extend_json hide">
+					<td class="field-t">扩展信息：</td>
+					<td class="field-c">{{ object.extend_json }}</td>
+				</tr>
+				<tr class="field field-remark">
+					<td class="field-t">备注：</td>
+					<td class="field-c">{{ object.remark }}</td>
+				</tr>
+				</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed" style="word-wrap:break-word; word-break:break-all;">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>权限信息</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-is_superuser hide">
+					<td class="field-t">超级管理员：</td>
+					<td class="field-c">{% ifequal object.is_superuser 1 %}是{% else %}否{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_dba hide">
+					<td class="field-t">数据管理员：</td>
+					<td class="field-c">{% ifequal object.is_dba 1 %}是{% else %}否{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_read">
+					<td class="field-t">只读用户：</td>
+					<td class="field-c">{% ifequal object.is_read 1 %}是{% else %}否{% endifequal %}</td>
+				</tr>
+				<tr class="field field-is_leader">
+					<td class="field-t">是否为领导：</td>
+					<td class="field-c">{% ifequal object.is_leader 1 %}是{% else %}否{% endifequal %}</td>
+				</tr>
+				<tr class="field field-roles">
+					<td class="field-t">所属角色：</td>
+					<td class="field-c">{{ object.roles_name }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}
+
+
+

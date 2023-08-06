@@ -1,0 +1,89 @@
+{% extends "admin/basemanage.htm" %}
+
+{% block toolbarWrapper %}
+<div id="zssly_report_dg_toolbar">
+	<div class="searchWrapper">
+		<form id="searchform" class="form-inline" action="" method="get">{% csrf_token %}
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+
+{% block tableWrapper %}
+<table id="zssly_report_dg">
+    <thead>
+        <tr>
+	        	<th data-options="field:'ck',checkbox:true"></th>
+	        	<th data-options="field:'_link',formatter:humanize.formatDetailInfo,align:'center'"></th>
+	        	<th data-options="field:'menu_name',width:220, formatter:humanize.formatTreeMenuName">菜单名称</th>
+	        	<th data-options="field:'menu_url',width:200">菜单URL</th>
+	        	<th data-options="field:'menu_target',width:80">打开方式</th>
+	        	<th data-options="field:'big_icon',width:100">大图标</th>
+	        	<th data-options="field:'is_important',width:60,align:'center',formatter:humanize.formatYesNoImg">是否重要</th>
+	        	<th data-options="field:'is_open',width:60,align:'center',formatter:humanize.formatYesNoImg">是否展开</th>
+	        	<th data-options="field:'is_enable',width:60,align:'center',formatter:humanize.formatYesNoImg">是否启用</th>
+	        	<th data-options="field:'status',width:60,align:'center',formatter:humanize.formatYesNoImg">显示模式</th>
+	        	<th data-options="field:'is_cache',width:60,align:'center',formatter:humanize.formatYesNoImg">是否缓存</th>
+	        	<th data-options="field:'is_cross',width:60,align:'center',formatter:humanize.formatYesNoImg">是否跨域</th>
+	        	<th data-options="field:'is_debug',width:60,align:'center',formatter:humanize.formatYesNoImg">是否调试</th>
+	        	<th data-options="field:'depth',width:45">深度</th>
+	        	<th data-options="field:'order_number',width:50">排序号</th>
+        	</tr>
+    </thead>
+</table>
+
+<script type="text/javascript">
+	app.mainWindow.gridResize(function (h) {
+		$('.gridWrapper').height(h);
+	});
+	
+	var humanize = humanize || {};
+    (function () {
+        humanize.formatTreeMenuName = function (val, row) {
+        		var depth = row.depth;
+        		if (depth === 0) {
+        			return val;
+        		} else {
+        			var arr = [];
+        			for (var i = 0; i < depth; i++) {
+        				arr.push('　　');
+        			}
+        			arr.push('|-');
+        			arr.push(val);
+        			return arr.join('');
+        		}
+        };
+    })();
+
+	(function () {
+		var config = {
+			pageId: '{{ permission.id }}',
+			pageTitle: '{{ permission.menu_name }}',
+			pageUrl: '{{ permission.menu_url }}',
+			windowHeight: '600px',
+			windowWidth: '800px',
+			dataGridId: '#zssly_report_dg',
+			btns: ['search', 'update', 'delete', 'insert'],
+			gridOptions: {'fitColumns': true, 'pagination': false},
+			detailColumn: '_link',
+			getRowKey: function (row) {
+				var keys = [row['id']];
+				return keys.join('|');
+			},
+			getQueryParams: function () {
+				return null;
+			},
+			deleteValid: function (rows) {
+				if (rows.length > 1) {
+			    		throw {
+			    			'name': 'Error',
+						'message': '只能选择一个删除项目'
+			    		}
+		    		}
+			}
+		};
+		new ListPageView(config);
+	})();
+</script>
+{% endblock %}

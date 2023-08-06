@@ -1,0 +1,59 @@
+{% extends "admin/basedetail.htm" %}
+
+{% block head %}
+{{ block.super }}
+<style type="text/css">
+.table-responsive table .field-t {
+	width: 18em;
+	text-align: right;
+}
+</style>
+{% endblock %}
+{% block box_content %}
+
+
+<div class="row">
+	<div class="table-responsive col-sm-12">
+		<table class="table table-hover table-condensed">
+			<thead>
+	            <tr>
+	                <th colspan="2">
+	                    <h3>系统数据字典</h3>
+	                </th>
+	            </tr>
+	        </thead>
+			<tbody>
+				<tr class="field field-id">
+					<td class="field-t">id：</td>
+					<td class="field-c">{{ object.id }}</td>
+				</tr>
+				<tr class="field field-class_code">
+					<td class="field-t">分类编码：</td>
+					<td class="field-c">{{ object.class_code }}</td>
+				</tr>
+				<tr class="field field-code">
+					<td class="field-t">字典编码：</td>
+					<td class="field-c">{{ object.code }}</td>
+				</tr>
+				<tr class="field field-text">
+					<td class="field-t">字典名称：</td>
+					<td class="field-c">{{ object.text }}</td>
+				</tr>
+				<tr class="field field-order_number">
+					<td class="field-t">排序号：</td>
+					<td class="field-c">{{ object.order_number }}</td>
+				</tr>
+				<tr class="field field-is_enable">
+					<td class="field-t">启用状态：</td>
+					<td class="field-c">{{ object.is_enable }}</td>
+				</tr>
+				<tr class="field field-remark">
+					<td class="field-t">备注：</td>
+					<td class="field-c">{{ object.remark }}</td>
+				</tr>
+				</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}
