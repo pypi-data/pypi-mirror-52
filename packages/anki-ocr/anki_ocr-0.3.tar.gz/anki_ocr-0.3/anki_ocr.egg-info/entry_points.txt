@@ -1,0 +1,3 @@
+[console_scripts]
+anki_ocr = anki_ocr.anki_ocr:main
+
