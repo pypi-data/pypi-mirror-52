@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: wagtail-orderable
+Version: 1.0.2
+Summary: Orderable support for Wagtail
+Home-page: https://github.com/elton2048/wagtail-orderable
+Author: Elton Lee & Andy Babic
+Author-email: elton2048@gmail.com
+License: MIT
+Description: Provides drag-and-drop support ordering support to the ModelAdmin listing view.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Wagtail
