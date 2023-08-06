@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pyweld.egg-info/PKG-INFO
+pyweld.egg-info/SOURCES.txt
+pyweld.egg-info/dependency_links.txt
+pyweld.egg-info/top_level.txt
+weld/__init__.py
+weld/bindings.py
+weld/encoders.py
+weld/types.py
+weld/weldobject.py
