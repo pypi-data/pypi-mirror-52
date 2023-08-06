@@ -1,0 +1,11 @@
+
+[dev]
+numpy
+scipy
+jupyter
+matplotlib
+seaborn
+pytest
+coverage
+sphinx
+sphinx_rtd_theme
