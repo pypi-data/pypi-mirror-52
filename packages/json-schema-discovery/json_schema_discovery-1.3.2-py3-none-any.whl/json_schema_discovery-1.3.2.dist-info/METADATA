@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: json-schema-discovery
+Version: 1.3.2
+Summary: Database-agnostic JSON schema discovery
+Author: Stepland
+Author-email: Stepland@hotmail.fr
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: tabulate (>=0.8.3,<0.9.0)
+Description-Content-Type: text/x-rst
+
+Database-agnostic JSON schema discovery
+
+Quickly get insight into the general structure of a large set of JSON files by creating a structure summary showing the type and frequency of objects key
+
+
+Quickstart
+----------
+
+Start with ``Empty`` or by passing a python object to ``make_schema()``
+
+Merge a schema onto another using ``+=`` (also accepts python objects on the right hand side)
+
+Visualize the resulting schema with ``dumps()`` or by printing the object
+
+Get a detailed tabulated view of the overall structure with ``statistics()``
+
