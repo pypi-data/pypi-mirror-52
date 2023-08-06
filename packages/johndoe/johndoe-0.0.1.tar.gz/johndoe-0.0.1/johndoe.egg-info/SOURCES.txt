@@ -1,0 +1,9 @@
+README.md
+setup.py
+johndoe/__init__.py
+johndoe/findinfo.py
+johndoe.egg-info/PKG-INFO
+johndoe.egg-info/SOURCES.txt
+johndoe.egg-info/dependency_links.txt
+johndoe.egg-info/requires.txt
+johndoe.egg-info/top_level.txt
