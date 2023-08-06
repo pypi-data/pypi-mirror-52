@@ -1,0 +1,12 @@
+isogeo-pysdk==3.2.*
+openpyxl==2.6.*
+
+[dev]
+black
+python-dotenv
+
+[test]
+codecov
+coverage
+pytest
+pytest-cov
