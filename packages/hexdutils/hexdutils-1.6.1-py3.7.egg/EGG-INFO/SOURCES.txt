@@ -1,0 +1,13 @@
+README.md
+setup.py
+hexdutils/__hex_constants__.py
+hexdutils/__init__.py
+hexdutils/hexabc.py
+hexdutils/hexclass.py
+hexdutils/hexops.py
+hexdutils/hextoint.py
+hexdutils/intohex.py
+hexdutils.egg-info/PKG-INFO
+hexdutils.egg-info/SOURCES.txt
+hexdutils.egg-info/dependency_links.txt
+hexdutils.egg-info/top_level.txt
