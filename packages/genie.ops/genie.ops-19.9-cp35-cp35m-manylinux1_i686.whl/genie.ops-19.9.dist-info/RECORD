@@ -1,0 +1,15 @@
+genie.ops-19.9-py3.5-nspkg.pth,sha256=h9oTUb5LE_2FqXSiu6TZnnXBniNRCjJ-m892Tw1Sru0,534
+genie/ops/__init__.py,sha256=aEH0MauofRQQEc2u1tP306_D4YI-nAx_jptntp-hKwM,1278
+genie/ops/ops_schema.py,sha256=lBuMTGByCHGYNU4Lwjm0Yuym8b2c7eJ9pd51wlQU0yU,281079
+genie/ops/ops_schema_generator.cpython-35m-i386-linux-gnu.so,sha256=smPVMmb7OqJ_6hvUYM5bepSs0JtNyWmZbeBnQPj4QOg,310164
+genie/ops/utils.cpython-35m-i386-linux-gnu.so,sha256=kA2T9wpmoBDno3w9DIYpXCiSvDvRF0FBAzZ4cYBRfFc,163304
+genie/ops/base/__init__.py,sha256=i0kwZsl5KbyBk8qONG_eTs5ktsulwuBe2b9xIb_vXq8,49
+genie/ops/base/base.cpython-35m-i386-linux-gnu.so,sha256=t0jAlbSejqwx7EJMAq5jaNL7yhYRy2r7_VL23D3QtFQ,586856
+genie/ops/base/diffdict.cpython-35m-i386-linux-gnu.so,sha256=taJaZz_KZTof06afGysRXUylqAaqpMAD9ZwAsDwfJzE,357616
+genie/ops/base/exceptions.cpython-35m-i386-linux-gnu.so,sha256=PPeD5jtPj_xLrdcZC64i2z52IS0ezOEoqv4kyucehnY,49700
+genie/ops/base/maker.cpython-35m-i386-linux-gnu.so,sha256=cfic1dbgaV7Q9d5YwOZJIdaBf9dMOZmblWuDswUyU_Q,1703996
+genie.ops-19.9.dist-info/METADATA,sha256=CpcGgtjHYZUrpKuzPe1o-eoBaYagXUQIIuxAgqJzF-w,3527
+genie.ops-19.9.dist-info/WHEEL,sha256=6GG5-FTUlP9-_t2i3j_FRyvxASWoKI88rP_av1V6Vnk,107
+genie.ops-19.9.dist-info/namespace_packages.txt,sha256=EW4swMMBmuGW5VFCUGsl828kVUhrmMZJGHXfzmOidSg,6
+genie.ops-19.9.dist-info/top_level.txt,sha256=EW4swMMBmuGW5VFCUGsl828kVUhrmMZJGHXfzmOidSg,6
+genie.ops-19.9.dist-info/RECORD,,
