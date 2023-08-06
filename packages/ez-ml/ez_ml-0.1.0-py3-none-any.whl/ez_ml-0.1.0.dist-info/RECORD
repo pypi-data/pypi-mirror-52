@@ -1,0 +1,13 @@
+ezml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ezml/__main__.py,sha256=X4ensTv1a6rA5vi46Lnq7LJcvOPRg7UvBXpRJZJEax4,415
+ezml/interpreting.py,sha256=EAl_w_x1TeSCEnIctS96DeMALYAmSP6BAQ0SNhPDxLs,764
+ezml/preprocessing.py,sha256=TdC0C1xCtDwpnMtnEwV7WPw2xw3vLwWL_OXibBAqOcA,2375
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_myclass.py,sha256=rzobgYVrhXEfQZeU2bVXUyMgOAfGjgKpXq6VRHSW7jM,333
+tests/test_mysecondclass.py,sha256=aLzC_UgOBdvKuc8UE9xpzU2KGhm0nugZijj07xQccQI,363
+ez_ml-0.1.0.dist-info/LICENSE,sha256=iNm062BXnBkew5HKBMFhMFctfu3EqG2qWL8oxuFMm80,1210
+ez_ml-0.1.0.dist-info/METADATA,sha256=T5BVirowf3gkir0llmvE3cK9UWUYP6CKZ7nfPtUhwgg,1456
+ez_ml-0.1.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+ez_ml-0.1.0.dist-info/entry_points.txt,sha256=2Yj6tMMpdpnzXiaSRoI_UWWbkxztgDjRcgeScnHMRjQ,45
+ez_ml-0.1.0.dist-info/top_level.txt,sha256=LtNGGYcCbvCvFOfUY6g9eBP9UMQLNFDfIhNmLkEseAw,11
+ez_ml-0.1.0.dist-info/RECORD,,
