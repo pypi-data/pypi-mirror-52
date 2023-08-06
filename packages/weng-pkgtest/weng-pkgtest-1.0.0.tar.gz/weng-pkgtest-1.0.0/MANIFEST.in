@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include weng_pkgtest/static *
+recursive-include weng_pkgtest/templates *
