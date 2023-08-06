@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: sample-ws-server
+Version: 0.0.2
+Summary: Little web sockets server
+Home-page: https://gitlab.com/cdlr75/ws-server
+Author: Constantin De La Roche
+Author-email: cdlr75@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://gitlab.com/cdlr75/ws-server/issues
+Project-URL: Source, https://gitlab.com/cdlr75/ws-server
+Description: WS Server [DOC](https://cdlr75.gitlab.io/ws-server/)
+        ===
+        
+        Playground around websockets.
+        
+        ```
+        $ python3 -m ws_server -h
+        usage: __main__.py [-h] [--host HOST] [--port PORT]
+        
+        optional arguments:
+          -h, --help   show this help message and exit
+          --host HOST  Server host
+          --port PORT  Port to bind
+        ```
+        
+Keywords: sample websockets server
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Provides-Extra: test

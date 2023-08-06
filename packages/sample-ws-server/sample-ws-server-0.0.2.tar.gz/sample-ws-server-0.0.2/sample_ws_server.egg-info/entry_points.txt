@@ -1,0 +1,3 @@
+[console_scripts]
+ws_server = ws_server:main
+
