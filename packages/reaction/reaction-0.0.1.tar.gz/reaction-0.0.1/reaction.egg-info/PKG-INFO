@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: reaction
+Version: 0.0.1
+Summary: Reaction. ML serving & microservices.
+Home-page: https://github.com/catalyst-team/reaction
+Author: David Kuryakin
+Author-email: dkuryakin@gmail.com
+License: Apache License 2.0
+Description: 
+        # reaction
+        
+        * `cd example && docker-compose up --force-recreate --build`
+        * RabbitMQ web ui: http://127.0.0.1:15672/#/
+          * user: admin
+          * password: j8XfG9ZDT5ZZrWTzw62q
+        * Docs: http://127.0.0.1:8000/docs#/
+        * Redoc: http://127.0.0.1:8000/redoc
+        
+Keywords: Machine Learning,Deep Learning,PyTorch
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
