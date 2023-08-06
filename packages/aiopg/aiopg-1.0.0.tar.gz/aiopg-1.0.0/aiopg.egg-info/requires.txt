@@ -1,0 +1,4 @@
+psycopg2-binary>=2.7.0
+
+[sa]
+sqlalchemy[postgresql_psycopg2binary]>=1.1
