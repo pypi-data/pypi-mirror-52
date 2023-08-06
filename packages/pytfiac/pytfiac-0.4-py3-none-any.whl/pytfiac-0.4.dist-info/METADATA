@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pytfiac
+Version: 0.4
+Summary: API for Tfiac AC
+Home-page: https://github.com/fredrike/pytfiac
+Author: Fredrik Erlandsson, Pablo Mellado
+Author-email: fredrik.e@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Home Automation
+Provides: pytfiac
+Description-Content-Type: text/markdown
+Requires-Dist: tellsticknet
+Requires-Dist: xmltodict
+
+# pytfiac
+
+Python3 library to communicate with AC-units that follows the tfiac protocol.
+
+
