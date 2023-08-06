@@ -1,0 +1,5 @@
+pystencils-autodiff>=0.2.2
+
+[testing]
+pytest
+pytest-cov
