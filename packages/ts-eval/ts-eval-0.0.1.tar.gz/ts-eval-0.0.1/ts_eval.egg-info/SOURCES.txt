@@ -1,0 +1,10 @@
+README.md
+setup.py
+ts_eval/__init__.py
+ts_eval.egg-info/PKG-INFO
+ts_eval.egg-info/SOURCES.txt
+ts_eval.egg-info/dependency_links.txt
+ts_eval.egg-info/requires.txt
+ts_eval.egg-info/top_level.txt
+ts_eval/features/__init__.py
+ts_eval/features/fourier.py
