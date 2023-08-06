@@ -1,0 +1,10 @@
+{
+  "version": "9.1.1.post3",
+  "name": "swimlane_platform",
+  "description": "Swimlane platform on linux. Install, Upgrade, Backups etc. All maintenance.",
+  "author": "Swimlane",
+  "url": "https://github.com/swimlane/platform-installer-linux",
+  "author_email": "info@swimlane.com",
+  "license": "",
+  "turbine_version": "develop"
+}
