@@ -1,0 +1,14 @@
+peewee>=3.8.1
+python-dateutil>=2.7.5
+backoff>=1.8.0
+
+[async]
+peewee-async==0.6.0a0
+
+[async-mysql]
+peewee-asyn==0.6.0a0
+aiomysql>=0.0.20
+
+[async-pg]
+peewee-asyn==0.6.0a0
+aiopg>=0.16.0
