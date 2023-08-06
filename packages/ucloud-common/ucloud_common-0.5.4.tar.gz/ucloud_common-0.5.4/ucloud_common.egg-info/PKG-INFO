@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: ucloud-common
+Version: 0.5.4
+Summary: Common Code shared by most of ucloud projects
+Home-page: https://code.ungleich.ch/ucloud/ucloud_common
+Author: ungleich
+Author-email: hacking@ungleich.ch
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
