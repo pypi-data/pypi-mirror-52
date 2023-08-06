@@ -1,0 +1,57 @@
+> A common cryptography encryption and decryption tools
+
+
+# Feature
+
+* Caesar 
+* Affine 
+* viger 
+
+
+# how to use
+```
+import mycrypto
+```
+
+## caesar
+
+* encryption
+```
+    mycrypto.Caesar_encode(plaintext,offset)
+```
+* decryption
+```
+    mycrypto.Caesar_decode(ciphertext,offset)
+```
+
+
+## Affine
+
+* encryption
+```
+    mycrypto.Affine_encode(plaintext,m,n)
+```
+* decryption
+```
+    mycrypto.Affine_decode(ciphertext,m,n)
+```
+
+## viger
+
+* encryption
+```
+ mycrypto.viger_encode(plaintext,key)
+```
+* decryption
+    * if u know the key
+    ```
+    mycrypto.viger_decode(ciphertext,key)
+    ```
+    * else u can
+    ```
+    mycrypto.viger_nokey(ciphertext,choice)
+    ```
+    if choice==0 , then the tool will burte the key
+
+    if choice==1 , then the tool will use my dictionary to get the plaintext
+

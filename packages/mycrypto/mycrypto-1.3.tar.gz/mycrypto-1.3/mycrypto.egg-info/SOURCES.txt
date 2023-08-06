@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mycrypto/__init__.py
+mycrypto/a.py
+mycrypto/mycrypto.py
+mycrypto.egg-info/PKG-INFO
+mycrypto.egg-info/SOURCES.txt
+mycrypto.egg-info/dependency_links.txt
+mycrypto.egg-info/not-zip-safe
+mycrypto.egg-info/top_level.txt
