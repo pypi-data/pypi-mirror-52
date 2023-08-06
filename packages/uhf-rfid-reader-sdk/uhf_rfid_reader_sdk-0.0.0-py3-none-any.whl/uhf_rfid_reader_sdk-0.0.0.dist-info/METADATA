@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: uhf-rfid-reader-sdk
+Version: 0.0.0
+Summary: (Unofficial) UHF RFID Reader SDK
+Home-page: https://github.com/pravodev/uhf-rfid-reader-sdk
+Author: Rifqi Khoeruman Azam
+Author-email: pravodev@gmail.com
+License: MIT
+Keywords: rfid sdk
+Platform: UNKNOWN
+Requires-Dist: crcmod (==1.7)
+Requires-Dist: pyserial (==3.4)
+
+# RFID Reader
+
+
