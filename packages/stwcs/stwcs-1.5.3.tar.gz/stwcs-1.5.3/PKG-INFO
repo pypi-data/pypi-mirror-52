@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: stwcs
+Version: 1.5.3
+Summary: Computes the WCS of HST images.
+Home-page: https://github.com/spacetelescope/stwcs
+Author: STScI
+Author-email: help@stsci.edu
+License: BSD
+Description: Recomputes and records the WCS of an HST imaging observation (including distortion) in the file.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: docs
+Provides-Extra: test
