@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+iupdatable/__init__.py
+iupdatable/__version__.py
+iupdatable/_base64.py
+iupdatable/_file.py
+iupdatable.egg-info/PKG-INFO
+iupdatable.egg-info/SOURCES.txt
+iupdatable.egg-info/dependency_links.txt
+iupdatable.egg-info/top_level.txt
