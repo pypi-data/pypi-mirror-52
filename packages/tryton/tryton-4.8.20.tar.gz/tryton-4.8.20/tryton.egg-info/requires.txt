@@ -1,0 +1,9 @@
+pycairo
+python-dateutil
+PyGObject
+
+[calendar]
+GooCalendar
+
+[cdecimal]
+cdecimal
