@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: corregraphe
+Version: 0.1.1
+Summary: Correlation graphs with NetworkX
+Home-page: https://github.com/theodcr/corregraphe
+Author: "Théo Delecour"
+Author-email: "theo.delecour@gmail.com"
+License: MIT
+Description: # corregraphe
+        
+        Correlation graphs are a great way to visualize and understand the relationship between features of tabular datasets.
+        
+        This package leverages NetworkX, Scipy and HoloViews to easily draw correlation graphs on any Pandas DataFrame.
+        
+        Works on numerical columns only for now.
+        
+        ## Installation
+        
+        This project uses Python >= 3.6.
+        
+        ```
+        pip install corregraphe
+        ```
+        
+        ## Usage
+        
+        Example on the Titanic dataset:
+        
+        ```python
+        import pandas as pd
+        from corregraphe import CorrelationGraph
+        df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv")
+        cg = CorrelationGraph(df)
+        cg.draw()
+        ```
+        
+        Drawing gives this Bokeh figure:
+        
+        <img src="example.png" width="400">
+        
+        ## Developer's guide
+        
+        - checked with `mypy` and `flake8`
+        - formatted with `black` and `isort`
+        - basic functionality is tested with `doctest` by running `python corregraphe/core.py`
+        
+        ## License
+        
+        This project is licensed under the MIT License.
+        
+        MIT License
+        
+        Copyright (c) 2019 Théo Delecour
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev

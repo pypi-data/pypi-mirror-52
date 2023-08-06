@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+corregraphe/__init__.py
+corregraphe/core.py
+corregraphe.egg-info/PKG-INFO
+corregraphe.egg-info/SOURCES.txt
+corregraphe.egg-info/dependency_links.txt
+corregraphe.egg-info/not-zip-safe
+corregraphe.egg-info/requires.txt
+corregraphe.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+hvplot
+networkx
+pandas
+scipy
+
+[dev]
+black
+flake8
+isort
+mypy
