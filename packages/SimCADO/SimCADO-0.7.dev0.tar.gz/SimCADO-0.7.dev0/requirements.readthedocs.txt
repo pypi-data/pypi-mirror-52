@@ -1,0 +1,13 @@
+numpy
+scipy
+matplotlib
+astropy
+pyyaml
+wget
+sphinxcontrib-apidoc
+numpydoc ==0.9.1
+sphinx ==2.2.0
+synphot
+poppy
+pytest
+sphinx_automodapi
