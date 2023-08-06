@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: arxivcheck
+Version: 0.3.2
+Summary: Generate a bibtex given a arxiv id or title, check if published
+Home-page: https://github.com/bibcure/arxivcheck
+Author: Bruno Messias
+Author-email: messias.physics@gmail.com
+License: AGPLv3
+Download-URL: https://github.com/bibcure/arxivcheck/archive/0.3.2.tar.gz
+Description: UNKNOWN
+Keywords: bibtex,arxiv,science,scientific-journals
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing :: Markup :: LaTeX

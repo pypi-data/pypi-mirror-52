@@ -1,0 +1,12 @@
+MANIFEST.in
+README
+setup.cfg
+setup.py
+arxivcheck/__init__.py
+arxivcheck/arxiv.py
+arxivcheck.egg-info/PKG-INFO
+arxivcheck.egg-info/SOURCES.txt
+arxivcheck.egg-info/dependency_links.txt
+arxivcheck.egg-info/requires.txt
+arxivcheck.egg-info/top_level.txt
+arxivcheck/bin/arxivcheck
