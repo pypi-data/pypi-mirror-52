@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ArduinoController
+Version: 0.1.1568726333
+Summary: A highly versatile arduino controller
+Home-page: https://github.com/JulianKimmig/arduino_controller
+Author: Julian Kimmig
+Author-email: julian-kimmig@gmx.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: Json-Dict
+Requires-Dist: FilterDict
+Requires-Dist: pyserial
+Requires-Dist: ArduinoCodeCreator
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+UNKNOWN
+
+
