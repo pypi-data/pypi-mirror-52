@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: philips-air-purifier
+Version: 0.0.4
+Summary: A Python API to monitor and control Philips air purifiers.
+Home-page: https://github.com/urbas/philips-air-purifier
+Author: Matej Urbas
+Author-email: matej.urbas@gmail.com
+License: UNKNOWN
+Description: # Philips Air Purifier Client API [![Build](https://travis-ci.org/urbas/philips-air-purifier.svg?branch=master)](https://travis-ci.org/urbas/philips-air-purifier) [![pypi](https://badge.fury.io/py/philips-air-purifier.svg)](https://pypi.org/project/philips-air-purifier/)
+        Python API for monitoring and controlling Philips air purifiers.
+        
+        ## Installation
+        ```
+        pip install philips-air-purifier
+        ```
+        
+        ## Usage
+        Get the status of the air purifier:
+        ```python
+        from philips_air_purifier import status
+        status.put_status(air_purifier_host="192.168.1.12", status={"pwr": "1"})
+        current_status = status.get_status(air_purifier_host="192.168.1.12")
+        ```
+        
+        ## Deploying to PyPi
+        ```bash
+        pip install setuptools wheel
+        python setup.py sdist bdist_wheel
+        twine upload dist/*
+        ```
+        
+Keywords: philips-air-purifier
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

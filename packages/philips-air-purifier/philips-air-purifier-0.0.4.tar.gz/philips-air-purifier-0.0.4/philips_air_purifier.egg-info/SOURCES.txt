@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+philips_air_purifier/__init__.py
+philips_air_purifier/comms.py
+philips_air_purifier/status.py
+philips_air_purifier.egg-info/PKG-INFO
+philips_air_purifier.egg-info/SOURCES.txt
+philips_air_purifier.egg-info/dependency_links.txt
+philips_air_purifier.egg-info/requires.txt
+philips_air_purifier.egg-info/top_level.txt
