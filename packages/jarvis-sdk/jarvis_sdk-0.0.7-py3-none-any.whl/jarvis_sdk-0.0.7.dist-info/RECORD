@@ -1,0 +1,15 @@
+jarvis_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jarvis_sdk/jarvis_auth.py,sha256=vr2BS32-ijdNemSe8DxG1XzOoNGl0nkMdZ8izVSRPG4,5140
+jarvis_sdk/jarvis_config.py,sha256=0-t0LGYFErPDYDiZklYkImiP_UD8C2pPwQenVVO0A54,9906
+jarvis_sdk/jarvis_configuration_manager.py,sha256=5kRgfSZSgViuYCRDIHjm9yH2fu3PNbqsYQwKQgYgdsk,5789
+jarvis_sdk/jarvis_crypto.py,sha256=OSysTKMNuI4etGSmp2Jr2heGvHnqp5IuBUmlvSBxqjc,2421
+jarvis_sdk/jarvis_gcp_cf_manager.py,sha256=FHXI4izFaBVmFU1Tcz--FAaK5xoev5o2NHlQGOo4kPs,4009
+jarvis_sdk/jarvis_help.py,sha256=q1aBkxOxuEX2E0__PXHoEKvJXzrD_A6sgyZCn5ePVMI,1144
+jarvis_sdk/jarvis_misc.py,sha256=g3bYpxY5BZkGYUcIj_jbrdjjXQxBobtgaNRh9kTJdCQ,298
+jarvis_sdk/jarvissdk.py,sha256=z5aYtd99AbqZdD9E4bzLjVDsUH3WXCK1Dwk1IYWAe7Q,4234
+jarvis_sdk/sql_dag_generator.py,sha256=u-s4koeba5kQ1ki6DHUPv4sw1pPnIOGYzMzpv_8fSFk,43929
+jarvis_sdk-0.0.7.dist-info/METADATA,sha256=gbzLM1SWWvXRYMZOQYCkGpDlHBv_uVaCzoPdkngbONs,556
+jarvis_sdk-0.0.7.dist-info/WHEEL,sha256=ZenmQtjt4etEZlyoFFA3Bd8pVkjneWord4ycgKmVLx4,92
+jarvis_sdk-0.0.7.dist-info/entry_points.txt,sha256=XTaeqe_uQVJq0_ODBgJPoITocIfRSHRJxnkJWcFvYPQ,54
+jarvis_sdk-0.0.7.dist-info/top_level.txt,sha256=VO4YmYWNfduBjjbj4LJ8n2GolS9S7r0MGU2K7el5bUk,11
+jarvis_sdk-0.0.7.dist-info/RECORD,,

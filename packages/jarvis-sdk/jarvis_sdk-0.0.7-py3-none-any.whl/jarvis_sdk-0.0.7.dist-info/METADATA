@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jarvis-sdk
+Version: 0.0.7
+Summary: JARVIS SDK Python Package
+Home-page: https://www.fashiondata.io/
+Author: Fashiondata Team
+Author-email: contact@fashiondata.io
+License: GPLv3
+Keywords: pip,fashiondata
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: firebase (>=3.0.1)
+Requires-Dist: pycryptodome (>=1.6.0)
+
+# Jarvis SDK by Fashiondata.io
+
+
+
