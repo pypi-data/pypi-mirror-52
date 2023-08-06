@@ -1,0 +1,47 @@
+Metadata-Version: 1.2
+Name: cloudnetpy
+Version: 1.0.3
+Summary: Python package for Cloudnet processing
+Home-page: https://github.com/tukiains/cloudnetpy
+Author: Finnish Meteorological Institute
+Author-email: simo.tukiainen@fmi.fi
+License: MIT License
+
+Copyright (c) 2019 Finnish Meteorological Institute
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: # CloudnetPy
+        CloudnetPy is a Python software for producing vertical profiles of cloud properties from ground-based remote sensing measurements. The Cloudnet processing combines cloud radar, optical lidar, microwave radiometer and model data. The measurements and model data are brought into common grid and classified as ice, liquid, aerosol, insects, and so on. Then, geophysical products such as ice water content can be retrieved in further processing steps.
+        
+        CloudnetPy is a refactored fork of the currently operational (Matlab) processing code. The Python version will eventually feature several revised methods, extensive documentation, and more.
+        
+        <img src="docs/source/_static/20190423_mace-head_classification.png">
+        
+        - Cloudnet website: http://devcloudnet.fmi.fi
+        - CloudnetPy documentation: https://cloudnetpy.readthedocs.io/en/latest/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
