@@ -1,0 +1,3 @@
+[console_scripts]
+kck_http = kck.bin.kck_http:main
+
