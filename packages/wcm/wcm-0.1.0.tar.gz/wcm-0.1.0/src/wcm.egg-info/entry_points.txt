@@ -1,0 +1,3 @@
+[console_scripts]
+wcm = wcm.__main__:cli
+
