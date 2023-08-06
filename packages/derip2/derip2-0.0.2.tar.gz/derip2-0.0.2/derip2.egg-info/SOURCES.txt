@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+derip2/__init__.py
+derip2/run_self.py
+derip2.egg-info/PKG-INFO
+derip2.egg-info/SOURCES.txt
+derip2.egg-info/dependency_links.txt
+derip2.egg-info/entry_points.txt
+derip2.egg-info/not-zip-safe
+derip2.egg-info/requires.txt
+derip2.egg-info/top_level.txt

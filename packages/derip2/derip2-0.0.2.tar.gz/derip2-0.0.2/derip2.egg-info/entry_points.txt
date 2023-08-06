@@ -1,0 +1,3 @@
+[console_scripts]
+derip2 = derip2.run_self:main
+
