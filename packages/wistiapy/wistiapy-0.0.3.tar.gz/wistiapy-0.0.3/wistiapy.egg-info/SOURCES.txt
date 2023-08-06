@@ -1,0 +1,17 @@
+README.md
+setup.py
+tests/__init__.py
+tests/test_client.py
+tests/test_media.py
+wistia/__init__.py
+wistia/api.py
+wistia/asset.py
+wistia/cli.py
+wistia/media.py
+wistia/project.py
+wistiapy.egg-info/PKG-INFO
+wistiapy.egg-info/SOURCES.txt
+wistiapy.egg-info/dependency_links.txt
+wistiapy.egg-info/entry_points.txt
+wistiapy.egg-info/requires.txt
+wistiapy.egg-info/top_level.txt

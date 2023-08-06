@@ -1,0 +1,6 @@
+requests<3.0.0,>=2.22.0
+
+[dev]
+black
+pytest
+responses
