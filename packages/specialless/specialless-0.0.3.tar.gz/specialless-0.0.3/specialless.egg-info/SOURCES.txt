@@ -1,0 +1,12 @@
+README.md
+setup.py
+sample/__init__.py
+sample/sample.py
+specialless/__init__.py
+specialless/specialless.py
+specialless.egg-info/PKG-INFO
+specialless.egg-info/SOURCES.txt
+specialless.egg-info/dependency_links.txt
+specialless.egg-info/top_level.txt
+test/__init__.py
+test/specialless.py
