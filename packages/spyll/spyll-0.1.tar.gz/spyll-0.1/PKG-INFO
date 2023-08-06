@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: spyll
+Version: 0.1
+Summary: Spyll is an Open-Source Python package that is aimed at making txt file management easier. It was made in python 3.7 and should work on all versions higher than 3.0.
+Home-page: https://hellotinos.com
+Author: Tinos Psomadakis
+Author-email: me@hellotinos.com
+License: UNKNOWN
+Description: <h1>Spyll 0.1</h1>
+        
+        <h2>Welcome</h2>
+        <p>Spyll is an Open-Source Python package that is aimed at making txt file management easier. It was made in python 3.7 and should work on all versions higher than 3.0.</p>
+        
+        <h2>Help commands</h2>
+        <ul>
+        <li>spyll.help()</li>
+        </ul>
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
