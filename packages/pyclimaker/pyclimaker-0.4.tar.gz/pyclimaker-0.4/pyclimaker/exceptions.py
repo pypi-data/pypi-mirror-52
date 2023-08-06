@@ -1,0 +1,3 @@
+class OverideAttemptException(Exception):
+    pass
+
