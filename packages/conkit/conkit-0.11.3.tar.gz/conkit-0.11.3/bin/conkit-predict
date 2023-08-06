@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/local/opt/python@2/bin/python2.7 -m conkit.command_line.conkit_predict "$@"
