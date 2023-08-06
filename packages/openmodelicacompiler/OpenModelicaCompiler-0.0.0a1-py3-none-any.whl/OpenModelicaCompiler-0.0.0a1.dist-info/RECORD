@@ -1,0 +1,15 @@
+omc4py/__init__.py,sha256=HN23ltvDW-QCC8Q-iZCFNAw2T0khaiwVcMIcJdJVjnI,1648
+omc4py/parsers/__init__.py,sha256=dJETNBU4Tfl1GQbRiHcFcSABHhWvn6yAcNRfOEMlPV4,2233
+omc4py/parsers/syntax.py,sha256=0zAKIulJ-NSkX60ygiBs8hh0VbW7jATZcbO4mqVrKhI,3419
+omc4py/parsers/visitor.py,sha256=Rsb83CW4C_Blpr8eMxmfYd4DMWQ45BU2RxCCKUFEjsU,5618
+omc4py/scripting/__init__.py,sha256=2YS4VSdMnIYq8QZFnDvsNfjZ3mBi9GZuL57mc6cIt4k,1291
+omc4py/scripting/exceptions.py,sha256=PWiUYB-9FOzvQmYnVJu15-wPbfrTZ_337AUZVCQhSY4,1360
+omc4py/scripting/types.py,sha256=nTPdlJlniDAjARpJFrZiUDjjTT7P1AnSkTome0mtwm8,7631
+omc4py/scripting/funcs/__init__.py,sha256=qfh3ZRzInyLmc-TtpHLKWHwjYc6Y58DKi35_-ylATAk,1496
+omc4py/scripting/funcs/_generated.py,sha256=0JE5SN442GcN8Cdzhf3XLDtdVgf3TdR5RZnP8BuHdlw,245934
+omc4py/scripting/funcs/_handmade.py,sha256=8cydeQQok9EJ_DRJePTq837KlDwijWYvJkqvBKrvueo,2915
+OpenModelicaCompiler-0.0.0a1.dist-info/COPYING,sha256=jYj6QrwkH1W_cz1Vv39WjAtidyupswBZ6ShrKDCupUs,13156
+OpenModelicaCompiler-0.0.0a1.dist-info/METADATA,sha256=HkG1Gc2PI8CTv91-1_9gw1EyZ0ey_XSvHU2wvDM6rVs,629
+OpenModelicaCompiler-0.0.0a1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+OpenModelicaCompiler-0.0.0a1.dist-info/top_level.txt,sha256=_W-7_Mlw2R_YMbJW9d6btUotXaM8VilTNznOGjdjyuU,7
+OpenModelicaCompiler-0.0.0a1.dist-info/RECORD,,
