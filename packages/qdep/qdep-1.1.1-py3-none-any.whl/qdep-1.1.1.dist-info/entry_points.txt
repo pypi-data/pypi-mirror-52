@@ -1,0 +1,3 @@
+[console_scripts]
+qdep = qdep.internal.cli:main
+
