@@ -1,0 +1,3 @@
+[console_scripts]
+dicetrust = dicetrust:_entry_point
+
