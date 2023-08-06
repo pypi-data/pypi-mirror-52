@@ -1,0 +1,7 @@
+graft src/souper
+graft docs
+include *.rst
+include *.cfg
+include *.txt
+global-exclude *.pyc
+

@@ -1,0 +1,11 @@
+setuptools
+Products.CMFPlone
+souper
+
+[test]
+plone.app.testing
+interlude
+plone.api
+
+[test:python_version < "3"]
+zopyx.txng3.core
