@@ -1,0 +1,7 @@
+pytest
+webtest
+flask
+pytest-mock>=1.10.4
+
+[test]
+pytest-cov
