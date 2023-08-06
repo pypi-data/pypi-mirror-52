@@ -1,0 +1,23 @@
+{% load static %}
+
+<h3 class="myuw-card-title">Husky Experience Toolkit</h3>
+<p class="myuw-card-tagline">Make the most of each week</p>
+
+<div class="myuw-article-teaser-wrapper">
+    
+        <img class="myuw-card-image-full"
+             srcset="{% static 'hx_toolkit_output/images/preparing_for_professional_life_480.jpg' %} 480w,
+                 {% static 'hx_toolkit_output/images/preparing_for_professional_life_650.jpg' %} 650w,
+                 {% static 'hx_toolkit_output/images/preparing_for_professional_life_780.jpg' %} 780w,
+                 {% static 'hx_toolkit_output/images/preparing_for_professional_life_1000.jpg' %} 1000w"
+             sizes="(max-width: 767px) 480vw,
+                650px"
+             src="{% static 'hx_toolkit_output/images/preparing_for_professional_life_650.jpg' %}"
+             alt="">
+    
+
+    <div class="myuw-article-teaser">
+        <h4 class="myuw-article-teaser-title"><span class="myuw-highlight"><a href="/husky_experience_message?article=preparing-professional-life">Preparing for Professional Life</a></span></h4>
+        <p><span class="myuw-highlight">Some things to keep in mind when starting a full-time job. <a class="myuw-link-card-teaser" href="/husky_experience_message?article=preparing-professional-life">Read more</a></span></p>
+    </div>
+</div>
