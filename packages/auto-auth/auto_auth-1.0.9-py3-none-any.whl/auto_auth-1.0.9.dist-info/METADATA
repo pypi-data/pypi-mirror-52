@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: auto-auth
+Version: 1.0.9
+Summary: Using to authenticate automatically
+Home-page: http://yonggangliu.com
+Author: ggang.liu
+Author-email: ggang.liu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+This is an auto authentication package.
+
+
