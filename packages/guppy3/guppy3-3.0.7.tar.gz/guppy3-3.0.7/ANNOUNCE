@@ -1,0 +1,28 @@
+I am happy to announce Guppy 3 3.0.7
+
+Guppy 3 is a library and programming environment for Python,
+currently providing in particular the Heapy subsystem, which supports
+object and heap memory sizing, profiling and debugging. It also
+includes a prototypical specification language, the Guppy
+Specification Language (GSL), which can be used to formally specify
+aspects of Python programs and generate tests and documentation from a
+common source.
+
+Guppy 3 is a fork of Guppy-PE, created by Sverker Nilsson for Python 2.
+
+The main news in this release:
+
+o Disabled malloc hooks because of thread safety issues
+o Optimizations to the dictof classifier by using GC objects
+o No more stack overflows during heap traversal
+o Tab completion with rlcompleter on a UniSet is no longer so expensive
+
+License: MIT
+
+The project homepage is on GitHub:
+
+https://github.com/zhuyifei1999/guppy3
+
+Enjoy,
+
+YiFei Zhu
