@@ -1,0 +1,28 @@
+=========
+CHANGELOG
+=========
+
+0.2.0 (2019-09-17)
+------------------
+
+* Add initial_state=OpenGround() as default argument in NotARobot()
+
+0.1.3 (2019-08-21)
+------------------
+
+* Use parse_requirements for install_requires in setup.py
+
+0.1.2 (2019-08-21)
+------------------
+
+* Parse requirements.in for install_requires in setup.py
+
+0.1.1 (2019-08-21)
+------------------
+
+* Include requirements.txt in MANIFEST.in
+
+0.1.0 (2019-08-21)
+------------------
+
+* First release on PyPI.
