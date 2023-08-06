@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: isitfit
+Version: 0.1.6
+Summary: Command-line tool to calculate excess AWS cloud resource capacity
+Home-page: https://gitlab.com/autofitcloud/isitfit
+Author: Shadi Akiki, AutofitCloud
+Author-email: shadi@autofitcloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click (==7.0)
+Requires-Dist: pandas (==0.25.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: boto3 (==1.9.219)
+Requires-Dist: cachecontrol (==0.12.5)
+Requires-Dist: lockfile (==0.12.2)
+Requires-Dist: tabulate (==0.8.3)
+
+Check https://isitfit.autofitcloud.com
+
+
