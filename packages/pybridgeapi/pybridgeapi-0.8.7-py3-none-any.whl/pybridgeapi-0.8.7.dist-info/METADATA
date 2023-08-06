@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pybridgeapi
+Version: 0.8.7
+Summary: Bridge API
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Bridge API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+bridgeapi.io  # noqa: E501
+
+
