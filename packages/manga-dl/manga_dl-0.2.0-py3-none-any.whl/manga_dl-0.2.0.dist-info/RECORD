@@ -1,0 +1,13 @@
+manga_dl/__init__.py,sha256=6cbeYmf01a4YH2DdrvIBLsCVZSdwWiKzMnJxQOrjKZs,835
+manga_dl/entities/Chapter.py,sha256=NFAdsCFczOAUzXzwAqdKZKhvHXsa-I_rQamcwfEZptw,5479
+manga_dl/entities/__init__.py,sha256=SGyhAhofPHZci6M9r-QpGNy3KyR0ATIpfndCfpje-oQ,709
+manga_dl/scrapers/Scraper.py,sha256=qKYxsMJ5x6-ykOfDFt8WgOkb0JMxEdLq__a8J5Qid7k,3657
+manga_dl/scrapers/__init__.py,sha256=2cB1WFtCzEzsCso9EqLvV_d7dgxC7dCDdGqOJ7EloKY,828
+manga_dl/scrapers/mangadex.py,sha256=_VJ6ssQwh3Q84iY7rji6VvZTC6akVzsKlzv3Ie_ingE,4136
+manga_dl/test/__init__.py,sha256=SGyhAhofPHZci6M9r-QpGNy3KyR0ATIpfndCfpje-oQ,709
+manga_dl-0.2.0.data/scripts/manga-dl,sha256=ibk5RZipj6Q5E8S7dNigQ8NiK1lT2hscTzFgc5q_zyM,2985
+manga_dl-0.2.0.dist-info/LICENSE,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+manga_dl-0.2.0.dist-info/METADATA,sha256=TyUHEkHqh3ZiqoryXU4wrhekKbOQ85KCSktlAuO7Xu0,1292
+manga_dl-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+manga_dl-0.2.0.dist-info/top_level.txt,sha256=4fVb5-0ksZ3nN88hTavnKkwml4vdcyoK221D7xHxFgg,9
+manga_dl-0.2.0.dist-info/RECORD,,
