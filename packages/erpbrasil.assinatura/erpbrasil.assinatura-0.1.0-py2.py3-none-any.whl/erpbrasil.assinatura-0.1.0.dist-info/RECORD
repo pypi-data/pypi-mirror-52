@@ -1,0 +1,13 @@
+erpbrasil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+erpbrasil/assinatura/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+erpbrasil/assinatura/__main__.py,sha256=3lDWLOhcZRmx6CQtE2MIU1q3cHQuTjwrA0ae4KlXA5Q,404
+erpbrasil/assinatura/assinatura.py,sha256=_ac9oeT-NtDR4zrwGxwNK6JDu1ZdeomYKceqTmlcEtU,2847
+erpbrasil/assinatura/certificado.py,sha256=fO9W2Pa_8syKwZcA_cZvmGxfF7pF4nzYWnkiyJuS4-k,1265
+erpbrasil/assinatura/cli.py,sha256=ja64LZ_Zub9Q2v8vCLN0eAGXa6bHR6v03JzTx5rOX70,834
+erpbrasil.assinatura-0.1.0.dist-info/AUTHORS.rst,sha256=1hgm88CRQXaY-r6_SjxFU5K-Ldm63ZOI0FzZGeZZ1as,64
+erpbrasil.assinatura-0.1.0.dist-info/LICENSE,sha256=3LFE3RyKAYbDSyT6-0KtQaokRm8zgtI_JVU77wo-0N0,1074
+erpbrasil.assinatura-0.1.0.dist-info/METADATA,sha256=LH8T8Btxox7vTC5pb9L83PBAKi9eqFpuI3Y0yAhY5ug,2270
+erpbrasil.assinatura-0.1.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+erpbrasil.assinatura-0.1.0.dist-info/entry_points.txt,sha256=9msn8jVwOJ7f11tc4oqcilDoQQprrYajXanf_fPp5DY,72
+erpbrasil.assinatura-0.1.0.dist-info/top_level.txt,sha256=cGgW5e5CodoFnz3Kk_AOTJvySHE_MSLx_rh0FHJBncA,10
+erpbrasil.assinatura-0.1.0.dist-info/RECORD,,
