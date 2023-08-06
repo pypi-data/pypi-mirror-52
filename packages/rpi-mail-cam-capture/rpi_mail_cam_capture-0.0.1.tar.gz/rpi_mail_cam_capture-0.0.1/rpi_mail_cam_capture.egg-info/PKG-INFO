@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: rpi-mail-cam-capture
+Version: 0.0.1
+Summary: You can capture through raspberry pi camera and mail the image
+Home-page: https://github.com/ultimus11/email_via_raspberry_pi
+Author: sahil panindre
+Author-email: sahil11panindre@gmail.com
+License: UNKNOWN
+Description: # Example Package
+        
+        This is a simple example package. You can use
+        [Github-flavored Markdown](https://github.com/ultimus11/email_via_raspberry_pi)
+        to write your content.
+        
+        to learn how to use the package visit https://github.com/ultimus11/email_via_raspberry_pi
+        see the example t.py listed in repository
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
