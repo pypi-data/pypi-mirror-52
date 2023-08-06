@@ -1,0 +1,14 @@
+djangoldp_conversation/__init__.py,sha256=PYGXyJp1O6b3r3GFDaqtTFCI3p7JgWh-1_0fv7ej7Gs,54
+djangoldp_conversation/apps.py,sha256=ec6hmk7QB699RmeyzlFFFnQ1cZe5UmEtZYCAJ-gHkvs,117
+djangoldp_conversation/factories.py,sha256=wvjNuvr1-u_pTFP-4s6eoL0_IlVMq0O_hGy7Ee6QqPw,920
+djangoldp_conversation/models.py,sha256=NyAlgl7a0e786ckihKse-Ob8rfBSzG2NVxTR_HhE2dU,1518
+djangoldp_conversation/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoldp_conversation/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoldp_conversation/management/commands/mock_conversation.py,sha256=9NWKxpnOk_-r7-YK-eRROr9vLFg59coR6QrzgodpvXs,763
+djangoldp_conversation/migrations/0001_initial.py,sha256=mVuIGw-dF5Ys6shfb8W-XZQNGZJiPJ1PM6t6L_sMkLE,1705
+djangoldp_conversation/migrations/0002_auto_20190917_1056.py,sha256=sEKKuuHECainA5CK35U6t9SNrUeS2bDPv4ZKVMpfa3E,689
+djangoldp_conversation/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangoldp_conversation-0.2.1.dist-info/METADATA,sha256=-NVtdvOivZhPXk-TkRG_THCWPQTKj7xZ17njgrL2Zn8,420
+djangoldp_conversation-0.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+djangoldp_conversation-0.2.1.dist-info/top_level.txt,sha256=g1RVAUN8Ny3A7gDslN52ptznc4Qg-9PEMwQ39UtWUn8,23
+djangoldp_conversation-0.2.1.dist-info/RECORD,,
