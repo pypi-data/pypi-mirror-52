@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+vedadb/__init__.py
+vedadb/connexion.py
+vedadb/dimensionContent.py
+vedadb/endpoint.py
+vedadb/entete.py
+vedadb/fileToDataframe.py
+vedadb/resultat.py
+vedadb/sets.py
+vedadb/tableCreated.py
+vedadb.egg-info/PKG-INFO
+vedadb.egg-info/SOURCES.txt
+vedadb.egg-info/dependency_links.txt
+vedadb.egg-info/top_level.txt
