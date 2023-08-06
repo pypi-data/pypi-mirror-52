@@ -1,0 +1,16 @@
+sentrylogs/__init__.py,sha256=9kHH780woY143XuwSnqzTo3BKA4kztkV8KtWwgreQLA,231
+sentrylogs/daemonize.py,sha256=ogNIJblWEwhaDQAJAcVvDn11HyXY95Hi24McMrvRK40,8670
+sentrylogs/helpers.py,sha256=085v3ubW0d9gIjk37GKAS0dQt1YTBqUHp3D0hZJI6Ag,565
+sentrylogs/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sentrylogs/bin/sentrylogs.py,sha256=bvrpyjZk2k8kxsblNCWSX0Ca12z7PiD8Y7tQZjL5NHo,4328
+sentrylogs/conf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sentrylogs/conf/settings.py,sha256=VhCCRlb1-UlR_Uw1nVCbj30NbJqpQeutL3FHTa9n46E,698
+sentrylogs/parsers/__init__.py,sha256=AhkGh0gLwcDrX0UY9iRlBXxurMq1Y2AwsrH1CmwUvEo,2065
+sentrylogs/parsers/nginx.py,sha256=UZFImUps5T319LWs-3JsaaOsxun8RSA6ZVcKnjty-rk,2233
+SentryLogs-0.5.0.dist-info/AUTHORS.txt,sha256=WjqtZWC1THijuTOzRASXUa2j8iKq5Yt6iWWHhYtHSzo,117
+SentryLogs-0.5.0.dist-info/LICENSE.txt,sha256=rqIiAZyCsaeYeuYhAIyeIsOeaxLdNI6SsxfBQEaYhPA,1530
+SentryLogs-0.5.0.dist-info/METADATA,sha256=H46d8AxNjlPoFOh1k6thIqy9HRwEclTi8ItdMk6SeHg,4684
+SentryLogs-0.5.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+SentryLogs-0.5.0.dist-info/entry_points.txt,sha256=1Y15DQlk1xkxD5lXdR2GGdL_7DuCPs_4D9HNbRRbEPc,63
+SentryLogs-0.5.0.dist-info/top_level.txt,sha256=lOwIuEXKY9N2kFZ4UMVU3-XkVEjqoEIS8j889mLd3uc,11
+SentryLogs-0.5.0.dist-info/RECORD,,

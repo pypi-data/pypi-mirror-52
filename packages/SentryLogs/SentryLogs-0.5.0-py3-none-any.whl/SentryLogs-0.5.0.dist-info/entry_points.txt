@@ -1,0 +1,3 @@
+[console_scripts]
+sentrylogs = sentrylogs.bin.sentrylogs:main
+
