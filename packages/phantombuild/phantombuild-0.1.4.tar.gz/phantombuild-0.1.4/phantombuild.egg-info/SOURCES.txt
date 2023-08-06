@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+phantombuild/__init__.py
+phantombuild/phantombuild.py
+phantombuild.egg-info/PKG-INFO
+phantombuild.egg-info/SOURCES.txt
+phantombuild.egg-info/dependency_links.txt
+phantombuild.egg-info/top_level.txt
