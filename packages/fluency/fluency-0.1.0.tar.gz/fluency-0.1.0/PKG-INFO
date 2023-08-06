@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: fluency
+Version: 0.1.0
+Summary: Get sentence-level fluency scores.
+License: MIT
+Author: Motoki Wu
+Author-email: tokestermw@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

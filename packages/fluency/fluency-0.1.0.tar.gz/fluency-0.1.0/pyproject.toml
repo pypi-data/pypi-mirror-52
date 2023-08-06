@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fluency"
+version = "0.1.0"
+description = "Get sentence-level fluency scores."
+authors = ["Motoki Wu <tokestermw@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+spacy = "^2.1"
+pytorch-transformers = "^1.0"
+poetry = "^0.12"
+ipython = "^7.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
