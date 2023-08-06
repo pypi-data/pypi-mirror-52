@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block main -%}
+{% include 'preamble.html' -%}
+    <div class="row">
+        <h2>Project Distribution Schedule</h2>
+    </div>
+    <div class="row">
+        <div class="card user-selection">
+            <div class="card-body">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input all-user-toggle" type="checkbox" id="all-users" value="all-users" checked="checked">
+                    <label class="form-check-label" for="all-users">ALL</label>
+                </div>
+                {% for user in users -%}
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input user-toggle" type="checkbox" id="{{ user.temp_id }}" value="{{ user.temp_id }}" checked="checked">
+                    <label class="form-check-label" for="{{ user.temp_id }}">{{ user.first_name }}</label>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-hover">
+            <!-- <caption>Weekly Buckets</caption> -->
+        {% for week in cals -%}
+
+            {%- if loop.index == 1 -%}
+            <thead>
+              <tr>
+               {% for week_header in week -%}
+               {% if loop.index == 1 -%}
+                <th class="header week" scope="col">WEEK</th>
+                <th class="divider"></th>
+               {%- endif %}
+               {% set name_obj = week_header|attr('calendar') -%}
+               {% if name_obj -%}
+               {% set calendar_name=week_header.calendar.user.temp_id -%}
+               {% else -%}
+               {% set calendar_name=week_header.temp_id -%}
+               {%- endif %}
+               <th class="header user-bucket {{ calendar_name }}" scope="col" colspan="{{ week_header.weekly_buckets }}">{{ "{}".format(week_header) }}</th>
+               <th class="divider user-bucket {{ calendar_name }}"></th>
+               {%- endfor %}
+              </tr>
+            </thead>
+            {%- else -%}
+
+                {%- set calendar_name = namespace(name='') -%}
+                <tr>
+                {% for buckets in week -%}
+                    {% if loop.index == 1 -%}
+                    <th class="week" scope="row">{{ "{:A}".format(buckets.weekdates) }}</th>
+                    <td class="divider"></th>
+                    {%- endif %}
+                    {% for bucket in buckets.buckets -%}
+                        {% set calendar_name.name=bucket.week.calendar.user.temp_id -%}
+                        <td class="bucket user-bucket {{ calendar_name.name }}">
+                          {% if bucket.content -%}
+                          <div class="bucket-content"
+                               project="{{ bucket.content.project.id }}"
+                               data-toggle="tooltip" data-placement="top"
+                               title="{{ bucket.content.project.name }}"
+                               style="background-color:{{ bucket.content.project.meta.color }};">
+                              {{ bucket.content.project.id }}
+                              <span class="badge badge-info">{{ bucket.content.stage }}</span>
+                              <span class="badge badge-warning">{{ bucket.content.project.priority }}</span>
+                          </div>
+                          {% else -%}
+                          {# this never executes #}
+                          <div class="bucket-content-empty">available</div>
+                          {%- endif %}
+                      </td>
+                    {%- endfor %}
+                    <td class="divider user-bucket {{ calendar_name.name }}"></td>
+                {%- endfor %}
+                </tr>
+            {%- endif %}
+        {%- endfor %}
+        </table>
+    </div>
+{% include 'project_list.html' -%}
+{%- endblock main %}

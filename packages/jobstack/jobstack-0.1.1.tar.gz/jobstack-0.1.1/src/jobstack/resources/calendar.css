@@ -1,0 +1,64 @@
+body {
+    padding: 5rem;
+}
+a.preamble, div.preamble {
+    margin-bottom: 40px;
+}
+pre {
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 3rem;
+        A
+    font-size: 1.2rem;
+    background-color: #E7E7E7;
+}
+th.header {
+    text-align: center;
+}
+th.week {
+    min-width: 285px;
+    text-align: center;
+}
+.divider {
+    background-color: #E6E6E6;
+}
+td.odd {
+    background-color: #D8D8D8;
+}
+td.bucket {
+    padding: 2px;
+    width: 110px;
+    min-width: 110px;
+    max-width: 110px;
+}
+div.user-selection {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+div.user-selection .card-body {
+    padding: 0.8rem;
+}
+div.user-selection .form-check-inline {
+    margin-right: 1.5rem;
+}
+div.bucket-content {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    min-width: 100px;
+    height: 100%;
+    padding: 5px;
+    margin: 2px;
+}
+div.bucket-content-empty {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #EEE;
+    border-radius: 5px;
+    color: #EEE;
+    padding: 3px;
+}
+div.bucket-content-highlight {
+    border: 3px solid black;
+    font-weight: bold;
+    margin: 0;
+}

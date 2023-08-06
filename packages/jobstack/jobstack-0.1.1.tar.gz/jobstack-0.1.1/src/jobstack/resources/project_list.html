@@ -1,0 +1,36 @@
+<div class="row">
+  <h2>Project List</h2>
+</div>
+<div class="row">
+  <table class="table">
+    <tr>
+      <th>Project Completion Week</th>
+      <th>Priority</th>
+      <th>ER Number</th>
+      <th>ER Name</th>
+      <th>Owner</th>
+      <th>Team</th>
+    </tr>
+  {% set ns = namespace(row_class='odd') -%}
+  {% set row_class = cycler('odd', 'even') -%}
+  
+  {%- for project in projs -%}
+    {% set end_week = '{}'.format(project.end_week()) -%}
+    {% if loop.changed(end_week)  -%}
+        {% set ns.row_class = row_class.next() -%}
+    {%- endif %}
+    <tr>
+      <td class="{{ ns.row_class }}">{{ end_week }}</li>
+      <td class="{{ ns.row_class }}"><span class="badge badge-warning">{{ '{:.2f}'.format(project.priority) }}</span></td>
+      <td class="{{ ns.row_class }}">{{ project.id }}</td>
+      <td class="{{ ns.row_class }}">{{ project.name }}</td>
+      <td class="{{ ns.row_class }}"><span class="badge badge-primary">{{ project.user }}</span></td>
+      <td class="{{ ns.row_class }}">
+        {% for member in project.team -%}
+        <span class="badge badge-light">{{ member }}</span>
+        {%- endfor %}
+      </td>
+    </tr>
+  {%- endfor %}
+  </table>
+</div>
