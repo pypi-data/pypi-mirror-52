@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pypi-holoniq-simple
+Version: 0.0.1
+Summary: Say hello!
+Home-page: https://github.com/stevej2608/pypi-holoniq-simple
+Author: Steve Jones
+Author-email: jonesst2608@gmail.com
+License: MIT
+Description: This is a simple 'hello world' python package. 
+        
+        Installation:
+        
+            pip install pypi-holoniq-simple
+        
+        Usage:
+        
+        ```
+        from helloworld import say_hello
+        
+        if __name__ == "__main__":
+            print(say_hello('Steve'))
+        ```
+        
+        Note:
+        
+        This is a simple python `PyPi` package. The real goal is to create and maintain 
+        a minimal project template that supports:
+        
+        * VSCODE debugging
+          
+        * Testing with pytest
+          
+        * Painless publishing on [PyPi][pypi-home] with version management.
+        
+        * Continuous integration with [Travis][travis-home]
+        
+        Visit [pypi-holoniq-simple](https://github.com/stevej2608/pypi-holoniq-simple) on gitHub
+        to find out more.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev
