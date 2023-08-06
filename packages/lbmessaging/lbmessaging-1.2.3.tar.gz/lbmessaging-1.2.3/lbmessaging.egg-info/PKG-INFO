@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: lbmessaging
+Version: 1.2.3
+Summary: LHCb devtools communication bus
+Home-page: https://gitlab.cern.ch/lhcb-core/lbmessaging
+Author: CERN - LHCb Core Software
+Author-email: lhcb-core-soft@cern.ch
+License: GPL
+Description: LHCb devtools communication bus
+Keywords: LHCb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
