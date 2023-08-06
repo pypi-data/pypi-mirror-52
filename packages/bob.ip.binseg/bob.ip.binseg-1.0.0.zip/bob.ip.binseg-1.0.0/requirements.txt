@@ -1,0 +1,9 @@
+setuptools
+numpy
+bob.extension
+torch
+torchvision
+pandas
+matplotlib
+tqdm
+tabulate
