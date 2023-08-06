@@ -1,0 +1,3 @@
+Hello {{ checkout.customer.first_name }},
+
+You have an abandoned checkout at {{ checkout.abandoned_checkout_url}}
