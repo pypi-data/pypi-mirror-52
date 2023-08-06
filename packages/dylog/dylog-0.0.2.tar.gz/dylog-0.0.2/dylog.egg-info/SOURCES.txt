@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dylog/__init__.py
+dylog/handlers.py
+dylog.egg-info/PKG-INFO
+dylog.egg-info/SOURCES.txt
+dylog.egg-info/dependency_links.txt
+dylog.egg-info/requires.txt
+dylog.egg-info/top_level.txt
