@@ -1,0 +1,10 @@
+README.md
+setup.py
+faiss_cpu.egg-info/PKG-INFO
+faiss_cpu.egg-info/SOURCES.txt
+faiss_cpu.egg-info/dependency_links.txt
+faiss_cpu.egg-info/requires.txt
+faiss_cpu.egg-info/top_level.txt
+python/__init__.py
+python/setup.py
+python/swigfaiss.i
