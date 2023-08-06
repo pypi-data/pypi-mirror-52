@@ -1,0 +1,83 @@
+Metadata-Version: 1.2
+Name: parma
+Version: 0.1.1
+Summary: Multivariate polyharmonic spline interpolation
+Home-page: https://github.com/dougmvieira/parma
+Author: Douglas Machado Vieira
+Author-email: dougmvieira@gmail.com
+License: MIT license
+Project-URL: Documentation, https://parma.readthedocs.io/
+Project-URL: Changelog, https://parma.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/dougmvieira/parma/issues
+Description: ========
+        Overview
+        ========
+        
+        
+        
+        Multivariate polyharmonic spline interpolation
+        
+        * Free software: MIT license
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install parma
+        
+        Documentation
+        =============
+        
+        
+        https://parma.readthedocs.io/
+        
+        
+        Development
+        ===========
+        
+        To run the all tests run::
+        
+            tox
+        
+        Note, to combine the coverage data from all the tox environments run:
+        
+        .. list-table::
+            :widths: 10 90
+            :stub-columns: 1
+        
+            - - Windows
+              - ::
+        
+                    set PYTEST_ADDOPTS=--cov-append
+                    tox
+        
+            - - Other
+              - ::
+        
+                    PYTEST_ADDOPTS=--cov-append tox
+        
+        
+        Changelog
+        =========
+        
+        0.0.0 (2019-07-30)
+        ------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
