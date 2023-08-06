@@ -1,0 +1,3 @@
+[graphql_providers]
+cirrus-ci = gqlmod_cirrusci:CirrusCiProvider
+
