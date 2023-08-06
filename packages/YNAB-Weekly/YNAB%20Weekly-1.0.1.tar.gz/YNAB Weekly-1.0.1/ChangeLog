@@ -1,0 +1,24 @@
+CHANGES
+=======
+
+1.0.1
+-----
+
+* Updated ignores
+* Correct content type for PyPI
+
+1.0.0
+-----
+
+* Switching to command line options
+* Documentation
+* Switching to proper package
+* Switch to hammock
+* Switch to Mailgun for mailing
+* Added category group names to the report
+* API cleanup
+* Configurable mail server
+* Logging
+* If no mails are supplied, just output the result
+* Transfers are special
+* Initial code
