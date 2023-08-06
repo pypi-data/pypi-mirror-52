@@ -1,0 +1,13 @@
+flask_rip/__init__.py,sha256=SgCq7PUwI-uuZCnrxa1KFsRwUs0JCFERkZXw2P-m1sU,17619
+flask_rip/__version__.py,sha256=Bx3qQtCtylQBPr57cjMGcMYLqNBQlHj-a6cnSLD_U0I,45
+flask_rip/representations/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+flask_rip/representations/json.py,sha256=Q1iaDZRhpq67tbiVv1YL5wKefC5AkNqudDh2cXFl36g,869
+flask_rip/utils/__init__.py,sha256=Qh5pyCIT2dfHmrUdS6lsMbBLjZmAhz1fl7vWyJ_n4XQ,719
+flask_rip/utils/cors.py,sha256=cZiqaHhIn0w66spRoSIdC-jIn4X_b6OlVms5eGF4Ess,2084
+flask_rip/utils/crypto.py,sha256=q3PBvAYMJYybbqqQlKNF_Pqeyo9h3x5jFJuVqtEA5bA,996
+Flask_Rips-0.1.0.dist-info/AUTHORS.md,sha256=mq_eaNK9CbomfjA8o5-KPPiVXRcgWhcpXr0ce81oJYs,2002
+Flask_Rips-0.1.0.dist-info/LICENSE,sha256=YUTkqu8EmlexWvJipUdbpCUe_fVYpr9UXtTxsGltMlw,1480
+Flask_Rips-0.1.0.dist-info/METADATA,sha256=rPhdR4YteFAENsSIQeZNWD_5ILBzuWhUgZ8dIDRBajY,1096
+Flask_Rips-0.1.0.dist-info/WHEEL,sha256=53VSps8MltPLN_x9Ib61FU2ZSaJKzgrWQqu9rS-Dkgk,116
+Flask_Rips-0.1.0.dist-info/top_level.txt,sha256=qicDlS_L8y4wvsdxZ3DEwCnyb1Cbhj6uUFJv_KHGnaU,10
+Flask_Rips-0.1.0.dist-info/RECORD,,

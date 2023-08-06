@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Flask-Rips
+Version: 0.1.0
+Summary: Simple framework for minimal REST APIs
+Home-page: https://www.github.com/waynerv/flask-rip/
+Author: Waynerv
+Author-email: ampedee@gmail.com
+License: BSD
+Platform: any
+Classifier: Framework :: Flask
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: BSD License
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (>=1.0)
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+
+# Flask-Rips
+
+Flask-Rips help you build minimal REST API with resource routing.
+
+## User Guide
+
+Forked from [Flask-Restful](https://github.com/flask-restful/flask-restful).
+
+You'll find the user guide just in documentation of [Flask-Restful](https://flask-restful.readthedocs.io/), but without error handling，marshaling, argument parsing and Data Formatting features.
+
+**May your API REST in peace.**
+
+
