@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pynasdaq
+Version: 0.4.0
+Summary: Retrieve NASDAQ stock and dividend data
+Home-page: https://github.com/makkader/pynasdaq
+Author: Mak Kader
+Author-email: abdul.kader880@gmail.com
+License: MIT
+Description: Check usages in https://nbviewer.jupyter.org/github/makkader/pynasdaq/blob/master/usages.ipynb
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
