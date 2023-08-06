@@ -1,0 +1,3 @@
+[console_scripts]
+cdm = cdm.cdm:main
+
