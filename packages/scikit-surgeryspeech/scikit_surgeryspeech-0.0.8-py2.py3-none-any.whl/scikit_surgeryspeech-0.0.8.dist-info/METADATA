@@ -1,0 +1,220 @@
+Metadata-Version: 2.1
+Name: scikit-surgeryspeech
+Version: 0.0.8
+Summary: Interface to speech services for image-guided surgery.
+Home-page: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech
+Author: Matt Clarkson
+Author-email: YOUR-EMAIL@ucl.ac.uk
+License: BSD-3 license
+Keywords: medical imaging
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Description-Content-Type: text/x-rst
+Requires-Dist: six (>=1.10)
+Requires-Dist: numpy (>=1.11)
+
+scikit-surgeryspeech
+===============================
+
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/raw/master/project-icon.png
+   :height: 128px
+   :width: 128px
+   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech
+   :alt: Logo
+
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/badges/master/build.svg
+   :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/pipelines
+   :alt: GitLab-CI test status
+
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/badges/master/coverage.svg
+    :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/commits/master
+    :alt: Test coverage
+
+
+
+Author: Kim-Celine Kahl
+
+scikit-surgeryspeech is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
+
+scikit-surgeryspeech supports Python 3.6.
+
+scikit-surgeryspeech is a project which runs the `Python Speech Recognition API`_ in the background listening
+for a specific command. After saying the keyword you can say different commands, which get
+converted to QT Signals.
+
+The speech recognition is done by the `Google Cloud API`_, you have to get the credentials to use it or change the recognition service.
+
+Keyword detection is done by the `Porcupine API`_, you have to set different paths in your environment variables to get it running, described below.
+
+Please explore the project structure, and implement your own functionality.
+
+Example usage
+-------------
+
+To run an example, just start
+
+::
+
+    sksurgeryspeech.py
+
+Make sure Google Cloud API is set up correctly as described in the section below.
+
+Also you have to set all the Parameters for the Porcupine keyword detection, also described below.
+
+You can then say the keyword depending on the Porcupine keyword file you chose and afterwards a command. The command "quit" exits the application.
+
+Note: each time you have already entered a command, you need to say the keyword again to trigger the listening to commands.
+
+Developing
+----------
+
+Cloning
+^^^^^^^
+
+You can clone the repository using the following command:
+
+::
+
+    git clone https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech
+
+If you have problems running the application, you might need to install portaudio
+
+::
+
+    brew install portaudio
+
+Set up the Porcupine keyword detection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are running the keyword example, you need to clone the Porcupine API
+
+::
+
+    git clone https://github.com/Picovoice/Porcupine.git
+
+Then, you have to set the following environment variables (here the paths are just relative to the Porcupine folder, set the full paths) :
+
+::
+
+    PYTHONPATH=Porcupine\binding\python
+    PORCUPINE_DYNAMIC_LIBRARY=Porcupine\lib\<your os>\<your processor type>\<dynamic-library-file>
+    PORCUPINE_PARAMS=Porcupine\lib\common\porcupine_params.pv
+    PORCUPINE_KEYWORD=Porcupine\resources\keyword_files\<your os>\<keyword file of your choice>
+
+You can also `generate your own keyword files`_
+
+If you are using the speech recognition service within your own application, you have to start a background thread which calls the method to listen to the keyword over and over again.
+
+You can find an example how to create such a thread in the sksurgeryspech_demo.py
+
+Use the Google Cloud speech recognition service
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _`Google Cloud API is set up correctly`:
+
+To use the Google Cloud speech recognition service, you need to `get the credentials`_ first. After signing up, you
+should get a json file with your credentials. Download this file and set the environment variable
+
+::
+
+    GOOGLE_APPLICATION_CREDENTIALS
+
+To the path of your json file. You should then be able to run the application.
+
+
+Change speech recognition service
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To change the speech recognition service if you don't want to use the Google Cloud API, just change the command
+
+::
+
+    words = recognizer.recognize_google_cloud(audio, credentials_json=self.credentials)
+
+(file "voice_recognition_service.py", method "listen_to_command(self)")
+to the recognition service of your choice. Currently available services are:
+
+::
+
+    recognizer.recognize_sphinx(audio)
+    recognizer.recognize_google(audio)
+    recognizer.recognize_google_cloud(audio, credentials_json=GOOGLE_CLOUD_SPEECH_CREDENTIALS)
+    recognizer.recognize_wit(audio, key=WIT_AI_KEY)
+    recognizer.recognize_bing(audio, key=BING_KEY)
+    recognizer.recognize_azure(audio, key=AZURE_SPEECH_KEY)
+    recognizer.recognize_houndify(audio, client_id=HOUNDIFY_CLIENT_ID, client_key=HOUNDIFY_CLIENT_KEY)
+    recognizer.recognize_ibm(audio, username=IBM_USERNAME, password=IBM_PASSWORD)
+
+Python development
+^^^^^^^^^^^^^^^^^^
+
+This project uses tox. Start with a clean python environment, then do:
+
+::
+
+    pip install tox
+    tox
+
+and the commands that are run can be found in tox.ini.
+
+
+Installing
+----------
+
+You can pip install directly from the repository as follows:
+
+::
+
+    pip install git+https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech
+
+
+
+Contributing
+^^^^^^^^^^^^
+
+Please see the `contributing guidelines`_.
+
+
+Useful links
+^^^^^^^^^^^^
+
+* `Source code repository`_
+
+
+Licensing and copyright
+-----------------------
+
+Copyright 2019 University College London.
+scikit-surgeryspeech is released under the BSD-3 license. Please see the `license file`_ for details.
+
+
+Acknowledgements
+----------------
+
+Supported by `Wellcome`_ and `EPSRC`_.
+
+
+.. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
+.. _`source code repository`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech
+.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
+.. _`University College London (UCL)`: http://www.ucl.ac.uk/
+.. _`Wellcome`: https://wellcome.ac.uk/
+.. _`EPSRC`: https://www.epsrc.ac.uk/
+.. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/blob/master/CONTRIBUTING.rst
+.. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryspeech/blob/master/LICENSE
+.. _`Python Speech Recognition API`: https://pypi.org/project/SpeechRecognition/
+.. _`Google Cloud API`: https://cloud.google.com/speech-to-text/
+.. _`Porcupine API`: https://github.com/Picovoice/Porcupine
+.. _`generate your own keyword files`: https://github.com/Picovoice/Porcupine/tree/master/tools/optimizer
+.. _`get the credentials`: https://console.cloud.google.com/freetrial/signup/tos?_ga=2.263649484.-1718611742.1562839990
+
+
