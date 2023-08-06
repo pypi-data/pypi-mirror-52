@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: aiida-vasp
+Version: 0.3.0
+Summary: AiiDA Plugin for running VASP calculations.
+Home-page: https://github.com/aiida-vasp/aiida-vasp
+Author: Espen Flage-Larsen
+Author-email: espen.flage-larsen@sintef.no
+License: MIT License, see LICENSE.txt file.
+Keywords: vasp,aiida,wannier90,workflow,materials
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: aiida-core[atomic_tools] (==1.0.0b6)
+Requires-Dist: ase
+Requires-Dist: scipy
+Requires-Dist: pymatgen
+Requires-Dist: subprocess32
+Requires-Dist: click
+Requires-Dist: chainmap
+Requires-Dist: six
+Requires-Dist: pyparsing
+Requires-Dist: py (==1.5.4)
+Requires-Dist: lxml
+Requires-Dist: distro
+Requires-Dist: packaging
+Requires-Dist: parsevasp (>=0.4.2)
+Provides-Extra: dev
+Requires-Dist: pre-commit (==1.14.4) ; extra == 'dev'
+Requires-Dist: prospector (==1.1.5) ; extra == 'dev'
+Requires-Dist: pylint (==1.9.4) ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: yapf (==0.26.0) ; extra == 'dev'
+Requires-Dist: coverage (==4.5.2) ; extra == 'dev'
+Requires-Dist: pytest (==4.3.0) ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.6.1) ; extra == 'dev'
+Requires-Dist: pgtest (==1.2.0) ; extra == 'dev'
+Requires-Dist: packaging ; extra == 'dev'
+Provides-Extra: graphs
+Requires-Dist: matplotlib ; extra == 'graphs'
+Provides-Extra: regen_default_paws
+Requires-Dist: lxml ; extra == 'regen_default_paws'
+Provides-Extra: wannier
+Requires-Dist: aiida-wannier90 ; extra == 'wannier'
+
+TEST
+
+
