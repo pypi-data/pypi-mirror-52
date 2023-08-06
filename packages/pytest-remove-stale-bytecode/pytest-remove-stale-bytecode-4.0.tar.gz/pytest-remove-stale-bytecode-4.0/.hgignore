@@ -1,0 +1,10 @@
+syntax: glob
+
+*.egg-info/
+.cache
+.coverage
+.tox
+__pycache__/
+coverage-report/
+coverage.xml
+junit-*.xml
