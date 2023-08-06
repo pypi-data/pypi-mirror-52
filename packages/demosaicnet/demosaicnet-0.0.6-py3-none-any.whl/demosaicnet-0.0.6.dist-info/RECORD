@@ -1,0 +1,14 @@
+demosaicnet/__init__.py,sha256=pKgVd5pEpm3cuSydZtxVM6z8RjdQCY3d6Pj0WXFxczg,149
+demosaicnet/dataset.py,sha256=ljvSxut6hSmowjkcP-R-hZvS1Pt8amI7ETeFIWw8qwI,24900
+demosaicnet/modules.py,sha256=KbEIOunYRJaa6JXeu1wufFXO2VoDDN21x0pPRPaHv_U,4821
+demosaicnet/mosaic.py,sha256=cAp4nmx5Bgazvlr6UDP1sxqj8TU7N1Wks8o6M2sRLWs,2093
+demosaicnet/version.py,sha256=QiiYsv0kcJaB8wCWyT-FnI2b6be87HA-CrrIUn8LQhg,22
+demosaicnet/data/bayer.pth,sha256=qQ9Fw0uJ_qP69JBgaHg5p9GR0wL1l6MCsx0bvAIf99g,2251181
+demosaicnet/data/test_input.png,sha256=JqyHubjJeLVXHLMXKb3a8EczY4FzcFSWiMZ0LMQMbwk,36594
+demosaicnet/data/xtrans.pth,sha256=N1mhMpb-zrroOjao8MOJDYovfTPl-BSe2bdqcPgoW8c,1644547
+demosaicnet-0.0.6.data/scripts/demosaicnet_demo,sha256=Mv8BYUT5JRejDI4SC5ljAgwwI-lS40dg0EPTKrBy_kw,1818
+demosaicnet-0.0.6.dist-info/LICENSE,sha256=o3EIMxl4fsVWrgJTf121iM6DPmqiNTgzhGnEDVoWrvM,1216
+demosaicnet-0.0.6.dist-info/METADATA,sha256=HEPXhtD8K04LaWSlzdZajYeRk6xav_JbacZ_bYMLeM0,920
+demosaicnet-0.0.6.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+demosaicnet-0.0.6.dist-info/top_level.txt,sha256=Y_f3fVSEdJ1_8ZF2eRFI6_q9rbxLlPlH6Fhhl1DDzLA,12
+demosaicnet-0.0.6.dist-info/RECORD,,
