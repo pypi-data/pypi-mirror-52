@@ -1,0 +1,13 @@
+django_camunda/__init__.py,sha256=D6TZcYGbLXjEr3gr9ar9gZ5PR5SXR_57ECop129kI8c,63
+django_camunda/admin.py,sha256=MkKocZoId_z7RKnOfnMDCochbx9qOIDZvvMGvXQwzn4,201
+django_camunda/apps.py,sha256=eL68zoCi5dRr8jkdz5nKZS1_1AFlE6-bl9znVBlDKDc,102
+django_camunda/camunda_models.py,sha256=D0ikuKwQnpOT0s19leBMlGHisVl7LT0MJFBhd_8PhUA,1864
+django_camunda/client.py,sha256=4-HlLkhQl_D3SUNldCHhkJ7C7OsLQQs7zOp9nDLAYgQ,2857
+django_camunda/interface.py,sha256=xBpiTCN8tI5fY4etKZCeb2hRQ5AxHDDEX0_tS7owCGs,610
+django_camunda/models.py,sha256=7tPgKzZWMBMcBpL214PJTqC7JysWbAjUEmr7jiYdtuQ,1695
+django_camunda/tasks.py,sha256=8viWwSs5WE6YH10zj3FLXuVwvQ2FUkQ59hnccpUQrF0,1734
+django_camunda-0.1.dist-info/LICENSE,sha256=KhNTGevqThZfFEC1ONiUS3TexPrgpJ7750e0Y3iGkEU,1061
+django_camunda-0.1.dist-info/METADATA,sha256=Ar-2CcACE8G9qyKAH9mXQ0509TBgWCIzyA1gdySKNv0,3475
+django_camunda-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+django_camunda-0.1.dist-info/top_level.txt,sha256=W909dKAzByQEdqVCkd3AawL3ui6F2htxgwSkxBwvccU,15
+django_camunda-0.1.dist-info/RECORD,,
