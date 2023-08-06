@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: shrynk
+Version: 0.0.14
+Summary: Using Machine Learning to learn how to Compress
+Home-page: https://github.com/kootenpv/shrynk
+Author: Pascal van Kooten
+Author-email: kootenpv@gmail.com
+License: MIT
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: noc
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: fastparquet
+Requires-Dist: sklearn
+Requires-Dist: preconvert
+Requires-Dist: preconvert-numpy
+Requires-Dist: dill
+Requires-Dist: wrapt-timeout-decorator
+Provides-Extra: all
+Requires-Dist: fastparquet[lz4,brotli,lzo,zstandard,snappy]; extra == 'all'
+Provides-Extra: noc
+Requires-Dist: fastparquet[brotli,snappy,lz4]; extra == 'noc'
+
+<p align="center">
+  <img src="./Shrynk.png" width="400rem"/>
+</p>
+
+[![PyPI](https://img.shields.io/pypi/pyversions/shrynk.svg?style=flat-square&logo=python)](https://pypi.python.org/pypi/shrynk/)
+[![PyPI](https://img.shields.io/pypi/v/shrynk.svg?style=flat-square&logo=pypi)](https://pypi.python.org/pypi/shrynk/)
+[![HitCount](http://hits.dwyl.io/kootenpv/shrynk.svg)](http://hits.dwyl.io/kootenpv/shrynk)
+
+Try it live at https://shrynk.ai
+
+### Usage
+
+Installation:
+
+    pip install shrynk
+
+Then in Python:
+
+```python
+from shrynk.pandas import save, load
+file_path = save(my_df, "mypath")
+# e.g. mypath.csv.bz2
+loaded_df = load(file_path)
+```
+
+### Add your own data
+
+If you want more control you can do the following:
+
+```python
+import pandas as pd
+from shrynk.pandas import PandasCompressor
+
+df = pd.DataFrame({"a": [1, 2, 3]})
+
+pdc = PandasCompressor("default")
+pdc.run_benchmarks([df], save=False) # adds data to the default
+
+pdc.train_model(size=3, write=1, read=1)
+
+pdc.infer(df)
+```
+
+
