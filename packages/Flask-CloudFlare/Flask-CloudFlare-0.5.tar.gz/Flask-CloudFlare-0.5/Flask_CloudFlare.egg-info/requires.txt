@@ -1,0 +1,4 @@
+requests
+pycflare==0.5
+Flask
+simplejson
