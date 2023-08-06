@@ -1,0 +1,7 @@
+include CHANGELOG.md
+include COPYING
+include README.md
+include VERSION
+include config.sample.yaml
+include contrib/*
+include version.sh

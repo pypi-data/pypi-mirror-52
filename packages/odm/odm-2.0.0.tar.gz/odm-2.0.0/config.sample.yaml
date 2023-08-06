@@ -1,0 +1,20 @@
+# Tenant domain
+domain: umich.edu
+
+# This should be an Azure AD 2.0 client
+microsoft:
+  client_id: foo
+  client_secret: bar
+  client_cert: 7E65F72F5305017BDEADEFE102B7F02B2993B03B
+  client_cert_key: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvQIBADANBgkqhkiG9w0BsQEFAASCBKcwdgSjAgEAAoIBAQC5c3U00FHuUOQH
+    -----END PRIVATE KEY-----
+  tenant: umich
+
+# This should be a Google service account
+google:
+  credentials: /path/to/oauth2service.json
+
+# Request timeout
+timeout: 6

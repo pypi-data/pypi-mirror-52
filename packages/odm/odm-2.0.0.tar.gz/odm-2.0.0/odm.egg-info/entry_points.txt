@@ -1,0 +1,4 @@
+[console_scripts]
+gdm = odm.libexec.wrapper:main
+odm = odm.libexec.wrapper:main
+
