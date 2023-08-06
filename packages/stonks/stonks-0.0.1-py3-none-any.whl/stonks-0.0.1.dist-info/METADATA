@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: stonks
+Version: 0.0.1
+Summary: Automatically invest in stonks
+Home-page: https://stonks.matdoes.dev
+Author: mat
+Author-email: pypi@matdoes.dev
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: AsyncIO
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# API Reference
+coming soon
+
