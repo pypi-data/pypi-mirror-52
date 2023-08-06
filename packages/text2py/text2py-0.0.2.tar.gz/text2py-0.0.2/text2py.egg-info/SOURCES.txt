@@ -1,0 +1,11 @@
+README.md
+setup.py
+text2py/__init__.py
+text2py/parser.py
+text2py/runner.py
+text2py.egg-info/PKG-INFO
+text2py.egg-info/SOURCES.txt
+text2py.egg-info/dependency_links.txt
+text2py.egg-info/entry_points.txt
+text2py.egg-info/requires.txt
+text2py.egg-info/top_level.txt
