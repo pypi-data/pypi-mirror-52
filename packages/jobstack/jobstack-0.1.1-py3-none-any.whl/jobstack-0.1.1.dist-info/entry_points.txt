@@ -1,0 +1,3 @@
+[console_scripts]
+jobstack=jobstack:app.main
+

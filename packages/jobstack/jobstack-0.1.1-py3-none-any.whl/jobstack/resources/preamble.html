@@ -1,0 +1,33 @@
+<div class="row">
+    <a class="btn btn-secondary btn-sm preamble" data-toggle="collapse" href="#collapse-preamble" role="button" aria-controls="collapse-preamble">read preamble</a>
+</div>
+<div class="row preamble">
+  <div class="collapse" id="collapse-preamble">
+    <h4>Preamble</h4>
+    <pre>
+Users/Calendars
+---------------
+* Each user expresses x number of project "buckets" they can handle in a given week.
+
+Projects
+--------
+* Each project breaks down in to stages:
+  BA, DEV, QA, UAT, INSTALL, SUPPORT (A project may not necessarily go through all stages. Current example assigns all stages.)
+
+Stages
+------
+* Each stage is assigned a "user" who is repsonsible for that bucket in the schedule.
+* Each stage is assigned x number of "buckets" per x number of weeks.
+    4 = 4 consecutive buckets
+    1/1/1/1 = 1 bucket over 4 weeks
+* A stage can have a specific minimum start week
+    2019-12-01/2/2 = 2 buckets per week for 2 weeks starting no earlier than Dec 1, 2019.
+
+Assignments
+-----------
+* Each project is distributed in the order of priority.
+* Each stage is ordered in sequence:
+  BA -> DEV -> QA -> UAT -> INSTALL -> SUPPORT.
+    </pre>
+  </div>
+</div>
