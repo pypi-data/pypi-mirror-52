@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: f-tools
+Version: 1.0.9
+Summary: A set of low level framework utilities
+Home-page: https://github.com/filipeandre/f_tools
+Author: Filipe Ferreira
+Author-email: py@filipeandre.com
+License: MIT
+Description: A set of low level framework utilities.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
