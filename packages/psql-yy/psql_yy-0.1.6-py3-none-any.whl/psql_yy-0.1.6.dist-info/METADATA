@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: psql-yy
+Version: 0.1.6
+Summary: A tool which is used to connect postgresql, designed by yy
+Home-page: https://github.com/guaidashu/psql_yy
+Author: guaidashu
+Author-email: song42960@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2 (<=2.8.3)
+
+
+Create by yy on 2019/9/21
+tool-yy
+-------------
+
+tool-yy is used to get some help and quickly connect the database from anywhere.
+I'm looking for a good job, if you can, please contact me by email "1023767856@qq.com".
+
+Links
+`````
+
+* `development version <https://github.com/guaidashu/python3_tool_myself>`_
+
+
