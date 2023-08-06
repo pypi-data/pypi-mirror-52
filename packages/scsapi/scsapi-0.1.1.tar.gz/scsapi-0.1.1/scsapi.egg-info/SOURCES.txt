@@ -1,0 +1,12 @@
+README.md
+setup.py
+scsapi/__init__.py
+scsapi/address.py
+scsapi/exceptions.py
+scsapi/order.py
+scsapi/product.py
+scsapi.egg-info/PKG-INFO
+scsapi.egg-info/SOURCES.txt
+scsapi.egg-info/dependency_links.txt
+scsapi.egg-info/requires.txt
+scsapi.egg-info/top_level.txt
