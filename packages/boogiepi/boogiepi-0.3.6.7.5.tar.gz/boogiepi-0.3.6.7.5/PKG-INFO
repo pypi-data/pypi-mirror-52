@@ -1,0 +1,150 @@
+Metadata-Version: 2.1
+Name: boogiepi
+Version: 0.3.6.7.5
+Summary: Sensor data processing and visualization
+Home-page: https://github.com/BoogieMobile/boogiepi
+Author: Chris Laprade
+Author-email: chris@boogiemobile.net
+License: MIT
+Description: # **BoogiePi**
+        
+        ![boogiepi - License](https://img.shields.io/pypi/l/boogiepi)
+        ![boogiepi - Python Version](https://img.shields.io/pypi/pyversions/lib3to6?logo=python&logoColor=yellow)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+        
+        - [**BoogiePi**](#boogiepi)
+          - [**Description**](#description)
+          - [**Installation**](#installation)
+          - [**Usage**](#usage)
+            - [assasinatour](#assasinatour)
+            - [statinatour](#statinatour)
+          - [**Project Links**](#project-links)
+          - [**History**](#history)
+          - [**Contributions**](#contributions)
+          - [**License**](#license)
+          - [**Contact**](#contact)
+        
+        ## **Description**
+        
+        A python library for collecting data from a variety of sources ranging from gpio sensors to weather services to internal computer sensors. The data is then formatted and sorted. Next it will be saved locally and/or uploaded to a cloud service. From there charts, graphs, and other visualizations can be viewed in realtime via a web interface. The library also supports displaying data (both realtime and historical) via hardware such as LEDs/LED arrays or low-power/small-format displays.  
+        
+        **BoogiePi is a python library for:**
+        
+        - Collecting
+        - Organizing
+        - Formatting
+        - Cloud publishing
+        - Displaying
+        - Graphing
+        
+        **data which is acquired from:**
+        
+        - Hardware GPIO Sensors
+        - Local System Information
+        - Remote System Information
+        - OpenWeatherMaps
+        - Web Services
+        - Other sources
+        
+        ## **Installation**
+        
+        **Just download and extract package to any directory.**  
+        
+        Example paths:
+        
+        - Linux: /home/user/Scripts
+        - Windows: C:\Users\user\Scripts
+        
+        ## **Usage**
+        
+        ### assasinatour
+        
+        ```python
+        import assasinatour
+        
+        assasinatour.run('app_name') # kills the script called app_name
+        assasinatour.clean_stuff() # clears the ledshim and oled
+        assasinatour.is_running('app_name') # returns True/False if a script called app_name is running
+        ```
+        
+        ### statinatour
+        
+        ```python
+        import statinatour
+        
+        statinatour.get_cpu_percent() # returns the system cpu percent
+        statinatour.get_disk_percent() # returns the disk usage percent
+        statinatour.get_current_freq() # returns the system cpu frequency
+        ```
+        
+        ## **Project Links**
+        
+        - [Project License][license]
+        - [Code of Conduct][code of conduct]
+        - [Contribution Guidelines][contribute]
+        - [Issue Tracker][issues]
+        - [Create a Pull Request][pr]
+        - [Security Policy][security]
+        
+        [license]: https://github.com/BoogieMobile/boogiepi/blob/master/LICENSE
+        [code of conduct]: https://github.com/BoogieMobile/boogiepi/blob/master/CODE_OF_CONDUCT.md
+        [security]: https://github.com/BoogieMobile/boogiepi/blob/master/SECURITY.md
+        [contribute]: https://github.com/BoogieMobile/boogiepi/blob/master/CONTRIBUTING.md
+        [issues]: https://github.com/BoogieMobile/boogiepi/issues
+        [pr]: https://github.com/BoogieMobile/boogiepi/pull/new/master
+        [testing]: https://realpython.com/python-testing/
+        [documentation]: https://devguide.python.org/documenting/
+        [style]: https://github.com/psf/black
+        [commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+        
+        ## **History**
+        
+        The original scope of the project was to collect data from gpio sensors on a raspberry pi 3b+ and then display that data via a combination of an LED strip and an OLED panel. The project has since evolved to encompass many more data sources and storage and display options. The library can now transmit data to cloud services, making it accessible from any device, any where. In addition, all data points are saved indefintely and with precise timestamps, allowing for more accurate and complex visualizations. We've also added support for more display devices and begun building a beautiful web interface for broad access to graphical charts and visualizations.
+        
+        ## **Contributions**
+        
+        At the current development stage this repository is private.  
+        
+        - *In other words, you shouldn't be seeing this!*  
+        
+        **However, once the code is more mature:**  
+        
+        - Any public changes, additions and updates will be welcomed as long as the license and spirit of the original work is preserved.
+        
+        ## **License**
+        
+        ![boogiepi - License](https://img.shields.io/pypi/l/boogiepi)
+        
+        ## **Contact**
+        
+        <boogiepi@boogiemobile.net>
+        
+        [@Boogie7601](https://twitter.com/Boogie7601?ref_src=twsrc%5Etfw)
+        
+        [![Keybase PGP](https://img.shields.io/keybase/pgp/boogiemobile)](https://keybase.io/encrypt#boogiemobile)
+        
+        <!--
+        
+                    Saved snippets:
+        
+        ![alt text](https://platform.twitter.com/widgets/follow_button.d9084ca5af1ffbe01c8d444cfadfa6fe.en.html#dnt=false&id=twitter-widget-0&lang=en&screen_name=Boogie7601&show_count=false&show_screen_name=true&size=m&time=1568084576231)
+        
+        <a href="https://twitter.com/Boogie7601?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Boogie7601</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+        :partly_sunny::house_with_garden::battery::seedling::ghost::earth_americas:  
+        :arrow_down:  
+        :mag_right::arrow_right::ledger::arrow_right::books:  
+        :arrow_down:  
+        :chart_with_upwards_trend::arrow_right::satellite::iphone::computer::octocat::arrow_right::thumbsup::smile:
+        
+        -->
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

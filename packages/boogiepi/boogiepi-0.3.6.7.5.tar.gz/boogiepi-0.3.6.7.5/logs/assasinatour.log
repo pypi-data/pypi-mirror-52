@@ -1,0 +1,695 @@
+2019-09-05 15:43:58,816 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-05 15:43:58,845 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-05 15:43:58,846 - assasinatour - INFO - Completed 1 of 5 assasinations.
+2019-09-05 15:43:58,846 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-05 15:43:59,328 - assasinatour - INFO - Successfully cleared displays.
+2019-09-05 15:44:10,806 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(22013).
+2019-09-05 15:44:10,809 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-05 15:44:10,811 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-05 15:44:10,814 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-05 15:44:10,815 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-05 15:44:10,816 - assasinatour - INFO - Completed 1 of 5 assasinations.
+2019-09-05 15:44:10,817 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-05 15:44:11,420 - assasinatour - INFO - Successfully cleared displays.
+2019-09-05 15:44:12,929 - assasinatour - WARNING - The process ledshim_cpu_temp(22013) is not running.
+2019-09-05 15:44:12,930 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-05 15:44:12,931 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-05 15:44:12,932 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-05 15:44:12,950 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-05 21:38:34,924 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-05 21:38:34,928 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-05 21:38:34,930 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-05 21:38:34,932 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-05 21:38:34,934 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-05 21:38:34,937 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(1714)
+2019-09-05 21:38:34,939 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-05 21:38:34,941 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(22384)
+2019-09-05 21:38:34,944 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-05 21:38:34,946 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-05 21:38:34,948 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(613)
+2019-09-05 21:38:34,957 - assasinatour - DEBUG - assasinatour process started.
+2019-09-05 21:38:34,958 - assasinatour - DEBUG - The process id of assasinatour is 28562
+2019-09-05 21:38:34,958 - assasinatour - DEBUG - The parent process id of assasinatour is 28562
+2019-09-05 21:38:34,961 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-05 21:38:35,035 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-05 21:38:35,036 - assasinatour - INFO - Completed 0 of 1 assasinations.
+2019-09-05 21:38:35,037 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-05 21:49:15,520 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-05 21:49:15,522 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-05 21:49:15,523 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-05 21:49:15,524 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-05 21:49:15,526 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-05 21:49:15,527 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-05 21:49:15,528 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-05 21:49:15,530 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(22384)
+2019-09-05 21:49:15,532 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-05 21:49:15,533 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-05 21:49:15,534 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(613)
+2019-09-06 00:59:40,084 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(22384).
+2019-09-06 00:59:40,099 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 00:59:40,100 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-06 00:59:40,101 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 00:59:40,118 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 00:59:44,493 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(7024).
+2019-09-06 00:59:44,496 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-06 00:59:44,498 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 00:59:44,500 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-06 00:59:44,503 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-06 00:59:44,504 - assasinatour - INFO - Completed 1 of 5 assasinations.
+2019-09-06 00:59:44,505 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 00:59:45,007 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 00:59:45,907 - assasinatour - WARNING - The process ledshim_cpu_temp(7024) is not running.
+2019-09-06 00:59:45,909 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-06 00:59:45,910 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 00:59:45,911 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-06 00:59:45,912 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-06 00:59:45,913 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 00:59:45,913 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 00:59:46,375 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 00:59:47,291 - assasinatour - WARNING - The process ledshim_cpu_temp(7024) is not running.
+2019-09-06 00:59:47,292 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 00:59:47,293 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-06 00:59:47,294 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 00:59:47,310 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 00:59:49,452 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(7144).
+2019-09-06 00:59:49,453 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-06 00:59:49,454 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 00:59:49,456 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-06 00:59:49,457 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-06 00:59:49,457 - assasinatour - INFO - Completed 1 of 5 assasinations.
+2019-09-06 00:59:49,458 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 00:59:49,929 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 12:10:01,265 - assasinatour - WARNING - The process ledshim_cpu_temp(7144) is not running.
+2019-09-06 12:10:01,272 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 12:10:01,273 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-06 12:10:01,274 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 12:10:01,305 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 12:10:09,230 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 12:10:09,232 - assasinatour - WARNING - The process luma_clock(30617) is not runn2019-09-06 12:32:07,158 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 12:32:07,162 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 12:32:07,168 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 12:32:07,170 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 12:32:07,173 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 12:32:07,176 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 12:32:07,179 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 12:32:07,646 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 12:32:07,648 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 12:32:07,649 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 12:32:07,650 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 12:32:07,651 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 12:32:07,652 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 12:32:07,653 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 12:32:08,160 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 12:32:08,161 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 12:32:08,161 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 12:32:08,162 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 12:32:08,163 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 12:32:08,164 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 12:32:08,165 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 12:32:08,621 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 12:32:08,622 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 12:32:08,622 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 12:32:08,623 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 12:32:08,624 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 12:32:08,624 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 12:32:08,625 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 12:32:09,113 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 12:32:09,114 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 12:32:09,135 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 12:32:09,135 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 12:32:09,136 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 12:32:09,137 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 12:32:09,138 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:50:34,571 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:50:34,574 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:50:34,575 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:50:34,577 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:50:34,578 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:50:34,580 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:50:34,582 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:50:35,102 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:50:35,102 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:50:35,103 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:50:35,103 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:50:35,104 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:50:35,104 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:50:35,105 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:50:35,602 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:50:35,603 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:50:35,603 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:50:35,604 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:50:35,604 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:50:35,605 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:50:35,605 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:50:36,100 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:50:36,100 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:50:36,101 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:50:36,101 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:50:36,102 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:50:36,102 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:50:36,103 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:50:36,602 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:50:36,603 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:50:36,603 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:50:36,604 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:50:36,604 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:50:36,605 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:50:36,605 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:51:16,629 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:51:16,629 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:51:16,630 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:51:16,630 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:51:16,631 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:51:16,631 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:51:16,632 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:56:28,875 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:56:28,876 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:56:28,876 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:56:28,877 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:56:28,878 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:56:28,878 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:56:28,879 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:56:28,879 - assasinatour - ERROR - Unable to parse pidfiles to dictionary!
+2019-09-06 13:56:40,097 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:56:40,098 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 13:56:40,099 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-06 13:56:40,099 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 13:56:40,138 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 13:56:45,088 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:56:45,089 - assasinatour - ERROR - Could not read pid file for luma_clock.
+2019-09-06 13:56:45,090 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 13:56:45,090 - assasinatour - ERROR - Could not read pid file for luma_sensors.
+2019-09-06 13:56:45,091 - assasinatour - ERROR - Could not read pid file for luma_odroid.
+2019-09-06 13:56:45,092 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 13:56:45,092 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 13:56:45,599 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 13:56:47,090 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:56:47,090 - assasinatour - ERROR - Could not read pid file for luma_clock.
+2019-09-06 13:56:47,091 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 13:56:47,092 - assasinatour - ERROR - Could not read pid file for luma_sensors.
+2019-09-06 13:56:47,093 - assasinatour - ERROR - Could not read pid file for luma_odroid.
+2019-09-06 13:56:47,093 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 13:56:47,094 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 13:56:47,582 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 13:56:47,830 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:56:47,831 - assasinatour - ERROR - Could not read pid file for luma_clock.
+2019-09-06 13:56:47,831 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 13:56:47,832 - assasinatour - ERROR - Could not read pid file for luma_sensors.
+2019-09-06 13:56:47,833 - assasinatour - ERROR - Could not read pid file for luma_odroid.
+2019-09-06 13:56:47,833 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 13:56:47,834 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 13:56:48,320 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 13:56:48,697 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:56:48,698 - assasinatour - ERROR - Could not read pid file for luma_clock.
+2019-09-06 13:56:48,698 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 13:56:48,699 - assasinatour - ERROR - Could not read pid file for luma_sensors.
+2019-09-06 13:56:48,700 - assasinatour - ERROR - Could not read pid file for luma_odroid.
+2019-09-06 13:56:48,701 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 13:56:48,701 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 13:56:49,189 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 13:56:49,888 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:56:49,889 - assasinatour - ERROR - Could not read pid file for luma_clock.
+2019-09-06 13:56:49,890 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 13:56:49,890 - assasinatour - ERROR - Could not read pid file for luma_sensors.
+2019-09-06 13:56:49,891 - assasinatour - ERROR - Could not read pid file for luma_odroid.
+2019-09-06 13:56:49,892 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 13:56:49,892 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 13:56:50,379 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 13:59:34,025 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 13:59:34,026 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 13:59:34,026 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 13:59:34,027 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 13:59:34,027 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 13:59:34,028 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 13:59:34,029 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(28562)
+2019-09-06 13:59:34,029 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 13:59:34,030 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(28269)
+2019-09-06 13:59:34,030 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 13:59:34,031 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 13:59:34,031 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(629)
+2019-09-06 13:59:34,033 - assasinatour - DEBUG - assasinatour process started.
+2019-09-06 13:59:34,034 - assasinatour - DEBUG - The process id of assasinatour is 914
+2019-09-06 13:59:34,034 - assasinatour - DEBUG - The parent process id of assasinatour is 914
+2019-09-06 13:59:34,035 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 13:59:34,077 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 13:59:34,079 - assasinatour - INFO - Completed 0 of 1 assasinations.
+2019-09-06 13:59:34,080 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 14:00:40,045 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 14:00:40,046 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 14:00:40,046 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 14:00:40,047 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 14:00:40,047 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 14:00:40,048 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 14:00:40,048 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(914)
+2019-09-06 14:00:40,049 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 14:00:40,049 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(28269)
+2019-09-06 14:00:40,050 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 14:00:40,050 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 14:00:40,051 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(629)
+2019-09-06 14:00:40,052 - assasinatour - DEBUG - assasinatour process started.
+2019-09-06 14:00:40,052 - assasinatour - DEBUG - The process id of assasinatour is 2952
+2019-09-06 14:00:40,052 - assasinatour - DEBUG - The parent process id of assasinatour is 2952
+2019-09-06 14:00:40,053 - assasinatour - ERROR - Could not open pid file for ledshim_cpu_temp.
+2019-09-06 14:00:40,111 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 14:00:40,112 - assasinatour - INFO - Completed 0 of 1 assasinations.
+2019-09-06 14:00:40,112 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 14:01:25,691 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 14:01:25,692 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 14:01:25,692 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 14:01:25,693 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 14:01:25,693 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 14:01:25,694 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 14:01:25,694 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(2952)
+2019-09-06 14:01:25,695 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 14:01:25,695 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(28269)
+2019-09-06 14:01:25,696 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 14:01:25,696 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 14:01:25,697 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(629)
+2019-09-06 14:01:25,698 - assasinatour - DEBUG - assasinatour process started.
+2019-09-06 14:01:25,698 - assasinatour - DEBUG - The process id of assasinatour is 4269
+2019-09-06 14:01:25,698 - assasinatour - DEBUG - The parent process id of assasinatour is 4269
+2019-09-06 14:01:25,699 - assasinatour - ERROR - There was an exception while initalizing the script.
+2019-09-06 14:02:32,322 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 14:02:32,323 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 14:02:32,323 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 14:02:32,324 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 14:02:32,325 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 14:02:32,326 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 14:02:32,326 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(4269)
+2019-09-06 14:02:32,327 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 14:02:32,327 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(28269)
+2019-09-06 14:02:32,328 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 14:02:32,328 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 14:02:32,329 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(629)
+2019-09-06 14:02:32,330 - assasinatour - DEBUG - assasinatour process started.
+2019-09-06 14:02:32,330 - assasinatour - DEBUG - The process id of assasinatour is 6214
+2019-09-06 14:02:32,330 - assasinatour - DEBUG - The parent process id of assasinatour is 6214
+2019-09-06 14:02:32,331 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 14:02:32,390 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 14:02:32,390 - assasinatour - INFO - Completed 0 of 1 assasinations.
+2019-09-06 14:02:32,391 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 14:04:29,569 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 14:04:29,570 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 14:04:29,570 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 14:04:29,571 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 14:04:29,571 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 14:04:29,572 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 14:04:29,572 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(6214)
+2019-09-06 14:04:29,573 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 14:04:29,573 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(28269)
+2019-09-06 14:04:29,574 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 14:04:29,574 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 14:04:29,575 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(629)
+2019-09-06 14:04:29,575 - assasinatour - DEBUG - assasinatour process started.
+2019-09-06 14:04:29,576 - assasinatour - DEBUG - The process id of assasinatour is 9586
+2019-09-06 14:04:29,576 - assasinatour - DEBUG - The parent process id of assasinatour is 9586
+2019-09-06 14:06:05,262 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 14:06:05,263 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 14:06:05,263 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 14:06:05,264 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 14:06:05,264 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 14:06:05,265 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 14:06:05,265 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(9586)
+2019-09-06 14:06:05,266 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 14:06:05,266 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(28269)
+2019-09-06 14:06:05,267 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 14:06:05,268 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 14:06:05,268 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(629)
+2019-09-06 14:06:05,269 - assasinatour - DEBUG - assasinatour process started.
+2019-09-06 14:06:05,269 - assasinatour - DEBUG - The process id of assasinatour is 12403
+2019-09-06 14:06:05,270 - assasinatour - DEBUG - The parent process id of assasinatour is 12403
+2019-09-06 14:06:05,271 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(28269).
+2019-09-06 14:06:05,313 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 14:06:05,314 - assasinatour - INFO - Completed 1 of 1 assasinations.
+2019-09-06 14:06:05,314 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 14:06:22,434 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 14:06:22,435 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 14:06:22,436 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-06 14:06:22,437 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 14:06:22,454 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 14:06:26,787 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-06 14:06:26,788 - assasinatour - ERROR - Could not read pid file for luma_clock.
+2019-09-06 14:06:26,788 - assasinatour - ERROR - Could not read pid file for flashlight.
+2019-09-06 14:06:26,789 - assasinatour - ERROR - Could not read pid file for luma_sensors.
+2019-09-06 14:06:26,790 - assasinatour - ERROR - Could not read pid file for luma_odroid.
+2019-09-06 14:06:26,791 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 14:06:26,791 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 14:06:27,283 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 14:07:45,162 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 14:07:45,167 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 14:07:45,169 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 14:07:45,176 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 14:07:45,184 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(28189)
+2019-09-06 14:07:45,192 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 14:07:45,195 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 14:07:45,204 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 14:07:45,212 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(12524)
+2019-09-06 14:07:45,216 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 14:07:45,222 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 14:07:45,223 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 19:21:04,082 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 19:21:04,083 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 19:21:04,085 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 19:21:04,086 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 19:21:04,087 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(633)
+2019-09-06 19:21:04,088 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 19:21:04,089 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 19:21:04,090 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 19:21:04,092 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(12524)
+2019-09-06 19:21:04,093 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 19:21:04,094 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 19:21:04,095 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 19:21:09,096 - assasinatour - WARNING - The process ledshim_cpu_temp(12524) is not running.
+2019-09-06 19:21:09,097 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 19:21:09,098 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-06 19:21:09,098 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 19:21:09,137 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 19:26:15,543 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 19:26:15,543 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 19:26:15,544 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 19:26:15,545 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 19:26:15,545 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(9513)
+2019-09-06 19:26:15,546 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 19:26:15,546 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 19:26:15,547 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 19:26:15,547 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(9556)
+2019-09-06 19:26:15,548 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 19:26:15,548 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 19:26:15,549 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 19:41:07,396 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 19:41:07,397 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 19:41:07,397 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 19:41:07,398 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 19:41:07,399 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(18332)
+2019-09-06 19:41:07,399 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 19:41:07,400 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 19:41:07,400 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 19:41:07,401 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(9556)
+2019-09-06 19:41:07,402 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 19:41:07,402 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 19:41:07,403 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 19:41:14,501 - assasinatour - WARNING - The process ledshim_cpu_temp(9556) is not running.
+2019-09-06 19:41:14,502 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-06 19:41:14,503 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 19:41:14,504 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-06 19:41:14,505 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-06 19:41:14,506 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-06 19:41:14,507 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 19:41:15,008 - assasinatour - INFO - Successfully cleared displays.
+2019-09-06 19:41:17,202 - assasinatour - WARNING - The process ledshim_cpu_temp(9556) is not running.
+2019-09-06 19:41:17,204 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 19:41:17,205 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-06 19:41:17,205 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 19:41:17,222 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 19:52:23,407 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 19:52:23,409 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 19:52:23,410 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 19:52:23,412 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 19:52:23,413 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(23013)
+2019-09-06 19:52:23,414 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 19:52:23,415 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 19:52:23,416 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 19:52:23,417 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(31267)
+2019-09-06 19:52:23,418 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 19:52:23,419 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 19:52:23,421 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 19:52:28,567 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(31267).
+2019-09-06 19:52:28,568 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 19:52:28,569 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-06 19:52:28,570 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 19:52:28,610 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 19:53:57,512 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(32005).
+2019-09-06 19:53:57,514 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 19:53:57,517 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-06 19:53:57,518 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 19:53:57,534 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 20:00:41,411 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(2254).
+2019-09-06 20:00:41,413 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-06 20:00:41,415 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-06 20:00:41,416 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-06 20:00:41,432 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-06 20:10:49,012 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:10:49,014 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:10:49,015 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:10:49,017 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:10:49,018 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:10:49,020 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:10:49,021 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:10:49,022 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:10:49,024 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:10:49,025 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:10:49,026 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:10:49,027 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:11:49,789 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:11:49,791 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:11:49,793 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:11:49,794 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:11:49,795 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:11:49,795 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:11:49,796 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:11:49,796 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:11:49,797 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:11:49,797 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:11:49,798 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:11:49,798 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:13:43,993 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:13:43,995 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:13:43,996 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:13:43,997 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:13:43,999 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:13:44,000 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:13:44,001 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:13:44,002 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:13:44,004 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:13:44,006 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:13:44,007 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:13:44,009 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:14:00,878 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:14:00,879 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:14:00,880 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:14:00,880 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:14:00,881 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:14:00,882 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:14:00,882 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:14:00,883 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:14:00,883 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:14:00,884 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:14:00,884 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:14:00,885 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:14:16,225 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:14:16,226 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:14:16,226 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:14:16,227 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:14:16,227 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:14:16,228 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:14:16,229 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:14:16,229 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:14:16,230 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:14:16,230 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:14:16,231 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:14:16,232 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:18:01,396 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:18:01,397 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:18:01,398 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:18:01,398 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:18:01,399 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:18:01,400 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:18:01,400 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:18:01,401 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:18:01,402 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:18:01,402 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:18:01,403 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:18:01,403 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:18:05,271 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:18:05,272 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:18:05,273 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:18:05,273 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:18:05,274 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:18:05,275 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:18:05,275 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:18:05,276 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:18:05,276 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:18:05,277 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:18:05,277 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:18:05,278 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:18:12,096 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:18:12,097 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:18:12,098 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:18:12,098 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:18:12,099 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:18:12,099 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:18:12,100 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:18:12,101 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:18:12,101 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:18:12,102 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:18:12,102 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:18:12,103 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-06 20:18:12,108 - assasinatour - ERROR - Could not open pid file for luma_clocker.
+2019-09-06 20:18:31,258 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-06 20:18:31,259 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-06 20:18:31,260 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-06 20:18:31,260 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-06 20:18:31,261 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-06 20:18:31,262 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-06 20:18:31,262 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-06 20:18:31,263 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-06 20:18:31,263 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-06 20:18:31,264 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-06 20:18:31,264 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-06 20:18:31,265 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:03:28,305 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:03:28,309 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:03:28,311 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:03:28,313 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:03:28,315 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:03:28,317 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:03:28,320 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:03:28,323 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:03:28,324 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:03:28,326 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:03:28,329 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:03:28,331 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:05:38,141 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:05:38,143 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:05:38,145 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:05:38,147 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:05:38,148 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:05:38,150 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:05:38,152 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(19572)
+2019-09-08 17:05:38,154 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:05:38,156 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:05:38,158 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:05:38,160 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:05:38,162 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:05:38,163 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:10:44,799 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:10:44,801 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:10:44,803 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:10:44,804 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:10:44,805 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:10:44,806 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:10:44,808 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(23272)
+2019-09-08 17:10:44,809 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:10:44,810 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:10:44,812 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:10:44,813 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:10:44,814 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:10:44,815 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:12:45,517 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:12:45,519 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:12:45,521 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:12:45,522 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:12:45,523 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:12:45,525 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:12:45,531 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(31777)
+2019-09-08 17:12:45,533 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:12:45,535 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:12:45,536 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:12:45,538 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:12:45,540 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:12:45,542 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:13:38,247 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:13:38,249 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:13:38,251 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:13:38,252 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:13:38,254 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:13:38,255 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:13:38,257 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(2821)
+2019-09-08 17:13:38,258 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:13:38,259 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:13:38,260 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:13:38,262 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:13:38,264 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:13:38,266 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:20:03,097 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:20:03,099 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:20:03,101 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:20:03,103 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:20:03,105 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:20:03,107 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:20:03,108 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(4280)
+2019-09-08 17:20:03,110 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:20:03,112 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:20:03,114 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:20:03,116 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:20:03,117 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:20:03,118 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:20:29,666 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:20:29,667 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:20:29,667 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:20:29,668 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:20:29,669 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:20:29,669 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:20:29,670 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(14935)
+2019-09-08 17:20:29,670 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:20:29,671 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:20:29,671 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:20:29,672 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:20:29,673 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:20:29,673 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:22:30,874 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_clock.pid(30617)
+2019-09-08 17:22:30,875 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim.pid(1816)
+2019-09-08 17:22:30,876 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_sensors.pid(29317)
+2019-09-08 17:22:30,876 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma_odroid.pid(22871)
+2019-09-08 17:22:30,877 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch-phat.pid(31967)
+2019-09-08 17:22:30,878 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/touch_phat.pid(617)
+2019-09-08 17:22:30,878 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/statinatour.pid(15704)
+2019-09-08 17:22:30,879 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/assasinatour.pid(12403)
+2019-09-08 17:22:30,879 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/luma-clock.pid(22012)
+2019-09-08 17:22:30,880 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/ledshim_cpu_temp.pid(13787)
+2019-09-08 17:22:30,880 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/get_enviro.pid(13719)
+2019-09-08 17:22:30,881 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/flashlight.pid(3839)
+2019-09-08 17:22:30,882 - assasinatour - DEBUG - pidfile found /home/pi/Scripts/logs/mount_odroid.pid(631)
+2019-09-08 17:23:44,342 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(13787).
+2019-09-08 17:23:44,357 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-08 17:23:44,359 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-08 17:23:44,360 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-08 17:23:44,401 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-08 17:37:27,246 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(21223).
+2019-09-08 17:37:27,247 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-08 17:37:27,249 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-08 17:37:27,250 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-08 17:37:27,251 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-08 17:37:27,252 - assasinatour - INFO - Completed 1 of 5 assasinations.
+2019-09-08 17:37:27,252 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-08 17:37:27,889 - assasinatour - INFO - Successfully cleared displays.
+2019-09-08 21:22:24,139 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(11585).
+2019-09-08 21:22:24,144 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-08 21:22:24,145 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-08 21:22:24,145 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-08 21:22:24,199 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-08 21:22:28,300 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(21405).
+2019-09-08 21:22:28,303 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-08 21:22:28,304 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-08 21:22:28,307 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-08 21:22:28,309 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-08 21:22:28,309 - assasinatour - INFO - Completed 1 of 5 assasinations.
+2019-09-08 21:22:28,310 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-08 21:22:28,800 - assasinatour - INFO - Successfully cleared displays.
+2019-09-08 21:22:29,723 - assasinatour - WARNING - The process ledshim_cpu_temp(21405) is not running.
+2019-09-08 21:22:29,724 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-08 21:22:29,725 - assasinatour - INFO - Completed 0 of 2 assasinations.
+2019-09-08 21:22:29,726 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-08 21:22:29,742 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-09 18:51:04,441 - assasinatour - INFO - Successfully killed ledshim_cpu_temp(21545).
+2019-09-09 18:51:04,460 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-09 18:51:04,461 - assasinatour - INFO - Completed 1 of 2 assasinations.
+2019-09-09 18:51:04,463 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-09 18:51:04,498 - assasinatour - INFO - Successfully cleared ledshim.
+2019-09-09 18:51:08,614 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-09 18:51:08,618 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-09 18:51:08,620 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-09 18:51:08,624 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-09 18:51:08,632 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-09 18:51:08,633 - assasinatour - INFO - Completed 0 of 5 assasinations.
+2019-09-09 18:51:08,635 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-09 18:51:09,445 - assasinatour - INFO - Successfully cleared displays.
+2019-09-10 05:17:35,652 - assasinatour - WARNING - The process luma_clock(30617) is not running.
+2019-09-10 05:17:35,657 - assasinatour - WARNING - The process flashlight(3839) is not running.
+2019-09-10 05:17:35,659 - assasinatour - WARNING - The process luma_sensors(29317) is not running.
+2019-09-10 05:17:35,661 - assasinatour - WARNING - The process luma_odroid(22871) is not running.
+2019-09-10 05:17:35,663 - assasinatour - INFO - Completed 0 of 4 assasinations.
+2019-09-10 05:17:35,664 - assasinatour - DEBUG - assasinatour process exited.
+2019-09-10 05:17:36,422 - assasinatour - INFO - Successfully cleared oled.
+2019-09-10 05:17:36,711 - assasinatour - ERROR - Could not read pid file for ledshim_cpu_temp.
+2019-09-10 05:17:36,714 - assasin

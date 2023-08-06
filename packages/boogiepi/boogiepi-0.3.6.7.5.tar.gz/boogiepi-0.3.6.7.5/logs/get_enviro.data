@@ -1,0 +1,27 @@
+name::get_enviro
+description::environment data from sensors and weather net
+sys_time::2019-09-12,15-35-14.370110
+ntp_time::2019-09-12,15-35-15.170426
+hostname::penguin
+loc_ip::100.115.92.194
+pub_ip::67.246.22.12
+geo_location::42.4501,-73.2454
+geo_place::Pittsfield,Massachusetts,US
+weather::light rain
+wthr_temperature::60.89F
+wthr_humidity::100%RH
+wthr_pressure::1022hPa
+wthr_wind::wind 2.6
+wthr_clouds::90%
+uv_index::6.4
+uv_risk::high
+wthr_rain::0.25
+wthr_snow::{}
+snsr_temperature::none
+snsr_humidity::none
+snsr_pressure::none
+snsr_vo2_gas::none
+chros_speed::none
+chros_temperature::none
+odroid_speed::none
+odroid_temperature::none
