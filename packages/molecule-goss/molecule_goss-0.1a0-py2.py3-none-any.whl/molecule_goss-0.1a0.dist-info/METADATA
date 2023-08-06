@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: molecule-goss
+Version: 0.1a0
+Summary: Goss Molecule Plugin :: run molecule tests with Goss as verifier
+Home-page: https://github.com/pycontribs/molecule-goss
+Author: Sorin Sbarnea
+Author-email: sorin.sbarnea@gmail.com
+Maintainer: Sorin Sbarnea
+Maintainer-email: sorin.sbarnea@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/pycontribs/molecule-goss/issues
+Project-URL: Release Management, https://github.com/pycontribs/molecule-goss/projects
+Project-URL: CI: Travis, https://travis-ci.com/pycontribs/molecule-goss
+Project-URL: Source Code, https://github.com/pycontribs/molecule-goss
+Keywords: ansible,roles,testing,molecule,plugin,goss,verifier
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*
+Description-Content-Type: text/x-rst
+Requires-Dist: molecule (>=3.0a0)
+Requires-Dist: pyyaml (<6,>=5.1)
+Provides-Extra: test
+Requires-Dist: flake8 (<4,>=3.6.0) ; extra == 'test'
+Requires-Dist: mock (<4,>=3.0.5) ; extra == 'test'
+Requires-Dist: pytest (<5,>=4.6.3) ; extra == 'test'
+Requires-Dist: pytest-cov (<3,>=2.7.1) ; extra == 'test'
+Requires-Dist: pytest-helpers-namespace (<2020,>=2019.1.8) ; extra == 'test'
+Requires-Dist: pytest-mock (<2,>=1.10.4) ; extra == 'test'
+Requires-Dist: pytest-verbose-parametrize (<2,>=1.7.0) ; extra == 'test'
+Requires-Dist: pytest-xdist (<2,>=1.29.0) ; extra == 'test'
+Requires-Dist: shade (<2,>=1.31.0) ; extra == 'test'
+
+********************
+Molecule Goss Plugin
+********************
+
+.. image:: https://badge.fury.io/py/molecule-goss.svg
+   :target: https://badge.fury.io/py/molecule-goss
+   :alt: PyPI Package
+
+.. image:: https://img.shields.io/travis/com/pycontribs/molecule-goss/master.svg?label=Linux%20builds%20%40%20Travis%20CI
+   :target: https://travis-ci.com/pycontribs/molecule-goss
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/python/black
+   :alt: Python Black Code Style
+
+.. image:: https://img.shields.io/badge/Code%20of%20Conduct-Ansible-silver.svg
+   :target: https://docs.ansible.com/ansible/latest/community/code_of_conduct.html
+   :alt: Ansible Code of Conduct
+
+.. image:: https://img.shields.io/badge/Mailing%20lists-Ansible-orange.svg
+   :target: https://docs.ansible.com/ansible/latest/community/communication.html#mailing-list-information
+   :alt: Ansible mailing lists
+
+.. image:: https://img.shields.io/badge/license-MIT-brightgreen.svg
+   :target: LICENSE
+   :alt: Repository License
+
+Molecule goss is designed to allow use of goss Cloud for provisioning test
+resources.
+
+Documentation
+=============
+
+Read the documentation and more at https://molecule.readthedocs.io/.
+
+.. _get-involved:
+
+Get Involved
+============
+
+* Join us in the ``#ansible-molecule`` channel on `Freenode`_.
+* Join the discussion in `molecule-users Forum`_.
+* Join the community working group by checking the `wiki`_.
+* Want to know about releases, subscribe to `ansible-announce list`_.
+* For the full list of Ansible email Lists, IRC channels see the
+  `communication page`_.
+
+.. _`Freenode`: https://freenode.net
+.. _`molecule-users Forum`: https://groups.google.com/forum/#!forum/molecule-users
+.. _`wiki`: https://github.com/ansible/community/wiki/Molecule
+.. _`ansible-announce list`: https://groups.google.com/group/ansible-announce
+.. _`communication page`: https://docs.ansible.com/ansible/latest/community/communication.html
+
+.. _authors:
+
+Authors
+=======
+
+Molecule Goss Plugin was created by Sorin Sbarnea based on code from Molecule.
+
+.. _license:
+
+License
+=======
+
+The `MIT`_ License.
+
+.. _`MIT`: https://github.com/ansible/molecule/blob/master/LICENSE
+
+The logo is licensed under the `Creative Commons NoDerivatives 4.0 License`_.
+
+If you have some other use in mind, contact us.
+
+.. _`Creative Commons NoDerivatives 4.0 License`: https://creativecommons.org/licenses/by-nd/4.0/
+
+
