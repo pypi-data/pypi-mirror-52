@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ujotypes
+Version: 0.1.2.post103
+Summary: Ujo Types for PythonPython wrapper for the ujotypes-c libraray for inmemory handling of UJO container objects
+Home-page: https://www.industrial-devops.org/
+Author: wobe-systems GmbH
+Author-email: mw@wobe-systems.com
+License: MIT
+Project-URL: Bug Tracker, https://tracker.industrial-devops.org
+Project-URL: Documentation, https://readthedocs.org/projects/ujotypes-py
+Project-URL: Source Code, https://git.industrial-devops.org/titan/related-projects/ujotypes-py
+Platform: Windows
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+
+UNKNOWN
+
+
