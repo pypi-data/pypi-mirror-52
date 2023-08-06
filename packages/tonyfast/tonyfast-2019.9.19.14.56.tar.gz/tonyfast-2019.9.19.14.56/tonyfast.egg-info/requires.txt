@@ -1,0 +1,9 @@
+isort
+wheel
+pandas
+jupyter-client
+datasette
+sqlite-utils
+nbsphinx
+nbconvert
+black
