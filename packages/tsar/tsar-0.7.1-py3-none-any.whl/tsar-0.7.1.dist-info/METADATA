@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tsar
+Version: 0.7.1
+Summary: Time series auto-regressor.
+Home-page: UNKNOWN
+Author: Enzo Busseti
+Author-email: UNKNOWN
+License: GPLv3+
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: numba
+
+UNKNOWN
+
+
