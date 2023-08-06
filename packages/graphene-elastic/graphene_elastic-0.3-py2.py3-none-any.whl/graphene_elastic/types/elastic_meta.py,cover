@@ -1,0 +1,10 @@
+> from graphene.types import List, String
+> from graphene.types.objecttype import ObjectType
+  
+> __all__ = (
+>     'Highlight',
+> )
+  
+  
+> class Highlight(ObjectType):
+>     content = List(String, required=False)
