@@ -1,0 +1,32 @@
+# List of all dependencies of larch
+# Recommended installation with conda:
+# conda config --env --append channels GSECARS
+# conda install --file ./requirements.txt
+scipy>=1.2
+numpy>=1.12
+matplotlib>=3.0
+sqlalchemy>=0.9
+h5py>=2.8
+pillow
+peakutils
+requests
+scikit-image
+scikit-learn
+asteval>=0.9.14
+lmfit>=0.9.13
+uncertainties>=3.0
+pyshortcuts>=1.4
+pyepics>=3.3.3
+wxpython>=4.0.3
+wxutils>=0.2.3
+wxmplot>=0.9.37
+pip
+pyyaml
+psutil
+nose
+pytest
+termcolor
+silx>=0.11
+fabio
+pyfai
+pycifrw
