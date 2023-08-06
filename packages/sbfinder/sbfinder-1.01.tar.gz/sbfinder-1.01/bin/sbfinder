@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+import sbfinder
+import sys
+import argparse
+
+try:
+    input = raw_input
+except NameError:
+    pass
+
+if 'regenerate' in str(sys.argv).lower():
+	print("Regenerating problem set")
+	elitecode.gen_problems()
+
+parser = argparse.ArgumentParser(description='Description of your program')
+parser.add_argument("-key", "--key", dest="apiKey",
+                    help="Input Yelp fusion api key")
+
+parser.add_argument("-v", "--verbose", dest="verbose",
+                    help="Set verbosity level")
+
+args = parser.parse_args()
+
+if args.apiKey == None:
+	apiKey = raw_input("Yelp API Key: ")
+else:
+	apiKey = args.apiKey
+
+if args.verbose != None:
+	verbose = True
+else:
+	verbose = False
+
+sbfinder.main(apiKey, verbose)
+
