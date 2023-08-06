@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: rocker
+Version: 0.1.7
+Summary: A tool to run docker containers with customized extras
+Home-page: https://github.com/osrf/rocker
+Author: Tully Foote
+Author-email: tfoote@osrfoundation.org
+License: Apache License 2.0
+Description: A tool to run docker containers with customized extra added like nvidia gui support overlayed.
+Keywords: Docker
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.0
