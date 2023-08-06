@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: vsgan
+Version: 1.0.0.post2
+Summary: VapourSynth GAN Implementation using RRDBNet, based on ESRGAN's implementation
+Home-page: https://gitlab.com/imPRAGMA/VSGAN
+Author: PRAGMA
+Author-email: pragma.exe@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: torch
+
+# VSGAN
+VapourSynth GAN Implementation, based on ESRGAN's implementation
+
+# Installation and Usage
+[Check out the Wiki](https://gitlab.com/imPRAGMA/VSGAN/wikis), it will explain everything you may need to know.
+
