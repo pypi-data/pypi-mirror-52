@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pynag3
+Version: 3.0.1
+Summary: Python3 modules for Nagios plugins and configuration
+Home-page: http://pynag.org/
+Author: Eric Lapouyade
+Author-email: elapouya@gmail.com
+License: GPLv2
+Description: 
+        Port to python3 of Drew Stinnett's pynag package : 
+        Python3 modules and utilities for pragmatically handling Nagios configuration
+        file maintenance, status information, log file parsing and plug-in development.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires: unittest2
