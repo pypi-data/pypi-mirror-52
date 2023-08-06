@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: betalytics
+Version: 0.3
+Summary: DataScience Framework For Betting Analytics
+Home-page: https://github.com/sashml/betalytics
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: setuptools
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: openpyxl
+Requires-Dist: seaborn
+
+UNKNOWN
+
+
