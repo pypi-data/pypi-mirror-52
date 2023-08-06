@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+pyLINQ/__init__.py
+pyLINQ/main.py
+pyLINQ.egg-info/PKG-INFO
+pyLINQ.egg-info/SOURCES.txt
+pyLINQ.egg-info/dependency_links.txt
+pyLINQ.egg-info/not-zip-safe
+pyLINQ.egg-info/top_level.txt
