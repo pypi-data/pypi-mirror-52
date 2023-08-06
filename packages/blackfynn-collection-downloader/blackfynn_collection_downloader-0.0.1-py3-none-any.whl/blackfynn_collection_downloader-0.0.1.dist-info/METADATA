@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: blackfynn-collection-downloader
+Version: 0.0.1
+Summary: Download all files in a Blackfynn collection via command line or gui
+Home-page: https://github.com/pypa/sampleproject
+Author: Jesse Khorasanee
+Author-email: jessekhorasanee@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+blackfynn-collection-downloader
+======
+A tool for downloading a collection of files from Blackfynn
+
+##Usage
+```
+pip install blackfynn-collection-downloader
+python blackfynn-collection-downloader <api-key> <api-secret> <collection:ID>
+
+
