@@ -1,0 +1,7 @@
+pandas>=0.17
+numpy>=1.10
+pyyaml>=3.0
+
+[xarray]
+xarray>=0.7
+netCDF4
