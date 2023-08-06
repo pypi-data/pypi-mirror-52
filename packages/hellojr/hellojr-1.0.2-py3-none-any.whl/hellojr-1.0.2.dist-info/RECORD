@@ -1,0 +1,17 @@
+hellojr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hellojr/addition.py,sha256=xmbLWv2777v8khujrjkNndHWHvLJ0Vy-ssKu4UZeW9Y,146
+hellojr/addition_tests.py,sha256=2MD3zHUc8kYxGyoEgKzVPn92UOBpIyWs10kAuzUNbEc,421
+hellojr/command.py,sha256=MSxsrN0RZgtbWaQ2KCIEGHX7281cbs3Sf_lRt_jPBQo,881
+hellojr/command_tests.py,sha256=Km8hwzjJ9TlXczTaogwummyehbu9aUMmmPo6tK8Xkdo,2101
+hellojr/localization.py,sha256=zHuFKxzLLJ-YlylcZ2Co2_USBE6KhyKmQ_SknwclWnU,1354
+hellojr/localization_tests.py,sha256=uF1xNI5gAHClS01opE-sYnkd8G1pM_q_bYmmTaPTVj0,1266
+hellojr/multiplcation_tests.py,sha256=EZ0MmTH1lPn74ZrxE8MWWdR6cB6MTL0syHz5Dlgf7Bk,475
+hellojr/multiplication.py,sha256=oqMAanz_8hZuN-ixgnH_tpp6UNbZLyozpnMcuBRjog0,161
+hellojr/web.py,sha256=1JayBf_ztfayQRtQpDVAZ4oI7iAOwlSS6VPXqONu2-E,589
+hellojr/web_tests.py,sha256=9i2Aswf9aVsbYVKCU9sIE_lXHP3dLbUZ1LTFUs29ZJo,1364
+hellojr-1.0.2.dist-info/LICENSE,sha256=aJOoi-bXFI1FXvDd9HWcJ4Jho2mfvC2dNVf2qlx_AcA,1054
+hellojr-1.0.2.dist-info/METADATA,sha256=2JCYGdirLhTIO-2-4j7CQkqJbSGT6fLs8_ypGS6ESEc,1608
+hellojr-1.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+hellojr-1.0.2.dist-info/entry_points.txt,sha256=Hzcv90b6O8b0rSjVl1XFzQmL1SnUVoQ62H3UpNfSWz4,49
+hellojr-1.0.2.dist-info/top_level.txt,sha256=CCBOYK5BYBi_gx97JaNp17fLtXVx8PmkvlbOfnmWXFY,8
+hellojr-1.0.2.dist-info/RECORD,,
