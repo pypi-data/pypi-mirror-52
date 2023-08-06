@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: tex-response
+Version: 1.2.1
+Summary: Simple Django code that lets you use your installed luatex compiler to render a .tex template to a pdf-file response.
+Home-page: https://github.com/mverleg/django_tex_response
+Author: Mark V
+Author-email: markv.nl.dev@gmail.com
+License: revised BSD license; see LICENSE.txt
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
