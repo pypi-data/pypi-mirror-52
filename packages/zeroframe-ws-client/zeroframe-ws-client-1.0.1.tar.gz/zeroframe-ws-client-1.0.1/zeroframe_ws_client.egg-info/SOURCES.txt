@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+example.py
+setup.py
+zeroframe_ws_client/__init__.py
+zeroframe_ws_client.egg-info/PKG-INFO
+zeroframe_ws_client.egg-info/SOURCES.txt
+zeroframe_ws_client.egg-info/dependency_links.txt
+zeroframe_ws_client.egg-info/requires.txt
+zeroframe_ws_client.egg-info/top_level.txt
