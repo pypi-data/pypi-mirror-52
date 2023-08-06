@@ -1,0 +1,21 @@
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.6
+  - blas=*=openblas
+  - numpy
+  - cython
+  - pythran
+  - h5py
+  - matplotlib
+  - pandas
+  - pyfftw
+  - psutil
+  - colorlog
+  - mako
+  - openmpi
+  - pip:
+    - fluiddyn
+    - mpi4py
