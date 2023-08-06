@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: mipea
+Version: 0.1.1
+Summary: lightning fast peripheral access on the Raspberry Pi using a mipea wrapper written in C
+Home-page: https://github.com/jasLogic/mipeapy
+Author: jasLogic
+Author-email: jaslo@jaslogic.tech
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jasLogic/mipeapy/issues
+Project-URL: Source Code, https://github.com/jasLogic/mipeapy
+Project-URL: Download, https://github.com/jasLogic/mipeapy/releases
+Description: [![GitHub](https://img.shields.io/github/license/jasLogic/mipeapy?color=blue)](https://github.com/jasLogic/mipeapy/blob/master/LICENSE)
+        [![GitHub release (latest by date)](https://img.shields.io/github/v/release/jasLogic/mipeapy)](https://github.com/jasLogic/mipeapy/releases/)
+        
+        # mipeapy: mipea Python wrapper
+        
+        *Under construction*
+        
+        This Python module makes use of the [mipea](https://github.com/jasLogic/mipea)
+        C library to access the peripherals of the Raspberry Pi.
+        The module is written in C and uses the Python C API.
+        Most functions are just wrappers to the mipea functions with conversion to
+        Python objects and some improvements.
+        
+        Contributions are welcome (especially documentation or examples), please fork
+        and open a pull request.
+        
+        Please add an issue if you find any bugs or have ideas for improvements.
+        
+        Like the mipea C library, there are nearly **no checks performed** to protect
+        your Pi to archive best performance and because this is a
+        **library for developers**.
+        This library is useful to **lay a foundation for other programs or libraries**.
+        
+        ## Installation
+        You need to install the [mipea](https://github.com/jasLogic/mipea) C library to
+        use this library, see [README.md](https://github.com/jasLogic/mipea/blob/master/README.md)
+        for installation instructions.
+        * PyPI
+                ```
+                $ pip install mipea
+                ```
+        
+        * Source
+                ```
+                $ python setup.py install
+                ```
+        
+        ## Usage
+        Look at the [examples](https://github.com/jasLogic/mipeapy/tree/master/examples) for some starting help.
+        
+Keywords: c peripheral access Raspberry Pi mipea gpio
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: C
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Hardware
+Description-Content-Type: text/markdown
