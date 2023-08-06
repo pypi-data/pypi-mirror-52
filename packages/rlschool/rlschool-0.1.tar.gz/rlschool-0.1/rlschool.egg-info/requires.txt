@@ -1,0 +1,4 @@
+pyglet>=1.2.0
+six>=1.12.0
+numpy>=1.16.4
+configparser>=3.7.4
