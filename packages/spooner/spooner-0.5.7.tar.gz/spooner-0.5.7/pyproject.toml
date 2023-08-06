@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit", "nltk", "pronouncing"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "spooner"
+author = "Danny McVey"
+author-email = ""
+description-file = "README.md"
+home-page = "https://github.com/danmaps/spooner"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+[tool.flit.metadata.requires-extra]
+test = ["pytest", "pytest-cov", "tox", "nltk", "pronouncing"]
