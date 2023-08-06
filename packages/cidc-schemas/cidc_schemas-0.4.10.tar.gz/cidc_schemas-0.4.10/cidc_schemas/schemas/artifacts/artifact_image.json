@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "image_artifact",
+  "title": "Image Artifact",
+  "type": "object",
+  "description": "Information about images include height and width",
+  "allOf": [
+    {
+      "$ref": "artifacts/artifact_core.json"
+    },
+    {
+      "properties": {
+        "height": {
+          "type": "integer"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "channels": {
+          "type": "integer"
+        },
+        "data_format": {
+          "const": "IMAGE"
+        }
+      }
+    }
+  ],
+  "required": ["height", "width", "channels"]
+}
