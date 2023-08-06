@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+msa301/__init__.py
+msa301.egg-info/PKG-INFO
+msa301.egg-info/SOURCES.txt
+msa301.egg-info/dependency_links.txt
+msa301.egg-info/requires.txt
+msa301.egg-info/top_level.txt
