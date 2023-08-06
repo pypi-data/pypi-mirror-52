@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dircrawler
+Version: 0.0.2
+Summary: General purpose crawler
+Home-page: UNKNOWN
+Author: mhaisham
+Author-email: mhaisham79@gmail.com
+License: UNKNOWN
+Description: # dirCrawler
+        
+        * file system crawler
+        ```python
+        from dircrawler import crawl
+        
+        crawl(*args, **kwargs)
+        ```
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
