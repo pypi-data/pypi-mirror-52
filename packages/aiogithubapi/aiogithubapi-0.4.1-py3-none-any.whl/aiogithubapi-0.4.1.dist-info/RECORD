@@ -1,0 +1,15 @@
+aiogithubapi/__init__.py,sha256=YDqlrZOawGplX0k9s_CznsNvqTYyVW80-LVovDmPaEE,567
+aiogithubapi/aiogithub.py,sha256=Sl_HSRzouWrdKCZgG0VjZgIr_fjs5gpNwA_1Urwc42c,5921
+aiogithubapi/const.py,sha256=5baOMYKdl_cJj7ZbWDEbtirV5s3VthOX1F2hU-tZRoc,218
+aiogithubapi/content.py,sha256=f2IpbJKUFn4NCrMfeSFhobvod-gM1QXkI-ntoImDr38,1017
+aiogithubapi/exceptions.py,sha256=FGpSP00IeSbtOfSdtM0f5BKS9xjoCL2KX1IOUpPsVzQ,337
+aiogithubapi/issue.py,sha256=bBg13z_84Y_1rOIMYVfNXD_NnxaKeT8EN5ZxKG9LIIg,1106
+aiogithubapi/issuecomment.py,sha256=ZqaL0n2QNGQTl5uYjR4xuiu2ITMyyT-3ne_7zSr0x60,1514
+aiogithubapi/ratelimit.py,sha256=bHJy9PnLGtn0iO7nt92mDEHWiFNwDI_Q3TDq_Qo7-n4,1727
+aiogithubapi/release.py,sha256=tFYyuKNN90pWN8XlcFwPzUciSNpOYlu8ahclTF6_MLA,1132
+aiogithubapi/repository.py,sha256=cdTMHXT9b8ajDEmSH0n3kUoayN678FjVa1MIiehbgKQ,11881
+aiogithubapi-0.4.1.dist-info/LICENSE,sha256=ScY9jcDZdaWykLVqqYA9WYGOZhLqYLo7mkQ0FWTlaq8,1082
+aiogithubapi-0.4.1.dist-info/METADATA,sha256=jXxr-qEfHLvA9kz8TPYaEwDdWov_eQ1hBjNYc1oz-5U,766
+aiogithubapi-0.4.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+aiogithubapi-0.4.1.dist-info/top_level.txt,sha256=k2zmrnRoWWHTakHQInN6gpPfzDq5EwI-GZxymHsD3t4,13
+aiogithubapi-0.4.1.dist-info/RECORD,,
