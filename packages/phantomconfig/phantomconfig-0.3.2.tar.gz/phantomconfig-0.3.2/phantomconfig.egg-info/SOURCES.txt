@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+phantomconfig/__init__.py
+phantomconfig/parsers.py
+phantomconfig/phantomconfig.py
+phantomconfig.egg-info/PKG-INFO
+phantomconfig.egg-info/SOURCES.txt
+phantomconfig.egg-info/dependency_links.txt
+phantomconfig.egg-info/requires.txt
+phantomconfig.egg-info/top_level.txt
