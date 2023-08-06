@@ -1,0 +1,9 @@
+magma-lang>=1.0.18
+coreir
+fault
+mantle
+numpy
+Pillow
+bitarray
+colorlog
+pytest
