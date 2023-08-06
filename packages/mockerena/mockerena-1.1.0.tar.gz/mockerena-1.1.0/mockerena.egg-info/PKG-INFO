@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: mockerena
+Version: 1.1.0
+Summary: Self-hosting data mocking service
+Home-page: https://github.com/FanThreeSixty/mockerena
+Author: Michael Holtzscher
+Author-email: mholtzscher@fanthreesixty.com
+Maintainer: Michael Holtzscher
+Maintainer-email: mholtzscher@fanthreesixty.com
+License: MIT
+Project-URL: Home, https://github.com/FanThreeSixty/mockerena
+Project-URL: Tracker, https://github.com/FanThreeSixty/mockerena/issues
+Description: Mockerena
+        =========
+        [![Build Status](https://travis-ci.org/jlane9/mockerena.svg?branch=master)](https://travis-ci.org/jlane9/mockerena)
+        [![Maintainability](https://api.codeclimate.com/v1/badges/e2ba8628f5a30a4a1fc8/maintainability)](https://codeclimate.com/github/jlane9/mockerena/maintainability)
+        [![Test Coverage](https://api.codeclimate.com/v1/badges/e2ba8628f5a30a4a1fc8/test_coverage)](https://codeclimate.com/github/jlane9/mockerena/test_coverage)
+        [![PyPI version](https://badge.fury.io/py/mockerena.svg)](https://badge.fury.io/py/mockerena)
+        [![Python version](https://img.shields.io/pypi/pyversions/mockerena.svg)](https://pypi.python.org/pypi/mockerena)
+        [![License](https://img.shields.io/pypi/l/mockerena.svg)](https://pypi.python.org/pypi/mockerena)
+        [![Status](https://img.shields.io/pypi/status/mockerena.svg)](https://pypi.python.org/pypi/mockerena)
+        [![Documentation Status](https://readthedocs.org/projects/mockerena/badge/?version=latest)](https://mockerena.readthedocs.io/en/latest/?badge=latest)
+        [![Requirements Status](https://requires.io/github/jlane9/mockerena/requirements.svg?branch=master)](https://requires.io/github/jlane9/mockerena/requirements/?branch=master)
+        
+        Mockerena allows anyone to mock data files through customized json
+        schemas and provides routes for external systems to retrieve from it.
+        
+        ## Table of Contents
+        
+        ### [Getting Started](https://github.com/FanThreeSixty/mockerena/blob/master/docs/install.rst)
+        
+        ### [Development](https://github.com/FanThreeSixty/mockerena/blob/master/docs/development.rst)
+        
+        ### [Routes](https://github.com/FanThreeSixty/mockerena/blob/master/docs/routes.rst)
+        
+Keywords: flask data mock test api
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Mocking
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: release
