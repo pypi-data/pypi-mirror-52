@@ -1,0 +1,6 @@
+## import app
+from crudapp.module.controllers import crud_app
+
+## runn app
+
+crud_app.run(debug=True)

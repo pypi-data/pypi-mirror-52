@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: CRUDAPP
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: flask
+Requires: pandas
+Requires: datatime
+Requires: PyJWT
+Requires: re
