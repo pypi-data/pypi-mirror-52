@@ -1,0 +1,12 @@
+six>=1.9
+pandas>=0.18
+tabulator>=1.0
+tableschema>=1.1
+isodate>=0.6
+
+[develop]
+mock
+pylama
+pytest
+pytest-cov
+tox
