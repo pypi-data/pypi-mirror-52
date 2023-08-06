@@ -1,0 +1,14 @@
+hs_rpc/__init__.py,sha256=aTCuKDAbVKlE5SRcIRy_FGMU_PCcuJdw4eAvwNgdLis,72
+hs_rpc/decorates.py,sha256=oeUfakoDJGHRGTQJXZD0MtGZx9gYnVXidR3cfMwdrgA,1144
+hs_rpc/exceptions.py,sha256=dwL_V2btNN30XaIncJk7TOOlTHNhjseQzDMNdmUNIpQ,324
+hs_rpc/request.py,sha256=FC4NFFpXyCNqvP18_1vB8UkkcO3QSkQj3FYIAarWpZ0,1291
+hs_rpc/rpc.py,sha256=mq_c0bfhEuUf73A5sc4FFVi4u6YTqIjKdAaWbpyTZj0,5291
+hs_rpc/server.py,sha256=cUfS_p5KE-WcS2-rhREoQ2QXM8RwrQUO3KmkJYEoJ5w,853
+hs_rpc/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hs_rpc/proto/rpc_data_pb2.py,sha256=RW22Z4nzU6WYzAWwY56QpAcxNnNNJ7mcJU3bzcA5xGw,3473
+hs_rpc/proto/rpc_data_pb2_grpc.py,sha256=KtFhKEecy8RZKbHUPi6YRC0Rj_PC0oKLdE9y3tRpiNo,1336
+hs_rpc-0.1.4.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+hs_rpc-0.1.4.dist-info/METADATA,sha256=UsNjQKG9luJl8sNEIz9O_LgPHu9CZyODk4NIaEMxpQM,719
+hs_rpc-0.1.4.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+hs_rpc-0.1.4.dist-info/top_level.txt,sha256=O8w9JNIKm1hBvYnOatsi3wIHS2x2YqZDRoExxasS4SI,7
+hs_rpc-0.1.4.dist-info/RECORD,,
