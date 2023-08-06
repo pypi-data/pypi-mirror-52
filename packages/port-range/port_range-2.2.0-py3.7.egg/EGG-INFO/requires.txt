@@ -1,0 +1,12 @@
+
+[develop]
+bumpversion
+isort
+readme_renderer
+setuptools>=24.2.1wheel
+
+[tests]
+coverage
+nose
+pycodestyle>=2.1.0
+pylint
