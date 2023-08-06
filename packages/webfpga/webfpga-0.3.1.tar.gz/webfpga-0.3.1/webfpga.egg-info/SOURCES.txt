@@ -1,0 +1,14 @@
+README.md
+setup.py
+webfpga
+bin/webfpga
+webfpga/Compress.py
+webfpga/Decompress.py
+webfpga/Flash.py
+webfpga/Synthesis.py
+webfpga/__init__.py
+webfpga.egg-info/PKG-INFO
+webfpga.egg-info/SOURCES.txt
+webfpga.egg-info/dependency_links.txt
+webfpga.egg-info/requires.txt
+webfpga.egg-info/top_level.txt
