@@ -1,0 +1,3 @@
+[console_scripts]
+ezml = ezml.__main__:main
+
