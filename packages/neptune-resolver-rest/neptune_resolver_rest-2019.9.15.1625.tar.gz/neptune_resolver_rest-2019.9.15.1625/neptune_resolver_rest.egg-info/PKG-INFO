@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: neptune-resolver-rest
+Version: 2019.9.15.1625
+Summary: HTTP Request based resolver for NEPTUNE DNS SERVER
+Home-page: https://git.best-service.online/yurzs/neptune-resolver-rest
+Author: Yury (Yurzs)
+Author-email: dev@best-service.online
+License: MIT
+Description: # Neptune Resolver Rest
+        This module is made as a resolving middleware for Neptune DNS server
+        ## Installation
+        ```pip3 install neptune_resolver_rest```
+        ## Connect to server
+        In config.py edit RESOLVERS variable. Add ```'neptune_resolver_rest'```
+        It will look like this
+        ```RESOLVERS = ['neptune_resolver_rest']```
+        Then you need to set settings for this resolver. Those settings are set by creating variable in config.py with upper module name like
+        ```NEPTUNE_RESOLVER_REST = {'base_url':'https://example.com'}```
+Keywords: NEPTUNE,REST,RESOLVER
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
