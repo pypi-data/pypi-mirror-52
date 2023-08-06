@@ -1,0 +1,14 @@
+tqdm
+lmdb
+numpy
+numpydoc>=0.8.0
+torch>=1.1.0
+scikit-learn
+pandas
+assertpy
+overrides
+sphinx>=2.1.1
+sphinx-autobuild
+sphinx_rtd_theme
+pypandoc
+twine>=1.11.0
