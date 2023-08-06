@@ -1,0 +1,15 @@
+six
+requests
+datadog
+
+[dev]
+tox
+bumpversion
+twine
+wheel
+
+[test]
+pytest
+pytest-cache
+pytest-cov
+mock
