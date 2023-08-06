@@ -1,0 +1,15 @@
+{
+    "workplace": "D:\\Pictures",
+    "workflow": [
+        "RAW",
+        "Selection",
+        "Edited",
+        "Affinity",
+        "Instagram",
+        "Backup"
+    ],
+    "baseflow": "RAW",
+    "backup": "Backup",
+    "selection": "Selection",
+    "edited": "Edited"
+}
