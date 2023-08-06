@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+readme.md
+setup.cfg
+setup.py
+bigml/chronos/__init__.py
+bigml/chronos/chronos.py
+bigml/chronos/formats.py
+bigml/chronos/util.py
+bigml/chronos/tests/__init__.py
+bigml/chronos/tests/test_chronos.py
+bigml_chronos.egg-info/PKG-INFO
+bigml_chronos.egg-info/SOURCES.txt
+bigml_chronos.egg-info/dependency_links.txt
+bigml_chronos.egg-info/requires.txt
+bigml_chronos.egg-info/top_level.txt
