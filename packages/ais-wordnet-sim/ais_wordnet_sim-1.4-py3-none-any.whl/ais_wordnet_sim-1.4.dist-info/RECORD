@@ -1,0 +1,16 @@
+ais_wordnet_sim/__init__.py,sha256=AfmpyFZVKCZ0GNQVzRLVPMNItehbif04ABj6LNOsGoc,154
+ais_wordnet_sim/aiml_enrich/__init__.py,sha256=08GAZqSwl92-RVQKcGFu_wrT75wEgZlKJmuW_D-rK6U,176
+ais_wordnet_sim/aiml_enrich/enrich_model.py,sha256=hO6ayqCV5rn38Bvj5yBTlpSr4e2-OGVZgiDsqxD-_Qg,1953
+ais_wordnet_sim/database/__init__.py,sha256=7XYoXxARwEnLt2ynhnM3PLs449HV2UT-36Ofwit8J1o,69
+ais_wordnet_sim/database/config.py,sha256=ARAK_x-suE7ImwpxIHXsQ6d9APpv8EFkip4xiYJvhoE,33
+ais_wordnet_sim/database/model.py,sha256=7bKrPN_0-feSFaZ0oiIwuKLOG6OaTwkbEKm-sG0E-PM,565
+ais_wordnet_sim/database/service.py,sha256=8TZe77MTkU2MT1yUeEIsXMzt5I9_aywKJygfeUEDznQ,2842
+ais_wordnet_sim/similar_sentences/__init__.py,sha256=fltIHOhJt4qAyRdqSFKI5M-_t9FepZTuc7JZuYkpmgw,510
+ais_wordnet_sim/similar_sentences/sim_sentence_model.py,sha256=uSNv5yE1DeaCNo06-AyZe4Aw_-6idLsbOlLkpAK607c,2267
+ais_wordnet_sim/utility/__init__.py,sha256=wWrMnR6PfmYbl0BdFXEIXtunDT_8y-w3xzd8q3dnuaE,28
+ais_wordnet_sim/utility/preprocessing.py,sha256=6sQcQgD-1fplHpvxCibAndnZmzJKThtOft6t9UF7sWs,1384
+ais_wordnet_sim-1.4.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ais_wordnet_sim-1.4.dist-info/METADATA,sha256=QoBBjB91ZSBXgN-UoX_EZ1luet6zwM-9wqFGd_QwACY,3532
+ais_wordnet_sim-1.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ais_wordnet_sim-1.4.dist-info/top_level.txt,sha256=JAzVhJk_CaWxedXCBi6n_sS3cWxrVzcQleKKSL9oVc4,16
+ais_wordnet_sim-1.4.dist-info/RECORD,,
