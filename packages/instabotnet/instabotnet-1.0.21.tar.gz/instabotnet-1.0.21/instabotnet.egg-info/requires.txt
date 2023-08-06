@@ -1,0 +1,13 @@
+ffmpeg-python
+fleep
+click
+portalocker
+modeller
+imagesize
+funcy
+simpleeval
+python-dotenv
+colorlog
+colorama
+pyyaml
+dict_deep==2.0.2
