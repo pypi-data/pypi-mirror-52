@@ -1,0 +1,85 @@
+
+0.0.11
+======
+
+* Bug fix on CLI command validation
+* Added call to get details for systems, scenarios, and deployment
+* Added call to list templates in a cloudspace
+* Added call to list virtualization realm bindings for a deployment
+* Added paging to list_virtualization_realms_for_cloud
+* Added a list of trusted projects to the update_asset_visibility call
+* Added SSL certificate verification (finally!)
+
+0.0.10
+======
+
+* Added CLI commands for listing teams, projects, and clouds
+  * $ cons3rt cloud --list
+  * $ cons3rt project --list
+  * $ cons3rt team --list
+* Added CLI command for listing active runs in a cloudspace
+  * $ cons3rt cloudspace --id 123 --list
+* Added paging to clouds, and made teams paging consistent
+* Fixed a bug listing runs in a cloudspace
+
+0.0.9
+=====
+
+* Added paging to the projects and deployment run calls
+
+0.0.8
+=====
+
+* Added set_deployment_run_lock to lock or unlock runs
+* Updated delete_assets to use the /res/api/assets/ID endpoint
+
+0.0.7
+=====
+
+* Added list_all_users and list_all_teams methods
+
+0.0.6
+=====
+
+* Updated the HmC ReSt API URL to hmc.hpc.iml
+
+0.0.5
+=====
+
+* Added a call to list networks in a virtualization realm, and to
+get the primary network
+* Added a time to the exception log messages for http_multipart
+
+0.0.4
+=====
+
+* Added a common http_multipart method and updated the call to add
+the header "Expect: 100-Continue", which is required by CONS3RT for
+large asset imports starting in v18.12.
+
+0.0.3
+=====
+
+* Added the asset ID returned from importing a software asset
+* Added the cloudspace command to the cons3rt CLI, with options to
+delete all inactive runs from a cloudspace, and to release all active
+runs from a cloudspace like so:
+  * $ cons3rt cloudspace --ids=3,4,5 --delete_inactive_runs --release_active_runs
+* Fixed a bug in create_deployments when passing in a scenario_id
+* Changed the README from rst format to Markdown
+* Updated the sample code on the README
+* Fixed a bug reading JSON files for create_system, create_scenario,
+create_deployment, and run_deployment
+
+0.0.2
+=====
+
+* Added cons3rtconfig set_config method to create a config file from
+config data passed as a dict
+* Added new calls: create_system, create_scenario, and create_deployment
+* Bug fixes and cleanup
+
+0.0.1
+=====
+
+* Initial packagable version installable by pip
