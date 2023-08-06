@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: aiohttp-jinja2-haggle
+Version: 0.0.0
+Summary: HTTP content negotiation for aiohttp and jinja2.
+Home-page: http://github.com/avengerpenguin/aiohttp_jinja2_haggle
+Author: Ross Fenning
+Author-email: pypi@rossfenning.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: aiohttp
+Requires-Dist: jinja2
+Requires-Dist: accept-types
+Requires-Dist: aiohttp-jinja2
+
+UNKNOWN
+
+
