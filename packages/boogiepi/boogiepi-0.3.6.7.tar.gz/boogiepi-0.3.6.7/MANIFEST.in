@@ -1,0 +1,15 @@
+// Copyright (c) 2019 Chris Laprade
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+include LICENSE CODE_OWNERS
+global-include *.txt *.md *.py *.sh
+graft fonts
+graft logs
+graft docs
+prune keys
+prune .vscode
+global-exclude *.log.* *.data.*
+global-exclude ssh_pass
+global-exclude *.gpg

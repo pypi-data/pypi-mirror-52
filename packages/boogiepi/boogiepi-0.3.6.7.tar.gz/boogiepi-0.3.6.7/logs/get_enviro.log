@@ -1,0 +1,288 @@
+2019-08-31 21:30:48,341 - get_enviro - DEBUG - get_enviro process started.
+2019-08-31 21:30:48,341 - get_enviro - DEBUG - The process id of get_enviro is 11740
+2019-08-31 21:30:48,342 - get_enviro - DEBUG - The parent process id of get_enviro is 11740
+2019-08-31 21:32:09,251 - get_enviro - DEBUG - get_enviro process started.
+2019-08-31 21:32:09,252 - get_enviro - DEBUG - The process id of get_enviro is 13971
+2019-08-31 21:32:09,253 - get_enviro - DEBUG - The parent process id of get_enviro is 13971
+2019-08-31 21:32:12,464 - get_enviro - INFO - Data collected - name::get_enviro
+2019-08-31 21:32:12,466 - get_enviro - INFO - Data collected - description::environment data from sensors and weather net
+2019-08-31 21:32:12,467 - get_enviro - INFO - Data collected - sys_time::2019-08-31,21-32-11.356994
+2019-08-31 21:32:12,468 - get_enviro - INFO - Data collected - ntp_time::2019-08-31,21-32-11.316998
+2019-08-31 21:32:12,469 - get_enviro - INFO - Data collected - hostname::raspberrypi
+2019-08-31 21:32:12,470 - get_enviro - INFO - Data collected - loc_ip::192.168.86.37
+2019-08-31 21:32:12,470 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-08-31 21:32:12,472 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-08-31 21:32:12,473 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-08-31 21:32:12,474 - get_enviro - INFO - Data collected - weather::clear sky
+2019-08-31 21:32:12,474 - get_enviro - INFO - Data collected - wthr_temperature::60.28F
+2019-08-31 21:32:12,475 - get_enviro - INFO - Data collected - wthr_humidity::63%RH
+2019-08-31 21:32:12,476 - get_enviro - INFO - Data collected - wthr_pressure::1026hPa
+2019-08-31 21:32:12,477 - get_enviro - INFO - Data collected - wthr_wind::wind SW 2.6mph
+2019-08-31 21:32:12,477 - get_enviro - INFO - Data collected - wthr_clouds::1%
+2019-08-31 21:32:12,478 - get_enviro - INFO - Data collected - uv_index::7.2
+2019-08-31 21:32:12,479 - get_enviro - INFO - Data collected - uv_risk::high
+2019-08-31 21:32:12,480 - get_enviro - INFO - Data collected - wthr_rain::no rain
+2019-08-31 21:32:12,481 - get_enviro - INFO - Data collected - wthr_snow::no snow
+2019-08-31 21:32:12,482 - get_enviro - INFO - Data collected - snsr_temperature::74.44F
+2019-08-31 21:32:12,483 - get_enviro - INFO - Data collected - snsr_humidity::52.703%RH
+2019-08-31 21:32:12,483 - get_enviro - INFO - Data collected - snsr_pressure::990.49hPa
+2019-08-31 21:32:12,484 - get_enviro - INFO - Data collected - snsr_vo2_gas::391792.7402712319ohms
+2019-08-31 21:32:12,485 - get_enviro - INFO - Data collected - pi_speed::600mhz
+2019-08-31 21:32:12,486 - get_enviro - INFO - Data collected - pi_temperature::44.0C
+2019-08-31 21:32:12,487 - get_enviro - INFO - Data collected - odroid_speed::1200mhz
+2019-08-31 21:32:12,488 - get_enviro - INFO - Data collected - odroid_temperature::63.0C
+2019-08-31 21:34:50,964 - get_enviro - DEBUG - get_enviro process started.
+2019-08-31 21:34:50,964 - get_enviro - DEBUG - The process id of get_enviro is 18474
+2019-08-31 21:34:50,965 - get_enviro - DEBUG - The parent process id of get_enviro is 18474
+2019-08-31 21:35:57,896 - get_enviro - DEBUG - get_enviro process started.
+2019-08-31 21:35:57,897 - get_enviro - DEBUG - The process id of get_enviro is 20282
+2019-08-31 21:35:57,897 - get_enviro - DEBUG - The parent process id of get_enviro is 20282
+2019-08-31 21:36:00,496 - get_enviro - INFO - Data collected - sys_time::2019-08-31,21-35-59.470300
+2019-08-31 21:36:00,498 - get_enviro - INFO - Data collected - ntp_time::2019-08-31,21-35-59.443763
+2019-08-31 21:36:00,500 - get_enviro - INFO - Data collected - hostname::raspberrypi
+2019-08-31 21:36:00,501 - get_enviro - INFO - Data collected - loc_ip::192.168.86.37
+2019-08-31 21:36:00,502 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-08-31 21:36:00,503 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-08-31 21:36:00,504 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-08-31 21:36:00,505 - get_enviro - INFO - Data collected - weather::clear sky
+2019-08-31 21:36:00,506 - get_enviro - INFO - Data collected - wthr_temperature::60.28F
+2019-08-31 21:36:00,507 - get_enviro - INFO - Data collected - wthr_humidity::63%RH
+2019-08-31 21:36:00,507 - get_enviro - INFO - Data collected - wthr_pressure::1026hPa
+2019-08-31 21:36:00,509 - get_enviro - INFO - Data collected - wthr_wind::wind SW 2.6mph
+2019-08-31 21:36:00,509 - get_enviro - INFO - Data collected - wthr_clouds::1%
+2019-08-31 21:36:00,510 - get_enviro - INFO - Data collected - uv_index::7.2
+2019-08-31 21:36:00,511 - get_enviro - INFO - Data collected - uv_risk::high
+2019-08-31 21:36:00,512 - get_enviro - INFO - Data collected - wthr_rain::no rain
+2019-08-31 21:36:00,513 - get_enviro - INFO - Data collected - wthr_snow::no snow
+2019-08-31 21:36:00,514 - get_enviro - INFO - Data collected - snsr_temperature::74.39F
+2019-08-31 21:36:00,514 - get_enviro - INFO - Data collected - snsr_humidity::52.739%RH
+2019-08-31 21:36:00,515 - get_enviro - INFO - Data collected - snsr_pressure::990.5hPa
+2019-08-31 21:36:00,516 - get_enviro - INFO - Data collected - snsr_vo2_gas::416005.9162379222ohms
+2019-08-31 21:36:00,517 - get_enviro - INFO - Data collected - pi_speed::600mhz
+2019-08-31 21:36:00,518 - get_enviro - INFO - Data collected - pi_temperature::44.0C
+2019-08-31 21:36:00,518 - get_enviro - INFO - Data collected - odroid_speed::1000mhz
+2019-08-31 21:36:00,519 - get_enviro - INFO - Data collected - odroid_temperature::63.0C
+2019-09-04 01:43:55,949 - get_enviro - DEBUG - get_enviro process started.
+2019-09-04 01:43:55,950 - get_enviro - DEBUG - The process id of get_enviro is 13719
+2019-09-04 01:43:55,951 - get_enviro - DEBUG - The parent process id of get_enviro is 13719
+2019-09-04 01:43:59,255 - get_enviro - INFO - Data collected - sys_time::2019-09-04,01-43-58.320851
+2019-09-04 01:43:59,256 - get_enviro - INFO - Data collected - ntp_time::2019-09-04,01-43-58.289929
+2019-09-04 01:43:59,257 - get_enviro - INFO - Data collected - hostname::raspberrypi
+2019-09-04 01:43:59,257 - get_enviro - INFO - Data collected - loc_ip::192.168.86.37
+2019-09-04 01:43:59,258 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-09-04 01:43:59,259 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-09-04 01:43:59,259 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-09-04 01:43:59,260 - get_enviro - INFO - Data collected - weather::clear sky
+2019-09-04 01:43:59,260 - get_enviro - INFO - Data collected - wthr_temperature::63.03F
+2019-09-04 01:43:59,261 - get_enviro - INFO - Data collected - wthr_humidity::87%RH
+2019-09-04 01:43:59,261 - get_enviro - INFO - Data collected - wthr_pressure::1017hPa
+2019-09-04 01:43:59,262 - get_enviro - INFO - Data collected - wthr_wind::wind ENE 1.5mph
+2019-09-04 01:43:59,262 - get_enviro - INFO - Data collected - wthr_clouds::1%
+2019-09-04 01:43:59,262 - get_enviro - INFO - Data collected - uv_index::7.21
+2019-09-04 01:43:59,263 - get_enviro - INFO - Data collected - uv_risk::high
+2019-09-04 01:43:59,263 - get_enviro - INFO - Data collected - wthr_rain::no rain
+2019-09-04 01:43:59,264 - get_enviro - INFO - Data collected - wthr_snow::no snow
+2019-09-04 01:43:59,264 - get_enviro - INFO - Data collected - snsr_temperature::74.86F
+2019-09-04 01:43:59,265 - get_enviro - INFO - Data collected - snsr_humidity::61.122%RH
+2019-09-04 01:43:59,265 - get_enviro - INFO - Data collected - snsr_pressure::980.89hPa
+2019-09-04 01:43:59,266 - get_enviro - INFO - Data collected - snsr_vo2_gas::864914.9229080074ohms
+2019-09-04 01:43:59,266 - get_enviro - INFO - Data collected - pi_speed::1400mhz
+2019-09-04 01:43:59,266 - get_enviro - INFO - Data collected - pi_temperature::44.5C
+2019-09-04 01:43:59,267 - get_enviro - INFO - Data collected - odroid_speed::300mhz
+2019-09-04 01:43:59,267 - get_enviro - INFO - Data collected - odroid_temperature::63.0C
+2019-09-12 14:45:19,244 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 14:45:19,248 - get_enviro - DEBUG - Last updated: 2019-09-08 19:09:19.579
+2019-09-12 14:45:19,250 - get_enviro - DEBUG - The process id of get_enviro is 1571
+2019-09-12 14:45:19,255 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 14:45:19,257 - get_enviro - DEBUG - The process id of get_enviro is 1571
+2019-09-12 14:45:19,259 - get_enviro - DEBUG - The parent process id of get_enviro is 1571
+2019-09-12 14:58:39,505 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 14:58:39,506 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 14:58:39,506 - get_enviro - DEBUG - The process id of get_enviro is 1784
+2019-09-12 14:58:39,506 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 14:58:39,507 - get_enviro - DEBUG - The process id of get_enviro is 1784
+2019-09-12 14:58:39,507 - get_enviro - DEBUG - The parent process id of get_enviro is 1784
+2019-09-12 15:00:01,211 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:00:01,213 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:00:01,213 - get_enviro - DEBUG - The process id of get_enviro is 1841
+2019-09-12 15:00:01,215 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:00:01,215 - get_enviro - DEBUG - The process id of get_enviro is 1841
+2019-09-12 15:00:01,216 - get_enviro - DEBUG - The parent process id of get_enviro is 1841
+2019-09-12 15:01:53,518 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:01:53,520 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:01:53,521 - get_enviro - DEBUG - The process id of get_enviro is 1893
+2019-09-12 15:01:53,525 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:01:53,526 - get_enviro - DEBUG - The process id of get_enviro is 1893
+2019-09-12 15:01:53,527 - get_enviro - DEBUG - The parent process id of get_enviro is 1893
+2019-09-12 15:02:46,627 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:02:46,630 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:02:46,630 - get_enviro - DEBUG - The process id of get_enviro is 1943
+2019-09-12 15:02:46,632 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:02:46,632 - get_enviro - DEBUG - The process id of get_enviro is 1943
+2019-09-12 15:02:46,633 - get_enviro - DEBUG - The parent process id of get_enviro is 1943
+2019-09-12 15:06:43,366 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:06:43,367 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:06:43,368 - get_enviro - DEBUG - The process id of get_enviro is 2010
+2019-09-12 15:06:43,369 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:06:43,369 - get_enviro - DEBUG - The process id of get_enviro is 2010
+2019-09-12 15:06:43,370 - get_enviro - DEBUG - The parent process id of get_enviro is 2010
+2019-09-12 15:09:39,198 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:09:39,199 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:09:39,200 - get_enviro - DEBUG - The process id of get_enviro is 2066
+2019-09-12 15:09:39,201 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:09:39,202 - get_enviro - DEBUG - The process id of get_enviro is 2066
+2019-09-12 15:09:39,202 - get_enviro - DEBUG - The parent process id of get_enviro is 2066
+2019-09-12 15:13:58,482 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:13:58,484 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:13:58,484 - get_enviro - DEBUG - The process id of get_enviro is 2145
+2019-09-12 15:13:58,486 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:13:58,486 - get_enviro - DEBUG - The process id of get_enviro is 2145
+2019-09-12 15:13:58,487 - get_enviro - DEBUG - The parent process id of get_enviro is 2145
+2019-09-12 15:19:13,607 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:19:13,609 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:19:13,609 - get_enviro - DEBUG - The process id of get_enviro is 2297
+2019-09-12 15:19:13,610 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:19:13,611 - get_enviro - DEBUG - The process id of get_enviro is 2297
+2019-09-12 15:19:13,611 - get_enviro - DEBUG - The parent process id of get_enviro is 2297
+2019-09-12 15:20:41,537 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:20:41,539 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:20:41,540 - get_enviro - DEBUG - The process id of get_enviro is 2353
+2019-09-12 15:20:41,541 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:20:41,542 - get_enviro - DEBUG - The process id of get_enviro is 2353
+2019-09-12 15:20:41,543 - get_enviro - DEBUG - The parent process id of get_enviro is 2353
+2019-09-12 15:23:35,894 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:23:35,895 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:23:35,896 - get_enviro - DEBUG - The process id of get_enviro is 2410
+2019-09-12 15:23:35,897 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:23:35,898 - get_enviro - DEBUG - The process id of get_enviro is 2410
+2019-09-12 15:23:35,898 - get_enviro - DEBUG - The parent process id of get_enviro is 2410
+2019-09-12 15:25:16,383 - get_enviro - INFO - Data collected - sys_time::2019-09-12,15-23-36.348667
+2019-09-12 15:25:16,405 - get_enviro - INFO - Data collected - ntp_time::2019-09-12,15-23-37.174992
+2019-09-12 15:25:16,414 - get_enviro - INFO - Data collected - hostname::penguin
+2019-09-12 15:25:16,420 - get_enviro - INFO - Data collected - loc_ip::100.115.92.194
+2019-09-12 15:25:16,438 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-09-12 15:25:16,467 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-09-12 15:25:16,475 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-09-12 15:25:16,481 - get_enviro - INFO - Data collected - weather::light rain
+2019-09-12 15:25:16,484 - get_enviro - INFO - Data collected - wthr_temperature::60.75F
+2019-09-12 15:25:16,487 - get_enviro - INFO - Data collected - wthr_humidity::100%RH
+2019-09-12 15:25:16,490 - get_enviro - INFO - Data collected - wthr_pressure::1022hPa
+2019-09-12 15:25:16,492 - get_enviro - INFO - Data collected - wthr_wind::wind 2.6mph
+2019-09-12 15:25:16,494 - get_enviro - INFO - Data collected - wthr_clouds::90%
+2019-09-12 15:25:16,495 - get_enviro - INFO - Data collected - uv_index::6.4
+2019-09-12 15:25:16,498 - get_enviro - INFO - Data collected - uv_risk::high
+2019-09-12 15:25:16,499 - get_enviro - INFO - Data collected - wthr_rain::no rain
+2019-09-12 15:25:16,511 - get_enviro - INFO - Data collected - wthr_snow::{}
+2019-09-12 15:25:16,518 - get_enviro - INFO - Data collected - snsr_temperature::none
+2019-09-12 15:25:16,525 - get_enviro - INFO - Data collected - snsr_humidity::none
+2019-09-12 15:25:16,532 - get_enviro - INFO - Data collected - snsr_pressure::none
+2019-09-12 15:25:16,539 - get_enviro - INFO - Data collected - snsr_vo2_gas::none
+2019-09-12 15:25:16,557 - get_enviro - INFO - Data collected - chros_speed::none
+2019-09-12 15:25:16,561 - get_enviro - INFO - Data collected - chros_temperature::none
+2019-09-12 15:25:16,582 - get_enviro - INFO - Data collected - odroid_speed::none
+2019-09-12 15:25:16,585 - get_enviro - INFO - Data collected - odroid_temperature::none
+2019-09-12 15:25:33,227 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:25:33,228 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:25:33,229 - get_enviro - DEBUG - The process id of get_enviro is 2484
+2019-09-12 15:25:33,235 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:25:33,237 - get_enviro - DEBUG - The process id of get_enviro is 2484
+2019-09-12 15:25:33,238 - get_enviro - DEBUG - The parent process id of get_enviro is 2484
+2019-09-12 15:32:47,765 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:32:47,767 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:32:47,767 - get_enviro - DEBUG - The process id of get_enviro is 2664
+2019-09-12 15:32:47,769 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:32:47,769 - get_enviro - DEBUG - The process id of get_enviro is 2664
+2019-09-12 15:32:47,770 - get_enviro - DEBUG - The parent process id of get_enviro is 2664
+2019-09-12 15:33:48,044 - get_enviro - INFO - Data collected - sys_time::2019-09-12,15-32-48.558651
+2019-09-12 15:33:48,049 - get_enviro - INFO - Data collected - ntp_time::2019-09-12,15-32-49.207227
+2019-09-12 15:33:48,063 - get_enviro - INFO - Data collected - hostname::penguin
+2019-09-12 15:33:48,066 - get_enviro - INFO - Data collected - loc_ip::100.115.92.194
+2019-09-12 15:33:48,068 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-09-12 15:33:48,073 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-09-12 15:33:48,075 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-09-12 15:33:48,077 - get_enviro - INFO - Data collected - weather::light rain
+2019-09-12 15:33:48,080 - get_enviro - INFO - Data collected - wthr_temperature::60.89F
+2019-09-12 15:33:48,087 - get_enviro - INFO - Data collected - wthr_humidity::100%RH
+2019-09-12 15:33:48,090 - get_enviro - INFO - Data collected - wthr_pressure::1022hPa
+2019-09-12 15:33:48,092 - get_enviro - INFO - Data collected - wthr_wind::none
+2019-09-12 15:33:48,094 - get_enviro - INFO - Data collected - wthr_clouds::90%
+2019-09-12 15:33:48,096 - get_enviro - INFO - Data collected - uv_index::6.4
+2019-09-12 15:33:48,099 - get_enviro - INFO - Data collected - uv_risk::high
+2019-09-12 15:33:48,100 - get_enviro - INFO - Data collected - wthr_rain::no rain
+2019-09-12 15:33:48,103 - get_enviro - INFO - Data collected - wthr_snow::{}
+2019-09-12 15:33:48,106 - get_enviro - INFO - Data collected - snsr_temperature::none
+2019-09-12 15:33:48,114 - get_enviro - INFO - Data collected - snsr_humidity::none
+2019-09-12 15:33:48,117 - get_enviro - INFO - Data collected - snsr_pressure::none
+2019-09-12 15:33:48,138 - get_enviro - INFO - Data collected - snsr_vo2_gas::none
+2019-09-12 15:33:48,146 - get_enviro - INFO - Data collected - chros_speed::none
+2019-09-12 15:33:48,149 - get_enviro - INFO - Data collected - chros_temperature::none
+2019-09-12 15:33:48,156 - get_enviro - INFO - Data collected - odroid_speed::none
+2019-09-12 15:33:48,182 - get_enviro - INFO - Data collected - odroid_temperature::none
+2019-09-12 15:34:01,704 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:34:01,706 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:34:01,707 - get_enviro - DEBUG - The process id of get_enviro is 2727
+2019-09-12 15:34:01,708 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:34:01,708 - get_enviro - DEBUG - The process id of get_enviro is 2727
+2019-09-12 15:34:01,709 - get_enviro - DEBUG - The parent process id of get_enviro is 2727
+2019-09-12 15:34:52,702 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:34:52,704 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:34:52,704 - get_enviro - DEBUG - The process id of get_enviro is 2778
+2019-09-12 15:34:52,706 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:34:52,707 - get_enviro - DEBUG - The process id of get_enviro is 2778
+2019-09-12 15:34:52,708 - get_enviro - DEBUG - The parent process id of get_enviro is 2778
+2019-09-12 15:34:54,778 - get_enviro - INFO - Data collected - sys_time::2019-09-12,15-34-53.278745
+2019-09-12 15:34:54,787 - get_enviro - INFO - Data collected - ntp_time::2019-09-12,15-34-54.063405
+2019-09-12 15:34:54,790 - get_enviro - INFO - Data collected - hostname::penguin
+2019-09-12 15:34:54,794 - get_enviro - INFO - Data collected - loc_ip::100.115.92.194
+2019-09-12 15:34:54,796 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-09-12 15:34:54,797 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-09-12 15:34:54,799 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-09-12 15:34:54,804 - get_enviro - INFO - Data collected - weather::light rain
+2019-09-12 15:34:54,806 - get_enviro - INFO - Data collected - wthr_temperature::60.89F
+2019-09-12 15:34:54,818 - get_enviro - INFO - Data collected - wthr_humidity::100%RH
+2019-09-12 15:34:54,822 - get_enviro - INFO - Data collected - wthr_pressure::1022hPa
+2019-09-12 15:34:54,826 - get_enviro - INFO - Data collected - wthr_wind::wind 2.6
+2019-09-12 15:34:54,831 - get_enviro - INFO - Data collected - wthr_clouds::90%
+2019-09-12 15:34:54,835 - get_enviro - INFO - Data collected - uv_index::6.4
+2019-09-12 15:34:54,841 - get_enviro - INFO - Data collected - uv_risk::high
+2019-09-12 15:34:54,843 - get_enviro - INFO - Data collected - wthr_rain::0.25
+2019-09-12 15:34:54,845 - get_enviro - INFO - Data collected - wthr_snow::{}
+2019-09-12 15:34:54,847 - get_enviro - INFO - Data collected - snsr_temperature::none
+2019-09-12 15:34:54,849 - get_enviro - INFO - Data collected - snsr_humidity::none
+2019-09-12 15:34:54,851 - get_enviro - INFO - Data collected - snsr_pressure::none
+2019-09-12 15:34:54,853 - get_enviro - INFO - Data collected - snsr_vo2_gas::none
+2019-09-12 15:34:54,856 - get_enviro - INFO - Data collected - chros_speed::none
+2019-09-12 15:34:54,857 - get_enviro - INFO - Data collected - chros_temperature::none
+2019-09-12 15:34:54,859 - get_enviro - INFO - Data collected - odroid_speed::none
+2019-09-12 15:34:54,865 - get_enviro - INFO - Data collected - odroid_temperature::none
+2019-09-12 15:35:13,814 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:35:13,815 - get_enviro - DEBUG - Last updated: 2019-09-12 14:58:24.342
+2019-09-12 15:35:13,815 - get_enviro - DEBUG - The process id of get_enviro is 2826
+2019-09-12 15:35:13,816 - get_enviro - DEBUG - get_enviro process started.
+2019-09-12 15:35:13,816 - get_enviro - DEBUG - The process id of get_enviro is 2826
+2019-09-12 15:35:13,816 - get_enviro - DEBUG - The parent process id of get_enviro is 2826
+2019-09-12 15:35:14,986 - get_enviro - INFO - Data collected - sys_time::2019-09-12,15-35-14.370110
+2019-09-12 15:35:14,986 - get_enviro - INFO - Data collected - ntp_time::2019-09-12,15-35-15.170426
+2019-09-12 15:35:14,987 - get_enviro - INFO - Data collected - hostname::penguin
+2019-09-12 15:35:14,987 - get_enviro - INFO - Data collected - loc_ip::100.115.92.194
+2019-09-12 15:35:14,987 - get_enviro - INFO - Data collected - pub_ip::67.246.22.12
+2019-09-12 15:35:14,988 - get_enviro - INFO - Data collected - geo_location::42.4501,-73.2454
+2019-09-12 15:35:14,988 - get_enviro - INFO - Data collected - geo_place::Pittsfield,Massachusetts,US
+2019-09-12 15:35:14,989 - get_enviro - INFO - Data collected - weather::light rain
+2019-09-12 15:35:14,989 - get_enviro - INFO - Data collected - wthr_temperature::60.89F
+2019-09-12 15:35:14,998 - get_enviro - INFO - Data collected - wthr_humidity::100%RH
+2019-09-12 15:35:14,998 - get_enviro - INFO - Data collected - wthr_pressure::1022hPa
+2019-09-12 15:35:14,998 - get_enviro - INFO - Data collected - wthr_wind::wind 2.6
+2019-09-12 15:35:14,999 - get_enviro - INFO - Data collected - wthr_clouds::90%
+2019-09-12 15:35:14,999 - get_enviro - INFO - Data collected - uv_index::6.4
+2019-09-12 15:35:14,999 - get_enviro - INFO - Data collected - uv_risk::high
+2019-09-12 15:35:14,999 - get_enviro - INFO - Data collected - wthr_rain::0.25
+2019-09-12 15:35:14,999 - get_enviro - INFO - Data collected - wthr_snow::{}
+2019-09-12 15:35:15,000 - get_enviro - INFO - Data collected - snsr_temperature::none
+2019-09-12 15:35:15,000 - get_enviro - INFO - Data collected - snsr_humidity::none
+2019-09-12 15:35:15,000 - get_enviro - INFO - Data collected - snsr_pressure::none
+2019-09-12 15:35:15,000 - get_enviro - INFO - Data collected - snsr_vo2_gas::none
+2019-09-12 15:35:15,000 - get_enviro - INFO - Data collected - chros_speed::none
+2019-09-12 15:35:15,000 - get_enviro - INFO - Data collected - chros_temperature::none
+2019-09-12 15:35:15,001 - get_enviro - INFO - Data collected - odroid_speed::none
+2019-09-12 15:35:15,001 - get_enviro - INFO - Data collected - odroid_temperature::none
