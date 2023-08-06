@@ -1,0 +1,3 @@
+[console_scripts]
+hostman = hostman.__init__:real_main
+
