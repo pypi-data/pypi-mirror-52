@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pypytorch
+Version: 0.0.1a0
+Summary: PyPyTorch is a simple deep learning framework
+Home-page: https://www.github.com/dark-ai/pypytorch
+Author: dark-ai
+Author-email: ac990731@gmail.com
+License: UNKNOWN
+Platform: macOS
+Platform: Windows
+Platform: Linux
+Requires-Dist: numpy
+Requires-Dist: dill
+Requires-Dist: pillow
+Requires-Dist: wheel
+Requires-Dist: fire
+Requires-Dist: numba
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
