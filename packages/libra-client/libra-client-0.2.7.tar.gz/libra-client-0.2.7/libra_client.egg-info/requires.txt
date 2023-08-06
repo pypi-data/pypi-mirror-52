@@ -1,0 +1,6 @@
+canoser>=0.2.0
+protobuf
+grpcio
+PyNaCl
+requests
+mnemonic
