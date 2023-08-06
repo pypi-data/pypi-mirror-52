@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: drv8830
+Version: 0.0.1
+Summary: Python library for the drv8830 motor driver
+Home-page: https://www.pimoroni.com
+Author: Philip Howard
+Author-email: phil@pimoroni.com
+License: MIT
+Project-URL: GitHub, https://www.github.com/pimoroni/drv8830-python
+Description: # DRV8830 Motor Driver Breakout
+        
+        [![Build Status](https://travis-ci.com/pimoroni/drv8830-python.svg?branch=master)](https://travis-ci.com/pimoroni/drv8830-python)
+        [![Coverage Status](https://coveralls.io/repos/github/pimoroni/drv8830-python/badge.svg?branch=master)](https://coveralls.io/github/pimoroni/drv8830-python?branch=master)
+        [![PyPi Package](https://img.shields.io/pypi/v/drv8830.svg)](https://pypi.python.org/pypi/drv8830)
+        [![Python Versions](https://img.shields.io/pypi/pyversions/drv8830.svg)](https://pypi.python.org/pypi/drv8830)
+        
+        # Installing
+        
+        Stable library from PyPi:
+        
+        * Just run `sudo pip install drv8830`
+        
+        Latest/development library from GitHub:
+        
+        * `git clone https://github.com/pimoroni/drv8830-python`
+        * `cd drv8830-python`
+        * `sudo ./install.sh`
+        
+        
+        # Changelog
+        0.0.1
+        -----
+        
+        * Initial Release
+        
+Keywords: Raspberry Pi
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Hardware
+Description-Content-Type: text/markdown
