@@ -1,0 +1,3 @@
+[console_scripts]
+csv2txt = csv2txt.cmd:convert_by_cmd
+
