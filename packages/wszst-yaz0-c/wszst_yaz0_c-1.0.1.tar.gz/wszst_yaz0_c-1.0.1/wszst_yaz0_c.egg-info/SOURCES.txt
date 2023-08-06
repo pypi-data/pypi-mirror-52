@@ -1,0 +1,11 @@
+setup.py
+src/CMakeLists.txt
+src/binary_reader.h
+src/common_types.h
+src/main.cpp
+src/swap.h
+wszst_yaz0_c.egg-info/PKG-INFO
+wszst_yaz0_c.egg-info/SOURCES.txt
+wszst_yaz0_c.egg-info/dependency_links.txt
+wszst_yaz0_c.egg-info/not-zip-safe
+wszst_yaz0_c.egg-info/top_level.txt
