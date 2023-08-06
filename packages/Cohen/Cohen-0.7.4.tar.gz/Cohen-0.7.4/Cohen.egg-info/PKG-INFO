@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: Cohen
+Version: 0.7.4
+Summary: Cohen - DLNA/UPnP Media Server
+Home-page: https://github.com/unintended/Cohen
+Author: unintended
+Author-email: unintended.github@gmail.com
+License: MIT
+Description: Cohen is a DLNA/UPnP Media Server written in Python, providing several UPnP MediaServers and MediaRenderersto make simple publishing and streaming different types of media content to your network.
+Keywords: UPnP,DLNA,multimedia,gstreamer
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Utilities
