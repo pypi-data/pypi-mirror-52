@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: fuzzy-path
+Version: 0.1
+Summary: List paths by chars composed by first letters of each levels
+Home-page: https://github.com/weaming/fuzzy-path
+Author: weaming
+Author-email: garden.yuen@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/weaming/fuzzy-path
+Project-URL: Bug Reports, https://github.com/weaming/fuzzy-path
+Keywords: developer,efficiency
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: filetree (==0.3.5)
+
+# Fuzzy path
+
+    pip3 install fuzzy-path
+
+## environments:
+
+* `FZPATH_FILES`: also list files (default list only directories)
+* `ROOT`: the root directory to list
+
+## Install for shells
+
+Install [fzf](https://github.com/junegunn/fzf) by following its [installation instruction](https://github.com/junegunn/fzf#installation).
+
+### Zsh
+
+    curl -sS https://raw.githubusercontent.com/weaming/fuzzy-path/master/plugins/setup-zsh.sh | ZSH_CUSTOM=$ZSH_CUSTOM bash
+
+### Usage
+
+Press `Ctrl+i` for completion, it'll launch fzf automatically. It will only complete the last part of your input command.
+Check fzf’s [readme](https://github.com/junegunn/fzf#search-syntax) for more search syntax usage.
+
+![demo](https://i.loli.net/2019/04/02/5ca35bf5d0151.png)
+
+Support comamnds:
+
+* cdz (the original purpose of the project)
+* rmdir
+* mkdir
+* open
+* rm
+* mv
+* cd
+* vi
+* ls
+
+### Fish
+
+    curl -sS https://raw.githubusercontent.com/weaming/fuzzy-path/master/plugins/setup-fish.fish | fish
+
+

@@ -1,0 +1,3 @@
+[console_scripts]
+fzpath = fuzzy_path:main
+
