@@ -1,0 +1,10 @@
+include LICENSE.md
+include README.md
+include example.py
+include chirpsdk/include/*
+include chirpsdk/libraries/darwin/libchirp-sdk-shared.dylib
+include chirpsdk/libraries/linux/libchirp-sdk-shared.so
+include chirpsdk/libraries/rpi6/libchirp-sdk-shared.so
+include chirpsdk/libraries/rpi7/libchirp-sdk-shared.so
+include chirpsdk/libraries/win32/libchirp-sdk-shared.dll
+include chirpsdk/libraries/win64/libchirp-sdk-shared.dll
