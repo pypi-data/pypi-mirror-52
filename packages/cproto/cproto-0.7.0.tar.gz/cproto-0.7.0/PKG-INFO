@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: cproto
+Version: 0.7.0
+Summary: Chrome Debugging Protocol client
+Home-page: https://github.com/asyne/cproto
+Author: Evan K.
+Author-email: cproto+asyne.inout@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: chrome debug client
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Testing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
