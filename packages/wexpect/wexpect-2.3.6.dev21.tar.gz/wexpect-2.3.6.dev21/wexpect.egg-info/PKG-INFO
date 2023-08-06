@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: wexpect
+Version: 2.3.6.dev21
+Summary: Windows alternative of pexpect
+Home-page: UNKNOWN
+Author: Noah Spurrier, Richard Holden, Marco Molteni, Kimberley Burchett, Robert Stone, Hartmut Goebel, Chad Schroeder, Erick Tryzelaar, Dave Kirby, Ids vander Molen, George Todd, Noel Taylor, Nicolas D. Cesar, Alexander Gattin, Geoffrey Marshall, Francisco Lourenco, Glen Mabey, Karthik Gurusamy, Fernando Perez, Corey Minyard, Jon Cohen, Guillaume Chazarain, Andrew Ryan, Nick Craig-Wood, Andrew Stone, Jorgen Grahn, Benedek Racz
+Author-email: betontalpfa@gmail.com
+License: MIT
+Project-URL: Source Code, https://github.com/raczben/wexpect
+Description: UNKNOWN
+Keywords: scripting, automation, expect, pexpect, wexpect
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
