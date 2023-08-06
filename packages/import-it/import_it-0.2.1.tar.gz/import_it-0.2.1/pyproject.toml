@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "import_it"
+version = "0.2.1"
+description = "Determine the way to import a symbol using rg."
+authors = ["Razzi Abuissa <razzi@abuissa.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+ripgrepy = "^1.0"
+
+[tool.poetry.scripts]
+import_it = "import_it:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[extras]
