@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: jupyterlab-powerpoint
+Version: 0.0.1
+Summary: Create powerpoints from jupyter notebooks
+Home-page: https://github.com/timkpaine/jupyterlab_powerpoint
+Author: Tim Paine
+Author-email: t.paine154@gmail.com
+License: Apache 2.0
+Keywords: jupyter jupyterlab
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Jupyter
+Requires-Dist: jupyterlab (>=1.0.0)
+Requires-Dist: nbformat (>=4.4.0)
+Requires-Dist: python-pptx (>=0.6.0)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: bumpversion ; extra == 'dev'
+
+# jupyterlab_powerpoint
+Creating PowerPoints from jupyter notebooks
+
+[![Build Status](https://travis-ci.org/timkpaine/jupyterlab_powerpoint.svg?branch=master)](https://travis-ci.org/timkpaine/jupyterlab_powerpoint)
+[![GitHub issues](https://img.shields.io/github/issues/timkpaine/jupyterlab_powerpoint.svg)]()
+[![codecov](https://codecov.io/gh/timkpaine/jupyterlab_powerpoint/branch/master/graph/badge.svg)](https://codecov.io/gh/timkpaine/jupyterlab_powerpoint)
+[![PyPI](https://img.shields.io/pypi/l/jupyterlab_powerpoint.svg)](https://pypi.python.org/pypi/jupyterlab_powerpoint)
+[![PyPI](https://img.shields.io/pypi/v/jupyterlab_powerpoint.svg)](https://pypi.python.org/pypi/jupyterlab_powerpoint)
+[![npm](https://img.shields.io/npm/v/jupyterlab_powerpoint.svg)](https://www.npmjs.com/package/jupyterlab_powerpoint)
+
+
+## Install
+
+```bash
+pip install jupyterlab_powerpoint
+jupyter labextension install jupyterlab_powerpoint
+jupyter serverextension enable --py jupyterlab_powerpoint
+```
+
+## Workflow
+
+- Generate a notebook from a prexisting notebook (includes metadata necessary to reconstruct the original powerpoint)
+- Parameterize notebook, modify parts/text/data
+    + hook in to `Papermill`, leverage python, rexecute daily, etc
+- Generate a powerpoint from the notebook
+
+
