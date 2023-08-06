@@ -1,0 +1,7 @@
+apache-libcloud==2.5.0
+arvados-python-client>=0.1.20170731145219
+future
+pykka < 2
+python-daemon
+setuptools
+subprocess32>=3.5.1
