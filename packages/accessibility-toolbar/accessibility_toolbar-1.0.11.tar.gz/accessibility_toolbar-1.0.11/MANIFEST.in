@@ -1,0 +1,5 @@
+include *.css
+include *.js
+include *.jpeg
+include *.png
+include *.gif
