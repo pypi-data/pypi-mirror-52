@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: sunbear
+Version: 0.1.0
+Summary: Fast Monge-Ampere solver for n-dimensional arrays
+Home-page: https://github.com/OxfordHED/sunbear
+Author: mfkasim91
+Author-email: firman.kasim@gmail.com
+License: MIT
+Keywords: optimal-transport
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Requires-Dist: numpy (>=1.14.3)
+Requires-Dist: scipy (>=1.1.0)
+Requires-Dist: matplotlib (>=2.2.2)
+
+UNKNOWN
+
+
