@@ -1,0 +1,11 @@
+README.md
+setup.py
+python-file-datastore/__init__.py
+python-file-datastore/main_executor.py
+python-file-datastore/mock_unit.py
+python-file-datastore/operations.py
+python_file_datastore.egg-info/PKG-INFO
+python_file_datastore.egg-info/SOURCES.txt
+python_file_datastore.egg-info/dependency_links.txt
+python_file_datastore.egg-info/not-zip-safe
+python_file_datastore.egg-info/top_level.txt
