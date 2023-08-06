@@ -1,0 +1,14 @@
+README.md
+setup.py
+mongodbrdg/__init__.py
+mongodbrdg/inserter.py
+mongodbrdg/mongodbrdg_main.py
+mongodbrdg/randomdata.py
+mongodbrdg/version.py
+mongodbrdg.egg-info/PKG-INFO
+mongodbrdg.egg-info/SOURCES.txt
+mongodbrdg.egg-info/dependency_links.txt
+mongodbrdg.egg-info/entry_points.txt
+mongodbrdg.egg-info/requires.txt
+mongodbrdg.egg-info/top_level.txt
+test/test_mongodbrdg.py
