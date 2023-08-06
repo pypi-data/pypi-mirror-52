@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+sphinxcontrib/__init__.py
+sphinxcontrib/details/__init__.py
+sphinxcontrib/details/directive/__init__.py
+sphinxcontrib/details/directive/version.py
+sphinxcontrib_details_directive.egg-info/PKG-INFO
+sphinxcontrib_details_directive.egg-info/SOURCES.txt
+sphinxcontrib_details_directive.egg-info/dependency_links.txt
+sphinxcontrib_details_directive.egg-info/namespace_packages.txt
+sphinxcontrib_details_directive.egg-info/requires.txt
+sphinxcontrib_details_directive.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+Sphinx>=2.0
+
+[test]
+tox
+flake8
+flake8-import-order
+pytest
+mypy
