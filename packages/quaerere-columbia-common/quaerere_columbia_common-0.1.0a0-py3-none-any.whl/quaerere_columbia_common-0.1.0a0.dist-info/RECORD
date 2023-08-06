@@ -1,0 +1,12 @@
+columbia_common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+columbia_common/schemas/__init__.py,sha256=85wOZZ5thbC4YWd_GAwkG1GmcOrKwgCLUlY0UbIXLGg,538
+columbia_common/schemas/api_v1/__init__.py,sha256=swzDZ2JfY0jXd9CPx1GSpM_EcjE9ux9RDIO2wKlweZ4,137
+columbia_common/schemas/api_v1/common_crawl.py,sha256=vNyViuh7GIOf58vTD4lsK0UEc83hGZwy2KnxgGIgt4E,482
+columbia_common/schemas/api_v1/mixins/__init__.py,sha256=VsxeR7Tx1zCXFsEkGYbXh5YlZvUPR9765zKzedJ3i7I,180
+columbia_common/schemas/api_v1/mixins/common_crawl.py,sha256=lCIDAFmalGrkiDDQo-OxAOZbUzAWyjbY5coLtYjQ1dE,1068
+quaerere_columbia_common-0.1.0a0.dist-info/LICENSE.txt,sha256=TfPDBt3ar0uv_f9cqCDMZ5rIzW3CY8anRRd4PkL6ejs,34522
+quaerere_columbia_common-0.1.0a0.dist-info/METADATA,sha256=6yW5ONqqZvXbMxN5tZ71RTiQ3vGvB06TL9oPCYZjRys,1584
+quaerere_columbia_common-0.1.0a0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+quaerere_columbia_common-0.1.0a0.dist-info/entry_points.txt,sha256=1UxpyOr7nB2tVa4OhZPS2FelCx_UwzilnMrPkLviUlA,67
+quaerere_columbia_common-0.1.0a0.dist-info/top_level.txt,sha256=IX5hsSA6qNtvE_em8kBQJCATLjeiB65pUPpfFpUUQn0,16
+quaerere_columbia_common-0.1.0a0.dist-info/RECORD,,
