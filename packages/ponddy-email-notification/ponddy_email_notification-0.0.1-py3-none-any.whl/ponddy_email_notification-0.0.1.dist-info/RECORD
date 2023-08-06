@@ -1,0 +1,16 @@
+email_notifications/__init__.py,sha256=9YBlfqsawrhOPlAEn3BWXre41_6lXgpgFlozvhwMmQc,73
+email_notifications/admin.py,sha256=JdOkMRpRw53GqXX7a9L50SAJH5KQyC05VKmqiGwkJus,1230
+email_notifications/apps.py,sha256=gXsW4e3PZpscfsGz5HdgU5msW7UjO_EqDhEv4BtOpKM,213
+email_notifications/forms.py,sha256=KE-0hl0DyNbFArJxEgEZrBMmJpnhWUtny2HM8Nsp47c,130
+email_notifications/models.py,sha256=uiHKxzCHmNUuzTWg9GaUkyX-I8dDq8qq_Av3wyiBCBQ,2168
+email_notifications/services.py,sha256=oTEpCJczp2pJ3pVJeEFbKSuG6Gt5raX78jdm9GWX6KE,2180
+email_notifications/signals.py,sha256=VQIMgVdXusjvmtPCs7Ejg9Q8Gyls3bNAodtmstSWMrE,346
+email_notifications/tests.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+email_notifications/validators.py,sha256=0Eto2XTHZ7m2z-qmpnaZV2yauR71rIguaCOyuD7CTr0,299
+email_notifications/views.py,sha256=NCF5q7wZv8KH6OmOnOzdzi2_yl8dYGgZ3TG0Mc0lG8Q,1080
+email_notifications/migrations/0001_initial.py,sha256=yE307PTStvocEnBo3iYJ1gcu9NrkD5hCtDeG25T9QmY,2011
+email_notifications/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ponddy_email_notification-0.0.1.dist-info/METADATA,sha256=Z2MFNXb7NqXJBxP7qN44Kb2ZVNqyEpiRx_d277X-4PU,429
+ponddy_email_notification-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ponddy_email_notification-0.0.1.dist-info/top_level.txt,sha256=QrceVUtTAwRl7sgk8RmYEO_6AeX67hwG4sLO1LT3wmQ,20
+ponddy_email_notification-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ponddy-email-notification
+Version: 0.0.1
+Summary: Ponddy email notification package
+Home-page: https://github.com/ponddy-edu/ponddy-email-notification
+Author: Arthur Chang
+Author-email: arthurc0102@gmail.com
+License: UNKNOWN
+Keywords: ponddy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: django
+
+# Ponddy Email Notification
+
+
