@@ -1,0 +1,6 @@
+aiosmb>=0.0.3
+msldap>=0.1.2
+sqlalchemy
+dnspython
+tqdm
+pyvis
