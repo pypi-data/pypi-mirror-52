@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: envtoml
+Version: 0.1.0
+Summary: 
+Author: mr.Shu
+Author-email: mr@shu.io
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: coverage (>=4.5,<5.0)
+Requires-Dist: nose (>=1.3,<2.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
