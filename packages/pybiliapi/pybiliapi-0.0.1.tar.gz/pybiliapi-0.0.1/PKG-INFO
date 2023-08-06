@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pybiliapi
+Version: 0.0.1
+Summary: A python package for bilibili api call.
+Home-page: https://github.com/bunnyxt/pybiliapi
+Author: bunnyxt
+Author-email: bunnyxt@outlook.com
+License: GNU General Public License v3.0 
+Description: A python package for bilibili api call.
+Keywords: bilibili,api,bunnyxt
+Platform: any
