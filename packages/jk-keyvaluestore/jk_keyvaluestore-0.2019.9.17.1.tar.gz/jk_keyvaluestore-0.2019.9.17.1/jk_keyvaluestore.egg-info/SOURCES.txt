@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jk_keyvaluestore/DirBasedKeyValueStore.py
+jk_keyvaluestore/__init__.py
+jk_keyvaluestore.egg-info/PKG-INFO
+jk_keyvaluestore.egg-info/SOURCES.txt
+jk_keyvaluestore.egg-info/dependency_links.txt
+jk_keyvaluestore.egg-info/not-zip-safe
+jk_keyvaluestore.egg-info/top_level.txt
