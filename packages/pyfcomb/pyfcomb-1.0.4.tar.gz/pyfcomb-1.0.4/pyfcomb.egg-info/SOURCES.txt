@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pyfcomb/__init__.py
+pyfcomb/reader.py
+pyfcomb.egg-info/PKG-INFO
+pyfcomb.egg-info/SOURCES.txt
+pyfcomb.egg-info/dependency_links.txt
+pyfcomb.egg-info/requires.txt
+pyfcomb.egg-info/top_level.txt
+pyfcomb/tests/__init__.py
+pyfcomb/tests/test_reader.py
