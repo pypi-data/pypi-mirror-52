@@ -1,0 +1,3 @@
+[console_scripts]
+dialect = dialect.__main__:main
+
