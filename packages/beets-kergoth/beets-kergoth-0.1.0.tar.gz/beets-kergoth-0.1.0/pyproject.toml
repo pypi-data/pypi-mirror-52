@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "beets-kergoth"
+version = "0.1.0"
+description = "Various personal beets plugins that don't yet have a home elsewhere."
+readme = "README.rst"
+homepage = "https://github.com/kergoth/beets-kergoth"
+repository = "https://github.com/kergoth/beets-kergoth"
+authors = ["Christopher Larson <kergoth@gmail.com>"]
+packages = [
+    { include = "beetsplug" },
+]
+include = [
+    "tests/*.py",
+    "tests/*.t",
+    "tests/data/**/*",
+    "tox.ini",
+]
+
+[tool.poetry.dependencies]
+python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <3.8"
+beets = "^1.4"
+confuse = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+cram = "^0.7.0"
+pytest-cram = "^0.2.0"
+flake8 = "^3.7.8"
+mypy = "^0.720"
+
+[build-system]
+requires = ["poetry>=1.0.0b"]
+build-backend = "poetry.masonry.api"
