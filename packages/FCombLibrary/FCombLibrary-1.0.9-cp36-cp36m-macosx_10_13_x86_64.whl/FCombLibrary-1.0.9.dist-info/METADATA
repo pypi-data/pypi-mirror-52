@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: FCombLibrary
+Version: 1.0.9
+Summary: A tool for extracting frequency combination from a given list of frequencies.
+Home-page: UNKNOWN
+Author: Marco Müllner
+Author-email: muellnermarco@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+# FCombLibrary
+
+This is the github repository of the python bindings for
+the pyfcomb project. See https://github.com/MarcoMuellner/pyfcomb
+for more information.
+
