@@ -1,0 +1,4 @@
+[genice_format]
+png = genice_svg.formats.png
+svg = genice_svg.formats.svg
+
