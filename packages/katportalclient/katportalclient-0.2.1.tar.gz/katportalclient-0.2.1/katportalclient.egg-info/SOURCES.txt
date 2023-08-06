@@ -1,0 +1,16 @@
+CHANGELOG.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+katportalclient/__init__.py
+katportalclient/client.py
+katportalclient/request.py
+katportalclient.egg-info/PKG-INFO
+katportalclient.egg-info/SOURCES.txt
+katportalclient.egg-info/dependency_links.txt
+katportalclient.egg-info/not-zip-safe
+katportalclient.egg-info/requires.txt
+katportalclient.egg-info/top_level.txt
+katportalclient/test/__init__.py
+katportalclient/test/test_client.py

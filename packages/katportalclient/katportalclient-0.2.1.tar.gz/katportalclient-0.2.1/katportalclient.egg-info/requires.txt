@@ -1,0 +1,16 @@
+future
+omnijson>=0.1.2
+ujson<2.0,>=1.33
+
+[:python_version < "3"]
+futures
+tornado<5.0,>=4.0
+
+[:python_version >= "3"]
+tornado<7.0,>=4.0
+
+[doc]
+sphinx<2.0,>=1.2.3
+docutils<1.0,>=0.12
+sphinx_rtd_theme<1.0,>=0.1.5
+numpydoc<1.0,>=0.5

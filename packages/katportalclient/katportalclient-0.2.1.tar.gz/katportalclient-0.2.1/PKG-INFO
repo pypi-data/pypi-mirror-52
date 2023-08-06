@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: katportalclient
+Version: 0.2.1
+Summary: A client for katportal.
+Home-page: https://github.com/ska-sa/katportalclient
+Author: MeerKAT CAM Team
+Author-email: cam@ska.ac.za
+License: UNKNOWN
+Description: Readme
+        
+        katportalclient
+        ===============
+        
+        A client for simple access to **katportal**, via websocket and HTTP connections.
+        The HTTP methods allow once-off requests, like the current list of schedule blocks.  
+        For continuous updates, use the Pub/Sub methods, which work over a websocket.
+        
+        Dependencies
+        ------------
+        Details can be found in `setup.py` but basically it is only:
+        
+        - katversion
+        - [tornado](http://www.tornadoweb.org) is used as the web framework and for its asynchronous functionality.
+        
+        **Note:** `setup.py` depends on katversion, so make sure that is installed before
+        installing the package.
+        
+        Install
+        -------
+        pip install katportalclient
+        
+        Example usage
+        -------------
+        
+        See the `examples` folder for code that demonstrates some usage scenarios.
+        
+        
+        Changelog
+        
+        13th Sep 2019 (0.2.1)
+        * Fixes a bug where incorrect sensor info is returned from `sensor_detail` and does not match the documentation.
+        
+        11th Sep 2019 (0.2.0)
+         * changes to internal API 
+           * Changed `SensorSampleValueTs` to `SensorSampleValueTime`
+           * `timestamp` has been changed to `sample_time`
+           * `value_timestamp` has been changed to `value_time`
+         * Removal of namespaces when retrieving historical data.
+         * Changed url endpoint for historical data. 
+         * Updated katportalclient `examples` to align with changes.
+         * Removed timeout argument from `get_sensor_history.py` examples.
+         * Changes to `sensor_detail`, `sensor_history`, `sensor_names`
+         
+        30 Aug 2019 (0.1.1)
+         * Changed COPYING to LICENSE.
+         * Added `long_description` to setup.py.
+         * Updated copyright header.
+        
+        27 Aug 2019 (0.1.0)
+         * Start of CHANGELOG in preparation for 0.1.0 release.
+        
+        
+Keywords: meerkat kat ska
+Platform: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4
+Description-Content-Type: text/markdown
+Provides-Extra: doc
