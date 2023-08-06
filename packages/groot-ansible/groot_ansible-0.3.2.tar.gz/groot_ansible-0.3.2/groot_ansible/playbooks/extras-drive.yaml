@@ -1,0 +1,10 @@
+##############################################################################
+# Playbook for installing Chrome from Ubuntu repositories
+##############################################################################
+
+- name: Google Drive
+  hosts:
+    - localhost
+
+  roles:
+  - role: drive

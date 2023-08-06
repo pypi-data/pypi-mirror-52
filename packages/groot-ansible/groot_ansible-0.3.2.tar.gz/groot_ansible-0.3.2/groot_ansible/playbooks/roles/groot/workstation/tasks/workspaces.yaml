@@ -1,0 +1,32 @@
+##############################################################################
+# Workspaces
+#
+# Requirements:
+#  - role  : git
+#  - task  : snorriheim
+#  - module: vci
+#
+##############################################################################
+
+- name: "ensure {{ vci_path }} exists and is accessible by {{ ansible_user_id }}."
+  file:
+    path: "{{ vci_path }}"
+    state: directory
+    recurse: no
+    mode: 0755
+    owner: "{{ ansible_user_id }}"
+    group: users
+  become: yes
+
+- name: vci index url configuration
+  vci_config:
+    index: "{{ vci_index }}"
+    force: false
+
+- name: vci various workspaces
+  vci:
+    key: "{{ item }}"
+    index: "{{ vci_index }}"
+    path: "{{ vci_path }}/{{ item }}"
+    force: true
+  with_items: "{{ vci_workspaces }}"

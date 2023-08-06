@@ -1,0 +1,73 @@
+##############################################################################
+# Powerline
+##############################################################################
+#
+# Requirements:
+#
+#  - tasks  : git.yaml
+#
+##############################################################################
+
+- name: "install/update packages"
+  apt:
+    pkg: "{{ powerline_packages }}"
+    state: latest
+  become: yes
+
+- name: "clone powerline-fonts"
+  git:
+    repo: https://github.com/powerline/fonts.git
+    dest: /opt/powerline-fonts
+    version: master
+    update: no
+  register: powerline_fonts
+  become: yes
+
+- name: "install powerline fonts to ~/.local/share/fonts"
+  shell: ./install.sh
+  args:
+    chdir: /opt/powerline-fonts
+    executable: /bin/bash
+  when: powerline_fonts.changed
+
+- name: "ensure {{ ansible_env.HOME }}/.config/powerline/colorschemes exists and is accessible by {{ ansible_user_id }}."
+  file:
+    path: "{{ ansible_env.HOME }}/.config/powerline/colorschemes"
+    state: directory
+    recurse: no
+    mode: 0755
+    owner: "{{ ansible_user_id }}"
+    group: users
+
+- name: "ensure {{ ansible_env.HOME }}/.config/powerline/themes/shell exists and is accessible by {{ ansible_user_id }}."
+  file:
+    path: "{{ ansible_env.HOME }}/.config/powerline/themes/shell"
+    state: directory
+    recurse: no
+    mode: 0755
+    owner: "{{ ansible_user_id }}"
+    group: users
+
+- name: "colorschemes to {{ ansible_env.HOME }}/.config/powerline/colorschemes/default.json"
+  template:
+    dest: "{{ ansible_env.HOME }}/.config/powerline/colorschemes/default.json"
+    src: powerline-colorschemes.json.j2
+    force: no
+
+- name: "configuration to {{ ansible_env.HOME }}/.config/powerline/config.json"
+  template:
+    dest: "{{ ansible_env.HOME }}/.config/powerline/config.json"
+    src: powerline-config.json.j2
+    force: no
+
+- name: "shell theme to {{ ansible_env.HOME }}/.config/powerline/themes/shell/mine.json"
+  template:
+    dest: "{{ ansible_env.HOME }}/.config/powerline/themes/shell/mine.json"
+    src: powerline-theme.json.j2
+    force: no
+
+- name: "call powerline in {{ ansible_env.HOME }}/.bashrc"
+  lineinfile:
+    dest: "{{ ansible_env.HOME }}/.bashrc"
+    line: "if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then source /usr/share/powerline/bindings/bash/powerline.sh; fi"
+
