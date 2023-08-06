@@ -1,0 +1,8 @@
+jsonref
+jsonschema<2.7
+CommonMark
+Django
+bleach
+requests
+json-merge-patch
+cached-property
