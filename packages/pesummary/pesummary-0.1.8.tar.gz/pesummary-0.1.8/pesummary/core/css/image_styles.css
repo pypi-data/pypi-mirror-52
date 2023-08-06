@@ -1,0 +1,16 @@
+img {                                                                           
+    border-radius: 5px;                                                         
+    cursor: pointer;                                                            
+    transition: 0.3s;                                                           
+}                                                                               
+                                                                                
+img:hover {opacity: 0.5;}
+
+.imgButton {                                                                    
+  border: none;                                                                 
+  color: white;                                                                 
+  text-align: center;                                                           
+  text-decoration: none;                                                        
+  font-size: 10px;                                                              
+  border-radius: 122px;                                                         
+} 
