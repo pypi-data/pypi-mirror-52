@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ggq-proxy-pool
+Version: 0.1.1
+Summary: 爬虫代理IP池
+Home-page: https://github.com/ggqshr/proxy_pool
+Author: ggq
+Author-email: 942490944@qq.com
+License: UNKNOWN
+Description: # GGQ的IP代理池
+        ## 功能
+        ### 1.按照购买的代理url请求代理
+        ### 2.根据上报的已经被ban掉的IP从池中删除
+        ### 3.将质量不好的IP从池中删除
+        ### 4.当池中IP为0时，能够自动的挂起ip的爬虫进程，并请求新的IP放入池中。
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
