@@ -1,0 +1,3 @@
+[console_scripts]
+ha-cluster-preflight-check = cluster_preflight_check.main:main
+
