@@ -1,0 +1,4 @@
+Flask-Classful>=0.14.2
+arango-orm==0.5.7
+python-arango<5,>=4.4.0
+marshmallow<3,>=2.16.0
