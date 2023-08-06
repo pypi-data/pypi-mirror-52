@@ -1,0 +1,14 @@
+object_status/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+object_status/admin.py,sha256=AJETwkWDuoWYfn37ftKKeiZFUFML_7dtyAF0QIv4bno,2944
+object_status/apps.py,sha256=WOagS_3HQpA1F6CtHXPZzTig5C6_9t6aqPAlFWK--Mw,92
+object_status/models.py,sha256=5KChSJ2WLWgvPAOOUxfNhDac0wXX1Id9cWiaLVSteKo,433
+object_status/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+object_status/utils.py,sha256=Z9yUuDCrLuSj6eLESjgCbihicKWsxoRW2o448CrIjYs,4083
+object_status/static/object_status/js/status_color.js,sha256=SrioW6u70dVK92cDGMz5RHsDFa1sv8d7ML6vrn5UXsk,390
+object_status/templates/admin/change_form.html,sha256=XfFSpkTBxAfg0YTdxR8_C3emE79p56ppc9Fr8JfORiM,906
+object_status/templates/admin/change_list.html,sha256=xCcE_n20cnvAbcikAWtiZegV951QS3W6zgzicylLH34,207
+django_object_status-0.1.dist-info/LICENSE,sha256=uHBQG7K-0VSr0eMUMMk94WVF1Fy68CqHG3BUiNEB4zI,1321
+django_object_status-0.1.dist-info/METADATA,sha256=jvnKfWzQqjQz8JLN_GKqzvKdVzTXSDh0xawXhU9AbUg,959
+django_object_status-0.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+django_object_status-0.1.dist-info/top_level.txt,sha256=ooiFr_FdK_voPwl-5BlVJSUDkSa2A-WY4lG99Givsn8,14
+django_object_status-0.1.dist-info/RECORD,,
