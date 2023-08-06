@@ -1,0 +1,11 @@
+README.rst
+setup.py
+src/airfoils/__init__.py
+src/airfoils/__version__.py
+src/airfoils/airfoils.py
+src/airfoils/fileio.py
+src/airfoils.egg-info/PKG-INFO
+src/airfoils.egg-info/SOURCES.txt
+src/airfoils.egg-info/dependency_links.txt
+src/airfoils.egg-info/requires.txt
+src/airfoils.egg-info/top_level.txt
