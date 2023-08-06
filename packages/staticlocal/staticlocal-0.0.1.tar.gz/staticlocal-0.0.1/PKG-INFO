@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: staticlocal
+Version: 0.0.1
+Summary: An implementation of static local variables, as familiar from C
+Home-page: https://github.com/billsix/staticlocal
+Author: William Emerison Six
+Author-email: billsix@gmail.com
+License: MIT
+Description: 
+        Static local variables are variables local to a function, which upon
+        first application, assign a value to the variable.  The value bound
+        by the variable persists after the function application completes,
+        so the state is preserved across muliple applications of the function.
+        
+Keywords: staticlocal
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License

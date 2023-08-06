@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/staticlocal/__init__.py
+src/staticlocal/staticlocal-test.py
+src/staticlocal/staticlocal.py
+staticlocal.egg-info/PKG-INFO
+staticlocal.egg-info/SOURCES.txt
+staticlocal.egg-info/dependency_links.txt
+staticlocal.egg-info/top_level.txt
