@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: mopidy-rpi-remote
+Version: 0.1.0
+Summary: Remote controller for Mopidy running on Raspberry Pi Zero W
+Home-page: https://github.com/odiroot/mopidy-hw-remote
+Author: Michal Odnous
+Author-email: odiroot@users.noreply.github.com
+License: Apache
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: luma.oled (~=3.3.0)
+Requires-Dist: paho-mqtt (~=1.4.0)
+
+# Raspberry-Pi-based Mopidy controller prototype
+
+**Note**: This project assumes your Mopidy installation uses
+          [MQTT control backend](https://github.com/odiroot/mopidy-mqtt).
+
+## Schematics
+
+[![Fritzing model](./docs/sketch_rpi_bb.png "Fritzing model")](./docs/sketch_rpi.fzz)
+
+## Built prototype
+
+![Prototype in case](./docs/prototype.jpg "Built prototype")
+
+## Components
+
+* Raspberry Pi Zero W board.
+* SSD1306 OLED, I²C-based 128×64 display.
+* EVE-PDBRL408B rotary encoder with switch.
+
+## Software stack
+
+* Python 3.6.
+* `luma.oled` (display driving).
+  - `luma.emulator` (emulating display in development).
+* `RPi.GPIO` (interfacing with hardware inputs).
+  - `raspberry-gpio-emulator` (emulating GPIO inputs in development).
+* `paho.mqtt` (MQTT communication).
+
+
+
+
