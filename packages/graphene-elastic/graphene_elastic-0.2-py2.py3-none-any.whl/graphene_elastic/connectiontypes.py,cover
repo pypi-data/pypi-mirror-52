@@ -1,0 +1,24 @@
+> from graphql_relay.connection.connectiontypes import Edge
+> from .types.elastic_meta import Highlight
+  
+> __all__ = (
+>     'ElasticsearchEdge',
+> )
+  
+  
+> class ElasticsearchEdge(Edge):
+  
+>     def __init__(self, node, cursor, **kwargs):
+!         super(ElasticsearchEdge, self).__init__(node, cursor)
+!         for _key, _value in kwargs.items():
+!             setattr(self, _key, _value)
+!         self._args = list(kwargs.keys())
+!         self._kwargs = kwargs
+  
+>     def to_dict(self):
+!         _d = {
+!             'node': self.node,
+!             'cursor': self.cursor,
+!         }
+!         _d.update(self._kwargs)
+!         return _d
