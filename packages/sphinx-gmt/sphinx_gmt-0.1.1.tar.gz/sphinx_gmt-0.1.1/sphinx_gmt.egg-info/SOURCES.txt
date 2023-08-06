@@ -1,0 +1,17 @@
+AUTHORS.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+sphinx_gmt/__init__.py
+sphinx_gmt/_version.py
+sphinx_gmt/gmtplot.py
+sphinx_gmt.egg-info/PKG-INFO
+sphinx_gmt.egg-info/SOURCES.txt
+sphinx_gmt.egg-info/dependency_links.txt
+sphinx_gmt.egg-info/requires.txt
+sphinx_gmt.egg-info/top_level.txt
