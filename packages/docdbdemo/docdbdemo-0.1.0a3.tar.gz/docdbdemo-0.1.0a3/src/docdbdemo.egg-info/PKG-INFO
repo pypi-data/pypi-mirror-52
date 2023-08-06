@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: docdbdemo
+Version: 0.1.0a3
+Summary: DocumentDB API Example
+Home-page: https://github.com/CDK-User-Group/DocumentDBDemo
+Author: Richard Boyd<Richard@rboyd.dev>
+License: UNKNOWN
+Project-URL: Source, https://github.com/CDK-User-Group/DocumentDBDemo
+Description: # Useful commands
+        
+         * `npm run build`   compile typescript to js
+         * `npm run test`    perform the jest unit tests
+         * `npm run watch`   watch for changes and compile
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

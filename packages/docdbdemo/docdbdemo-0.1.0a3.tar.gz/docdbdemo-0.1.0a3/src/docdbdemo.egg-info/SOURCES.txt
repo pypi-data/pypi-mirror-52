@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/docdbdemo/__init__.py
+src/docdbdemo/py.typed
+src/docdbdemo.egg-info/PKG-INFO
+src/docdbdemo.egg-info/SOURCES.txt
+src/docdbdemo.egg-info/dependency_links.txt
+src/docdbdemo.egg-info/requires.txt
+src/docdbdemo.egg-info/top_level.txt
+src/docdbdemo/_jsii/__init__.py
+src/docdbdemo/_jsii/doc_db_lib@0.1.0-alpha.3.jsii.tgz
