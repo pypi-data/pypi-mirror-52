@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+krakenforwarder/__init__.py
+krakenforwarder/forwarder.py
+krakenforwarder/listener.py
+krakenforwarder/util.py
+krakenforwarder.egg-info/PKG-INFO
+krakenforwarder.egg-info/SOURCES.txt
+krakenforwarder.egg-info/dependency_links.txt
+krakenforwarder.egg-info/requires.txt
+krakenforwarder.egg-info/top_level.txt
