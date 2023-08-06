@@ -1,0 +1,19 @@
+[console_scripts]
+genie = genie.cli.__main__:main
+
+[genie.cli.commands.create]
+parser = genie.cli.commands.create_parser:CreateParser
+testbed = genie.cli.commands.create_testbed:CreateTestbed
+trigger = genie.cli.commands.create_trigger:CreateTrigger
+
+[pyats.cli.commands]
+diff = genie.cli.commands.diff:DiffCommand
+dnac = genie.cli.commands.dnac:DnacCommand
+learn = genie.cli.commands.learn:LearnCommand
+parse = genie.cli.commands.parser:ParserCommand
+
+[pyats.cli.commands.create]
+parser = genie.cli.commands.create_parser:CreateParser
+testbed = genie.cli.commands.create_testbed:CreateTestbed
+trigger = genie.cli.commands.create_trigger:CreateTrigger
+
