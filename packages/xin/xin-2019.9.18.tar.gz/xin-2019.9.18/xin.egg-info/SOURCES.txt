@@ -1,0 +1,14 @@
+README.md
+setup.py
+xin/__init__.py
+xin/bing.py
+xin/cli.py
+xin/http.py
+xin/image.py
+xin/os.py
+xin.egg-info/PKG-INFO
+xin.egg-info/SOURCES.txt
+xin.egg-info/dependency_links.txt
+xin.egg-info/entry_points.txt
+xin.egg-info/requires.txt
+xin.egg-info/top_level.txt
