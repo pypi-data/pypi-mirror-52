@@ -1,0 +1,4 @@
+setuptools
+six
+node.ext.zodb
+repoze.catalog>=0.9.0

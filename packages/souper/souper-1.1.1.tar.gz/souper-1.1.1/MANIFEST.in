@@ -1,0 +1,8 @@
+include *.rst
+include *.toml
+include tox.ini
+exclude src/souper/__pycache__
+recursive-exclude src *.pyc *.pyo
+recursive-include docs *.png
+recursive-include docs *.svg
+recursive-include src *
