@@ -1,0 +1,3 @@
+[console_scripts]
+sat-stac = satstac.cli:cli
+
