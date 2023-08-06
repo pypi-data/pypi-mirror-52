@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: minmlst
+Version: 0.1.0
+Summary: Machine-learning based minimal MLST scheme for bacterial strain typing
+Home-page: https://github.com/shanicohen33/minMLST
+Author: Shani Cohen
+Author-email: shani.cohen.33@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: shap (>=0.28.5)
+Requires-Dist: xgboost (>=0.82)
+Requires-Dist: dill (>=0.3.0)
+
+minMLST is a machine-learning based methodology for identifying a minimal subset of genes that preserves high discrimination among bacterial strains. It combines well known machine-learning algorithms and approaches such as XGBoost, distance-based hierarchical clustering, and SHAP. 
+minMLST quantifies the importance level of each gene in an MLST scheme and allows the user to investigate the trade-off between minimizing the number of genes in the scheme vs preserving a high resolution among strain types.
+
+ See more information in [GitHub](https://github.com/shanicohen33/minMLST).
+
