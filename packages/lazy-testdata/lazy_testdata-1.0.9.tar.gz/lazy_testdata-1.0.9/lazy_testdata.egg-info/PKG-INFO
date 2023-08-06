@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lazy-testdata
+Version: 1.0.9
+Summary: 
+    testdata include chinese personal four element and offen use datetime 测试数据包含随机生成的中国公民四要素，及常用的日期时间
+    
+Home-page: http://www.cnblogs.com/yicaifeitian/
+Author: YuWeiPeng
+Author-email: 404051211@qq.com
+License: UNKNOWN
+Description: # lazy_testdata
+        
+        testdata include chinese personal four element and offen use datetime 测试数据包含随机生成的中国公民四要素，及常用的日期时间
+        shell命令执行方法封装，以及常用的文件处理方法
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
