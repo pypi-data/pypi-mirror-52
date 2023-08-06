@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: prefsniff
+Version: 0.1.0.dev0
+Summary: macOS defaults(1) command generator
+Home-page: https://github.com/zcutlip/prefsniff
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7,>=3.7
+Requires-Dist: watchdog (>=0.8.3)
+
+UNKNOWN
+
+
