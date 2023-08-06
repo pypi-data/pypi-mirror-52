@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: djangorestcli
+Version: 0.1.0
+Summary: 
+Author: Ronnasayd Machado
+Author-email: ronnasayd@hotmail.com
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.7.*, !=3.8.*
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: argparse (>=1.4,<2.0)
