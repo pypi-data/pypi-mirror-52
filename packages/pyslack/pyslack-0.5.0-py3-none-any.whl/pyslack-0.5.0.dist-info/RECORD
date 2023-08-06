@@ -1,0 +1,16 @@
+pyslack-0.5.0.dist-info/METADATA,sha256=pCio119ys6LBOTA6WlAy_TMg3K1idPeR2-icxHCnuA4,222
+pyslack-0.5.0.dist-info/RECORD,,
+pyslack-0.5.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+pyslack-0.5.0.dist-info/top_level.txt,sha256=vBoOMavyMpVKb8sKb-lx2951Lj4ltLu_Is9rfSgBa6o,6
+slack/__init__.py,sha256=nVRz5wgOtzzmXD_MCVRxQXXiS7h09zxLwJDxMK3mwRQ,1210
+slack/auth.py,sha256=At4R5f5nVnGAwI5kyy2k3QPh2LTeVKzH4ZzIvN6Nmgw,1299
+slack/channels.py,sha256=EuxsEwQ1GCkqLhPKQFF-NgP66tv91CVz6HBl-aEcGBA,2725
+slack/chat.py,sha256=4BYPsnMqBnFJcO5DscebmLjAiwXe2PWNjXJMqrUrdoI,2064
+slack/exception.py,sha256=P69vABWBtzMgbS-UvfqgMLwomDRndiUpfaOLLRYOKqk,1990
+slack/files.py,sha256=ICuXvstW343kp_TxkfdOH8luSEsAoV1YelSVtRPJzxo,1908
+slack/groups.py,sha256=Jvli9FxR2kHE4HiRpv6YO1f84xkOuVTrO6GaJCHEQ-Q,1776
+slack/http_client.py,sha256=QwD33jdNELeWDp1t3KMx-3NQt6-6bUruIBR_U8GHf58,2755
+slack/im.py,sha256=9ERxtxpxeN7GrO7TFG9OmLx6SfvE0TEoZSUnJKJ90_U,1648
+slack/search.py,sha256=JhsG_CRWML0gMSv2HM6G9ciOJPAQ28n0W53Q0z1Yqfc,2038
+slack/stars.py,sha256=EDBReX4lUYRZtWagRbZqCQR9DjR9rqUmdIpefKhtdgw,1361
+slack/users.py,sha256=Ci4NDmT40aSVaNXOx9CQNP6_tPcRJmyBX6dEuGClrfQ,2265
