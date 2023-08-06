@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: deepgeo
+Version: 0.3.1.1909230148a0
+Summary: Easy Deep Learning
+Home-page: https://github.com/Sotaneum/DeepGeo
+Author: Donggun LEE
+Author-email: gnyotnu39@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: exifread (<=2.1.2)
+Requires-Dist: piexif (<=1.1.3)
+Requires-Dist: pillow (<=6.1.0)
+Requires-Dist: matplotlib (<=3.1.1)
+Requires-Dist: scikit-image (<=0.15.0)
+Requires-Dist: tensorflow (<=1.12.0)
+Requires-Dist: numpy (<=1.16.4)
+Requires-Dist: Cython (<=0.29.12)
+Requires-Dist: contrib-extension
+Requires-Dist: Keras (<=2.2.4)
+Requires-Dist: python-dateutil (<=2.8.0)
+Requires-Dist: urllib3 (<=1.25.3)
+Requires-Dist: opencv-python (<=4.1.0.25)
+
+# DEEPGEO
+
+## HOW TO INSTALL
+
+```bash
+pip install deepgeo==0.3.1.1909230148a0 --upgrade
+```
+
+## HOW TO USE
+
+```python
+from deepgeo import Engine
+
+engine = Engine()
+engine.add_model('maskrcnn_mscoco','maskrcnn', "D:/Project/t/maskrcnn_config.json")
+
+image = engine.obj_type("image","image.jpg","D:/Project")
+engine.detect("maskrcnn_mscoco",image)
+
+print(image.get_annotation())
+```
+
