@@ -1,0 +1,9 @@
+README.md
+setup.py
+methodfinder.egg-info/PKG-INFO
+methodfinder.egg-info/SOURCES.txt
+methodfinder.egg-info/dependency_links.txt
+methodfinder.egg-info/top_level.txt
+src/methodfinder/__init__.py
+src/methodfinder/methodfinder-test.py
+src/methodfinder/methodfinder.py
