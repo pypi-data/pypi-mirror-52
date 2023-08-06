@@ -1,0 +1,17 @@
+expects>=0.9.0
+pyyaml>=3.13
+
+[distributing]
+twine==1.13
+
+[documenting]
+sphinx==2.2.0
+sphinx_rtd_theme==0.4.3
+
+[testing]
+flake8==3.7.8
+pylint==2.3.1
+pytest==5.0.1
+pytest-cov==2.7.1
+pytest-mock==1.10.4
+tox==3.13.2

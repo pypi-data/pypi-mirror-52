@@ -1,0 +1,87 @@
+image: python:3.6.9-slim-stretch
+
+stages:
+  - test
+  - deploy
+
+cache:
+  paths:
+    - .pip
+
+before_script:
+  # for debugging:
+  - python -v
+  # install all the system dependencies:
+  - apt-get update
+  - apt-get install -y --no-install-recommends git
+  # install all the project dependencies:
+  - mkdir -p .pip
+
+testing_python-3.6:
+  stage: test
+  image: python:3.6.9-slim-stretch
+  script:
+    # install the project dependencies (Sphinx is required by doctest):
+    - pip --cache-dir=.pip install .
+    - pip --cache-dir=.pip install .[testing]
+    - pip --cache-dir=.pip install .[documenting]
+    # test the library within your current environment:
+    - python setup.py test
+    # test the documentation examples:
+    - python setup.py doctest
+    # test the library within the supported environments:
+    - tox -e py36-pyyaml313
+    - tox -e py36-pyyaml51
+  coverage: /^TOTAL.+?(\d+\%)$/
+
+testing_python-3.7:
+  stage: test
+  image: python:3.7.4-slim-stretch
+  script:
+    # install the project dependencies (Sphinx is required by doctest):
+    - pip --cache-dir=.pip install .
+    - pip --cache-dir=.pip install .[testing]
+    - pip --cache-dir=.pip install .[documenting]
+    # test the library within your current environment:
+    - python setup.py test
+    # test the documentation examples:
+    - python setup.py doctest
+    # test the library within the supported environments:
+    - tox -e py37-pyyaml51
+#  coverage: /^TOTAL.+?(\d+\%)$/
+
+testing_for_release:
+  stage: test
+  script:
+    # install the project dependencies:
+    - pip --cache-dir=.pip install .[documenting]
+    # generate the documentation:
+    - python setup.py docs
+    - mv build/sphinx/html public
+  only:
+    - /^release\/.+$/
+
+deploy_to_pypi:
+  stage: deploy
+  script:
+    # install the project dependencies:
+    - pip --cache-dir=.pip install .[distributing]
+    # generate the Wheels package:
+    - python setup.py bdist_wheel sdist
+    - twine upload --username $TWINE_USERNAME --password $TWINE_PASSWORD dist/*
+  only:
+    - tags
+
+pages:
+  stage: deploy
+  script:
+    # install the project dependencies:
+    - pip --cache-dir=.pip install .[documenting]
+    # generate the documentation:
+    - python setup.py docs
+    - mv build/sphinx/html public
+  artifacts:
+    paths:
+      - public
+  only:
+    - tags
