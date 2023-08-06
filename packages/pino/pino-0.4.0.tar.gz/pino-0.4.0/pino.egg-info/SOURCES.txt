@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/pino-pretty
+pino/__init__.py
+pino/core.py
+pino/utils.py
+pino.egg-info/PKG-INFO
+pino.egg-info/SOURCES.txt
+pino.egg-info/dependency_links.txt
+pino.egg-info/top_level.txt
