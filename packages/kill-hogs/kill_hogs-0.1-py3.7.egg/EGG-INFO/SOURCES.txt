@@ -1,0 +1,11 @@
+README.md
+setup.py
+kill_hogs/kill_hogs.py
+kill_hogs/kill_hogs.yml
+kill_hogs.egg-info/PKG-INFO
+kill_hogs.egg-info/SOURCES.txt
+kill_hogs.egg-info/dependency_links.txt
+kill_hogs.egg-info/entry_points.txt
+kill_hogs.egg-info/top_level.txt
+unittests/__init__.py
+unittests/test_kill_hogs.py

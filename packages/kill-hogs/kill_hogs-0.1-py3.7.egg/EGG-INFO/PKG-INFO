@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: kill-hogs
+Version: 0.1
+Summary: A script that kills processes of users generating excessive load.It is meant with HPC login nodes in mind.
+Home-page: http://packages.python.org/kill_hogs
+Author: Egon Rijpkema
+Author-email: e.m.a.rijpkema@rug.nl
+License: GPLv3
+Description: [![CircleCI](https://circleci.com/gh/rug-cit-hpc/kill-hogs.svg?style=svg)](https://circleci.com/gh/rug-cit-hpc/kill-hogs)
+        [![codecov](https://codecov.io/gh/rug-cit-hpc/kill-hogs/branch/master/graph/badge.svg)](https://codecov.io/gh/rug-cit-hpc/kill-hogs)
+        # Kill hogs
+        
+        We at team HPC of the university of Groningen run job schedueling clusters.
+        Some users are running their programs on the login node of these clusters instead of submitting jobs. This leads to a high load on the login node, which leads to unhappy users who are unable to submit jobs.
+        "kill hogs" is a crude attempt at mittigating these problems. It is a cronjob that checks the resources (cpu and ram) that are used by each user. If they reach a certain treshold, all the user's processes above a minimum treshold are killed. 
+        The user is informed of this via a message in the terminal.
+        A message is also send to slack to inform us.
+        
+        
+        **this program might kill processes you don't want killed and lock you out**
+        
+        
+        ## Installation.
+        
+        We install the cronjob via ansible on a centos7 host instead of installing the requirements with pip, we opt for the following yum packages.
+        
+        - python36-requests
+        - python36-psutil
+        
+        The cronjob looks like this:
+        
+        ```cronjob
+        */2 * * * * root /usr/bin/python36 /opt/kill_hoggs/kill_hoggs.py --slack
+        ```
+        
+        ## Run tests
+        
+        ```python
+        
+        python -m unittest unittests.test_kill_hogs
+        
+        # Or if you want coverage information.
+        coverage run -m unittest unittests.test_kill_hogs
+        coverage report -m kill_hogs.py
+        ```
+        
+Keywords: HPC tools load memory kill
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
