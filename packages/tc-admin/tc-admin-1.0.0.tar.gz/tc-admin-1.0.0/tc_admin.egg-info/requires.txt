@@ -1,0 +1,9 @@
+taskcluster~=16.0.0
+click<7
+blessings<2
+attrs
+memoized==0.3
+sortedcontainers<3
+aiohttp<3
+pyyaml<4
+iso8601==0.1.12

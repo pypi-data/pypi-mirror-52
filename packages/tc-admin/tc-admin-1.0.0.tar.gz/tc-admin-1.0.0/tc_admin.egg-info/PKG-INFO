@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: tc-admin
+Version: 1.0.0
+Summary: Administration of Taskcluster runtime configuration
+Home-page: https://github.com/taskcluster/tc-admin
+Author: Dustin Mitchell
+Author-email: dustin@mozilla.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
