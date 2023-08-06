@@ -1,0 +1,13 @@
+README.md
+setup.py
+pystarworlds/Agent.py
+pystarworlds/Environment.py
+pystarworlds/Event.py
+pystarworlds/Identifiable.py
+pystarworlds/__init__.py
+pystarworlds.egg-info/PKG-INFO
+pystarworlds.egg-info/SOURCES.txt
+pystarworlds.egg-info/dependency_links.txt
+pystarworlds.egg-info/top_level.txt
+pystarworlds/test/__init__.py
+pystarworlds/test/test.py
