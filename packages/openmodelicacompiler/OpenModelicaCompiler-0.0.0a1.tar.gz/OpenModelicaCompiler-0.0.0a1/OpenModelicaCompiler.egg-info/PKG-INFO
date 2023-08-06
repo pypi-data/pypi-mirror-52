@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: OpenModelicaCompiler
+Version: 0.0.0a1
+Summary: OpenModelica compiler (omc)  interface for Python3.x based on  OMPython
+Home-page: https://github.com/ijknabla/OpenModelicaCompilerForPython
+Author: ijknabla
+Author-email: ijknabla@gmail.com
+License: OSMC-PL 1.2
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
