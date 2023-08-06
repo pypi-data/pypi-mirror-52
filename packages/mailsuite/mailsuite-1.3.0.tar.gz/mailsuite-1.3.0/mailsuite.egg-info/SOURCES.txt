@@ -1,0 +1,11 @@
+README.rst
+setup.py
+mailsuite/__init__.py
+mailsuite/imap.py
+mailsuite/smtp.py
+mailsuite/utils.py
+mailsuite.egg-info/PKG-INFO
+mailsuite.egg-info/SOURCES.txt
+mailsuite.egg-info/dependency_links.txt
+mailsuite.egg-info/requires.txt
+mailsuite.egg-info/top_level.txt
