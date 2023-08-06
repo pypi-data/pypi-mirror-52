@@ -1,0 +1,13 @@
+CHANGELOG.md,sha256=cPFKsNSo5L1NUl3hPJ_1M42AHyyXC2Kf0vfRombwChU,387
+saitama/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saitama/common.py,sha256=SUl-tC3v8dI-PBbvUjWtLNHtCRXTL9OvEojQIbJh--c,1062
+saitama/conf.py,sha256=nMqaq8Xb4c-ioWMTqnXVXN1nVG9NizT4vg4xNgAbRIQ,996
+saitama/migrate.py,sha256=1iIkgV3BUbKbRuIVde4w012iGPx2-I9Pt4--5usuX8Q,5418
+saitama/punch.py,sha256=oqjwN7FasU4cjwv08Jo3OXtMuiKZGUF1OxNfVVRrodE,1740
+saitama/queries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+saitama/queries/migration.py,sha256=AqAXsquT1AUCUtY-0kDG7b7lRnvgaB8Kiz2_-5XMdDc,1022
+saitama-0.2.0.dist-info/entry_points.txt,sha256=okAiSVJcg_ypyhagsDVfsBQW_2O-rayQhl-R5edrITs,44
+saitama-0.2.0.dist-info/LICENSE.txt,sha256=L-19GeOBIjHY8V08FWg7T_vzlofwPEzQLRd_KnTLP_U,1074
+saitama-0.2.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+saitama-0.2.0.dist-info/METADATA,sha256=G1lngTSEh_73Xe2PH0htWkfDK2PV1uf4RRw12e-d0Jk,1053
+saitama-0.2.0.dist-info/RECORD,,
