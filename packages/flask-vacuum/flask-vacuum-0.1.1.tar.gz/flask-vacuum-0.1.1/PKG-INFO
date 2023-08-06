@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: flask-vacuum
+Version: 0.1.1
+Summary: 
+Author: Anton Ruhlov
+Author-email: antonruhlov@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: blinker (>=1.4,<2.0)
+Requires-Dist: flask (>=1.1,<2.0)
+Requires-Dist: flask-injector (>=0.12.0,<0.13.0)
