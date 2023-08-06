@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pydantic_jsonapi
+Version: 0.0.1
+Summary: an implementation of JSON:api using pydantic
+Home-page: https://github.com/DeanWay/pydantic-jsonapi
+Author: Dean Way
+License: UNKNOWN
+Description: # pydantic-jsonapi
+        [![Build Status](https://travis-ci.org/DeanWay/pydantic-jsonapi.svg?branch=master)](https://travis-ci.org/DeanWay/pydantic-jsonapi)
+        
+        
+        an implementation of JSON:api using pydantic for validation
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
