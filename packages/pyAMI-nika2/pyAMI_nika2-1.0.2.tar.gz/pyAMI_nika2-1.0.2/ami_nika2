@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import (division, print_function, unicode_literals)
+#############################################################################
+# Author  : Jerome ODIER, Fabian LAMBERT
+#
+# Email   : jerome.odier@cern.ch
+#           jerome.odier@lpsc.in2p3.fr
+#           fabian.lambert@lpsc.in2p3.fr
+#
+# Version : 1.X.X for pyAMI_nika2 (2013-2019)
+#
+#############################################################################
+
+import sys, pyAMI.app, pyAMI_nika2.config
+
+#############################################################################
+# ENTRY POINT                                                               #
+#############################################################################
+
+def entry_point():
+	app = pyAMI.app.App('nika2', 'text')
+
+	return app.run()
+
+#############################################################################
+
+if __name__ == '__main__':
+	sys.exit(entry_point())
+
+#############################################################################
