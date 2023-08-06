@@ -1,0 +1,83 @@
+- name: Lookup deployment UUID
+  set_fact:
+    deployment_uuid: "{{ lookup('file', role_name ~ '/' ~ ansible_hostname | lower ~ '/' ~ item) | from_yaml | json_query(item ~ '.id')}}"
+
+- name: "Render deployment file for {{ item }}"
+  copy:
+    content: "[ {{ lookup('file', role_name ~ '/' ~ ansible_hostname | lower ~ '/' ~ item) | from_yaml | json_query(item) }} ]"
+    dest: "/var/lib/heat-config/tripleo-config-download/{{ item }}"
+  become: true
+
+- name: "Check if deployed file exists for {{ item }}"
+  stat:
+    path: /var/lib/heat-config/deployed/{{ deployment_uuid }}.json
+  register: deployed_file_stat
+
+- name: "Check previous deployment rc for {{ item }}"
+  shell: |
+    exit $(jq .deploy_status_code /var/lib/heat-config/deployed/{{ deployment_uuid }}.notify.json)
+  register: previous_deployment_result
+  ignore_errors: true
+  when: deployed_file_stat.stat.exists
+
+- name: "Remove deployed file for {{ item }} when previous deployment failed"
+  file:
+    path: /var/lib/heat-config/deployed/{{ deployment_uuid }}.json
+    state: absent
+  become: true
+  when: deployed_file_stat.stat.exists and previous_deployment_result.rc != 0
+
+- name: "Force remove deployed file for {{ item }}"
+  file:
+    path: /var/lib/heat-config/deployed/{{ deployment_uuid }}.json
+    state: absent
+  become: true
+  when: (force | bool)
+
+- name: Set fact for async_deployment
+  set_fact:
+    use_async_deployment: "{{ (async_deployment | default(False)) or (item == 'NetworkDeployment') }}"
+
+- name: "Run deployment {{ item }}"
+  shell: |
+    /usr/libexec/os-refresh-config/configure.d/55-heat-config
+    exit $(jq .deploy_status_code /var/lib/heat-config/deployed/{{ deployment_uuid }}.notify.json)
+  become: true
+  environment:
+    HEAT_SHELL_CONFIG: /var/lib/heat-config/tripleo-config-download/{{ item }}
+  register: deployment_sync_result
+  ignore_errors: yes
+  when: not use_async_deployment
+
+- name: "Run async deployment {{ item }}"
+  shell: |
+    /usr/libexec/os-refresh-config/configure.d/55-heat-config
+    exit $(jq .deploy_status_code /var/lib/heat-config/deployed/{{ deployment_uuid }}.notify.json)
+  become: true
+  environment:
+    HEAT_SHELL_CONFIG: /var/lib/heat-config/tripleo-config-download/{{ item }}
+  register: deployment_async_result
+  ignore_errors: yes
+  when: use_async_deployment
+  async: "{{ async_timeout | default(300) }}"
+  poll: "{{ async_poll | default(3) }}"
+
+- name: "Output for sync deployment {{ item }}"
+  debug:
+    msg:
+      - stderr: "{{ deployment_sync_result.stderr.split('\n') }}"
+      - status_code: "{{ deployment_sync_result.rc }}"
+  tags:
+    - output
+  failed_when: deployment_sync_result.rc != 0
+  when: not use_async_deployment
+
+- name: "Output for async deployment {{ item }}"
+  debug:
+    msg:
+      - stderr: "{{ deployment_async_result.stderr.split('\n') }}"
+      - status_code: "{{ deployment_async_result.rc }}"
+  tags:
+    - output
+  failed_when: deployment_async_result.rc != 0
+  when: use_async_deployment
