@@ -1,0 +1,11 @@
+s3pypi/__init__.py,sha256=2htX-0sgzBY6nM6Yoz9ZD9Eb7cAObr8K2sW9XDMQyaA,44
+s3pypi/__main__.py,sha256=T4b6so84LDh-r5N1sWVHEv8bgmhlyJBksLTccIVz1X8,2067
+s3pypi/exceptions.py,sha256=K_hoYOEB1zST7ydmwQyxGzO0DSve15OXfvipY3emmEI,39
+s3pypi/package.py,sha256=FPwhCIp6BhnCZW7RCpV8qImYLjTKI9CLwSuOG-E_PYI,4476
+s3pypi/storage.py,sha256=NTOXtIAz7X5csizlMhN9CqMGnQY9HXfKwsQSq02vYRY,1844
+s3pypi/templates/index.html.j2,sha256=kGP5zI9WFTB8w7Bh8qMCZqxRkZ183KpBYIThRd9Hejk,305
+s3pypi-0.10.0.dist-info/entry_points.txt,sha256=4KPy8LYlS795PWCyLAvSoR9LebB5gkEaLW0Kwnjvoxc,47
+s3pypi-0.10.0.dist-info/LICENSE,sha256=0svWqleMWVydffjmgo3Hnpa0iE3kkikfzuHdUKDpE64,1080
+s3pypi-0.10.0.dist-info/WHEEL,sha256=keyYWvYKNA_2zcik-3igtxLOyAHtiID0OwhBL7zqR1U,89
+s3pypi-0.10.0.dist-info/METADATA,sha256=RZhqvJxVKWCD6JXC7FoUzJhER1DbgSKWpBLGpY4lZAI,665
+s3pypi-0.10.0.dist-info/RECORD,,
