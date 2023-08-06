@@ -1,0 +1,4 @@
+[console_scripts]
+bert-deploy.py = bert.deploy.factory:run_from_cli
+bert-runner.py = bert.factory:run_from_cli
+
