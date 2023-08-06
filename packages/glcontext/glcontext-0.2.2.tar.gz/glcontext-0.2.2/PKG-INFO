@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: glcontext
+Version: 0.2.2
+Summary: Portable OpenGL Context
+Home-page: https://github.com/moderngl/glcontext
+Author: Szabolcs Dombi
+Author-email: cprogrammer1994@gmail.com
+License: MIT
+Description: Various OpenGL Context backends to support ModernGL on most platforms
+Platform: any
+Description-Content-Type: text/markdown
