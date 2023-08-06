@@ -1,0 +1,17 @@
+jupyros/__init__.py,sha256=6hlDy-JhODg3rNs3O91RBZIqyqJbh0fvK2Hd0nuR-1s,325
+jupyros/_version.py,sha256=fOZ9wGp9ePUdhUscADUn-xCt-Gu2QZcInRGSNH6nmuo,281
+jupyros/ipy.py,sha256=aacCgHdnYHvrrwubWdg4YOwKO-tScU6QfjKwiF2oP48,301
+jupyros/pubsub.py,sha256=_-cY3tFGLQbQB65AqBiNm1NzrSwyXB5Vf9IgD4dpCMY,1942
+jupyros/ros3d.py,sha256=4xa3luBYDbyNkjvwoR4QltI54h2VhumuZ7KXWfBRJmg,8449
+jupyros/ros_widgets.py,sha256=wMSd0Eq1SSkNJfwN_eAcZ2ELsQPf3_Nfk8Aupi405g0,10439
+jupyros/static/extension.js,sha256=79nmUUnCtEASE3TKmErl2LgxhAhnD_u_AsOGKmmX6zA,3339
+jupyros/static/index.js,sha256=KsK6_F1oR5lRAo7G8knOne6X_tkTpWtRt5er0zQ-kVM,3099418
+jupyros/static/index.js.map,sha256=3agr7EF04TnFeGI_357tCKu5c5Iqi1fLvnnNNtWvZMU,3866616
+jupyros-0.2.0.data/data/etc/jupyter/nbconfig/notebook.d/jupyter-ros.json,sha256=4RZrbXtVjFY3_2K8fhYLsrG9Sir1rMLVX27_wz5YqHw,65
+jupyros-0.2.0.data/data/share/jupyter/nbextensions/jupyter-ros/extension.js,sha256=79nmUUnCtEASE3TKmErl2LgxhAhnD_u_AsOGKmmX6zA,3339
+jupyros-0.2.0.data/data/share/jupyter/nbextensions/jupyter-ros/index.js,sha256=KsK6_F1oR5lRAo7G8knOne6X_tkTpWtRt5er0zQ-kVM,3099418
+jupyros-0.2.0.data/data/share/jupyter/nbextensions/jupyter-ros/index.js.map,sha256=3agr7EF04TnFeGI_357tCKu5c5Iqi1fLvnnNNtWvZMU,3866616
+jupyros-0.2.0.dist-info/METADATA,sha256=AkLXrfjnjygsuFLnwuSPJqP28h35258WWqCjoFzhkYQ,878
+jupyros-0.2.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+jupyros-0.2.0.dist-info/top_level.txt,sha256=8laZOBd7Y0425Y6a8xBbLntpqQEWR-apOnmyERE6G0o,8
+jupyros-0.2.0.dist-info/RECORD,,
