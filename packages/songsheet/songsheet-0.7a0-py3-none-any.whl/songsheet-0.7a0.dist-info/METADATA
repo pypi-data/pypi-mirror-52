@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: songsheet
+Version: 0.7a0
+Summary: Parses songsheet strings
+Home-page: https://github.com/kahunacohen/songsheet
+Author: Aaron Cohen
+Author-email: aaroncohendev@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/songsheet/
+Keywords: music,lyrics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Artistic Software
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+[![Build Status](https://travis-ci.com/kahunacohen/songsheet.svg?branch=master)](https://travis-ci.com/kahunacohen/songsheet)
+
+[![Documentation Status](https://readthedocs.org/projects/songsheet/badge/?version=latest)](https://songsheet.readthedocs.io/en/latest/?badge=latest)
+
+# songsheet
+
+## Why?
+Songsheets are simple documents outlining a song's lyrics and chord progression. This
+package enables easy normalizing and parsing of songsheet text into machine-readable JSON and back again.
+
+For more see https://songsheet.readthedocs.io/en/latest/.
+
+## Requirements
+Python 3.6+
+
+## Development
+
+```
+$ git clone https://github.com/kahunacohen/songsheet.git
+$ cd songsheet
+$ virtualenv -p python3.7 env && . env/bin/activate
+$ py.test -v
+```
+
+
