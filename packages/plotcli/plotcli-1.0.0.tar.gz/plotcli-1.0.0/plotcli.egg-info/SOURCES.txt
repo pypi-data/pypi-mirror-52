@@ -1,0 +1,12 @@
+README.md
+setup.py
+plotcli/__about__.py
+plotcli/__init__.py
+plotcli/_cli.py
+plotcli/_helpers.py
+plotcli.egg-info/PKG-INFO
+plotcli.egg-info/SOURCES.txt
+plotcli.egg-info/dependency_links.txt
+plotcli.egg-info/entry_points.txt
+plotcli.egg-info/requires.txt
+plotcli.egg-info/top_level.txt
