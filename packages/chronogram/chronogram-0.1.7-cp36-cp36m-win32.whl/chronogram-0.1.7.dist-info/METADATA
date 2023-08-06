@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: chronogram
+Version: 0.1.7
+Summary: Chrono-gram, the diachronic word embedding model based on Word2vec Skip-gram with Chebyshev approximation
+Home-page: https://github.com/bab2min/chronogram
+Author: bab2min
+Author-email: bab2min@gmail.com
+License: MIT License
+Requires-Dist: py-cpuinfo
+
+Chrono-gram
+
+
