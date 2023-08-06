@@ -1,0 +1,12 @@
+README.md
+setup.py
+sample/__init__.py
+sample/sample.py
+test/__init__.py
+test/utilio.py
+utilio/__init__.py
+utilio/utilio.py
+utilio.egg-info/PKG-INFO
+utilio.egg-info/SOURCES.txt
+utilio.egg-info/dependency_links.txt
+utilio.egg-info/top_level.txt
