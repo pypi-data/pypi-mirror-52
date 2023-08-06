@@ -1,0 +1,5 @@
+pyjwt>=1.7.1
+
+[test]
+coverage
+pytest
