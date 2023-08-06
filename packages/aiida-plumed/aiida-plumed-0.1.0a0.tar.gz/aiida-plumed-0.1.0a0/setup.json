@@ -1,0 +1,57 @@
+{
+    "name": "aiida-plumed",
+    "author": "Conrad Johnston",
+    "author_email": "conrad.s.johnston@googlemail.com",
+    "description": "AiiDA plugin providing support for Plumed2",
+    "url": "https://github.com/ConradJohnston/aiida-plumed",
+    "license": "MIT",
+    "classifiers": [
+        "Programming Language :: Python",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Framework :: AiiDA",
+	"Development Status :: 2 - Pre-Alpha"
+    ],
+    "version": "0.1.0a0",
+    "entry_points": {
+        "aiida.data": [
+            "plumed = aiida_plumed.data:DiffParameters"
+        ],
+        "aiida.calculations": [
+            "plumed = aiida_plumed.calculations:DiffCalculation"
+        ],
+        "aiida.parsers": [
+            "plumed = aiida_plumed.parsers:DiffParser"
+        ],
+        "aiida.cmdline.data": [
+            "plumed = aiida_plumed.cli:data_cli"
+        ]
+    },
+    "include_package_data": true,
+    "setup_requires": ["reentry"],
+    "reentry_register": true,
+    "install_requires": [
+        "aiida-core>=1.0.0b3,<2.0.0",
+        "six",
+        "voluptuous"
+    ],
+    "extras_require": {
+        "testing": [
+            "pgtest==1.2.0",
+            "wheel>=0.31",
+            "coverage",
+            "pytest>=3.6.3,<5.0.0",
+            "pytest-cov>=2.6.1,<5.0.0"
+        ],
+        "pre-commit": [
+            "pre-commit==1.11.0",
+            "yapf==0.27.0",
+            "prospector==0.12.11",
+            "pylint==1.9.4"
+        ],
+        "docs": [
+            "sphinx"
+        ]
+    }
+}
