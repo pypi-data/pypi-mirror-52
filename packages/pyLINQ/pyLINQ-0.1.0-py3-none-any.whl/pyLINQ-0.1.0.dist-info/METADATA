@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyLINQ
+Version: 0.1.0
+Summary: Makes filtering and sorting lists easier and more readable.
+Home-page: https://github.com/jmfernandes/robin_stocks
+Author: Josh Fernandes
+Author-email: joshfernandes@mac.com
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: LINQ,list,list comprehension,lambda,utility,C#,where,set,filter,sort
+Platform: UNKNOWN
+Requires-Python: >=3.4
+
+pyLINQ
+======
+
+This project provides an easier and more readable way to filter and sort lists compared to list comprehension.
+
+
