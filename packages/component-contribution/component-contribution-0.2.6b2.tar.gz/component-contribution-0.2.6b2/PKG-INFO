@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: component-contribution
+Version: 0.2.6b2
+Summary: Standard reaction Gibbs energy estimation for biochemical reactions.
+Home-page: https://github.com/eladnoor/component-contribution
+Author: Elad Noor
+Author-email: noor@imsb.biol.ethz.ch
+Maintainer: Joao Cardoso
+Maintainer-email: joaca@biosustain.dtu.dk
+License: MIT License
+Download-URL: https://eladnoor.github.io/component-contribution/
+Description: UNKNOWN
+Keywords: component contribution,Gibbs energy,biochemical reaction
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Provides-Extra: deployment
+Provides-Extra: development
