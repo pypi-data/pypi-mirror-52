@@ -1,0 +1,13 @@
+login/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+login/__main__.py,sha256=eRyXCBbQ4e4aPEEpf6ab1rqmJHGFmzjhk3XtKC1xo5A,67
+login/aws_oidc_login.py,sha256=Htb-_mSarVo4E56Sr_VXCkrLTE6gczenIRbeyZ9H1cQ,2999
+login/config.py,sha256=CCZiXgnOa3-DNgEGm8Cfg8YHUggCNAigtXtAWN39Anc,2381
+login/credentials.py,sha256=KhZVQSxT5SQgjnI0zQdicJQarFFuTlakobKIJefGlyY,906
+login/jwt.py,sha256=u05GGehbtonQGh8I8IBZjrMYw7tvQZuDAhyxxGNq3ak,319
+login/oidc_authorizer.py,sha256=TsjaHcOvt9pwj23tUiJz3swN6nfnDi3tWnMROCZxrrI,4472
+aws_oidc_login-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aws_oidc_login-0.2.0.dist-info/METADATA,sha256=IOCu2TvnFmxMPyRNozqHaE66Loe_W32qj2NY6MpZMf0,2027
+aws_oidc_login-0.2.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+aws_oidc_login-0.2.0.dist-info/entry_points.txt,sha256=sAB1YTGbEZLZ_qLGrubl_k4aurUngYNHAsa0ZHUN6Q4,61
+aws_oidc_login-0.2.0.dist-info/top_level.txt,sha256=bBQguPO-emE1fsyCocOR3_5DiTDBA0ZrFmBiXkKskaY,6
+aws_oidc_login-0.2.0.dist-info/RECORD,,

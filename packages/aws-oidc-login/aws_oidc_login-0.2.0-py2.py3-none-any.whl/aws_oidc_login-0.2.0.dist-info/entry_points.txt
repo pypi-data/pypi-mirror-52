@@ -1,0 +1,3 @@
+[console_scripts]
+aol = login.aws_oidc_login:aws_oidc_login
+
