@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: qandaomr
+Version: 1.2.3
+Summary: Q&A Python and OpenCV OMR (optical mark recognition)
+Home-page: https://github.com/Jojojoppe/qandaomr
+Author: Joppe Blondel
+Author-email: joppe@blondel.nl
+License: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/Jojojoppe/qandaomr/archive/v1.2.3.tar.gz
+Description: UNKNOWN
+Keywords: OMR,Optical Mark Recognition
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

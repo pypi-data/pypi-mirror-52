@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+qandaomr/__init__.py
+qandaomr/create.py
+qandaomr/parser.py
+qandaomr/read.py
+qandaomr.egg-info/PKG-INFO
+qandaomr.egg-info/SOURCES.txt
+qandaomr.egg-info/dependency_links.txt
+qandaomr.egg-info/requires.txt
+qandaomr.egg-info/top_level.txt
+scripts/qandaomr
