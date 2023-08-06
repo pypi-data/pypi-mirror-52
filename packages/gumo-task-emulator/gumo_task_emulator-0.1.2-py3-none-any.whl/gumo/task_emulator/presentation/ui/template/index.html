@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Gumo Task Emulator UI</h3>
+
+<table border="1" style="font-size: small;">
+    <tr>
+        <th>Queue Name</th>
+        <th>Queued Tasks</th>
+        <th>Processing Tasks</th>
+        <th>Succeeded Tasks</th>
+        <th>Failed Tasks</th>
+        <th>Oldest Scheduled At (ETA)</th>
+    </tr>
+    {% for queueStatus in summary %}
+    <tr>
+        <td><a href="/task_emulator/detail/{{queueStatus.queue_name}}">{{queueStatus.queue_name}}</a></td>
+        <td>{{queueStatus.queued_tasks_count}}</td>
+        <td>{{queueStatus.processing_tasks_count}}</td>
+        <td>{{queueStatus.succeeded_tasks_count}}</td>
+        <td>{{queueStatus.failed_tasks_count}}</td>
+        <td>{{queueStatus.oldest_schedule_time}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p style="font-size: small;">
+    <a href="/api/task_emulator/cleanup">Cleanup Finished Tasks</a>
+</p>
+{% endblock %}
