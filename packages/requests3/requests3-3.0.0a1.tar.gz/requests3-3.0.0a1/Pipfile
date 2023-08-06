@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple/"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = {path = ".",editable = true,extras = ["socks"]}
+codecov = "*"
+pytest-httpbin = "==1.0.0"
+pytest-mock = "*"
+pytest-cov = "*"
+pytest-xdist = "<=1.25"
+alabaster = "*"
+readme-renderer = "*"
+sphinx = "<=1.5.5"
+pysocks = "*"
+docutils = "*"
+"flake8" = "*"
+tox = "*"
+detox = "*"
+httpbin = ">=0.7.0"
+pytest = "*"
+pytest-mypy = "*"
+"rfc3986" = "*"
+http3 = {git = "https://github.com/encode/http3.git"}
+
+[dev-packages]
+requests = {path = ".",editable = true,extras = ["test,socks"]}
+black = "*"
+
+[pipenv]
+allow_prereleases = true
