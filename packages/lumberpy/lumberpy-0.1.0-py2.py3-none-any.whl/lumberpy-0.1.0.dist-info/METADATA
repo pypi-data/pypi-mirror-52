@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: lumberpy
+Version: 0.1.0
+Summary: Lumberpy is an easily configurable python3 module for advanced logging use cases
+Home-page: https://gitlab.com/GreyRook/lumberpy
+Author: Grey Rook GmbH
+Author-email: f.elsner@greyrook.com
+License: MIT license
+Keywords: lumberpy
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Click (>=6.0)
+Requires-Dist: coloredlogs (==10.0)
+
+# Lumberpy
+
+* Free software: MIT license
+
+## Config format
+
+The config format is based on the (python standard lib dict config format)[https://docs.python.org/3/howto/logging-cookbook.html#an-example-dictionary-based-configuration].  There are a few extra keys and more defaults.
+
+* By default a colored formatter based on ... is used.
+
+### Default log format
+
+```
+"{asctime} {levelname:3.3} {name}: {message}"
+```
+
+Example:
+
+![](docs/default_log_output.png)
+
+Reasoning:
+
+* TODO
+
+## Usage Logging configuration
+
+Applications using lumber usually have three ways to configure logging:
+
+1. via the CLI (e.g. `-v` to set log leve to `DEBUG`)
+2. via config file (path provided by cli or environment variable)
+3. via environment variables
+
+If several are provided precedence in that order.  For example:
+
+* If `-v` is provided log level from config file and via environment variable, the later two are ignored
+* If providing a config path via cli and via environment variable only former is used.
+
+### Environment variables
+
+The following variables are available
+
+* `LUMBER_CONFIG_PATH` load config from provided path
+* `LUMBER_LEVEL` sets the log level, (e.g. DEBUG or as integer 1 to 60)
+* `LUMBER_FORMAT` to set the default log format.
+
+## How to include in your software
+
+```
+import lumberpy
+LOG = logging.getLogger(__name__)
+
+@click.command()
+@click.option('--lumberpy-config-path', type=click.Path())
+@click.option('-v', '--verbose', count=True)
+def main(lumberpy_config_path, verbose):
+    """Console script for python_boilerplate."""
+    lumberpy.setup(lumberpy_config_path, verbose)
+
+    LOG.warning("A waring")
+    return 0
+```
+
+With the main goal of lumberpy being to cut down on boilerplate there is an even shorter way to add the click options:
+
+```
+import lumberpy.click
+
+
+@click.command()
+@lumberpy.click.options()
+def main(lumberpy_config_path, verbose):
+    lumberpy.setup(lumberpy_config_path, verbose)
+```
+
+
