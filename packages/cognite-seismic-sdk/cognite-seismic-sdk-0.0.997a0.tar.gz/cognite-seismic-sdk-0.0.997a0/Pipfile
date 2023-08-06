@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+twine = "*"
+black = "==18.6b4"
+isort = "*"
+requests = "*"
+sphinx = "*"
+sphinx-pypi-upload = "*"
+
+[packages]
+numpy = "*"
+grpcio = "*"
+grpcio-tools = "*"
+protobuf = "*"
+
+[requires]
+python_version = "3.7"
