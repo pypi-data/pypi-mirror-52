@@ -1,0 +1,12 @@
+database/__init__.py,sha256=NmjBAaC2Oe64_U75tPJMiXe9IDyDgqeAUgJD7RTWmAc,34
+database-manager/DatabaseConnector.py,sha256=PSlzLDVXa3jl5jDZIgDtaGlXDnVO_kT2aJglOW5Kwm8,4350
+database-manager/DatabaseDataManager.py,sha256=A6e1XSuVczdVPAdzY9kO4rUHg7DS6SFdjlCIWHbH8GM,4735
+database-manager/DatabaseEntity.py,sha256=g3L6vSr34gTsl2UI-XZkDoVeliQu31Kq2ilAjn4evT0,4931
+database-manager/FileDataManager.py,sha256=4ZbB1HM2xUsWnr8Ebf-Qr3wo455Aniz-1Gf2FlqUhD4,1084
+database-manager/__init__.py,sha256=NmjBAaC2Oe64_U75tPJMiXe9IDyDgqeAUgJD7RTWmAc,34
+database-manager/database.py,sha256=NAi4FWERsw3h54vPuNa1uIO1INeGG2tqiaPNivZjCu4,430
+database_manager-0.0.3.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+database_manager-0.0.3.dist-info/METADATA,sha256=xXv42KA0EHnzqlp8CLmBr6p7COKW4ZM7mH5teOJqvlg,648
+database_manager-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+database_manager-0.0.3.dist-info/top_level.txt,sha256=yJcT_48R9kdw408xrmbm3y3qIcTgRCmFQ3_M9nj_Pu4,17
+database_manager-0.0.3.dist-info/RECORD,,
