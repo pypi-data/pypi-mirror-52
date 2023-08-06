@@ -1,0 +1,13 @@
+putio_downloader/__init__.py,sha256=5IZyawSItHpi3-_6eQWQuh29DKUb4PEjlIux4cEOwn8,150
+putio_downloader/cli.py,sha256=RTsUnW7vOjBRXWxBw4rBeyLekGApc38I5EKPk_p2dUU,2515
+putio_downloader/putio_aria2c_downloader.py,sha256=X2mREl1I40ZjMxKI9AQPmmvHF_7fcWoorxfe412oaSk,8222
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cli.py,sha256=juuQ_A1SW7QtlroFD7u8KezFzIwz5RD-eewmq6t682U,331
+tests/test_config.py,sha256=aGZpqfl7ZhqBfx9wjI0hTt8DohxMPE3DQuAGAF-eJ8Q,1063
+tests/test_crc.py,sha256=ohgiBo3WEDvAjwvYK86FhiQUsnluqG8yVrSZANa_Ars,271
+putio_downloader-3.1.2.dist-info/LICENSE,sha256=voJCmfa04Ed8O6nJzzXXKUnjYOQz0kdxEsRxJyjNaSo,1084
+putio_downloader-3.1.2.dist-info/METADATA,sha256=Ig4G3c4Cvm_C9LbBgZ8JLbsdGckJs28S3lMMhXB5LWM,2680
+putio_downloader-3.1.2.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+putio_downloader-3.1.2.dist-info/entry_points.txt,sha256=ENzCc4o1SYWJyW5gl4wDDCxjO2cbqKHzQWaSMDBfhyg,62
+putio_downloader-3.1.2.dist-info/top_level.txt,sha256=cMSn999VOAh4KWKGB5Mxhi1QE_x_KSRQcoRWfNRQzn4,23
+putio_downloader-3.1.2.dist-info/RECORD,,
