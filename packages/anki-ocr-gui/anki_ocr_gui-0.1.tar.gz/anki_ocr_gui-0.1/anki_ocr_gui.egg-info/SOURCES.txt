@@ -1,0 +1,11 @@
+README.md
+setup.py
+anki_ocr_gui/__init__.py
+anki_ocr_gui/anki_ocr_gui.py
+anki_ocr_gui/cli_entry.py
+anki_ocr_gui.egg-info/PKG-INFO
+anki_ocr_gui.egg-info/SOURCES.txt
+anki_ocr_gui.egg-info/dependency_links.txt
+anki_ocr_gui.egg-info/entry_points.txt
+anki_ocr_gui.egg-info/requires.txt
+anki_ocr_gui.egg-info/top_level.txt
