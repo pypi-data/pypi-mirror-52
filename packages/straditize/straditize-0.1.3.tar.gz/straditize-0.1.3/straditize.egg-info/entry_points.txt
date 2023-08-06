@@ -1,0 +1,6 @@
+[console_scripts]
+straditize = straditize.__main__:main
+
+[psyplot_gui]
+straditizer = straditize.widgets:StraditizerWidgets
+

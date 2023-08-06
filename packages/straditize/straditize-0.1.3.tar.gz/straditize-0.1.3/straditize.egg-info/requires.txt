@@ -1,0 +1,7 @@
+psyplot-gui>=1.2.3
+psyplot>=1.2.0
+psy-strat
+scipy
+scikit-image
+openpyxl
+netCDF4
