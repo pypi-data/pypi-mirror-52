@@ -1,0 +1,6 @@
+edx-celeryutils
+django-celery
+django-crum
+django-model-utils
+djangorestframework
+Django<2.0,>=1.11
