@@ -1,0 +1,15 @@
+confusables/__init__.py,sha256=zdDwRReCndyF1n8oTziW1APt0u2b0HM_25UX3dmcqEc,2851
+confusables/config.py,sha256=mOO4AS0LDhV3dCu0KJL2H8tJe68ufb4WOi9IcLo1RrI,216
+confusables/parse.py,sha256=nQ-VDk4RuvL98etOsay8P6g3ViDhpKAO7h6Y6a8iH8s,4154
+confusables/utils.py,sha256=ubs_Cb8XmBSgEcUmvlXC53Wfz_ids7HraRY8cgvO0Q0,116
+confusables/assets/confusable_mapping.json,sha256=sJXWcuEDgi0QFYuB1qcA2GOt5qrE5LWSJbr5L6Vqj1E,2686742
+confusables/assets/confusables.txt,sha256=_VbVSjWZ0HsaRrtAcj7ppUEIUZmbLxA0THQCmF4bLRA,716891
+confusables/assets/custom_confusables.txt,sha256=9pXdOr3cbpFn8bJ0opcnG_n3cHqUztR6Iy0SAmsFevU,49
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/confusables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/confusables/test_confusables.py,sha256=O7OIINkWZRV2qHzM6g1iWWzNZaQn9RN1Trqi-BwmXww,3768
+confusables-1.0.0.dist-info/LICENSE,sha256=tNOI17SNgdSemZOdVklocz6ZwxZiWipk5qgQPKWaxZY,1070
+confusables-1.0.0.dist-info/METADATA,sha256=tB7xOCZlfJvnQvfQSCz_rZi_IsjRi7m0Iu6aAidJiXk,4816
+confusables-1.0.0.dist-info/WHEEL,sha256=ZenmQtjt4etEZlyoFFA3Bd8pVkjneWord4ycgKmVLx4,92
+confusables-1.0.0.dist-info/top_level.txt,sha256=D3e_2er1UWPC8FNDwtp5nASBOUkA97XeDGVda72pFUk,18
+confusables-1.0.0.dist-info/RECORD,,
