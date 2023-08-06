@@ -1,0 +1,12 @@
+CHANGES.rst
+LICENSE
+README.rst
+setup.cfg
+setup.py
+wolframalpha/__init__.py
+wolframalpha_asyncio.egg-info/PKG-INFO
+wolframalpha_asyncio.egg-info/SOURCES.txt
+wolframalpha_asyncio.egg-info/dependency_links.txt
+wolframalpha_asyncio.egg-info/namespace_packages.txt
+wolframalpha_asyncio.egg-info/requires.txt
+wolframalpha_asyncio.egg-info/top_level.txt
