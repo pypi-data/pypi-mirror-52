@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: smv
+Version: 2.post13
+Summary: A modular framework for creating applications in Apache Spark
+Home-page: https://github.com/TresAmigosSD/SMV
+Author: Bo Zhang, Ali Tajeldin, Kai Chen, Lane Barlow, Guangning Yu
+Author-email: bzhangusc@live.com
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=2.7
