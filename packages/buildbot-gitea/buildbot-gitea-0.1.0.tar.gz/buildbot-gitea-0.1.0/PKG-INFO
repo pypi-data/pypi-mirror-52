@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: buildbot-gitea
+Version: 0.1.0
+Summary: buildbot plugin for integration with Gitea.
+Home-page: https://github.com/lab132/buildbot-gitea
+Author: Marvin Pohl
+Author-email: hello@lab132.com
+License: UNKNOWN
+Description: Buildbot Gitea Plugin
+        #########
+        
+        This plugin for buildbot adds integration support with gitea, featuring push hooks, commit status updates and a change source.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Build Tools
+Requires: buildbot (>=2.0.0)
+Description-Content-Type: text/markdown
