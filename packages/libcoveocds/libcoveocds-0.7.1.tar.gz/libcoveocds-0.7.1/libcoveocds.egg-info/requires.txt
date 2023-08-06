@@ -1,0 +1,5 @@
+
+[test]
+coveralls
+pytest
+pytest-cov
