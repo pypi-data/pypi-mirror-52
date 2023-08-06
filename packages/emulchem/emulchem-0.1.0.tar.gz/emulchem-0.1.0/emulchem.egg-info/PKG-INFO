@@ -1,0 +1,68 @@
+Metadata-Version: 1.1
+Name: emulchem
+Version: 0.1.0
+Summary: A statistical emulator built using neural networks of the UCLCHEM and RADEX astronomical codes
+Home-page: https://github.com/drd13/emulchem
+Author: Damien de Mijolla
+Author-email: ucapdde@ucl.ac.uk
+License: MIT license
+Description: ========
+        emulchem
+        ========
+        
+        
+        .. image:: https://img.shields.io/pypi/v/emulchem.svg
+                :target: https://pypi.python.org/pypi/emulchem
+        
+        .. image:: https://img.shields.io/travis/drd13/emulchem.svg
+                :target: https://travis-ci.org/drd13/emulchem
+        
+        .. image:: https://readthedocs.org/projects/emulchem/badge/?version=latest
+                :target: https://emulchem.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        A statistical emulator built using neural networks of the UCLCHEM and RADEX astronomical codes. More detail can be found in the associated paper (put paper). If you end up using this code in published work, you can cite it as follows: put citation method
+        
+        * Free software: MIT license
+        * Documentation: https://emulchem.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-05-30)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: emulchem
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
