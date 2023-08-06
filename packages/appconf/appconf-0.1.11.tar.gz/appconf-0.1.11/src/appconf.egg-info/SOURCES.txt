@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/appconf/__init__.py
+src/appconf/exc.py
+src/appconf.egg-info/PKG-INFO
+src/appconf.egg-info/SOURCES.txt
+src/appconf.egg-info/dependency_links.txt
+src/appconf.egg-info/requires.txt
+src/appconf.egg-info/top_level.txt
