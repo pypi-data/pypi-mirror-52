@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.cfg
+setup.py
+versioneer.py
+nrn/__init__.py
+nrn/_version.py
+nrn.egg-info/PKG-INFO
+nrn.egg-info/SOURCES.txt
+nrn.egg-info/dependency_links.txt
+nrn.egg-info/top_level.txt
