@@ -1,0 +1,14 @@
+mathphys/VERSION,sha256=9eXJU0UyhA_NRbsALmnthcYduidTRQ4mtEi33xSB4k0,6
+mathphys/__init__.py,sha256=RL4LX4lK9dlfLJ5kSothDG2nie40_IAvKKomf1bPeqg,583
+mathphys/base_units.py,sha256=gSrFeB_4PW061Ih6QAkgDS_b4-mT84T19tHEsGqIrq8,252
+mathphys/beam_lifetime.py,sha256=UZxJyQs27whsNJU-ajNx_iebnMRLeoEeZGGu9vtSjbI,11636
+mathphys/beam_optics.py,sha256=JQWoV8rq0qxn6tyV4ws0V5jYXwhDHHPV48f5jJBHoOQ,4505
+mathphys/constants.py,sha256=xdmuqogZJVZvxnB4HJqp8tunBxfu1F10VioM8e2LDnk,2056
+mathphys/functions.py,sha256=FK4a7_kfn3gzajUUGVMGMo41Lg_Vg6KYB-S1m1JCA0w,902
+mathphys/units.py,sha256=mOTm4RAEj-zQRe14U3mvrmkraFaENvUSBenh14V5YfY,1774
+mathphys/data/d_touschek.npz,sha256=J64Cpsf5SUqhz17V3UAQLOw0yIi_Qszj5FZfafeLRKY,160358
+mathphys-1.0.3.dist-info/LICENSE,sha256=K4f0gxy7B1xFAsrqCiD_rtq6RMIAE9RYE2b0n4tDS_0,1093
+mathphys-1.0.3.dist-info/METADATA,sha256=qs6dfcyeMETRuclfnUpqKKda_8ZG9M7yeV13TlgLuZY,459
+mathphys-1.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mathphys-1.0.3.dist-info/top_level.txt,sha256=iSpZ77utHX6DW8Tcn-LqbPv97cKNRCDwccnMyA-Wtjg,9
+mathphys-1.0.3.dist-info/RECORD,,
