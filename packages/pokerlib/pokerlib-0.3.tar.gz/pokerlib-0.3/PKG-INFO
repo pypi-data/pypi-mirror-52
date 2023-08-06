@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pokerlib
+Version: 0.3
+Summary: python poker library
+Home-page: https://github.com/kuco23/pokerlib
+Author: Nejc Ševerkar
+Author-email: nseverkar@gmail.com
+License: gpl-3.0
+Download-URL: https://github.com/kuco23/pokerlib/archive/v_03-alpha.tar.gz
+Description: UNKNOWN
+Keywords: python,poker,library
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: Free For Home Use
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
