@@ -1,0 +1,36 @@
+# Copyright 2018,2019 by MPI-SWS and Data-ken Research. Licensed under Apache 2.0. See LICENSE.txt.
+import os
+from os.path import abspath, expanduser, join
+from typing import List, Optional
+
+import click
+
+from dataworkspaces.workspace import init_workspace, RESOURCE_ROLE_CHOICES
+
+
+def init_command(name:str, hostname:str, create_resources:List[str],
+                 git_fat_remote:Optional[str]=None, git_fat_user:Optional[str]=None,
+                 git_fat_port:Optional[int]=None,
+                 git_fat_attributes:Optional[str]=None,
+                 batch:bool=False, verbose:bool=False):
+    workspace_dir=abspath(expanduser(os.curdir))
+    workspace = init_workspace('dataworkspaces.backends.git', #TODO: remove hardcoding
+                               name, hostname, batch, verbose, workspace_dir,
+                               git_fat_remote, git_fat_user, git_fat_port,
+                               git_fat_attributes)
+
+    if len(create_resources)>0:
+        click.echo("Will now create sub-directory resources for "+
+                   ", ".join(create_resources))
+        for role in create_resources:
+            assert role in RESOURCE_ROLE_CHOICES, "bad role name %s" % role
+            workspace.add_resource(role, 'git-subdirectory', role,
+                                   join(workspace_dir, role),
+                                   confirm_subdir_create=False)
+        click.echo("Finished initializing resources:")
+        for role in create_resources:
+            click.echo("  %s: ./%s" %(role, role))
+
+    workspace.save("workspace initialization")
+    click.echo("Workspace %s initialized successfully."%name)
+
