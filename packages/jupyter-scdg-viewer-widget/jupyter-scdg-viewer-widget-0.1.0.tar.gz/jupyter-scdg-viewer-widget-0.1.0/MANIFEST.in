@@ -1,0 +1,2 @@
+recursive-include scdgviewer/static *.*
+include scdg-viewer.json
