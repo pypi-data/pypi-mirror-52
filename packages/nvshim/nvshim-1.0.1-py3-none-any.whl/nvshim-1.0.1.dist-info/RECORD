@@ -1,0 +1,15 @@
+nvshim/__init__.py,sha256=D_Fgu4XS9Jsq99wq4C4nESL5zLC_ukWIWQ-KP6x3VK8,23
+nvshim/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nvshim/core/__main__.py,sha256=SuZfnKM9S7YcIRuyyWITDlS2oyDq1pwWrK3PDctCWXc,8515
+nvshim/core/shim.py,sha256=CZa091EL4ToP41crZT1_cX5ZIdIv5Rk2qUg6WsTKxIM,182
+nvshim/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nvshim/utils/constants.py,sha256=A0OMK4pRzjH5TPbco9zy3jQb1nD5yid3gDWWtXFFFAE,182
+nvshim/utils/environment.py,sha256=vaP-Vl-kMvmsoA8-rDyJ_BDaUDbK41HM53VmM8XhxQY,1275
+nvshim/utils/message.py,sha256=6AmMNwqe_Ffm3EKjqGhR2GwtQwFCrEBGyKjuFva6loI,2130
+nvshim/utils/process.py,sha256=wqije19nR88KYKnts9wo14dqYF4HyPIRZtArhzjVfbM,807
+nvshim-1.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nvshim-1.0.1.dist-info/METADATA,sha256=EmLMEpKklcwtRfCPXjoS1T1o6LKnqBlgTtbip_bALkM,2532
+nvshim-1.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+nvshim-1.0.1.dist-info/entry_points.txt,sha256=ZfcMdBPoh5EcF1_J0echGsqckCFjjzHxewYa0Ew9Prw,104
+nvshim-1.0.1.dist-info/top_level.txt,sha256=u6z_dkhiPrQxIDepMHTcPYRqwqs5eVflTutKLAT0ReU,7
+nvshim-1.0.1.dist-info/RECORD,,
