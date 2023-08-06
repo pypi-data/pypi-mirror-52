@@ -1,0 +1,11 @@
+imagedegrade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imagedegrade/im.py,sha256=pbVNZzy2faDrRA216P9RX3Ah0Db6D2h4XX2BOgoxVPI,1452
+imagedegrade/np.py,sha256=GnPONGuZdbFRktb3fQHHD5VM0MbYpljrU3oLIzu4z90,2330
+imagedegrade-0.2.2.dist-info/DESCRIPTION.rst,sha256=JgMfjpTKqO0w8u77eDcNUiIEux844Y3hwJAsbAgk8NI,40
+imagedegrade-0.2.2.dist-info/METADATA,sha256=-oyrCaGhz5YUEZfyQRtq-K-2V1CqTrZKHtgmQunDGtI,483
+imagedegrade-0.2.2.dist-info/RECORD,,
+imagedegrade-0.2.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+imagedegrade-0.2.2.dist-info/metadata.json,sha256=58eNbpYDbLX2KNG_q0GpIbEdVg-DsBve2m-f3B4PV6s,623
+imagedegrade-0.2.2.dist-info/top_level.txt,sha256=W5d6o6NkMklhA_qeAFt9BvYORoiYmDcqPiyjaIqkipE,19
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_imagedegrade.py,sha256=_zh_Z7ucoNm9p38RLZB4xNcpSA_BtjideZUfKDrrjdg,2802

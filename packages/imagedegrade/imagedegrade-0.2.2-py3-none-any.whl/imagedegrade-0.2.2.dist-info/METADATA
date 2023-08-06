@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: imagedegrade
+Version: 0.2.2
+Summary: Image degradation library for python.
+Home-page: https://github.com/mastnk/imagedegrade
+Author: Masayuki Tanaka
+Author-email: mastnk@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Pillow
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+Image degradation library for python.
+
+
