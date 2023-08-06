@@ -1,0 +1,12 @@
+{
+    "id": "aramislab/pet-volume",
+    "author": "Jorge Samper-Gonzalez",
+    "version": "0.1.0",
+    "dependencies": [
+        {
+            "type": "software",
+            "name": "spm",
+            "version": ">=12"
+        }
+    ]
+}

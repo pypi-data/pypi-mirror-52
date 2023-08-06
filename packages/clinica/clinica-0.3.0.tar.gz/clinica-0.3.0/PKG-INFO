@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: clinica
+Version: 0.3.0
+Summary: Software platform for clinical neuroimaging studies
+Home-page: http://www.clinica.run
+Author: ARAMIS Lab
+Maintainer: Clinica developers
+Maintainer-email: clinica-user@inria.fr
+License: MIT license
+Description: # Clinica
+        [![Build Status](https://ci.inria.fr/clinica-aramis/buildStatus/icon?job=clinica%2Fmaster)](https://ci.inria.fr/clinica-aramis/job/clinica/job/master/)
+        [![PyPI version](https://badge.fury.io/py/clinica.svg)](https://badge.fury.io/py/clinica)
+        [![conda install](https://anaconda.org/aramislab/clinica/badges/installer/conda.svg)](http://www.clinica.run/doc/Installation/)
+        [![platform](https://anaconda.org/aramislab/clinica/badges/platforms.svg)](http://www.clinica.run/doc/Installation/)
+        [![license](https://anaconda.org/aramislab/clinica/badges/license.svg)](http://www.clinica.run/doc/Installation/)
+        
+        [**Clinica**](http://www.clinica.run) is a software platform for clinical neuroimaging studies.
+        
+        ## Documentation
+        Full instructions for installation and additional information can be found in
+        the [user documentation](http://www.clinica.run/doc).
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown

@@ -1,0 +1,22 @@
+{
+    "id": "aramislab/fmri-preprocessing",
+    "author": "Jeremy Guillon",
+    "version": "0.1",
+    "dependencies": [
+        {
+            "type": "software",
+            "name": "freesurfer",
+            "version": ">=6"
+        },
+        {
+            "type": "software",
+            "name": "spm",
+            "version": ">=6"
+        },
+        {
+            "type": "pipeline",
+            "name": "aramislab/t1-freesurfer",
+            "version": ">=0.1"
+        }
+    ]
+}
