@@ -1,0 +1,10 @@
+MANIFEST.in
+README.txt
+VERSION
+pyscons.py
+setup.cfg
+setup.py
+PyScons.egg-info/PKG-INFO
+PyScons.egg-info/SOURCES.txt
+PyScons.egg-info/dependency_links.txt
+PyScons.egg-info/top_level.txt
