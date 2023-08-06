@@ -1,0 +1,4 @@
+[console_scripts]
+pb = picturebot.cli:main
+picturebot = picturebot.cli:main
+
