@@ -1,0 +1,11 @@
+README.md
+setup.py
+aliyun_sdk/__init__.py
+aliyun_sdk/client.py
+aliyun_sdk/common.py
+aliyun_sdk/oss.py
+zy_aliyun_python_sdk.egg-info/PKG-INFO
+zy_aliyun_python_sdk.egg-info/SOURCES.txt
+zy_aliyun_python_sdk.egg-info/dependency_links.txt
+zy_aliyun_python_sdk.egg-info/requires.txt
+zy_aliyun_python_sdk.egg-info/top_level.txt
