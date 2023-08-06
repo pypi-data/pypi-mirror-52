@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: xin
+Version: 2019.9.18
+Summary: xin Python Library
+Home-page: UNKNOWN
+Author: Zhao Xin
+Author-email: Zhao Xin <7176466@qq.com>
+License: GNU General Public License v3 (GPLv3)
+Keywords: python3 implementations
+Platform: cross-platform
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Requires-Dist: click (>=7.0)
+Requires-Dist: colorama (>=0.4.1)
+Requires-Dist: requests (>=2.22.0)
+
+UNKNOWN
+
+
