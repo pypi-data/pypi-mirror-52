@@ -1,0 +1,10 @@
+setup.py
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
+yoyo_distributions.egg-info/PKG-INFO
+yoyo_distributions.egg-info/SOURCES.txt
+yoyo_distributions.egg-info/dependency_links.txt
+yoyo_distributions.egg-info/not-zip-safe
+yoyo_distributions.egg-info/top_level.txt
