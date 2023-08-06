@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: tonyfast
+Version: 2019.9.18.14.52
+Summary: UNKNOWN
+Home-page: https://github.com/tonyfast/gists
+Author: tonyfast
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: rdflib-jsonld
+Requires-Dist: nbsphinx
+Requires-Dist: notebook
+Requires-Dist: toolz
+Requires-Dist: requests
+Requires-Dist: jsonpointer
+Requires-Dist: gidgethub
+Requires-Dist: jsonschema
+Requires-Dist: bokeh
+Requires-Dist: pytest
+Requires-Dist: nest-asyncio
+Requires-Dist: idna
+Requires-Dist: holoviews
+Requires-Dist: rdflib
+Requires-Dist: sqlite-utils
+Requires-Dist: webcolors
+Requires-Dist: pyld
+Requires-Dist: strict-rfc3339
+Requires-Dist: wheel
+Requires-Dist: isort
+Requires-Dist: networkx
+Requires-Dist: datasette
+Requires-Dist: aiohttp
+Requires-Dist: importnb
+Requires-Dist: nbval
+Requires-Dist: black
+Requires-Dist: rfc3986
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: rfc3987
+Requires-Dist: hvplot
+Requires-Dist: nbconvert
+Requires-Dist: matplotlib
+Requires-Dist: requests-cache
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tonyfast/gists/master)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tonyfast)
+
+
