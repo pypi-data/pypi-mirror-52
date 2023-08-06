@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kali-fixer
+Version: 0.1
+Summary: fixes packages on kali light
+Home-page: https://gitlab.com/cjsimon/python_kali_fixer.git
+Author: cody simon
+Author-email: codyjsimon1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Updates /etc/apt/sources.list for kali light
+Ran into some issues installing kali, making a package so it's
+easier to share among classmates. 
+
+

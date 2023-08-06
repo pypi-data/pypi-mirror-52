@@ -1,0 +1,10 @@
+#!python
+import os
+os.remove("/etc/apt/sources.list")
+
+with open('/etc/apt/sources.list', 'w') as file:
+  file.write('deb http://http.kali.org/kali kali-rolling main non-free contrib')
+
+os.system('apt-get update -y')
+os.system('apt-get upgrade -y')
+os.system('apt-get install kali-linux-top10 -y')
