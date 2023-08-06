@@ -1,0 +1,3 @@
+[console_scripts]
+li-trace = li_traceroute.traceroute:main
+
