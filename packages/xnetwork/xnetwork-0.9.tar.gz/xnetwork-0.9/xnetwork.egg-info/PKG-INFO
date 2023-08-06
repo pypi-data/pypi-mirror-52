@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: xnetwork
+Version: 0.9
+Summary: Small python package to read .xnet (compleX NETwork format) files used in my other scripts.
+Home-page: https://github.com/filipinascimento/xnet
+Author: Filipi N. Silva and Cesar H. Comin
+Author-email: filipi@iu.edu
+License: UNKNOWN
+Description: # xnet
+        Small python package to read .xnet (compleX NETwork format) files used in my other scripts.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
