@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pymhash
+Version: 0.0.2
+Summary: Python interface to a C++ library to calculate multiple MD5 hashes at same time.
+Home-page: UNKNOWN
+Author: Angelo Frangione
+Author-email: angelo.frangione@gmail.com
+License: GPL-v2.0
+Description: UNKNOWN
+Platform: UNKNOWN
