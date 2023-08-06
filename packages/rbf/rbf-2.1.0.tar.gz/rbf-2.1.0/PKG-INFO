@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: rbf
+Version: 2.1.0
+Summary: Robot Framework test library for automation of Web, REST APIs, SOAP Services, zOS, FTP, DB, Desktop Applications
+Home-page: https://AB62031@develop.dnb.no/git/scm/ab/4748-dnb_rbf-library.git
+Author: Rakesh Ummadisetty
+Author-email: rakesh.ummadisetty@dnb.no
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: robotframework testing testautomation
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Robot Framework :: Library
