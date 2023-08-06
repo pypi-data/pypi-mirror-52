@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: scouts
+Version: 0.1.1
+Summary: Single Cell Outlier Selector
+Home-page: http://www.ufrgs.br/labsinal/scouts/index.html
+Author: Juliano Luiz Faccioni
+Author-email: julianofaccioni@gmail.com
+License: MIT
+Download-URL: https://scouts.readthedocs.io/en/master/install.html
+Project-URL: Bug Tracker, https://github.com/jfaccioni/scouts/issues
+Project-URL: Documentation, https://scouts.readthedocs.io/en/master/
+Project-URL: Source Code, https://github.com/jfaccioni/scouts
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyside2
+Requires-Dist: openpyxl
+Requires-Dist: xlrd
+Provides-Extra: violins
+Requires-Dist: matplotlib ; extra == 'violins'
+Requires-Dist: seaborn ; extra == 'violins'
+
+SCOUTS is a tool that quickly finds outliers in your single-cell data, generating information
+about your population organized by target molecules. SCOUTS takes your single-cell input and generates output files
+containing only outliers. The method used by SCOUTS to subset the population and find the outliers is customizable
+through the program's interface.
+
