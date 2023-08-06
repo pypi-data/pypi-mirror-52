@@ -1,0 +1,10 @@
+
+        [console_scripts]
+        odooup=odooup.cli:main
+        [core_package.cli_plugins]
+        version=odooup.cli:version
+        init=odooup.init:init
+        patches=odooup.patches:patches
+        whitelist=odooup.whitelist:whitelist
+        clone=odooup.clone:clone
+    
