@@ -1,0 +1,17 @@
+odoo/addons/hr_timesheet_task_domain/README.rst,sha256=W1iePCfGwuWIJEbBUYIu_xydEoAAspsjCdcC2fRKimk,3084
+odoo/addons/hr_timesheet_task_domain/__init__.py,sha256=QXl_U5mKDJfzIWJDZpUzH9Rf4Zda8Ko8Q1Df6Lc0MF8,92
+odoo/addons/hr_timesheet_task_domain/__manifest__.py,sha256=AkA5vUhq6pBTVrNGZYPYri2xjEJjJbiM5xnbiNLbLIw,807
+odoo/addons/hr_timesheet_task_domain/i18n/de.po,sha256=SlfaltGUNwVS6i_UyCehirCoN-w_Yj5fbDjy3D5R1Fg,700
+odoo/addons/hr_timesheet_task_domain/i18n/hr_timesheet_task_domain.pot,sha256=hUI-F1W6WFgxqDrVGwn612dBnkj3oYveM1aK38QyWx0,518
+odoo/addons/hr_timesheet_task_domain/models/__init__.py,sha256=rHkEcDe37RedQ-jLM8A84kszsqZfm3OiZU2dPViqJ4o,107
+odoo/addons/hr_timesheet_task_domain/models/account_analytic_line.py,sha256=rN6kLXzm2oPgkwP4zbgdDP-DE6cUERktMKiOp_9i_Cs,1668
+odoo/addons/hr_timesheet_task_domain/readme/CONTRIBUTORS.rst,sha256=y5DP59rLj6DVlKNxCAepxkKj_EVDK5NwIeuGc0HwqG4,227
+odoo/addons/hr_timesheet_task_domain/readme/DESCRIPTION.rst,sha256=b8YYPl3GfmyQ2fXvnDi3vEBlr9NPbrwFKuRxf7_g9Ps,259
+odoo/addons/hr_timesheet_task_domain/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/hr_timesheet_task_domain/static/description/index.html,sha256=cr7r9hbnuesWo8HbIJG5G8Bo87exuwN2ITjQkVFTNJw,12363
+odoo/addons/hr_timesheet_task_domain/tests/__init__.py,sha256=LRTPC0fHXqPDhWVdEY9GzEyF5e06qqTeYbuavFRRcu0,115
+odoo/addons/hr_timesheet_task_domain/tests/test_hr_timesheet_task_domain.py,sha256=fL3fMsENJnW0BLu82BSEikoM6BEd-qbMJbr4xudrT8E,1510
+odoo12_addon_hr_timesheet_task_domain-12.0.1.0.0.99.dev6.dist-info/METADATA,sha256=hB7GTRSccgt11lO_xZVtnF1axYSo4khFIy1Z52eTXic,3647
+odoo12_addon_hr_timesheet_task_domain-12.0.1.0.0.99.dev6.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+odoo12_addon_hr_timesheet_task_domain-12.0.1.0.0.99.dev6.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_hr_timesheet_task_domain-12.0.1.0.0.99.dev6.dist-info/RECORD,,
