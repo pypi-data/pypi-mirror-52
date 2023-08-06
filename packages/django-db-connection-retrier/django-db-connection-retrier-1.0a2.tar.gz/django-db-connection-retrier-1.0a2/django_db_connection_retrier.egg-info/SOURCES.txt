@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+dbconnectionretrier/__init__.py
+dbconnectionretrier/apps.py
+dbconnectionretrier/ensure_connection.py
+dbconnectionretrier/patch.py
+django_db_connection_retrier.egg-info/PKG-INFO
+django_db_connection_retrier.egg-info/SOURCES.txt
+django_db_connection_retrier.egg-info/dependency_links.txt
+django_db_connection_retrier.egg-info/requires.txt
+django_db_connection_retrier.egg-info/top_level.txt
