@@ -1,0 +1,14 @@
+watchdog
+pyyaml
+ansi2html
+termcolor
+pygments
+six
+setproctitle
+pylru
+
+[test]
+requests
+
+[test:python_version < "3.3"]
+mock
