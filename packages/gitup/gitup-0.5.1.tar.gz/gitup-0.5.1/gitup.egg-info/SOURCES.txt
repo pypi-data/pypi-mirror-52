@@ -1,0 +1,17 @@
+README.md
+setup.py
+gitup/__init__.py
+gitup/__main__.py
+gitup/cli.py
+gitup/config.py
+gitup/migrate.py
+gitup/update.py
+gitup.egg-info/PKG-INFO
+gitup.egg-info/SOURCES.txt
+gitup.egg-info/dependency_links.txt
+gitup.egg-info/entry_points.txt
+gitup.egg-info/requires.txt
+gitup.egg-info/top_level.txt
+gitup/test/__init__.py
+gitup/test/test_bookmarks.py
+gitup/test/test_cli.py
