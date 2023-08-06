@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: django-server-config-generator
+Version: 0.2
+Summary: A simple Django app to create server config
+Home-page: https://github.com/Afsal-qburst/django-server-config-generator
+Author: Afsal Salim
+Author-email: afsals@qburst.com
+License: BSD License
+Description: 
+        Django Server Config Generator
+        =====
+        
+        Django Server Config Generator is a django extension to generate Apache config just by running a management command.
+        
+        Quick start
+        -----------
+        
+        Quick start
+        1. Add "server_config_generator" to your INSTALLED_APPS
+        INSTALLED_APPS = [ ... 'server_config_generator', ]
+        
+        2. Run python manage.py generate_apache_config
+        Enter your server name on user prompt
+        
+        3. Verify apacheconfig file generated in root folder
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
