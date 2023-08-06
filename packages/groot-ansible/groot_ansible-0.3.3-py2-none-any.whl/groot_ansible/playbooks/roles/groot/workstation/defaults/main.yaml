@@ -1,0 +1,17 @@
+#################################################################################################
+# Packages
+#################################################################################################
+
+language_packages    : [fcitx, fcitx-hangul, kde-config-fcitx, language-selector-gnome]
+
+local_drive          : /mnt/mervin
+
+google_drive_path    : "{{ local_drive }}/drive"
+
+#################################################################################################
+# Workspaces
+#################################################################################################
+
+vci_path             : "{{ local_drive }}/workspaces"
+vci_index            : "https://raw.githubusercontent.com/stonier/repos_index/devel/bionic.yaml"
+vci_workspaces       : [devel/bob, devel/latex, devel/py_trees, devel/reveal]
