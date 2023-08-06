@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: weng-pkgtest
+Version: 1.0.0
+Summary: a python package test project
+Home-page: https://github.com/MutiYouth
+Author: Cheetah
+Author-email: murphe@qq.com
+License: GPL
+Keywords: weng,test
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# This is a test package project.
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
