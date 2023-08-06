@@ -1,0 +1,4 @@
+[console_scripts]
+om = aomie.cli:cli
+omie = aomie.cli:cli
+
