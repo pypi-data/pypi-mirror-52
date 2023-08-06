@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: anndata2ri
+Version: 1.0
+Summary: Converter between Python’s AnnData and R’s SingleCellExperiment.
+Home-page: https://github.com/flying-sheep/anndata2ri
+Author: Philipp A.
+Author-email: flying-sheep@web.de

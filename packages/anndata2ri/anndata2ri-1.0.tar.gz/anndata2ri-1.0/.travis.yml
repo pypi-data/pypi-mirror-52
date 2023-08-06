@@ -1,0 +1,31 @@
+language: python
+dist: xenial
+cache:
+  pip: true
+  directories:
+    - /home/travis/R/Library
+env:
+  - R_LIB_USER=/home/travis/R/Library
+
+# matrix
+python:
+  - '3.6'
+  - '3.7'
+
+# packages
+addons:
+  apt:
+    packages:
+      - r-base
+# install basic requirements
+before_install:
+  - sudo R --slave -e 'install.packages("BiocManager", repos="https://cloud.r-project.org/")'
+  - sudo R --slave -e 'BiocManager::install(c("SingleCellExperiment", "scRNAseq"))'
+  - pip install flit future-fstrings get_version hg+https://bitbucket.org/rpy2/rpy2
+# install package
+install:
+  - python -m rpy2.situation
+  - flit install --extras=all
+# test
+script:
+  - PYTHONPATH=. pytest
