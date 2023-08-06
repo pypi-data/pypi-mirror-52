@@ -1,0 +1,13 @@
+urllib3<1.25,>=1.21.1
+presto-python-client>=0.6.0
+pandas>=0.22.0
+td-client>=0.12.0
+pytz>=2018.5
+
+[spark]
+td-pyspark>=19.9.0
+pyspark>=2.4.0
+pyarrow>=0.11.0
+
+[test]
+pytest
