@@ -1,0 +1,13 @@
+shapeguard/__init__.py,sha256=wLYWCmeDDacKo3Y2nlSYfVa2wXEaEdNIwNNGQRfl4cw,1193
+shapeguard/dim_specs.py,sha256=jZa1RCwtQhAfUn1LVW6qfjtTZhMvIlp61fMyoq_gb2E,10584
+shapeguard/exception.py,sha256=NLy_eLJeMFcKBxrIKC1ZScprV1XvCqDOSbHqH7BKM7E,822
+shapeguard/guard.py,sha256=xoSecRvgv81SDTerQ-cy2lpQupnn4-uQZ_ZHqOGXx8E,2649
+shapeguard/parser.py,sha256=DI9vNGaKV3XMGf5bI9lB4r3Cbu4uASPIH1n27xZOp3I,1416
+shapeguard/shape_spec.lark,sha256=y1Ibx0qbr3BOUzH0TFxTKOPso9kyrBdPGH129MpPeBY,1085
+shapeguard/shape_spec.py,sha256=2UBhl_DXGo8CAWYzpwltIfUAGlHri0c61ImsbYNdZ3s,3786
+shapeguard/shape_spec_parser.py,sha256=jgR4mDsGfrSkAepIbOcpde9JQk6lH6oFoNJJ3ClROB4,76592
+shapeguard/tools.py,sha256=FKtxE04NYOj73Gvahg_mJoK_oBhh921BjbJ2ElDaQWU,3265
+shapeguard-0.1.1.dist-info/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+shapeguard-0.1.1.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+shapeguard-0.1.1.dist-info/METADATA,sha256=PdCd5lzOaEXvB-ZYTkz_fTLIRGYGsgPm2y12joSJUdk,2278
+shapeguard-0.1.1.dist-info/RECORD,,
