@@ -1,0 +1,31 @@
+Setting TreeFilePath with value tree.bin
+Setting GraphFilePath with value graph.bin
+Setting VectorFilePath with value vectors.bin
+Setting BKTNumber with value 1
+Setting BKTKmeansK with value 32
+Setting BKTLeafSize with value 8
+Setting Samples with value 1000
+Setting TPTNumber with value 32
+Setting TPTLeafSize with value 2000
+Setting NumTopDimensionTpTreeSplit with value 5
+Setting NeighborhoodSize with value 32
+Setting GraphNeighborhoodScale with value 2
+Setting GraphCEFScale with value 2
+Setting RefineIterations with value 0
+Setting CEF with value 1000
+Setting MaxCheckForRefineGraph with value 10000
+Setting NumberOfThreads with value 32
+Setting DistCalcMethod with value Cosine
+Setting MaxCheck with value 8192
+Setting ThresholdOfNumberOfContinuousNoBetterPropagation with value 3
+Setting NumberOfInitialDynamicPivots with value 50
+Setting NumberOfOtherDynamicPivots with value 4
+Load Data From /host/index/hackernews/merge_2006-10_2007-04-08_2018-05/vectors.bin
+Load Data (35626, 768) Finish!
+Load BKT From /host/index/hackernews/merge_2006-10_2007-04-08_2018-05/tree.bin
+Load BKT (1,35627) Finish!
+Load Graph From /host/index/hackernews/merge_2006-10_2007-04-08_2018-05/graph.bin
+Load Graph (35626,32) Finish!
+Start to listen 0.0.0.0:5000 ...
+Received shutdown signals.
+Start shutdown procedure.
