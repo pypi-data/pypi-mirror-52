@@ -1,0 +1,11 @@
+norm/__init__.py,sha256=oWmEX26R1Z1yltVj07NzC8M8-rueR1kmjKLpq9DMgqY,501
+norm/connection.py,sha256=VHZhQPHiHK-SS21X8rMVwOpZEIul7yhc8-L09nBR7t8,2415
+norm/norm.py,sha256=9rtjXMpBYvmPCvCEZ66ggN06-EZpl6HJlcGiD4R_N3U,11628
+norm/norm_psycopg2.py,sha256=V993mlC4xaPAFboVQMcZZEmz4kgBnqqcmFgYHaXM1lI,664
+norm/norm_sqlite3.py,sha256=us7JiYduYnqqBPuOTUjXpmMskJoS3V9mkQ1Ybay-taM,765
+norm/rows.py,sha256=tOeju4ONSCxiEmrMklJDPFYZoBL4FhtQ6vipCfThXTI,789
+norm-1.2.6.dist-info/LICENSE,sha256=3G4OABpW_Gj2PaEpQP8GboLJehXJTkMY88Arj5lOCWg,1426
+norm-1.2.6.dist-info/METADATA,sha256=vrg9ywVQj5UQ4W1nVi07WRFpfVxfnIHN8iTJzk9XOvI,680
+norm-1.2.6.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+norm-1.2.6.dist-info/top_level.txt,sha256=qdcoAivwtxYTPUDc7G0FSZbelD1TVplGdp3pqBFKLFU,5
+norm-1.2.6.dist-info/RECORD,,
