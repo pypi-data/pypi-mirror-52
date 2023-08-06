@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cd-alg
+Version: 0.3
+Summary: algorithms package exercise
+Home-page: UNKNOWN
+Author: cdreek
+Author-email: cdreek@example.com
+License: MIT
+Platform: UNKNOWN
+
+# Python package creation exercise
+
+This package contains different sort functions.
+
+To install it, use following command in the terminal::
+
+`pip install cd_alg`
+
+To use the methods, import them with following code in your python file::
+
+`from cd_alg import bubbleSort, insertionSort, selectionSort, quick_sort`
+
+
