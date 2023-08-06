@@ -1,0 +1,14 @@
+clld_glottologfamily_plugin/__init__.py,sha256=Ju5WSgCdlyeblFcAnaYOY2ALF-duqbKAOGqRGbNrb98,1152
+clld_glottologfamily_plugin/datatables.py,sha256=GFdi7zVHLubvdbwP3TZ5lXV04aZcCdnYegTliQ0e5H0,2150
+clld_glottologfamily_plugin/interfaces.py,sha256=v-BXot9hFIzSEXouSoTFABUiqYFW61tyvce3hPs-xMU,103
+clld_glottologfamily_plugin/maps.py,sha256=MsSFjiLMLJZ7QhUPpVBWKiyDnCzryquRyr329NoCACI,2
+clld_glottologfamily_plugin/models.py,sha256=XQNlNuUo1VDRysjXvER5tS4kDqL7rBY-SEupyd5kZ9Q,756
+clld_glottologfamily_plugin/util.py,sha256=_NrpcF-0H7rU-4FIZCh96Q9OYNvKaR8hYxs_S9BUZH0,2981
+clld_glottologfamily_plugin/templates/family/detail_html.mako,sha256=gCejl9TND1k6VnNq_pakVrhp8_SAvaiRr4gjHWj3ePo,1136
+clld_glottologfamily_plugin/templates/family/index_html.mako,sha256=5V-yzOVPhDKEoCq7sWH0RqqzGTohNDw69FnCzBJ_2zE,369
+clld_glottologfamily_plugin/templates/family/rdf.mako,sha256=wdTwN_sw4OW00BjL_KuyxOoANaEDpEV-qevYlK8sjx0,264
+clld_glottologfamily_plugin-3.1.0.dist-info/LICENSE.txt,sha256=xllut76FgcGL5zbIRvuRc7aezPbvlMUTWJPsVr2Sugg,11358
+clld_glottologfamily_plugin-3.1.0.dist-info/METADATA,sha256=37wpna3tRe_OJH-ebMufcOMycwLOU0IVttDT0Oac4cA,1303
+clld_glottologfamily_plugin-3.1.0.dist-info/RECORD,,
+clld_glottologfamily_plugin-3.1.0.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+clld_glottologfamily_plugin-3.1.0.dist-info/top_level.txt,sha256=HY3RUMQZFssItF1soNW3gLp38HN1BcatqiLDHzYFcYA,28
