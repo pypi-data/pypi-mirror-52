@@ -1,0 +1,17 @@
+pandas_ml_utils/__init__.py,sha256=RA9RdIMW7mFX7_tWxVhThGqdTyGTSaqp3KF7RyOCRRg,804
+pandas_ml_utils/classification_plots.py,sha256=VAMVjTbLUr-Ew5J7AF8dYMNgpoAMXKujgt1diQS4Zlg,713
+pandas_ml_utils/classifier.py,sha256=trZscsCXCulsEkXlF7nlsw_OghEpSg4d-J8PuUd_xb0,4404
+pandas_ml_utils/classifier_models.py,sha256=n31PMiyXJbZeyFpaMgixNgqL_eBVT9Nszjvs87L5MiQ,1915
+pandas_ml_utils/data_objects.py,sha256=wab-XmWkkoqEpdoZAiC4dPQA24vYiDvVof1mpBNNAB0,8651
+pandas_ml_utils/features_and_Labels.py,sha256=c9kjDtYsqh3eXfb_GoV64AJRLaxtu4somUShBttZLJk,2092
+pandas_ml_utils/fetch_yahoo.py,sha256=Fnw6Z1LLZ1pyB_TwLc3pWyIiKOV1g3ZJ95SkpjYdZFA,1751
+pandas_ml_utils/lazy_dataframe.py,sha256=c5k6FYaAnU2ecmio5BcuaGA2pvLUWNuAnuzoR6fsv9w,2034
+pandas_ml_utils/multi_model.py,sha256=WwrEnA48LBcRKqrBN28-clyTTS3D-Wfe08-GLUSro0I,4055
+pandas_ml_utils/pandas_extensions.py,sha256=pL-t74-JThL1c79iNRbaqW01khpQriqStbHyAGbYzSA,920
+pandas_ml_utils/plots.py,sha256=slLcjeA4q1g_U_9sCDnXSoLvWFcLqwcD1zr7yH667t8,373
+pandas_ml_utils/train_test_data.py,sha256=y2vVN8lAFpnYEONiJw-k9lTx52jhd_abMnt-AHqryvc,5303
+pandas_ml_utils/utils.py,sha256=7EvG4cmLSd184gGBeroUjg0k92_YUrn4kESek5OFYtE,655
+pandas_ml_utils-0.0.2.dist-info/LICENSE,sha256=oITvGkWPD89dsawCTeNEcy0q1thYHlaw1VAVyvDd7Mk,1070
+pandas_ml_utils-0.0.2.dist-info/WHEEL,sha256=JXk7EE_UnY8Q4113Zu8f6SlrMizLH61VvvtIzqzkSKE,79
+pandas_ml_utils-0.0.2.dist-info/METADATA,sha256=jtwnzu5i87GZYieaOvmUpivoP09NV15S6Z_-t1P4cmU,6067
+pandas_ml_utils-0.0.2.dist-info/RECORD,,
