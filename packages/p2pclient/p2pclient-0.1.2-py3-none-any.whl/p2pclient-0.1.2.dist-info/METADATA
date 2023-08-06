@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: p2pclient
+Version: 0.1.2
+Summary: The libp2p daemon bindings for Python
+Home-page: https://github.com/mhchia/py-libp2p-daemon-bindings
+Author: Kevin Mai-Hsuan Chia
+Author-email: kevin.mh.chia@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+Requires-Dist: base58 (>=1.0.3)
+Requires-Dist: multiaddr (<0.1.0,>=0.0.8)
+Requires-Dist: protobuf (>=3.9.0)
+Requires-Dist: pymultihash (>=0.8.2)
+Requires-Dist: libp2p (>=0.1.1)
+Provides-Extra: dev
+Requires-Dist: pytest (<5.0.0,>=4.6.3) ; extra == 'dev'
+Requires-Dist: pytest-asyncio (<1.0.0,>=0.10.0) ; extra == 'dev'
+Requires-Dist: pytest-cov (<3.0.0,>=2.7.1) ; extra == 'dev'
+Requires-Dist: mypy (<1.0,>=0.701) ; extra == 'dev'
+Requires-Dist: mypy-protobuf (>=1.15) ; extra == 'dev'
+Requires-Dist: black (>=19.3b0) ; extra == 'dev'
+Requires-Dist: isort (>=4.3.21) ; extra == 'dev'
+Requires-Dist: flake8 (<4.0.0,>=3.7.7) ; extra == 'dev'
+Requires-Dist: tox (<4.0.0,>=3.13.2) ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: mypy (<1.0,>=0.701) ; extra == 'lint'
+Requires-Dist: mypy-protobuf (>=1.15) ; extra == 'lint'
+Requires-Dist: black (>=19.3b0) ; extra == 'lint'
+Requires-Dist: isort (>=4.3.21) ; extra == 'lint'
+Requires-Dist: flake8 (<4.0.0,>=3.7.7) ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (<5.0.0,>=4.6.3) ; extra == 'test'
+Requires-Dist: pytest-asyncio (<1.0.0,>=0.10.0) ; extra == 'test'
+Requires-Dist: pytest-cov (<3.0.0,>=2.7.1) ; extra == 'test'
+
+# py-libp2p-daemon-bindings
+
+[![Build Status](https://circleci.com/gh/mhchia/py-libp2p-daemon-bindings/tree/master.svg?style=shield)](https://circleci.com/gh/mhchia/py-libp2p-daemon-bindings/tree/master)
+
+> The [libp2p daemon](https://github.com/libp2p/go-libp2p-daemon) bindings for Python
+
+Have aligned with the go-client now!
+
+Methods
+- [x] `Identify`
+- [x] `Connect`
+- [x] `StreamOpen`
+- [x] `StreamHandler` - Register
+- [x] `StreamHandler` - Inbound stream
+- [x] DHT ops
+- [x] Conn manager ops
+- [x] PubSub ops
+
+
