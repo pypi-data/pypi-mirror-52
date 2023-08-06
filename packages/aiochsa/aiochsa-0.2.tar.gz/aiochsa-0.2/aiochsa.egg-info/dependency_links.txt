@@ -1,0 +1,1 @@
+git+https://github.com/ods/clickhouse-sqlalchemy.git@column_table_prefix#egg=clickhouse_sqlalchemy-0.0.10
