@@ -1,0 +1,6 @@
+[sceptre.hooks]
+sceptre_s3_upload = sceptre_s3_packager.s3_packager:UploadHook
+
+[sceptre.resolvers]
+sceptre_s3_key = sceptre_s3_packager.s3_packager:KeyResolver
+
