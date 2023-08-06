@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/django_dynamic_image.egg-info/PKG-INFO
+src/django_dynamic_image.egg-info/SOURCES.txt
+src/django_dynamic_image.egg-info/dependency_links.txt
+src/django_dynamic_image.egg-info/requires.txt
+src/django_dynamic_image.egg-info/top_level.txt
+src/dynamic_image/__init__.py
+src/dynamic_image/fields.py
+src/dynamic_image/mixins.py
+src/dynamic_image/utils.py
