@@ -1,0 +1,3 @@
+[console_scripts]
+vk-songs = vk_songs.app:main
+

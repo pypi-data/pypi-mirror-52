@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+VK_Songs.egg-info/PKG-INFO
+VK_Songs.egg-info/SOURCES.txt
+VK_Songs.egg-info/dependency_links.txt
+VK_Songs.egg-info/entry_points.txt
+VK_Songs.egg-info/requires.txt
+VK_Songs.egg-info/top_level.txt
+vk_songs/__init__.py
+vk_songs/app.py
